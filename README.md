@@ -1,13 +1,21 @@
 # MultiCube
-This repository is dedicated to our server on Minecraft.
+This main repository is dedicated to our server on Minecraft.<br/>
 
-This document (maindoc, README.md) contains al the plugin files, so that we can keep track of them. It will be constantly updated, with all new files added. It also contains other data. Be aware that newer versions of this file will be added, and that old files you might have saved will be outdated. 
+----------------------------------------
 
-Server Software: Spigot/Bukkit
-Server Version: 1.16.5 Java
-Active Player Count: 4
+This document (maindoc, README.md) contains al the plugin files, so that we can keep track of them. It will be constantly updated, with all new files added. It also contains other data. Be aware that newer versions of this file will be added, and that old files you might have saved will be outdated.<br/>
+Below this line is the part that's get updated. Upper text is general information.<br/>
 
+----------------------------------------
 
+Update log v0.1:
+
+Stats:<br/>
+Server Software: Spigot/Bukkit<br/>
+Server Version: 1.16.5 Java<br/>
+Active Player Count: 4<br/>
+
+Plugins:<br/>
 Folders: 54<br/>
 Currrent plugins:<br/>
 AConomy (For Vault)<br/>
@@ -37,5 +45,4 @@ VoidGenerator (for MultiVerse)<br/>
 WorldEdit (Terraforming and Mapping)<br/>
 Worldguard (for WorldEdit)<br/>
 
--- Note that plugins are to change, removed or are added. --<br/>
--- Each update brings new content like plugins, minigames and bug fixes. --
+----------------------------------------
