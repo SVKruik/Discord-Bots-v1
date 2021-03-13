@@ -8,7 +8,6 @@ Currrent plugins:<br/>
 AConomy (For Vault)<br/>
 BedWars (Screaming)<br/>
 BuildBattle (Minigame, 2 games running)<br/>
-Citizens (out of commision)<br/>
 EasyKitpvp (PVP plugin, needs config and isn't ideal. May be replaced)<br/>
 FriendsSpigot (Friend-System, working but needs config)<br/>
 HeadDB (For Decorative Heads)<br/>
