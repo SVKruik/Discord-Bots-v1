@@ -1,9 +1,14 @@
 # MultiCube
 This repository is dedicated to our server on Minecraft.
 
-It contains al the plugin files, as a save back up. It will be constantly updated, with all new files added. 
+This document (maindoc, README.md) contains al the plugin files, so that we can keep track of them. It will be constantly updated, with all new files added. It also contains other data. Be aware that newer versions of this file will be added, and that old files you might have saved will be outdated. 
 
-Folders: 58<br/>
+Server Software: Spigot/Bukkit
+Server Version: 1.16.5 Java
+Active Player Count: 4
+
+
+Folders: 54<br/>
 Currrent plugins:<br/>
 AConomy (For Vault)<br/>
 BedWars (Screaming)<br/>
