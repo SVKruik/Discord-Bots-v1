@@ -1,4 +1,4 @@
-# MultiCube
+# MultiCube - Update Log
 This main repository is dedicated to our server on Minecraft.<br/>
 
 ----------------------------------------
