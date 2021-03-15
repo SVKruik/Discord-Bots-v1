@@ -8,9 +8,47 @@ This document (maindoc, README.md) contains al:<br/><br/>
 1. The plugins currently in use<br/>
 2. For what they are used for.<br/>
 3. Changes in the new version (map changes, plugin changes, etc).<br/>
+4. Updates to the Minecraft and Discord Server.<br/>
+5. Updated Stats.<br/>
 
 It will be constantly updated, with all new files and updates added. It also contains other data. Be aware that newer versions of this file will be added, and that old files you might have saved will be outdated.<br/>
 Below this line is the part that's get updated. Upper text is general information.<br/>
+
+----------------------------------------
+
+Update log v0.0.3:<br/><br/>
+Written by: Complex (PuffinKwadraat)<br/>
+Date: 15/03/2021<br/>
+Time: 09:04<br/>
+
+Stats:<br/>
+Server Software: Spigot/Bukkit<br/>
+Server Version: 1.16.5 Java<br/>
+Active Player Count: 4<br/>
+Discord Player Count: 9<br/>
+
+Server Updates:<br/>
+- Completed the Shop Menu, so that you can tp to every shop in.<br/>
+- Fixed some bugs in the menu, caused by EaskitPVP.<br/>
+- Connected Vault to all plugins in this version.<br/>
+- Completed the Friend System. Party also works now:<br/>
+    - Invite someone, and some commands will be executed the same.<br/>
+    - For example: bw join 'map' now works (not confirmed, needs testing.)<br/>
+    - Can be expanded more, with new minigames added.<br/>
+
+General Updates:<br/>
+- Created a new Hang out Server<br/>
+- Expanded the GitHub page, with a to-do list.<br/>
+- More Collaborators can be added, Pololars joined the project.<br/>
+- Beta progression: 30% Complete<br/>
+
+Plugins:<br/>
+Folders: 52<br/>
+Currrent plugins:<br/>
+- Same as v0.0.2<br/>
+- Removed EasykitPVP<br/>
+
+For questions about updates or anything else, contact our support team.<br/>
 
 ----------------------------------------
 
