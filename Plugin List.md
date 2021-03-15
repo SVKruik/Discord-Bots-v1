@@ -42,6 +42,8 @@
 
 - [TNTRun_Reloaded](https://www.spigotmc.org/resources/tntrun_reloaded-tntrun-for-1-13-1-16.53359/)<br/>
 
+- [TrailGUI](https://www.spigotmc.org/resources/trailgui.1091/)
+
 - [Vault](https://dev.bukkit.org/projects/vault)<br/>
 
 - [VoidGenerator](https://www.spigotmc.org/resources/voidgenerator.25391/)<br/>
