@@ -2,8 +2,6 @@
 
 - [AConomy](https://www.spigotmc.org/resources/aconomy-simple-vault-economy.64569/)<br/>
 
-- [AutoMessage](https://www.spigotmc.org/resources/automessage.372/)<br/>
-
 - [BedWars](https://www.spigotmc.org/resources/screaming-bedwars-1-9-1-16.63714/)<br/>
 
 - [BuildBattle](https://www.spigotmc.org/resources/build-battle-guessthebuild-1-11-1-16.44703/)<br/>
@@ -41,8 +39,6 @@
 - [TheBridge](https://www.spigotmc.org/resources/the-bridge-1-8-1-16-new-2-4.60170/)<br/>
 
 - [TNTRun_Reloaded](https://www.spigotmc.org/resources/tntrun_reloaded-tntrun-for-1-13-1-16.53359/)<br/>
-
-- [TrailGUI](https://www.spigotmc.org/resources/trailgui.1091/)
 
 - [Vault](https://dev.bukkit.org/projects/vault)<br/>
 
