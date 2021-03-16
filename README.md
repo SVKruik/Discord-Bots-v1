@@ -16,6 +16,43 @@ Below this line is the part that's get updated. Upper text is general informatio
 
 ----------------------------------------
 
+Update log v0.0.4:<br/><br/>
+Written by: Complex (PuffinKwadraat)<br/>
+Date: 16/03/2021<br/>
+Time: 10:04<br/>
+
+Stats:<br/>
+Server Software: Spigot/Bukkit<br/>
+Server Version: 1.16.5 Java<br/>
+Active Player Count: 3<br/>
+Discord Member Count: 9<br/>
+
+Server Updates:<br/>
+- Began Programming Wardrobe, Clothing.<br/>
+- Expanded AFK Lounge.<br/>
+- Introduced a timed message: 'Join Our Discord Here!'. Connected to a Hopperclock. Needs tweaking.<br/>
+- Fixed some shops, with incorrect materials used. Caused by selecting the whole Hub, and using //replace <*value> <*value>.<br/>
+- Started Preperation for Permisson Update.<br/>
+
+General Updates:<br/>
+- Beta Progression: 40% Complete.<br/>
+- Added more issues to complete for Alpha Update (now a total of 10 Issues).<br/>
+- Issues:
+    - 4 Done. (Create New Designs For Hub Shops, Connect Vault, Config Friend System, Connect Party)<br/>
+    - 2 In Progress. (Completing The Mainmenu, Setting Up LuckPerms (<span style="color:blue">*HP*</span>))<br/>
+    - 4 To-Do. (Plugin Back-Up to Repository, Good BedWars Plugin, Multiple PVP Arena's, Same Color Palette(<span style="color:blue">*HP*</span>))<br/>
+
+Plugins:<br/>
+Folders: 52<br/>
+Currrent plugins:<br/>
+- Same as v0.0.3<br/>
+- Tried adding a Trail Plugin, didn't work, removed. Now searching for replacement.<br/>
+
+For questions about updates or anything else, contact our support team.<br/>
+To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).<br/>
+
+----------------------------------------
+
 Update log v0.0.3:<br/><br/>
 Written by: Complex (PuffinKwadraat)<br/>
 Date: 15/03/2021<br/>
