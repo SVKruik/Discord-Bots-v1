@@ -1,4 +1,4 @@
-#MultiCube Plugin List
+# MultiCube -  Plugin List
 
 - [AConomy](https://www.spigotmc.org/resources/aconomy-simple-vault-economy.64569/)<br/>
 

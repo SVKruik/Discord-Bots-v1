@@ -48,9 +48,6 @@ Currrent plugins:<br/>
 - Same as v0.0.3<br/>
 - Tried adding a Trail Plugin, didn't work, removed. Now searching for replacement.<br/>
 
-For questions about updates or anything else, contact our support team.<br/>
-To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).<br/>
-
 ----------------------------------------
 
 Update log v0.0.3:<br/><br/>
@@ -84,8 +81,6 @@ Folders: 52<br/>
 Currrent plugins:<br/>
 - Same as v0.0.2<br/>
 - Removed EasykitPVP<br/>
-
-For questions about updates or anything else, contact our support team.<br/>
 
 ----------------------------------------
 
@@ -145,8 +140,6 @@ VoidGenerator (for MultiVerse)<br/>
 WorldEdit (Terraforming and Mapping)<br/>
 Worldguard (For WorldEdit)<br/>
 
-For questions about updates or anything else, contact our support team.<br/>
-
 ----------------------------------------
 
 Update log v0.0.1:
@@ -185,3 +178,8 @@ Vault (Economy Part)<br/>
 VoidGenerator (for MultiVerse)<br/>
 WorldEdit (Terraforming and Mapping)<br/>
 Worldguard (for WorldEdit)<br/>
+
+----------------------------------------
+
+For questions about updates or anything else, contact our support team.<br/>
+To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).<br/>
