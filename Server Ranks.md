@@ -57,25 +57,29 @@
     - More permissions on the Minecraft Server. Ask a staff member for the precise additional permissions, since these are constanly changing and being updated.
     - Colorfull prefix and chat color!
 
-    - Cost: 4000 Coins.
+    - Cost: 10000 Coins.
 
 - __Legendary:__ High-tier rank. Also quiet expensive. Gains a lot of new permissions.
     - Priority Speaker in Discord calls.
     - More permissions on the Minecraft Server. Just like Mythic, ask our staff for details. Be aware though that you have less permissions with Legendary than Mythic!
     - Colorfull prefix and chat color (each rank has own color, but not always do they have their own chat color. Legendary is yellow.)
 
-    - Cost: 2000 Coins.
+    - Cost: 8000 Coins.
 
 - __Epic:__ Mid-tier rank. You will get your own prefix, but you do not have your chat color and extra permissions. But, after this rank you will get to the High-tier ranks!
+    - Cost: 2000 Coins.
 
 - __Rare:__ Mid-tier rank. Own prefix, but now advantages.
+    - Cost: 800 Coins.
 
-- __Uncommon:__ Low-tier rank. Second
-    - 
+- __Uncommon:__ Low-tier rank. Second rank.
+    - Cost: 400 Coins.
 
-- __Noob:__
-    - 
+- __Common:__ First rank you will get when you join, it is free, and everyone has it on their first join.
+    - Cost: 200 Coins.
 
+- __Noob:__ First rank you will get when you join, it is free. Default rank.
+    - Cost: Free!
 ----------------------------------------
 
 #### Discord Roles (high to low)
