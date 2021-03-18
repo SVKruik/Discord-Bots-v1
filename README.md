@@ -3,7 +3,7 @@ This main repository is dedicated to our server on Minecraft.<br/>
 
 ----------------------------------------
 
-This document (maindoc, README.md) contains al:<br/>KWCraft was hier<br/>
+This document (maindoc, README.md) contains al:<br/><br/>
 
 1. The plugins currently in use<br/>
 2. For what they are used for.<br/>
