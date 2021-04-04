@@ -17,3 +17,6 @@ Here's a list of mods you have to download to join our server:
   
 - [WorlEdit](https://www.curseforge.com/minecraft/mc-mods/worldedit)
    - This mod doesn't bring new content to the server. It is just a very good tool for building the maps. It can only be used by Operators.
+
+For questions about updates or anything else, contact our support team.<br/>
+To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).<br/>
