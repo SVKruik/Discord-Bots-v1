@@ -39,3 +39,6 @@ to another location, and restart. So before you start Minecraft, think about wha
 Thank you for following along! If there still is something that is not clear, or you have questions, contact our support team!
 
 ###### *But note that we are not responsible for any virus related problems that may occur. 
+
+For questions about updates or anything else, contact our support team.<br/>
+To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).<br/>
