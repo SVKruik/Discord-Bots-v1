@@ -16,6 +16,37 @@ Below this line is the part that's get updated. Upper text is general informatio
 
 ----------------------------------------
 
+Update log v0.0.4.1:<br/><br/>
+Written by: Complex (PuffinKwadraat)<br/>
+Date: 1/06/2021<br/>
+Time: 20:05<br/>
+
+Stats:<br/>
+Server Software: Spigot/Bukkit<br/>
+Server Version: 1.16.5 Java<br/>
+Active Player Count: 4<br/>
+Discord Member Count: 18<br/>
+
+Server Updates:<br/>
+- None.<br/>
+
+General Updates:<br/>
+- Checked for faulty plugins, found WorldEdit = replaced with newest version.<br/>
+- Checked general things.<br/>
+- Made the Discord Bot files public, now available in Repository.<br/>
+- Updated a couple of miscellaneous things.<br/>
+- Planning to make a Reddit page.<br/>
+
+Extra:<br/>
+- Server was 'dead' for a while, now prepared and re-established connections.<br/>
+
+Plugins:<br/>
+Folders: 51<br/>
+Currrent plugins:<br/>
+- Same as v0.0.4<br/>
+- Updated WorldEdit<br/>
+
+----------------------------------------
 Update log v0.0.4:<br/><br/>
 Written by: Complex (PuffinKwadraat)<br/>
 Date: 16/03/2021<br/>
