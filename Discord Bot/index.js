@@ -19,4 +19,4 @@ client.on('guildMemberAdd', guildMember => {
     guildMember.guild.channels.cache.get('820246692867342356').send(`Welcome <@${guildMember.user.id} to the MultiCube Community! Make sure to check our server rules!`)
 });
 
-client.login('Token Here');
+client.login('ODIyMDE2NzYzOTQ0MjM5MTQ0.YFMIxA.wQrxv28JGVwH-YaE7ihWn_keqEE');
