@@ -1,7 +1,7 @@
 module.exports = {
     name: 'ban',
     description: "This command bans a member.",
-    async execute(Discord, client, message, args) {
+    async execute(Discord, message, args, cmd, client) {
         const member = message.mentions.users.first();
         if(member){
             const memberTarget = message.guild.members.cache.get(member.id)

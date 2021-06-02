@@ -1,7 +1,7 @@
 module.exports = {
     name: 'clear',
     description: "This is a clear command.",
-    async execute(client, message, args, Discord) {
+    async execute(message, args, cmd, client, Discord) {
         if(!args[0]) return message.reply("Please enter the amount om messages that you want to clear!");
         if(isNaN(args[0])) return message.reply("Please enter a real number!");
 

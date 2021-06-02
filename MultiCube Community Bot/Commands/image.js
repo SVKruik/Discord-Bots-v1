@@ -9,7 +9,7 @@ const google = new Scraper({
 module.exports = {
     name: 'image',
     description: 'This sends a image',
-    async execute(client, message, args, Discord){
+    async execute(message, args, cmd, client, Discord){
         const image_query = args.join(' ');
         if(!image_query) return message.channel.send('Please enter an image name!');
 

@@ -2,7 +2,7 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     description: "This command mutes members.",
-    execute(client, message, args, Discord){
+    execute(message, args, cmd, client, Discord){
         const target = message.mentions.users.first();
         if(target){
             let mainRole = message.guild.roles.cache.find(role => role.name === 'Member');

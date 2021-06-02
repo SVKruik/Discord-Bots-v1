@@ -3,7 +3,7 @@ const util = require('minecraft-server-util')
 module.exports = {
     name: 'mcserver',
     description: 'Server stats info etc.',
-    execute(client, message, args, Discord){
+    execute(message, args, cmd, client, Discord){
         if(!args[0]) return message.channel.send('Please enter a valid Minecraft server IP!');
         if(!args[1]) return message.channel.send('Please enter a valid Minecraft server port!');
     
