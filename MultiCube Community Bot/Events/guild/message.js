@@ -13,7 +13,7 @@ module.exports = (Discord, client, message) => {
     try {
         command.execute(message, args, cmd, client, Discord);
     } catch (err){
-        message.reply("There was an error trying to execute the specified command! Check the console to see what's wrong.");
+        message.reply("There was an error trying to execute the specified command! Check the console to see what is wrong.");
         console.log(err);
     }
 }
