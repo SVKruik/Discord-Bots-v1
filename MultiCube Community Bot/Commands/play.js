@@ -6,6 +6,7 @@ const queue = new Map();
 module.exports = {
     name: 'play',
     description: 'Music bot',
+    permissions: ["SEND_MESSAGES"],
     async execute(message, args, cmd, client, Discord){
 
         const voice_channel = message.member.voice.channel;

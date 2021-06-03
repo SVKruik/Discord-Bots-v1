@@ -1,5 +1,6 @@
 module.exports = {
     name: 'kick',
+    persmisions: ["ADMINISTRATOR", "KICK_MEMBERS"],
     description: "This command kicks a member.",
     async execute(message, args, cmd, client, Discord) {
         const member = message.mentions.users.first();
