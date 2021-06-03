@@ -21,7 +21,7 @@ module.exports = {
                 {name: 'Port', value: response.port},
                 {name: 'Mods', value: response.modInfo}
             )
-            .setFooter('Stats profided by Complex. Usage: -mcserver ip port.')
+            .setFooter('Stats and bot profided by Complex. Usage: -mcserver ip port.')
             
             message.channel.send(embed);
         })
