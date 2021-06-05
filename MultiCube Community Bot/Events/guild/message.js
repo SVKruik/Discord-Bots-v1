@@ -12,7 +12,7 @@ module.exports = (Discord, client, message) => {
     const command = client.commands.get(cmd) ||
                     client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-Perms
+//Perms
     const validPermissions = [
         "CREATE_INSTANT_INVITE",
         "KICK_MEMBERS",
@@ -47,20 +47,21 @@ Perms
         "MANAGE_EMOJIS",
     ]
 
-    if(command.permissions.length){
-        let invalidPerms = []
-        for(const perm of command.permissions){
+    if(!command) return;      
+    if(command.hasOwnProperty('permissions')){
+      let invalidPerms = []
+      for(const perm of command.permissions){
           if(!validPermissions.includes(perm)){
-            return console.log(`Invalid Permissions ${perm}`);
-          }
+              return console.log(`Missing permissions! ${perm}`);
+              }
           if(!message.member.hasPermission(perm)){
             invalidPerms.push(perm);
-          }
-        }
+              }
+            }
         if (invalidPerms.length){
-          return message.channel.send(`Hey! You are missing the following permissions to execute this command: \`${invalidPerms}\``);
-        }
-    }
+          return message.channel.send(`To perform this command, you need these permissions: \`${invalidPerms}\``);
+            }
+          }
 
 //Error Checking
     try {
