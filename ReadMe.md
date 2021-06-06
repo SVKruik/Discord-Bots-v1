@@ -43,6 +43,9 @@ Here are some links that are very handy for us, but also maybe for you:
   - [Discord](https://discord.gg/VSE75WkgFM) Server for our Minecraft server.
   - [Aternos](https://aternos.org/:en/): our temporary host. Later we will convert it to [BungeeCord](https://ci.md-5.net/job/BungeeCord/) for better performance. We will run it     run it on our own PC.
 
+### Commands
+Here is a list for commands on our hangout server ([EGS])(https://discord.gg/gBVFuBqENA)
+
 ----------------------------------------
 
 For questions about updates or anything else, contact our support team.<br/>
