@@ -4,8 +4,10 @@ module.exports = {
   permissions: ["SEND_MESSAGES"],
   async execute(message, args, cmd, client, Discord, profileData) {
 
+    const channel = '820580470207021058'
+
     const BankEmoji = "🏦";
-    const WalletRolesEmoji = "👝";
+    const WalletEmoji = "👝";
 
     let embed = new Discord.MessageEmbed()
       .setColor("#ffb1b1")
@@ -29,10 +31,10 @@ module.exports = {
 
       if (reaction.message.channel.id == channel) {
         if (reaction.emoji.name === BankEmoji) {
-          await message.channel.send(`This is your current bank balance: ${profileData.bank}.`);
+          await message.channel.send(`This is your current bank balance 🏦: ${profileData.bank}.`);
         }
         if (reaction.emoji.name === WalletEmoji) {
-          await message.channel.send(`This is your current wallet balance:${profileData.coins}.`);
+          await message.channel.send(`This is your current wallet balance 👝: ${profileData.coins}.`);
         }
       } else {
         return;

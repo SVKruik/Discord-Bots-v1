@@ -3,6 +3,7 @@ require("dotenv").config();
 const client = new Discord.Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
+
 const fs = require("fs");
 const mongoose = require("mongoose");
 
@@ -15,6 +16,7 @@ client.events = new Discord.Collection();
   require(`./Handlers/${handler}`)(client, Discord);
 });
 
+//Status
 client.on("ready", () => {
   client.user
     .setActivity("Discord.js", { type: "PLAYING" })
@@ -28,6 +30,7 @@ client.on("ready", () => {
     .catch(console.error);
 });
 
+//Welcome Role
 client.on("guildMemberAdd", (guildMember) => {
   let welcomeRole = guildMember.guild.roles.cache.find(
     (role) => role.name === "Member"
@@ -41,6 +44,7 @@ client.on("guildMemberAdd", (guildMember) => {
     );
 });
 
+//Database for Economy
 mongoose
   .connect(process.env.MONGODB_SRV, {
     useNewUrlParser: true,
@@ -54,4 +58,5 @@ mongoose
     console.log(err);
   });
 
+//Token login
 client.login(process.env.Discord_TOKEN);

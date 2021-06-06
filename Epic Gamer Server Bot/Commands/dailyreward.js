@@ -1,6 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "dailyreward",
+  cooldown: 86400,
   permissions: ["SEND_MESSAGES"],
   description: "Receive random number of coins.",
   async execute(message, args, cmd, client, discord, profileData) {
