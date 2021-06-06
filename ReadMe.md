@@ -44,7 +44,22 @@ Here are some links that are very handy for us, but also maybe for you:
   - [Aternos](https://aternos.org/:en/): our temporary host. Later we will convert it to [BungeeCord](https://ci.md-5.net/job/BungeeCord/) for better performance. We will run it     run it on our own PC.
 
 ### Commands
-Here is a list for commands on our hangout server ([EGS])(https://discord.gg/gBVFuBqENA)
+Here is a list for commands on our hangout server [EGS](https://discord.gg/gBVFuBqENA). Be aware though that some commands are for Administrators only. Alphabetic order.
+  - `$apply`: A link to a google form if you would like to apply for a role/rank on our Minecraft/Discord server.
+  - `$balance`: Show your balance. You can then choose what balance you would like to display: Bank or Wallet.
+  - `$ban @target-member`: Bans a Discord server member.
+  - `$dailyreward`: Collect your daily reward. Has a cooldown of 24 hours.
+  - `$github`: A embed that displays the most important links to this GitHub repository.
+  - `$help`: The bot will try to help you with a small *conversation*. If the bot still doesn't help you, you can ask our support team for further assistence. Stage 1
+  - `$image searchterm`: Search google images. The bot will display the best (but random) search result.
+  - `$kick @target-member`: Kicks a Discord server member.
+  - `$leave`: If you want to stop the music from playing further, you can do `$leave`. The bot will stop the music and leave the call.
+  - `$mcserver ip port`: Displays an embed full of stats about the given server. For example try `$mcserver play.hypixel.com 25565`.
+  - `$mute @target-member`: Mutes a member. The target cannot do anything, except read. Good for spammers that you do not want to ban or kick. Removes the default role, and adds the 'Mute' role.
+  - `$newevent`: Generates a new event. This can be used for poles or team selection.
+  - `$play youtube-url`: Plays music/sound of a given YouTube video. For example try `$play https://www.youtube.com/watch?v=dQw4w9WgXcQ`.
+  - `$rules`: Displays all rules.
+  - `$unmute`: Unmutes a muted member. Removes the 'Mute' role, and adds the default role.
 
 ----------------------------------------
 
