@@ -30,6 +30,7 @@ Our Discord Server also has a Economy system. You can collect money through a co
   - More to come
   - .
   - .<br/>
+
 There are 2 types of balance:
   - Bank: you cannot pay with this, it's just an account for save keeping and saving up money.
   - Wallet: this is your direct payment method. All money earned (for example DR) goes into here.
