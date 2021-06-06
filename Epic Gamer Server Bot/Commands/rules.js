@@ -16,7 +16,7 @@ module.exports = {
             {name: 'Rule 5', value: 'If someone breaks the upper rules, they will receive a ban or kick. Please report any rule breakers to the staff!'},
             {name: 'Rule 6', value: 'If you want a higher role/rank, please fill in the form. Do not beg for a better role/rank!'}
         )
-        .setFooter('Sent By The MultiCube Community Bot');
+        .setFooter('Stats and bot profided by Complex. Usage: -rules.');
 
         message.channel.send(newEmbed)
     }

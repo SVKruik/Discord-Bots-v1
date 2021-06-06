@@ -12,6 +12,7 @@ module.exports = {
  
         let embed = new Discord.MessageEmbed()
             .setColor('#ffb1b1')
+            .setFooter('Stats and bot profided by Complex. Usage: -reactionrole.')
             .setTitle('Choose a team to play on!')
             .setDescription('Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.\n\n'
                 + `${redTeamEmoji} for Red team\n`

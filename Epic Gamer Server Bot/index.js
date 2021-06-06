@@ -23,7 +23,7 @@ client.on("ready", () => {
     )
     .catch(console.error);
   client.user
-    .setPresence({ activity: { name: "Intense BedWars" }, status: "idle" })
+    .setPresence({ activity: { name: "Hypixel Bed Wars" }, status: "idle" })
     .then(console.log)
     .catch(console.error);
 });
