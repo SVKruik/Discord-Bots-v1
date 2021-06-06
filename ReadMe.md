@@ -34,7 +34,14 @@ Our Discord Server also has a Economy system. You can collect money through a co
 There are 2 types of balance:
   - Bank: you cannot pay with this, it's just an account for save keeping and saving up money.
   - Wallet: this is your direct payment method. All money earned (for example DR) goes into here.
-The Economy System is not done, so this text about Economy will be expanded. 
+The Economy System is not done, so this text about Economy will be expanded.
+
+### Links
+Here are some links that are very handy for us, but also maybe for you:
+  - [Cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet): General information about Markdown (language).f
+  - [Discord](https://discord.gg/gBVFuBqENA) Server for hangout, not dedicated to our Minecraft Server.
+  - [Discord](https://discord.gg/VSE75WkgFM) Server for our Minecraft server.
+  - [Aternos](https://aternos.org/:en/): our temporary host. Later we will convert it to [BungeeCord](https://ci.md-5.net/job/BungeeCord/) for better performance. We will run it     run it on our own PC.
 
 ----------------------------------------
 
