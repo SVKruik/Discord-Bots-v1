@@ -26,13 +26,13 @@ We have a few rules that are important. We want to keep this place nice, friendl
 
 ### Economy
 Our Discord Server also has a Economy system. You can collect money through a couple ways:
-- Daily reward: as the name suggests, you can collect a DR. The command for this is `$dailyreward`, it has a cooldown of 24 hours (86400 seconds).
-- More to come
-- .
-- .<br/><br/>
+  - Daily reward: as the name suggests, you can collect a DR. The command for this is `$dailyreward`, it has a cooldown of 24 hours (86400 seconds).
+  - More to come
+  - .
+  - .<br/>
 There are 2 types of balance:
-- Bank: you cannot pay with this, it's just an account for save keeping and saving up money.
-- Wallet: this is your direct payment method. All money earned (for example DR) goes into here.
+  - Bank: you cannot pay with this, it's just an account for save keeping and saving up money.
+  - Wallet: this is your direct payment method. All money earned (for example DR) goes into here.
 The Economy System is not done, so this text about Economy will be expanded. 
 
 ----------------------------------------
