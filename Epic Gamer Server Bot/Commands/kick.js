@@ -1,6 +1,7 @@
 module.exports = {
     name: 'kick',
     description: "This command kicks a member!",
+    permissions: ["ADMINISTRATOR", "KICK_MEMBERS"],
     execute(message, args){
         const target = message.mentions.users.first();
         if(target){

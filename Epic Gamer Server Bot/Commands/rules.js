@@ -6,6 +6,7 @@ module.exports = {
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#ffb1b1')
         .setTitle('Server Rules')
+        .setImage('https://i.imgur.com/neCyTDH.png')
         .setDescription('This embed displays all of our Server Rules')
         .addFields(
             {name: 'Rule 1', value: 'Treat everyone with respect! Bullying or abusing someone is not allowed!'},
