@@ -1,7 +1,7 @@
 module.exports = {
   name: "balance",
-  permissions: ["SEND_MESSAGES"],
   description: "Check the user balance",
+  permissions: ["SEND_MESSAGES"],
   async execute(message, args, cmd, client, Discord, profileData) {
 
     const BankEmoji = "🏦";

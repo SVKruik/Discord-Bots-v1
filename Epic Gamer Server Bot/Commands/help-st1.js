@@ -1,7 +1,7 @@
 module.exports = {
     name: 'help',
     description: "Advanced Help - Stage 1",
-    persmisions: ["SEND_MESSAGES"],
+   permissions: ["SEND_MESSAGES"],
     async execute(message, args, cmd, client, Discord) {
         
         const channel = '848939517603479553'

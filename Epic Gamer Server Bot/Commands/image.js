@@ -8,7 +8,7 @@ const google = new Scraper({
 
 module.exports = {
     name: 'image',
-    persmisions: ["SEND_MESSAGES"],
+   permissions: ["SEND_MESSAGES"],
     description: 'This sends a image',
     async execute(message, args, cmd, client, Discord){
         const image_query = args.join(' ');

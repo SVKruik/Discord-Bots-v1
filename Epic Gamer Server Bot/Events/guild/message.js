@@ -25,8 +25,6 @@ module.exports = async (Discord, client, message) => {
     console.log(err);
   }
 
-  command.execute(message, args, cmd, client, Discord, profileData);
-
   const args = message.content.slice(prefix.length).split(/ +/);
   const cmd = args.shift().toLowerCase();
 
@@ -75,7 +73,7 @@ module.exports = async (Discord, client, message) => {
     let invalidPerms = [];
     for (const perm of command.permissions) {
       if (!validPermissions.includes(perm)) {
-        return console.log(`Missing permissions! ${perm}`);
+        return console.log(`Invalid Permission: ${perm}`);
       }
       if (!message.member.hasOwnProperty(perm)) {
         invalidPerms.push(perm);
