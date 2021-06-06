@@ -24,6 +24,17 @@ If you have questions about anything, you can contact our support team like said
 ### Rules
 We have a few rules that are important. We want to keep this place nice, friendly and polite. Rule breakers will receive a warning, and if they continue, the will receive a ban/kick. Report rulebreakers to our staff. Read the server rules in-game (/mainmenu --> Server Rules), or on first join of the Discord server.
 
+### Economy
+Our Discord Server also has a Economy system. You can collect money through a couple ways:
+- Daily reward: as the name suggests, you can collect a DR. The command for this is `$dailyreward`, it has a cooldown of 24 hours (86400 seconds).
+- More to come
+- .
+- .
+There are 2 types of balance:
+- Bank: you cannot pay with this, it's just an account for save keeping and saving up money.
+- Wallet: this is your direct payment method. All money earned (for example DR) goes into here.
+The Economy System is not done, so this text about Economy will be expanded. 
+
 ----------------------------------------
 
 For questions about updates or anything else, contact our support team.<br/>
