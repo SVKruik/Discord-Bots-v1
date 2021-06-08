@@ -12,6 +12,7 @@
     "images-scraper": "^6.3.0",
     "minecraft-server-util": "^3.5.1",
     "mongoose": "^5.12.13",
+    "mysql2": "^2.2.5",
     "node.js": "^0.0.1-security",
     "yt-search": "^2.8.0",
     "ytdl-core": "^4.8.2"

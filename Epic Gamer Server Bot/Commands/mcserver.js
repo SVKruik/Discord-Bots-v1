@@ -2,7 +2,7 @@ const util = require('minecraft-server-util')
 
 module.exports = {
     name: 'mcserver',
-   permissions: ["SEND_MESSAGES"],
+    permissions: ["SEND_MESSAGES"],
     description: 'Server stats info etc.',
     execute(message, args, cmd, client, Discord){
         if(!args[0]) return message.channel.send('Please enter a valid Minecraft server IP!');

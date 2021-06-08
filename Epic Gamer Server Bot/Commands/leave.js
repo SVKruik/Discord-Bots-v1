@@ -1,6 +1,6 @@
 module.exports = {
     name: 'leave',
-   permissions: ["SEND_MESSAGES"],
+    permissions: ["SEND_MESSAGES"],
     description: 'Stop the bot and leave the channel',
     async execute(message, args, cmd, client, Discord) {
         const voiceChannel = message.member.voice.channel;
