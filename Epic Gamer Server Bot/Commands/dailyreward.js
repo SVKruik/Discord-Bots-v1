@@ -16,6 +16,6 @@ module.exports = {
         },
       }
     );
-    return message.channel.send(`${message.author.username}, you have collected your daily reward and received ${randomNumber} coins.`);
+    return message.channel.send(`${message.author.username}, you have collected your daily reward and received \`${randomNumber}\` coins.`);
   },
 };
