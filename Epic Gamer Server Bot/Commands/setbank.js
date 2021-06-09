@@ -1,6 +1,6 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
-  name: "setwallet",
+  name: "setbank",
   permissions: ["ADMINISTRATOR"],
   description: "Set coins.",
   async execute(message, args, cmd, client, discord, profileData) {

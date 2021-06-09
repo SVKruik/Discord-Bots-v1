@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'newevent',
+    name: 'event',
     permissions: ["ADMINISTRATOR"],
     description: "Sets up a reaction role message!",
     async execute(message, args, cmd, client, Discord) {
