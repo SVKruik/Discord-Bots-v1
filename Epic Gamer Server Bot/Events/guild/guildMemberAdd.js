@@ -7,6 +7,7 @@ module.exports = async (client, Discord, member) => {
     coins: 0,
     bank: 0,
     level: 0,
+    name: member.username,
   });
   profile.save();
 };
