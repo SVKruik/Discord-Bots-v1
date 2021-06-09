@@ -38,28 +38,45 @@ The Economy System is not done, so this text about Economy will be expanded.
 
 ### Links
 Here are some links that are very handy for us, but also maybe for you:
-  - [Cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet): General information about Markdown (language).f
+  - [Cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet): General information about Markdown (language).
+  - [More](https://gist.github.com/matthewzring/9f7bbfd102003963f9be7dbcf7d40e51) Markdown information.
   - [Discord](https://discord.gg/gBVFuBqENA) Server for hangout, not dedicated to our Minecraft Server.
   - [Discord](https://discord.gg/VSE75WkgFM) Server for our Minecraft server.
-  - [Aternos](https://aternos.org/:en/): our temporary host. Later we will convert it to [BungeeCord](https://ci.md-5.net/job/BungeeCord/) for better performance. We will run it     run it on our own PC.
+  - [Aternos](https://aternos.org/:en/): our temporary host. Later we will convert it to [BungeeCord](https://ci.md-5.net/job/BungeeCord/) for better performance. We will run it on our own PC.
+  - [GitHub](https://github.com/) homepage.
+  - [Node.js](https://nodejs.org/en/) allows us to work with the bot.
+  - [VSC](https://code.visualstudio.com/) the best code editor for this project.
+  - [NPM](https://www.npmjs.com/) has a lot of great plugins for the bot. Usage CMD: npm install name.
+  - [Tutorial](https://youtube.com/playlist?list=PLbbLC0BLaGjpyzN1rg-gK4dUqbn8eJQq4) about the Discord Bot.
 
 ### Commands
 Here is a list for commands on our hangout server [EGS](https://discord.gg/gBVFuBqENA). Be aware though that some commands are for Administrators only. Alphabetic order.
   - `$apply`: A link to a google form if you would like to apply for a role/rank on our Minecraft/Discord server.
   - `$balance`: Show your balance. You can then choose what balance you would like to display: Bank or Wallet.
+  - `$balbank`: Directly shows your bank account worth, without a dialogue.
+  - `$balwallet`: Directly shows your wallet worth, without a dialogue.
   - `$ban @target-member`: Bans a Discord server member.
+  - `$clear amount`: Bulkdeletes messages. Be aware though that old messages can't be deleted.
   - `$dailyreward`: Collect your daily reward. Has a cooldown of 24 hours.
   - `$github`: A embed that displays the most important links to this GitHub repository.
+  - `$deposit amount`: Deposit coins to your bank account. So from Wallet to Bank.
+  - `$event`: Creates an embed with options. Can be used for a poll or team select.
+  - `$github`: Creates an embed that displays the most important links to this GitHub repository.
+  - `$give @member amount`: Gives a member of the server X amount of coins. Note that that targeted member must exist in the Database.
   - `$help`: The bot will try to help you with a small *conversation*. If the bot still doesn't help you, you can ask our support team for further assistence. Stage 1
   - `$image searchterm`: Search google images. The bot will display the best (but random) search result.
   - `$kick @target-member`: Kicks a Discord server member.
   - `$leave`: If you want to stop the music from playing further, you can do `$leave`. The bot will stop the music and leave the call.
   - `$mcserver ip port`: Displays an embed full of stats about the given server. For example try `$mcserver play.hypixel.com 25565`.
   - `$mute @target-member`: Mutes a member. The target cannot do anything, except read. Good for spammers that you do not want to ban or kick. Removes the default role, and adds the 'Mute' role.
-  - `$newevent`: Generates a new event. This can be used for poles or team selection.
   - `$play youtube-url`: Plays music/sound of a given YouTube video. For example try `$play https://www.youtube.com/watch?v=dQw4w9WgXcQ`.
-  - `$rules`: Displays all rules.
+  - `$rules`: Displays all the rules.
+  - `$setbank amount`: Sets your bank worth to X amount of coins.
+  - `$setwallet amount`: Sets your wallet worth to X amount of coins.
+  - `$template`: Sends a template for starting a new command. Can be used for it's function, or to give someone a start.
+  - `$ticket`: WIP, if it's done, a description will be added.
   - `$unmute`: Unmutes a muted member. Removes the 'Mute' role, and adds the default role.
+  - `$withdraw amount`: Withdraw coins from your bank account. So from Bank to Wallet.
 
 ----------------------------------------
 
