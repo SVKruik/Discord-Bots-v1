@@ -25,7 +25,7 @@ module.exports = {
         }
       );
 
-      return message.channel.send(`${message.author.username}, the targeted member's bank is now \`${amount}\`.`);
+      return message.channel.send(`${message.author.username}, the targeted member's bank worth is now \`${amount}\`.`);
     } catch (err) {
       console.log(err);
     }
