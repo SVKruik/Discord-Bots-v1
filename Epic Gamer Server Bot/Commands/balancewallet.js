@@ -6,4 +6,3 @@ module.exports = {
         message.channel.send(`${message.author.username}, this is your current wallet balance : \`${profileData.coins}\`.`);
     }
 }
-  
