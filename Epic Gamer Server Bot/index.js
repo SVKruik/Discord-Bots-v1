@@ -1,3 +1,4 @@
+//Index - cointains core and links. 
 const Discord = require("Discord.js");
 require("dotenv").config();
 const client = new Discord.Client({
@@ -16,7 +17,7 @@ client.events = new Discord.Collection();
   require(`./Handlers/${handler}`)(client, Discord);
 });
 
-//Status
+//Status - Rich presence.
 client.on("ready", () => {
   client.user
     .setActivity("Discord.js", { type: "PLAYING" })
@@ -30,7 +31,7 @@ client.on("ready", () => {
     .catch(console.error);
 });
 
-//Welcome Role
+//Welcome Role - needs an ID, not name.
 client.on("guildMemberAdd", (guildMember) => {
   let welcomeRole = guildMember.guild.roles.cache.find(
     (role) => role.name === "Member"
@@ -44,7 +45,7 @@ client.on("guildMemberAdd", (guildMember) => {
     );
 });
 
-//Database for Economy
+//Database - Economy, MongoDB and Robo3T
 mongoose
   .connect(process.env.MONGODB_SRV, {
     useNewUrlParser: true,
@@ -58,5 +59,5 @@ mongoose
     console.log(err);
   });
 
-//Token login
+//Token login - Available in another file. 
 client.login(process.env.Discord_TOKEN);
