@@ -61,7 +61,7 @@
       }
     </script>
     <script>
-      // function to set a given theme/color-scheme
+    /* Theme switcher */
       function setTheme(themeName) {
         localStorage.setItem('theme', themeName);
         document.documentElement.className = themeName;
@@ -76,7 +76,6 @@
         }
       }
 
-      // Immediately invoked function to set the theme on initial load
       (function () {
         if (localStorage.getItem('theme') === 'theme-dark') {
           setTheme('theme-dark');
@@ -111,15 +110,15 @@
         <!--Deel van lijst van de pagina's in navigatiebalk-->
       </li>
       <li>
-        <a href="shading.html" class="active">Shaders</a>
+        <a href="shading.html" class="active">Servers</a>
         <!--Deel van lijst van de pagina's in navigatiebalk-->
       </li>
       <li>
-        <a href="texturepacks.html">Texture Packs</a>
+        <a href="texturepacks.html">Ranks</a>
         <!--Deel van lijst van de pagina's in navigatiebalk-->
       </li>
       <li>
-        <a href="modpacks.html">Mod Packs</a>
+        <a href="modpacks.html">GitHub</a>
         <!--Deel van lijst van de pagina's in navigatiebalk-->
       </li>
       <li>
@@ -127,7 +126,7 @@
         <!--Deel van lijst van de pagina's in navigatiebalk-->
       </li>
       <li>
-        <a href="help.html">Help</a>
+        <a href="help.html">Socials</a>
         <!--Deel van lijst van de pagina's in navigatiebalk-->
       </li>
     </ul>
@@ -162,10 +161,10 @@
     <div id="page-container">
       <h1 class="indexopening">
         <!--Openingszin-->
-        Welcome to Enchant Minecraft
+        Welcome to the MultCube Community 
       </h1>
       <h3 class="subregel-opening">
-        Your guide for Minecraft add-ons
+        Your Minecraft server, with a great community.
       </h3>
       <!---->
       <div class="bannergroep">
@@ -177,11 +176,10 @@
         <div class="banner4">
           <!--Tekstdeel-->
           <h1 class="bannertitel">
-            Shaders
+            Servers 
           </h1>
           <p class="bannertekst">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-            Aenean massa.</p> <br>
+            We run several Minecraft servers, with and without mods. Learn more:</p> <br>
           <div class="center-con">
             <div class="round">
               <div id="cta">
@@ -201,11 +199,10 @@
         </div>
         <div class="banner2">
           <h1 class="bannertitel">
-            Texture Packs
+            Ranks
           </h1>
           <p class="bannertekst">
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. <br>
+            We also have a ranks system. You can buy them with real money, or with our in-game economy system. <br>
           <div class="center-con">
             <div class="round">
               <div id="cta">
