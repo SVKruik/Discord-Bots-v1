@@ -12,7 +12,7 @@ module.exports = {
 
             memberTarget.roles.remove(blindRole.id);
             memberTarget.roles.add(mainRole.id);
-            message.channel.send(`<@${memberTarget.user.id}> has been succesfully unblinded.`)
+            message.channel.send(`<@${memberTarget.user.id}> has been succesfully unblinded. Welcome back!`)
 
         } else{
             message.channel.send('Cannot find the specified member.');
