@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="nl">
+<!--==========LINKS EN BRONNEN==========-->
+
+<head>
+    <title>EMC | Bronnen</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="extra-prachtig.css">
+    <!--Verwijzing naar het opmaakdocument-->
+    <src rel="stylesheet" href="script.js">
+        <!--Verwijzing naar het JavaScript-document-->
+        <link rel="icon" href="logofavicon.png">
+        <!--Voor het eigen tab icon (favicon)-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!--Voor de lettertypes in het CSS document-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <!--Voor de lettertypes in het CSS document-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!--Voor de lettertypes in het CSS document-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,700&display=swap"
+            rel="stylesheet">
+        <!--Voor de lettertypes in het CSS document-->
+        <link
+            href="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c263ab3c-49c5-11eb-83c8-ebb5d6f907df">
+        <!--Voor de juxtapose-->
+
+        <!--==========JAVA SCRIPTS==========-->
+        <script>
+            $('.round').click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $('.arrow').toggleClass('bounceAlpha');
+            });
+        </script>
+        <script>
+            function myFunction1() {
+                /* Get the text field */
+                var copyText = document.getElementById("myInput1");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
+            }
+        </script>
+        <script>
+            function myFunction2() {
+                /* Get the text field */
+                var copyText = document.getElementById("myInput2");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
+            }
+        </script>
+        <script>
+            function myFunction3() {
+                /* Get the text field */
+                var copyText = document.getElementById("myInput3");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
+            }
+        </script>
+        <script>
+            // function to set a given theme/color-scheme
+            function setTheme(themeName) {
+                localStorage.setItem('theme', themeName);
+                document.documentElement.className = themeName;
+            }
+
+            // function to toggle between light and dark theme
+            function toggleTheme() {
+                if (localStorage.getItem('theme') === 'theme-dark') {
+                    setTheme('theme-light');
+                } else {
+                    setTheme('theme-dark');
+                }
+            }
+
+            // Immediately invoked function to set the theme on initial load
+            (function () {
+                if (localStorage.getItem('theme') === 'theme-dark') {
+                    setTheme('theme-dark');
+                } else {
+                    setTheme('theme-light');
+                }
+            })();
+        </script>
+</head>
+<!--Einde Java, Links en Bronnen-->
+
+<body>
+    <!--Begin zichtbare deel-->
+    <!--==========NAVIGATIEBALK==========-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <nav>
+        <!--Begin van navigatiebalk-->
+        <div class="logo">
+            <!--Deze div is nodig voor de opmaak van het logo-->
+            <li>
+                <a href="index.html">
+                    <img class="logoafbeelding" src="logo.png" alt="Logo isn't loading" width="auto" height="100">
+                </a>
+            </li>
+        </div>
+        <!--Afsluiten class="logo"-->
+        <ul class="navlinks">
+            <!--Lijst voor de pagina's. Met het CSS document wordt deze lijst horizontaal.-->
+
+            <li>
+                <a href="index.html">Home</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="shading.html" class="active">Shaders</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="texturepacks.html">Texture Packs</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="modpacks.html">Mod Packs</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="placeholder.html">About</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="help.html">Help</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+        </ul>
+        <!--Einde lijst met pagina's-->
+        <li>
+            <img onclick="toggleTheme()" src="moon-sun.png" class="dark-lightmodebutton">
+        </li>
+    </nav>
+    <!--Einde van navigatiebalk-->
+    <!--==========MIDDENSTUK==========-->
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        //Werkt pas vanaf 20px in het document
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // De functie zelf
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <div class="complete-body">
+        <div id="page-container">
+            <div class="bronnencompleet">
+                <h3 class="bronnenkopjes">
+                    Bronnen
+                </h3>
+                <p>
+                    Dit zijn alle bronnen die ik heb gebruikt. Dit is dus voor de afbeeldingen, en sommige
+                    artikelen.<br><br>
+                </p>
+                <h3 class="bronnenkopjes">
+                    Afbeeldingen
+                </h3>
+                <ul class="opsommingbronnen">
+                    <p><strong>Shaders</strong></p>
+                    <li><a
+                            href="https://www.wikiwax.com/best-minecraft-shaders-packs/">https://www.wikiwax.com/best-minecraft-shaders-packs/</a>
+                    </li>
+                    <li><a
+                            href="https://www.curseforge.com/minecraft/customization/chocapic13-shaders">https://www.curseforge.com/minecraft/customization/chocapic13-shaders</a>
+                    </li>
+                    <li><a
+                            href="https://nl.pinterest.com/pin/741405157388917502/">https://nl.pinterest.com/pin/741405157388917502/</a>
+                    </li>
+                    <li><a
+                            href="https://nl.pinterest.com/pin/46443439896434540/">https://nl.pinterest.com/pin/46443439896434540/</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://minecraft-inside.com/minecraft-mods/129-rudoplays-shader.html">https://minecraft-inside.com/minecraft-mods/129-rudoplays-shader.html</a>
+                    </li>
+                    <li><a
+                            href="https://apkpure.com/mod-lagless-shaders-craft/ideas.minecraft.laglesshadersmod">https://apkpure.com/mod-lagless-shaders-craft/ideas.minecraft.laglesshadersmod</a>
+                    </li>
+                    <li><a
+                            href="https://www.google.com/search?q=sushi+shaders&tbm=isch&ved=2ahUKEwirztWYvKjuAhVRNuwKHf0zBBIQ2-cCegQIABAA&oq=sushi+s&gs_lcp=CgNpbWcQARgAMgQIIxAnMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAOgQIABBDOgUIABCxAzoICAAQsQMQgwFQ9roBWMHDAWCpywFoAHAAeACAATiIAcICkgEBN5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=8g8HYKuNHNHssAf955CQAQ&bih=880&biw=1920&rlz=1C1CHBF_nlNL925NL925#imgrc=tABTTdiQcoJMXM">Echt
+                            een heel lang address</a> , <p>hij is voor de Sushi Shader.</p>
+                    </li>
+                    <li><a href="https://mc-mods.org/mrmeepz-shaders-mod/">https://mc-mods.org/mrmeepz-shaders-mod/</a>
+                    </li>
+                    <li><a
+                            href="https://www.reddit.com/r/Minecraft/comments/9qu5xc/just_a_simple_picture_bdcraft_kuda_shaders/">https://www.reddit.com/r/Minecraft/comments/9qu5xc/just_a_simple_picture_bdcraft_kuda_shaders/</a>
+                    </li>
+                </ul>
+                <ul class="opsommingbronnen">
+                    <p><strong>Texture Packs</strong></p>
+                    <li><a
+                            href="https://www.curseforge.com/minecraft/texture-packs/default-improved">https://www.curseforge.com/minecraft/texture-packs/default-improved</a>
+                    </li>
+                    <li><a
+                            href="http://www.9minecraft.net/epic-realistic-sky-resource-pack/">http://www.9minecraft.net/epic-realistic-sky-resource-pack/</a>
+                    </li>
+                    <li><a
+                            href="https://nl.pinterest.com/pin/436638126374111416/">https://nl.pinterest.com/pin/436638126374111416/</a>
+                    </li>
+                    <li><a
+                            href="https://annoounces.com/quadral-pack-resource-pack/">https://annoounces.com/quadral-pack-resource-pack/</a>
+                    </li>
+                    <li><a
+                            href="https://www.minecrafttexturepacks.com/john-smith-legacy/">https://www.minecrafttexturepacks.com/john-smith-legacy/</a>
+                    </li>
+                    <li><a
+                            href="https://texture-packs.com/resourcepack/faithful-128x/">https://texture-packs.com/resourcepack/faithful-128x/</a>
+                    </li>
+                    <li><a
+                            href="https://content.minetest.net/packages/zayuim/isabellaii/">https://content.minetest.net/packages/zayuim/isabellaii/</a>
+                    </li>
+                    <li><a
+                            href="https://pcminecraft-mods.com/misas-realistic-resource-pack-for-minecraft-1-8-9-1-8/">https://pcminecraft-mods.com/misas-realistic-resource-pack-for-minecraft-1-8-9-1-8/</a>
+                    </li>
+                    <li><a
+                            href="http://minecraftsix.com/glimmars-steampunk-resource-pack/">http://minecraftsix.com/glimmars-steampunk-resource-pack/</a>
+                    </li>
+                    <li><a
+                            href="https://resourcepack.net/dokucraft-the-saga-continues-resource-pack/">https://resourcepack.net/dokucraft-the-saga-continues-resource-pack/</a>
+                    </li>
+                    <li><a
+                            href="https://continuum.graphics/stratum-resourcepack/">https://continuum.graphics/stratum-resourcepack/</a>
+                    </li>
+                </ul>
+                <ul class="opsommingbronnen">
+                    <p><strong>Mod Packs</strong></p>
+                    <li><a
+                            href="https://www.reddit.com/r/Minecraft/comments/bavo9v/discovered_journeymap_mod_and_let_me_tell_youmind/">https://www.reddit.com/r/Minecraft/comments/bavo9v/discovered_journeymap_mod_and_let_me_tell_youmind/</a>
+                    </li>
+                    <li><a href="https://www.minecraftmods.com/decocraft/">https://www.minecraftmods.com/decocraft/</a>
+                    </li>
+                    <li><a
+                            href="https://nl.pinterest.com/pin/517491813440147260/">https://nl.pinterest.com/pin/517491813440147260/</a>
+                    </li>
+                    <li><a
+                            href="http://www.mc-mod.net/the-lost-cities-mod/">http://www.mc-mod.net/the-lost-cities-mod/</a>
+                    </li>
+                    <li><a
+                            href="https://www.reddit.com/r/RLCraft/comments/dooeqs/sooohow_do_i_find_one_of_these/">https://www.reddit.com/r/RLCraft/comments/dooeqs/sooohow_do_i_find_one_of_these/</a>
+                    </li>
+                    <li><a
+                            href="https://www.google.com/search?q=Roguelike+Adventures+and+Dungeons&tbm=isch&ved=2ahUKEwiizpyFgaruAhWigKQKHVElCD8Q2-cCegQIABAA&oq=Roguelike+Adventures+and+Dungeons&gs_lcp=CgNpbWcQA1DnsgFY57IBYOS1AWgAcAB4AIABLIgBLJIBATGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=W94HYOK0HKKBkgXRyqD4Aw&bih=937&biw=1920&rlz=1C1CHBF_nlNL925NL925#imgrc=tSB_Zhr8Z3m2wM">Weer
+                            een heel lang address</a>, <p>hij is voor Roguelike Adventures and Dungeons.</p>
+                    </li>
+                    <li><a
+                            href="http://www.9minecraft.net/galacticraft-mod/">http://www.9minecraft.net/galacticraft-mod/</a>
+                    </li>
+                    <li><a href="https://imgur.com/r/feedthebeast/oRPep8k">https://imgur.com/r/feedthebeast/oRPep8k</a>
+                    </li>
+                    <li><a
+                            href="https://www.nashvillechatterclass.com/pokemon-mod-pixelmon-minecraft-discontinued-developer-confirms/33164/">https://www.nashvillechatterclass.com/pokemon-mod-pixelmon-minecraft-discontinued-developer-confirms/33164/</a>
+                    </li>
+                    <li><a
+                            href="https://www.technicpack.net/modpack/official-crafting-dead-mod.41792">https://www.technicpack.net/modpack/official-crafting-dead-mod.41792</a>
+                    </li>
+                    <li><a
+                            href="https://www.planetminecraft.com/project/another-world---the-nether-1076604/">https://www.planetminecraft.com/project/another-world---the-nether-1076604/</a>
+                    </li>
+                    <li><a
+                            href="https://nl.pinterest.com/pin/482940760016853997/">https://nl.pinterest.com/pin/482940760016853997/</a>
+                    </li>
+                    <li><a
+                            href="http://minecraftsix.com/advanced-rocketry-mod/">http://minecraftsix.com/advanced-rocketry-mod/</a>
+                    </li>
+                </ul>
+                <h3 class="bronnenkopjes">
+                    Tekst en Artikelen
+                </h3>
+                <ul class="opsommingbronnen">
+                    <li><a
+                            href="https://www.wikiwax.com/best-minecraft-shaders-packs/">https://www.wikiwax.com/best-minecraft-shaders-packs/</a>
+                    </li>
+                    <li><a
+                            href="https://www.vg247.com/2020/12/01/best-minecraft-mods-2020/">https://www.vg247.com/2020/12/01/best-minecraft-mods-2020/</a>
+                    </li>
+                    <li><a
+                            href="https://codakid.com/minecraft-texture-packs/">https://codakid.com/minecraft-texture-packs/</a>
+                    </li>
+                    <div class="laasteregelbronnen">
+                        <li>
+                            <p>Het artikel </p><a href="help.html">'Help'</a>
+                            <p>heb ik zelf geschreven.</p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!--Afsluiten id="page-container"-->
+
+    <!--==========FOOTER==========-->
+    <div class="complete-footer">
+        <!--Opmaak algemene footer-->
+        <div class="container"></div>
+        <footer>
+            <!-- Footer main -->
+            <section class="ft-main">
+                <!--Footer lijst gedeelte, waarin alle blokjes staan-->
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Explore</h2>
+                    <!--Titel van het blokje-->
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shading.html">Shaders</a></li>
+                        <li><a href="texturepacks.html">Texture Packs</a></li>
+                        <li><a href="modpacks.html">Mod Packs</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Contact</h2>
+                    <!--Titel van het blokje-->
+                    <ul>
+                        <li>
+                            <!--Vanaf hier tot volgende commentaar: alles voor het copy knopje-->
+                            <input class="copyvak" type="text" value="Doctorandus F. Bijlweg 6, 1784 MC Den Helder"
+                                id="myInput1">
+                            <button class="copybutton" onclick="myFunction1()">Copy</button>
+                        </li>
+                        <li>
+                            <input class="copyvak" type="text" value="+31223540300" id="myInput2">
+                            <button class="copybutton" onclick="myFunction2()">Copy</button>
+                        </li>
+                        <li>
+                            <input class="copyvak" type="text" value="mail@scholenaanzee.nl" id="myInput3">
+                            <button class="copybutton" onclick="myFunction3()">Copy</button>
+                        </li>
+                        <!--Einde copy knopje-->
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Follow</h2>
+                    <!--Titel van het blokje-->
+                    <ul>
+                        <li><a href="https://www.instagram.com/ " target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.snapchat.com/l/nl-nl/" target="_blank">Snapchat</a></li>
+                        <li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Legals</h2>
+                    <!--Titel van het blokje-->
+                    <ul>
+                        <li><a href="placeholder.html">Terms</a></li>
+                        <li><a href="placeholder.html">Privacy</a></li>
+                        <li><a href="bronnen.html">Sources</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Stay Updated</h2>
+                    <!--Titel, stukje voor email address-->
+                    <p>Subscribe to our newsletter to get our latest news.</p>
+                    <form>
+                        <input type="email" name="email" placeholder="Enter email address">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </section>
+            <section class="ft-legal">
+                <!--Legals op de bodem van website-->
+                <ul class="ft-legal-list">
+                    <li>
+                        <p>
+                            Informatica Periode 2
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            LHA4E
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Gemaakt door Stefan Kruik, 136212
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+
+    <!--==========AFSLUITEN DOCUMENT==========-->
+    </div>
+    <!--Afsluiten id="page-container">-->
+</body>
+<!--Afsluiten zichtbare deel-->
+
+</html>
+<!--Afsluiten document-->
+
+<!--==========EINDE==========-->
