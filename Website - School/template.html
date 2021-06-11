@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="nl">
+<!--==========LINKS EN BRONNEN==========-->
+
+<head>
+      <title>Home</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="extra-prachtig-light.css">
+      <!--Verwijzing naar het opmaakdocument-->
+      <src rel="stylesheet" href="script.js">
+            <!--Verwijzing naar het JavaScript-document-->
+            <link rel="icon" href="logofavicon.ico">
+            <!--Voor het eigen tab icon (favicon)-->
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <!--Voor de lettertypes in het CSS document-->
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+            <!--Voor de lettertypes in het CSS document-->
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <!--Voor de lettertypes in het CSS document-->
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,700&display=swap"
+                  rel="stylesheet">
+            <!--Voor de lettertypes in het CSS document-->
+            <link
+                  href="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c263ab3c-49c5-11eb-83c8-ebb5d6f907df">
+            <!--Voor de juxtapose-->
+
+    <!--==========JAVA SCRIPTS==========-->
+    <script>
+      $('.round').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.arrow').toggleClass('bounceAlpha');
+      });
+    </script>
+    <script>
+      function myFunction1() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput1");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+      }
+    </script>
+    <script>
+      function myFunction2() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput2");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+      }
+    </script>
+    <script>
+      function myFunction3() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput3");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+      }
+    </script>
+    <script>
+      // function to set a given theme/color-scheme
+      function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+      }
+
+      // function to toggle between light and dark theme
+      function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+          setTheme('theme-light');
+        } else {
+          setTheme('theme-dark');
+        }
+      }
+
+      // Immediately invoked function to set the theme on initial load
+      (function () {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+          setTheme('theme-dark');
+        } else {
+          setTheme('theme-light');
+        }
+      })();
+    </script>
+</head>
+<!--Einde Java, Links en Bronnen-->
+<body>
+  <!--Begin zichtbare deel-->
+  <!--==========NAVIGATIEBALK==========-->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <nav>
+    <!--Begin van navigatiebalk-->
+    <div class="logo">
+      <!--Deze div is nodig voor de opmaak van het logo-->
+      <li>
+        <a href="index.html">
+          <img class="logoafbeelding" src="logo.png" alt="Logo isn't loading" width="auto" height="100">
+        </a>
+      </li>
+    </div>
+    <!--Afsluiten class="logo"-->
+    <ul class="navlinks">
+      <!--Lijst voor de pagina's. Met het CSS document wordt deze lijst horizontaal.-->
+
+      <li>
+        <a href="index.html">Home</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="shading.html" class="active">Shaders</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="texturepacks.html">Texture Packs</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="modpacks.html">Mod Packs</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="placeholder.html">About</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="help.html">Help</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+    </ul>
+    <!--Einde lijst met pagina's-->
+    <li>
+      <img onclick="toggleTheme()" src="moon-sun.png" class="dark-lightmodebutton">
+    </li>
+  </nav>
+  <!--Einde van navigatiebalk-->
+  <!--==========MIDDENSTUK==========-->
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    //Werkt pas vanaf 20px in het document
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // De functie zelf
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+                  <!--==========FOOTER==========-->
+                  <div class="complete-footer">
+                        <!--Opmaak algemene footer-->
+                        <div class="container"></div>
+                        <footer>
+                              <!-- Footer main -->
+                              <section class="ft-main">
+                                    <!--Footer lijst gedeelte, waarin alle blokjes staan-->
+                                    <div class="ft-main-item">
+                                          <!--Blokje-->
+                                          <h2 class="ft-title">Explore</h2>
+                                          <!--Titel van het blokje-->
+                                          <ul>
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="shading.html">Shaders</a></li>
+                                                <li><a href="texturepacks.html">Texture Packs</a></li>
+                                                <li><a href="modpacks.html">Mod Packs</a></li>
+                                                <li><a href="help.html">Help</a></li>
+                                          </ul>
+                                    </div>
+                                    <div class="ft-main-item">
+                                          <!--Blokje-->
+                                          <h2 class="ft-title">Contact</h2>
+                                          <!--Titel van het blokje-->
+                                          <ul>
+                                                <li>
+                                                      <!--Vanaf hier tot volgende commentaar: alles voor het copy knopje-->
+                                                      <input type="text"
+                                                            value="Doctorandus F. Bijlweg 6, 1784 MC Den Helder"
+                                                            id="myInput1">
+                                                      <button class="copybutton" onclick="myFunction1()">Copy</button>
+                                                </li>
+                                                <li>
+                                                      <input type="text" value="+31223540300" id="myInput2">
+                                                      <button class="copybutton" onclick="myFunction2()">Copy</button>
+                                                </li>
+                                                <li>
+                                                      <input type="text" value="mail@scholenaanzee.nl" id="myInput3">
+                                                      <button class="copybutton" onclick="myFunction3()">Copy</button>
+                                                </li>
+                                                <!--Einde copy knopje-->
+                                          </ul>
+                                    </div>
+                                    <div class="ft-main-item">
+                                          <!--Blokje-->
+                                          <h2 class="ft-title">Follow</h2>
+                                          <!--Titel van het blokje-->
+                                          <ul>
+                                                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                                                <li><a href="https://twitter.com/">Twitter</a></li>
+                                                <li><a href="https://www.snapchat.com/l/nl-nl/">Snapchat</a></li>
+                                                <li><a href="https://www.reddit.com/">Reddit</a></li>
+                                                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                                                <li><a href="https://www.youtube.com/">YouTube</a></li>
+                                          </ul>
+                                    </div>
+                                    <div class="ft-main-item">
+                                          <!--Blokje-->
+                                          <h2 class="ft-title">Legals</h2>
+                                          <!--Titel van het blokje-->
+                                          <ul>
+                                                <li><a href="placeholder.html">Terms</a></li>
+                                                <li><a href="placeholder.html">Privacy</a></li>
+                                                <li><a href="bronnen.html">Sources</a></li>
+                                          </ul>
+                                    </div>
+                                    <div class="ft-main-item">
+                                          <!--Blokje-->
+                                          <h2 class="ft-title">Stay Updated</h2>
+                                          <!--Titel, stukje voor email address-->
+                                          <p>Subscribe to our newsletter to get our latest news.</p>
+                                          <form>
+                                                <input type="email" name="email" placeholder="Enter email address">
+                                                <input type="submit" value="Subscribe">
+                                          </form>
+                                    </div>
+                              </section>
+                              <section class="ft-legal">
+                                    <!--Legals op de bodem van website-->
+                                    <ul class="ft-legal-list">
+                                          <li>
+                                                <p>
+                                                      Informatica Periode 2
+                                                </p>
+                                          </li>
+                                          <li>
+                                                <p>
+                                                      LHA4E
+                                                </p>
+                                          </li>
+                                          <li>
+                                                <p>
+                                                      Gemaakt door Stefan Kruik, 136212
+                                                </p>
+                                          </li>
+                                    </ul>
+                              </section>
+                        </footer>
+                  </div>
+                  <!--==========AFSLUITEN DOCUMENT==========-->
+            </div>
+            <!--Afsluiten id="page-container">-->
+      </div>
+      <!--Afsluiten class="complete-body">-->
+</body>
+<!--Afsluiten zichtbare deel-->
+
+</html>
+<!--Afsluiten document-->
+
+<!--==========EINDE==========-->
