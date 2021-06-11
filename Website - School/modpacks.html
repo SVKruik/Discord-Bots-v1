@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="nl">
+<!--==========LINKS EN BRONNEN==========-->
+
+<head>
+    <title>EMC | Mod Packs</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="extra-prachtig.css">
+    <!--Verwijzing naar het opmaakdocument-->
+    <src rel="stylesheet" href="script.js">
+        <!--Verwijzing naar het JavaScript-document-->
+        <link rel="icon" href="logofavicon.ico">
+        <!--Voor het eigen tab icon (favicon)-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!--Voor de lettertypes in het CSS document-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <!--Voor de lettertypes in het CSS document-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!--Voor de lettertypes in het CSS document-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,700&display=swap"
+            rel="stylesheet">
+        <!--Voor de lettertypes in het CSS document-->
+        <link
+            href="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c263ab3c-49c5-11eb-83c8-ebb5d6f907df">
+        <!--Voor de juxtapose-->
+
+        <!--==========JAVA SCRIPTS==========-->
+        <script>
+            $('.round').click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $('.arrow').toggleClass('bounceAlpha');
+            });
+        </script>
+        <script>
+            function myFunction1() {
+                /* Get the text field */
+                var copyText = document.getElementById("myInput1");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
+            }
+        </script>
+        <script>
+            function myFunction2() {
+                /* Get the text field */
+                var copyText = document.getElementById("myInput2");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
+            }
+        </script>
+        <script>
+            function myFunction3() {
+                /* Get the text field */
+                var copyText = document.getElementById("myInput3");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
+            }
+        </script>
+        <script>
+            // function to set a given theme/color-scheme
+            function setTheme(themeName) {
+                localStorage.setItem('theme', themeName);
+                document.documentElement.className = themeName;
+            }
+
+            // function to toggle between light and dark theme
+            function toggleTheme() {
+                if (localStorage.getItem('theme') === 'theme-dark') {
+                    setTheme('theme-light');
+                } else {
+                    setTheme('theme-dark');
+                }
+            }
+
+            // Immediately invoked function to set the theme on initial load
+            (function () {
+                if (localStorage.getItem('theme') === 'theme-dark') {
+                    setTheme('theme-dark');
+                } else {
+                    setTheme('theme-light');
+                }
+            })();
+        </script>
+</head>
+<!--Einde Java, Links en Bronnen-->
+
+<body>
+    <!--Begin zichtbare deel-->
+    <!--==========NAVIGATIEBALK==========-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <nav>
+        <!--Begin van navigatiebalk-->
+        <div class="logo">
+            <!--Deze div is nodig voor de opmaak van het logo-->
+            <li>
+                <a href="index.html">
+                    <img class="logoafbeelding" src="logo.png" alt="Logo isn't loading" width="auto" height="100">
+                </a>
+            </li>
+        </div>
+        <!--Afsluiten class="logo"-->
+        <ul class="navlinks">
+            <!--Lijst voor de pagina's. Met het CSS document wordt deze lijst horizontaal.-->
+
+            <li>
+                <a href="index.html">Home</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="shading.html" class="active">Shaders</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="texturepacks.html">Texture Packs</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="modpacks.html">Mod Packs</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="placeholder.html">About</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+            <li>
+                <a href="help.html">Help</a>
+                <!--Deel van lijst van de pagina's in navigatiebalk-->
+            </li>
+        </ul>
+        <!--Einde lijst met pagina's-->
+        <li>
+            <img onclick="toggleTheme()" src="moon-sun.png" class="dark-lightmodebutton">
+        </li>
+    </nav>
+    <!--Einde van navigatiebalk-->
+    <!--==========MIDDENSTUK==========-->
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        //Werkt pas vanaf 20px in het document
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // De functie zelf
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <div class="complete-body">
+        <div id="page-container">
+            <div class="complete-middenstuk-overal-op-de-website">
+                <!--Opmaak complete tekst (algemeen dus)-->
+                <div class="titel-artikel">
+                    <!--Opmaak voor de titel van het artikel-->
+                    <h2 id="Contents">
+                        <!--Voor de knop om naar boven te gaan. Deze staat bij de titel omdat die helemaal boven staat en dus goed is voor 'back to top'-->
+                        13 Best Minecraft Mods for 2021
+                        <!--Titel Artikel-->
+                    </h2>
+                    <!--Afsluiten id="contents"-->
+                    <ul class="credit">
+                        <li>
+                            <!--Begin auteur lijst: naam-->
+                            By <strong>Stefan Kruik</strong>
+                            <!--Auteur-->
+                        </li>
+                        <!--Einde auteur lijst: naam-->
+                        <li>
+                            <!--Begin auteur lijst: datum-->
+                            December 31, 2020
+                            <!--Auteur-->
+                        </li>
+                        <!--Einde auteur lijst: datum-->
+                    </ul>
+                    <!--Einde auteur lijst: datum-->
+                </div>
+                <!--Afsluiten class="titel-artikel"-->
+                <article>
+                    <!--TOC (Table Of Contents)-->
+                    <div id="toc_container">
+                        <!--Begin van de Table of Contencts-->
+                        <p class="toc_title">Contents</p>
+                        <!--Naam van de lijst-->
+                        <ul class="toc_list">
+                            <!--De lijst zelf-->
+                            <li><a href="#int">1.0. Intro</a></li>
+                            <!--Een alinea: Intro-->
+                            <li><a href="#jou">1.1. Journey Map</a></li>
+                            <!--Een alinea: Journey Map -->
+                            <li><a href="#dec">1.2. Decocraft</a></li>
+                            <!--Een alinea: Decocraft-->
+                            <li><a href="#ani">1.3. Animania</a></li>
+                            <!--Een alinea: Animania-->
+                            <li><a href="#the">1.4. The Lost Cities</a></li>
+                            <!--Een alinea: RLCraft -->
+                            <li><a href="#rlc">1.5. RLCraft</a></li>
+                            <!--Een alinea: RLCraft-->
+                            <li><a href="#rog">1.6. Roguelike Adventures and Dragons</a></li>
+                            <!--Een alinea: Roguelike Adventures and Dragons-->
+                            <li><a href="#gal">1.7. Galacticraft</a></li>
+                            <!--Een alinea: Galacticraft-->
+                            <li><a href="#sky">1.8. SkyFactory 4</a></li>
+                            <!--Een alinea: SkyFactory 4-->
+                            <li><a href="#pix">1.9. Pixelmon</a></li>
+                            <!--Een alinea: Pixelmon-->
+                            <li><a href="#cra">1.10. Crafting Dead</a></li>
+                            <!--Een alinea: Crafting Dead-->
+                            <li><a href="#aet">1.11. Aether 2: Genesis of the Void</a></li>
+                            <!--Een alinea: Aether 2: Genesis of the Void-->
+                            <li><a href="#lot">1.12. LotsOMobs</a></li>
+                            <!--Een alinea: LotsOMobs-->
+                            <li><a href="#adv">1.13. Advanced Rocketry</a></li>
+                            <!--Een alinea: Advanced Rocketry-->
+                            <li><a href="#con">2. Conclusion</a></li>
+                            <!--Een alinea: Conclusion-->
+                        </ul>
+                        <!--Einde van de lijst (class="toc_list")-->
+                    </div>
+                    <!--Afsluiten id="toc_title"-->
+                    <div class="artikel-tekst">
+                        <!--Het eerste stuk, de intro-->
+                        <!--bron: https://www.vg247.com/2020/12/01/best-minecraft-mods-2020/ -->
+                        <article>
+                            <!--Intro-->
+                            <div class="Titel">
+                                <h2 id="int">Intro</h2>
+                                <!--Opmaak van de alinea titel, id="x" is nodig voor 'Contentsmenu'-->
+                                <div class="artikel-tekst">
+                                    <!--Opmaak voor het onderstaande stukje tekst-->
+                                    <p>
+                                        <!--Begin alinea-->
+                                        Players young and old have ventured into the randomly generated lands for
+                                        one reason or another. Some want to simply play
+                                        along the adventure of rags to riches, ending with a fight against the Ender
+                                        dragon. Others want to create.
+                                    </p><br>
+                                    <!--Einde alinea en witregel-->
+
+                                    <p>
+                                        <!--Begin alinea-->
+                                        No matter your reasons for playing, you may find some aspects a bit lacking,
+                                        or perhaps have run out of things to do.
+                                        This is where mods come in. Mods can greatly change and affect your
+                                        Minecraft experience and generally, if there’s something
+                                        you want to see in Minecraft, there’s probably a mod for it.
+                                    </p><br>
+                                    <!--Einde alinea en witregel-->
+
+                                    <p>
+                                        <!--Begin alinea-->
+                                        <strong>Note: </strong> some mods do not get updated anymore so not al mods
+                                        are compatible with the newest versions of Minecraft.
+                                    </p>
+                                    <!--Einde Alinea-->
+                                </div>
+                                <!--Afsluiten class="artikel-tekst"-->
+                            </div>
+                            <!--Afsluiten class="Titel"-->
+                    </div>
+                    <!--Afsluiten class="artikel-tekst"-->
+                </article>
+                <!--Afsluiten alinea 'Intro'-->
+                <article>
+                    <!--JourneyMap-->
+                    <div class="Titel">
+                        <h2 id="jou">1. JourneyMap </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="journeymap.png" width="100%" height="x"
+                                alt="Picture of Journeymap">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                <a href="" target=”_blank”>JourneyMap</a> is a great mod for players wary of getting
+                                lost in the wilds. Once installed, this mod tracks your movements in real-time,
+                                mapping out every intricacy of your world.
+                            <p>
+                                <!--Begin alinea-->
+                                Viewable as a mini-map, in full-screen or even via a browser, JourneyMap allows you
+                                to place markers and waypoints so you don’t lose that desert temple or woodland
+                                mansion. It even shows mobs approaching you and where animals may be found close by.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'JourneyMap'-->
+                <article>
+                    <!--Decocraft-->
+                    <div class="Titel">
+                        <h2 id="dec">2. Decocraft </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="decocraft.png" width="100%" height="x"
+                                alt="Picture of Decocraft">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                <a href="https://www.curseforge.com/minecraft/mc-mods/decocraft" target=”_blank”></a>For
+                                practically every player, one of the best bits of
+                                Minecraft is expanding and decorating your house. Whether you prefer a tiny cottage
+                                or a vast castle, you may find the furniture options in vanilla Minecraft lacking.
+                                Decocraft helps to change that, by giving you a Decobench to craft lots of great
+                                furniture.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                If you want a fancy dining room, there are tables, chairs and even silverware and
+                                plates. Want a decent bathroom? Then Decocraft can hook you up with a shower, bath
+                                and toilet. There’s even a Decowand which you can wave at your furniture if you just
+                                want to change the colour.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Decocraft'-->
+                <article>
+                    <!--Animania-->
+                    <div class="Titel">
+                        <h2 id="ani">3. Animania </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="animania.jpg" width="100%" height="x"
+                                alt="Picture of Animania">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                <a href="https://www.curseforge.com/minecraft/mc-mods/animania"
+                                    target=”_blank”></a>Everyone has seen the standard voxel-shaped animals of
+                                Minecraft. Sheep, cows and pigs roam about while chickens flap their useless wings
+                                and get eaten by foxes. Animania expands this menagerie several times over by adding
+                                lots of other feathered or furred creatures.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                The mod also expands on what is found in the base game, by offering different breeds
+                                of the basic animals. There are eight breeds of cow! Perfect for budding Minecraft
+                                farmers, Animania allows you to craft mud, salt lick, troughs and even pig slop, to
+                                feed your cute animals and it’s expanding all the time. And if you feel that the sea
+                                is a bit empty, you can add in Aquaculture 2, to mod in over 30 new species of
+                                aquatic friends.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Animania'-->
+                <article>
+                    <!--The Lost Cities-->
+                    <div class="Titel">
+                        <h2 id="the">4. The Lost Cities </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="the-lost-cities.jpg" width="100%" height="x"
+                                alt="Picture of The Lost Cities">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                Ever looked at the apocalyptic wastes in shows such as The Walking Dead and thought
+                                ‘I want to explore that’? The <a
+                                    href="https://www.curseforge.com/minecraft/mc-mods/the-lost-cities">Lost
+                                    Cities</a> is just the mod pack for you.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                Instead of spawning you in the empty expanses of the usual biomes, you’ll be
+                                deposited into a seemingly never-ending city of abandoned skyscrapers, office blocks
+                                and subway tunnels. Mobs spawn under bridges, in concrete car park vistas and
+                                deserted streets. Perfect for those wanting to Role Play or just see more suburban
+                                vision of Minecraft.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'The Lost Cities'-->
+                <article>
+                    <!--RLCraft-->
+                    <div class="Titel">
+                        <h2 id="rlc">5. RLCraft </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="rlcraft.png" width="100%" height="x"
+                                alt="Picture of RLCraft">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                <a href="https://www.curseforge.com/minecraft/modpacks/rlcraft"
+                                    target=”_blank”>RLCraft</a> has been around for a while now, helping players get
+                                an even more hardcore version of Minecraft. If you want a truly hardcore experience,
+                                RLCraft won’t let you rest. You will die, A Lot. Minecraft dabbles in survival
+                                aspects, but this mod turns that up to eleven.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                It’s not just hunger you must monitor, but also thirst and temperature, too. Enemies
+                                are ramped up and many can instakill you if you’re not prepared. It’s incredibly
+                                rewarding, and all new mobs, items and areas will make you a better player.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'RLCraft'-->
+                <article>
+                    <!--Roguelike Adventures and Dungeons-->
+                    <div class="Titel">
+                        <h2 id="rog">6. Roguelike Adventures and Dungeons </h2>
+                        <div class="roguelike-adventures-and-dungeons">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="roguelike-adventures-and-dungeons.jpg" width="100%"
+                                height="x" alt="Picture of Roguelike Adventures and Dungeons">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                Roguelike Adventures and Dragons, or <a
+                                    href="https://www.curseforge.com/minecraft/mc-mods/roguelike-dungeons"
+                                    target=”_blank”>RAD</a>, attempts to pit the player against a whole host of
+                                dangerous dungeons, filled with monsters, loot and as the title suggests, dragons.
+                                RAD overhauls much of Minecraft, adding in wizard spells, airships, proper RPG
+                                levelling, new currencies and several new and dangerous dimensions to conquer.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="roguelike-adventures-and-dungeons"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Roguelike Adventures and Dungeons'-->
+                <article>
+                    <!--Galacticraft-->
+                    <div class="Titel">
+                        <h2 id="gal">7. Galacticraft </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="galacticraft.jpg" width="100%" height="x"
+                                alt="Picture of Galacticraft">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                Minecraft doesn’t really feature a linear storyline or progression tree. It’s very
+                                much done at the pacing of the player and lends itself to freeform exploration.
+                                Minecraft also doesn’t let users reach for the stars. That’s where <a
+                                    href="http://micdoodle8.com/mods/galacticraft/downloads"
+                                    target=”_blank”>Galacticraft</a> lends a helping hand.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                Starting with feet firmly on the ground, you’re tasked with exploring space, after
+                                following along a light but guiding touch. You’ll craft rockets, nuclear reactors
+                                and robotic contraptions which will enable exploration on other planets, where you
+                                can act like mankind generally does and pillage everything you find!
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Galacticraft'-->
+                <article>
+                    <!--SkyFactory 4-->
+                    <div class="Titel">
+                        <h2 id="sky">8. SkyFactory 4 </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="skyfactory4.jpg" width="100%" height="x"
+                                alt="Picture of SkyFactory 4">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                Sky Blocks are all the rage. They have been for a while. The idea is pretty simple –
+                                you start on a small block in the sky, hundreds of metres above the ground, and must
+                                survive by moving from place to place. Precariously.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                <a href="https://www.curseforge.com/minecraft/modpacks/skyfactory-4"
+                                    target=”_blank”>SkyFactory 4</a> offers a huge number of different worlds to
+                                explore, technology to learn and ways to die. Aside from falling to your death, that
+                                is. There’s a handy progression chart which tries to keep you on the straight and
+                                narrow, but living on a sky block is all about the challenge of deciding how you
+                                will live, survive and explore.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'SkyFactory 4'-->
+                <article>
+                    <!--Pixelmon-->
+                    <div class="Titel">
+                        <h2 id="pix">9. Pixelmon </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="pixelmon.jpg" width="100%" height="x"
+                                alt="Picture of Pixelmon">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                Like Minecraft? Like Pokemon? Why not download the Minecraft <a
+                                    href="https://www.technicpack.net/modpack/complex-pixelmon-reforged.1178321"
+                                    target=”_blank”>Pixelmon</a> mod and play them both at the same time? This mod
+                                fills Minecraft’s world with Pokemon to capture, while other online players become
+                                rival trainers to defeat.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                As well as filling the world with ‘Mon, it also features a full battle system where
+                                you flick through menus so you can take down and capture any Pokemon you see.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Pixelmon'-->
+                <article>
+                    <!--Crafting Dead-->
+                    <div class="Titel">
+                        <h2 id="cra">10. Crafting Dead </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="crafting-dead.png" width="100%" height="x"
+                                alt="Picture of Crafting Dead">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                Another mod that completely changes Minecraft is <a
+                                    href="https://www.technicpack.net/modpack/official-crafting-dead-mod.41792"
+                                    target=”_blank”>Crafting Dead</a>, this one is all about surviving against
+                                savage hordes of zombies. It’s a multiplayer survival game that gives you guns,
+                                scopes, swords, crafting, and tactical vests. It also features a DayZ-style
+                                inventory system.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Crafting Dead'-->
+                <article>
+                    <!--Aether 2: Genesis of the Void-->
+                    <div class="Titel">
+                        <h2 id="aet">11. Aether II: Genesis of the Void </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="aether2-genesis-of-the-void.jpg" width="100%" height="x"
+                                alt="Picture of Aether 2: Genesis of the Void">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                If you’re looking for a new experience within Minecraft that doesn’t totally alter
+                                the game, <a
+                                    href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1289717-alpha-the-aether-ii-genesis-of-the-void-the"
+                                    target=”_blank”>The Aether</a> is a good start. This mod gives you access to a
+                                portal that takes you away to a realm above the clouds – it’s essentially Heaven to
+                                The Nether’s Hell.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                There’s also new stuff to mine – such as Ambrosium and Gravitite – new dungeons to
+                                crawl, new armour to wear, and other secrets to be uncovered.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+                                When it was first released, the mod was so big, real and matching with the orginal
+                                game, that players thought it was just normal part of the game. The developer of
+                                that mod later got hired in the Mojang team.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Aether 2: Genesis of the Void'-->
+                <article>
+                    <!--LotsOMobs-->
+                    <div class="Titel">
+                        <h2 id="lot">12. LotsOMobs</h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="lotsomobs.jpg" width="100%" height="x"
+                                alt="Picture of LotsOMobs">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                            </p>
+                            <!--Einde Alinea-->
+                            As the name suggests, this mod adds a bunch of new mobs to Minecraft, turning it into
+                            your very own safari. There are lions, camels, deer, elephants, lizards, and even a
+                            wooly mammoth. Why a wooly mammoth? To go with those new cavemen, of course. <a
+                                href="https://www.minecraftmods.com/lotsomobs/" target=”_blank”>Animania</a>
+                            delivers alot of new <strong>high quality</strong>content. If you love animals, this is
+                            your choice
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'LotsOMobs'-->
+                <article>
+                    <!--Advanced Rocketry-->
+                    <div class="Titel">
+                        <h2 id="adv">13. Advanced Rocketry</h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <img class="artikelafbeelding" src="advanced-rocketry.png" width="100%" height="x"
+                                alt="Picture of Advanced Rocketry">
+                            <!--De afbeelding en het wijzigen van de lengte/breedte naar passen van de padding. 
+                                    'x' is een variable die mee gaat met de width van de afbeelding. 'Alt' is voor als de afbeelding niet laad-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                What is missing from Minecraft? Space, of course. The<a
+                                    href="https://www.curseforge.com/minecraft/mc-mods/advanced-rocketry"
+                                    target=”_blank”> Advanced Rocketry</a> Minecraft mod fixes this silly oversight,
+                                allowing you to build and pilot your own rockets and explore into space. You can
+                                research and explore planets and moons, and even travel between solar systems with a
+                                warp drive. Build your own space stations and look down on these blocky planets from
+                                above.
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Advanced Rocketry'-->
+                <article>
+                    <!--Conclusion-->
+                    <div class="Titel">
+                        <h2 id="con">Conclusion </h2>
+                        <div class="artikel-tekst">
+                            <!--Opmaak voor het onderstaande stukje tekst-->
+                            <p>
+                                <!--Begin alinea-->
+                                <br>
+                                <!--Witregel tussen afbeelding en tekst-->
+                                If those are not are the best Minecraft mods, we don’t know what are. These
+                                improvements and tweaks will transform your blocky bundle of joy and keep you
+                                playing even longer, much like the Minecraft maps that will transport you absolutely
+                                anywhere and the Minecraft servers that further keep things fresh. For now, though,
+                                we’re ready to get lost in Minecraft all over again.
+                            </p>
+                            <!--Einde Alinea-->
+                            <p>
+                                <!--Begin alinea-->
+
+                            </p>
+                            <!--Einde Alinea-->
+                        </div>
+                        <!--Afsluiten class="artikel-tekst"-->
+                    </div>
+                    <!--Afsluiten class="Titel"-->
+                </article>
+                <!--Afsluiten alinea 'Conclusion'-->
+            </div>
+            <!--Afsluiten class="complete-middenstuk-overal-op-de-website"-->
+        </div>
+        <!--Afsluiten class="page-container"-->
+    </div>
+    <!--Afsluiten class="complete-body"-->
+
+    <!--==========FOOTER==========-->
+    <div class="complete-footer">
+        <!--Opmaak algemene footer-->
+        <div class="container"></div>
+        <footer>
+            <!-- Footer main -->
+            <section class="ft-main">
+                <!--Footer lijst gedeelte, waarin alle blokjes staan-->
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Explore</h2>
+                    <!--Titel van het blokje-->
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shading.html">Shaders</a></li>
+                        <li><a href="texturepacks.html">Texture Packs</a></li>
+                        <li><a href="modpacks.html">Mod Packs</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Contact</h2>
+                    <!--Titel van het blokje-->
+                    <ul>
+                        <li>
+                            <!--Vanaf hier tot volgende commentaar: alles voor het copy knopje-->
+                            <input type="text" value="Doctorandus F. Bijlweg 6, 1784 MC Den Helder" id="myInput1">
+                            <button class="copybutton" onclick="myFunction1()">Copy</button>
+                        </li>
+                        <li>
+                            <input type="text" value="+31223540300" id="myInput2">
+                            <button class="copybutton" onclick="myFunction2()">Copy</button>
+                        </li>
+                        <li>
+                            <input type="text" value="mail@scholenaanzee.nl" id="myInput3">
+                            <button class="copybutton" onclick="myFunction3()">Copy</button>
+                        </li>
+                        <!--Einde copy knopje-->
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Follow</h2>
+                    <!--Titel van het blokje-->
+                    <ul>
+                        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.snapchat.com/l/nl-nl/" target="_blank">Snapchat</a></li>
+                        <li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Legals</h2>
+                    <!--Titel van het blokje-->
+                    <ul>
+                        <li><a href="placeholder.html">Terms</a></li>
+                        <li><a href="placeholder.html">Privacy</a></li>
+                        <li><a href="bronnen.html">Sources</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <!--Blokje-->
+                    <h2 class="ft-title">Stay Updated</h2>
+                    <!--Titel, stukje voor email address-->
+                    <p>Subscribe to our newsletter to get our latest news.</p>
+                    <form>
+                        <input type="email" name="email" placeholder="Enter email address">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </section>
+            <section class="ft-legal">
+                <!--Legals op de bodem van website-->
+                <ul class="ft-legal-list">
+                    <li>
+                        <p>
+                            Informatica Periode 2
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            LHA4E
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Gemaakt door Stefan Kruik, 136212
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+
+    <!--==========AFSLUITEN DOCUMENT==========-->
+</body>
+<!--Afsluiten zichtbare deel-->
+
+</html>
+<!--Afsluiten document-->
+
+<!--==========EINDE==========-->

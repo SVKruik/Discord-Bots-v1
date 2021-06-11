@@ -1,0 +1,829 @@
+/*==========ALGEMENE OPMAAK==========*/
+
+* {
+  transition: background 2s;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  transition: background 2s;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary);
+}
+
+/*Kleur palet*/
+.theme-dark {
+  --primary: #272121;
+  --secondary: #2e2525;
+  --accent: #ff0000;
+  --font-color: #ffffff;
+  --acho: #d37815;
+  --extra: #111111;
+}
+.theme-light {
+  --primary: #fff5ea;
+  --secondary: #d6d2c4;
+  --accent: #ff8484;
+  --font-color: #272121;
+  --acho: #ffc290;
+  --extra: #acacac;
+}
+
+/*==========ALGEMEEN - ALLE KLEUREN==========*/
+/*Vanaf hier tot volgende lijn worden alle elementen qua kleur opgemaakt. Dit heb ik allemaal bij elkaar verzameld zodat ik ze snel kan bereiken. Ook heb ik ze allemaal een 'var'
+gegeven zodat als ik 1 kleur hierboven aanpas, het overal zo werkt. Dan hoef ik het niet overal aan te passen*/
+
+nav {
+  border-bottom: black 3px solid;
+}
+
+.navlinks a:link,
+a:visited {
+  color: var(--accent);
+}
+
+.navlinks a:active {
+  color: var(--acho);
+}
+
+.navlinks a:hover {
+  color: var(--acho);
+}
+
+.dark-lightmodebutton {
+  color: var(--primary);
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--acho);
+}
+
+input {
+  color: var(--accent);
+  background-color: var(--primary);
+}
+
+.copybutton {
+  border-color: var(--accent);
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.bronnenkopjes {
+  color: var(--accent);
+}
+
+p {
+  color: var(--font-color);
+}
+
+.Titel,
+.Titel1 {
+  color: var(--acho);
+}
+
+/*Buiten gebruik gehaald, misschien tijdelijk, misschien voor altijd. Dit was een cruciaal gedeelte.
+
+.complete-middenstuk-overal-op-de-website a:link, a:visited {
+  color: ;
+}
+
+.complete-middenstuk-overal-op-de-website a:hover {
+  color: ;
+}
+
+.complete-middenstuk-overal-op-de-website a:active {
+  color: ;
+}
+*/
+
+.bannertitel {
+  color: var(--accent);
+}
+
+.bannertekst {
+  color: var(--font-color);
+}
+
+.banner2,
+.banner4,
+.banner6 {
+  background-color: var(--secondary);
+}
+
+.banner1,
+.banner3 .banner5 {
+  background-color: var(--secondary);
+}
+
+.indexopening {
+  color: var(--font-color);
+  margin-top: 50px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subregel-opening {
+  color: var(--accent);
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#toc_container {
+  background-color: var(--extra);
+  border: 1px solid;
+}
+
+.toc_list a:link,
+a:visited {
+  color: var(--font-color);
+}
+
+.toc_list a:hover {
+  color: var(--accent);
+}
+
+.toc_list a:active {
+  color: var(--acho);
+}
+
+.titel-artikel {
+  color: var(--accent);
+}
+
+.credit {
+  color: var(--acho);
+}
+
+#myBtn {
+  background-color: var(--accent);
+  color: var(--font-color);
+}
+
+#myBtn:hover {
+  background-color: var(--acho);
+  color: var(--font-color);
+}
+
+.footer-links-blok {
+  color: unset;
+  border: 1px solid;
+}
+
+.complete-footer a:link,
+a:visited {
+  color: var(--accent);
+}
+
+.complete-footer a:hover {
+  color: var(--acho);
+}
+
+.complete-footer a:active {
+  color: var(--acho);
+}
+
+footer {
+  border-top: var(--accent) 3px solid;
+}
+
+.ft-title {
+  color: var(--font-color);
+}
+
+.copyvak {
+  background-color: var(--primary);
+  color: var(--accent);
+  width: 460px;
+}
+
+.ft-legal {
+  background-color: var(--secondary);
+  color: var(--font-color);
+}
+
+/*==========NAVIGATIEBALK==========*/
+
+* {
+  margin: 0px; /*Hoeveel plaats er om het item zit, exlusief border*/
+  padding: 0px; /*Hoeveel plaats er om het item zit, inclusief border*/
+  box-sizing: border-box; /*Opnemen van rand en opvulling in breedte en hoogte van het element*/
+  list-style: none;
+}
+
+nav {
+  display: flex; /*Items kunnen flexibel bewegen als de pagina een ander formaat krijgen, aanpassen aan*/
+  justify-content: space-around; /*Hoe de items geplaatst worden*/
+  min-height: 10vh; /*Hoe hoog de banner minimaal is*/
+  position: -webkit-sticky; /*Zodat hij mee gaat als je scrolled*/
+  list-style: none; /*Geen bullets voor de lijst*/
+  padding-right: 150px;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex; /*Items kunnen flexibel bewegen als de pagina een ander formaat krijgen, aanpassen aan*/
+  justify-content: space-around; /*Items gelijkmatig verdelen in de regel met gelijke ruimte eromheen*/
+  width: 55%; /*Hoe ver de links uit elkaar staan*/
+  list-style: none; /*Zorgt ervoor dat er geen opsommingtekens voor de link staat*/
+  font-size: 20px; /*Grootte van de tekst in de nav*/
+  margin-bottom: 10px;
+  align-items: left;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.navlinks a:link,
+a:visited {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  font-weight: bolder; /*Geeft aan hoe vet/dik de tekst is van de link*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+}
+
+.navlinks a:hover {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  font-weight: bolder; /*Geeft aan hoe vet/dik de tekst is van de link*/
+  transition: 0.8s; /*Een zachte overgang van x naar y*/
+  background: none; /*Of er een kader om heen komt*/
+}
+
+.navlinks a:active {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  font-weight: bolder; /*Geeft aan hoe vet/dik de tekst is van de link*/
+  transition: 2s; /*Een zachte overgang van x naar y*/
+}
+
+.dark-lightmodebutton {
+  border: none;
+  padding: 15px 32px;
+  align-items: left;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  flex-direction: row-reverse;
+  width: auto;
+  height: 100px;
+}
+
+/*==========CUSTOM SCROLLBAR==========*/
+
+::-webkit-scrollbar {
+  /*Opmaak algemeen*/
+  width: 10px; /*Breedte van de balk*/
+  cursor: grab;
+  transition: 2s;
+}
+
+::-webkit-scrollbar-track {
+  /*Opmaak van de 'rails'*/
+  border-radius: 10px; /*Breedte van de rails*/
+  cursor: grab;
+  transition: 2s;
+}
+
+::-webkit-scrollbar-thumb {
+  /*Opmaak van de balk: default*/
+  border-radius: 1px; /*Mate van hoe rond de balk is*/
+  cursor: grab;
+  transition: 2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /*Opmaak van de balk: hover*/
+  cursor: grab;
+  transition: 2s;
+}
+
+/*==========MIDDENSTUK - COPY==========*/
+
+/*==========MIDDENSTUK - EXTRA PAGINA'S==========*/
+
+.bronnenkopjes {
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ul .opsommingbronnen {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.laasteregelbronnen {
+  margin-bottom: 50px;
+}
+
+.bronnencompleet {
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 50px;
+}
+
+.placeholdertekst {
+  font-weight: 900;
+  font-size: 40px;
+  padding-left: 150px;
+  margin-top: 10px;
+}
+
+/*==========MIDDENSTUK - ALGEMEEN==========*/
+
+.complete-middenstuk-overal-op-de-website {
+  text-align: left; /*Waar alle spulletjes in het middenstuk geplaatst worden*/
+  justify-content: space-around; /*Hoe de items geplaatst worden*/
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.complete-middenstuk-overal-op-de-website a:link,
+a:visited {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+}
+
+.complete-middenstuk-overal-op-de-website a:hover {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+  background: none; /*Of er een kader om heen komt*/
+}
+
+.complete-middenstuk-overal-op-de-website a:active {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+}
+
+/*==========MIDDENSTUK - HOMEPAGINA==========*/
+
+.bannertitel {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.bannertekst {
+  font-weight: bold;
+  margin: 30px;
+}
+
+.bannertitel1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: 150px;
+}
+
+.bannertekst1 {
+  font-weight: bold;
+  margin: 30px;
+}
+
+.banner3,
+.banner5 {
+  height: 300px;
+  width: 1400px;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items: left;
+  text-align: left;
+  float: right;
+  margin-top: 50px;
+}
+
+.banner4,
+.banner6 {
+  height: 300px;
+  width: 510px;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items: left;
+  text-align: center;
+  float: left;
+  margin-top: 50px;
+}
+
+.banner1 {
+  height: 300px;
+  width: 1400px;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items: left;
+  text-align: left;
+  float: left;
+  margin-top: 50px;
+}
+
+.banner2 {
+  height: 300px;
+  width: 510px;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items: left;
+  text-align: center;
+  float: right;
+  margin-top: 50px;
+}
+
+.bannerafbeelding {
+  /*Lijkt misschien onnodig, maar anders krijg je aan de onderkant van je scherm nog een scrollbar, voor maar een aantal pixels die groter zijn.*/
+  height: 300px;
+  width: 1400px;
+}
+
+.center-con {
+  margin-left: 240px;
+}
+
+.round {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  align-items: left;
+}
+
+#cta {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+}
+
+#cta .arrow {
+  left: 30%;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+  margin-left: 0px;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  top: 15px;
+}
+
+.segunda {
+  margin-left: 8px;
+}
+
+.next {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+@keyframes bounceAlpha {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.9);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.arrow.primera.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+.round:hover .arrow {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.round:hover .arrow.primera {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.juxtapose {
+  margin-top: 50px;
+  padding-left: 100px;
+  padding-bottom: 0px;
+}
+
+.Titel1 {
+  margin-top: 0px;
+}
+
+/*==========MIDDENSTUK - ARTIKELEN==========*/
+/*====CONTENT MENU====*/
+
+#toc_container {
+  /*Opmaak toc box*/
+  display: table; /*Soort display*/
+  margin-bottom: 1em; /*Plaats onder toc*/
+  padding: 20px; /*Waar de toc staat ten opzichte van workspace*/
+  width: auto; /*Breedte toc*/
+}
+
+.toc_title {
+  /*Opmaak toc titel*/
+  font-weight: 700; /*Dikte van de tekst*/
+  text-align: center; /*Tekst plaatsing*/
+  font-size: 20px; /*Tekst grootte*/
+}
+
+#toc_container li,
+#toc_container ul,
+#toc_container ul li {
+  /*Opmaak toc lijst*/
+  list-style: none; /*Geen bullets voor de lijst*/
+  font-size: 17px; /*Tekst grootte*/
+}
+
+.toc_list a:link {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  font-weight: bolder; /*Geeft aan hoe vet/dik de tekst is van de link*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+}
+
+.toc_list a:visited {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  font-weight: bolder; /*Geeft aan hoe vet/dik de tekst is van de link*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+}
+
+.toc_list a:hover {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  font-weight: bolder; /*Geeft aan hoe vet/dik de tekst is van de link*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+}
+
+.toc_list a:active {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: 2px; /*Afstand tussen de letters*/
+  font-weight: bolder; /*Geeft aan hoe vet/dik de tekst is van de link*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+}
+
+/*====ALGEMEEN ARTIKEL====*/
+
+.artikelafbeelding {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.MC-Shaders {
+  font-weight: bold; /*Hoe vet de tekst is*/
+  text-align: justify; /*Tekst loopt door tot padding en gaat verder beneden (afbreken*/
+}
+
+.artikel-tekst {
+  /*
+    Cruciaal gedeelte voor alle artikelen, meer dan 40 div's gebruiken class="artikelen-tekst". 
+    Ook in het commentaar. Bij verwijdering van dit stukje code zullen alle pagina's met
+    de artikelen-template kapot gaan. (zie artikel-template-anycol.html)
+*/
+  margin-top: 25px; /*Plaats boven de intro, witregel*/
+  margin-bottom: 25px; /*Plaats onder de intro, witregel*/
+  font-size: 20px; /*Grootte van de tekst*/
+}
+
+.titel-artikel {
+  text-transform: capitalize; /*Alle tekst in hoofdletters*/
+  margin: 5px; /*Plaats om de titel heen*/
+  margin-top: 10px; /*Plaats tussen titel en nav*/
+  font-size: 20px; /*Grootte van de titel*/
+}
+
+.complete-artikel {
+  padding-left: 0px;
+}
+
+.credit {
+  text-transform: uppercase; /*Alle tekst in hoofdletters*/
+  list-style: none; /*Geen puntjes voor de tekst (opsommingtekens, bullets)*/
+}
+
+/*====MIDDENSTUK - BACK TO TOP====*/
+
+#myBtn {
+  display: none; /*Element onzichtbaar*/
+  position: fixed; /*Vast aan scherm*/
+  bottom: 20px; /*Opmaak knop*/
+  right: 30px;
+  z-index: 99; /*Voor/achter tekst*/
+  font-size: 18px; /*Tekst grootte*/
+  border: none; /*Rand om knop ja nee*/
+  outline: none;
+  cursor: pointer; /*Soort cursor bij: hover*/
+  padding: 15px; /*Vrije plaats knop-linkerwand*/
+  border-radius: 4px; /*Graad van curve*/
+}
+
+/*==========FOOTER==========*/
+
+#page-container {
+  position: relative; /*Footer blijft ter alle tijden op de bodem*/
+  min-height: 100vh; /*Min-hoogte*/
+}
+
+.footer-links-blok-title {
+  text-transform: uppercase; /*Alles hoofdletters*/
+  font-weight: bolder; /*Tekst dikte*/
+  border: none; /*Rand om titel ja/nee*/
+  border-color: unset; /*Kleur van rand*/
+  margin-top: 3px; /*Plaats tussen middenstuk en titel*/
+}
+
+.footer-links-blok {
+  display: table; /*Soort display*/
+  margin-bottom: 1em; /*Plaats onder tabel*/
+  padding: 20px; /*Waar de tabel staat ten opzichte van workspace*/
+  width: auto; /*Breedte van de tabel*/
+}
+
+.complete-footer a:link,
+a:visited {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: normal; /*Afstand tussen de letters*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+  width: 45%; /*Hoe ver de links uit elkaar staan*/
+  font-weight: bold;
+}
+
+.complete-footer a:hover {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: normal; /*Afstand tussen de letters*/
+  transition: 0.8s; /*Een zachte overgang van x naar y*/
+  background: none; /*Of er een kader om heen komt*/
+  width: 45%; /*Hoe ver de links uit elkaar staan*/
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.complete-footer a:active {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: normal; /*Afstand tussen de letters*/
+  transition: 0.4s; /*Een zachte overgang van x naar y*/
+  width: 45%; /*Hoe ver de links uit elkaar staan*/
+  font-weight: bold;
+}
+
+* {
+  /*Styling van footer*/
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.ft-title {
+  font-family: "Poppins", serif;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+
+/*Tijdelijk uitgeschakeld, opmaak voor als de copy knop een afbeelding bevat. 
+.copyicon {
+  background-color: var(--primary-color);
+  align-items: center;
+  cursor: pointer;
+  height: 20px;
+  width: auto;
+  border-bottom: none;
+} */
+
+.container {
+  flex: 1;
+}
+
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 29.8125rem /* 477px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 77.5rem /* 1240px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+
+/*Opmaak inschrijf geval*/
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input[type="email"] {
+  border: 1px solid;
+  padding: 0.625rem;
+  margin-top: 0.3125rem;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  border: 0;
+  width: 120px;
+  margin-left: 20px;
+}
+
+/*Opmaak legals*/
+.ft-legal {
+  padding: 0.9375rem 1.875rem;
+}
+
+.ft-legal-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ft-legal-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+
+.inputgeval {
+  border: none;
+  background: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+input {
+  text-decoration: none; /*Decoratie zoals streepen boven/onder de tekst*/
+  letter-spacing: normal; /*Afstand tussen de letters*/
+  width: 45%; /*Hoe ver de links uit elkaar staan*/
+  border: none;
+  font-size: 20px;
+  width: 450px;
+  font-weight: bold;
+}
+
+.copybutton {
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 0.3125rem;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+/*====EINDE====*/
