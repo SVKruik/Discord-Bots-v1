@@ -56,6 +56,7 @@ Here is a list for commands on our hangout server [EGS](https://discord.gg/gBVFu
   - `$balbank`: Directly shows your bank account worth, without a dialogue.
   - `$balwallet`: Directly shows your wallet worth, without a dialogue.
   - `$ban @target-member`: Bans a Discord server member.
+  - `$blind`: Blinds a member. The targeted member cannot do anything.
   - `$clear amount`: Bulkdeletes messages. Be aware though that old messages can't be deleted.
   - `$dailyreward`: Collect your daily reward. Has a cooldown of 24 hours.
   - `$github`: A embed that displays the most important links to this GitHub repository.
@@ -75,7 +76,8 @@ Here is a list for commands on our hangout server [EGS](https://discord.gg/gBVFu
   - `$setwallet amount`: Sets your wallet worth to X amount of coins.
   - `$template`: Sends a template for starting a new command. Can be used for it's function, or to give someone a start.
   - `$ticket`: WIP, if it's done, a description will be added.
-  - `$unmute`: Unmutes a muted member. Removes the 'Mute' role, and adds the default role.
+  - `$unblind`: Unblinds a blinded member. Roves the 'Blinded' role, and adds thr default role. 
+  - `$unmute`: Unmutes a muted member. Removes the 'Muted' role, and adds the default role.
   - `$withdraw amount`: Withdraw coins from your bank account. So from Bank to Wallet.
 
 ----------------------------------------
