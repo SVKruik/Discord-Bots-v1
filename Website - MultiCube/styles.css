@@ -17,12 +17,16 @@ body {
   --color-secondary: #dad2bc;
   --color-accent: #70798c;
   --font-color: #252323;
+  --warning-color: #BF4342;
+  --notification-color: #F8F272;
 }
 .theme-dark {
   --color-primary: #252323;
   --color-secondary: #a99985;
   --color-accent: #70798c;
   --font-color: #ffffff;
+  --warning-color: #BF4342;
+  --notification-color: #F8F272;
 }
 .container {
   display: flex;
