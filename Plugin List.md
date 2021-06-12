@@ -1,4 +1,10 @@
-# MultiCube -  Plugin List
+# MultiCube - Acitve Plugin List
+This main repository is dedicated to our server on Minecraft.<br/>
+
+----------------------------------------
+
+This file contains all the plugins currently used by our server. It also contains the links, to the Spigot/Bukkit/Forge page, so you can download or read about it too. This file
+will be updated when new plugins arrive, or are removed. Note that we also have custom plugins (written by us), and are not displayed here. 
 
 - [AConomy](https://www.spigotmc.org/resources/aconomy-simple-vault-economy.64569/)<br/>
 
@@ -48,4 +54,7 @@
 
 - [WorldGuard](https://dev.bukkit.org/projects/worldguard)<br/>
 
-More plugins will be added, or removed. This list will be updated.<br/>
+----------------------------------------
+
+For questions about updates or anything else, contact our support team.<br/>
+To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).<br/>
