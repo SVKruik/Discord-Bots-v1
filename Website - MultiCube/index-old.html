@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="nl">
+<!--==========LINKS EN BRONNEN==========-->
+
+<head>
+  <title>EMC | Home</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="extra-prachtig.css">
+  <src rel="stylesheet" href="script.js">
+    <link rel="icon" href="logofavicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+
+    <!--==========JAVA SCRIPTS==========-->
+    <script>
+      $('.round').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.arrow').toggleClass('bounceAlpha');
+      });
+    </script>
+    <script>
+      function myFunction1() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput1");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+      }
+    </script>
+    <script>
+      function myFunction2() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput2");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+      }
+    </script>
+    <script>
+      function myFunction3() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput3");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+      }
+    </script>
+    <script>
+    /* Theme switcher */
+      function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+      }
+
+      // function to toggle between light and dark theme
+      function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+          setTheme('theme-light');
+        } else {
+          setTheme('theme-dark');
+        }
+      }
+
+      (function () {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+          setTheme('theme-dark');
+        } else {
+          setTheme('theme-light');
+        }
+      })();
+    </script>
+</head>
+<!--Einde Java, Links en Bronnen-->
+
+<body>
+  <!--Begin zichtbare deel-->
+  <!--==========NAVIGATIEBALK==========-->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <nav>
+    <!--Begin van navigatiebalk-->
+    <div class="logo">
+      <!--Deze div is nodig voor de opmaak van het logo-->
+      <li>
+        <a href="index.html">
+          <img class="logoafbeelding" src="logo.png" alt="Logo isn't loading" width="auto" height="100">
+        </a>
+      </li>
+    </div>
+    <!--Afsluiten class="logo"-->
+    <ul class="navlinks">
+      <!--Lijst voor de pagina's. Met het CSS document wordt deze lijst horizontaal.-->
+
+      <li>
+        <a href="index.html">Home</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="shading.html" class="active">Servers</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="texturepacks.html">Ranks</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="modpacks.html">GitHub</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="placeholder.html">About</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+      <li>
+        <a href="help.html">Socials</a>
+        <!--Deel van lijst van de pagina's in navigatiebalk-->
+      </li>
+    </ul>
+    <!--Einde lijst met pagina's-->
+    <li>
+      <img onclick="toggleTheme()" src="moon-sun.png" class="dark-lightmodebutton">
+    </li>
+  </nav>
+  <!--Einde van navigatiebalk-->
+  <!--==========MIDDENSTUK==========-->
+  <script> /*Naar boven knop*/
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    //Werkt pas vanaf 20px in het document
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // De functie zelf
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <div class="complete-body">
+    <div id="page-container">
+      <h1 class="indexopening">
+        <!--Openingszin-->
+        Welcome to the MultCube Community 
+      </h1>
+      <h3 class="subregel-opening">
+        Your Minecraft server, with a great community.
+      </h3>
+      <!---->
+      <div class="bannergroep">
+        <!--Begin van de drie banners-->
+        <div class="banner3">
+          <!--Afbeeldingdeel-->
+          <img class="bannerafbeelding" src="bannerBe.png">
+        </div>
+        <div class="banner4">
+          <!--Tekstdeel-->
+          <h1 class="bannertitel">
+            Servers 
+          </h1>
+          <p class="bannertekst">
+            We run several Minecraft servers, with and without mods. Learn more:</p> <br>
+          <div class="center-con">
+            <div class="round">
+              <div id="cta">
+                <a href="shading.html">
+                  <span class="arrow primera next "></span>
+                  <span class="arrow segunda next "></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="bannergroep">
+        <div class="banner1">
+          <img class="bannerafbeelding" src="bannerAe.jpg">
+        </div>
+        <div class="banner2">
+          <h1 class="bannertitel">
+            Ranks
+          </h1>
+          <p class="bannertekst">
+            We also have a ranks system. You can buy them with real money, or with our in-game economy system. <br>
+          <div class="center-con">
+            <div class="round">
+              <div id="cta">
+                <a href="texturepacks.html">
+                  <span class="arrow primera next "></span>
+                  <span class="arrow segunda next "></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </p>
+      </div>
+      <!---->
+      <div class="bannergroep">
+        <div class="banner5">
+          <img class="bannerafbeelding" src="bannerCe.png">
+        </div>
+        <div class="banner6">
+          <h1 class="bannertitel">
+            Discord
+          </h1>
+          <p class="bannertekst">
+            We also have a Discord server. If you have questions about anything, you can ask them there. Server updates are also published there. Go check it out!<br>
+          <div class="center-con">
+            <div class="round">
+              <div id="cta">
+                <a href="modpacks.html">
+                  <span class="arrow primera next "></span>
+                  <span class="arrow segunda next "></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Afsluiten class="complete-body"-->
+    <!--==========FOOTER==========-->
+    <div class="complete-footer">
+      <!--Opmaak algemene footer-->
+      <div class="container"></div>
+      <footer>
+        <!-- Footer main -->
+        <section class="ft-main">
+          <!--Footer lijst gedeelte, waarin alle blokjes staan-->
+          <div class="ft-main-item">
+            <!--Blokje-->
+            <h2 class="ft-title">Explore</h2>
+            <!--Titel van het blokje-->
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shading.html">Shaders</a></li>
+              <li><a href="texturepacks.html">Texture Packs</a></li>
+              <li><a href="modpacks.html">Mod Packs</a></li>
+              <li><a href="help.html">Help</a></li>
+            </ul>
+          </div>
+          <div class="ft-main-item">
+            <!--Blokje-->
+            <h2 class="ft-title">Contact</h2>
+            <!--Titel van het blokje-->
+            <ul>
+              <li>
+                <!--Vanaf hier tot volgende commentaar: alles voor het copy knopje-->
+                <input class="copyvak" type="text" value="Doctorandus F. Bijlweg 6, 1784 MC Den Helder" id="myInput1">
+                <button class="copybutton" onclick="myFunction1()">Copy</button>
+              </li>
+              <li>
+                <input class="copyvak" type="text" value="+31223540300" id="myInput2">
+                <button class="copybutton" onclick="myFunction2()">Copy</button>
+              </li>
+              <li>
+                <input class="copyvak" type="text" value="mail@scholenaanzee.nl" id="myInput3">
+                <button class="copybutton" onclick="myFunction3()">Copy</button>
+              </li>
+              <!--Einde copy knopje-->
+            </ul>
+          </div>
+          <div class="ft-main-item">
+            <!--Blokje-->
+            <h2 class="ft-title">Follow</h2>
+            <!--Titel van het blokje-->
+            <ul>
+              <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+              <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+              <li><a href="https://www.snapchat.com/l/nl-nl/" target="_blank">Snapchat</a></li>
+              <li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+              <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+              <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+          <div class="ft-main-item">
+            <!--Blokje-->
+            <h2 class="ft-title">Legals</h2>
+            <!--Titel van het blokje-->
+            <ul>
+              <li><a href="placeholder.html">Terms</a></li>
+              <li><a href="placeholder.html">Privacy</a></li>
+              <li><a href="bronnen.html">Sources</a></li>
+            </ul>
+          </div>
+          <div class="ft-main-item">
+            <!--Blokje-->
+            <h2 class="ft-title">Stay Updated</h2>
+            <!--Titel, stukje voor email address-->
+            <p>Subscribe to our newsletter to get our latest news.</p>
+            <form>
+              <input type="email" name="email" placeholder="Enter email address">
+              <input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </section>
+        <section class="ft-legal">
+          <!--Legals op de bodem van website-->
+          <ul class="ft-legal-list">
+            <li>
+              <p>
+                Informatica Periode 2
+              </p>
+            </li>
+            <li>
+              <p>
+                LHA4E
+              </p>
+            </li>
+            <li>
+              <p>
+                Gemaakt door Stefan Kruik, 136212
+              </p>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </div>
+
+    <!--==========AFSLUITEN DOCUMENT==========-->
+  </div>
+  <!--Afsluiten id="page-container">-->
+</body>
+<!--Afsluiten zichtbare deel-->
+
+</html>
+<!--Afsluiten document-->
+
+<!--==========EINDE==========-->
