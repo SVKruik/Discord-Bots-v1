@@ -47,27 +47,59 @@
         </div>
         <ul class="navlinks">
             <li>
-                <a href="index.html">Home</a>
+                <div class="dropdownhome">
+                    <button class="dropbtnhome"><a href="index.html">Home</a></button>
+                    <div class="dropdowncontenthome">
+                    </div>
+                  </div>
             </li>
             <li>
-                <a href="servers.html">Servers</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="servers.html">Servers</a></button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
             </li>
             <li>
-                <a href="ranks.html">Ranks</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="ranks.html">Ranks</a></button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
             </li>
             <li>
-                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="about.html">About</a></button>
+                    <div class="dropdown-content">
+                      <a href="#">How to Join</a>
+                      <a href="#">Statistics</a>
+                      <a href="#">Information</a>
+                    </div>
+                  </div>
             </li>
             <li>
-                <a href="socials.html">Socials</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="socials.html">Socials</a></button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
             </li>
-            <div class="container">
-                <label id="switch" class="switch">
-                    <input type="checkbox" onchange="toggleTheme()" id="slider">
-                    <span class="slider round"></span>
-                </label>
-            </div>
         </ul>
+        <div class="container">
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+        </div>
     </nav>
 </body>
 
