@@ -7,8 +7,8 @@ body {
 body {
   transition: background 0.4s;
   font-family: "Poppins", sans-serif;
-  background-color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
+  background: linear-gradient(-45deg, var(--color-primary), var(--color-primary-second));
 }
 
 * {
@@ -20,7 +20,8 @@ body {
 
 /*Color palletes*/
 .theme-light {
-  --color-primary: #f6e8ea;
+  --color-primary: #ffd5d5;
+  --color-primary-second: #ffffff;
   --color-secondary: #f13030;
   --color-accent: #5a0001;
   --font-color: #22181c;
@@ -28,7 +29,8 @@ body {
   --notification-color: #f8f272;
 }
 .theme-dark {
-  --color-primary: #303030;
+  --color-primary: #1b1b1b;
+  --color-primary-second: #7e7e7e;
   --color-secondary: #3f0e0e;
   --color-accent: #9d0000;
   --font-color: #f6e8ea;
@@ -83,6 +85,8 @@ a:visited {
   transition: 0.4s;
   text-decoration: none;
 }
+
+/*Dropdown Menu*/
 .dropbtn {
   background-color: var(--color-primary);
   color: var(--font-color);
@@ -205,6 +209,7 @@ a:visited {
   transition: 0.4s;
 }
 
+/*Theme Switcher*/
 .container {
   display: flex;
   width: 100%;
@@ -212,9 +217,10 @@ a:visited {
   background: var(--color-primary) 2s;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   margin-left: 100px;
 }
+
 .container h1 {
   color: var(--font-color);
   font-family: "Poppins" sans-serif;
@@ -295,6 +301,24 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+/*Account Picture Styling*/
+.user {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.userpicture {
+  background-color: var(--color-accent);
+  transition: 0.4s;
+  border-radius: 100px;
+  border: var(--color-primary) 2px solid;
+}
+
 /*Scrollbar*/
 ::-webkit-scrollbar {
   /*Opmaak algemeen*/
@@ -322,3 +346,6 @@ input:checked + .slider:before {
   cursor: grab;
   transition: 0.4s;
 }
+
+/*Footer*/
+
