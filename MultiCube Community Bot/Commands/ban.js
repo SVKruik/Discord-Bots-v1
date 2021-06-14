@@ -13,4 +13,3 @@ module.exports = {
         }
     }
 }
-//`<@${memberTarget.user.id}> got 360 no-scoped by the MultiCube Community Bot! Reason \`${d.d}\`.`
