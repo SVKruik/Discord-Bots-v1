@@ -1,10 +1,10 @@
 module.exports = {
     name: 'help',
     description: "Advanced Help - Stage 1",
-    persmisions: ["SEND_MESSAGES"],
+    permissions: ["SEND_MESSAGES"],
     async execute(message, args, cmd, client, Discord) {
         
-        const channel = '774581094531072002'
+        const channel = '848939517603479553'
         const ApplyEmoji = '🔴';
         const RanksRolesEmoji = '🟠';
         const GitHubEmoji = '🟡';
@@ -19,6 +19,7 @@ module.exports = {
             .setColor('#ffb1b1')
             .setTitle('Choose Topic')
             .setImage('https://i.imgur.com/neCyTDH.png')
+            .setFooter('Stats and bot profided by Complex. Usage: -help.')
             .setURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
             .setDescription('Choose a topic where you want to have help with. If this Bot still does not answer your questions, you can support our support team.\n\n'
                 + `${ApplyEmoji} for support about becoming a staff member.\n`

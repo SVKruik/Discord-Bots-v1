@@ -5,20 +5,20 @@ const queue = new Map();
 
 module.exports = {
     name: 'play',
-    description: 'Music bot',
-    permissions: ["SEND_MESSAGES"],
-    async execute(message, args, cmd, client, Discord){
+    description: 'Advanced music bot',
+    async execute(message,args, cmd, client, Discord){
+
 
         const voice_channel = message.member.voice.channel;
-        if (!voice_channel) return message.channel.send('You need to be in a  voice channel to execute the specified command.');
+        if (!voice_channel) return message.channel.send('You need to be in a channel to execute this command!');
         const permissions = voice_channel.permissionsFor(message.client.user);
-        if (!permissions.has('CONNECT')) return message.channel.send('You do not have the correct permissions.');
-        if (!permissions.has('SPEAK')) return message.channel.send('You do have the correct permissions.');
+        if (!permissions.has('CONNECT')) return message.channel.send('You are lacking some permissions.');
+        if (!permissions.has('SPEAK')) return message.channel.send('You are lacking some permissions.');
 
         const server_queue = queue.get(message.guild.id);
 
         if (cmd === 'play'){
-            if (!args.length) return message.channel.send('You need to send a second argument!');
+            if (!args.length) return message.channel.send('You need to send the second argument!');
             let song = {};
 
             if (ytdl.validateURL(args[0])) {
@@ -34,7 +34,7 @@ module.exports = {
                 if (video){
                     song = { title: video.title, url: video.url }
                 } else {
-                     message.channel.send('Error finding video. Check the console to see what is wrong, or check your link.');
+                     message.channel.send('Error finding the specified video. Check your link and try again!');
                 }
             }
 
@@ -56,12 +56,12 @@ module.exports = {
                     video_player(message.guild, queue_constructor.songs[0]);
                 } catch (err) {
                     queue.delete(message.guild.id);
-                    message.channel.send('There was an error while trying to connect. Check the console to see what is wrong.');
+                    message.channel.send('There was an error while connecting!');
                     throw err;
                 }
             } else{
                 server_queue.songs.push(song);
-                return message.channel.send(`👍 **${song.title}** added to the global queue!`);
+                return message.channel.send(`👍 **${song.title}** added to queue!`);
             }
         }
 
@@ -91,7 +91,7 @@ const video_player = async (guild, song) => {
 const skip_song = (message, server_queue) => {
     if (!message.member.voice.channel) return message.channel.send('You need to be in a channel to execute this command!');
     if(!server_queue){
-        return message.channel.send(`There are no songs left in the global queue.`);
+        return message.channel.send(`There are no songs left in queue.`);
     }
     server_queue.connection.dispatcher.end();
 }

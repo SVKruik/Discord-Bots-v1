@@ -16,7 +16,7 @@ module.exports = {
             {name: 'Issues:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/issues'},
             {name: 'Discussions (main):', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/discussions/11'}
         )
-        .setFooter('Stats and bot profided by Complex. Usage: -rules.');
+        .setFooter('Stats and bot profided by Complex. Usage: -github.');
 
         message.channel.send(newEmbed);
     }

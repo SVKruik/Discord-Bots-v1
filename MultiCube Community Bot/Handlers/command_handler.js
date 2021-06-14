@@ -1,4 +1,4 @@
-const { DiscordAPIError } = require('discord.js');
+const { DiscordAPIError } = require('Discord.js');
 const fs = require('fs');
 
 module.exports = (client, Discord) =>{
