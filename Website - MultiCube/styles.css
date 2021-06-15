@@ -348,4 +348,52 @@ input:checked + .slider:before {
 }
 
 /*Footer*/
+.footerblok-title {
+  text-decoration: none;
+  font-size: 20px;
+}
 
+footer {
+  border-top: var(--color-accent) 3px solid;
+  display: flex;
+  justify-content: space-around;
+  min-height: 10vh;
+  list-style: none;
+  align-items: center;
+}
+
+.footerblok {
+  justify-content: space-around;
+  width: 50%;
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  background: none;
+  padding-left: 50px;
+}
+
+.footerblok a:link,
+a:visited {
+  color: var(--color-accent);
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.footerblok a:hover {
+  color: var(--color-accent);
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.footerblok a:active {
+  color: var(--font-color);
+  transition: 0.4s;
+  text-decoration: none;
+}
