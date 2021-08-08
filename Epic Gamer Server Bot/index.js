@@ -1,15 +1,20 @@
-//Index - cointains core and links. 
+//Index
 const Discord = require("Discord.js");
+const fs = require("fs");
+const mongoose = require("mongoose");
 require("dotenv").config();
 const client = new Discord.Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
 
-const fs = require("fs");
-const mongoose = require("mongoose");
-
+// Counter Core
 const memberCounter = require("./Counters/member-counter");
 
+client.on('ready', () => {
+  memberCounter(client);
+})
+
+//Core Code - Don't change
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 
