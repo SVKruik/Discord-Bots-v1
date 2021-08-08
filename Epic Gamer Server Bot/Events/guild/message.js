@@ -102,7 +102,7 @@ module.exports = async (Discord, client, message) => {
       const time_left = (expiration_time - current_time) / 1000;
 
       return message.reply(
-        `Please wait ${time_left.toFixed(1)} more seconds before using \`${
+        `Please wait ${time_left.toFixed(1)} more seconds before using the specified command: \`${
           command.name
         }\`.`
       );
@@ -117,7 +117,7 @@ module.exports = async (Discord, client, message) => {
     command.execute(message, args, cmd, client, Discord, profileData);
   } catch (err) {
     message.reply(
-      "There was an error trying to execute the specified command! Check the console to see what is wrong."
+      "There was an error trying to execute the specified command! If you are a Bot Developer, check the console. If you are a normal member, please report the bug that you found to a Bot Developer or other Staff."
     );
     console.log(err);
   }
