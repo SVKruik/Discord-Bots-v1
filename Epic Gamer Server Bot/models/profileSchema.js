@@ -9,6 +9,6 @@ const profileSchema = new mongoose.Schema({
   name: { type: String, require: true, unique : false},
 });
 
-const model = mongoose.model("users", profileSchema);
+const model = mongoose.model("ProfileModels", profileSchema);
 
 module.exports = model;
