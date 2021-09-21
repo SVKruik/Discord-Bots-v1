@@ -25,11 +25,13 @@ If you have questions about anything, you can contact our support team like said
 We have a few rules that are important. We want to keep this place nice, friendly and polite. Rule breakers will receive a warning, and if they continue, the will receive a ban/kick. Report rulebreakers to our staff. Read the server rules in-game (/mainmenu --> Server Rules), or on first join of the Discord server.
 
 ### Economy
+
 Our Discord Server also has a Economy system. You can collect money through a couple ways:
-  - Daily reward: as the name suggests, you can collect a DR. The command for this is `$dailyreward`, it has a cooldown of 24 hours (86400 seconds).
-  - More to come
-  - .
-  - .<br/>
+  - Daily reward: as the name suggests, you can collect a DR. The command for this is `dailyreward`, it has a cooldown of 24 hours (86400 seconds).
+  - Another kind off daily reward is the `search` command, and you have to pick a number.
+  - Participate in events.
+
+Furthermore, we are planning to connnect your Discord coins to your Minecraft balance, on the MultiCube server.
 
 There are 2 types of balance:
   - Bank: you cannot pay with this, it's just an account for save keeping and saving up money.
@@ -79,6 +81,38 @@ Here is a list for commands on our hangout server [EGS](https://discord.gg/gBVFu
   - `$unblind`: Unblinds a blinded member. Roves the 'Blinded' role, and adds thr default role. 
   - `$unmute`: Unmutes a muted member. Removes the 'Muted' role, and adds the default role.
   - `$withdraw amount`: Withdraw coins from your bank account. So from Bank to Wallet.
+
+----------------------------------------
+
+### Files
+
+As you might have noticed, a large portion of this repo includes files of our Discord bot. This is because our bot is open source, and you can use our code that we are using. Note that you have to do a lot of steps before you can use any of our files in your own project. If you need help with your own Discord bot, you can conctact our staff, and they will help you with setting up the basics. This won't be a full course/tutorial, but it will get you started.
+
+### Folders
+
+Our bot(s) are always organised in the following folders. This paragraph explains each folder. 
+- [Commands](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Commands) = contains all the commands. They do not work without the command_handler.js file and a couple of other files.
+- [Counters](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Counters) = contains all the counters in the Discord Server. For example the Member Counter.
+- [Events](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Events) = contains important core files. The bot will not work without it. 
+- [Handlers](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Handlers) = contains import core files. The bot will not work without it. 
+- [Models]() = Contains database information. 
+
+Feel free to use files from our repo. 
+
+### Information
+
+Note that all of the files are useless on their own. These are just for documentation. You need a couple of third-party apps for it to work. You can check all the dependencies in the `package-lock.json`. 
+
+### Links
+
+Here are a couple of usefull thingies to use if you are building your own bot.
+
+- [Node.js](https://nodejs.org/en/): Core files, allowing for the whole project to run. 
+- [Visual Studio Code](https://code.visualstudio.com/): Best  file editor for coding.
+- [Guide](https://discordjs.guide/preparations/#using-the-command-prompt): a guide of Discord Bots
+- [Dev Portal](https://discord.com/developers/applications): Where you can find import information about your application.
+- [Unicode Emoji](https://unicode.org/emoji/charts/full-emoji-list.html): Unicode Emoji's needed for poles.
+- [Discord](https://discord.gg/VSE75WkgFM): Where this bot is functioning.
 
 ----------------------------------------
 
