@@ -3,10 +3,6 @@ This main repository is dedicated to our server on Minecraft.<br/>
 
 ----------------------------------------
 
-This file will be updated with new information and stuff.
-
-----------------------------------------
-
 ### General Information
 We run a couple of Minecraft Servers. We have Child (Sub) Servers, but our main focus is MultiCube. This server is still the largest, and most accessible. This is because
 you don't have to download anything. You can just join and play. We have a subserver where there are Mods present, so be aware if you'd like to join, you have to download
