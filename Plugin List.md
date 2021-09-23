@@ -10,8 +10,6 @@ will be updated when new plugins arrive, or are removed. Note that we also have 
 
 - [BedWars](https://www.spigotmc.org/resources/screaming-bedwars-1-9-1-16.63714/)<br/>
 
-- [BuildBattle](https://www.spigotmc.org/resources/build-battle-guessthebuild-1-11-1-16.44703/)<br/>
-
 - [Friends For Spigot](https://www.spigotmc.org/resources/friends-for-spigot-mc1-8-x-1-16-x-partysystem-and-gui.12063/)<br/>
 
 - [HeadDB](https://www.spigotmc.org/resources/free-headdb-head-menu.84967/)<br/>
