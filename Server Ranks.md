@@ -75,7 +75,7 @@
 - __Uncommon:__ Low-tier rank. Second rank.
     - Cost: 400 Coins.
 
-- __Common:__ First rank you will get when you join, it is free, and everyone has it on their first join.
+- __Common:__ Your first buyable rank!
     - Cost: 200 Coins.
 
 - __Noob:__ First rank you will get when you join, it is free. Default rank.
