@@ -1,7 +1,7 @@
 # Gun PVP - Mod List
 
 -----------------------------
-Here's a list of mods you have to download to join our server:
+Here's a list of mods you have to download to join our server: `Gun PVP`
 
 - [CGM](https://www.curseforge.com/minecraft/mc-mods/mrcrayfishs-gun-mod)
    - The primary gun mod, which adds 9 new balanced and customizable weapons. Needs Obfuscate to work.
