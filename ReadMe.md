@@ -49,34 +49,36 @@ Here are some links that are very handy for us, but also maybe for you:
 
 ### Commands
 Here is a list for commands on our hangout server [EGS](https://discord.gg/gBVFuBqENA). Be aware though that some commands are for Administrators only. Alphabetic order.
-  - `$apply`: A link to a google form if you would like to apply for a role/rank on our Minecraft/Discord server.
-  - `$balance`: Show your balance. You can then choose what balance you would like to display: Bank or Wallet.
-  - `$balbank`: Directly shows your bank account worth, without a dialogue.
-  - `$balwallet`: Directly shows your wallet worth, without a dialogue.
-  - `$ban @target-member`: Bans a Discord server member.
-  - `$blind`: Blinds a member. The targeted member cannot do anything.
-  - `$clear amount`: Bulkdeletes messages. Be aware though that old messages can't be deleted.
-  - `$dailyreward`: Collect your daily reward. Has a cooldown of 24 hours.
-  - `$github`: A embed that displays the most important links to this GitHub repository.
-  - `$deposit amount`: Deposit coins to your bank account. So from Wallet to Bank.
-  - `$event`: Creates an embed with options. Can be used for a poll or team select.
-  - `$github`: Creates an embed that displays the most important links to this GitHub repository.
-  - `$give @member amount`: Gives a member of the server X amount of coins. Note that that targeted member must exist in the Database.
-  - `$help`: The bot will try to help you with a small *conversation*. If the bot still doesn't help you, you can ask our support team for further assistence. Stage 1
-  - `$image searchterm`: Search google images. The bot will display the best (but random) search result.
-  - `$kick @target-member`: Kicks a Discord server member.
-  - `$leave`: If you want to stop the music from playing further, you can do `$leave`. The bot will stop the music and leave the call.
-  - `$mcserver ip port`: Displays an embed full of stats about the given server. For example try `$mcserver play.hypixel.com 25565`.
-  - `$mute @target-member`: Mutes a member. The target cannot do anything, except read. Good for spammers that you do not want to ban or kick. Removes the default role, and adds the 'Mute' role.
-  - `$play youtube-url`: Plays music/sound of a given YouTube video. For example try `$play https://www.youtube.com/watch?v=dQw4w9WgXcQ`.
-  - `$rules`: Displays all the rules.
-  - `$setbank amount`: Sets your bank worth to X amount of coins.
-  - `$setwallet amount`: Sets your wallet worth to X amount of coins.
-  - `$template`: Sends a template for starting a new command. Can be used for it's function, or to give someone a start.
-  - `$ticket`: WIP, if it's done, a description will be added.
-  - `$unblind`: Unblinds a blinded member. Roves the 'Blinded' role, and adds thr default role. 
-  - `$unmute`: Unmutes a muted member. Removes the 'Muted' role, and adds the default role.
-  - `$withdraw amount`: Withdraw coins from your bank account. So from Bank to Wallet.
+  - `apply`: A link to a google form if you would like to apply for a role/rank on our Minecraft/Discord server.
+  - `balance`: Show your balance. You can then choose what balance you would like to display: Bank or Wallet.
+  - `balbank`: Directly shows your bank account worth, without a dialogue.
+  - `balwallet`: Directly shows your wallet worth, without a dialogue.
+  - `ban @target-member`: Bans a Discord server member.
+  - `blind`: Blinds a member. The targeted member cannot do and see anything.
+  - `clear amount`: Bulkdeletes messages. Be aware though that old messages can't be deleted because of technical limits.
+  - `cmdtemplate`: Displays a codeblock with a basic command. Can be used to easily make a new command.
+  - `dailyreward`: Collect your daily reward. Has a cooldown of 24 hours. This amount will be added into your wallet.
+  - `github`: A embed that displays the most important links to this GitHub repository.
+  - `deposit amount`: Deposit coins to your bank account. So from Wallet to Bank.
+  - `embedtemplate`: Displays a codeblock with a more complex command. Embed.
+  - `event`: Creates an embed with options. Can be used for a poll or team select.
+  - `github`: Creates an embed that displays the most important links to this GitHub repository.
+  - `give @member amount`: Gives a member of the server X amount of coins. Note that that targeted member must exist in the Database.
+  - `help`: The bot will try to help you with a small *conversation*. If the bot still doesn't help you, you can ask our support team for further assistence. Stage 1
+  - `image searchterm`: Search google images. The bot will display the best (but random) search result.
+  - `kick @target-member`: Kicks a Discord server member.
+  - `leave`: If you want to stop the music from playing further, you can do `$leave`. The bot will stop the music and leave the call.
+  - `mcserver ip port`: Displays an embed full of stats about the given server. For example try `$mcserver play.hypixel.com 25565`.
+  - `mute @target-member`: Mutes a member. The target cannot do anything, except read. Good for spammers that you do not want to ban or kick. Removes the default role, and adds the 'Mute' role.
+  - `play youtube-url`: Plays music/sound of a given YouTube video. For example try `$play https://www.youtube.com/watch?v=dQw4w9WgXcQ`.
+  - `rules`: Displays all the rules.
+  - `setbank amount`: Sets your bank worth to X amount of coins.
+  - `setwallet amount`: Sets your wallet worth to X amount of coins.
+  - `template`: Sends a template for starting a new command. Can be used for it's function, or to give someone a start.
+  - `ticket`: WIP, if it's done, a description will be added.
+  - `unblind`: Unblinds a blinded member. Roves the 'Blinded' role, and adds thr default role. 
+  - `unmute`: Unmutes a muted member. Removes the 'Muted' role, and adds the default role.
+  - `withdraw amount`: Withdraw coins from your bank account. So from Bank to Wallet.
 
 ----------------------------------------
 
