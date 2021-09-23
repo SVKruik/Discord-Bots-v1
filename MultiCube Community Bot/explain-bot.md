@@ -4,7 +4,7 @@
 
 ### Files
 
-These contain all the data and commands that can be used. Their location cannot be changed, because it will break everyting. Do not change anything, unless you have permission and know what you are doing. 
+These contain all the data and commands that can be used. Their location cannot be changed, because it will break everyting.
 
 ### Folders
 
@@ -14,7 +14,7 @@ These contain all the files. There are a couple kinds of folders:
 - [Events](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Events) = contains important core files. The bot will not work without it. 
 - [Handlers](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Handlers) = contains import core files. The bot will not work without it. 
 
-Beside these four listed folders, there are a lot of other files, only available on the computer running the bot. If you need anyone, contact our staff. Their location cannot be changed, because it will break everyting. 
+Beside these four listed folders, there are a lot of other files, only available on the computer running the bot. If you need anything, contact our staff. Their location cannot be changed, because it will break everyting. 
 
 ### Information
 
