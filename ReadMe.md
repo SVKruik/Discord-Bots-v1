@@ -21,7 +21,6 @@ If you have questions about anything, you can contact our support team like said
 We have a few rules that are important. We want to keep this place nice, friendly and polite. Rule breakers will receive a warning, and if they continue, the will receive a ban/kick. Report rulebreakers to our staff. Read the server rules in-game (/mainmenu --> Server Rules), or on first join of the Discord server.
 
 ### Economy
-
 Our Discord Server also has a Economy system. You can collect money through a couple ways:
   - Daily reward: as the name suggests, you can collect a DR. The command for this is `dailyreward`, it has a cooldown of 24 hours (86400 seconds).
   - Another kind off daily reward is the `search` command, and you have to pick a number.
@@ -34,13 +33,13 @@ There are 2 types of balance:
   - Wallet: this is your direct payment method. All money earned (for example DR) goes into here.
 The Economy System is not done, so this text about Economy will be expanded.
 
-### Links
-Here are some links that are very handy for us, but also maybe for you:
+### Usefull stuff
+Here are some links that can come in handy if you are building your bot, or just general usefull links:
   - [Cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet): General information about Markdown (language).
   - [More](https://gist.github.com/matthewzring/9f7bbfd102003963f9be7dbcf7d40e51) Markdown information.
   - [Discord](https://discord.gg/gBVFuBqENA) Server for hangout, not dedicated to our Minecraft Server.
   - [Discord](https://discord.gg/VSE75WkgFM) Server for our Minecraft server.
-  - [Aternos](https://aternos.org/:en/): our temporary host. Later we will convert it to [BungeeCord](https://ci.md-5.net/job/BungeeCord/) for better performance. We will run it on our own PC.
+  - [Aternos](https://aternos.org/:en/): Our temporary Minecraft host. Later we will convert it to [BungeeCord](https://ci.md-5.net/job/BungeeCord/) for better performance. We will run it on our own PC.
   - [GitHub](https://github.com/) homepage.
   - [Node.js](https://nodejs.org/en/) allows us to work with the bot.
   - [VSC](https://code.visualstudio.com/) the best code editor for this project.
@@ -48,7 +47,8 @@ Here are some links that are very handy for us, but also maybe for you:
   - [Tutorial](https://youtube.com/playlist?list=PLbbLC0BLaGjpyzN1rg-gK4dUqbn8eJQq4) about the Discord Bot.
 
 ### Commands
-Here is a list for commands on our hangout server [EGS](https://discord.gg/gBVFuBqENA). Be aware though that some commands are for Administrators only. Alphabetic order.
+Here is a list for commands on our Discord server. Be aware though that some commands are for Administrators only. Alphabetic order.
+
   - `apply`: A link to a google form if you would like to apply for a role/rank on our Minecraft/Discord server.
   - `balance`: Show your balance. You can then choose what balance you would like to display: Bank or Wallet.
   - `balbank`: Directly shows your bank account worth, without a dialogue.
@@ -58,36 +58,38 @@ Here is a list for commands on our hangout server [EGS](https://discord.gg/gBVFu
   - `clear amount`: Bulkdeletes messages. Be aware though that old messages can't be deleted because of technical limits.
   - `cmdtemplate`: Displays a codeblock with a basic command. Can be used to easily make a new command.
   - `dailyreward`: Collect your daily reward. Has a cooldown of 24 hours. This amount will be added into your wallet.
-  - `github`: A embed that displays the most important links to this GitHub repository.
   - `deposit amount`: Deposit coins to your bank account. So from Wallet to Bank.
   - `embedtemplate`: Displays a codeblock with a more complex command. Embed.
   - `event`: Creates an embed with options. Can be used for a poll or team select.
   - `github`: Creates an embed that displays the most important links to this GitHub repository.
-  - `give @member amount`: Gives a member of the server X amount of coins. Note that that targeted member must exist in the Database.
-  - `help`: The bot will try to help you with a small *conversation*. If the bot still doesn't help you, you can ask our support team for further assistence. Stage 1
-  - `image searchterm`: Search google images. The bot will display the best (but random) search result.
+  - `givebank @member amount`: Gives a member of the server `X` amount of coins to their wallet. Note that that targeted member must exist in the Database, but an economy account should be created. 
+  - `givewallet @member amount`: Gives a member of the server `Y` amount of coins to their bank account.
+  - `help`: The bot will try to help you with a small *conversation*. If the bot still doesn't help you, you can ask our support team for further assistence. Stage 1.
+  - `image searchterm`: Search google images. The bot will display the best (but random) search result available on the internet.
   - `kick @target-member`: Kicks a Discord server member.
   - `leave`: If you want to stop the music from playing further, you can do `$leave`. The bot will stop the music and leave the call.
   - `mcserver ip port`: Displays an embed full of stats about the given server. For example try `$mcserver play.hypixel.com 25565`.
+  - `minusbank @member amount`: Reduce the amount of coins on the targeted member's bank account. 
+  - `minuswallet @member amount`: Reduce the amount of coins on the targeted member's wallet.
   - `mute @target-member`: Mutes a member. The target cannot do anything, except read. Good for spammers that you do not want to ban or kick. Removes the default role, and adds the 'Mute' role.
   - `play youtube-url`: Plays music/sound of a given YouTube video. For example try `$play https://www.youtube.com/watch?v=dQw4w9WgXcQ`.
-  - `rules`: Displays all the rules.
-  - `setbank amount`: Sets your bank worth to X amount of coins.
-  - `setwallet amount`: Sets your wallet worth to X amount of coins.
+  - `rules`: Displays all the server rules.
+  - `setbank amount`: Sets your bank worth to `X` amount of coins.
+  - `setwallet amount`: Sets your wallet worth to `Y` amount of coins.
   - `template`: Sends a template for starting a new command. Can be used for it's function, or to give someone a start.
-  - `ticket`: WIP, if it's done, a description will be added.
-  - `unblind`: Unblinds a blinded member. Roves the 'Blinded' role, and adds thr default role. 
+  - `ticket`: Creates a new channel where you can ask your private question. If you have a general question, you can just ask your question in the support channel.
+  - `unblind`: Unblinds a blinded member. Roves the 'Blinded' role, and adds the default role. 
   - `unmute`: Unmutes a muted member. Removes the 'Muted' role, and adds the default role.
   - `withdraw amount`: Withdraw coins from your bank account. So from Bank to Wallet.
+
+The prefix for a command is `$`, after that you can type your command. For example: `$help`. 
 
 ----------------------------------------
 
 ### Files
-
 As you might have noticed, a large portion of this repo includes files of our Discord bot. This is because our bot is open source, and you can use our code that we are using. Note that you have to do a lot of steps before you can use any of our files in your own project. If you need help with your own Discord bot, you can conctact our staff, and they will help you with setting up the basics. This won't be a full course/tutorial, but it will get you started.
 
 ### Folders
-
 Our bot(s) are always organised in the following folders. This paragraph explains each folder. 
 - [Commands](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Commands) = contains all the commands. They do not work without the command_handler.js file and a couple of other files.
 - [Counters](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Counters) = contains all the counters in the Discord Server. For example the Member Counter.
@@ -98,19 +100,7 @@ Our bot(s) are always organised in the following folders. This paragraph explain
 Feel free to use files from our repo. 
 
 ### Information
-
-Note that all of the files are useless on their own. These are just for documentation. You need a couple of third-party apps for it to work. You can check all the dependencies in the `package-lock.json`. 
-
-### Links
-
-Here are a couple of usefull thingies to use if you are building your own bot.
-
-- [Node.js](https://nodejs.org/en/): Core files, allowing for the whole project to run. 
-- [Visual Studio Code](https://code.visualstudio.com/): Best  file editor for coding.
-- [Guide](https://discordjs.guide/preparations/#using-the-command-prompt): a guide of Discord Bots
-- [Dev Portal](https://discord.com/developers/applications): Where you can find import information about your application.
-- [Unicode Emoji](https://unicode.org/emoji/charts/full-emoji-list.html): Unicode Emoji's needed for poles.
-- [Discord](https://discord.gg/VSE75WkgFM): Where this bot is functioning.
+Note that all of the files are useless on their own. These are just for documentation. You need a couple of third-party apps for it to work. You can check all the dependencies in the `package-lock.json`. A large portion already comes with Node.js, but some are extra and custom. You can find these on [NPM](https://www.npmjs.com/).
 
 ----------------------------------------
 
