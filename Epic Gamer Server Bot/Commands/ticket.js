@@ -2,7 +2,7 @@ module.exports = {
   name: "ticket",
   aliases: [],
   permissions: ["SEND_MESSAGES"],
-  description: "open a ticket!",
+  description: "Open a support ticket!",
   async execute(message, args, cmd, client, Discord) {
     const channel = await message.guild.channels.create(
       `ticket: ${message.author.tag}`
@@ -27,7 +27,7 @@ module.exports = {
       await reactionMessage.react("🔒");
       await reactionMessage.react("⛔");
     } catch (err) {
-      channel.send("Error the emoji!");
+      channel.send("Error with the emoji!");
       throw err;
     }
 

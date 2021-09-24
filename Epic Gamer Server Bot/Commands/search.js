@@ -3,7 +3,7 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "search",
   cooldown: 86400,
-  permissions: ["ADMINISTRATOR"],
+  permissions: ["SEND_MESSAGES"],
   description: "Search for some coins!",
   async execute(message, args, cmd, client, discord, profileData) {
     const locations = [
@@ -101,7 +101,7 @@ module.exports = {
     message.channel.send(
       `<@${
         message.author.id
-      }> What number do you choose?\n Type your decision in this channel\n \`${chosenLocations.join(
+      }> What number do you choose?\n Type your decision in this channel.\n \`${chosenLocations.join(
         "` `"
       )}\``
     );

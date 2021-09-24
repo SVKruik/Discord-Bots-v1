@@ -22,7 +22,7 @@ module.exports = {
         }
       );
 
-      return message.channel.send(`You withdrew \`${amount}\` of coins into your wallet. Before executing this command, you had \`${profileData.coins}\` coins in your wallet, and \`${profileData.bank}\` in your bank account.`);
+      return message.channel.send(`You withdrew \`${amount}\` of coins into your wallet.`);
     } catch (err) {
       console.log(err);
     }

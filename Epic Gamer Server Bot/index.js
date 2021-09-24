@@ -1,4 +1,4 @@
-npm//Index
+//Index
 const Discord = require("Discord.js");
 const fs = require("fs");
 const mongoose = require("mongoose");
@@ -64,5 +64,5 @@ mongoose
     console.log(err);
   });
 
-//Token login - Available in another file. 
+//Token login - Stored in a hidden file. 
 client.login(process.env.Discord_TOKEN);

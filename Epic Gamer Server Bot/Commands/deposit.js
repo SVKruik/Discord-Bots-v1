@@ -20,7 +20,7 @@ module.exports = {
         }
       );
 
-      return message.channel.send(`You deposited \`${amount}\` of coins into your bank account. Before executing this command, you had \`${profileData.bank}\` coins in your bank account, and \`${profileData.coins}\` in your wallet.`);
+      return message.channel.send(`You deposited \`${amount}\` of coins into your bank account.`);
     } catch (err) {
       console.log(err);
     }

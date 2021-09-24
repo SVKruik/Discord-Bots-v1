@@ -1,6 +1,6 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
-  name: "minus",
+  name: "minuswallet",
   permissions: ["ADMINISTRATOR"],
   description: "Current - amount.",
   async execute(message, args, cmd, client, discord, profileData) {
@@ -9,7 +9,7 @@ module.exports = {
     const target = message.mentions.users.first();
     if (!target) return message.channel.send("That user is not in this Discord server.");
 
-    if (amount % 1 != 0 || amount > 0) return message.channel.send("The reduce amount has to be a whole number, nor can it be positive.");
+    if (amount % 1 != 0 || amount > 0) return message.channel.send("The reduce amount has to be a whole number, nor can it be positive. Correct usage: $minuswallet @target -amount");
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
