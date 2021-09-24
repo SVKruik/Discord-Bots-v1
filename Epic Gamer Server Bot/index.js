@@ -2,6 +2,7 @@
 const Discord = require("Discord.js");
 const fs = require("fs");
 const mongoose = require("mongoose");
+const Levels = require("discord-xp")
 require("dotenv").config();
 const client = new Discord.Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
@@ -13,6 +14,9 @@ const memberCounter = require("./Counters/member-counter");
 client.on('ready', () => {
   memberCounter(client);
 })
+
+//Level system
+Levels.setURL(`mongodb+srv://root:${process.env.DBPASS}@discordbotegs.pezba.mongodb.net/DiscordBotEGS?retryWrites=true&w=majority`)
 
 //Core Code - Don't change
 client.commands = new Discord.Collection();

@@ -1,5 +1,6 @@
 require("dotenv").config();
 const profileModel = require("../../models/profileSchema");
+const Levels = require("discord-xp");
 
 const cooldowns = new Map();
 
@@ -11,6 +12,19 @@ module.exports = async (Discord, client, message) => {
 
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
+  const args = message.content.slice(prefix.length).split(/ +/);
+  const cmd = args.shift().toLowerCase();
+
+  //Level system
+  const randomXP = Math.floor(Math.random() * 9) + 1;
+  const hasLeveledUP = await Levels.appendXp(message.author.id, message.guild.id, randomXP);
+  if (hasLeveledUP) {
+    const user = await Levels.fetch(message.author.id, message.guild.id);
+    message.channel.send(`${message.member}, you have leveled up to level \`${user.level}\`. Thank you for being taking part in our community. Congratulations!`);
+  }
+
+
+  //Database profile
   let profileData;
   try {
     profileData = await profileModel.findOne({ userID: message.author.id });
@@ -18,8 +32,10 @@ module.exports = async (Discord, client, message) => {
       let profile = await profileModel.create({
         userID: message.author.id,
         serverID: message.guild.id,
+        name: message.author.username,
         coins: 0,
         bank: 0,
+        level: 0,
       });
       profile.save();
     }
@@ -27,15 +43,12 @@ module.exports = async (Discord, client, message) => {
     console.log(err);
   }
 
-  const args = message.content.slice(prefix.length).split(/ +/);
-  const cmd = args.shift().toLowerCase();
-
   //Aliases
   const command =
     client.commands.get(cmd) ||
     client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
 
-  //Perms
+  //Message Permissions
   const validPermissions = [
     "CREATE_INSTANT_INVITE",
     "KICK_MEMBERS",
