@@ -11,7 +11,7 @@ module.exports = {
     const target = message.mentions.users.first();
     if (!target) return message.channel.send("That user is not in this Discord server.");
 
-    if (amount % 1 != 0 || amount > 0) return message.channel.send("The reduce amount has to be a whole number, nor can it be positive. Correct usage: $minuswallet @target -amount");
+    if (amount % 1 != 0 || amount <= 0) return message.channel.send("The reduce amount has to be a whole number, nor can it be negative. The system makes it negative for you.");
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
@@ -22,12 +22,12 @@ module.exports = {
         },
         {
           $inc: {
-            coins: amount,
+            coins: -amount,
           },
         }
       );
 
-      return message.channel.send(`${message.author.username}, the targeted member has lost \`${amount}\` of coins.`);
+      return message.channel.send(`${message.author.username}, the targeted member has lost \`${amount}\` amount of coins (wallet).`);
     } catch (err) {
       console.log(err);
     }

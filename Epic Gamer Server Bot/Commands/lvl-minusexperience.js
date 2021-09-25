@@ -1,12 +1,12 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
-  name: "minusbank",
-  aliases: [],
+  name: "minusexperience",
+  aliases: ['minusexp', 'minusxp'],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
-  description: "Current - amount (bank).",
+  description: "Current - amount (experience).",
   async execute(message, args, cmd, client, discord, profileData) {
-    if (!args.length) return message.channel.send("You need to mention a player to reduce their coins.");
+    if (!args.length) return message.channel.send("You need to mention a player to reduce their experience.");
     const amount = args[1];
     const target = message.mentions.users.first();
     if (!target) return message.channel.send("That user is not in this Discord server.");
@@ -22,12 +22,12 @@ module.exports = {
         },
         {
           $inc: {
-            bank: -amount,
+            experience: -amount,
           },
         }
       );
 
-      return message.channel.send(`${message.author.username}, the targeted member has lost \`${amount}\` amount of coins (bank).`);
+      return message.channel.send(`${message.author.username}, the targeted member has lost \`${amount}\` amount of experience.`);
     } catch (err) {
       console.log(err);
     }

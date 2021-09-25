@@ -11,7 +11,7 @@ module.exports = {
     const target = message.mentions.users.first();
     if (!target) return message.channel.send("That user is not in this Discord server.");
 
-    if (amount % 1 != 0 || amount <= 0) return message.channel.send("Set amount must be a whole number, nor can it be negative.");
+    if (amount < 0) return message.channel.send("Set amount must be greater than -1.");
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });

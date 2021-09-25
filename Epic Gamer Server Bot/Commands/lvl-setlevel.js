@@ -1,17 +1,17 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
-  name: "minusbank",
+  name: "setlevel",
   aliases: [],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
-  description: "Current - amount (bank).",
+  description: "Reset the level of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
-    if (!args.length) return message.channel.send("You need to mention a player to reduce their coins.");
+    if (!args.length) return message.channel.send("You need to mention a player to set their level.");
     const amount = args[1];
     const target = message.mentions.users.first();
     if (!target) return message.channel.send("That user is not in this Discord server.");
 
-    if (amount % 1 != 0 || amount <= 0) return message.channel.send("The reduce amount has to be a whole number, nor can it be negative. The system makes it negative for you.");
+    if (amount < 0) return message.channel.send("Set amount must be greater than -1.");
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
@@ -21,13 +21,13 @@ module.exports = {
           userID: target.id,
         },
         {
-          $inc: {
-            bank: -amount,
+          $set: {
+            level: amount,
           },
         }
       );
 
-      return message.channel.send(`${message.author.username}, the targeted member has lost \`${amount}\` amount of coins (bank).`);
+      return message.channel.send(`${message.author.username}, the targeted member's level is now \`${amount}\`.`);
     } catch (err) {
       console.log(err);
     }

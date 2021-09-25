@@ -8,7 +8,6 @@
     "@discordjs/rest": "0.1.0-canary.0",
     "ansi-regex": "^6.0.1",
     "discord-api-types": "^0.22.0",
-    "discord-xp": "^1.1.16",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
