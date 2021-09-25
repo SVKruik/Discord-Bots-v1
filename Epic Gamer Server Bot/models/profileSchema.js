@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 const profileSchema = new mongoose.Schema({
   userID: { type: String, require: true, unique: true },
   serverID: { type: String, require: true },
-  coins: { type: Number, default: 0 },
-  bank: { type: Number, default: 0},
-  level: { type: Number, default: 0},
+  name: { type: String},
+  coins: { type: Number, default: process.env.WALLETDEFAULT},
+  bank: { type: Number, default: process.env.BANKDEFAULT},
+  level: { type: Number, default: process.env.LVLDEFAULT},
+  experience: { type: Number, default: process.env.EXPDEFAULT},
 });
 
 const model = mongoose.model("ProfileModels", profileSchema);

@@ -1,6 +1,5 @@
 require("dotenv").config();
 const profileModel = require("../../models/profileSchema");
-const Levels = require("discord-xp");
 
 const cooldowns = new Map();
 
@@ -15,15 +14,6 @@ module.exports = async (Discord, client, message) => {
   const args = message.content.slice(prefix.length).split(/ +/);
   const cmd = args.shift().toLowerCase();
 
-  //Level system
-  const randomXP = Math.floor(Math.random() * 9) + 1;
-  const hasLeveledUP = await Levels.appendXp(message.author.id, message.guild.id, randomXP);
-  if (hasLeveledUP) {
-    const user = await Levels.fetch(message.author.id, message.guild.id);
-    message.channel.send(`${message.member}, you have leveled up to level \`${user.level}\`. Thank you for being taking part in our community. Congratulations!`);
-  }
-
-
   //Database profile
   let profileData;
   try {
@@ -33,9 +23,12 @@ module.exports = async (Discord, client, message) => {
         userID: message.author.id,
         serverID: message.guild.id,
         name: message.author.username,
+
         coins: 0,
         bank: 0,
+        
         level: 0,
+        experience: 0,
       });
       profile.save();
     }

@@ -1,3 +1,3 @@
 module.exports = () =>{
-    console.log('The MultiCube Community Bot is now online!');
+    console.log(process.env.ONLINE);
 }
