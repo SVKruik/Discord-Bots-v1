@@ -31,7 +31,7 @@ client.on("ready", () => {
     )
     .catch(console.error);
   client.user
-    .setPresence({ activity: { name: "Hypixel Bed Wars" }, status: "idle" })
+    .setPresence({ activity: { name: "Checkers" }, status: "idle" })
     .then(console.log)
     .catch(console.error);
 });

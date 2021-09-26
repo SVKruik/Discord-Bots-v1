@@ -9,15 +9,14 @@ module.exports = {
         .setColor(process.env.MBDCLR)
         .setTitle('GitHub Repository')
         .setImage(process.env.MBDIMG)
-        .setURL(process.env.MBDURL)
-        .setDescription('This embed shows the link to our GitHub Repository. You can find a lot of information about anything there, so check it out!')
+        .setDescription('This is our GitHub repository. You can find a lot of information about anything there, so check it out!')
         .addFields(
             {name: 'Link:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers'},
             {name: '-----', value: 'For more specific links:'},
             {name: 'Bot Files:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/MultiCube%20Community%20Bot'},
             {name: 'Child Servers:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Child%20Servers'},
             {name: 'Issues:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/issues'},
-            {name: 'Discussions (main):', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/discussions/11'}
+            {name: 'Discussions:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/discussions/'}
         )
         .setFooter(process.env.MBDFTR);
 
