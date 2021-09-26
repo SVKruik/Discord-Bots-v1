@@ -121,10 +121,10 @@ As you might have noticed, a large portion of this repo includes files of our Di
 
 ### Folders
 Our bot(s) are always organised in the following folders. This paragraph explains each folder. 
-- [Commands](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Commands) = contains all the commands. They do not work without the command_handler.js file and a couple of other files.
-- [Counters](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Counters) = contains all the counters in the Discord Server. For example the Member Counter.
-- [Events](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Events) = contains important core files. The bot will not work without it. 
-- [Handlers](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bot/Handlers) = contains import core files. The bot will not work without it. 
+- [Commands](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Heron%20Bot/Commands) = contains all the commands. They do not work without the command_handler.js file and a couple of other files.
+- [Counters](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Heron%20Bot/Counters) = contains all the counters in the Discord Server. For example the Member Counter.
+- [Events](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Heron%20Bot/Events) = contains important core files. The bot will not work without it. 
+- [Handlers](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Heron%20Bot/Handlers) = contains import core files. The bot will not work without it. 
 - [Models]() = Contains database information. 
 
 Feel free to use files from our repo. 
