@@ -1,6 +1,6 @@
 module.exports = {
   name: "ticket",
-  aliases: ['tkt', 'privatesupport', 'privsup'],
+  aliases: ['tkt'],
   cooldown: process.env.ASEXT,
   permissions: ["SEND_MESSAGES"],
   description: "Open a support ticket. Private talk to a staff member.",

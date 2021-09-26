@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'leave',
-    aliases: ['musicleave'],
+    name: 'musicleave',
+    aliases: ['leave', 'msclv'],
     cooldown: process.env.ASMSC,
     permissions: ["SEND_MESSAGES"],
     description: 'Stop the music, and leave the call.',

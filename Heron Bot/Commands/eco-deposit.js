@@ -1,7 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "deposit",
-  aliases: ['dep', 'depo', 'walletbank', 'walbank'],
+  aliases: ['dep', 'depo'],
   cooldown: process.env.ASMID,
   permissions: ["SEND_MESSAGES"],
   description: "Wallet to Bank",

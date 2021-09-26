@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'server',
-    aliases: ['serverip'],
+    name: 'serverip',
+    aliases: ['server'],
     cooldown: process.env.ASMID,
     description: 'Display the server ip for MultiCube',
     permissions: ["SEND_MESSAGES"],

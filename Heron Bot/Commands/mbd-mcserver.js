@@ -1,8 +1,8 @@
 const util = require('minecraft-server-util')
 
 module.exports = {
-    name: 'mcserver',
-    aliases: ['mc', 'mccheck', 'minecraftserver'],
+    name: 'minecraftserver',
+    aliases: ['mc', 'mccheck', 'mcserver'],
     cooldown: process.env.ASMID,
     permissions: ["SEND_MESSAGES"],
     description: 'Displays some server statistics.',

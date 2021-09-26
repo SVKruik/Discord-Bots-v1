@@ -1,10 +1,10 @@
 module.exports = {
     name: 'commandtemplate',
-    aliases: ['cmdtemplate', 'cmdtemp', 'cmdtmplt', 'cmdtmplte'],
-    cooldown: process.env.ASMID,
+    aliases: ['cmdtemp'],
+    cooldown: process.env.ASADMIN,
     description: 'Command template for devs.',
     permissions: ["ADMINISTRATOR"],
     execute(message, args, cmd, client, Discord) {
-        message.channel.send('Template')
+        message.channel.send('Simple Text Template')
     }
 }

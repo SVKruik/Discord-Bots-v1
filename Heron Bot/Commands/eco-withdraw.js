@@ -1,7 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "withdraw",
-  aliases: ['with', 'wit', 'withdrawn', 'withdrew', 'bankwallet', 'bankwal'],
+  aliases: ['with', 'wit'],
   cooldown: process.env.ASMID,
   permissions: ["SEND_MESSAGES"],
   description: "Bank to Wallet",
