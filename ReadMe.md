@@ -2,7 +2,6 @@
 This main repository is dedicated to our server on Minecraft.<br/>
 
 ----------------------------------------
-
 ### General Information
 We run a couple of Minecraft Servers. We have Child (Sub) Servers, but our main focus is MultiCube. This server is still the largest, and most accessible. This is because
 you don't have to download anything. You can just join and play. We have a subserver where there are Mods present, so be aware if you'd like to join, you have to download
@@ -106,3 +105,4 @@ Note that all of the files are useless on their own. These are just for document
 
 For questions about updates or anything else, contact our support team.<br/>
 To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).<br/>
+For the website view of this Repository, go [here](https://puffinkwadraat.github.io/MultiCube-and-Child-Servers/). Created by GitHub Pages
