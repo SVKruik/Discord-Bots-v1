@@ -123,7 +123,7 @@ module.exports = async (Discord, client, message) => {
     command.execute(message, args, cmd, client, Discord, profileData);
   } catch (err) {
     message.reply(
-      "There was an error trying to execute the specified command! If you are a Bot Developer, check the console. If you are a normal member, please report the bug that you found to a Bot Developer or other Staff."
+      "There was an error trying to execute the specified command! Something ain't right. Check the console."
     );
     console.log(err);
   }
