@@ -9,7 +9,7 @@ module.exports = {
       `ticket: ${message.author.tag}`
     );
 
-    channel.setParent("852178171305525258");
+    channel.setParent(process.env.TICKETGROUP);
 
     channel.updateOverwrite(message.guild.id, {
       SEND_MESSAGE: false,

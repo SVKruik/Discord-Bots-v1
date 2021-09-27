@@ -26,7 +26,7 @@ module.exports = async (Discord, client, message) => {
 
         coins: 0,
         bank: 0,
-        
+
         level: 0,
         experience: 0,
       });
@@ -42,6 +42,8 @@ module.exports = async (Discord, client, message) => {
     client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
 
   //Message Permissions
+  // https://discord.com/developers/docs/topics/permissions
+  // Keep updated in order to use new permissions.
   const validPermissions = [
     "CREATE_INSTANT_INVITE",
     "KICK_MEMBERS",
@@ -73,7 +75,15 @@ module.exports = async (Discord, client, message) => {
     "MANAGE_NICKNAMES",
     "MANAGE_ROLES",
     "MANAGE_WEBHOOKS",
-    "MANAGE_EMOJIS",
+    "MANAGE_EMOJIS_AND_STICKERS",
+    "USE_APPLICATION_COMMANDS",
+    "REQUEST_TO_SPEAK",
+    "MANAGE_THREADS",
+    "CREATE_PUBLIC_THREADS",
+    "CREATE_PRIVATE_THREADS",
+    "USE_EXTERNAL_STICKERS",
+    "SEND_MESSAGES_IN_THREADS",
+    "START_EMBEDDED_ACTIVITIES",
   ];
 
   if (command.permissions.length) {
@@ -87,7 +97,9 @@ module.exports = async (Discord, client, message) => {
       }
     }
     if (invalidPerms.length) {
-      return message.channel.send(`Missing Permissions: \`${invalidPerms}\`.`);
+      return message.channel.send(
+        `You are missing the following permissions to use this command: \`${invalidPerms}\`.`
+      );
     }
   }
 
@@ -108,7 +120,9 @@ module.exports = async (Discord, client, message) => {
       const time_left = (expiration_time - current_time) / 1000;
 
       return message.reply(
-        `Please wait ${time_left.toFixed(1)} more seconds before using the specified command: \`${
+        `Please wait ${time_left.toFixed(
+          1
+        )} more seconds before using the specified command: \`${
           command.name
         }\`.`
       );
