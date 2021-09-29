@@ -1,7 +1,7 @@
 {
-  "name": "epicgamerserverbot",
+  "name": "heron",
   "version": "1.0.0",
-  "description": "Second bot, based on the MultiCube bot.",
+  "description": "General purpose Bot",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
