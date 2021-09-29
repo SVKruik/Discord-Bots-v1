@@ -9,6 +9,7 @@ Our Discord server has a couple of bots. They are named in Latin after birds, so
 - Falco: Falcon, Valk
 - Heron: Heron, Reiger
 - Noctua: Night Owl, Nachtuil
+- Stern: Tern, Stern
 
 ----------------------------------------
 
