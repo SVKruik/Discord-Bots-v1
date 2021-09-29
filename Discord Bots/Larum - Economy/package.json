@@ -1,7 +1,7 @@
 {
-  "name": "heron",
+  "name": "larum",
   "version": "1.0.0",
-  "description": "General purpose Bot",
+  "description": "Economy bot",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",

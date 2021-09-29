@@ -1,3 +1,5 @@
+// Falco is a general purpose bot. It has support and music.
+
 //Index
 const Discord = require("Discord.js");
 const fs = require("fs");
@@ -44,7 +46,7 @@ client.on("guildMemberAdd", (guildMember) => {
 
   guildMember.roles.add(welcomeRole);
   guildMember.guild.channels.cache
-    .get("850753468927049798")
+    .get(process.env.WELCOMECHANNEL)
     .send(
       `Welcome <@${guildMember.user.id}> to our server! Make sure to check out the rules channel!`
     );

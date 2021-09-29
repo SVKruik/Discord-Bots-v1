@@ -1,7 +1,7 @@
 {
-  "name": "heron",
+  "name": "falco",
   "version": "1.0.0",
-  "description": "General purpose Bot",
+  "description": "Other things",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
