@@ -10,6 +10,7 @@ Our Discord server has a couple of bots. They are named in Latin after birds, so
 - Heron: Heron, Reiger
 - Noctua: Night Owl, Nachtuil
 - Stern: Tern, Stern
+- Picum: Woodpecker, Specht
 
 ----------------------------------------
 

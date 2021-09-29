@@ -2,7 +2,7 @@ module.exports = {
   name: "ping",
   aliases: ["pong"],
   cooldown: process.env.ASSOFT,
-  permissions: ["SEND_MESSAGES"],
+  permissions: ["ADMINISTRATOR"],
   description: "Ping check bot, error checking.",
   async execute(message, args, cmd, client, Discord, profileData) {
     var chance = Math.random() * 100;
