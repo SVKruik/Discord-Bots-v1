@@ -25,18 +25,18 @@ client.events = new Discord.Collection();
 });
 
 //Status - Rich presence.
-client.on("ready", () => {
-  client.user
-    .setActivity("Discord.js", { type: "PLAYING" })
-    .then((presence) =>
-      console.log(`Activity set to ${presence.activities[0].name}`)
-    )
-    .catch(console.error);
-  client.user
-    .setPresence({ activity: { name: "Checkers" }, status: "idle" })
-    .then(console.log)
-    .catch(console.error);
-});
+// client.on("ready", () => {
+//   client.user
+//     .setActivity("Discord.js", { type: "PLAYING" })
+//     .then((presence) =>
+//       console.log(`Activity set to ${presence.activities[0].name}`)
+//     )
+//     .catch(console.error);
+//   client.user
+//     .setPresence({ activity: { name: "Checkers" }, status: "idle" })
+//     .then(console.log)
+//     .catch(console.error);
+// });
 
 //Welcome Role - needs an ID, not name.
 client.on("guildMemberAdd", (guildMember) => {
