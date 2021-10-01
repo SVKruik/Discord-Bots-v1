@@ -6,6 +6,7 @@ Our Discord server has a couple of bots. They are named in Latin after birds, so
 
 - Anser: Goose, Gans
 - Ciconia: Stork, Ooievaar
+- Coturnix: Quail, Kwartel
 - Falco: Falcon, Valk
 - Heron: Heron, Reiger
 - Noctua: Night Owl, Nachtuil
