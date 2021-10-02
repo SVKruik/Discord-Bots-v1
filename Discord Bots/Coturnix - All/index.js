@@ -1,4 +1,4 @@
-// Picum helps you
+// Coturnix is for the MultiCube Community server.
 
 //Index
 const Discord = require("Discord.js");
