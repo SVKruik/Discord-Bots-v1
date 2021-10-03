@@ -97,7 +97,8 @@ Here is a list for commands on our Discord server. Be aware though that some com
 | `event`           | Creates a poll.                                                       | `event`                           |                      |
 | `github`          | Displays the most used/important links to this GitHub Repository.     | `github`                          | `gh`                 |
 | `help-st1`        | The bot tries to help you with a question. Stage 1.                   | `help`  	                        |                      |
-| `minecraftserver` | Displays information about a given Minecraft server.                  | `mcserver server-ip serverport    | `mc`, `mccheck`      | 
+| `minecraftserver` | Displays information about a given Minecraft server.                  | `mcserver server-ip serverport`   | `mc`, `mccheck`      |
+| `profile`         | Displays all the information we have stored in our Database.          | `profile`                         | `pro`                | 
 | `rules`           | Displays all of our Discord Server rules.                             | `rules`                           |                      |
 | `serverip`        | Displays the Server IP of MultiCube with some information.            | `serverip`                        | `server`             |
 
