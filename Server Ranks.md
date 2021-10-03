@@ -51,7 +51,7 @@
 
     - Cost: not for sale!
 
-- __Mythic:__ Also a high-tier rank. This is the highest rank on the server that earned Coins can buy (4000 Coins). With this rank there are many advantages:
+- __Mythic:__ Also a high-tier rank. This is the highest rank on the server that earned Coins can buy. With this rank there are many advantages:
     - Priority Speaker in Discord calls.
     - You will be informed as one of the first when new Server Events or anything like that will happen.
     - More permissions on the Minecraft Server. Ask a staff member for the precise additional permissions, since these are constanly changing and being updated.
@@ -66,7 +66,7 @@
 
     - Cost: 8000 Coins.
 
-- __Epic:__ Mid-tier rank. You will get your own prefix, but you do not have your chat color and extra permissions. But, after this rank you will get to the High-tier ranks!
+- __Epic:__ Mid-tier rank. Own prefix, but now advantages.
     - Cost: 2000 Coins.
 
 - __Rare:__ Mid-tier rank. Own prefix, but now advantages.
