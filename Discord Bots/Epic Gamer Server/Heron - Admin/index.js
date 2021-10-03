@@ -1,3 +1,5 @@
+// Heron has the admin commands
+
 //Index
 const Discord = require("Discord.js");
 const fs = require("fs");

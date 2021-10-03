@@ -1,4 +1,4 @@
-// Noctua is the bot for the level system. Connects with MongoDB
+// Noctua is the bot for the level system
 
 //Index
 const Discord = require("Discord.js");

@@ -1,4 +1,4 @@
-// Falco is a general purpose bot. It has support and music.
+// Stern supports YouTube music
 
 //Index
 const Discord = require("Discord.js");

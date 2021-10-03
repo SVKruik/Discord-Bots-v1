@@ -1,4 +1,4 @@
-// Hirundo is for testing new commands etc.
+// Hirundo is for testing new commands
 
 //Index
 const Discord = require("Discord.js");
