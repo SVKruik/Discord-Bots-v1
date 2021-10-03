@@ -2,18 +2,29 @@
 
 ----------------------------------------
 
-Our Discord server has a couple of bots. They are named in Latin after birds, so here is what they mean. Because we are a Dutch community, we also added their Dutch names. Afer their names, we also listed their purposes.
+Our Discord server has a couple of bots. The EGS names are named after birds, in Latin. The MCC bots are named after trees. Because we are a Dutch community, we also added their Dutch names. Afer their names, we also listed their purposes.
+
+## Epic Gamer Server:
 
 - Anser: Goose, Gans - Economy
-- Avocet: Avocet, Kluut - Pending
 - Ciconia: Stork, Ooievaar - All
-- Coturnix: Quail, Kwartel - All, MultiCube
 - Falco: Falcon, Valk - Other
 - Heron: Heron, Reiger - Admin
 - Hirundo: Swallow, Zwaluw - Testing
 - Noctua: Night Owl, Nachtuil - Level
 - Picum: Woodpecker, Specht - Support
 - Stern: Tern, Stern - Music
+
+## MultiCube Community:
+
+- Alnus: Alder, Els - All
+- Betula: Birch, Berk - Testing
+- Catalpa: Trumpet Tree, Trompetboom - Admin
+- Cercis: Judas Tree, Judasboom - Support
+- Larix: Larch, Lork - Economy
+- Morus: Mulberry, Moerbei - Music
+- Olea: Olive Tree, Olijfboom - Other
+- Picea: Fir, Spar - Level
 
 ----------------------------------------
 

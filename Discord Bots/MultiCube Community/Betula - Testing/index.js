@@ -1,4 +1,4 @@
-// Avocet
+// Betula can be used for testing new commands.
 
 //Index
 const Discord = require("Discord.js");

@@ -1,4 +1,4 @@
-// Coturnix is for the MultiCube Community server.
+// Alnus has it all
 
 //Index
 const Discord = require("Discord.js");
