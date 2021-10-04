@@ -13,7 +13,7 @@ module.exports = {
         .addFields(
             {name: 'Link:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers'},
             {name: '-----', value: 'For more specific links:'},
-            {name: 'Bot Files:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/MultiCube%20Community%20Bot'},
+            {name: 'Bot Files:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Discord%20Bots'},
             {name: 'Child Servers:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Child%20Servers'},
             {name: 'Issues:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/issues'},
             {name: 'Discussions:', value: 'https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/discussions/'}
