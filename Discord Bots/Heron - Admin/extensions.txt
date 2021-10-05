@@ -1,0 +1,9 @@
+Auto Rename Tag = https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+Bracket Pair Color = https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
+Live Server = https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+Material Icon Theme = https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+Prettier = https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+PowerShell = https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell
+Paste and Indent = https://marketplace.visualstudio.com/items?itemName=Rubymaniac.vscode-paste-and-indent
+coffee-auto-indent = https://marketplace.visualstudio.com/items?itemName=corpsyal.coffee-auto-indent
+office-theme = https://marketplace.visualstudio.com/items?itemName=huacat.office-theme
