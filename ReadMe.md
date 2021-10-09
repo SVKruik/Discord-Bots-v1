@@ -93,6 +93,7 @@ Here is a list for commands on our Discord server. Be aware though that some com
 #### Commands With Embeds
 | Command           | Info                                                                  | Usage                             | Aliases              |
 |-------------------|-----------------------------------------------------------------------|-----------------------------------|----------------------|
+| `donate`          | Sends a embed with links to our page where you can support us.        | `donate`                          |                      |
 | `embedtemplate`   | Sends you a blank embed template. Just for Bot Developers.            | `embedtemplate`                   | `mbdtemp`            |
 | `event`           | Creates a poll.                                                       | `event`                           |                      |
 | `github`          | Displays the most used/important links to this GitHub Repository.     | `github`                          | `gh`                 |
