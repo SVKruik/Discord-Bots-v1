@@ -1,20 +1,25 @@
 ## Welcome to MultiCube Community
-This GitHub repository is dedicated to our Minecraft Servers, and our own Discord Bot (Heron). All information about anything we make, can be found in this Repository. It will is maintained by a couple of people, so it will be updated with news and updates.
+This GitHub repository is dedicated to our Minecraft Servers, and our own Discord Bots. All information about anything we make, can be found in this Repository.
 
 ### General Information
-We run a couple of Minecraft Servers. We have Child (Sub) Servers, but our main focus is MultiCube. This server is still the largest, and most accessible. This is because you don't have to download anything. You can just join and play. We have a subserver where there are Mods present, so be aware if you'd like to join, you have to download the mods first! If you need help with that, contact our support team. You can find the needed Mods in the file 'Plugins and Mods.md'.
+We are a group of people that make Minecraft servers and Discord bots. 
 
 ### Joining our Minecraft Servers
 Most servers are just like any other public server fully joinable. But we have a couple of servers that have Mods. Like discribed above (General Information) you have to download them. If you want to know what servers have Mods, contact our support team.
 
 ### Ranks and Roles
-If you want to apply for a Rank and/or Role, please fill in the [form](https://forms.gle/pabpqPiWeBp9aZ2a8). Note that for Roles like 'Builder' or 'Redstoner' aren't available for apply. These roles can be obtained by showing off you skill. If you want to be 'Redstoner', you have to be good with Redstone. If you are filling in the form, please tell us the truth. You can upload a picture of anything you have build and show us something. Be aware though that we can't have 100 Admins for example, so check if the Ranks/Roles aren't full. Also, if you want the Support Role/Rank, you have to be a longtime player and know how things work. You cant get the role if you are playing for a day or 2. Support means helping people, so you have to know how things work around our community.
+If you want to apply for a Rank and/or Role, please fill in the [form](https://forms.gle/pabpqPiWeBp9aZ2a8). Note that for Roles like 'Builder' or 'Redstoner' aren't available for apply. These roles can be obtained by showing off you skill. If you want to be 'Redstoner', you have to be good with Redstone. If you want to be 'Builder', you have to be good with building stuff etc. If you are filling in the form, please tell us the truth. You can upload a picture of anything you have build and show us something. This isn't required, but it does help. Be aware though that we can't have 100 Admins for example, so check if the Ranks/Roles aren't full. Also, if you want the Support Role/Rank, you have to be a longtime player and know how things work. You can't get such roles if you are playing for a day or 2. Support means helping people, so you have to know how things work around our community.
 
 ### Support and Help
-If you have questions about anything, you can contact our support team like said before. Check which people have the Support Role/Rank. Be polite and ask anything you'd like! If there's anything that can be done better/on another way or have suggestions, you can talk to people with Support Role or anything higher. Please, be clear about what you'd like to see change, and why.
+If you have questions about anything, you can contact our support team like said before. Check which people have the Support Role/Rank. Be polite and ask anything you'd like! If there's anything that can be done better/on another way or have suggestions, you can talk to people with Support Role. Please, be clear about what you'd like to see change, so we can get to work if we agree.
 
-### Rules
-We have a few rules that are important. We want to keep this place nice, friendly and polite. Rule breakers will receive a warning, and if they continue, the will receive a ban/kick. Report rulebreakers to our staff. Read the server rules in-game (/mainmenu --> Server Rules), or on first join of the Discord server.
+### Donate
+All of our services are free. We do not get payed. Because of this, support is greatly appreciated. You can support us via Patreon and Ko-Fi. You can one-time donate, or become a Supporter. Supporters will receive benefits and other exclusive cool stuff. Here are the links:
+  - [Ko-Fi](https://ko-fi.com/multicubecommunity)
+  - [Patreon](https://www.patreon.com/multicubecommunity)
+
+
+If you choose to support us (which we would greatly appreciate), we will get to work and pass all the benefits to you ASAP. Thank you in advance!
 
 ### Economy
 Our Discord Server also has a Economy system. You can collect money through a couple ways:
@@ -115,21 +120,6 @@ Here is a list for commands on our Discord server. Be aware though that some com
 
 
 The prefix for a command is `$`, after that you can type your command. For example: `$help`. 
-
-----------------------------------------
-
-### Files
-As you might have noticed, a large portion of this repo includes files of our Discord bot. This is because our bot is open source, and you can use our code that we are using. Note that you have to do a lot of steps before you can use any of our files in your own project. If you need help with your own Discord bot, you can conctact our staff, and they will help you with setting up the basics. This won't be a full course/tutorial, but it will get you started.
-
-### Folders
-Our bot(s) are always organised in the following folders. This paragraph explains each folder. 
-- [Commands](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Heron%20Bot/Commands) = contains all the commands. They do not work without the command_handler.js file and a couple of other files.
-- [Counters](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Heron%20Bot/Counters) = contains all the counters in the Discord Server. For example the Member Counter.
-- [Events](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Heron%20Bot/Events) = contains important core files. The bot will not work without it. 
-- [Handlers](https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers/tree/main/Heron%20Bot/Handlers) = contains import core files. The bot will not work without it. 
-- [Models]() = Contains database information. 
-
-Feel free to use files from our repo. 
 
 ----------------------------------------
 
