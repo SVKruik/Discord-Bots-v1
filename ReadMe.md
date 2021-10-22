@@ -1,5 +1,7 @@
-## Welcome to MultiCube Community
+# Welcome to MultiCube Community
 This GitHub repository is dedicated to our Minecraft Servers, and our own Discord Bots. All information about anything we make, can be found in this Repository.
+
+---
 
 ### General Information
 We are a group of people that make Minecraft servers and Discord bots. 
