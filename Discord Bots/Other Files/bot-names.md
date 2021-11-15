@@ -14,7 +14,7 @@ Our Discord server has a couple of bots. The EGS names are named after birds, in
 - Larum: Seagull, Meeuw - Events
 - Noctua: Night Owl, Nachtuil - Level
 - Picum: Woodpecker, Specht - Support
-- Stern: Tern, Stern - Music
+- Stern: Stern, Stern - Music
 
 ## MultiCube Community:
 
