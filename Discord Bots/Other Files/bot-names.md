@@ -11,6 +11,7 @@ Our Discord server has a couple of bots. The EGS names are named after birds, in
 - Falco: Falcon, Valk - Other
 - Heron: Heron, Reiger - Admin
 - Hirundo: Swallow, Zwaluw - Testing
+- Larum: Seagull, Meeuw - Events
 - Noctua: Night Owl, Nachtuil - Level
 - Picum: Woodpecker, Specht - Support
 - Stern: Tern, Stern - Music
@@ -25,6 +26,7 @@ Our Discord server has a couple of bots. The EGS names are named after birds, in
 - Morus: Mulberry, Moerbei - Music
 - Olea: Olive Tree, Olijfboom - Other
 - Picea: Fir, Spar - Level
+- Taxus: Yew, Taxus - Events
 
 ----------------------------------------
 
