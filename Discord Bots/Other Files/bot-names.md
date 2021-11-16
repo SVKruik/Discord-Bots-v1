@@ -8,6 +8,7 @@ Our Discord server has a couple of bots. The EGS names are named after birds, in
 
 - Anser: Goose, Gans - Economy
 - Ciconia: Stork, Ooievaar - All
+- Cuculus: Cuckoo, Koekoek - Cosmetic
 - Falco: Falcon, Valk - Other
 - Heron: Heron, Reiger - Admin
 - Hirundo: Swallow, Zwaluw - Testing
@@ -22,6 +23,7 @@ Our Discord server has a couple of bots. The EGS names are named after birds, in
 - Betula: Birch, Berk - Testing
 - Catalpa: Trumpet Tree, Trompetboom - Admin
 - Cercis: Judas Tree, Judasboom - Support
+- Ficus: Fig, Vijg - Cosmetic
 - Larix: Larch, Lork - Economy
 - Morus: Mulberry, Moerbei - Music
 - Olea: Olive Tree, Olijfboom - Other
@@ -30,5 +32,5 @@ Our Discord server has a couple of bots. The EGS names are named after birds, in
 
 ----------------------------------------
 
-For questions about updates or anything else, contact our support team.<br/>
-To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).<br/>
+For questions about updates or anything else, contact our support team.
+To join our official Discord server, click [here](https://discord.gg/VSE75WkgFM).
