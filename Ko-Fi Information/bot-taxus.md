@@ -1,6 +1,6 @@
-# MultiCube - Bot Description: Cercis
+# MultiCube - Bot Description: Taxus
 
-This is the product description of our bot: Cercis.
+This is the product description of our bot: Taxus.
 
 ---
 
