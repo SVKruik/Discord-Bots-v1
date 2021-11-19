@@ -1,4 +1,4 @@
-# MultiCube - Bot Description: Betula
+# MultiCube - Bot Description: Ficus
 
 This is the product description of our bot: Ficus.
 
