@@ -9,144 +9,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" type="text/css">
-    <src rel="stylesheet" href="script.js">
-
-        <script>
-            function setTheme(themeName) {
-                localStorage.setItem('theme', themeName);
-                document.documentElement.className = themeName;
-            }
-
-            function toggleTheme() {
-                if (localStorage.getItem('theme') === 'theme-dark') {
-                    setTheme('theme-light');
-                } else {
-                    setTheme('theme-dark');
-                }
-            }
-
-            (function () {
-                if (localStorage.getItem('theme') === 'theme-dark') {
-                    setTheme('theme-dark');
-                    document.getElementById('slider').checked = false;
-                } else {
-                    setTheme('theme-light');
-                    document.getElementById('slider').checked = true;
-                }
-            })();
-        </script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <src rel="stylesheet" href="scripts.js">
 </head>
 
 <body>
-    <!--NAVIGATION BAR-->
-    <nav>
-        <div class="logo">
-            <a href="index.html">
-                <img class="logopicture" src="./Pictures/logo.png" alt="Logo Here" width="auto" height="100">
-            </a>
-        </div>
-        <ul class="navlinks">
-            <li>
-                <div class="dropdownhome">
-                    <button class="dropbtnhome"><a href="index.html">Home</a></button>
-                    <div class="dropdowncontenthome">
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown">
-                    <button class="dropbtn"><a href="servers.html">Servers</a></button>
-                    <div class="dropdown-content">
-                        <a href="#">Vanilla</a>
-                        <a href="#">Modded</a>
-                        <a href="#">List</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown">
-                    <button class="dropbtn"><a href="ranks.html">Ranks</a></button>
-                    <div class="dropdown-content">
-                        <a href="#" target="_blank">Discord</a>
-                        <a href="#" >Server</a>
-                        <a href="#">Information</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown">
-                    <button class="dropbtn"><a href="about.html">About</a></button>
-                    <div class="dropdown-content">
-                        <a href="#">How to Join</a>
-                        <a href="#">Statistics</a>
-                        <a href="#">Information</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown">
-                    <button class="dropbtn"><a href="socials.html">Socials</a></button>
-                    <div class="dropdown-content">
-                        <a href="https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers" target="_blank">GitHub</a>
-                        <a href="https://discord.gg/gBVFuBqENA" target="_blank">Discord</a>
-                        <a href="#">Other</a>
-                    </div>
-                </div>
-            </li>
-
-        </ul>
-        <div class="user">
-            <a href="account.html">
-                <img class="userpicture" src="./Pictures/user.png" alt="User Here" width="auto" height="50">
-            </a>
-        </div>
-        <div class="container">
-            <label id="switch" class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="slider">
-                <span class="slider round"></span>
-            </label>
+    <nav id="navbar" class="">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <a href="index.html"> Logo</a>
+          </div>
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+         <li><a href="shop.html">Shop</a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
     </nav>
-    <!--PAGE CONTENT-->
-    <!--FOOTER-->
-    <footer>
-        <ul class="footerblok">
-            <p class="footerblok-title"><strong>Explore</strong></p>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="server.html">Servers</a>
-            </li>
-            <li>
-                <a href="ranks.html">Ranks</a>
-            </li>
-            <li>
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="socials.html">Socials</a>
-            </li>
-        </ul>
-        <ul class="footerblok">
-            <p class="footerblok-title"><strong>Socials</strong></p>
-            <li>
-                <a href="https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers" target="_blank">GitHub</a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/channel/UCsW9tFjRUmk0Y_Ym8nPTENA" target="_blank">YouTube</a>
-            </li>
-            <li>
-                <a href="ranks.html">Ranks</a>
-            </li>
-            <li>
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="socials.html">Socials</a>
-            </li>
-        </ul>
-    </footer>
+      
+      
+      <!-- Menu Icon -->
+      <div class="menuIcon">
+        <span class="icon icon-bars"></span>
+        <span class="icon icon-bars overlay"></span>
+      </div>
+      
+      
+      <div class="overlay-menu">
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+      </div>
 </body>
 
 </html>
