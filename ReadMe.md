@@ -16,7 +16,8 @@ If you want to apply for a Rank and/or Role, please fill in the [form](https://f
 If you have questions about anything, you can contact our support team like said before. Check which people have the Support Role/Rank. Be polite and ask anything you'd like! If there's anything that can be done better/on another way or have suggestions, you can talk to people with Support Role. Please, be clear about what you'd like to see change, so we can get to work if we agree.
 
 ### Donate
-All of our services are free. We do not get payed. Because of this, support is greatly appreciated. You can support us via Patreon and Ko-Fi. You can one-time donate, or become a Supporter. Supporters will receive benefits and other exclusive cool stuff. Here is the link to our page:
+All of our services are free. We do not get payed. Because of this, support is greatly appreciated. You can support us via Ko-Fi. You can one-time donate, or become a Supporter. Supporters will receive benefits and other exclusive cool stuff. On Ko-Fi, you can also find our temporary webshop. We will move everything when our own website is done. Here is the link to our page:
+
   - [Ko-Fi](https://ko-fi.com/multicubecommunity)
 
 If you choose to support us (which we would greatly appreciate), we will get to work and pass all the benefits to you ASAP. Thank you in advance!
