@@ -24,15 +24,15 @@ module.exports = {
       .setFooter(process.env.MBDFTR)
       .setDescription(
         "Choose a topic where you want to have help with. If this Bot still does not answer your questions, you can contact our support team.\n\n" +
-          `${ApplyEmoji} For information about becoming a staff member.\n` +
-          `${RanksRolesEmoji} For information about our roles and ranks on our Discord and Minecraft servers.\n` +
-          `${GitHubEmoji} For support with how to read things that are GitHub exlusive (updates etc.), or how to become a GitHub Collaborator.\n` +
-          `${AboutEmoji} For general information about stuff.\n` +
-          `${BotEmoji} For information about this bot you are talking to right now!\n` +
-          `${ServersEmoji} For information about our servers we have, and how to join them.\n` +
-          `${RulesEmoji} For a list of rules.\n` +
-          `${StatsEmoji} For stats about servers we run (Minecraft or Discord).\n` +
-          `${EventsEmoji} For information about Events, and about how to join them.`
+          `${ApplyEmoji} - For information about becoming a staff member.\n` +
+          `${RanksRolesEmoji} - For information about our roles and ranks on our Discord and Minecraft servers.\n` +
+          `${GitHubEmoji} - For support with how to read things that are GitHub exlusive (updates etc.), or how to become a GitHub Collaborator.\n` +
+          `${AboutEmoji} - For general information about stuff.\n` +
+          `${BotEmoji} - For information about this bot you are talking to right now!\n` +
+          `${ServersEmoji} - For information about our servers we have, and how to join them.\n` +
+          `${RulesEmoji} - For a list of rules.\n` +
+          `${StatsEmoji} - For stats about servers we run (Minecraft or Discord).\n` +
+          `${EventsEmoji} - For information about Events, and about how to join them.`
       );
 
     let messageEmbed = await message.channel.send(embed);

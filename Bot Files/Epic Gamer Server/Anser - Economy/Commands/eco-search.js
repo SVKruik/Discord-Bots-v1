@@ -77,7 +77,7 @@ module.exports = {
 
     collector.on("collect", async (m) => {
       message.channel.send(
-        `You found \`${earnings}\` coins! Congratulations! Be sure to check tomorrow! `
+        `You found \`${earnings}\` coins! Congratulations! Be sure to come back tomorrow!`
       );
 
       await profileModel.findOneAndUpdate(
