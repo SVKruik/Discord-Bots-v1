@@ -34,7 +34,7 @@ mongoose
     console.log(process.env.DBLOG);
   })
   .catch((err) => {
-    console.log(err);
+    console.log(process.env.DBLOGERR);
   });
 
 //Token login

@@ -32,10 +32,10 @@ module.exports = {
       .setTitle("Choose a team to play on!")
       .setDescription(
         "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.\n\n" +
-          `${greenTeamEmoji} for the Green team\n` +
-          `${redTeamEmoji} for the Red team\n` +
-          `${yellowTeamEmoji} for the Yellow team\n` +
-          `${blueTeamEmoji} for the blue team`
+          `${greenTeamEmoji} - For Team Green!\n` +
+          `${redTeamEmoji} - For Team Red!\n` +
+          `${yellowTeamEmoji} - For Team Yellow!\n` +
+          `${blueTeamEmoji} - For Team Blue!`
       );
 
     let messageEmbed = await message.channel.send(embed);

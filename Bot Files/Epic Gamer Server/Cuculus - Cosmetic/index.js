@@ -36,7 +36,7 @@ mongoose
     console.log("Succesfully connected to the database.");
   })
   .catch((err) => {
-    console.log(err);
+    console.log(process.env.DBLOGERR);
   });
 
 //Token login - Stored in a hidden file. 
