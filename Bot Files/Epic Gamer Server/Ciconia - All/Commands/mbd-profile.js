@@ -2,18 +2,21 @@ module.exports = {
   name: "profile",
   aliases: ["pro"],
   cooldown: process.env.ASMID,
-  description: "Displays all Database data we have of your account.",
+  description: "Displays all information we have about you.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord, profileData) {
+    const tagfull = message.author.tag
+    const tag = tagfull.slice(-4);
+
     const newEmbed = new Discord.MessageEmbed()
       .setColor(process.env.MBDCLR)
       .setTitle(process.env.MBDTITLEPROFILE)
       .setImage(process.env.MBDIMG)
-      .setURL(process.env.MBDURL)
       .setDescription(process.env.MBDDESCPROFILE)
       .addFields(
         { name: "---", value: "> **General:**" },
         { name: "Name:", value: `${message.author.username}` },
+        { name: "Tag:", value: `#${tag}` },
         { name: "userID:", value: `${profileData.userID}` },
         { name: "serverID:", value: `${profileData.serverID}` },
         { name: "---", value: "> **Economy:**" },
@@ -22,9 +25,6 @@ module.exports = {
         { name: "---", value: "> **Level:**" },
         { name: "Level:", value: `${profileData.level}` },
         { name: "Experience:", value: `${profileData.experience}` },
-        { name: "---", value: "> **Technical:**" },
-        { name: "_id:", value: `${profileData._id}` },
-        { name: "__v:", value: `${profileData.__v}` }
       )
       .setFooter(process.env.MBDFTR);
 

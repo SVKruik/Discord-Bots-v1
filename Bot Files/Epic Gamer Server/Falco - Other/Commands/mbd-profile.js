@@ -22,9 +22,6 @@ module.exports = {
         { name: "---", value: "> **Level:**" },
         { name: "Level:", value: `${profileData.level}` },
         { name: "Experience:", value: `${profileData.experience}` },
-        { name: "---", value: "> **Technical:**" },
-        { name: "_id:", value: `${profileData._id}` },
-        { name: "__v:", value: `${profileData.__v}` }
       )
       .setFooter(process.env.MBDFTR);
 

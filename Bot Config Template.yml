@@ -1,0 +1,204 @@
+DISCORD_TOKEN = # Token of your Discord Bot. Do not show to anyone!
+PREFIX = $ # Prefix to initate a command.
+#                                                                                                       v
+#MongoDB Log-in. Can be found under connect -> connect your application.
+MONGODB_SRV = # Log in to the database.
+
+#Cooldown variables. For anti-spam and daily rewards. AS stands for Anti-Spam. In seconds.
+DAILY = # Cooldown on collecting daily rewards in seconds. 1 Day = 84600 seconds.
+
+ASADMIN = # Cooldown related to admin commands. Ofter 0.
+ASMSC = # Cooldown related to music commands.
+ASEXT = # Highest cooldown, in seconds.
+ASHARD = # etc
+ASMID = # etc
+ASSOFT = # etc
+
+#Embed variables.
+MBDCLR = # The color of your bot.
+MBDFTR = # Footer of every embed. You can add credits there.
+MBDIMG = # Default image in every embed.
+MBDURL = # Default title link in every embed.
+
+#Console log when the bot goes online.
+ONLINE = # Message when your bot is online. Only shown in the console.
+DBLOG = # Message when connecting to the database was successful. Only shown in the console.
+DBLOGERR = # Message when connecting to the database was unsuccessful. Only shown in the console.
+
+# Welcome channel for the greeting message.
+WELCOMECHANNEL = # Channel where you want your bot to greet new members. Often the #welcome channel.
+
+#Economy Profile Variables
+WALLETDEFAULT = # Defaults for a new member. You can add starting coins/XP here.
+BANKDEFAULT =
+LVLDEFAULT =
+EXPDEFAULT =
+
+#Counter Variables
+GUILDID = # ID of your Discord Server.
+MEMBERCOUNTERCHANNEL = # ID of your channel that you are using for the member counter. Often at the top, under stats.
+COUNTERINTERVAL = # Update rate of the counters. Milliseconds. 
+
+#Channel Specific Variables
+EVENTCHANNEL = # Channel ID were you want your poles to be.
+ROLECOLORCHANNEL = # Channel ID were your role color selection embeds are.
+
+#Ticket Variables
+TICKETGROUP = # Category were your tickets are generated. 
+TKTDELTIME = # Time after clicking on 'Delete Ticket'. 
+
+#Messages For Commands
+#General
+MSGFINDERR = # Message when: the specified variable could not be found.
+MSGVCREQ = # Message when: you aren't in a voice channel
+MSGMEMBERMENTION = # Message when: you didn't mention anybody.
+MSGNOACCOUNT = # Message when: the user couldn't be found in the DB.
+MSGGREATERNEGAONE = # Message when: the amount of your argument must be greater than '-1'
+MSGGREATERONE = # Message when: the amount of your argument must be greater than '0'.
+MSGSHORT = # Message when: the user doens't have the amount of coins to perform the command.
+MAINROLE = # Name of your main role.
+MUTEROLE = # Name of your muted role.
+BLINDROLE = # etc
+MSGERR = # Message when: the command couldn't be send due to an internal error.
+MSGISNAN = # Message when: the number isn't real. Non-real error.
+###Ticket
+MSGEMOJIERR = # Message when: there is an error with the emoji.
+MSGTKTINTRO = # Intro to the ticket. For example: Thanks for contacting support! Here is your channel: @ticket-0001
+MSGTKTDELETING = # Message when: the ticket is being closed. 
+MSGTKTPENDING = # Ticket is opened, and you are waiting for support. For example: We will be right with you!
+###Play
+MSGPLAYCONNECTMISSING = # Message when: you are missing the 'connect' permission.
+MSGPLAYSPEAKMISSING = # Message when: you are missing the 'speak' permission.
+MSGPLAYURLMISSING = # Message when: you didn't send the YouTube link.
+MSGPLAYCONNECTERR = # Message when: there is a connection error.
+    #MSGPLAYQUEUEADD = #Config manually due to variables.
+    #MSGPLAYSTART = #Config manually due to variables.
+MSGPLAYQUEUEEMPTY = # Message when: the queue is empty.
+###Leave
+MSGLEAVE = # Message when: the bot is leaving the channel.
+###Image
+MSGIMGMISSING = # Message when: you didn't send a searchterm. Image missing.
+###Command Template
+MSGCMDTEMP = # Simple command template. Isn't used, just for the developers. Something like: Hello world!
+###Apply
+MSGAPPLY = # Link for your staff apply form.
+###ServerIP
+MBDTITLESERERIP = Server Statistics
+MBDDESCSERVERIP = # Description of your embed, under the title.
+MBDFIELD1NAMESERVERIP = # Server Address:
+MBDFIELD1VALUESERVERIP = # Value
+MBDFIELD2NAMESERVERIP = # Server version
+MBDFIELD2VALUESERVERIP = # Value
+MBDFIELD3NAMESERVERIP = # Extra
+MBDFIELD3VALUESERVERIP = # Information
+###Rules
+MBDTITLERULES = Server Rules
+MBDDESCRULES = # Description of your embed, under the title.
+MBDFIELD1NAMERULES = # Rule here
+MBDFIELD1VALUERULES = # Rule description
+MBDFIELD2NAMERULES = # Rule here
+MBDFIELD2VALUERULES = # Rule description
+MBDFIELD3NAMERULES = # Rule here
+MBDFIELD3VALUERULES = # Rule description
+MBDFIELD4NAMERULES = # Rule here
+MBDFIELD4VALUERULES = # Rule description
+MBDFIELD5NAMERULES = # Rule here
+MBDFIELD5VALUERULES = # Rule description
+MBDFIELD6NAMERULES = # Rule here
+MBDFIELD6VALUERULES = # Rule description
+###Profile
+MBDTITLEPROFILE = System Profile
+MBDDESCPROFILE = # Description of your embed, under the title.
+    #Config manually due to variables.
+###MCServer
+MBDTITLEMCSERVER = Minecraft Server Stats
+MBTDESCMCSERVER = # Description of your embed, under the title.
+    #Config manually due to variables.
+###Help - Stage 1
+MBDTITLEHELPST1 = Help
+    #Config manually due to variables.
+###Event
+MBDTITLEEVENT = Event
+###GitHub
+MBDTITLEGITHUB = GitHub Repository
+MBDDESCGITHUB = # Description of your embed, under the title.
+MBDFIELD1NAMEGITHUB = # Primairy link to your Repository.
+MBDFIELD1VALUEGITHUB = # Value
+MBDFIELD2NAMEGITHUB = -----
+MBDFIELD2VALUEGITHUB = # Here you can add any more specific link, to for example issues etc.
+MBDFIELD3NAMEGITHUB = # Spec link A
+MBDFIELD3VALUEGITHUB = # Value
+MBDFIELD4NAMEGITHUB = # Spec link B
+MBDFIELD4VALUEGITHUB = # Value
+MBDFIELD5NAMEGITHUB = # Spec Link C
+MBDFIELD5VALUEGITHUB = # Value
+###Embed Template
+MBDTITLEMBDTEMP = Embed Template
+MBDDESCMBDTEMP = # Description of your embed, under the title.
+MBDFIELD1NAMEMBDTEMP = # Value A
+MBDFIELD1VALUEMBDTEMP = # Value B
+MBDFIELD2NAMEMBDTEMP = # Value X
+MBDFIELD2VALUEMBDTEMP = # Value Y
+###Donate
+MBDTITLEDONATE = Donate
+MBDDESCDONATE = # Description of your embed, under the title.
+MBDFIELD1NAMEDONATE = # Link to your donate page.
+MBDFIELD1VALUEDONATE = # Extra information
+MBDFIELD2NAMEDONATE = # etc
+MBDFIELD2VALUEDONATE = # etc
+###Search
+MSGSEARCHTIMESTOP = # Time limit on searching for coins.
+    #Config manually due to variables.
+###Ping
+PINGCHANCE1 = 49 # Chance of saying X
+PINGCHANCE2 = 98 # Chance of saying Y, rest 2% for a easter egg for example. 
+                 # We use Ping, Pong and Shut! This is used by bot devs to check if the bot is doing OK.
+                 # Disabled for members, because of spam. Ping is a cmd that all bots have.
+MSGPINGCHANCE1 = # Ping!
+MSGPINGCHANCE2 = # Pong!
+MSGPINGCHANCE3 = # Shut!
+###Clear
+MSGCLEARAMOUNTMISSING = # Message when: the amount to clear is missing.
+MAXCLEAR = # Limit of how much to bulk delete in one go. Higher amounts might take a couple of seconds to process.
+MINCLEAR = # Minimum amount to clear. Normally just 1. 
+    #Config manually due to variables.
+
+###Config Manually Due to Variables
+    # Event
+    # Levelstats
+    # Level
+    # Experience
+    # Daily Reward
+    # Balance Wallet
+    # Balance Bank
+    # Balance
+    # Kick
+    # Ban
+
+###Partly Config Manually Due to Variables
+    # Play
+    # Rules
+    # MCServer
+    # Help - Stage 1
+    # Search
+    # Clear
+
+###Can use general variables
+    # Set Level
+    # Set Experience
+    # Minus Level
+    # Minus Experience
+    # Give Level
+    # Give Experience
+    # Withdraw
+    # Set Wallet
+    # Set Bank
+    # Minus Wallet
+    # Minus Bank
+    # Give Wallet
+    # Give Bank
+    # Deposit
+    # Unmute
+    # Unblind
+    # Mute
+    # Blind
