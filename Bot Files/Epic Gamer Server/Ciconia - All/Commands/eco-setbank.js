@@ -4,7 +4,7 @@ module.exports = {
   aliases: [],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
-  description: "Reset the balance of a member (bank).",
+  description: "Reset the balance of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);
     const amount = args[1];

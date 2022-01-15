@@ -1,6 +1,6 @@
 module.exports = {
   name: "event",
-  aliases: [],
+  aliases: ["vnt"],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Set up a event with teams.",

@@ -1,7 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "minusbank",
-  aliases: [],
+  aliases: ["minbank"],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Current - amount (bank).",

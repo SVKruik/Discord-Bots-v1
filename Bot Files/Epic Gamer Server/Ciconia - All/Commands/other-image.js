@@ -12,7 +12,7 @@ module.exports = {
   cooldown: process.env.ASHARD,
   permissions: ["SEND_MESSAGES"],
   cooldown: 5,
-  description: "This sends the best google result for an image, random.",
+  description: "This sends the best google result for an image.",
   async execute(message, args, cmd, client, Discord) {
     const image_query = args.join(" ");
     if (!image_query) return message.channel.send(process.env.MSGIMGMISSING);

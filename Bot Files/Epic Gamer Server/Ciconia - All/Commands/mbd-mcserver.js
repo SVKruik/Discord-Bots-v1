@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["mc", "mccheck", "mcserver"],
   cooldown: process.env.ASMID,
   permissions: ["SEND_MESSAGES"],
-  description: "Displays some server statistics.",
+  description: "Displays some Minecraft server statistics.",
   execute(message, args, cmd, client, Discord) {
     if (!args[0])
       return message.channel.send("Please enter a valid Minecraft server IP!");

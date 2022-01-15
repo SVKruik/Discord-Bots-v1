@@ -1,6 +1,6 @@
 module.exports = {
   name: "help",
-  aliases: [],
+  aliases: ["support"],
   cooldown: process.env.ASMID,
   description: "Advanced Help - Stage 1",
   permissions: ["SEND_MESSAGES"],

@@ -1,6 +1,6 @@
 module.exports = {
   name: "rules",
-  aliases: ["rule"],
+  aliases: ["rule", "rl"],
   cooldown: process.env.ASMID,
   description: "Displays an embed with our active server rules.",
   permissions: ["SEND_MESSAGES"],

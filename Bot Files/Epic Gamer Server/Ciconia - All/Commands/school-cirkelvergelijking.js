@@ -22,7 +22,7 @@ module.exports = {
     //Input
     var wabcafgerond = Math.round((wabc + Number.EPSILON) * 1) / 1;
 
-    const diameter = wabcafgerond * 2
+    const diameter = wabcafgerond * 2;
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(process.env.MBDCLR)

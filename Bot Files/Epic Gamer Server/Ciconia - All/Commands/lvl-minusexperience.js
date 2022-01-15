@@ -1,7 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "minusexperience",
-  aliases: [],
+  aliases: ["minusexp", "minusxp", "minxp", "minexp"],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Current - amount (level).",

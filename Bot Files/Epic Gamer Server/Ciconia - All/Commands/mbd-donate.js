@@ -1,6 +1,6 @@
 module.exports = {
   name: "donate",
-  aliases: ["donate"],
+  aliases: ["dnte"],
   cooldown: process.env.ASMID,
   description: "Support our project by donating to us.",
   permissions: ["SEND_MESSAGES"],

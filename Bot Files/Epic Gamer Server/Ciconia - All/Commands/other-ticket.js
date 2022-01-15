@@ -3,11 +3,12 @@ module.exports = {
   aliases: ["tkt"],
   cooldown: process.env.HARD,
   permissions: ["SEND_MESSAGES"],
-  description: "open a ticket!",
+  description: "open a support ticket!",
   async execute(message, args, cmd, client, discord) {
     const TKTDELTIME = process.env.TKTDELTIME;
-    const channel = await message.guild.channels.create(`Ticket: ${message.author.tag}`);
-    
+    const channel = await message.guild.channels.create(
+      `Ticket: ${message.author.tag}`
+    );
 
     channel.setParent(process.env.TICKETGROUP);
 
@@ -31,7 +32,10 @@ module.exports = {
     }
 
     const collector = reactionMessage.createReactionCollector(
-      (reaction, user) => message.guild.members.cache.find((member) => member.id === user.id).hasPermission("ADMINISTRATOR"),
+      (reaction, user) =>
+        message.guild.members.cache
+          .find((member) => member.id === user.id)
+          .hasPermission("ADMINISTRATOR"),
       { dispose: true }
     );
 

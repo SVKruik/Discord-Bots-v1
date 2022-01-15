@@ -1,10 +1,10 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "minuswallet",
-  aliases: [],
+  aliases: ["minwal"],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
-  description: "Current - amount (wallet).",
+  description: "Decrease the balance of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);
     const amount = args[1];

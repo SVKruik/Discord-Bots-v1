@@ -7,66 +7,66 @@ module.exports = {
   async execute(message, args, cmd, client, Discord) {
     const channel = process.env.ROLECOLORCHANNEL;
     const darkorangeTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910555748369563699'
+      (role) => role.id === "910555748369563699"
     );
     const lightbluishvioletTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910555820662591550'
+      (role) => role.id === "910555820662591550"
     );
     const transparentTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910555926661070898'
+      (role) => role.id === "910555926661070898"
     );
     const trredTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556010257711204'
+      (role) => role.id === "910556010257711204"
     );
     const trlgblueTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556060081860619'
+      (role) => role.id === "910556060081860619"
     );
     const trblueTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556212205076491'
+      (role) => role.id === "910556212205076491"
     );
     const tryellowTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556212205076491'
+      (role) => role.id === "910556212205076491"
     );
     const lightblueTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556305431855126'
+      (role) => role.id === "910556305431855126"
     );
     const trfluereddishorangeTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556375665504336'
+      (role) => role.id === "910556375665504336"
     );
     const trgreenTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556425191825419'
+      (role) => role.id === "910556425191825419"
     );
     const trflugreenTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556525838348398'
+      (role) => role.id === "910556525838348398"
     );
     const phosphwhiteTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556592473251871'
+      (role) => role.id === "910556592473251871"
     );
     const lightredTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556650937671690'
+      (role) => role.id === "910556650937671690"
     );
     const mediumredTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556748849500240'
+      (role) => role.id === "910556748849500240"
     );
     const mediumblueTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556783171489902'
+      (role) => role.id === "910556783171489902"
     );
     const lightgreyTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556944849330196'
+      (role) => role.id === "910556944849330196"
     );
     const brightvioletTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910556995680100434'
+      (role) => role.id === "910556995680100434"
     );
     const bryellowishorangeTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910557046687019008'
+      (role) => role.id === "910557046687019008"
     );
     const brightorangeTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910557131458113556'
+      (role) => role.id === "910557131458113556"
     );
     const brightbluishgreenTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === '910557194779500555'
+      (role) => role.id === "910557194779500555"
     );
- 
+
     const darkorangeTeamEmoji = "🍇";
     const lightbluishvioletTeamEmoji = "🍈";
     const transparentTeamEmoji = "🍉";

@@ -1,7 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "setlevel",
-  aliases: [],
+  aliases: ["setlvl"],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the level of a member.",

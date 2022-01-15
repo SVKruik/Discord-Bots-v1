@@ -2,7 +2,7 @@ module.exports = {
   name: "serverip",
   aliases: ["server"],
   cooldown: process.env.ASMID,
-  description: "Display the server ip for MultiCube",
+  description: "Display the server IP and information for MultiCube.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()

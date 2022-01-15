@@ -1,7 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "givelevel",
-  aliases: [],
+  aliases: ["givelvl"],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Give a player extra levels.",

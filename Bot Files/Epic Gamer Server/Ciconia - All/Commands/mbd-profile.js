@@ -1,11 +1,11 @@
 module.exports = {
   name: "profile",
-  aliases: ["pro"],
+  aliases: ["prof"],
   cooldown: process.env.ASMID,
   description: "Displays all information we have about you.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord, profileData) {
-    const tagfull = message.author.tag
+    const tagfull = message.author.tag;
     const tag = tagfull.slice(-4);
 
     const newEmbed = new Discord.MessageEmbed()
@@ -24,7 +24,7 @@ module.exports = {
         { name: "Bank:", value: `${profileData.bank}` },
         { name: "---", value: "> **Level:**" },
         { name: "Level:", value: `${profileData.level}` },
-        { name: "Experience:", value: `${profileData.experience}` },
+        { name: "Experience:", value: `${profileData.experience}` }
       )
       .setFooter(process.env.MBDFTR);
 

@@ -1,10 +1,10 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "givewallet",
-  aliases: [],
+  aliases: ["givewal"],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
-  description: "Give a player an amount of coins (wallet).",
+  description: "Increase the balance of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);
     const amount = args[1];

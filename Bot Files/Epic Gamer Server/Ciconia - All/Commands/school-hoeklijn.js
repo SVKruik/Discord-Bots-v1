@@ -2,7 +2,7 @@ module.exports = {
   name: "hoeklijn",
   aliases: ["hkli"],
   cooldown: process.env.ASMID,
-  description: "Calculate degree between 2 lines.",
+  description: "Calculate difference in degrees between 2 lines.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {
     const lijn1 = "k";

@@ -6,6 +6,7 @@ const cooldowns = new Map();
 module.exports = async (Discord, client, message) => {
   //Core
   const prefix = process.env.PREFIX;
+  const target = message.author.id
 
   const profileModel = require("../../models/profileSchema");
 
@@ -32,6 +33,23 @@ module.exports = async (Discord, client, message) => {
       });
       profile.save();
     }
+  } catch (err) {
+    console.log(err);
+  }
+
+  //Inc on message send
+  try {
+    const targetData = await profileModel.findOne({ userID: target.id });
+    await profileModel.findOneAndUpdate(
+      {
+        userID: target.id,
+      },
+      {
+        $inc: {
+          experience: 3,
+        },
+      }
+    );
   } catch (err) {
     console.log(err);
   }
