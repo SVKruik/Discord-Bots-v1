@@ -30,7 +30,7 @@
     "url": "git+https://github.com/PuffinKwadraat/MultiCube-Public.git"
   },
   "author": "Complex (PuffinKwadraat)",
-  "license": "Apache License 2.0",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/PuffinKwadraat/MultiCube-Public/issues"
   },
