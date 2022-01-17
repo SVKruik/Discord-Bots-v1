@@ -4,24 +4,17 @@
   "description": "Everything",
   "main": "index.js",
   "dependencies": {
-    "@discordjs/opus": "^0.7.0",
-    "@discordjs/rest": "^0.2.0-canary.0",
     "ansi-regex": "^6.0.1",
-    "console-stamp": "^3.0.3",
-    "discord-api-types": "^0.26.1",
-    "discord.js": "^13.6.0",
-    "dotenv": "^12.0.4",
-    "ffmpeg-static": "^4.4.1",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "ffmpeg-static": "^4.4.0",
     "images-scraper": "^6.4.0",
     "minecraft-server-util": "^3.7.2",
-    "mongoose": "^6.1.6",
-    "mysql2": "^2.3.3",
+    "mongoose": "^5.13.13",
     "node.js": "0.0.1-security",
-    "puppeteer": "^13.0.1",
-    "yt-search": "^2.10.3",
-    "ytdl-core": "^4.10.0"
+    "yt-search": "^2.10.2",
+    "ytdl-core": "^4.9.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node ."
   },
