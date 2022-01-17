@@ -3,7 +3,7 @@ module.exports = {
   aliases: [],
   cooldown: process.env.ASMID,
   description: "Check the uptime of the bot.",
-  permissions: ["SEND_MESSAGES"],
+  permissions: ["ADMINISTRATOR"],
   execute(message, args, cmd, client, Discord) {
     const days = Math.floor(client.uptime / 86400000);
     const hours = Math.floor(client.uptime / 3600000) % 24;
