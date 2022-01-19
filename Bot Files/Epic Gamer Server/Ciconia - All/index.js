@@ -4,6 +4,7 @@
 const Discord = require("Discord.js");
 const fs = require("fs");
 const mongoose = require("mongoose");
+const { version } = require("os");
 const memberCounter = require("./Counters/member-counter");
 require("dotenv").config();
 const client = new Discord.Client({
@@ -27,8 +28,9 @@ client.events = new Discord.Collection();
 mongoose
   .connect(process.env.MONGODB_SRV, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useCreateIndex: true,
     useFindAndModify: false,
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log(process.env.DBLOG);
