@@ -4,8 +4,8 @@ module.exports = {
     cooldown: process.env.ASHARD,
     description: "Displays all stats of the bot.",
     permissions: ["SEND_MESSAGES"],
-    execute(message, args, cmd, client, Discord, profileData) {
-      const version = (require('./../package.json').version)
+    async execute(message, args, cmd, client, Discord, profileData) {
+      const version = (require('./../package.json').version);
 
       const days = Math.floor(client.uptime / 86400000);
       const hours = Math.floor(client.uptime / 3600000) % 24;
@@ -27,7 +27,7 @@ module.exports = {
           { name: "serverID:", value: `${profileData.serverID}` },
           { name: "Commands", value: `${commands}`},
           { name: "Bot Version:", value: `${version}` },
-          { name: "Owner:", value: `@Complex#9087` }
+          { name: "Owner:", value: `<@422704748488163332>` }
         )
         .setFooter(process.env.MBDFTR);
   
