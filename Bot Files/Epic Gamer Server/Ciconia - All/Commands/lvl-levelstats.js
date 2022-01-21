@@ -1,4 +1,5 @@
 const profileModel = require("../models/profileSchema");
+
 module.exports = {
   name: "levelstatistics",
   aliases: ["levelstats", "levelstat", "lvlstat", "lvlstats"],

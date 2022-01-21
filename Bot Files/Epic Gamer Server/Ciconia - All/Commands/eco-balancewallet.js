@@ -1,3 +1,5 @@
+const profileModel = require("../models/profileSchema");
+
 module.exports = {
   name: "balancewallet",
   aliases: ["balwallet", "balwal"],

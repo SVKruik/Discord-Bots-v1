@@ -1,3 +1,5 @@
+const profileModel = require("../models/profileSchema");
+
 module.exports = {
   name: "balance",
   aliases: ["bal", "baltot", "baltotal", "showbal"],

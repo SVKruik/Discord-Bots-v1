@@ -5,7 +5,6 @@ module.exports = {
   permissions: ["SEND_MESSAGES"],
   description: "open a support ticket!",
   async execute(message, args, cmd, client, discord) {
-    const TKTDELTIME = process.env.TKTDELTIME;
     const channel = await message.guild.channels.create(
       `Ticket: ${message.author.tag}`
     );
@@ -45,7 +44,7 @@ module.exports = {
           channel.updateOverwrite(message.author, { SEND_MESSAGES: false });
           break;
         case "⛔":
-          channel.send(`Deleting this channel in ${TKTDELTIME} milliseconds!`);
+          channel.send(`Deleting this channel in ${process.env.TKTDELTIME} milliseconds!`);
           setTimeout(() => channel.delete(), process.env.TKTDELTIME);
           break;
       }

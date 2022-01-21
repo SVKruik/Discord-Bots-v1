@@ -1,10 +1,12 @@
+const { config } = require("dotenv");
+
 require("console-stamp")(console, "[HH:MM]");
 
 module.exports = {
   name: "ban",
   aliases: [],
   cooldown: process.env.ASADMIN,
-  description: "Ban a naughty naughty member.",
+  description: config.descriptionban,
   permissions: ["ADMINISTRATOR"],
   execute(message, args) {
     const target = message.mentions.users.first();

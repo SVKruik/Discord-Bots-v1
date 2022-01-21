@@ -2,7 +2,7 @@ module.exports = {
   name: "ping",
   aliases: ["pong"],
   cooldown: process.env.ASMID,
-  description: "Check the latency of the bot.",
+  description: "This silences spamming or naughty people. Can only read stuff.",
   permissions: ["ADMINISTRATOR"],
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()

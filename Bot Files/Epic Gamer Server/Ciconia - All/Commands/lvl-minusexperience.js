@@ -1,4 +1,5 @@
 const profileModel = require("../models/profileSchema");
+
 module.exports = {
   name: "minusexperience",
   aliases: ["minusexp", "minusxp", "minxp", "minexp"],

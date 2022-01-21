@@ -3,6 +3,7 @@
 //Index
 const Discord = require("Discord.js");
 const fs = require("fs");
+const config = require('./Other/config.js');
 const mongoose = require("mongoose");
 const { version } = require("os");
 const memberCounter = require("./Counters/member-counter");

@@ -1,4 +1,5 @@
 const profileModel = require("../models/profileSchema");
+
 module.exports = {
   name: "minusbankandwallet",
   aliases: ["minusbankwal", "minuswalbank", "minbankwal", "minwalbank"],
