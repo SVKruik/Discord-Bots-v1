@@ -1,3 +1,5 @@
+const config = require('./../Other/config.js');
+
 module.exports = {
   name: "rolecolor2",
   aliases: ["rlclr2"],

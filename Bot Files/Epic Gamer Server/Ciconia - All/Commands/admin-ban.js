@@ -1,10 +1,11 @@
 require("console-stamp")(console, "[HH:MM]");
+const config = require('./../Other/config.js');
 
 module.exports = {
   name: "ban",
   aliases: [],
   cooldown: process.env.ASADMIN,
-  description: config.descriptionban,
+  description: "config.descriptionban",
   permissions: ["ADMINISTRATOR"],
   execute(message, args) {
     const target = message.mentions.users.first();

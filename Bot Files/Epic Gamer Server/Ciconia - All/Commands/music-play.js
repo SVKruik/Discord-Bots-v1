@@ -1,6 +1,6 @@
 const ytdl = require("ytdl-core");
 const ytSearch = require("yt-search");
-
+const config = require('./../Other/config.js');
 const queue = new Map();
 
 module.exports = {

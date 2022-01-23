@@ -1,5 +1,5 @@
 var Scraper = require("images-scraper");
-
+const config = require('./../Other/config.js');
 const google = new Scraper({
   puppeteer: {
     headless: true,
