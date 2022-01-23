@@ -1,5 +1,5 @@
 module.exports = {
-    name: "botstats",
+    name: "botstatistics",
     aliases: ["botstat"],
     cooldown: process.env.ASHARD,
     description: "Displays all stats of the bot.",

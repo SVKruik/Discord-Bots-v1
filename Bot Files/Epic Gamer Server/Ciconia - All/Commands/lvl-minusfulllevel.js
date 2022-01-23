@@ -2,16 +2,7 @@ const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "minuslevelandexperience",
-  aliases: [
-    "minuslvlxp",
-    "minusxplvl",
-    "minusexplvl",
-    "minuslvlexp",
-    "minlvlxp",
-    "minxplvl",
-    "minexplvl",
-    "minlvlexp",
-  ],
+  aliases: ["minuslvlxp","minusxplvl","minusexplvl","minuslvlexp","minlvlxp","minxplvl","minexplvl","minlvlexp"],
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Decrease the experience and level.",

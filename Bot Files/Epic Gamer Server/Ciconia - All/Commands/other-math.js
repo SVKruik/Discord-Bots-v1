@@ -1,7 +1,7 @@
 const math = require("mathjs");
 
 module.exports = {
-  name: "math",
+  name: "mathematics",
   aliases: ["calc"],
   cooldown: process.env.ASMID,
   description: "Basic calculation.",

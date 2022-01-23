@@ -1,5 +1,3 @@
-const { config } = require("dotenv");
-
 require("console-stamp")(console, "[HH:MM]");
 
 module.exports = {
