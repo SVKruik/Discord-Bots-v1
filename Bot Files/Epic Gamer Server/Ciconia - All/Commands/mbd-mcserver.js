@@ -5,7 +5,7 @@ module.exports = {
   name: "minecraftserver",
   aliases: config.aliases.aliasesmcserver,
   cooldown: config.cooldown.cooldownmcserver,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionmcserver,
   description: "Displays some Minecraft server statistics.",
   execute(message, args, cmd, client, Discord) {
     if (!args[0])

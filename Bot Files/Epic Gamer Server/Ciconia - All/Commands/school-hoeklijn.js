@@ -4,7 +4,7 @@ module.exports = {
   name: "hoeklijn",
   aliases: config.aliases.aliaseshoeklijn,
   cooldown: config.cooldown.cooldownhoeklijn,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionhoeklijn,
   description: "Calculate difference in degrees between 2 lines.",
   execute(message, args, cmd, client, Discord) {
     const lijn1 = "k";

@@ -7,7 +7,7 @@ module.exports = {
   name: "play",
   aliases: config.aliases.aliasesplay,
   cooldown: config.cooldown.cooldownplay,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionplay,
   description:
     "Music Bot via YouTube links. You must be in a call for it to work.",
   async execute(message, args, cmd, client, Discord) {

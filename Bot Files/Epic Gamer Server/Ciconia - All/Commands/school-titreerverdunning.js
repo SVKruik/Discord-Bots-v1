@@ -4,7 +4,7 @@ module.exports = {
   name: "titratieverdunning",
   aliases: config.aliases.aliasestitreerverdunning,
   cooldown: config.cooldown.cooldowntitreerverdunning,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissiontitreerverdunning,
   description: "Calculate some science math.",
   execute(message, args, cmd, client, Discord) {
     const pipet = 10;

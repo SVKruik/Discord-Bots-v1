@@ -4,7 +4,7 @@ module.exports = {
   name: "commandtemplate",
   aliases: config.aliases.aliasescommandtemplate,
   cooldown: config.cooldown.cooldowncommandtemplate,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissioncommandtemplate,
   description: "Command template for devs.",
   execute(message, args, cmd, client, Discord) {
     message.channel.send(process.env.MSGCMDTEMP);

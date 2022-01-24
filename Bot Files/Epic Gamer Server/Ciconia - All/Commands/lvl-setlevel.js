@@ -5,7 +5,7 @@ module.exports = {
   name: "setlevel",
   aliases: config.aliases.aliasessetlevel,
   cooldown: config.cooldown.cooldownsetlevel,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionsetlevel,
   description: "Reset the level of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

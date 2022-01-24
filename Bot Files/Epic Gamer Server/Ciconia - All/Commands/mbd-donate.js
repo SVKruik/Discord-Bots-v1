@@ -4,7 +4,7 @@ module.exports = {
   name: "donate",
   aliases: config.aliases.aliasesdonate,
   cooldown: config.cooldown.cooldowndonate,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissiondonate,
   description: "Support our project by donating to us.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()

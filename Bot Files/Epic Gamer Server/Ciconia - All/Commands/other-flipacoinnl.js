@@ -4,7 +4,7 @@ module.exports = {
   name: "kopofmunt",
   aliases: config.aliases.aliasesflipacoinnl,
   cooldown: config.cooldown.cooldownflipacoinnl,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionflipacoinnl,
   description: "Kop of munt!",
   async execute(message, args, cmd, client, Discord, profileData) {
     var chance = Math.random() * 100;

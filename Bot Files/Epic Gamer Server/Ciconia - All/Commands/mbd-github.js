@@ -4,7 +4,7 @@ module.exports = {
   name: "github",
   aliases: config.aliases.aliasesgithub,
   cooldown: config.cooldown.cooldowngithub,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissiongithub,
   description: "Displays all import links to our GitHub repository.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()

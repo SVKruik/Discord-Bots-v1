@@ -4,7 +4,7 @@ module.exports = {
     name: "botstatistics",
     aliases: config.aliases.aliasesbotstats,
     cooldown: config.cooldown.cooldownbotstats,
-    permissions: ["SEND_MESSAGES"],
+    permissions: config.permissions.permissionbotstats,
     description: "Displays all stats of the bot.",
     async execute(message, args, cmd, client, Discord, profileData) {
       const version = (require('./../package.json').version);

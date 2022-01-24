@@ -4,7 +4,7 @@ module.exports = {
   name: "ticket",
   aliases: config.aliases.aliasesticket,
   cooldown: config.cooldown.cooldownticket,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionticket,
   description: "open a support ticket!",
   async execute(message, args, cmd, client, discord) {
     const channel = await message.guild.channels.create(

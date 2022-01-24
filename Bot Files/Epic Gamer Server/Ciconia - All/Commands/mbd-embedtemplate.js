@@ -4,7 +4,7 @@ module.exports = {
   name: "embedtemplate",
   aliases: config.aliases.aliasesembedtemplate,
   cooldown: config.cooldown.cooldownembedtemplate,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionembedtemplate,
   description: "Embed template for devs.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()

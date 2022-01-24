@@ -5,7 +5,7 @@ module.exports = {
   name: "mathematics",
   aliases: config.aliases.aliasesmath,
   cooldown: config.cooldown.cooldownmath,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionmath,
   description: "Basic calculation.",
   execute(message, args, cmd, client, Discord) {
     try {

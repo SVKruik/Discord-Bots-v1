@@ -4,7 +4,7 @@ module.exports = {
   name: "event",
   aliases: config.aliases.aliasesevent,
   cooldown: config.cooldown.cooldownevent,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionevent,
   description: "Set up a event with teams.",
   async execute(message, args, cmd, client, Discord) {
     const channel = process.env.EVENTCHANNEL;

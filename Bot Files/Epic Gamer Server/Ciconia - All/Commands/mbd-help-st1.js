@@ -4,7 +4,7 @@ module.exports = {
   name: "help",
   aliases: config.aliases.aliaseshelpst1,
   cooldown: config.cooldown.cooldownhelpst1,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionhelpst1,
   description: "Advanced Help - Stage 1",
   async execute(message, args, cmd, client, Discord) {
     const channel = "848939517603479553";
