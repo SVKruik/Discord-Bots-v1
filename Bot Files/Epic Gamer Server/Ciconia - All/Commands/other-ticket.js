@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "ticket",
-  aliases: ["tkt"],
+  aliases: config.aliases.aliasesticket,
   cooldown: process.env.HARD,
   permissions: ["SEND_MESSAGES"],
   description: "open a support ticket!",

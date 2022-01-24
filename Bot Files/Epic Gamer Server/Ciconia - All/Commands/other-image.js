@@ -8,7 +8,7 @@ const google = new Scraper({
 
 module.exports = {
   name: "image",
-  aliases: ["img"],
+  aliases: config.aliases.aliasesimage,
   cooldown: process.env.ASHARD,
   permissions: ["SEND_MESSAGES"],
   cooldown: 5,

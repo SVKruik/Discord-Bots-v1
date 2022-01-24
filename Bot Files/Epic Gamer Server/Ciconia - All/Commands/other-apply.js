@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "apply",
-  aliases: ["form", "aply"],
+  aliases: config.aliases.aliasesapply,
   cooldown: process.env.ASSOFT,
   permissions: ["SEND_MESSAGES"],
   description:

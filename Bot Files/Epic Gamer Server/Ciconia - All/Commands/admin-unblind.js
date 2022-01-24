@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "unblind",
-  aliases: [],
+  aliases: config.aliases.aliasesunblind,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
   description: "This command unblinds members.",

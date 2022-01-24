@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "event",
-  aliases: ["vnt"],
+  aliases: config.aliases.aliasesevent,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Set up a event with teams.",

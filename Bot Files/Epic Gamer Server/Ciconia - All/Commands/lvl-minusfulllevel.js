@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "minuslevelandexperience",
-  aliases: ["minuslvlxp","minusxplvl","minusexplvl","minuslvlexp","minlvlxp","minxplvl","minexplvl","minlvlexp"],
+  aliases: config.aliases.aliasesminusfulllevel,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Decrease the experience and level.",

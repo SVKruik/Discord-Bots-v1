@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "kopofmunt",
-  aliases: ["facnl", "kopmunt"],
+  aliases: config.aliases.aliasesflipacoinnl,
   cooldown: process.env.ASSOFT,
   permissions: ["SEND_MESSAGES"],
   description: "Kop of munt!",

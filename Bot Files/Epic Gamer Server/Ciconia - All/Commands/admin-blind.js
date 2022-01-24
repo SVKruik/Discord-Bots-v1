@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "blind",
-  aliases: [],
+  aliases: config.aliases.aliasesblind,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
   description: "Completly blind a member. Target cannot do anything.",

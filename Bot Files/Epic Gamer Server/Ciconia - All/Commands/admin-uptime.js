@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "uptime",
-  aliases: [],
+  aliases: config.aliases.aliasesuptime,
   cooldown: process.env.ASMID,
   description: "Check the uptime of the bot.",
   permissions: ["ADMINISTRATOR"],

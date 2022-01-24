@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "donate",
-  aliases: ["dnte"],
+  aliases: config.aliases.aliasesdonate,
   cooldown: process.env.ASMID,
   description: "Support our project by donating to us.",
   permissions: ["SEND_MESSAGES"],

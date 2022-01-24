@@ -5,7 +5,7 @@ const queue = new Map();
 
 module.exports = {
   name: "play",
-  aliases: ["music", "song"],
+  aliases: config.aliases.aliasesplay,
   cooldown: process.env.ASMSC,
   permissions: ["SEND_MESSAGES"],
   description:

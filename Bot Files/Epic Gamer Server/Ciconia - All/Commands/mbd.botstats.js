@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
     name: "botstatistics",
-    aliases: ["botstat"],
+    aliases: config.aliases.aliasesbotstats,
     cooldown: process.env.ASHARD,
     description: "Displays all stats of the bot.",
     permissions: ["SEND_MESSAGES"],

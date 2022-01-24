@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "rolecolor3",
-  aliases: ["rlclr3"],
+  aliases: config.aliases.aliasesrolecolor3,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Role color choose page 3.",

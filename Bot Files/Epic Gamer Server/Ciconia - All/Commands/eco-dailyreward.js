@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "dailyreward",
-  aliases: ["dlyrwd", "dr"],
+  aliases: config.aliases.aliasesdailyreward,
   cooldown: process.env.DAILY,
   permissions: ["SEND_MESSAGES"],
   description: "Random amount of coins, as a daily reward.",

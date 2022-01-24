@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "setbank",
-  aliases: [],
+  aliases: config.aliases.aliasessetbank,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the balance of a member.",

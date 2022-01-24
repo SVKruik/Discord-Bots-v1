@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "experience",
-  aliases: ["exp", "xp"],
+  aliases: config.aliases.aliasesexperience,
   cooldown: process.env.ASSOFT,
   permissions: ["SEND_MESSAGES"],
   description: "Displays your current server experience.",

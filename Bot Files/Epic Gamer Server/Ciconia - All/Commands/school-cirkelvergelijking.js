@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "cirkel",
-  aliases: ["circle"],
+  aliases: config.aliases.aliasescirkelvergelijking,
   cooldown: process.env.ASMID,
   description: "Calculate a circle equation.",
   permissions: ["SEND_MESSAGES"],

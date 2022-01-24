@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "mathematics",
-  aliases: ["calc"],
+  aliases: config.aliases.aliasesmath,
   cooldown: process.env.ASMID,
   description: "Basic calculation.",
   permissions: ["SEND_MESSAGES"],

@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "unmute",
-  aliases: [],
+  aliases: config.aliases.aliasesunmute,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
   description: "This command unmutes members.",

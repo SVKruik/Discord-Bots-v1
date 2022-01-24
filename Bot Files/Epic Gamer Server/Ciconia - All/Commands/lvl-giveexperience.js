@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "giveexperience",
-  aliases: ["givexp", "giveexp"],
+  aliases: config.aliases.aliasesgiveexperience,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Give a player extra levels.",

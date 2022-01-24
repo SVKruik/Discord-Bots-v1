@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "deposit",
-  aliases: ["dep", "depo"],
+  aliases: config.aliases.aliasesdeposit,
   cooldown: process.env.ASMID,
   permissions: ["SEND_MESSAGES"],
   description: "Deposit coins from your wallet to your bank.",

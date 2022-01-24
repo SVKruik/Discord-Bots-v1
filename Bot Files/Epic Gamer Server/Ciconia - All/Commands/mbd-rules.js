@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "rules",
-  aliases: ["rule", "rl"],
+  aliases: config.aliases.aliasesrules,
   cooldown: process.env.ASMID,
   description: "Displays an embed with our active server rules.",
   permissions: ["SEND_MESSAGES"],

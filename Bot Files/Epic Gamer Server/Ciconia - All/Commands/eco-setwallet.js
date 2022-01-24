@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "setwallet",
-  aliases: ["setwal"],
+  aliases: config.aliases.aliasessetwallet,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the balance of a member.",

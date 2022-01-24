@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "balancewallet",
-  aliases: ["balwallet", "balwal"],
+  aliases: config.aliases.aliasesbalancewallet,
   cooldown: process.env.ASSOFT,
   permissions: ["SEND_MESSAGES"],
   description: "Display your wallet balance.",

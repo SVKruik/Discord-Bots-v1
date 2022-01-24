@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "minuslevel",
-  aliases: ["minuslvl", "minlvl"],
+  aliases: config.aliases.aliasesminuslevel,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Current - amount (level).",

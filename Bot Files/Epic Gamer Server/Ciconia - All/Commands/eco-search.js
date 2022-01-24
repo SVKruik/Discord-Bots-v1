@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "search",
-  aliases: ["srch"],
+  aliases: config.aliases.aliasessearch,
   cooldown: process.env.DAILY,
   permissions: ["SEND_MESSAGES"],
   description: "Search for some coins. Kinda a second daily reward.",

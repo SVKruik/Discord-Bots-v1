@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "balancebank",
-  aliases: ["balbank"],
+  aliases: config.aliases.aliasesbalancebank,
   cooldown: process.env.ASSOFT,
   permissions: ["SEND_MESSAGES"],
   description: "Display your bank account balance.",

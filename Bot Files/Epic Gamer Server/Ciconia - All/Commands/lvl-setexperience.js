@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "setexperience",
-  aliases: ["setxp", "setexp"],
+  aliases: config.aliases.aliasessetexperience,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the amount of experience of a member.",

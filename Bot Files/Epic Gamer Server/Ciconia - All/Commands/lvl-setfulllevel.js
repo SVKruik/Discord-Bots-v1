@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "setlevelandexperience",
-  aliases: ["setlvlexp", "setlvlxp"],
+  aliases: config.aliases.aliasessetfulllevel,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the level and experience of a member.",

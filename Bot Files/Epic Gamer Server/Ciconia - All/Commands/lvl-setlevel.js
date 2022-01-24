@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "setlevel",
-  aliases: ["setlvl"],
+  aliases: config.aliases.aliasessetlevel,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the level of a member.",

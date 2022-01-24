@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "minusbankandwallet",
-  aliases: ["minusbankwal", "minuswalbank", "minbankwal", "minwalbank"],
+  aliases: config.aliases.aliasesminusfulleco,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Decrease the balance of both accounts.",

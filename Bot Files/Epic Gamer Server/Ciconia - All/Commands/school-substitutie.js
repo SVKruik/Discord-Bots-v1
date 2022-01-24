@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "substitutie",
-  aliases: ["substitueren", "subst"],
+  aliases: config.aliases.aliasessubstitutie,
   cooldown: process.env.ASMID,
   description: "Substitute",
   permissions: ["SEND_MESSAGES"],

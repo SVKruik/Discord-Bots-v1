@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "profile",
-  aliases: ["prof"],
+  aliases: config.aliases.aliasesprofile,
   cooldown: process.env.ASMID,
   description: "Displays all information we have about you.",
   permissions: ["SEND_MESSAGES"],

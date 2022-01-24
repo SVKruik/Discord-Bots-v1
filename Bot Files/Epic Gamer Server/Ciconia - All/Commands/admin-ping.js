@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "ping",
-  aliases: ["pong"],
+  aliases: config.aliases.aliasesping,
   cooldown: process.env.ASMID,
   description: "This silences spamming or naughty people. Can only read stuff.",
   permissions: ["ADMINISTRATOR"],

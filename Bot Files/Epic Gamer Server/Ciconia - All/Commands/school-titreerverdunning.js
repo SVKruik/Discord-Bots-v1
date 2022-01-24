@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "titratieverdunning",
-  aliases: ["titverdun"],
+  aliases: config.aliases.aliasestitreerverdunning,
   cooldown: process.env.ASMID,
   description: "Calculate some science math.",
   permissions: ["SEND_MESSAGES"],

@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "hoeklijn",
-  aliases: ["hkli"],
+  aliases: config.aliases.aliaseshoeklijn,
   cooldown: process.env.ASMID,
   description: "Calculate difference in degrees between 2 lines.",
   permissions: ["SEND_MESSAGES"],

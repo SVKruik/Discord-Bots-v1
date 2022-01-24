@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "minusexperience",
-  aliases: ["minusexp", "minusxp", "minxp", "minexp"],
+  aliases: config.aliases.aliasesminusexperience,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Current - amount (level).",

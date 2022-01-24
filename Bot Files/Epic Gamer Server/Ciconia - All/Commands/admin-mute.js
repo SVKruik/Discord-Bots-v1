@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "mute",
-  aliases: [],
+  aliases: config.aliases.aliasesmute,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
   description: "This silences spamming or naughty people. Can only read stuff.",

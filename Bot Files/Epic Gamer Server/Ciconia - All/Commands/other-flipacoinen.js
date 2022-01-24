@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "flipacoin",
-  aliases: ["fac"],
+  aliases: config.aliases.aliasesflipacoinen,
   cooldown: process.env.ASSOFT,
   permissions: ["SEND_MESSAGES"],
   description: "Flip a coin!",

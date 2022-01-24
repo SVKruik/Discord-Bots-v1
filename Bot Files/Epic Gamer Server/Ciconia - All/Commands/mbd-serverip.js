@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "serverip",
-  aliases: ["server"],
+  aliases: config.aliases.aliasesserverip,
   cooldown: process.env.ASMID,
   description: "Display the server IP and information for MultiCube.",
   permissions: ["SEND_MESSAGES"],

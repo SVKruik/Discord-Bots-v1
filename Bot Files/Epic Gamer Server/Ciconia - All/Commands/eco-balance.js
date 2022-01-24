@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "balance",
-  aliases: ["bal", "baltot", "baltotal", "showbal"],
+  aliases: config.aliases.aliasesbalance,
   cooldown: process.env.ASSOFT,
   permissions: ["SEND_MESSAGES"],
   description: "Display both your wallet and bank balance.",

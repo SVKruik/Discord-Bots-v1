@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "givewallet",
-  aliases: ["givewal"],
+  aliases: config.aliases.aliasesgivewallet,
   cooldown: process.env.ASADMIN,
   permissions: ["ADMINISTRATOR"],
   description: "Increase the balance of a member.",

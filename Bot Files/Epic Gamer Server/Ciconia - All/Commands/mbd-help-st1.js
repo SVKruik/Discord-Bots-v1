@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "help",
-  aliases: ["support"],
+  aliases: config.aliases.aliaseshelpst1,
   cooldown: process.env.ASMID,
   description: "Advanced Help - Stage 1",
   permissions: ["SEND_MESSAGES"],

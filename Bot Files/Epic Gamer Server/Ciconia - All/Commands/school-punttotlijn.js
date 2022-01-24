@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "punttotlijn",
-  aliases: ["lijntotpunt", "puntlijn", "lijnpunt"],
+  aliases: config.aliases.aliasespunttotlijn,
   cooldown: process.env.ASMID,
   description: "Calculate distance between a point and a line.",
   permissions: ["SEND_MESSAGES"],

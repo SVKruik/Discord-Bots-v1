@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "withdraw",
-  aliases: ["with", "wit"],
+  aliases: config.aliases.aliaseswithdraw,
   cooldown: process.env.ASMID,
   permissions: ["SEND_MESSAGES"],
   description: "Bank to Wallet",

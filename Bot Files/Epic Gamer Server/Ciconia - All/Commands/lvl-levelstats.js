@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "levelstatistics",
-  aliases: ["levelstats", "levelstat", "lvlstat", "lvlstats"],
+  aliases: config.aliases.aliaseslevelstats,
   cooldown: process.env.ASSOFT,
   permissions: ["SEND_MESSAGES"],
   description: "Displays your current server level and experience.",

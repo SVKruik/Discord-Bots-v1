@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "github",
-  aliases: ["gh"],
+  aliases: config.aliases.aliasesgithub,
   cooldown: process.env.ASMID,
   description: "Displays all import links to our GitHub repository.",
   permissions: ["SEND_MESSAGES"],

@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "leave",
-  aliases: [],
+  aliases: config.aliases.aliasesleave,
   cooldown: process.env.ASMSC,
   permissions: ["SEND_MESSAGES"],
   description: "Stop the music, and leave the call.",

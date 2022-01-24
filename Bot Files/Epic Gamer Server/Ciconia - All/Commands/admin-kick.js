@@ -2,7 +2,7 @@ const config = require('./../Other/config.js');
 
 module.exports = {
   name: "kick",
-  aliases: [],
+  aliases: config.aliases.aliaseskick,
   cooldown: process.env.ASADMIN,
   description: "Kick a irritating person, that you don't hate enough to ban.",
   permissions: ["ADMINISTRATOR", "KICK_MEMBERS"],
