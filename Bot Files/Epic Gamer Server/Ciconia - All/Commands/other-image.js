@@ -9,7 +9,7 @@ const google = new Scraper({
 module.exports = {
   name: "image",
   aliases: config.aliases.aliasesimage,
-  cooldown: process.env.ASHARD,
+  cooldown: config.cooldown.cooldownimage,
   permissions: ["SEND_MESSAGES"],
   cooldown: 5,
   description: "This sends the best google result for an image.",

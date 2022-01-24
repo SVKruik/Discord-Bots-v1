@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "apply",
   aliases: config.aliases.aliasesapply,
-  cooldown: process.env.ASSOFT,
+  cooldown: config.cooldown.cooldownapply,
   permissions: ["SEND_MESSAGES"],
   description:
     "Sends you the link where you can apply to one of our roles/ranks.",

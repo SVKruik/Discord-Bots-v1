@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "punttotlijn",
   aliases: config.aliases.aliasespunttotlijn,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownpunttotlijn,
   description: "Calculate distance between a point and a line.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

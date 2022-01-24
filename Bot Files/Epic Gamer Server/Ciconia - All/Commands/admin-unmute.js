@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "unmute",
   aliases: config.aliases.aliasesunmute,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownunmute,
   permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
   description: "This command unmutes members.",
   execute(message, args, cmd, client, Discord) {

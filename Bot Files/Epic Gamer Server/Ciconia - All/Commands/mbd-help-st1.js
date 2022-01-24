@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "help",
   aliases: config.aliases.aliaseshelpst1,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownhelpst1,
   description: "Advanced Help - Stage 1",
   permissions: ["SEND_MESSAGES"],
   async execute(message, args, cmd, client, Discord) {

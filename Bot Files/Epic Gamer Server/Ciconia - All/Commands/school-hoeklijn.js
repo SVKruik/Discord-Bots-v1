@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "hoeklijn",
   aliases: config.aliases.aliaseshoeklijn,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownhoeklijn,
   description: "Calculate difference in degrees between 2 lines.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

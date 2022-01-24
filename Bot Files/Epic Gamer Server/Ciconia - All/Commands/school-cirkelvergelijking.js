@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "cirkel",
   aliases: config.aliases.aliasescirkelvergelijking,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldowncirkelvergelijking,
   description: "Calculate a circle equation.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

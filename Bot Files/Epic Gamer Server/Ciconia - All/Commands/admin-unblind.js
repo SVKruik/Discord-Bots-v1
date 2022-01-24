@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "unblind",
   aliases: config.aliases.aliasesunblind,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownunblind,
   permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
   description: "This command unblinds members.",
   execute(message, args, cmd, client, Discord) {

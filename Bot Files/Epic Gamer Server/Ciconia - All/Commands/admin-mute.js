@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "mute",
   aliases: config.aliases.aliasesmute,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownmute,
   permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
   description: "This silences spamming or naughty people. Can only read stuff.",
   execute(message, args, cmd, client, Discord) {

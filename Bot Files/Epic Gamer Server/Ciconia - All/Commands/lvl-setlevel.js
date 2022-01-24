@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "setlevel",
   aliases: config.aliases.aliasessetlevel,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownsetlevel,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the level of a member.",
   async execute(message, args, cmd, client, discord, profileData) {

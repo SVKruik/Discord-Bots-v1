@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "givebankandwallet",
   aliases: config.aliases.aliasesgivefulleco,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldowngivefulleco,
   permissions: ["ADMINISTRATOR"],
   description: "Increase the balance of both the bank and wallet account.",
   async execute(message, args, cmd, client, discord, profileData) {

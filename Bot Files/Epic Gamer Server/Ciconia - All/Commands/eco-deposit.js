@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "deposit",
   aliases: config.aliases.aliasesdeposit,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldowndeposit,
   permissions: ["SEND_MESSAGES"],
   description: "Deposit coins from your wallet to your bank.",
   async execute(message, args, cmd, client, discord, profileData) {

@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "balance",
   aliases: config.aliases.aliasesbalance,
-  cooldown: process.env.ASSOFT,
+  cooldown: config.cooldown.cooldownbalance,
   permissions: ["SEND_MESSAGES"],
   description: "Display both your wallet and bank balance.",
   async execute(message, args, cmd, client, Discord, profileData) {

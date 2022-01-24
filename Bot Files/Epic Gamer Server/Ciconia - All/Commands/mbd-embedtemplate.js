@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "embedtemplate",
   aliases: config.aliases.aliasesembedtemplate,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownembedtemplate,
   description: "Embed template for devs.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

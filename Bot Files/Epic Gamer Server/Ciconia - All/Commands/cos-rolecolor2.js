@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "rolecolor2",
   aliases: config.aliases.aliasesrolecolor2,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownrolecolor2,
   permissions: ["ADMINISTRATOR"],
   description: "Role color choose page 2.",
   async execute(message, args, cmd, client, Discord) {

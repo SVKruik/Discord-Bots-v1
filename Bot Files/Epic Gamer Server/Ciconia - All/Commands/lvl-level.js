@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "level",
   aliases: config.aliases.aliaseslevel,
-  cooldown: process.env.ASSOFT,
+  cooldown: config.cooldown.cooldownlevel,
   permissions: ["SEND_MESSAGES"],
   description: "Displays your current server level.",
   async execute(message, args, cmd, client, Discord, profileData) {

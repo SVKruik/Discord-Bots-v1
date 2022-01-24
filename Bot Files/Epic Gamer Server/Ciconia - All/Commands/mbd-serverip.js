@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "serverip",
   aliases: config.aliases.aliasesserverip,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownserverip,
   description: "Display the server IP and information for MultiCube.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

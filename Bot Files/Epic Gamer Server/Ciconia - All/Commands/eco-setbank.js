@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "setbank",
   aliases: config.aliases.aliasessetbank,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownsetbank,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the balance of a member.",
   async execute(message, args, cmd, client, discord, profileData) {

@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "dailyreward",
   aliases: config.aliases.aliasesdailyreward,
-  cooldown: process.env.DAILY,
+  cooldown: config.cooldown.cooldowndailyreward,
   permissions: ["SEND_MESSAGES"],
   description: "Random amount of coins, as a daily reward.",
   async execute(message, args, cmd, client, discord, profileData) {

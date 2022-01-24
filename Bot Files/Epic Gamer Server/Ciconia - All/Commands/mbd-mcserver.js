@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "minecraftserver",
   aliases: config.aliases.aliasesmcserver,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownmcserver,
   permissions: ["SEND_MESSAGES"],
   description: "Displays some Minecraft server statistics.",
   execute(message, args, cmd, client, Discord) {

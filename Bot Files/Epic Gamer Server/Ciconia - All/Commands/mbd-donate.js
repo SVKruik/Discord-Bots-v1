@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "donate",
   aliases: config.aliases.aliasesdonate,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldowndonate,
   description: "Support our project by donating to us.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

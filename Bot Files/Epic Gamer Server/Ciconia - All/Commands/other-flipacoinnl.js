@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "kopofmunt",
   aliases: config.aliases.aliasesflipacoinnl,
-  cooldown: process.env.ASSOFT,
+  cooldown: config.cooldown.cooldownflipacoinnl,
   permissions: ["SEND_MESSAGES"],
   description: "Kop of munt!",
   async execute(message, args, cmd, client, Discord, profileData) {

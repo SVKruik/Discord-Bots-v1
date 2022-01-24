@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "event",
   aliases: config.aliases.aliasesevent,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownevent,
   permissions: ["ADMINISTRATOR"],
   description: "Set up a event with teams.",
   async execute(message, args, cmd, client, Discord) {

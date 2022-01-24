@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "minusbankandwallet",
   aliases: config.aliases.aliasesminusfulleco,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownminusfulleco,
   permissions: ["ADMINISTRATOR"],
   description: "Decrease the balance of both accounts.",
   async execute(message, args, cmd, client, discord, profileData) {

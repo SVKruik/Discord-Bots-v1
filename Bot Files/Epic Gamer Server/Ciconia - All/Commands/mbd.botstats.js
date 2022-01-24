@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
     name: "botstatistics",
     aliases: config.aliases.aliasesbotstats,
-    cooldown: process.env.ASHARD,
+    cooldown: config.cooldown.cooldownbotstats,
     description: "Displays all stats of the bot.",
     permissions: ["SEND_MESSAGES"],
     async execute(message, args, cmd, client, Discord, profileData) {

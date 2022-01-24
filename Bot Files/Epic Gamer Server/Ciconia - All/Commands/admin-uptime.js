@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "uptime",
   aliases: config.aliases.aliasesuptime,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownuptime,
   description: "Check the uptime of the bot.",
   permissions: ["ADMINISTRATOR"],
   execute(message, args, cmd, client, Discord) {

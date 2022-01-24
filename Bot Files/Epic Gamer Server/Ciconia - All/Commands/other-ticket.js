@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "ticket",
   aliases: config.aliases.aliasesticket,
-  cooldown: process.env.HARD,
+  cooldown: config.cooldown.cooldownticket,
   permissions: ["SEND_MESSAGES"],
   description: "open a support ticket!",
   async execute(message, args, cmd, client, discord) {

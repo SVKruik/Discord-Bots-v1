@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "minusexperience",
   aliases: config.aliases.aliasesminusexperience,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownminusexperience,
   permissions: ["ADMINISTRATOR"],
   description: "Current - amount (level).",
   async execute(message, args, cmd, client, discord, profileData) {

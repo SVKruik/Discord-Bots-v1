@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "titratieverdunning",
   aliases: config.aliases.aliasestitreerverdunning,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldowntitreerverdunning,
   description: "Calculate some science math.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

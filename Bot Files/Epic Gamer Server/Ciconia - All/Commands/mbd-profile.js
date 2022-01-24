@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "profile",
   aliases: config.aliases.aliasesprofile,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownprofile,
   description: "Displays all information we have about you.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord, profileData) {

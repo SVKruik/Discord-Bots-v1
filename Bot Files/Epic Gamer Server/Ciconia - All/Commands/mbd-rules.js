@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "rules",
   aliases: config.aliases.aliasesrules,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownrules,
   description: "Displays an embed with our active server rules.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

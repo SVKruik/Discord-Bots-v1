@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "leave",
   aliases: config.aliases.aliasesleave,
-  cooldown: process.env.ASMSC,
+  cooldown: config.cooldown.cooldownleave,
   permissions: ["SEND_MESSAGES"],
   description: "Stop the music, and leave the call.",
   async execute(message, args, cmd, client, Discord) {

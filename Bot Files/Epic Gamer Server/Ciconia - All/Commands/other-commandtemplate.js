@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "commandtemplate",
   aliases: config.aliases.aliasescommandtemplate,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldowncommandtemplate,
   description: "Command template for devs.",
   permissions: ["ADMINISTRATOR"],
   execute(message, args, cmd, client, Discord) {

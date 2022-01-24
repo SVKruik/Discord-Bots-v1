@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "search",
   aliases: config.aliases.aliasessearch,
-  cooldown: process.env.DAILY,
+  cooldown: config.cooldown.cooldownsearch,
   permissions: ["SEND_MESSAGES"],
   description: "Search for some coins. Kinda a second daily reward.",
   async execute(message, args, cmd, client, discord, profileData) {

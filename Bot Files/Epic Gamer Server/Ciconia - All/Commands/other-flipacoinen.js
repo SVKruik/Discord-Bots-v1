@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "flipacoin",
   aliases: config.aliases.aliasesflipacoinen,
-  cooldown: process.env.ASSOFT,
+  cooldown: config.cooldown.cooldownflipacoinen,
   permissions: ["SEND_MESSAGES"],
   description: "Flip a coin!",
   async execute(message, args, cmd, client, Discord, profileData) {

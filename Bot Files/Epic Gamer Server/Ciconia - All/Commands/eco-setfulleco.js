@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "setwalletandbank",
   aliases: config.aliases.aliasessetfulleco,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownsetfulleco,
   permissions: ["ADMINISTRATOR"],
   description: "Reset the balance of both accounts of a member.",
   async execute(message, args, cmd, client, discord, profileData) {

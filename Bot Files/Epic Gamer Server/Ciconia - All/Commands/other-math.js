@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "mathematics",
   aliases: config.aliases.aliasesmath,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownmath,
   description: "Basic calculation.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

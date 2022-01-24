@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "blind",
   aliases: config.aliases.aliasesblind,
-  cooldown: process.env.ASADMIN,
+  cooldown: config.cooldown.cooldownblind,
   permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
   description: "Completly blind a member. Target cannot do anything.",
   execute(message, args, cmd, client, Discord) {

@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "ping",
   aliases: config.aliases.aliasesping,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldownping,
   description: "This silences spamming or naughty people. Can only read stuff.",
   permissions: ["ADMINISTRATOR"],
   execute(message, args, cmd, client, Discord) {

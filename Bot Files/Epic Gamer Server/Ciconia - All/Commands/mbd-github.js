@@ -3,7 +3,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "github",
   aliases: config.aliases.aliasesgithub,
-  cooldown: process.env.ASMID,
+  cooldown: config.cooldown.cooldowngithub,
   description: "Displays all import links to our GitHub repository.",
   permissions: ["SEND_MESSAGES"],
   execute(message, args, cmd, client, Discord) {

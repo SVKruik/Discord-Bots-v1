@@ -6,7 +6,7 @@ const queue = new Map();
 module.exports = {
   name: "play",
   aliases: config.aliases.aliasesplay,
-  cooldown: process.env.ASMSC,
+  cooldown: config.cooldown.cooldownplay,
   permissions: ["SEND_MESSAGES"],
   description:
     "Music Bot via YouTube links. You must be in a call for it to work.",

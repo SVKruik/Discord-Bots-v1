@@ -4,7 +4,7 @@ const config = require('./../Other/config.js');
 module.exports = {
   name: "experience",
   aliases: config.aliases.aliasesexperience,
-  cooldown: process.env.ASSOFT,
+  cooldown: config.cooldown.cooldownexperience,
   permissions: ["SEND_MESSAGES"],
   description: "Displays your current server experience.",
   async execute(message, args, cmd, client, Discord, profileData) {
