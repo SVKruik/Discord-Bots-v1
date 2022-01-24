@@ -1,12 +1,12 @@
 require("dotenv").config();
 const profileModel = require("../../models/profileSchema");
-
+const config = require("./../../Other/config.js");
 const cooldowns = new Map();
 
 module.exports = async (Discord, client, message) => {
   //Core
-  const prefix = process.env.PREFIX;
-  const target = message.author.id
+  const prefix = config.base.baseprefix;
+  const target = message.author.id;
 
   const profileModel = require("../../models/profileSchema");
 
@@ -138,11 +138,9 @@ module.exports = async (Discord, client, message) => {
       const time_left = (expiration_time - current_time) / 1000;
 
       return message.reply(
-        `Please wait ${time_left.toFixed(
+        `Please wait \`${time_left.toFixed(
           1
-        )} more seconds before using the specified command: \`${
-          command.name
-        }\`.`
+        )}\` more seconds before using the command: \`${command.name}\`.`
       );
     }
   }

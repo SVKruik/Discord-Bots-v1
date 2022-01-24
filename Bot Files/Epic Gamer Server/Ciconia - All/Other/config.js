@@ -25,6 +25,7 @@ exports.base = {
   baseleveldefault: "0",
   baseexperiencedefault: "0",
   basewelcomechannelid: "850753468927049798",
+  basemembercounterhz: '90000',
   baseguildid: "820580469757313025",
   basemembercounterchannelid: "873925840096886784",
   baseeventchannelid: "896369888103366716",
@@ -33,7 +34,7 @@ exports.base = {
   baseticketdeletetime: "5000",
   basemainrole: "Member",
   basemuterole: "Muted",
-  basemute: "",
+  baseblindrole: "Blinded",
 };
 
 exports.embed = {
@@ -202,7 +203,7 @@ exports.cooldown = {
   cooldowncommandtemplate: B,
   cooldownflipacoinen: H,
   cooldownflipacoinnl: H,
-  cooldownimage: E,
+  cooldownimage: B,                               // Temporary
   cooldownmath: G,
   cooldownticket: D,
   cooldowncirkelvergelijking: E,
@@ -365,16 +366,22 @@ exports.permissions = {
   permissiontitreerverdunning: J,
 };
 
-exports.messsages = {
+exports.basemesssages = {
   // Command Messages
-
+    // Base
   messagesfinderror: "Could not find the specified variable.",
-  messagesvcrequired: "",
-  messagesmembermention: "",
-  messagesaccountmissing: "",
-  messagesgreaternegaone: "",
-  messagesgreaterone: "",
-  messagescoinsmissing: "",
+  messagesvcrequired: "You need to be in a voice channel in order to use this command.",
+  messagesmembermention: "You need to mention someone to execute this command.",
+  messagesaccountmissing: "This user does not have an account in our database.",
+  messagesgreaternegaone: "Set amount must be larger then \`-1\`",
+  messagesgreaterone: "The reduce amount must be greater then \`0\`",
+  messagescoinsmissing: "You do not have that amount of coins to perform this command.",
+  messagesrealnumber: "Please enter a real number.",
+    // Core files - message.js
+  // invalidpermissions: `Invalid Permissions ${perm}`,
+  // missingpermissions: `You are missing the following permissions to use this command: \`${invalidPerms}\``,
+  // cooldownwait: `Please wait ${time_left.toFixed(1)} more seconds before using the specified command: \`${command.name}\`.`,
+  // intersenderror: "There was an error trying to execute the specified command! Something ain't right. Check the console.",
 
   // messagesban1 : `${memberTarget.user.username} got banned because of: ${reason2}. This was done by ${message.author.username} using ${username}.`,
   // messageban2 : `<@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason2}.`,

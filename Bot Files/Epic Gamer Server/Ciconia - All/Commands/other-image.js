@@ -22,12 +22,13 @@ module.exports = {
         `You are not in the right channel to use this command! Please use <#934093861079380018> instead!`
       );
     }
-    const blacklist = require("../Other/profanity.js");
+    const blacklist = require("./../Other/profanity.js");
 
     blacklist.forEach((word) => {
       if (message.content.toLowerCase().includes(word));
       message.delete();
       message.channel.send("Let's try to keep it family friendly!");
+      console.log(`${message.author} used the word ${word} in an image search.`)
     });
 
     const image_results = await google.scrape(image_query, 1);

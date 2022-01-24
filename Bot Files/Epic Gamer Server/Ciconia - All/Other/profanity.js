@@ -1,5 +1,7 @@
 // Source: https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
-blacklist = [
+const config = require("./../Other/config.js");
+
+module.exports = [
 "addicts",
 "adult",
 "alla",

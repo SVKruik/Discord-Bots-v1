@@ -1,4 +1,5 @@
 const profileModel = require("../../models/profileSchema");
+const config = require("./../../Other/config.js");
 
 module.exports = async (message, args, cmd, client, Discord, member, profileData) => {
   let profile = await profileModel.create({
