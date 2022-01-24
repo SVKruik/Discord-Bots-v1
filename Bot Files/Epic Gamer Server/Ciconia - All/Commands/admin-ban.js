@@ -5,8 +5,8 @@ module.exports = {
   name: "ban",
   aliases: config.aliases.aliasesban,
   cooldown: config.cooldown.cooldownban,
+  permissions: config.permissions.permissionban,
   description: "config.descriptionban",
-  permissions: ["ADMINISTRATOR"],
   execute(message, args) {
     const target = message.mentions.users.first();
     const username = message.client.user.username;

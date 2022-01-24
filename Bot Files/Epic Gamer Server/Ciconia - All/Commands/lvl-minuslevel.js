@@ -5,7 +5,7 @@ module.exports = {
   name: "minuslevel",
   aliases: config.aliases.aliasesminuslevel,
   cooldown: config.cooldown.cooldownminuslevel,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionminuslevel,
   description: "Current - amount (level).",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

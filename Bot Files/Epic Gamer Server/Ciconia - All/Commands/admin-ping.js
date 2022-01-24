@@ -4,8 +4,8 @@ module.exports = {
   name: "ping",
   aliases: config.aliases.aliasesping,
   cooldown: config.cooldown.cooldownping,
+  permissions: config.permissions.permissionping,
   description: "This silences spamming or naughty people. Can only read stuff.",
-  permissions: ["ADMINISTRATOR"],
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(process.env.MBDCLR)

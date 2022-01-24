@@ -5,7 +5,7 @@ module.exports = {
   name: "balancebank",
   aliases: config.aliases.aliasesbalancebank,
   cooldown: config.cooldown.cooldownbalancebank,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionbalancebank,
   description: "Display your bank account balance.",
   async execute(message, args, cmd, client, Discord, profileData) {
     message.channel.send(

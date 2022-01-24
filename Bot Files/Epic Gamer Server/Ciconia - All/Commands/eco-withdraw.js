@@ -5,7 +5,7 @@ module.exports = {
   name: "withdraw",
   aliases: config.aliases.aliaseswithdraw,
   cooldown: config.cooldown.cooldownwithdraw,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionwithdraw,
   description: "Bank to Wallet",
   async execute(message, args, cmd, client, discord, profileData) {
     const amount = args[0];

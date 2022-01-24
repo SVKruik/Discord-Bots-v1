@@ -5,7 +5,7 @@ module.exports = {
   name: "givelevelandexperience",
   aliases: config.aliases.aliasesgivefulllevel,
   cooldown: config.cooldown.cooldowngivefulllevel,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissiongivefulllevel,
   description: "Give a player extra levels and experience.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

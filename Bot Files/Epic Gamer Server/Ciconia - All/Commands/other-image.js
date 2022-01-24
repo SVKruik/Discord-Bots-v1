@@ -11,7 +11,6 @@ module.exports = {
   aliases: config.aliases.aliasesimage,
   cooldown: config.cooldown.cooldownimage,
   permissions: ["SEND_MESSAGES"],
-  cooldown: 5,
   description: "This sends the best google result for an image.",
   async execute(message, args, cmd, client, Discord) {
     const channel = 934093861079380018;

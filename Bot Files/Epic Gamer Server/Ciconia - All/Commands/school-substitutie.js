@@ -4,8 +4,8 @@ module.exports = {
   name: "substitutie",
   aliases: config.aliases.aliasessubstitutie,
   cooldown: config.cooldown.cooldownsubstitutie,
-  description: "Substitute",
   permissions: ["SEND_MESSAGES"],
+  description: "Substitute",
   execute(message, args, cmd, client, Discord) {
     const cirkelnaam = "C";
     const formulenaam = "Q";

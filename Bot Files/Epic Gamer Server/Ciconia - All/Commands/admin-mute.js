@@ -5,7 +5,7 @@ module.exports = {
   name: "mute",
   aliases: config.aliases.aliasesmute,
   cooldown: config.cooldown.cooldownmute,
-  permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
+  permissions: config.permissions.permissionmute,
   description: "This silences spamming or naughty people. Can only read stuff.",
   execute(message, args, cmd, client, Discord) {
     const target = message.mentions.users.first();

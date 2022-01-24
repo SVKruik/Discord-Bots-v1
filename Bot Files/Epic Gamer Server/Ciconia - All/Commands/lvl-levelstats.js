@@ -5,7 +5,7 @@ module.exports = {
   name: "levelstatistics",
   aliases: config.aliases.aliaseslevelstats,
   cooldown: config.cooldown.cooldownlevelstats,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionlevelstats,
   description: "Displays your current server level and experience.",
   async execute(message, args, cmd, client, Discord, profileData) {
     message.channel.send(

@@ -4,7 +4,7 @@ module.exports = {
   name: "rolecolor1",
   aliases: config.aliases.aliasesrolecolor1,
   cooldown: config.cooldown.cooldownrolecolor1,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionrolecolor1,
   description: "Role color choose page 1.",
   async execute(message, args, cmd, client, Discord) {
     const channel = process.env.ROLECOLORCHANNEL;

@@ -5,7 +5,7 @@ module.exports = {
   name: "setlevelandexperience",
   aliases: config.aliases.aliasessetfulllevel,
   cooldown: config.cooldown.cooldownsetfulllevel,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionsetfulllevel,
   description: "Reset the level and experience of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

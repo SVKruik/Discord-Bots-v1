@@ -4,8 +4,8 @@ module.exports = {
   name: "cirkel",
   aliases: config.aliases.aliasescirkelvergelijking,
   cooldown: config.cooldown.cooldowncirkelvergelijking,
-  description: "Calculate a circle equation.",
   permissions: ["SEND_MESSAGES"],
+  description: "Calculate a circle equation.",
   execute(message, args, cmd, client, Discord) {
     const a = 10;
     const b = 4;

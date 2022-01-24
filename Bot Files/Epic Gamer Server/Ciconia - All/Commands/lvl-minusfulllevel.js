@@ -5,7 +5,7 @@ module.exports = {
   name: "minuslevelandexperience",
   aliases: config.aliases.aliasesminusfulllevel,
   cooldown: config.cooldown.cooldownminusfulllevel,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionminusfulllevel,
   description: "Decrease the experience and level.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

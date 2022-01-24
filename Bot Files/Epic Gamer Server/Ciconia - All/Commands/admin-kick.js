@@ -4,8 +4,8 @@ module.exports = {
   name: "kick",
   aliases: config.aliases.aliaseskick,
   cooldown: config.cooldown.cooldownkick,
+  permissions: config.permissions.permissionkick,
   description: "Kick a irritating person, that you don't hate enough to ban.",
-  permissions: ["ADMINISTRATOR", "KICK_MEMBERS"],
   execute(message, args) {
     const target = message.mentions.users.first();
     const username = message.client.user.username;

@@ -4,8 +4,8 @@ module.exports = {
   name: "test",
   aliases: config.test.testaliases,
   cooldown: config.test.testcooldown,
-  description: "Simple test message.",
   permissions: ["ADMINISTRATOR"],
+  description: "Simple test message.",
   execute(message, args, cmd, client, Discord) {
     message.channel.send(config.test.testmessage);
   },

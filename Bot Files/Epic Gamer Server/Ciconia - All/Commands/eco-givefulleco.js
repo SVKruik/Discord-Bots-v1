@@ -5,7 +5,7 @@ module.exports = {
   name: "givebankandwallet",
   aliases: config.aliases.aliasesgivefulleco,
   cooldown: config.cooldown.cooldowngivefulleco,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissiongivefulleco,
   description: "Increase the balance of both the bank and wallet account.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

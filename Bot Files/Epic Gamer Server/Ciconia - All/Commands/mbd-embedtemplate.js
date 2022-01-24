@@ -4,8 +4,8 @@ module.exports = {
   name: "embedtemplate",
   aliases: config.aliases.aliasesembedtemplate,
   cooldown: config.cooldown.cooldownembedtemplate,
-  description: "Embed template for devs.",
   permissions: ["SEND_MESSAGES"],
+  description: "Embed template for devs.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(process.env.MBDCLR)

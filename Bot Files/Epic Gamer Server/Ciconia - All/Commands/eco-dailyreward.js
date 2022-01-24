@@ -5,7 +5,7 @@ module.exports = {
   name: "dailyreward",
   aliases: config.aliases.aliasesdailyreward,
   cooldown: config.cooldown.cooldowndailyreward,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissiondailyreward,
   description: "Random amount of coins, as a daily reward.",
   async execute(message, args, cmd, client, discord, profileData) {
     const randomNumber = Math.floor(Math.random() * 100) + 1;

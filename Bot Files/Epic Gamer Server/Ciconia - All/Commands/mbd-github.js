@@ -4,8 +4,8 @@ module.exports = {
   name: "github",
   aliases: config.aliases.aliasesgithub,
   cooldown: config.cooldown.cooldowngithub,
-  description: "Displays all import links to our GitHub repository.",
   permissions: ["SEND_MESSAGES"],
+  description: "Displays all import links to our GitHub repository.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(process.env.MBDCLR)

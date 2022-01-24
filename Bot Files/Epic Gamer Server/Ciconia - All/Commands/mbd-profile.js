@@ -4,8 +4,8 @@ module.exports = {
   name: "profile",
   aliases: config.aliases.aliasesprofile,
   cooldown: config.cooldown.cooldownprofile,
-  description: "Displays all information we have about you.",
   permissions: ["SEND_MESSAGES"],
+  description: "Displays all information we have about you.",
   execute(message, args, cmd, client, Discord, profileData) {
     const tagfull = message.author.tag;
     const tag = tagfull.slice(-4);

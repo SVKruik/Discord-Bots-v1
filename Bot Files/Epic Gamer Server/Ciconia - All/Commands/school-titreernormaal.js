@@ -4,8 +4,8 @@ module.exports = {
   name: "titratienormaal",
   aliases: config.aliases.aliasestitreernormaal,
   cooldown: config.cooldown.cooldowntitreernormaal,
-  description: "Calculate some science math.",
   permissions: ["SEND_MESSAGES"],
+  description: "Calculate some science math.",
   execute(message, args, cmd, client, Discord) {
     const pipet = 10.0;
     const titreerml = 10.31;

@@ -4,8 +4,8 @@ module.exports = {
   name: "titratieverdunning",
   aliases: config.aliases.aliasestitreerverdunning,
   cooldown: config.cooldown.cooldowntitreerverdunning,
-  description: "Calculate some science math.",
   permissions: ["SEND_MESSAGES"],
+  description: "Calculate some science math.",
   execute(message, args, cmd, client, Discord) {
     const pipet = 10;
     const verdunningsfactor = 10;

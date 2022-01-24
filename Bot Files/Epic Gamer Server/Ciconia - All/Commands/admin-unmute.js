@@ -4,7 +4,7 @@ module.exports = {
   name: "unmute",
   aliases: config.aliases.aliasesunmute,
   cooldown: config.cooldown.cooldownunmute,
-  permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
+  permissions: config.permissions.permissionunmute,
   description: "This command unmutes members.",
   execute(message, args, cmd, client, Discord) {
     const target = message.mentions.users.first();

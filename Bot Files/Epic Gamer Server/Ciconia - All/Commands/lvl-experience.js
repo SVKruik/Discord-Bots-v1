@@ -5,7 +5,7 @@ module.exports = {
   name: "experience",
   aliases: config.aliases.aliasesexperience,
   cooldown: config.cooldown.cooldownexperience,
-  permissions: ["SEND_MESSAGES"],
+  permissions: config.permissions.permissionexperience,
   description: "Displays your current server experience.",
   async execute(message, args, cmd, client, Discord, profileData) {
     message.channel.send(

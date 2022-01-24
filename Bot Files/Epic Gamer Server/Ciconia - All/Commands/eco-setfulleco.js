@@ -5,7 +5,7 @@ module.exports = {
   name: "setwalletandbank",
   aliases: config.aliases.aliasessetfulleco,
   cooldown: config.cooldown.cooldownsetfulleco,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionsetfulleco,
   description: "Reset the balance of both accounts of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

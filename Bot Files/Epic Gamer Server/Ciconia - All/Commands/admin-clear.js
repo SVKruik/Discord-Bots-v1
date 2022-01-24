@@ -4,7 +4,7 @@ module.exports = {
   name: "clear",
   aliases: config.aliases.aliasesclear,
   cooldown: config.cooldown.cooldownclear,
-  permissions: ["ADMINISTRATOR", "MANAGE_MESSAGES"],
+  permissions: config.permissions.permissionclear,
   description: "Bulk delete messages.",
   async execute(message, args, cmd, client, Discord) {
     const max = process.env.MAXCLEAR;

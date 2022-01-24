@@ -5,7 +5,7 @@ module.exports = {
   name: "minusbankandwallet",
   aliases: config.aliases.aliasesminusfulleco,
   cooldown: config.cooldown.cooldownminusfulleco,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionminusfulleco,
   description: "Decrease the balance of both accounts.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

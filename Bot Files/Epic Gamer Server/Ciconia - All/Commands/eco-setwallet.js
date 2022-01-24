@@ -5,7 +5,7 @@ module.exports = {
   name: "setwallet",
   aliases: config.aliases.aliasessetwallet,
   cooldown: config.cooldown.cooldownsetwallet,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionsetwallet,
   description: "Reset the balance of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

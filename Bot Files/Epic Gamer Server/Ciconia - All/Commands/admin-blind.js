@@ -5,7 +5,7 @@ module.exports = {
   name: "blind",
   aliases: config.aliases.aliasesblind,
   cooldown: config.cooldown.cooldownblind,
-  permissions: ["ADMINISTRATOR", "MUTE_MEMBERS", "DEAFEN_MEMBERS"],
+  permissions: config.permissions.permissionblind,
   description: "Completly blind a member. Target cannot do anything.",
   execute(message, args, cmd, client, Discord) {
     const target = message.mentions.users.first();

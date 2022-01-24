@@ -5,7 +5,7 @@ module.exports = {
   name: "minuswallet",
   aliases: config.aliases.aliasesminuswallet,
   cooldown: config.cooldown.cooldownminuswallet,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionminuswallet,
   description: "Decrease the balance of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);

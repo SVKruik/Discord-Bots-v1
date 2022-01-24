@@ -4,8 +4,8 @@ module.exports = {
   name: "punttotlijn",
   aliases: config.aliases.aliasespunttotlijn,
   cooldown: config.cooldown.cooldownpunttotlijn,
-  description: "Calculate distance between a point and a line.",
   permissions: ["SEND_MESSAGES"],
+  description: "Calculate distance between a point and a line.",
   execute(message, args, cmd, client, Discord) {
     const punt1 = "A";
     const coordpunt1x = 5;

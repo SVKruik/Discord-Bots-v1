@@ -4,8 +4,8 @@ module.exports = {
   name: "serverip",
   aliases: config.aliases.aliasesserverip,
   cooldown: config.cooldown.cooldownserverip,
-  description: "Display the server IP and information for MultiCube.",
   permissions: ["SEND_MESSAGES"],
+  description: "Display the server IP and information for MultiCube.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(process.env.MBDCLR)

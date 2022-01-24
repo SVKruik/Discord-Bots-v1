@@ -4,8 +4,8 @@ module.exports = {
   name: "rules",
   aliases: config.aliases.aliasesrules,
   cooldown: config.cooldown.cooldownrules,
-  description: "Displays an embed with our active server rules.",
   permissions: ["SEND_MESSAGES"],
+  description: "Displays an embed with our active server rules.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(process.env.MBDCLR)

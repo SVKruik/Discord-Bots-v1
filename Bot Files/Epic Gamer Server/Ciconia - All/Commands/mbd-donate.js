@@ -4,8 +4,8 @@ module.exports = {
   name: "donate",
   aliases: config.aliases.aliasesdonate,
   cooldown: config.cooldown.cooldowndonate,
-  description: "Support our project by donating to us.",
   permissions: ["SEND_MESSAGES"],
+  description: "Support our project by donating to us.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(process.env.MBDCLR)

@@ -5,7 +5,7 @@ module.exports = {
   name: "setexperience",
   aliases: config.aliases.aliasessetexperience,
   cooldown: config.cooldown.cooldownsetexperience,
-  permissions: ["ADMINISTRATOR"],
+  permissions: config.permissions.permissionsetexperience,
   description: "Reset the amount of experience of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
     if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);
