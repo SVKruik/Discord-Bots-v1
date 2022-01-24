@@ -1,5 +1,5 @@
 require("console-stamp")(console, "[HH:MM]");
-const config = require('./../Other/config.js');
+const config = require("./../Other/config.js");
 
 module.exports = {
   name: "ban",

@@ -1,5 +1,5 @@
 const math = require("mathjs");
-const config = require('./../Other/config.js');
+const config = require("./../Other/config.js");
 
 module.exports = {
   name: "mathematics",
@@ -21,7 +21,7 @@ module.exports = {
           },
           {
             name: "Answer:",
-            value: Math.round(math.evaluate(args.join(" "))  * 100) / 100,
+            value: Math.round(math.evaluate(args.join(" ")) * 100) / 100,
           }
         )
         .setFooter(process.env.MBDFTR);

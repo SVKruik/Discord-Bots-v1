@@ -1,4 +1,4 @@
-const config = require('./../Other/config.js');
+const config = require("./../Other/config.js");
 
 module.exports = {
   name: "serverip",

@@ -1,4 +1,4 @@
-const config = require('./../Other/config.js');
+const config = require("./../Other/config.js");
 
 module.exports = {
   name: "ticket",
@@ -46,7 +46,9 @@ module.exports = {
           channel.updateOverwrite(message.author, { SEND_MESSAGES: false });
           break;
         case "⛔":
-          channel.send(`Deleting this channel in ${process.env.TKTDELTIME} milliseconds!`);
+          channel.send(
+            `Deleting this channel in ${process.env.TKTDELTIME} milliseconds!`
+          );
           setTimeout(() => channel.delete(), process.env.TKTDELTIME);
           break;
       }

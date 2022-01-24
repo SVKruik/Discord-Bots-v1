@@ -1,5 +1,5 @@
 var Scraper = require("images-scraper");
-const config = require('./../Other/config.js');
+const config = require("./../Other/config.js");
 const google = new Scraper({
   puppeteer: {
     headless: true,
@@ -22,7 +22,7 @@ module.exports = {
         `You are not in the right channel to use this command! Please use <#934093861079380018> instead!`
       );
     }
-    const blacklist = require('../Other/profanity.js');
+    const blacklist = require("../Other/profanity.js");
 
     blacklist.forEach((word) => {
       if (message.content.toLowerCase().includes(word));
