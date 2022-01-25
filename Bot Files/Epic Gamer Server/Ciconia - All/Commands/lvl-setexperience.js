@@ -13,7 +13,7 @@ module.exports = {
     const target = message.mentions.users.first();
     if (!target) return message.channel.send(config.basemessages.messagesfinderror);
 
-    if (amount < -1) return message.channel.send(process.env.MSGGREATERNEGAONE);
+    if (amount < -1) return message.channel.send(config.basemessages.messagesgreaternegaone);
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });

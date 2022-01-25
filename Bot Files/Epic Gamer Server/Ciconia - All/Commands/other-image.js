@@ -13,7 +13,7 @@ module.exports = {
   permissions: config.permissions.permissionimage,
   description: "This sends the best google result for an image.",
   async execute(message, args, cmd, client, Discord) {
-    const channel = 934093861079380018;
+    const channel = config.base.baseimagechannel;
     const image_query = args.join(" ");
     if (!image_query) return message.channel.send(process.env.MSGIMGMISSING);
     if (message.channel.id == channel) {

@@ -7,7 +7,7 @@ module.exports = {
   permissions: config.permissions.permissionrolecolor3,
   description: "Role color choose page 3.",
   async execute(message, args, cmd, client, Discord) {
-    const channel = process.env.ROLECOLORCHANNEL;
+    const channel = config.base.baserolecolorchannelid;
     const earthyellowTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910557270188896276"
     );

@@ -7,8 +7,8 @@ module.exports = {
   permissions: config.permissions.permissionclear,
   description: "Bulk delete messages.",
   async execute(message, args, cmd, client, Discord) {
-    const max = process.env.MAXCLEAR;
-    const min = process.env.MINCLEAR;
+    const max = config.commandclear.commandclearmax;
+    const min = config.commandclear.commandclearmin;
 
     if (!args[0])
       return message.channel.send(process.env.MSGCLEARAMOUNTMISSING);
