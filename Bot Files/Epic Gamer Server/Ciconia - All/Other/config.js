@@ -30,7 +30,7 @@ exports.base = {
   baseleveldefault: "0",
   baseexperiencedefault: "0",
   basewelcomechannelid: "850753468927049798",
-  baseimagechannel: "934093861079380018",
+  baseimagechannelid: "934093861079380018",
   basemembercounterhz: '90000',
   baseguildid: "820580469757313025",
   basemembercounterchannelid: "873925840096886784",
