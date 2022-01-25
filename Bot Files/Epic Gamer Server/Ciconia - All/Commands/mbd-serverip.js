@@ -8,10 +8,10 @@ module.exports = {
   description: "Display the server IP and information for MultiCube.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLESERVERIP)
-      .setImage(process.env.MBDIMG)
-      .setURL(process.env.MBDURL)
+      .setImage(config.embed.embedimage)
+      .setURL(config.embed.embedlink)
       .setDescription(process.env.MBDDESCSERVERIP)
       .addFields(
         {
@@ -27,7 +27,7 @@ module.exports = {
           value: MBDFIELD3VALUESERVERIP,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

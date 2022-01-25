@@ -30,9 +30,9 @@ module.exports = {
     var hoekafgerond = Math.round((hoek + Number.EPSILON) * 1000) / 1000;
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLEHOEKLIJN)
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription(process.env.MBDDESCHOEKLIJN)
       .addFields(
         {
@@ -64,7 +64,7 @@ module.exports = {
           value: `Als je eind-antwoord groter is dan 90°, moet je eerst 180 - *hoek* doen. Dan pas heb je je antwoord.`,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

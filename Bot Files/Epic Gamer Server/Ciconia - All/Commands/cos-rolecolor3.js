@@ -91,9 +91,9 @@ module.exports = {
     const neongreenTeamEmoji = "🥔";
 
     let embed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
-      .setFooter(process.env.MBDFTR)
-      .setImage(process.env.MBDIMG)
+      .setColor(config.base.basecolor)
+      .setFooter(config.embed.embedfooter)
+      .setImage(config.embed.embedimage)
       .setTitle("Role Color")
       .setDescription(
         "Choose a role color that you like, and your name will turn into that color.\n\n" +

@@ -37,9 +37,9 @@ module.exports = {
     var molariteitonbekendeafgerondex = molariteitonbekendeafgerond / 10;
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLETITREERNORMAAL)
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription(process.env.MBDDESCTITREERNORMAAL)
       .addFields(
         {
@@ -59,7 +59,7 @@ module.exports = {
           value: `${mmolonbekendeafgerond} ML / ${pipet} = ${molariteitonbekendeafgerondex} ML.`,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

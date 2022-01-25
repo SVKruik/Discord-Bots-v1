@@ -11,10 +11,10 @@ module.exports = {
     const target = message.mentions.users.first();
     if (target) {
       let mainRole = message.guild.roles.cache.find(
-        (role) => role.name === process.env.MAINROLE
+        (role) => role.name === config.base.basemainrole
       );
       let blindRole = message.guild.roles.cache.find(
-        (role) => role.name === process.env.BLINDROLE
+        (role) => role.name === config.base.baseblindrole
       );
 
       let memberTarget = message.guild.members.cache.get(target.id);

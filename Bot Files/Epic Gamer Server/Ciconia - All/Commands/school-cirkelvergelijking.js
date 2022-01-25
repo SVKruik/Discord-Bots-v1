@@ -27,9 +27,9 @@ module.exports = {
     const diameter = wabcafgerond * 2;
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLECIRCLE)
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription(process.env.MBDDESCCIRCLE)
       .addFields(
         {
@@ -61,7 +61,7 @@ module.exports = {
           value: `√${abc} geeft een straal van ${wabcafgerond}. De diameter is dus ${diameter}.`,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

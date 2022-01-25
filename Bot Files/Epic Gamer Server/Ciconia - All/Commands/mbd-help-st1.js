@@ -19,11 +19,11 @@ module.exports = {
     const EventsEmoji = "⚪";
 
     let embed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLEHELPST1)
-      .setImage(process.env.MBDIMG)
-      .setURL(process.env.MBDURL)
-      .setFooter(process.env.MBDFTR)
+      .setImage(config.embed.embedimage)
+      .setURL(config.embed.embedlink)
+      .setFooter(config.embed.embedfooter)
       .setDescription(
         "Choose a topic where you want to have help with. If this Bot still does not answer your questions, you can contact our support team.\n\n" +
           `${ApplyEmoji} - For information about becoming a staff member.\n` +

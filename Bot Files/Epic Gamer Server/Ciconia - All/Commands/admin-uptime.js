@@ -13,15 +13,15 @@ module.exports = {
     const seconds = Math.floor(client.uptime / 1000) % 60;
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle("Bot Uptime")
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription("Check the uptime of the bot.")
       .addFields({
         name: `Uptime:`,
         value: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`,
       })
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

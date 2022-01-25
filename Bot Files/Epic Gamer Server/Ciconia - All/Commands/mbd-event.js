@@ -27,10 +27,10 @@ module.exports = {
     const blueTeamEmoji = "🟦";
 
     let embed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
-      .setFooter(process.env.MBDFTR)
-      .setImage(process.env.MBDIMG)
-      .setURL(process.env.MBDURL)
+      .setColor(config.base.basecolor)
+      .setFooter(config.embed.embedfooter)
+      .setImage(config.embed.embedimage)
+      .setURL(config.embed.embedlink)
       .setTitle("Choose a team to play on!")
       .setDescription(
         "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.\n\n" +

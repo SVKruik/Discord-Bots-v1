@@ -58,9 +58,9 @@ module.exports = {
       Math.round((coordpuntenvol + Number.EPSILON) * 10) / 10;
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLEPUNTTOTLIJN)
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription(process.env.MBDDESCPUNTTOTLIJN)
       .addFields(
         {
@@ -88,7 +88,7 @@ module.exports = {
           value: `d(${punt1}, ${lijn1}) = d(${punt1}, ${punt2}) = √(${coordpunt2x} - ${coordpunt1x})² + (${coordpunt2y} - ${coordpunt1y})² = √(${coordpuntenx})² + (${coordpunteny})² = √${coordpuntenxkwa} + ${coordpuntenykwa} = √${coordpuntenkwa} = ${coordpuntenvolafgerond}.`,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

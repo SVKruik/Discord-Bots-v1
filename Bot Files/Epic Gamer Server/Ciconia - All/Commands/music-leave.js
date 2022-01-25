@@ -9,7 +9,7 @@ module.exports = {
   async execute(message, args, cmd, client, Discord) {
     const voiceChannel = message.member.voice.channel;
 
-    if (!voiceChannel) return message.channel.send(process.env.MSGVCREQ);
+    if (!voiceChannel) return message.channel.send(config.basemessages.messagesvcrequired);
     await voiceChannel.leave();
     await message.channel.send(process.env.MSGLEAVE);
   },

@@ -9,8 +9,8 @@ module.exports = {
   description: "Deposit coins from your wallet to your bank.",
   async execute(message, args, cmd, client, discord, profileData) {
     const amount = args[0];
-    if (amount % 1 != 0 || amount < 0)
-      return message.channel.send(process.env.MSGGREATERONE);
+    if (amount % 1 == 0 || amount < 1)
+      return message.channel.send(config.basemessages.messagesgreaterone);
     try {
       if (amount > profileData.coins)
         return message.channel.send(config.basemessages.messagescoinsmissing);

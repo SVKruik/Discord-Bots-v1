@@ -12,13 +12,13 @@ module.exports = {
 
     if (!args[0])
       return message.channel.send(process.env.MSGCLEARAMOUNTMISSING);
-    if (isNaN(args[0])) return message.channel.send(process.env.MSGISNAN);
+    if (isNaN(args[0])) return message.channel.send(config.basemessages.messagesrealnumber);
 
     if (args[0] > max)
       return message.channel.send(
         `You cannot clear more than ${max} messages in one command.`
       );
-    if (args[0] < min) return message.channel.send(process.env.MSGGREATERONE);
+    if (args[0] < min) return message.channel.send(config.basemessages.messagesgreaterone);
 
     await message.channel.messages
       .fetch({ limit: args[0] })

@@ -8,9 +8,9 @@ module.exports = {
   description: "This silences spamming or naughty people. Can only read stuff.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle("Bot Latency")
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription("This is my latency.")
       .addFields(
         {
@@ -22,7 +22,7 @@ module.exports = {
           value: `${Math.round(client.ws.ping)} ms`,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

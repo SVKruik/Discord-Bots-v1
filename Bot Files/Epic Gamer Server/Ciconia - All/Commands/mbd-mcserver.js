@@ -20,10 +20,10 @@ module.exports = {
       .then((response) => {
         console.log(response);
         const embed = new Discord.MessageEmbed()
-          .setColor(process.env.MBDCLR)
+          .setColor(config.base.basecolor)
           .setTitle(process.env.MBDTITLEMCSERVER)
-          .setURL(process.env.MBDURL)
-          .setImage(process.env.MBDIMG)
+          .setURL(config.embed.embedlink)
+          .setImage(config.embed.embedimage)
           .setDescription(process.env.MBDDESCMCSERVER)
           .addFields(
             { name: "Server IP", value: response.host },
@@ -33,7 +33,7 @@ module.exports = {
             { name: "Port", value: response.port },
             { name: "Mods", value: response.modInfo }
           )
-          .setFooter(process.env.MBDFTR);
+          .setFooter(config.embed.embedfooter);
 
         message.channel.send(embed);
       })

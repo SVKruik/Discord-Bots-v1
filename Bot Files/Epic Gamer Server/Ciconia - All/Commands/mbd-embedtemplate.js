@@ -8,10 +8,10 @@ module.exports = {
   description: "Embed template for devs.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLEMBDTEMP)
-      .setImage(process.env.MBDIMG)
-      .setURL(process.env.MBDURL)
+      .setImage(config.embed.embedimage)
+      .setURL(config.embed.embedlink)
       .setDescription(process.env.MBDDESCMBDTEMP)
       .addFields(
         {
@@ -23,7 +23,7 @@ module.exports = {
           value: process.env.MBDFIELD2VALUEMBDTEMP,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

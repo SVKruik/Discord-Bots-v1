@@ -49,9 +49,9 @@ module.exports = {
       Math.round((molariteitonbekende + Number.EPSILON) * 1000) / 1000;
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLETITREERVERDUN)
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription(process.env.MBDDESCTITREERVERDUN)
       .addFields(
         {
@@ -75,7 +75,7 @@ module.exports = {
           value: `${mmolonbekendenapipetafgerond} ML ⋅ ${verdunningsfactorafgerond} = ${molariteitonbekendeafgerond} M.`,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

@@ -8,10 +8,10 @@ module.exports = {
   description: "Support our project by donating to us.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLEDONATE)
-      .setImage(process.env.MBDIMG)
-      .setURL(process.env.MBDURL)
+      .setImage(config.embed.embedimage)
+      .setURL(config.embed.embedlink)
       .setDescription(process.env.MBDDESCDONATE)
       .addFields(
         {
@@ -23,7 +23,7 @@ module.exports = {
           value: process.env.MBDFIELD2VALUEDONATE,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

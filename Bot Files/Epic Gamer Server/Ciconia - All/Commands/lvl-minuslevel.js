@@ -13,8 +13,8 @@ module.exports = {
     const target = message.mentions.users.first();
     if (!target) return message.channel.send(config.basemessages.messagesfinderror);
 
-    if (amount % 1 != 0 || amount < 0)
-      return message.channel.send(process.env.MSGGREATERONE);
+    if (amount % 1 == 0 || amount < 1)
+      return message.channel.send(config.basemessages.messagesgreaterone);
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
       if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);

@@ -12,7 +12,7 @@ module.exports = {
     "Music Bot via YouTube links. You must be in a call for it to work.",
   async execute(message, args, cmd, client, Discord) {
     const voice_channel = message.member.voice.channel;
-    if (!voice_channel) return message.channel.send(process.env.MSGVCREQ);
+    if (!voice_channel) return message.channel.send(config.basemessages.messagesvcrequired);
     const permissions = voice_channel.permissionsFor(message.client.user);
     if (!permissions.has("CONNECT"))
       return message.channel.send(process.env.MSGPLAYCONNECTMISSING);
@@ -97,7 +97,7 @@ const video_player = async (guild, song) => {
 
 const skip_song = (message, server_queue) => {
   if (!message.member.voice.channel)
-    return message.channel.send(process.env.MSGVCREQ);
+    return message.channel.send(config.basemessages.messagesvcrequired);
   if (!server_queue) {
     return message.channel.send(process.env.MSGPLAYQUEUEEMPTY);
   }
@@ -106,7 +106,7 @@ const skip_song = (message, server_queue) => {
 
 const stop_song = (message, server_queue) => {
   if (!message.member.voice.channel)
-    return message.channel.send(process.env.MSGVCREQ);
+    return message.channel.send(config.basemessages.messagesvcrequired);
   server_queue.songs = [];
   server_queue.connection.dispatcher.end();
 };

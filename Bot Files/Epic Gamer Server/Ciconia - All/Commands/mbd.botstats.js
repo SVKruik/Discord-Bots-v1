@@ -18,9 +18,9 @@ module.exports = {
     const commands = fs.readdirSync("./commands").length;
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle("Bot Statistics")
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription("These are my stats at the moment:")
       .addFields(
         {
@@ -37,7 +37,7 @@ module.exports = {
         { name: "Bot Version:", value: `${version}` },
         { name: "Owner:", value: `<@422704748488163332>` }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

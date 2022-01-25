@@ -11,9 +11,9 @@ module.exports = {
     const tag = tagfull.slice(-4);
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLEPROFILE)
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription(process.env.MBDDESCPROFILE)
       .addFields(
         { name: "---", value: "> **General:**" },
@@ -28,7 +28,7 @@ module.exports = {
         { name: "Level:", value: `${profileData.level}` },
         { name: "Experience:", value: `${profileData.experience}` }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

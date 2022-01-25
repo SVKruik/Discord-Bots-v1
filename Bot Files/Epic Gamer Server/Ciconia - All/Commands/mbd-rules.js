@@ -8,10 +8,10 @@ module.exports = {
   description: "Displays an embed with our active server rules.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLERULES)
-      .setURL(process.env.MBDURL)
-      .setImage(process.env.MBDIMG)
+      .setURL(config.embed.embedlink)
+      .setImage(config.embed.embedimage)
       .setDescription(process.env.MBDDESCRULES)
       .addFields(
         {
@@ -39,7 +39,7 @@ module.exports = {
           value: process.env.MBDFIELD6VALUERULES,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

@@ -8,9 +8,9 @@ module.exports = {
   description: "Displays all import links to our GitHub repository.",
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle(process.env.MBDTITLEGITHUB)
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription(process.env.MBDDESCGITHUB)
       .addFields(
         {
@@ -34,7 +34,7 @@ module.exports = {
           value: process.env.MBDFIELD5VALUEGITHUB,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },

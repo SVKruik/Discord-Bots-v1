@@ -10,9 +10,9 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     try {
       const newEmbed = new Discord.MessageEmbed()
-        .setColor(process.env.MBDCLR)
+        .setColor(config.base.basecolor)
         .setTitle(`Calculator`)
-        .setImage(process.env.MBDIMG)
+        .setImage(config.embed.embedimage)
         .setDescription("Here is the answer to your question:")
         .addFields(
           {
@@ -24,7 +24,7 @@ module.exports = {
             value: Math.round(math.evaluate(args.join(" ")) * 100) / 100,
           }
         )
-        .setFooter(process.env.MBDFTR);
+        .setFooter(config.embed.embedfooter);
 
       message.channel.send(newEmbed);
     } catch (err) {

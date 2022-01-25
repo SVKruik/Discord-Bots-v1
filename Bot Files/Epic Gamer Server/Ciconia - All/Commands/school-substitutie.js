@@ -66,9 +66,9 @@ module.exports = {
     //   Math.round((coordpuntenvol + Number.EPSILON) * 10) / 10;
 
     const newEmbed = new Discord.MessageEmbed()
-      .setColor(process.env.MBDCLR)
+      .setColor(config.base.basecolor)
       .setTitle("Substitutie")
-      .setImage(process.env.MBDIMG)
+      .setImage(config.embed.embedimage)
       .setDescription(
         "Dit stappenplan laat zien hoe je een Substitutie berekening maakt. Dit is een vrij complexe berekening binnen de Wiskunde B."
       )
@@ -126,7 +126,7 @@ module.exports = {
           value: `In het geval van D = ${formulenaam}² - 38${formulenaam} + 72 --> Q = 2 V Q = 36.`,
         }
       )
-      .setFooter(process.env.MBDFTR);
+      .setFooter(config.embed.embedfooter);
 
     message.channel.send(newEmbed);
   },
