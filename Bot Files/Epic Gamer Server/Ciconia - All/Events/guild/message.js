@@ -1,5 +1,5 @@
 require("dotenv").config();
-const profileModel = require("../../models/profileSchema");
+const profileModel = require("../../Models/profileSchema");
 const config = require("./../../Other/config.js");
 const cooldowns = new Map();
 
@@ -8,7 +8,7 @@ module.exports = async (Discord, client, message) => {
   const prefix = config.base.baseprefix;
   const target = message.author.id;
 
-  const profileModel = require("../../models/profileSchema");
+  const profileModel = require("../../Models/profileSchema");
 
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 

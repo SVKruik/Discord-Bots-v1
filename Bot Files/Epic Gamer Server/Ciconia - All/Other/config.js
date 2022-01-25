@@ -1,6 +1,6 @@
 require("console-stamp")(console, "[HH:MM]");
 const ms = require("ms");
-const profileModel = require("../models/profileSchema");
+const profileModel = require("../Models/profileSchema");
 const util = require("minecraft-server-util");
 var Scraper = require("images-scraper");
 const math = require("mathjs");

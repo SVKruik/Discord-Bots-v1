@@ -22,8 +22,8 @@ module.exports = {
         `You are not in the right channel to use this command! Please use <#${channel}> instead!`
       );
     }
-    const blacklist = require("./../Other/profanity.js");
 
+    const blacklist = require("./../Other/profanity.js");
     blacklist.forEach((word) => {
       if (message.content.toLowerCase().includes(word.toLowerCase())) {
         message.delete();
@@ -35,7 +35,7 @@ module.exports = {
         return;
       } else {
         const image_results = await google.scrape(image_query, 1);
-        await message.channel.send(image_results[0].url);
+        message.channel.send(image_results[0].url);
       };
     });
 

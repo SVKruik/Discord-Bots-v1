@@ -1,4 +1,4 @@
-const profileModel = require("../models/profileSchema");
+const profileModel = require("../Models/profileSchema");
 const config = require("./../Other/config.js");
 
 module.exports = {
