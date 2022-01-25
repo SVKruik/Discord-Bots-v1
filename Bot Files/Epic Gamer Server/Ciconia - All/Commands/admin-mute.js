@@ -41,7 +41,7 @@ module.exports = {
         message.channel.send;
       }, ms(args[1]));
     } else {
-      message.channel.send(process.env.MSGFINDERR);
+      message.channel.send(config.basemessages.messagesfinderror);
     }
   },
 };

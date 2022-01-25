@@ -366,15 +366,16 @@ exports.permissions = {
   permissiontitreerverdunning: J,
 };
 
-exports.basemesssages = {
+exports.basemessages = {
   // Command Messages
     // Base
   messagesfinderror: "Could not find the specified variable.",
   messagesvcrequired: "You need to be in a voice channel in order to use this command.",
   messagesmembermention: "You need to mention someone to execute this command.",
   messagesaccountmissing: "This user does not have an account in our database.",
-  messagesgreaternegaone: "Set amount must be larger then \`-1\`",
-  messagesgreaterone: "The reduce amount must be greater then \`0\`",
+  messageserror: "There was an error sending the command.",
+  messagesgreaternegaone: "Amount must be larger then \`-1\`",
+  messagesgreaterone: "Amount must be greater then \`0\`",
   messagescoinsmissing: "You do not have that amount of coins to perform this command.",
   messagesrealnumber: "Please enter a real number.",
     // Core files - message.js

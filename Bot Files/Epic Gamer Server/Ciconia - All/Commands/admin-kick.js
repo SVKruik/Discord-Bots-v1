@@ -23,7 +23,7 @@ module.exports = {
         `<@${memberTarget.user.id}> got kicked. Reason: ${reason2}.`
       );
     } else {
-      message.channel.send(process.env.MSGERR);
+      message.channel.send(config.basemessages.messageserror);
     }
   },
 };

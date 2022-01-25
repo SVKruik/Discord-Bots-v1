@@ -42,7 +42,7 @@ module.exports = {
         if (video) {
           song = { title: video.title, url: video.url };
         } else {
-          message.channel.send(process.env.MSGFINDERR);
+          message.channel.send(config.basemessages.messagesfinderror);
         }
       }
 

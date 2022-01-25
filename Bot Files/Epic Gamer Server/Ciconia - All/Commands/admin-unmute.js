@@ -24,7 +24,7 @@ module.exports = {
         `<@${memberTarget.user.id}> has been succesfully unmuted. You can now talk again!`
       );
     } else {
-      message.channel.send(process.env.MSGFINDERR);
+      message.channel.send(config.basemessages.messagesfinderror);
     }
   },
 };

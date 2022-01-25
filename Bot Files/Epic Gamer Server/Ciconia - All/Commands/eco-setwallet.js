@@ -8,16 +8,16 @@ module.exports = {
   permissions: config.permissions.permissionsetwallet,
   description: "Reset the balance of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
-    if (!args.length) return message.channel.send(process.env.MSGMEMBERMENTION);
+    if (!args.length) return message.channel.send(config.basemessages.messagesmembermention);
     const amount = args[1];
     const target = message.mentions.users.first();
-    if (!target) return message.channel.send(process.env.MSGFINDERR);
+    if (!target) return message.channel.send(config.basemessages.messagesfinderror);
 
     if (amount < 0) return message.channel.send(process.env.MSGGREATERNEGAONE);
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
-      if (!targetData) return message.channel.send(process.env.MSGNOACCOUNT);
+      if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
       await profileModel.findOneAndUpdate(
         {
           userID: target.id,

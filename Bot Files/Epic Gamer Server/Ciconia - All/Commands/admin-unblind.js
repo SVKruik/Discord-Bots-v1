@@ -24,7 +24,7 @@ module.exports = {
         `<@${memberTarget.user.id}> has been succesfully unblinded. Welcome back!`
       );
     } else {
-      message.channel.send(process.env.MSGFINDERR);
+      message.channel.send(config.basemessages.messagesfinderror);
     }
   },
 };

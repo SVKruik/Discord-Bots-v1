@@ -14,7 +14,7 @@ module.exports = {
 
     try {
       if (amount > profileData.bank)
-        return message.channel.send(process.env.MSGSHORT);
+        return message.channel.send(config.basemessages.messagescoinsmissing);
 
       await profileModel.findOneAndUpdate(
         {

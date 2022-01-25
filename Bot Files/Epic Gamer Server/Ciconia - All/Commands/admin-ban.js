@@ -24,7 +24,7 @@ module.exports = {
         `<@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason2}.`
       );
     } else {
-      message.channel.send(process.env.MSGERR);
+      message.channel.send(config.basemessages.messageserror);
     }
   },
 };
