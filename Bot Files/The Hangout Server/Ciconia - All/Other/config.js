@@ -31,7 +31,7 @@ exports.base = {
   baseexperiencedefault: "0",
   basewelcomechannelid: "850753468927049798",
   baseimagechannelid: "934093861079380018",
-  basemembercounterhz: '90000',
+  basemembercounterhz: '180000',
   baseguildid: "820580469757313025",
   basemembercounterchannelid: "873925840096886784",
   baseeventchannelid: "896369888103366716",
@@ -135,6 +135,8 @@ exports.aliases = {
   aliasesflipacoinnl: ["facnl", "kopmunt"], // Kopofmunt
   aliasesimage: ["img"], // Image
   aliasesmath: ["math", "calc", "calculate"], // Math
+  aliasesrpsen: ["rps"], //Rock Paper Scissor
+  aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasesticket: ["tkt"], // Ticket
   aliasescirkelvergelijking: ["circle"], // Cirkel
   aliaseshoeklijn: ["hkli"], // Hoeklijn
@@ -211,6 +213,8 @@ exports.cooldown = {
   cooldownflipacoinnl: H,
   cooldownimage: B,                               // Temporary
   cooldownmath: G,
+  cooldownrpsen: H,
+  cooldownrpsnl: H,
   cooldownticket: D,
   cooldowncirkelvergelijking: E,
   cooldownhoeklijn: E,
@@ -291,6 +295,8 @@ exports.descriptions = {
   descriptionflipacoinnl: "Kop of munt!", // Dutch version of Flip a Coin. Same command, different language.
   descriptionimage: "This sends the best google result for an image.",
   descriptionmath: "Basic calculation.",
+  descriptionrpsnl: "Speel steen, papier, schaar met de bot!",
+  descriptionrpsnl: "Play some rock, paper, scissor with the bot!",
   descriptionticket: "Open a support ticket!",
   descriptioncirkelvergelijking: "Calculate a circle equation.",
   descriptionhoeklijn:
@@ -363,6 +369,8 @@ exports.permissions = {
   permissionflipacoinnl: J,
   permissionimage: I,
   permissionmath: J,
+  permissionrpsen: J,
+  permissionrpsnl: J,
   permissionticket: J,
   permissioncirkelvergelijking: J,
   permissionhoeklijn: J,
