@@ -137,6 +137,7 @@ exports.aliases = {
   aliasesmath: ["math", "calc", "calculate"], // Math
   aliasesrpsen: ["rps"], //Rock Paper Scissor
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
+  aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
   aliasesticket: ["tkt"], // Ticket
   aliasescirkelvergelijking: ["circle"], // Cirkel
   aliaseshoeklijn: ["hkli"], // Hoeklijn
@@ -215,6 +216,7 @@ exports.cooldown = {
   cooldownmath: G,
   cooldownrpsen: H,
   cooldownrpsnl: H,
+  cooldownsrpsen: H,
   cooldownticket: D,
   cooldowncirkelvergelijking: E,
   cooldownhoeklijn: E,
@@ -371,6 +373,7 @@ exports.permissions = {
   permissionmath: J,
   permissionrpsen: J,
   permissionrpsnl: J,
+  permissionsrpsen: J,
   permissionticket: J,
   permissioncirkelvergelijking: J,
   permissionhoeklijn: J,
