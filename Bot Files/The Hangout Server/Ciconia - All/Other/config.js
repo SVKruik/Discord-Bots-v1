@@ -212,7 +212,7 @@ exports.cooldown = {
   cooldowncommandtemplate: B,
   cooldownflipacoinen: H,
   cooldownflipacoinnl: H,
-  cooldownimage: B,                               // Temporary
+  cooldownimage: G,                               // Temporary
   cooldownmath: G,
   cooldownrpsen: H,
   cooldownrpsnl: H,
@@ -369,7 +369,7 @@ exports.permissions = {
   permissioncommandtemplate: J,
   permissionflipacoinen: J,
   permissionflipacoinnl: J,
-  permissionimage: I,
+  permissionimage: J,
   permissionmath: J,
   permissionrpsen: J,
   permissionrpsnl: J,
@@ -382,6 +382,32 @@ exports.permissions = {
   permissiontitreernormaal: J,
   permissiontitreerverdunning: J,
 };
+
+  // Message Dependencies
+// const banrequire = require("../Commands/admin-ban.js");
+// const { target } = banrequire;
+// const { username } = banrequire;
+// const { reason1 } = banrequire;
+// const { reason2 } = banrequire;
+// const { memberTarget } = banrequire;
+
+// const blindrequire = require("../Commands/admin-blind.js");
+// const clearrequire = require("../Commands/admin-clear.js");
+// const kickrequire = require("../Commands/admin-kick.js");
+// const muterequire = require("../Commands/admin-mute.js");
+// const pingrequire = require("../Commands/admin-ping.js");
+// const unblindrequire = require("../Commands/admin-unblind.js");
+// const unmuterequire = require("../Commands/admin-unmute.js");
+// const uptimerequire = require("../Commands/admin-uptime.js");
+// const rolecolor1require = require("../Commands/cos-rolecolor1.js");
+// const rolecolor2require = require("../Commands/cos-rolecolor2.js");
+// const rolecolor3require = require("../Commands/cos-rolecolor3.js");
+// const balancerequire = require("../Commands/eco-balance.js");
+// const balancebankrequire = require("../Commands/eco-balancebank");
+// const balancewalletrequire = require("../Commands/eco-balancewallet.js");
+// const dailyrewardrequire = require("../Commands/eco-dailyreward.js");
+// const depositrequire = require("../Commands/eco-deposit.js");
+// const givebankrequire = require("../Commands/eco-givebank.js");
 
 exports.basemessages = {
   // General Messages
