@@ -26,7 +26,9 @@ module.exports = {
     }
     message.channel.send(random);
 
-    if (random.toLowerCase(slice(0, 4) == args[0]))
+    var lowerrandom = random.toLowerCase();
+
+    if (lowerrandom.substring(0, 4) == args[0])
       return message.channel.send("It's a tie! You did not loose any coins.");
     else if (random.slice(0, 4) != args[0]) {
       try {
@@ -47,7 +49,7 @@ module.exports = {
         );
 
         return message.channel.send(
-          `You win! You received double your stake. Your stake was \`${args[1]}\`.`
+          `You win! You received double your stake. Your stake was \`${args[1]}\`, your new balance is \`${profileData.bank}\`.`
         );
       } catch (err) {
         console.log(err);
