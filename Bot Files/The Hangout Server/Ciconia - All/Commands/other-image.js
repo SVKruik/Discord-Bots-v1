@@ -26,6 +26,7 @@ module.exports = {
 
     if (blacklist.includes(args[0].toLowerCase())) {
       message.delete();
+      console.log(`${message.author.username} used the following forbidden word in an image search: || ${args[0]} ||`);
       return message.channel.send("Lets keep this family friendly!");
     } else {
       const image_results = await google.scrape(image_query, 1);

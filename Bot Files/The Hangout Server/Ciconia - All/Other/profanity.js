@@ -814,6 +814,7 @@ module.exports = [
 "nookie",
 "noonan",
 "nooner",
+"nswf",
 "nude",
 "nudger",
 "nuke",
