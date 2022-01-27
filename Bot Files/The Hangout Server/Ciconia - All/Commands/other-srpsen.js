@@ -25,6 +25,7 @@ module.exports = {
       return message.channel.send(`\`${args[0]}\` is not a valid option.`);
     }
     message.channel.send(random);
+    console.log(random);
 
     var lowerrandom = random.toLowerCase();
 
