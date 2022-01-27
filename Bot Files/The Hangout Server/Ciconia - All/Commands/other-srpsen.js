@@ -51,7 +51,11 @@ module.exports = {
         const profit = stake * 2;
         const newbal = profileData.coins + profit;
         return message.channel.send(
+<<<<<<< HEAD
           `You win! You received double your stake. Your stake was \`${args[1]}\`, your new balance is \`${newbal}\`.`
+=======
+          `You win! You received double your stake. Your stake was \`${args[1]}\`, your new balance is \`${profileData.bank}\`.`
+>>>>>>> 32680595919e4887b95d3447b24d99d818517b8a
         );
       } catch (err) {
         console.log(err);
