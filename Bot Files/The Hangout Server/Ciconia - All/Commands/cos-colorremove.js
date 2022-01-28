@@ -1,11 +1,11 @@
 const config = require("./../Other/config.js");
 
 module.exports = {
-  name: "color",
-  aliases: config.aliases.aliasescolor,
-  cooldown: config.cooldown.cooldowncolor,
-  permissions: config.permissions.permissioncolor,
-  description: "Choose a color by ID or name.",
+  name: "colorremove",
+  aliases: config.aliases.aliasescolorremove,
+  cooldown: config.cooldown.cooldowncolorremove,
+  permissions: config.permissions.permissioncolorremove,
+  description: "Remove a color role by ID or name.",
   async execute(message, args, cmd, client, Discord) {
     const whiteTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910544967582253086"
@@ -619,7 +619,7 @@ module.exports = {
 
     const colorlist = require("../Other/colorlist.js");
     const coloridlist = require("../Other/coloridlist.js");
-    const channel = config.base.baserolecolorchannelid;
+    const channel = config.baserolecolorchannelid;
 
     const colorname = args[0];
     if (!args.length)
@@ -631,20 +631,19 @@ module.exports = {
         `You are not in the right channel to use this command! Please use <#${channel}> instead!`
       );
     }
-    const member = message.author.id
 
-    if (args[0] == "white") {
-      console.log(
-        `${message.author.username} now has a new role color: ${args[0]}.`
-      );
-      message.author.roles.add(whiteTeamRole);
-      message.channel.send(`You now have new rolecolor: <@${role.id}>.`);
+    if (coloridlist["1"] == args[0]) {
+      console
+        .log(`${message.author.username} now has a new role color: ${args[0]}.`)
+        .get(user.id)
+        .roles.remove(whiteTeamRole);
+      message.channel.send(`You now have new rolecolor: <@roleidhere>.`);
     } else if (coloridlist["2"] == args[0]) {
-      console.log(
-        `${message.author.username} now has a new role color: ${args[0]}.`
-      );
-      member.roles.add(greyTeamRole);
-      message.channel.send(`You now have new rolecolor: <@${role.id}>.`);
+      console
+        .log(`${message.author.username} now has a new role color: ${args[0]}.`)
+        .get(user.id)
+        .roles.remove(greyTeamRole);
+      message.channel.send(`You now have new rolecolor: <@roleidhere>.`);
     }
   },
 };

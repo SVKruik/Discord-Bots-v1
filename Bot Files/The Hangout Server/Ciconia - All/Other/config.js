@@ -61,6 +61,7 @@ exports.aliases = {
   aliasesunmute: [], //Unmute
   aliasesuptime: [], // Uptime
   aliasescolor: ["clr", "colour"], // Color
+  aliasescolor: ["clrremove", "colourremove", "clrrmv"], // Colorremove
   aliasesrolecolor1: ["rlclr1"], // Rolecolor1
   aliasesrolecolor2: ["rlclr2"], // Rolecolor2
   aliasesrolecolor3: ["rlclr3"], // Rolecolor3
@@ -167,6 +168,7 @@ exports.cooldown = {
   cooldownunmute: B,
   cooldownuptime: B,
   cooldowncolor: B,
+  cooldowncolorremove: B,
   cooldownrolecolor1: B,
   cooldownrolecolor2: B,
   cooldownrolecolor3: B,
@@ -244,6 +246,7 @@ exports.descriptions = {
   descriptionunmute: "This command unmutes members.",
   descriptionuptime: "Check the uptime of the bot.",
   descriptioncolor: "Choose a color by ID or name.",
+  descriptioncolorremove: "Remove a color role by ID or name.",
   descriptionrolecolor1: "Role color choose page 1.",
   descriptionrolecolor2: "Role color choose page 2.",
   descriptionrolecolor3: "Role color choose page 3.",
@@ -325,6 +328,7 @@ exports.permissions = {
   permissionunblind: I,
   permissionunmute: I,
   permissionuptime: I,
+  permissioncolor: J,
   permissioncolor: J,
   permissionrolecolor1: I,
   permissionrolecolor2: I,
