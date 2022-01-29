@@ -1,3 +1,4 @@
+const { colorserverrolelist } = require("../Other/colorserverrolelist.js");
 const config = require("./../Other/config.js");
 
 module.exports = {
@@ -620,6 +621,7 @@ module.exports = {
     const colorlist = require("../Other/colorlist.js");
     const coloridlist = require("../Other/coloridlist.js");
     const channel = config.base.baserolecolorchannelid;
+    const user = message.author;
 
     const colorname = args[0];
     if (!args.length)
@@ -631,20 +633,1261 @@ module.exports = {
         `You are not in the right channel to use this command! Please use <#${channel}> instead!`
       );
     }
-    const member = message.author.id
 
     if (args[0] == "white") {
       console.log(
         `${message.author.username} now has a new role color: ${args[0]}.`
       );
-      message.author.roles.add(whiteTeamRole);
-      message.channel.send(`You now have new rolecolor: <@${role.id}>.`);
-    } else if (coloridlist["2"] == args[0]) {
+      message.channel.send(`You now have a new rolecolor: ${whiteTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(whiteTeamRole);
+    } else if (args[0] == coloridlist[1]) {
       console.log(
         `${message.author.username} now has a new role color: ${args[0]}.`
       );
-      member.roles.add(greyTeamRole);
-      message.channel.send(`You now have new rolecolor: <@${role.id}>.`);
+      message.channel.send(`You now have a new rolecolor: ${greyTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(greyTeamRole);
+    } else if (args[0] == coloridlist[2]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightyellowTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[3]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brickyellowTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[4]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[5]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightreddishvioletTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[6]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${pastelblueTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[7]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightorangebrownTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[8]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${nougat}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[9]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brightredTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[10]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${medreddishvioletTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[11]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brightblueTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[12]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brightyellowTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[13]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${earthorangeTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[14]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${blackTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[15]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${darkgreyTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[16]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${darkgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[17]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${mediumgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[18]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${ligyellowichorangeTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[19]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brightgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[20]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${darkorangeTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[21]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightbluishvioletTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[22]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${transparentTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[23]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${trredTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[24]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${trlgblueTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[25]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${trblueTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[26]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${tryellowTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[27]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightblueTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[28]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${trfluereddishorangeTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[29]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${trgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[30]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${trflugreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[31]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${phosphwhiteTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[32]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightredTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[33]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${mediumredTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[34]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${mediumblueTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[35]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightgreyTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[36]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brightvioletTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[37]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${bryellowishorangeTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[38]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brightorangeTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[39]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brightbluishgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[40]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${earthyellowTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[41]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brightbluishvioletTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[42]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${trbrownTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[43]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${mediumbluishvioletTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[44]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${trmedireddishvioletTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[45]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${medyellowishgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[46]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${medbluishgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[47]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${lightbluishgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[48]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${bryellowishgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[49]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${ligyellowishgreenTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[50]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${medyellowishorangeTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[51]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${brreddishorangeTeamRole}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[52]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[53]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[54]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[55]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[56]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[57]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[58]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[59]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[60]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[61]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[62]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[63]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[64]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[65]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[66]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[67]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[68]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[69]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[70]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[71]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[72]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[73]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[74]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[75]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[76]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[77]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[78]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[79]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[80]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[81]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[82]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[83]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[84]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[85]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[86]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[87]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[88]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[89]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[90]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[91]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[92]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[93]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[94]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[95]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[96]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[97]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[98]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[99]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[100]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[101]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[102]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[103]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[104]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[105]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[106]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[107]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[108]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[109]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[110]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[111]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[112]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[113]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[114]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[115]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[116]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[117]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[118]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[119]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[120]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[121]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[122]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[123]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[124]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[125]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[126]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[127]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[128]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[129]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[130]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[131]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[132]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[133]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[134]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[135]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[136]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[137]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[138]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[139]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[140]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[141]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[142]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[143]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[144]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[145]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[146]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[147]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[148]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[149]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[150]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[151]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[152]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[153]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[154]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[155]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[156]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[157]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[158]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[159]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[160]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[161]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[162]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[163]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[164]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[165]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[166]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[167]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[168]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[169]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[170]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[171]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[172]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[173]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[174]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[175]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[176]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[177]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[178]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[179]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[180]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[181]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[182]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[183]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[184]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[185]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[186]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[187]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[188]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[189]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[190]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[191]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[192]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[193]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[194]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[195]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[196]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[197]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[198]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[199]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[200]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[201]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[202]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[203]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[204]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[205]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[206]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[207]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
+    } else if (args[0] == coloridlist[208]) {
+      console.log(
+        `${message.author.username} now has a new role color: ${args[0]}.`
+      );
+      message.channel.send(`You now have a new rolecolor: ${}`);
+      await message.guild.members.cache.get(user.id).roles.add(TeamRole);
     }
   },
 };

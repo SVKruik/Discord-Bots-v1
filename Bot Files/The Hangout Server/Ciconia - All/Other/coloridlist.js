@@ -1,5 +1,4 @@
 exports.coloridlist = {
-    test: "white",
     1: "white",
     2: "grey",
     3: "lightyellow",

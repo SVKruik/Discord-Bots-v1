@@ -14,7 +14,7 @@ module.exports = {
       (role) => role.id === "910545117650235552"
     );
     const lightyellowTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910545170787880970"
+      (role) => role.id === "9105451707880970"
     );
     const brickyellowTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910545246302122025"
@@ -23,7 +23,7 @@ module.exports = {
       (role) => role.id === "910545313352282143"
     );
     const lightreddishvioletTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910545359871303710"
+      (role) => role.id === "9105453591303710"
     );
     const pastelblueTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910545447381250079"
@@ -101,7 +101,7 @@ module.exports = {
       (role) => role.id === "910556525838348398"
     );
     const phosphwhiteTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910556592473251871"
+      (role) => role.id === "9105565924732511"
     );
     const lightredTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910556650937671690"
@@ -119,7 +119,7 @@ module.exports = {
       (role) => role.id === "910556995680100434"
     );
     const bryellowishorangeTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910557046687019008"
+      (role) => role.id === "9105570466019008"
     );
     const brightorangeTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910557131458113556"
@@ -170,7 +170,7 @@ module.exports = {
       (role) => role.id === "910559048653475850"
     );
     const trbrightbluishvioletTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910559168858058762"
+      (role) => role.id === "9105591688580562"
     );
     const goldTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910559235425833001"
@@ -248,7 +248,7 @@ module.exports = {
       (role) => role.id === "910560782910128211"
     );
     const yellowflipflopTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910561110875312128"
+      (role) => role.id === "9105611105312128"
     );
     const silverflipflopTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910561191057850429"
@@ -257,7 +257,7 @@ module.exports = {
       (role) => role.id === "910561277582127124"
     );
     const fireyellowTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910561320028487751"
+      (role) => role.id === "9105613200284751"
     );
     const flameyellowishorangeTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910561359681429565"
@@ -335,7 +335,7 @@ module.exports = {
       (role) => role.id === "910563883104731156"
     );
     const coolyellowTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910563938754777138"
+      (role) => role.id === "9105639354777138"
     );
     const doveblueTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910563991095509022"
@@ -401,7 +401,7 @@ module.exports = {
       (role) => role.id === "910565308643831889"
     );
     const ghostgreyTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910565353233453087"
+      (role) => role.id === "9105653532334530"
     );
     const plumTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910565491326717992"
@@ -434,7 +434,7 @@ module.exports = {
       (role) => role.id === "910565975018074152"
     );
     const daisyorangeTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910566463876784178"
+      (role) => role.id === "9105664636784178"
     );
     const pearlTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910566567241195581"
@@ -494,7 +494,7 @@ module.exports = {
       (role) => role.id === "910567591708340244"
     );
     const pineconeTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910567635643678740"
+      (role) => role.id === "9105676356436740"
     );
     const fawnbrownTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910567666622816258"
@@ -512,10 +512,10 @@ module.exports = {
       (role) => role.id === "910567926355071006"
     );
     const dirtbrownTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910567987659018241"
+      (role) => role.id === "9105679659018241"
     );
     const bronzeTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910568118756208720"
+      (role) => role.id === "91056811562020"
     );
     const flintTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910568175375110144"
@@ -554,10 +554,10 @@ module.exports = {
       (role) => role.id === "910568678913880084"
     );
     const reallyblueTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910568741333499934"
+      (role) => role.id === "9105641333499934"
     );
     const navyblueTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910568797465899038"
+      (role) => role.id === "9105697465899038"
     );
     const cyanTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910568845280935946"
@@ -581,7 +581,7 @@ module.exports = {
       (role) => role.id === "910569222571184138"
     );
     const camoTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910569288367218768"
+      (role) => role.id === "9105692883672168"
     );
     const grimeTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910569321376407552"
@@ -608,7 +608,7 @@ module.exports = {
       (role) => role.id === "910569662503337994"
     );
     const pastelbrownTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910569717540987010"
+      (role) => role.id === "9105697175409010"
     );
     const royalpurpleTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910569767629385828"
