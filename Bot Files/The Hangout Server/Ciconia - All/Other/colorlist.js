@@ -1,4 +1,4 @@
-const list = [
+const colorlist = [
     "white",
     "grey",
     "lightyellow",
