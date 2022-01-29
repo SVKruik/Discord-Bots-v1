@@ -62,7 +62,7 @@ module.exports = {
     const mediumgreenTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910546150250139689"
     );
-    const ligyellowichorangeTeamRole = message.guild.roles.cache.find(
+    const ligyellowishorangeTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910546214976651335"
     );
     const brightgreenTeamRole = message.guild.roles.cache.find(
@@ -87,7 +87,7 @@ module.exports = {
     const darkgreyTeamEmoji = "🥝";
     const darkgreenTeamEmoji = "🍅";
     const mediumgreenTeamEmoji = "🥥";
-    const ligyellowichorangeTeamEmoji = "🥑";
+    const ligyellowishorangeTeamEmoji = "🥑";
     const brightgreenTeamEmoji = "🥔";
 
     let embed = new Discord.MessageEmbed()
@@ -115,7 +115,7 @@ module.exports = {
           `${darkgreyTeamEmoji} = Dark Grey, 27\n` +
           `${darkgreenTeamEmoji} = Dark Green, 28\n` +
           `${mediumgreenTeamEmoji} = Medium Green, 29\n` +
-          `${ligyellowichorangeTeamEmoji} = Lig. Yellowich Orange, 36\n` +
+          `${ligyellowishorangeTeamEmoji} = Lig. yellowish Orange, 36\n` +
           `${brightgreenTeamEmoji} = Bright Green, 37`
       );
 
@@ -138,7 +138,7 @@ module.exports = {
     messageEmbed.react(darkgreyTeamEmoji);
     messageEmbed.react(darkgreenTeamEmoji);
     messageEmbed.react(mediumgreenTeamEmoji);
-    messageEmbed.react(ligyellowichorangeTeamEmoji);
+    messageEmbed.react(ligyellowishorangeTeamEmoji);
     messageEmbed.react(brightgreenTeamEmoji);
 
     client.on("messageReactionAdd", async (reaction, user) => {
@@ -238,10 +238,10 @@ module.exports = {
             .get(user.id)
             .roles.add(mediumgreenTeamRole);
         }
-        if (reaction.emoji.name === ligyellowichorangeTeamEmoji) {
+        if (reaction.emoji.name === ligyellowishorangeTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.add(ligyellowichorangeTeamRole);
+            .roles.add(ligyellowishorangeTeamRole);
         }
         if (reaction.emoji.name === brightgreenTeamEmoji) {
           await reaction.message.guild.members.cache
@@ -350,10 +350,10 @@ module.exports = {
             .get(user.id)
             .roles.remove(mediumgreenTeamRole);
         }
-        if (reaction.emoji.name === ligyellowichorangeTeamEmoji) {
+        if (reaction.emoji.name === ligyellowishorangeTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.remove(ligyellowichorangeTeamRole);
+            .roles.remove(ligyellowishorangeTeamRole);
         }
         if (reaction.emoji.name === brightgreenTeamEmoji) {
           await reaction.message.guild.members.cache

@@ -61,7 +61,7 @@ module.exports = {
     const mediumgreenTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910546150250139689"
     );
-    const ligyellowichorangeTeamRole = message.guild.roles.cache.find(
+    const ligyellowishorangeTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910546214976651335"
     );
     const brightgreenTeamRole = message.guild.roles.cache.find(
