@@ -130,7 +130,7 @@ exports.coloridlist = {
     129: "moss",
     130: "artichoke",
     131: "sagegreen",
-    132: "ghostgrey", //
+    132: "ghostgrey",
     133: "plum",
     134: "olivine",
     135: "laurelgreen",
@@ -141,7 +141,7 @@ exports.coloridlist = {
     141: "carnationpink",
     142: "persimmon",
     142: "maroon",
-    143: "daisyorange", //
+    143: "daisyorange",
     144: "pearl",
     145: "fog",
     146: "salmon",

@@ -1,4 +1,4 @@
-const colorlist = [
+module.exports = [
     "white",
     "grey",
     "lightyellow",

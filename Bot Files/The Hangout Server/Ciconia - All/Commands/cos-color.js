@@ -416,7 +416,7 @@ module.exports = {
       (role) => role.id === "910565680091390042"
     );
     const crimsonTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910565680091390042"
+      (role) => role.id === "910565726757220412"
     );
     const mintTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910565774853288001"
@@ -622,10 +622,12 @@ module.exports = {
 
     const colorlist = require("../Other/colorlist.js");
     const coloridlist = require("../Other/coloridlist.js");
+    const colorroleidlist = require("../Other/colorroleidlist.js")
     const channel = config.base.baserolecolorchannelid;
     const user = message.author;
 
-    const randomcolor = colorlist[Math.floor(Math.random() * colorlist.length)];
+    const randomcolorid = colorroleidlist[Math.floor(Math.random() * colorroleidlist.length)];
+    const randomcolor = `<@&${randomcolorid}>`
 
     const colorname = args[0];
     if (!args.length)
