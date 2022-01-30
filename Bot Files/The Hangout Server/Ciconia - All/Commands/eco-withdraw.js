@@ -9,7 +9,7 @@ module.exports = {
   description: "Bank to Wallet",
   async execute(message, args, cmd, client, discord, profileData) {
     const amount = args[0];
-    if (amount % 1 == 0 || amount < 1)
+    if (amount <= 0)
       return message.channel.send(config.basemessages.messagesgreaterone);
 
     try {

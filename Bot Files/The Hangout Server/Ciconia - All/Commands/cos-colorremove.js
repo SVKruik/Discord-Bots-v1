@@ -1144,7 +1144,7 @@ module.exports = {
       );
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(mediumoragneTeamRole);
+        .roles.remove(mediumorangeTeamRole);
     } else if (args[0] == "64") {
       console.log(consolelogmsg);
       message.channel.send(
