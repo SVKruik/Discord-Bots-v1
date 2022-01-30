@@ -651,6 +651,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(whiteTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "2") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -659,6 +661,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(greyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "3") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -667,6 +671,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "4") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -675,6 +681,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brickyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "5") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -683,6 +691,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "6") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -691,6 +701,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightreddishvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "7") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -699,6 +711,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pastelblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "8") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -707,6 +721,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightorangebrownTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "9") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -715,6 +731,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(nougatTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "10") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -723,6 +741,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightredTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "11") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -731,6 +751,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(medreddishvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "12") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -739,6 +761,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "13") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -747,6 +771,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "14") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -755,6 +781,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(earthorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "15") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -763,6 +791,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(blackTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "16") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -771,6 +801,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkgreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "17") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -779,6 +811,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "18") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -787,6 +821,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mediumgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "19") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -795,6 +831,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(ligyellowishorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "20") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -803,6 +841,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "21") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -811,6 +851,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "22") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -819,6 +861,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightbluishvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "23") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -827,6 +871,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(transparentTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "24") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -835,6 +881,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trredTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "25") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -843,6 +891,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trlgblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "26") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -851,6 +901,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "27") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -859,6 +911,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(tryellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "28") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -867,6 +921,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "29") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -875,6 +931,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trflureddishorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "30") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -883,6 +941,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "31") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -891,6 +951,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trflugreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "32") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -899,6 +961,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(phosphwhiteTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "33") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -907,6 +971,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightredTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "34") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -915,6 +981,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mediumredTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "35") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -923,6 +991,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mediumblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "36") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -931,6 +1001,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightgreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "37") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -939,6 +1011,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "38") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -947,6 +1021,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(bryellowishorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "39") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -955,6 +1031,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "40") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -963,6 +1041,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightbluishgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "41") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -971,6 +1051,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(earthyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "42") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -979,6 +1061,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightbluishvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "43") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -987,6 +1071,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trbrownTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "44") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -995,6 +1081,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mediumbluishvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "45") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1003,6 +1091,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trmedireddishvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "46") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1011,6 +1101,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(medyellowishgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "47") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1019,6 +1111,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(medbluishgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "48") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1027,6 +1121,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightbluishgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "49") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1035,6 +1131,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(bryellowishgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "50") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1043,6 +1141,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(ligyellowishgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "51") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1051,6 +1151,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(medyellowishorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "52") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1059,6 +1161,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brreddishorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "53") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1067,6 +1171,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightreddishvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "54") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1075,6 +1181,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "55") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1083,6 +1191,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trbrightbluishvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "56") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1091,6 +1201,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(goldTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "57") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1099,6 +1211,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darknougatTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "58") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1107,6 +1221,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(silverTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "59") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1115,6 +1231,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(neonorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "60") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1123,6 +1241,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(neongreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "61") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1131,6 +1251,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sandblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "62") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1139,6 +1261,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sandvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "63") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1147,6 +1271,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mediumorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "64") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1155,6 +1281,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sandyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "65") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1163,6 +1291,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(earthblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "66") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1171,6 +1301,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(earthgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "67") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1179,6 +1311,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trflublueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "68") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1187,6 +1321,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sandbluemetallicTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "69") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1195,6 +1331,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sandvioletmetallicTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "70") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1203,6 +1341,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sandyellowmetallicTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "71") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1211,6 +1351,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkgreymetallicTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "72") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1219,6 +1361,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(blackmetallicTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "73") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1227,6 +1371,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightgreymetallicTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "74") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1235,6 +1381,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sandgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "75") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1243,6 +1391,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sandredTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "76") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1251,6 +1401,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkredTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "77") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1259,6 +1411,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trfluyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "78") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1267,6 +1421,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(trfluredTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "79") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1275,6 +1431,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(gunmetallicTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "80") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1283,6 +1441,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(redflipflopTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "81") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1291,6 +1451,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(yellowflipflopTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "82") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1299,6 +1461,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(silverflipflopTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "83") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1307,6 +1471,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(curryTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "84") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1315,6 +1481,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(fireyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "85") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1323,6 +1491,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(flameyellowishorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "86") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1331,6 +1501,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(reddishbrownTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "87") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1339,6 +1511,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(flamereddishorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "88") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1347,6 +1521,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mediumstonegreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "89") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1355,6 +1531,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(royalblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "90") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1363,6 +1541,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkroyalblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "91") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1371,6 +1551,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightreddishlilacTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "92") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1379,6 +1561,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkstonegreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "93") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1387,6 +1571,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lemonmetallicTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "94") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1395,6 +1581,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightstonegreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "95") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1403,6 +1591,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkcurryTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "96") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1411,6 +1601,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(fadedgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "97") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1419,6 +1611,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(turquoiseTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "98") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1427,6 +1621,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightroyalblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "99") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1435,6 +1631,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mediumroyalblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "100") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1443,6 +1641,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(rustTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "101") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1451,6 +1651,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brownTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "102") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1459,6 +1661,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(reddishlilacTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "103") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1467,6 +1671,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lilacTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "104") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1475,6 +1681,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightlilacTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "105") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1483,6 +1691,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(brightpurpleTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "106") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1491,6 +1701,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightpurpleTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "107") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1499,6 +1711,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightpinkTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "108") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1507,6 +1721,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lightbrickyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "109") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1515,6 +1731,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(warmyellowishorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "110") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1523,6 +1741,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(coolyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "111") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1531,6 +1751,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(doveblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "112") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1539,6 +1761,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mediumlilacTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "113") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1547,6 +1771,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(slimegreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "114") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1555,6 +1781,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(smokygreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "115") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1563,6 +1791,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "116") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1571,6 +1801,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(parsleygreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "117") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1579,6 +1811,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(steelblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "118") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1587,6 +1821,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(stormblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "119") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1595,6 +1831,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lapisTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "120") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1603,6 +1841,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darkindigoTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "121") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1611,6 +1851,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(seagreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "122") {
       console.log(consolelogmsg);
       message.channel.send(`
@@ -1619,6 +1861,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(shamrockTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "123") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1627,6 +1871,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(fossilTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "124") {
       console.log(consolelogmsg);
       message.channel.send(`
@@ -1635,6 +1881,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mulberryTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "125") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1643,6 +1891,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(forestgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "126") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1651,6 +1901,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(cadetblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "127") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1659,6 +1911,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(electricblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "128") {
       console.log(consolelogmsg);
       message.channel.send(`
@@ -1667,6 +1921,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(eggplantTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "129") {
       console.log(consolelogmsg);
       message.channel.send(`
@@ -1675,6 +1931,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mosssTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "130") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1683,6 +1941,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(artichokeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "131") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1691,6 +1951,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sagegreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "132") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1699,6 +1961,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(ghostgreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "133") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1707,6 +1971,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(plumTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "134") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1715,6 +1981,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(olivineTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "135") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1723,6 +1991,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(laurelgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "136") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1731,6 +2001,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(quillgreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "137") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1739,6 +2011,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(crimsonTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "138") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1747,6 +2021,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mintTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "139") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1755,6 +2031,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(babyblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "140") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1771,6 +2049,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(persimmonTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "142") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1779,6 +2059,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(maroonTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "143") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1787,6 +2069,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(daisyorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "144") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1795,6 +2079,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pearlTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "145") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1803,6 +2089,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(fogTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "146") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1811,6 +2099,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(salmonTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "147") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1819,6 +2109,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(terracottaTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "148") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1827,6 +2119,8 @@ module.exports = {
       await message.guild.members.cache.
         get(user.id)
         .roles.add(cocoaTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "149") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1835,6 +2129,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(wheatTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "150") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1843,6 +2139,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(buttermilkTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "151") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1851,6 +2149,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(mauveTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "152") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1859,6 +2159,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(sunriseTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "153") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1867,6 +2169,8 @@ module.exports = {
       await message.guild.members.cache.
         get(user.id).
         roles.add(tawnyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "154") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1875,6 +2179,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(cashmereTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "155") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1883,6 +2189,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(khakiTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "156") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1891,6 +2199,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lilywhiteTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "157") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1899,6 +2209,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(seashellTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "158") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1907,6 +2219,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(burgundyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "159") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1915,6 +2229,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(corkTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "160") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1923,6 +2239,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(burlapTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "161") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1931,6 +2249,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(beigeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "162") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1939,6 +2259,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(oysterTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "163") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1946,6 +2268,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pineconeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "164") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1954,6 +2278,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(fawnbrownTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "165") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1962,6 +2288,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(hurricanegreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "166") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1970,6 +2298,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(cloudygreyTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "167") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1978,6 +2308,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(linenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "168") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1986,6 +2318,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(copperTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "169") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -1994,6 +2328,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(dirtbrownTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "170") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2002,6 +2338,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(bronzeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "171") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2010,6 +2348,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(flintTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "172") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2018,6 +2358,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(darktaupeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "173") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2026,6 +2368,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(burntsiennaTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "174") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2034,6 +2378,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(institutionalwhiteTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "175") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2042,6 +2388,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(midgrayTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "176") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2050,6 +2398,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(reallyblackTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "177") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2058,6 +2408,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(reallyredTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "178") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2066,6 +2418,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(deeporangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "179") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2074,6 +2428,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(alderTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "180") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2082,6 +2438,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(dustyroseTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "181") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2090,6 +2448,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(oliveTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "182") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2098,6 +2458,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(newyellerTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "183") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2106,6 +2468,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(reallyblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "184") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2114,6 +2478,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(navyblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "185") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2122,6 +2488,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(deepblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "186") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2130,6 +2498,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(cyanTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "187") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2138,6 +2508,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(cgabrownTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "188") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2146,6 +2518,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(magentaTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "189") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2154,6 +2528,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pinkTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "190") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2162,6 +2538,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(deeporangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "191") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2170,6 +2548,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(tealTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "192") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2178,6 +2558,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(toothpasteTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "193") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2186,6 +2568,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(limegreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "194") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2194,6 +2578,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(camoTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "195") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2202,6 +2588,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(grimeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "196") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2210,6 +2598,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(lavenderTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "197") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2218,6 +2608,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pastellightblueTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "198") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2226,6 +2618,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pastelorangeTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "199") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2234,6 +2628,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pastelvioletTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "200") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2242,6 +2638,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pastelbluegreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "201") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2250,6 +2648,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pastelgreenTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "202") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2258,6 +2658,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pastelyellowTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "203") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2266,6 +2668,8 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(pastelbrownTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "204") {
       console.log(consolelogmsg);
       message.channel.send(
@@ -2274,12 +2678,16 @@ module.exports = {
       await message.guild.members.cache
         .get(user.id)
         .roles.add(royalpurpleTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else if (args[0] == "205") {
       console.log(consolelogmsg);
       message.channel.send(
         `${newcolormsg} ${hotpinkTeamRole}`
       );
       await message.guild.members.cache.get(user.id).roles.add(hotpinkTeamRole);
+      await message.guild.members.cache
+        .get(user.id)
     } else
       return message.channel.send(
         `That's not a valid color! Maybe try ${randomcolor}?`
