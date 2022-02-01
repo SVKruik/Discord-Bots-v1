@@ -8,7 +8,7 @@ const ytdl = require("ytdl-core");
 const ytSearch = require("yt-search");
 const queue = new Map();
 const fs = require("fs");
-const commands = fs.readdirSync("../Commands").length;
+const command = fs.readdirSync("../Commands").length;
 const version = require("../package.json").version;
 const days = Math.floor(client.uptime / 86400000);
 const hours = Math.floor(client.uptime / 3600000) % 24;
@@ -91,15 +91,15 @@ exports.embeds = {
   valuebotstats1: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`, // Botstats
   valuebotstats2: `${Math.round(client.ws.ping)} ms`,
   valuebotstats3: `${Date.now() - message.createdTimestamp} ms`,
-  valuebotstats4: `${message.guild.id}`,
-  valuebotstats5: `${commands}`,
-  valuebotstats6: `${version}`,
-  valuebotstats7: `<@422704748488163332>`,
-  valuedonate1: "https://ko-fi.com/multicubecommunity", // Donate
-  valuedonate2: "https://ko-fi.com/multicubecommunity/tiers",
-  valueembedtemplate1: "value: X", // Embed Template
-  valueembedtemplate1: "value: Y",
-  valuegithub1: "https://github.com/PuffinKwadraat/MultiCube-Public", // GitHub
+  valuebotstats4: "Server ID:",
+  valuebotstats5: "Commands:",
+  valuebotstats6: "Bot Version:",
+  valuebotstats7: "Bot Owner",
+  valuedonate1: "Donate Link:", // Donate
+  valuedonate2: "Memberships:",
+  valueembedtemplate1: "value: A", // Embed Template
+  valueembedtemplate1: "value: B",
+  valuegithub1: "Main link:", // GitHub
   valuegithub2: "---",
   valuegithub3: "More links:",
   valuegithub4: "Child Servers:",

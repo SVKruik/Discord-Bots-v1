@@ -32,7 +32,7 @@ module.exports = {
           name: "Bot Ping:",
           value: `${Date.now() - message.createdTimestamp} ms`,
         },
-        { name: "serverID:", value: `${message.guild.id}` },
+        { name: "serverID:", value: `${profileData.serverID}` },
         { name: "Commands", value: `${commands}` },
         { name: "Bot Version:", value: `${version}` },
         { name: "Owner:", value: `<@422704748488163332>` }
