@@ -8,12 +8,8 @@ const ytdl = require("ytdl-core");
 const ytSearch = require("yt-search");
 const queue = new Map();
 const fs = require("fs");
-const commands = fs.readdirSync("../Commands").length;
+const commands = fs.readdirSync("c:/Users/skrui/OneDrive/GitHub/MultiCube-Private/Bot Files/The Hangout Server/Ciconia - All/Commands").length;
 const version = require("../package.json").version;
-const days = Math.floor(client.uptime / 86400000);
-const hours = Math.floor(client.uptime / 3600000) % 24;
-const minutes = Math.floor(client.uptime / 60000) % 60;
-const seconds = Math.floor(client.uptime / 1000) % 60;
 
 const B = 0;
 const I = ["ADMINISTRATOR"];
@@ -40,7 +36,7 @@ exports.embeds = {
   titlemcserver: "Minecraft Server Statistics",
   titleprofile: "Server Profile",
   titlerules: "House Rules",
-  titleserverip: "Server IP",
+  titleserverip: "MultiCube Community",
 
   //Names
   namebotstats1: "Uptime:", // Botstats
@@ -59,7 +55,7 @@ exports.embeds = {
   namegithub3: "More links:",
   namegithub4: "Child Servers:",
   namegithub5: "Issues:",
-  namegithub6: "Discussions:",
+  namegithub6: "Update Log:",
   namemcserver1: "server IP:",
   namemcserver2: "Online Players:",
   namemcserver3: "Max Players:",
@@ -82,16 +78,15 @@ exports.embeds = {
   namerules3: "Rule 3:",
   namerules4: "Rule 4:",
   namerules5: "Rule 5:",
-  namerules6: "Rule 6:",
   nameserverip1: "Server IP:",
   nameserverip2: "Game Version:",
   nameserverip3: "Mods:",
 
   //Values
-  valuebotstats1: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`, // Botstats
-  valuebotstats2: `${Math.round(client.ws.ping)} ms`,
-  valuebotstats3: `${Date.now() - message.createdTimestamp} ms`,
-  valuebotstats4: `${message.guild.id}`,
+  // valuebotstats1: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`, // Botstats
+  // valuebotstats2: `${Math.round(client.ws.ping)} ms`,
+  // valuebotstats3: `${Date.now() - message.createdTimestamp} ms`,
+  // valuebotstats4: `${message.guild.id}`,
   valuebotstats5: `${commands}`,
   valuebotstats6: `${version}`,
   valuebotstats7: `<@422704748488163332>`,
@@ -100,37 +95,45 @@ exports.embeds = {
   valueembedtemplate1: "value: X", // Embed Template
   valueembedtemplate1: "value: Y",
   valuegithub1: "https://github.com/PuffinKwadraat/MultiCube-Public", // GitHub
-  valuegithub2: "---",
+  valuegithub2: "More specific links:",
   valuegithub3: "More links:",
-  valuegithub4: "Child Servers:",
-  valuegithub5: "Issues:",
-  valuegithub6: "Discussions:",
-  valuemcserver1: "server IP:",
-  valuemcserver2: "Online Players:",
-  valuemcserver3: "Max Players:",
-  valuemcserver4: "Game Version:",
-  valuemcserver5: "Port:",
-  valuemcserver6: "Mods:",
-  valueprofile1: "---", // Profile
-  valueprofile2: "value:",
-  valueprofile3: "Tag:",
-  valueprofile4: "userID",
-  valueprofile5: "serverID",
-  valueprofile6: "---",
-  valueprofile7: "Coins:",
-  valueprofile8: "Bank:",
-  valueprofile9: "---",
-  valueprofile10: "Level:",
-  valueprofile11: "Experience:",
-  valuerules1: "Rule 1:",
-  valuerules2: "Rule 2:",
-  valuerules3: "Rule 3:",
-  valuerules4: "Rule 4:",
-  valuerules5: "Rule 5:",
-  valuerules6: "Rule 6:",
-  valueserverip1: "Server IP:",
-  valueserverip2: "Game Version:",
-  valueserverip3: "Mods:",
+  valuegithub4: "https://github.com/PuffinKwadraat/MultiCube-Public/tree/main/Minecraft%20Servers/Child%20Servers",
+  valuegithub5: "https://github.com/PuffinKwadraat/MultiCube-Public/issues",
+  valuegithub6: "https://github.com/PuffinKwadraat/MultiCube-Public/blob/main/Update%20Log.md",
+  valueprofile1: "> **General:**", // Profile
+  // valueprofile2: `${message.author.username}`,
+  // valueprofile3: `#${tag}`,
+  // valueprofile4: `${profileData.userID}`,
+  // valueprofile5: `${profileData.serverID}`,
+  valueprofile6: "> **Economy:**",
+  // valueprofile7: `${profileData.coins}`,
+  // valueprofile8: `${profileData.bank}`,
+  valueprofile9: "> **Level:**",
+  // valueprofile10: `${profileData.level}`,
+  // valueprofile11: `${profileData.experience}`,
+  valueprofile12: "> **Technical:**",
+  // valueprofile13: `${profileData._id}`,
+  // valueprofile14: `${profileData.__v}`,
+  valuerules1: "Treat everyone with respect.",
+  valuerules2: "Do not spam.",
+  valuerules3: "Do not advertise yourself.",
+  valuerules4: "Do not post NSFW or inappropriate content.",
+  valuerules5: "Do not beg for a role/rank.",
+  valueserverip1: "multicube.aternos.me",
+  valueserverip2: "1.16.5",
+  valueserverip3: "None",
+
+  //Descriptions
+  descriptionbotstats: "These are my current stats.",
+  descriptiondonate: "Support our project by donating to us! Your funds will be used to improve our project. You can also help fund new hardware/software we need.",
+  descriptionembedtemplate: "Template",
+  descriptionevent: "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.",
+  descriptiongithub: "This is our GitHub repository. You can find a lot of information about anything there, so check it out!",
+  descriptionhelp: "What topic can I help you with?",
+  descriptionmcserver: "Here is some data about the server you asked for.",
+  descriptionprofile: "Here is the data we have stored about you.",
+  descriptionrules: "These are our house rules.",
+  descriptionserverip: "Here is the Server IP for our Minecraft server, MultiCube.",
 }
 
 exports.base = {
@@ -535,8 +538,8 @@ exports.basemessages = {
   messagesmembermention: "You need to mention someone to execute this command.",
   messagesaccountmissing: "This user does not have an account in our database.",
   messageserror: "There was an error sending the command.",
-  messagesgreaternegaone: "Amount must be larger then \`-1\`",
-  messagesgreaterone: "Amount must be greater then \`0\`",
+  messagesgreaternegaone: "Amount must be larger than \`-1\`.",
+  messagesgreaterone: "Amount must be greater than \`0\`.",
   messagescoinsmissing: "You do not have that amount of coins to perform this command.",
   messagesrealnumber: "Please enter a real number.",
   messagesamountmissing: "You are missing the amount to clear."

@@ -26,7 +26,10 @@ module.exports = {
         { name: "Bank:", value: `${profileData.bank}` },
         { name: "---", value: "> **Level:**" },
         { name: "Level:", value: `${profileData.level}` },
-        { name: "Experience:", value: `${profileData.experience}` }
+        { name: "Experience:", value: `${profileData.experience}` },
+        { name: "---:", value: "> **Technical:**" },
+        { name: "Document ID:", value: `${profileData._id}` },
+        { name: "Version:", value: `${profileData.__v}` },
       )
       .setFooter(config.embed.embedfooter);
 

@@ -34,10 +34,6 @@ module.exports = {
           name: process.env.MBDFIELD5NAMERULES,
           value: process.env.MBDFIELD5VALUERULES,
         },
-        {
-          name: process.env.MBDFIELD6NAMERULES,
-          value: process.env.MBDFIELD6VALUERULES,
-        }
       )
       .setFooter(config.embed.embedfooter);
 
