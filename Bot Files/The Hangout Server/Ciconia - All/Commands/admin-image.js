@@ -11,7 +11,7 @@ module.exports = {
     aliases: ["adminimg", "adimg"],
     cooldown: config.cooldown.cooldownimage,
     permissions: config.permissions.permissionadminimage,
-    description: "This sends the best google result for an image.",
+    description: "This sends the best google result for an image. This is the version without the blacklist.",
     async execute(message, args, cmd, client, Discord) {
         const image_query = args.join(" ");
         if (!image_query) return message.channel.send(process.env.MSGIMGMISSING);

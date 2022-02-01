@@ -15,7 +15,7 @@ module.exports = {
     const seconds = Math.floor(client.uptime / 1000) % 60;
 
     const fs = require("fs");
-    const commands = fs.readdirSync("./commands").length;
+    const commands = fs.readdirSync("./Commands").length;
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)

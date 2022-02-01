@@ -7,6 +7,13 @@ const math = require("mathjs");
 const ytdl = require("ytdl-core");
 const ytSearch = require("yt-search");
 const queue = new Map();
+const fs = require("fs");
+const command = fs.readdirSync("../Commands").length;
+const version = require("../package.json").version;
+const days = Math.floor(client.uptime / 86400000);
+const hours = Math.floor(client.uptime / 3600000) % 24;
+const minutes = Math.floor(client.uptime / 60000) % 60;
+const seconds = Math.floor(client.uptime / 1000) % 60;
 
 const B = 0;
 const I = ["ADMINISTRATOR"];
@@ -20,6 +27,110 @@ exports.test = {
 exports.commandclear = {
     commandclearmax: 50,
     commandclearmin: 1,
+}
+
+exports.embeds = {
+  //Titles
+  titlebotstats: "Bot Statistics",
+  titledonate: "Donate",
+  titleembedtemplate: "Bot Template",
+  titleevent: "Choose a team to play on!",
+  titlegithub: "GitHub Repository",
+  titlehelp: "Support",
+  titlemcserver: "Minecraft Server Statistics",
+  titleprofile: "Server Profile",
+  titlerules: "House Rules",
+  titleserverip: "Server IP",
+
+  //Names
+  namebotstats1: "Uptime:", // Botstats
+  namebotstats2: "API Ping:",
+  namebotstats3: "Bot Ping:",
+  namebotstats4: "Server ID:",
+  namebotstats5: "Commands:",
+  namebotstats6: "Bot Version:",
+  namebotstats7: "Bot Owner",
+  namedonate1: "Donate Link:", // Donate
+  namedonate2: "Memberships:",
+  nameembedtemplate1: "Name: A", // Embed Template
+  nameembedtemplate1: "Name: B",
+  namegithub1: "Main link:", // GitHub
+  namegithub2: "---",
+  namegithub3: "More links:",
+  namegithub4: "Child Servers:",
+  namegithub5: "Issues:",
+  namegithub6: "Discussions:",
+  namemcserver1: "server IP:",
+  namemcserver2: "Online Players:",
+  namemcserver3: "Max Players:",
+  namemcserver4: "Game Version:",
+  namemcserver5: "Port:",
+  namemcserver6: "Mods:",
+  nameprofile1: "---", // Profile
+  nameprofile2: "Name:",
+  nameprofile3: "Tag:",
+  nameprofile4: "userID",
+  nameprofile5: "serverID",
+  nameprofile6: "---",
+  nameprofile7: "Coins:",
+  nameprofile8: "Bank:",
+  nameprofile9: "---",
+  nameprofile10: "Level:",
+  nameprofile11: "Experience:",
+  namerules1: "Rule 1:",
+  namerules2: "Rule 2:",
+  namerules3: "Rule 3:",
+  namerules4: "Rule 4:",
+  namerules5: "Rule 5:",
+  namerules6: "Rule 6:",
+  nameserverip1: "Server IP:",
+  nameserverip2: "Game Version:",
+  nameserverip3: "Mods:",
+
+  //Values
+  valuebotstats1: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`, // Botstats
+  valuebotstats2: `${Math.round(client.ws.ping)} ms`,
+  valuebotstats3: `${Date.now() - message.createdTimestamp} ms`,
+  valuebotstats4: "Server ID:",
+  valuebotstats5: "Commands:",
+  valuebotstats6: "Bot Version:",
+  valuebotstats7: "Bot Owner",
+  valuedonate1: "Donate Link:", // Donate
+  valuedonate2: "Memberships:",
+  valueembedtemplate1: "value: A", // Embed Template
+  valueembedtemplate1: "value: B",
+  valuegithub1: "Main link:", // GitHub
+  valuegithub2: "---",
+  valuegithub3: "More links:",
+  valuegithub4: "Child Servers:",
+  valuegithub5: "Issues:",
+  valuegithub6: "Discussions:",
+  valuemcserver1: "server IP:",
+  valuemcserver2: "Online Players:",
+  valuemcserver3: "Max Players:",
+  valuemcserver4: "Game Version:",
+  valuemcserver5: "Port:",
+  valuemcserver6: "Mods:",
+  valueprofile1: "---", // Profile
+  valueprofile2: "value:",
+  valueprofile3: "Tag:",
+  valueprofile4: "userID",
+  valueprofile5: "serverID",
+  valueprofile6: "---",
+  valueprofile7: "Coins:",
+  valueprofile8: "Bank:",
+  valueprofile9: "---",
+  valueprofile10: "Level:",
+  valueprofile11: "Experience:",
+  valuerules1: "Rule 1:",
+  valuerules2: "Rule 2:",
+  valuerules3: "Rule 3:",
+  valuerules4: "Rule 4:",
+  valuerules5: "Rule 5:",
+  valuerules6: "Rule 6:",
+  valueserverip1: "Server IP:",
+  valueserverip2: "Game Version:",
+  valueserverip3: "Mods:",
 }
 
 exports.base = {
