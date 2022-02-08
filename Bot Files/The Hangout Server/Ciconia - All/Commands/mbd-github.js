@@ -9,29 +9,29 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(process.env.MBDTITLEGITHUB)
+      .setTitle(config.embeds.titlegithub)
       .setImage(config.embed.embedimage)
-      .setDescription(process.env.MBDDESCGITHUB)
+      .setDescription(config.embeds.descriptiongithub)
       .addFields(
         {
-          name: process.env.MBDFIELD1NAMEGITHUB,
-          value: process.env.MBDFIELD1VALUEGITHUB,
+          name: config.embeds.namegithub1,
+          value: config.embeds.valuegithub1,
         },
         {
-          name: process.env.MBDFIELD2NAMEGITHUB,
-          value: process.env.MBDFIELD2VALUEGITHUB,
+          name: config.embeds.namegithub2,
+          value: config.embeds.valuegithub2,
         },
         {
-          name: process.env.MBDFIELD3NAMEGITHUB,
-          value: process.env.MBDFIELD3VALUEGITHUB,
+          name: config.embeds.namegithub3,
+          value: config.embeds.valuegithub3,
         },
         {
-          name: process.env.MBDFIELD4NAMEGITHUB,
-          value: process.env.MBDFIELD4VALUEGITHUB,
+          name: config.embeds.namegithub4,
+          value: config.embeds.valuegithub4,
         },
         {
-          name: process.env.MBDFIELD5NAMEGITHUB,
-          value: process.env.MBDFIELD5VALUEGITHUB,
+          name: config.embeds.namegithub5,
+          value: config.embeds.valuegithub5,
         }
       )
       .setFooter(config.embed.embedfooter);

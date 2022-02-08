@@ -9,10 +9,10 @@ module.exports = {
   description: "Displays some Minecraft server statistics.",
   execute(message, args, cmd, client, Discord) {
     if (!args[0])
-      return message.channel.send("Please enter a valid Minecraft server IP!");
+      return message.channel.send(config.commandmcserver.commandmcserverip);
     if (!args[1])
       return message.channel.send(
-        "Please enter a valid Minecraft server port!"
+        config.commandmcserver.commandmcserverport
       );
 
     util
@@ -21,17 +21,17 @@ module.exports = {
         console.log(response);
         const embed = new Discord.MessageEmbed()
           .setColor(config.base.basecolor)
-          .setTitle(process.env.MBDTITLEMCSERVER)
+          .setTitle(config.embeds.titlemcserver)
           .setURL(config.embed.embedlink)
           .setImage(config.embed.embedimage)
-          .setDescription(process.env.MBDDESCMCSERVER)
+          .setDescription(config.embeds.descriptionmcserver)
           .addFields(
-            { name: "Server IP", value: response.host },
-            { name: "Online Players", value: response.onlinePlayers },
-            { name: "Max Players", value: response.maxPlayers },
-            { name: "Version", value: response.version },
-            { name: "Port", value: response.port },
-            { name: "Mods", value: response.modInfo }
+            { name: config.embeds.namemcserver1, value: response.host },
+            { name: config.embeds.namemcserver2, value: response.onlinePlayers },
+            { name: config.embeds.namemcserver3, value: response.maxPlayers },
+            { name: config.embeds.namemcserver4, value: response.version },
+            { name: config.embeds.namemcserver5, value: response.port },
+            { name: config.embeds.namemcserver6, value: response.modInfo }
           )
           .setFooter(config.embed.embedfooter);
 
@@ -39,7 +39,7 @@ module.exports = {
       })
       .catch((error) => {
         message.channel.send(
-          "There was an error finding the specified server!"
+          config.basemessages.messagesfinderror
         );
       });
   },

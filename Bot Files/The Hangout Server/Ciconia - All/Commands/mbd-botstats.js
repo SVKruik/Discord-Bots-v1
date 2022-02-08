@@ -24,33 +24,18 @@ module.exports = {
       .setDescription(config.embeds.descriptionbotstats)
       .addFields(
         {
-          name: config.embeds.namebotstats1,
-          value: config.embeds.valuebotstats1,
+          name: "Uptime:",
+          value: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`,
         },
-        { 
-          name: config.embeds.namebotstats2, 
-          value: config.embeds.valuebotstats2,
-        },
+        { name: "API Ping:", value: `${Math.round(client.ws.ping)} ms` },
         {
-          name: config.embeds.namebotstats3,
-          value: config.embeds.valuebotstats3,
+          name: "Bot Ping:",
+          value: `${Date.now() - message.createdTimestamp} ms`,
         },
-        { 
-          name: config.embeds.namebotstats4, 
-          value: config.embeds.valuebotstats4 
-        },
-        { 
-          name: config.embeds.namebotstats5, 
-          value: config.embeds.valuebotstats5 
-        },
-        { 
-          name: config.embeds.namebotstats6, 
-          value: config.embeds.valuebotstats6 
-        },
-        { 
-          name: config.embeds.namebotstats7, 
-          value: config.embeds.valuebotstats7 
-        }
+        { name: "serverID:", value: `${message.guild.id}` },
+        { name: "Commands", value: `${commands}` },
+        { name: config.embeds.namebotstats6, value: config.embeds.valuebotstats6 },
+        { name: config.embeds.namebotstats7, value: config.embeds.valuebotstats7 }
       )
       .setFooter(config.embed.embedfooter);
 
