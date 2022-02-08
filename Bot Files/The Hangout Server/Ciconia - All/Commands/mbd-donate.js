@@ -9,18 +9,18 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(config.embeds.titledonate)
+      .setTitle(process.env.MBDTITLEDONATE)
       .setImage(config.embed.embedimage)
       .setURL(config.embed.embedlink)
-      .setDescription(config.embeds.descriptiondonate)
+      .setDescription(process.env.MBDDESCDONATE)
       .addFields(
         {
-          name: config.embeds.namedonate1,
-          value: config.embeds.valuedonate1,
+          name: process.env.MBDFIELD1NAMEDONATE,
+          value: process.env.MBDFIELD1VALUEDONATE,
         },
         {
-          name: config.embeds.namedonate2,
-          value: config.embeds.valuedonate2,
+          name: process.env.MBDFIELD2NAMEDONATE,
+          value: process.env.MBDFIELD2VALUEDONATE,
         }
       )
       .setFooter(config.embed.embedfooter);

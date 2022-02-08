@@ -12,9 +12,9 @@ module.exports = {
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(config.embeds.titleprofile)
+      .setTitle(process.env.MBDTITLEPROFILE)
       .setImage(config.embed.embedimage)
-      .setDescription(config.embeds.descriptionprofile)
+      .setDescription(process.env.MBDDESCPROFILE)
       .addFields(
         { name: "---", value: "> **General:**" },
         { name: "Name:", value: `${message.author.username}` },

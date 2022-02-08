@@ -7,9 +7,9 @@ module.exports = {
   permissions: config.permissions.permissioncirkelvergelijking,
   description: "Calculate a circle equation.",
   execute(message, args, cmd, client, Discord) {
-    let a = args[0];
-    let b = args[1];
-    let c = args[2];
+    const a = 10;
+    const b = 4;
+    const c = 8;
 
     const ahelft = a / 2;
     const bhelft = b / 2;

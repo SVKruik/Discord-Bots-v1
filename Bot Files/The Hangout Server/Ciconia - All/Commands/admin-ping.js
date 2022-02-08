@@ -17,7 +17,7 @@ module.exports = {
           name: "Bot Latency:",
           value: `${Date.now() - message.createdTimestamp} ms`,
         },
-      {
+        {
           name: "API Latency:",
           value: `${Math.round(client.ws.ping)} ms`,
         }

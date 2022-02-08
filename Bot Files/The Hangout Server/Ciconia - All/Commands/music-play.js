@@ -13,16 +13,11 @@ module.exports = {
   async execute(message, args, cmd, client, Discord) {
     const voice_channel = message.member.voice.channel;
     if (!voice_channel) return message.channel.send(config.basemessages.messagesvcrequired);
-    if (!message.member.roles.cache.some(role => role.id === "940616347900076073")) {
-      message.channel.send("You are missing permissions to use the Music Bot. You need this role: <@&940616347900076073>.")
-    }
-    const channel = config.base.basemusicchannelid;
-    if (message.channel.id == channel) {
-    } else {
-      return message.channel.send(
-        `You are not in the right channel to use this command! Please use <#${channel}> instead!`
-      );
-    }
+    const permissions = voice_channel.permissionsFor(message.client.user);
+    if (!permissions.has("CONNECT"))
+      return message.channel.send(process.env.MSGPLAYCONNECTMISSING);
+    if (!permissions.has("SPEAK"))
+      return message.channel.send(process.env.MSGPLAYSPEAKMISSING);
 
     const server_queue = queue.get(message.guild.id);
 
@@ -66,9 +61,6 @@ module.exports = {
           const connection = await voice_channel.join();
           queue_constructor.connection = connection;
           video_player(message.guild, queue_constructor.songs[0]);
-          message.channel.send(
-            `🎶 Now playing **${song.title}**, requested by ${message.author.username}. 🎶`
-          );
         } catch (err) {
           queue.delete(message.guild.id);
           message.channel.send(process.env.MSGPLAYCONNECTERR);
@@ -78,13 +70,8 @@ module.exports = {
         server_queue.songs.push(song);
         return message.channel.send(`👍 **${song.title}** added to the queue!`);
       }
-    } else if (cmd === "skip") {
-      skip_song(message, server_queue);
-      message.channel.send("Hopped over to the next song.")
-    } else if (cmd === "stop") {
-      stop_song(message, server_queue);
-      message.channel.send("Stopped the music.")
-    }
+    } else if (cmd === "skip") skip_song(message, server_queue);
+    else if (cmd === "stop") stop_song(message, server_queue);
   },
 };
 
@@ -103,6 +90,9 @@ const video_player = async (guild, song) => {
       song_queue.songs.shift();
       video_player(guild, song_queue.songs[0]);
     });
+  await song_queue.text_channel.send(
+    `🎶 Now playing **${song.title}**, requested by ${message.author.username}.🎶`
+  );
 };
 
 const skip_song = (message, server_queue) => {

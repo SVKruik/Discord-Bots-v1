@@ -9,30 +9,30 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(config.embeds.titlerules)
+      .setTitle(process.env.MBDTITLERULES)
       .setURL(config.embed.embedlink)
       .setImage(config.embed.embedimage)
-      .setDescription(config.embeds.descriptionrules)
+      .setDescription(process.env.MBDDESCRULES)
       .addFields(
         {
-          name: config.embeds.namerules1,
-          value: config.embeds.valuerules1,
+          name: process.env.MBDFIELD1NAMERULES,
+          value: process.env.MBDFIELD1VALUERULES,
         },
         {
-          name: config.embeds.namerules2,
-          value: config.embeds.valuerules2,
+          name: process.env.MBDFIELD2NAMERULES,
+          value: process.env.MBDFIELD2VALUERULES,
         },
         {
-          name: config.embeds.namerules3,
-          value: config.embeds.valuerules3,
+          name: process.env.MBDFIELD3NAMERULES,
+          value: process.env.MBDFIELD3VALUERULES,
         },
         {
-          name: config.embeds.namerules4,
-          value: config.embeds.valuerules4,
+          name: process.env.MBDFIELD4NAMERULES,
+          value: process.env.MBDFIELD4VALUERULES,
         },
         {
-          name: config.embeds.namerules5,
-          value: config.embeds.valuerules5,
+          name: process.env.MBDFIELD5NAMERULES,
+          value: process.env.MBDFIELD5VALUERULES,
         },
       )
       .setFooter(config.embed.embedfooter);
