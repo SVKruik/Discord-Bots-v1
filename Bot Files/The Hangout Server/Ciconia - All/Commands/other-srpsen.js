@@ -44,7 +44,7 @@ module.exports = {
           },
           {
             $inc: {
-              coins: stake * 2,
+              coins: stake * 1.1,
             },
           }
         );
@@ -52,7 +52,7 @@ module.exports = {
         const profit = stake * 2;
         const newbal = profileData.coins + profit;
         return message.channel.send(
-          `You win! You received double your stake. Your stake was \`${args[1]}\`, your new balance is \`${newbal}\`.`
+          `You win! You received a small increase on your stake. Your stake was \`${args[1]}\`, your new balance is \`${newbal}\`.`
         );
       } catch (err) {
         console.log(err);

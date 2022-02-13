@@ -101,8 +101,7 @@ module.exports = {
     });
 
     message.channel.send(
-      `<@${
-        message.author.id
+      `<@${message.author.id
       }> What number do you choose?\n Type your decision in this channel.\n Note that there is a time limit!\n \`${chosenLocations.join(
         "` `"
       )}\``

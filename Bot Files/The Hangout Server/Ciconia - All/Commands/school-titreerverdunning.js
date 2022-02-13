@@ -50,9 +50,9 @@ module.exports = {
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(process.env.MBDTITLETITREERVERDUN)
+      .setTitle(config.embeds.titletitreerverdunning)
       .setImage(config.embed.embedimage)
-      .setDescription(process.env.MBDDESCTITREERVERDUN)
+      .setDescription(config.embeds.descriptiontitreerverdunning)
       .addFields(
         {
           name: `1. Reactievergelijking opstellen:`,

@@ -7,6 +7,8 @@ module.exports = {
   permissions: config.permissions.permissionping,
   description: "This silences spamming or naughty people. Can only read stuff.",
   execute(message, args, cmd, client, Discord) {
+    const botping = Date.now() - message.createdTimestamp
+    const apiping = client.ws.ping
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle("Bot Latency")
@@ -15,11 +17,11 @@ module.exports = {
       .addFields(
         {
           name: "Bot Latency:",
-          value: `${Date.now() - message.createdTimestamp} ms`,
+          value: `${botping} ms`,
         },
-      {
+        {
           name: "API Latency:",
-          value: `${Math.round(client.ws.ping)} ms`,
+          value: `${apiping} ms`,
         }
       )
       .setFooter(config.embed.embedfooter);

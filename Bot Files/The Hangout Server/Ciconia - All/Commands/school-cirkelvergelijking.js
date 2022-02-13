@@ -7,9 +7,17 @@ module.exports = {
   permissions: config.permissions.permissioncirkelvergelijking,
   description: "Calculate a circle equation.",
   execute(message, args, cmd, client, Discord) {
-    let a = args[0];
-    let b = args[1];
-    let c = args[2];
+    const a = args[0];
+    const b = args[1];
+    const c = args[2];
+
+    if (!args[0]) {
+      return message.channel.send("You are missing the value \`A\`")
+    } else if (!args[1]) {
+      return message.channel.send("You are missing the value \`B\`")
+    } else if (!args[2]) {
+      return message.channel.send("You are missing the value \`C\`")
+    }
 
     const ahelft = a / 2;
     const bhelft = b / 2;
@@ -22,15 +30,15 @@ module.exports = {
     const wabc = Math.sqrt(abc);
 
     //Input
-    var wabcafgerond = Math.round((wabc + Number.EPSILON) * 1) / 1;
+    const wabcafgerond = Math.round((wabc + Number.EPSILON) * 1) / 1;
 
     const diameter = wabcafgerond * 2;
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(process.env.MBDTITLECIRCLE)
+      .setTitle(config.embeds.titlecircle)
       .setImage(config.embed.embedimage)
-      .setDescription(process.env.MBDDESCCIRCLE)
+      .setDescription(config.embeds.descriptioncircle)
       .addFields(
         {
           name: `1. Begin:`,

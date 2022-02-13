@@ -31,9 +31,9 @@ module.exports = {
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(process.env.MBDTITLEHOEKLIJN)
+      .setTitle(config.embeds.titlehoeklijn)
       .setImage(config.embed.embedimage)
-      .setDescription(process.env.MBDDESCHOEKLIJN)
+      .setDescription(config.embeds.descriptionhoeklijn)
       .addFields(
         {
           name: `1. Gegeven lijnen:`,

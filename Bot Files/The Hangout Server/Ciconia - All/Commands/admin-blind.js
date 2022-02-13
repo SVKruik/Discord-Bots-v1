@@ -10,25 +10,19 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     const target = message.mentions.users.first();
     if (target) {
-      let mainRole = message.guild.roles.cache.find(
-        (role) => role.name === config.base.basemainrole
+      const blindRole = message.guild.roles.cache.find(
+        (role) => role.id === config.base.baseblindrole
       );
-      let blindRole = message.guild.roles.cache.find(
-        (role) => role.name === config.base.baseblindrole
-      );
-
-      let memberTarget = message.guild.members.cache.get(target.id);
+      const memberTarget = message.guild.members.cache.get(target.id);
 
       if (!args[1]) {
-        memberTarget.roles.remove(mainRole.id);
-        memberTarget.roles.add(blindRole.id);
+        memberTarget.roles.add(blindRole);
         message.channel.send(
           `<@${memberTarget.user.id}> has been succesfully blinded.`
         );
         return;
       }
-      memberTarget.roles.remove(mainRole.id);
-      memberTarget.roles.add(blindRole.id);
+      memberTarget.roles.add(blindRole);
       message.channel.send(
         `<@${memberTarget.user.id}> has been succesfully blinded for ${ms(
           ms(args[1])
@@ -36,9 +30,8 @@ module.exports = {
       );
 
       setTimeout(function () {
-        memberTarget.roles.remove(blindRole.id);
-        memberTarget.roles.add(mainRole.id);
-        message.channel.send;
+        memberTarget.roles.remove(blindRole);
+        message.channel.send(`<@${memberTarget.user.id}> has been automatically unblinded. Welcome back!`);
       }, ms(args[1]));
     } else {
       message.channel.send(config.basemessages.messagesfinderror);

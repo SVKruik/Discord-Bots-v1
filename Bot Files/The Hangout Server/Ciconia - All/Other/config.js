@@ -10,18 +10,53 @@ const queue = new Map();
 const fs = require("fs");
 const version = require("../package.json").version;
 
-const B = 0;
-const I = ["ADMINISTRATOR"];
-exports.test = {
-  testmessage: "If you see this, something you are trying worked I guess.",
-  testaliases: ["test1", "test2"],
-  testcooldown: B,
-  testpermission: I,
+exports.base = {
+  baseprefix: "$",
+  basecolor: "#76b3e1",
+  basewalletdefault: "0",
+  basebankdefault: "0",
+  baseleveldefault: "0",
+  baseexperiencedefault: "0",
+  basewelcomechannelid: "850753468927049798",
+  basemusicchannelid: "940618126960230450",
+  basemusicroleid: "940616347900076073",
+  baseimagechannelid: "942380437148409916",
+  basemembercounterhz: '1500000',
+  baseguildid: "820580469757313025",
+  basemembercounterchannelid: "873925840096886784",
+  baseeventchannelid: "942438431282323487",
+  baserolecolorchannelid: "910547872439734292",
+  baseticketgroupid: "852178171305525258",
+  baseticketdeletetime: "5000",
+  basemuterole: "851141747424886794",
+  baseblindrole: "852934692696358952",
 };
+
+exports.basemessages = {
+  // General Messages
+  messagesfinderror: "Could not find the specified variable.",
+  messagesvcrequired: "You need to be in a voice channel in order to use this command.",
+  messagesmembermention: "You need to mention someone to execute this command.",
+  messagesaccountmissing: "This user does not have an account in our database.",
+  messageserror: "There was an error sending the command.",
+  messagesgreaternegaone: "Amount must be larger than \`-1\`.",
+  messagesgreaterone: "Amount must be greater than \`0\`.",
+  messagescoinsmissing: "You do not have that amount of coins to perform this command.",
+  messagesrealnumber: "Please enter a real number.",
+  messagesamountmissing: "You are missing the amount to clear.",
+  messageemojierr: "There was an error with the emoji.",
+}
 
 exports.commandclear = {
   commandclearmax: 50,
   commandclearmin: 1,
+}
+
+exports.commandevent = {
+  teamoneid: "851901208016846848", // Blue
+  teamtwoid: "851900697511329854", // Green
+  teamthreeid: "851900638308728893", // Red
+  teamfourid: "851901124973428786", // Yellow
 }
 
 exports.commandmcserver = {
@@ -31,6 +66,10 @@ exports.commandmcserver = {
 
 exports.commandleave = {
   commandleavemsg: "Leaving the voice channel."
+}
+
+exports.commandticket = {
+  commandticketpending: "Thank you for contacting support, we will be right with you!",
 }
 
 exports.embeds = {
@@ -45,6 +84,30 @@ exports.embeds = {
   titleprofile: "Server Profile",
   titlerules: "House Rules",
   titleserverip: "MultiCube Community",
+  titlecircle: "Cirkel Vergelijking",
+  titlehoeklijn: "Hoek Tussen 2 Lijnen",
+  titlepuntlijn: "Afstand Tussen Punt En Lijn",
+  titlesubstitutie: "Substitutie Vergelijking",
+  titletitreernormaal: "Titreer Berekening",
+  titletitreerverdunning: "Titreer Verdunning Berekening",
+
+  //Descriptions
+  descriptionbotstats: "These are my current stats.",
+  descriptiondonate: "Support our project by donating to us! Your funds will be used to improve our project. You can also help fund new hardware/software we need.",
+  descriptionembedtemplate: "Template",
+  descriptionevent: "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.",
+  descriptiongithub: "This is our GitHub repository. You can find a lot of information about anything there, so check it out!",
+  descriptionhelp: "What topic can I help you with?",
+  descriptionmcserver: "Here is some data about the server you asked for.",
+  descriptionprofile: "Here is the data we have stored about you.",
+  descriptionrules: "These are our house rules.",
+  descriptionserverip: "Here is the Server IP for our Minecraft server, MultiCube.",
+  descriptioncircle: "Een cirkelvergelijking oplossen.",
+  descriptionhoeklijn: "De hoek tussen 2 lijnen berekenen.",
+  descriptionpuntlijn: "De afstand tussen een punt en een lijn berekenen.",
+  descriptionsubstitutie: "Een substitutie vergelijking oplossen.",
+  descriptiontitreernormaal: "Een normale titreer berekening maken.",
+  descriptiontitreerverdunning: "Een titreer berekening met verdunning maken.",
 
   //Names
   namebotstats1: "Uptime:", // Botstats
@@ -60,10 +123,9 @@ exports.embeds = {
   nameembedtemplate2: "Name: B",
   namegithub1: "Main link:", // GitHub
   namegithub2: "---",
-  namegithub3: "More links:",
-  namegithub4: "Child Servers:",
-  namegithub5: "Issues:",
-  namegithub6: "Update Log:",
+  namegithub3: "Child Servers:",
+  namegithub4: "Issues:",
+  namegithub5: "Update Log:",
   namemcserver1: "server IP:",
   namemcserver2: "Online Players:",
   namemcserver3: "Max Players:",
@@ -81,6 +143,9 @@ exports.embeds = {
   nameprofile9: "---",
   nameprofile10: "Level:",
   nameprofile11: "Experience:",
+  nameprofile12: "---",
+  nameprofile13: "Document ID:",
+  nameprofile14: "Document Version:",
   namerules1: "Rule 1:",
   namerules2: "Rule 2:",
   namerules3: "Rule 3:",
@@ -103,11 +168,10 @@ exports.embeds = {
   valueembedtemplate1: "value: X", // Embed Template
   valueembedtemplate2: "value: Y",
   valuegithub1: "https://github.com/PuffinKwadraat/MultiCube-Public", // GitHub
-  valuegithub2: "More specific links:",
-  valuegithub3: "More links:",
-  valuegithub4: "https://github.com/PuffinKwadraat/MultiCube-Public/tree/main/Minecraft%20Servers/Child%20Servers",
-  valuegithub5: "https://github.com/PuffinKwadraat/MultiCube-Public/issues",
-  valuegithub6: "https://github.com/PuffinKwadraat/MultiCube-Public/blob/main/Update%20Log.md",
+  valuegithub2: "More links:",
+  valuegithub3: "https://github.com/PuffinKwadraat/MultiCube-Public/tree/main/Minecraft%20Servers/Child%20Servers",
+  valuegithub4: "https://github.com/PuffinKwadraat/MultiCube-Public/issues",
+  valuegithub5: "https://github.com/PuffinKwadraat/MultiCube-Public/blob/main/Update%20Log.md",
   valueprofile1: "> **General:**", // Profile
   // valueprofile2: `${message.author.username}`,
   // valueprofile3: `#${tag}`,
@@ -130,46 +194,12 @@ exports.embeds = {
   valueserverip1: "multicube.aternos.me",
   valueserverip2: "1.16.5",
   valueserverip3: "None",
-
-  //Descriptions
-  descriptionbotstats: "These are my current stats.",
-  descriptiondonate: "Support our project by donating to us! Your funds will be used to improve our project. You can also help fund new hardware/software we need.",
-  descriptionembedtemplate: "Template",
-  descriptionevent: "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.",
-  descriptiongithub: "This is our GitHub repository. You can find a lot of information about anything there, so check it out!",
-  descriptionhelp: "What topic can I help you with?",
-  descriptionmcserver: "Here is some data about the server you asked for.",
-  descriptionprofile: "Here is the data we have stored about you.",
-  descriptionrules: "These are our house rules.",
-  descriptionserverip: "Here is the Server IP for our Minecraft server, MultiCube.",
 }
-
-exports.base = {
-  baseprefix: "$",
-  basecolor: "#76b3e1",
-  basewalletdefault: "0",
-  basebankdefault: "0",
-  baseleveldefault: "0",
-  baseexperiencedefault: "0",
-  basewelcomechannelid: "850753468927049798",
-  basemusicchannelid: "940618126960230450",
-  baseimagechannelid: "934093861079380018",
-  basemembercounterhz: '1500000',
-  baseguildid: "820580469757313025",
-  basemembercounterchannelid: "873925840096886784",
-  baseeventchannelid: "896369888103366716",
-  baserolecolorchannelid: "910547872439734292",
-  baseticketgroupid: "852178171305525258",
-  baseticketdeletetime: "5000",
-  basemainrole: "Member",
-  basemuterole: "Muted",
-  baseblindrole: "Blinded",
-};
 
 exports.embed = {
   embedfooter: "Stats and Bot provided by Complex.",
   embedimage: "https://i.imgur.com/neCyTDH.png",
-  embedlink: "https://github.com/PuffinKwadraat/MultiCube-and-Child-Servers",
+  embedlink: "https://github.com/PuffinKwadraat/MultiCube-Public",
 };
 
 exports.aliases = {
@@ -256,8 +286,8 @@ exports.aliases = {
   aliasesplay: ["music", "song"], // Play
   aliasesapply: ["form"], // Apply
   aliasescommandtemplate: ["cmdtemp"], // Commandtemplate
-  aliasesflipacoinen: ["fac"], // Flipacoin
-  aliasesflipacoinnl: ["facnl", "kopmunt"], // Kopofmunt
+  aliasesflipacoinen: ["fac", "facen"], // Flipacoin
+  aliasesflipacoinnl: ["facnl", "kopmunt", "kom"], // Kopofmunt
   aliasesimage: ["img"], // Image
   aliasesmath: ["math", "calc", "calculate"], // Math
   aliasesrpsen: ["rps"], //Rock Paper Scissor
@@ -273,8 +303,8 @@ exports.aliases = {
 };
 
 const A = 84000; // Daily
-// const B = 0; // Admin. Line 11  ^
-const C = 10; // Music             |
+const B = 0; // Admin
+const C = 10; // Music
 const D = 300; // Extreme
 const E = 60; // Hard
 const F = 30; // Medium
@@ -339,18 +369,18 @@ exports.cooldown = {
   cooldowncommandtemplate: B,
   cooldownflipacoinen: H,
   cooldownflipacoinnl: H,
-  cooldownimage: G,                               // Temporary
+  cooldownimage: G,
   cooldownmath: G,
   cooldownrpsen: H,
   cooldownrpsnl: H,
   cooldownsrpsen: H,
   cooldownticket: D,
-  cooldowncirkelvergelijking: E,
-  cooldownhoeklijn: E,
-  cooldownpunttotlijn: E,
-  cooldownsubstitutie: E,
-  cooldowntitreernormaal: E,
-  cooldowntitreerverdunning: E,
+  cooldowncirkelvergelijking: G,
+  cooldownhoeklijn: G,
+  cooldownpunttotlijn: G,
+  cooldownsubstitutie: G,
+  cooldowntitreernormaal: G,
+  cooldowntitreerverdunning: G,
 };
 
 exports.descriptions = {
@@ -438,8 +468,8 @@ exports.descriptions = {
   descriptiontitreerverdunning: "Calculate some advanced science math.",
 };
 
-// const I = "ADMINISTRATOR"; // Permission for admin commands. Line:12 ^
-const J = ["SEND_MESSAGES"]; // Permission for general commands.          |
+const I = ["ADMINISTRATOR"]; // Permission for admin commands.
+const J = ["SEND_MESSAGES"]; // Permission for general commands.
 exports.permissions = {
   // Command Permissions
   permissionban: I,
@@ -513,109 +543,3 @@ exports.permissions = {
   permissiontitreernormaal: J,
   permissiontitreerverdunning: J,
 };
-
-// Message Dependencies
-// const banrequire = require("../Commands/admin-ban.js");
-// const { target } = banrequire;
-// const { username } = banrequire;
-// const { reason1 } = banrequire;
-// const { reason2 } = banrequire;
-// const { memberTarget } = banrequire;
-
-// const blindrequire = require("../Commands/admin-blind.js");
-// const clearrequire = require("../Commands/admin-clear.js");
-// const kickrequire = require("../Commands/admin-kick.js");
-// const muterequire = require("../Commands/admin-mute.js");
-// const pingrequire = require("../Commands/admin-ping.js");
-// const unblindrequire = require("../Commands/admin-unblind.js");
-// const unmuterequire = require("../Commands/admin-unmute.js");
-// const uptimerequire = require("../Commands/admin-uptime.js");
-// const rolecolor1require = require("../Commands/cos-rolecolor1.js");
-// const rolecolor2require = require("../Commands/cos-rolecolor2.js");
-// const rolecolor3require = require("../Commands/cos-rolecolor3.js");
-// const balancerequire = require("../Commands/eco-balance.js");
-// const balancebankrequire = require("../Commands/eco-balancebank");
-// const balancewalletrequire = require("../Commands/eco-balancewallet.js");
-// const dailyrewardrequire = require("../Commands/eco-dailyreward.js");
-// const depositrequire = require("../Commands/eco-deposit.js");
-// const givebankrequire = require("../Commands/eco-givebank.js");
-
-exports.basemessages = {
-  // General Messages
-  messagesfinderror: "Could not find the specified variable.",
-  messagesvcrequired: "You need to be in a voice channel in order to use this command.",
-  messagesmembermention: "You need to mention someone to execute this command.",
-  messagesaccountmissing: "This user does not have an account in our database.",
-  messageserror: "There was an error sending the command.",
-  messagesgreaternegaone: "Amount must be larger than \`-1\`.",
-  messagesgreaterone: "Amount must be greater than \`0\`.",
-  messagescoinsmissing: "You do not have that amount of coins to perform this command.",
-  messagesrealnumber: "Please enter a real number.",
-  messagesamountmissing: "You are missing the amount to clear.",
-}
-
-// 9ban : "",
-// 9blind : "",
-// 9clear : "",
-// 9kick : "",
-// 9mute : "",
-// 9ping : "",
-// 9unblind : "",
-// 9unmute : "",
-// 9uptime : "",
-// 9rolecolor1 : "",
-// 9rolecolor2 : "",
-// 9rolecolor3 : "",
-// 9balance : "",
-// 9balancebank : "",
-// 9balancewallet : "",
-// 9dailyreward : "",
-// 9deposit : "",
-// 9givebank : "",
-// 9givefulleco : "",
-// 9givewallet : "",
-// 9minusbank : "",
-// 9minusfulleco : "",
-// 9minuswallet : "",
-// 9search : "",
-// 9setbank : "",
-// 9setfulleco : "",
-// 9setwallet : "",
-// 9withdraw : "",
-// 9experience : "",
-// 9giveexperience : "",
-// 9givefulllevel : "",
-// 9givelevel : "",
-// 9level : "",
-// 9levelstats : "",
-// 9minusexperience : "",
-// 9minusfulllevel : "",
-// 9minuslevel : "",
-// 9setexperience : "",
-// 9setfulllevel : "",
-// 9setlevel : "",
-// 9donate : "",
-// 9embedtemplate : "",
-// 9event : "",
-// 9github : "",
-// 9helpst1 : "",
-// 9mcserver : "",
-// 9profile : "",
-// 9rules : "",
-// 9serverip : "",
-// 9botstats : "",
-// 9leave : "",
-// 9play : "",
-// 9apply : "",
-// 9commandtemplate : "",
-// 9flipacoinen : "",
-// 9flipacoinnl : "",
-// 9image : "",
-// 9math : "",
-// 9ticket : "",
-// 9cirkelvergelijking : "",
-// 9hoeklijn : "",
-// 9punttotlijn : "",
-// 9substitutie : "",
-// 9titreernormaal : "",
-// 9titreerverdunning : "",

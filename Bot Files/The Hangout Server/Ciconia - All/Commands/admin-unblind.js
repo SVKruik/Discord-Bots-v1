@@ -9,17 +9,12 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     const target = message.mentions.users.first();
     if (target) {
-      let mainRole = message.guild.roles.cache.find(
-        (role) => role.name === config.base.basemainrole
+      const blindRole = message.guild.roles.cache.find(
+        (role) => role.id === config.base.baseblindrole
       );
-      let blindRole = message.guild.roles.cache.find(
-        (role) => role.name === config.base.baseblindrole
-      );
+      const memberTarget = message.guild.members.cache.get(target.id);
 
-      let memberTarget = message.guild.members.cache.get(target.id);
-
-      memberTarget.roles.remove(blindRole.id);
-      memberTarget.roles.add(mainRole.id);
+      memberTarget.roles.remove(blindRole);
       message.channel.send(
         `<@${memberTarget.user.id}> has been succesfully unblinded. Welcome back!`
       );

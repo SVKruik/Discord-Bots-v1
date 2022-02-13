@@ -7,24 +7,30 @@ module.exports = {
   permissions: config.permissions.permissionevent,
   description: "Set up a event with teams.",
   async execute(message, args, cmd, client, Discord) {
-    const channel = process.env.EVENTCHANNEL;
-    const greenTeamRole = message.guild.roles.cache.find(
-      (role) => role.name === "Team Green"
+    const channel = config.base.baseeventchannelid;
+    if (message.channel.id == channel) {
+    } else {
+      return message.channel.send(
+        `You are not in the right channel to use this command! Please use <#${channel}> instead!`
+      );
+    }
+    const oneTeamRole = message.guild.roles.cache.find(
+      (role) => role.id === config.commandevent.teamoneid
     );
-    const redTeamRole = message.guild.roles.cache.find(
-      (role) => role.name === "Team Red"
+    const twoTeamRole = message.guild.roles.cache.find(
+      (role) => role.id === config.commandevent.teamtwoid
     );
-    const yellowTeamRole = message.guild.roles.cache.find(
-      (role) => role.name === "Team Yellow"
+    const threeTeamRole = message.guild.roles.cache.find(
+      (role) => role.id === config.commandevent.teamthreeid
     );
-    const blueTeamRole = message.guild.roles.cache.find(
-      (role) => role.name === "Team blue"
+    const fourTeamRole = message.guild.roles.cache.find(
+      (role) => role.id === config.commandevent.teamfourid
     );
 
-    const greenTeamEmoji = "🟩";
-    const redTeamEmoji = "🟥";
-    const yellowTeamEmoji = "🟨";
-    const blueTeamEmoji = "🟦";
+    const oneTeamEmoji = "🟦"; // Blue
+    const twoTeamEmoji = "🟩"; // Green
+    const threeTeamEmoji = "🟥"; // Red
+    const fourTeamEmoji = "🟨"; // Yellow
 
     let embed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
@@ -34,17 +40,17 @@ module.exports = {
       .setTitle(config.embeds.titleevent)
       .setDescription(
         `${config.embeds.descriptionevent}\n\n` +
-          `${greenTeamEmoji} - For Team Green!\n` +
-          `${redTeamEmoji} - For Team Red!\n` +
-          `${yellowTeamEmoji} - For Team Yellow!\n` +
-          `${blueTeamEmoji} - For Team Blue!`
+        `${oneTeamEmoji} - For Team Blue!\n` +
+        `${twoTeamEmoji} - For Team Green!\n` +
+        `${threeTeamEmoji} - For Team Red!\n` +
+        `${fourTeamEmoji} - For Team Yellow!\n`
       );
 
     let messageEmbed = await message.channel.send(embed);
-    messageEmbed.react(greenTeamEmoji);
-    messageEmbed.react(redTeamEmoji);
-    messageEmbed.react(yellowTeamEmoji);
-    messageEmbed.react(blueTeamEmoji);
+    messageEmbed.react(oneTeamEmoji);
+    messageEmbed.react(twoTeamEmoji);
+    messageEmbed.react(threeTeamEmoji);
+    messageEmbed.react(fourTeamEmoji);
 
     client.on("messageReactionAdd", async (reaction, user) => {
       if (reaction.message.partial) await reaction.message.fetch();
@@ -53,25 +59,25 @@ module.exports = {
       if (!reaction.message.guild) return;
 
       if (reaction.message.channel.id == channel) {
-        if (reaction.emoji.name === greenTeamEmoji) {
+        if (reaction.emoji.name === oneTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.add(greenTeamRole);
+            .roles.add(oneTeamRole);
         }
-        if (reaction.emoji.name === redTeamEmoji) {
+        if (reaction.emoji.name === twoTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.add(redTeamRole);
+            .roles.add(twoTeamRole);
         }
-        if (reaction.emoji.name === yellowTeamEmoji) {
+        if (reaction.emoji.name === threeTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.add(yellowTeamRole);
+            .roles.add(threeTeamRole);
         }
-        if (reaction.emoji.name === blueTeamEmoji) {
+        if (reaction.emoji.name === fourTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.add(blueTeamRole);
+            .roles.add(fourTeamRole);
         }
       } else {
         return;
@@ -85,25 +91,25 @@ module.exports = {
       if (!reaction.message.guild) return;
 
       if (reaction.message.channel.id == channel) {
-        if (reaction.emoji.name === greenTeamEmoji) {
+        if (reaction.emoji.name === oneTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.remove(greenTeamRole);
+            .roles.remove(oneTeamRole);
         }
-        if (reaction.emoji.name === redTeamEmoji) {
+        if (reaction.emoji.name === twoTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.remove(redTeamRole);
+            .roles.remove(twoTeamRole);
         }
-        if (reaction.emoji.name === yellowTeamEmoji) {
+        if (reaction.emoji.name === threeTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.remove(yellowTeamRole);
+            .roles.remove(threeTeamRole);
         }
-        if (reaction.emoji.name === blueTeamEmoji) {
+        if (reaction.emoji.name === fourTeamEmoji) {
           await reaction.message.guild.members.cache
             .get(user.id)
-            .roles.remove(blueTeamRole);
+            .roles.remove(fourTeamRole);
         }
       } else {
         return;

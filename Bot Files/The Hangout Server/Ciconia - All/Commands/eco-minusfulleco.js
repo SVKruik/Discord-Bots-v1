@@ -32,7 +32,7 @@ module.exports = {
       );
 
       return message.channel.send(
-        `${message.author.username}, the targeted member has lost \`${amount}\` amount of coins (wallet).`
+        `${message.author.username}, the targeted member has lost \`${amount}\` amount of coins in both of their accounts.`
       );
     } catch (err) {
       console.log(err);

@@ -25,7 +25,7 @@ module.exports = {
       .addFields(
         {
           name: "Uptime:",
-          value: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`,
+          value: `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`,
         },
         { name: "API Ping:", value: `${Math.round(client.ws.ping)} ms` },
         {

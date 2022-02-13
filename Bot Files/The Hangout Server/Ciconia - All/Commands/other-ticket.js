@@ -11,24 +11,26 @@ module.exports = {
       `Ticket: ${message.author.tag}`
     );
 
-    channel.setParent(process.env.TICKETGROUP);
+    channel.setParent(config.base.baseticketgroupid);
 
     channel.updateOverwrite(message.guild.id, {
       SEND_MESSAGE: false,
       VIEW_CHANNEL: false,
+      READ_MESSAGE_HISTORY: false,
     });
     channel.updateOverwrite(message.author, {
       SEND_MESSAGE: true,
       VIEW_CHANNEL: true,
+      READ_MESSAGE_HISTORY: true,
     });
 
-    const reactionMessage = await channel.send(process.env.MSGTKTPENDING);
+    const reactionMessage = await channel.send(config.commandticket.commandticketpending);
 
     try {
       await reactionMessage.react("🔒");
       await reactionMessage.react("⛔");
     } catch (err) {
-      channel.send(process.env.MSGEMOJIERR);
+      channel.send(config.basemessages.messageemojierr);
       throw err;
     }
 
@@ -47,15 +49,15 @@ module.exports = {
           break;
         case "⛔":
           channel.send(
-            `Deleting this channel in ${process.env.TKTDELTIME} milliseconds!`
+            `Deleting this channel in ${config.base.baseticketdeletetime} milliseconds!`
           );
-          setTimeout(() => channel.delete(), process.env.TKTDELTIME);
+          setTimeout(() => channel.delete(), config.base.baseticketdeletetime);
           break;
       }
     });
 
     message.channel
-      .send(`We will be right with you! Your channel: ${channel}`)
+      .send(`${config.commandticket.commandticketpending} Your channel: ${channel}`)
       .catch((err) => {
         throw err;
       });

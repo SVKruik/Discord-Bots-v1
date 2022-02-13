@@ -18,7 +18,6 @@ module.exports = {
     util
       .status(args[0], { port: parseInt(args[1]) })
       .then((response) => {
-        console.log(response);
         const embed = new Discord.MessageEmbed()
           .setColor(config.base.basecolor)
           .setTitle(config.embeds.titlemcserver)

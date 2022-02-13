@@ -7,8 +7,9 @@ module.exports = {
   permissions: config.permissions.permissionflipacoinen,
   description: "Flip a coin!",
   async execute(message, args, cmd, client, Discord, profileData) {
-    if (!args[0].length)
+    if (!args[0]) {
       return message.channel.send("Please also choose your winning side.");
+    }
 
     const list = ["heads", "head", "tails", "tail"];
     const fac = [`Heads!`, `Tails!`];

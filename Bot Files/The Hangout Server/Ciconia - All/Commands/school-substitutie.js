@@ -67,11 +67,9 @@ module.exports = {
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle("Substitutie")
+      .setTitle(config.embeds.titlesubstitutie)
       .setImage(config.embed.embedimage)
-      .setDescription(
-        "Dit stappenplan laat zien hoe je een Substitutie berekening maakt. Dit is een vrij complexe berekening binnen de Wiskunde B."
-      )
+      .setDescription(config.embeds.descriptionsubstitutie)
       .addFields(
         {
           name: `1. Opdracht:`,

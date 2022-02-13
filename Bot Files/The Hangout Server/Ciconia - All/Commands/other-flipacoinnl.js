@@ -7,8 +7,9 @@ module.exports = {
   permissions: config.permissions.permissionflipacoinnl,
   description: "Kop of munt!",
   async execute(message, args, cmd, client, Discord, profileData) {
-    if (!args[0].length)
-      return message.channel.send("Kies ook welke kant vóór jouw is!");
+    if (!args[0]) {
+      return message.channel.send("Please also choose your winning side.");
+    }
 
     const list = ["kop", "munt"];
     const fac = [`Kop!`, `Munt!`];

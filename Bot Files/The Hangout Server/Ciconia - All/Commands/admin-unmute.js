@@ -9,19 +9,14 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     const target = message.mentions.users.first();
     if (target) {
-      let mainRole = message.guild.roles.cache.find(
-        (role) => role.name === config.base.basemainrole
+      const muteRole = message.guild.roles.cache.find(
+        (role) => role.id === config.base.basemuterole
       );
-      let muteRole = message.guild.roles.cache.find(
-        (role) => role.name === config.base.basemuterole
-      );
+      const memberTarget = message.guild.members.cache.get(target.id);
 
-      let memberTarget = message.guild.members.cache.get(target.id);
-
-      memberTarget.roles.remove(muteRole.id);
-      memberTarget.roles.add(mainRole.id);
+      memberTarget.roles.remove(muteRole);
       message.channel.send(
-        `<@${memberTarget.user.id}> has been succesfully unmuted. You can now talk again!`
+        `<@${memberTarget.user.id}> has been succesfully unmuted. You can now speak again!`
       );
     } else {
       message.channel.send(config.basemessages.messagesfinderror);

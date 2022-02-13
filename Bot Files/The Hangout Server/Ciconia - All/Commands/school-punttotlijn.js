@@ -59,9 +59,9 @@ module.exports = {
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(process.env.MBDTITLEPUNTTOTLIJN)
+      .setTitle(config.embeds.titlepuntlijn)
       .setImage(config.embed.embedimage)
-      .setDescription(process.env.MBDDESCPUNTTOTLIJN)
+      .setDescription(config.embeds.descriptionpuntlijn)
       .addFields(
         {
           name: `1. Opdracht:`,

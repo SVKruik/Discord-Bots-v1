@@ -13,8 +13,8 @@ module.exports = {
   async execute(message, args, cmd, client, Discord) {
     const voice_channel = message.member.voice.channel;
     if (!voice_channel) return message.channel.send(config.basemessages.messagesvcrequired);
-    if (!message.member.roles.cache.some(role => role.id === "940616347900076073")) {
-      message.channel.send("You are missing permissions to use the Music Bot. You need this role: <@&940616347900076073>.")
+    if (!message.member.roles.cache.some(role => role.id === config.base.basemusicroleid)) {
+      message.channel.send(`You are missing permissions to use the Music Bot. You need this role: <@${config.base.basemusicroleid}>.`)
     }
     const channel = config.base.basemusicchannelid;
     if (message.channel.id == channel) {
