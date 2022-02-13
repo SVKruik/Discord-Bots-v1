@@ -12,7 +12,7 @@
     "@discordjs/voice": "github:discordjs/voice",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
-    "images-scraper": "^6.4.0",
+    "images-scraper": "^6.3.0",
     "mathjs": "^10.1.1",
     "minecraft-server-util": "^5.2.9",
     "mongoose": "^6.2.1",

@@ -13,8 +13,12 @@ const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 //Counter
-client.on("ready", () => {
+client.on("ready", async () => {
   memberCounter(client);
+  await mongoose.connect(process.env.MONGODB_SRV || '', {
+    keepAlive: true,
+
+  });
 });
 
 //Core Code
