@@ -20,8 +20,17 @@ exports.test = {
 };
 
 exports.commandclear = {
-    commandclearmax: 50,
-    commandclearmin: 1,
+  commandclearmax: 50,
+  commandclearmin: 1,
+}
+
+exports.commandmcserver = {
+  commandmcserverip: "Please enter a valid Minecraft server IP!",
+  commandmcserverport: "Please enter a valid Minecraft server port!",
+}
+
+exports.commandleave = {
+  commandleavemsg: "Leaving the voice channel."
 }
 
 exports.embeds = {
@@ -48,7 +57,7 @@ exports.embeds = {
   namedonate1: "Donate Link:", // Donate
   namedonate2: "Memberships:",
   nameembedtemplate1: "Name: A", // Embed Template
-  nameembedtemplate1: "Name: B",
+  nameembedtemplate2: "Name: B",
   namegithub1: "Main link:", // GitHub
   namegithub2: "---",
   namegithub3: "More links:",
@@ -92,7 +101,7 @@ exports.embeds = {
   valuedonate1: "https://ko-fi.com/multicubecommunity", // Donate
   valuedonate2: "https://ko-fi.com/multicubecommunity/tiers",
   valueembedtemplate1: "value: X", // Embed Template
-  valueembedtemplate1: "value: Y",
+  valueembedtemplate2: "value: Y",
   valuegithub1: "https://github.com/PuffinKwadraat/MultiCube-Public", // GitHub
   valuegithub2: "More specific links:",
   valuegithub3: "More links:",
@@ -143,6 +152,7 @@ exports.base = {
   baseleveldefault: "0",
   baseexperiencedefault: "0",
   basewelcomechannelid: "850753468927049798",
+  basemusicchannelid: "940618126960230450",
   baseimagechannelid: "934093861079380018",
   basemembercounterhz: '1500000',
   baseguildid: "820580469757313025",
@@ -504,7 +514,7 @@ exports.permissions = {
   permissiontitreerverdunning: J,
 };
 
-  // Message Dependencies
+// Message Dependencies
 // const banrequire = require("../Commands/admin-ban.js");
 // const { target } = banrequire;
 // const { username } = banrequire;
@@ -541,7 +551,7 @@ exports.basemessages = {
   messagesgreaterone: "Amount must be greater than \`0\`.",
   messagescoinsmissing: "You do not have that amount of coins to perform this command.",
   messagesrealnumber: "Please enter a real number.",
-  messagesamountmissing: "You are missing the amount to clear."
+  messagesamountmissing: "You are missing the amount to clear.",
 }
 
 // 9ban : "",

@@ -19,9 +19,9 @@ module.exports = {
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle("Bot Statistics")
+      .setTitle(config.embeds.titlebotstats)
       .setImage(config.embed.embedimage)
-      .setDescription("These are my stats at the moment:")
+      .setDescription(config.embeds.descriptionbotstats)
       .addFields(
         {
           name: "Uptime:",
@@ -34,8 +34,8 @@ module.exports = {
         },
         { name: "serverID:", value: `${message.guild.id}` },
         { name: "Commands", value: `${commands}` },
-        { name: "Bot Version:", value: `${version}` },
-        { name: "Owner:", value: `<@422704748488163332>` }
+        { name: config.embeds.namebotstats6, value: config.embeds.valuebotstats6 },
+        { name: config.embeds.namebotstats7, value: config.embeds.valuebotstats7 }
       )
       .setFooter(config.embed.embedfooter);
 

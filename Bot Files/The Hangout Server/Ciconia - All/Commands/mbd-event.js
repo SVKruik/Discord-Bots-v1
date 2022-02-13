@@ -31,9 +31,9 @@ module.exports = {
       .setFooter(config.embed.embedfooter)
       .setImage(config.embed.embedimage)
       .setURL(config.embed.embedlink)
-      .setTitle("Choose a team to play on!")
+      .setTitle(config.embeds.titleevent)
       .setDescription(
-        "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.\n\n" +
+        `${config.embeds.descriptionevent}\n\n` +
           `${greenTeamEmoji} - For Team Green!\n` +
           `${redTeamEmoji} - For Team Red!\n` +
           `${yellowTeamEmoji} - For Team Yellow!\n` +

@@ -18,14 +18,20 @@ module.exports = {
     const StatsEmoji = "⚫";
     const EventsEmoji = "⚪";
 
+    async function execute(file, args) {
+      const f = require(file)
+      if (!f) throw new Error("Invalid file name.")
+      return f.execute(args)
+    }
+
     let embed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(process.env.MBDTITLEHELPST1)
+      .setTitle(config.embeds.titlehelp)
       .setImage(config.embed.embedimage)
       .setURL(config.embed.embedlink)
       .setFooter(config.embed.embedfooter)
       .setDescription(
-        "Choose a topic where you want to have help with. If this Bot still does not answer your questions, you can contact our support team.\n\n" +
+        `${config.embeds.descriptionhelp}\n\n` +
           `${ApplyEmoji} - For information about becoming a staff member.\n` +
           `${RanksRolesEmoji} - For information about our roles and ranks on our Discord and Minecraft servers.\n` +
           `${GitHubEmoji} - For support with how to read things that are GitHub exlusive (updates etc.), or how to become a GitHub Collaborator.\n` +
@@ -55,71 +61,8 @@ module.exports = {
       if (!reaction.message.guild) return;
 
       if (reaction.message.channel.id == channel) {
-        if (reaction.emoji.name === ApplyEmoji) {
-          await message.channel.send("Test1");
-        }
-        if (reaction.emoji.name === RanksRolesEmoji) {
-          await message.channel.send("Test2");
-        }
-        if (reaction.emoji.name === GitHubEmoji) {
-          await message.channel.send("Test3");
-        }
-        if (reaction.emoji.name === AboutEmoji) {
-          await message.channel.send("Test4");
-        }
-        if (reaction.emoji.name === BotEmoji) {
-          await message.channel.send("Test5");
-        }
-        if (reaction.emoji.name === ServersEmoji) {
-          await message.channel.send("Test6");
-        }
-        if (reaction.emoji.name === RulesEmoji) {
-          await message.channel.send("Test7");
-        }
-        if (reaction.emoji.name === StatsEmoji) {
-          await message.channel.send("Test8");
-        }
-        if (reaction.emoji.name === EventsEmoji) {
-          await message.channel.send("Test9");
-        }
-      } else {
-        return;
-      }
-    });
-
-    client.on("messageReactionRemove", async (reaction, user) => {
-      if (reaction.message.partial) await reaction.message.fetch();
-      if (reaction.partial) await reaction.fetch();
-      if (user.bot) return;
-      if (!reaction.message.guild) return;
-
-      if (reaction.message.channel.id == channel) {
-        if (reaction.emoji.name === ApplyEmoji) {
-          await message.channel.send("Test1");
-        }
-        if (reaction.emoji.name === RanksRolesEmoji) {
-          await message.channel.send("Test2");
-        }
-        if (reaction.emoji.name === GitHubEmoji) {
-          await message.channel.send("Test3");
-        }
-        if (reaction.emoji.name === AboutEmoji) {
-          await message.channel.send("Test4");
-        }
-        if (reaction.emoji.name === BotEmoji) {
-          await message.channel.send("Test5");
-        }
-        if (reaction.emoji.name === ServersEmoji) {
-          await message.channel.send("Test6");
-        }
-        if (reaction.emoji.name === RulesEmoji) {
-          await message.channel.send("Test7");
-        }
-        if (reaction.emoji.name === StatsEmoji) {
-          await message.channel.send("Test8");
-        }
-        if (reaction.emoji.name === EventsEmoji) {
-          await message.channel.send("Test9");
+        if (reaction.emoji.name === ApplyTeamEmoji) {
+            message.channel.send("Test")
         }
       } else {
         return;

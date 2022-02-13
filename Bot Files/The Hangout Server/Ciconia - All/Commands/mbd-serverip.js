@@ -9,22 +9,22 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(process.env.MBDTITLESERVERIP)
+      .setTitle(config.embeds.titleserverip)
       .setImage(config.embed.embedimage)
       .setURL(config.embed.embedlink)
-      .setDescription(process.env.MBDDESCSERVERIP)
+      .setDescription(config.embeds.descriptionserverip)
       .addFields(
         {
-          name: process.env.MBDFIELD1NAMESERVERIP,
-          value: MBDFIELD1VALUESERVERIP,
+          name: config.embeds.nameserverip1,
+          value: config.embeds.valueserverip1,
         },
         {
-          name: process.env.MBDFIELD2NAMESERVERIP,
-          value: MBDFIELD2VALUESERVERIP,
+          name: config.embeds.nameserverip2,
+          value: config.embeds.valueserverip2,
         },
         {
-          name: process.env.MBDFIELD3NAMESERVERIP,
-          value: MBDFIELD3VALUESERVERIP,
+          name: config.embeds.nameserverip3,
+          value: config.embeds.valueserverip3,
         }
       )
       .setFooter(config.embed.embedfooter);

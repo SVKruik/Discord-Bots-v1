@@ -12,9 +12,9 @@ module.exports = {
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(process.env.MBDTITLEPROFILE)
+      .setTitle(config.embeds.titleprofile)
       .setImage(config.embed.embedimage)
-      .setDescription(process.env.MBDDESCPROFILE)
+      .setDescription(config.embeds.descriptionprofile)
       .addFields(
         { name: "---", value: "> **General:**" },
         { name: "Name:", value: `${message.author.username}` },
@@ -26,7 +26,10 @@ module.exports = {
         { name: "Bank:", value: `${profileData.bank}` },
         { name: "---", value: "> **Level:**" },
         { name: "Level:", value: `${profileData.level}` },
-        { name: "Experience:", value: `${profileData.experience}` }
+        { name: "Experience:", value: `${profileData.experience}` },
+        { name: "---:", value: "> **Technical:**" },
+        { name: "Document ID:", value: `${profileData._id}` },
+        { name: "Version:", value: `${profileData.__v}` },
       )
       .setFooter(config.embed.embedfooter);
 
