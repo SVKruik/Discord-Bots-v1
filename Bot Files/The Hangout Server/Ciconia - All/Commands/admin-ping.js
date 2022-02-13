@@ -1,4 +1,5 @@
 const config = require("./../Other/config.js");
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   name: "ping",
@@ -9,7 +10,7 @@ module.exports = {
   execute(message, args, cmd, client, Discord) {
     const botping = Date.now() - message.createdTimestamp
     const apiping = client.ws.ping
-    const newEmbed = new Discord.MessageEmbed()
+    const newEmbed = new MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle("Bot Latency")
       .setImage(config.embed.embedimage)
@@ -26,6 +27,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send(newEmbed);
+    channel.send({ embeds: [newEmbed] });
   },
 };

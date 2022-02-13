@@ -1,4 +1,5 @@
 const config = require("./../Other/config.js");
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   name: "serverip",
@@ -7,7 +8,7 @@ module.exports = {
   permissions: config.permissions.permissionserverip,
   description: "Display the server IP and information for MultiCube.",
   execute(message, args, cmd, client, Discord) {
-    const newEmbed = new Discord.MessageEmbed()
+    const newEmbed = new MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titleserverip)
       .setImage(config.embed.embedimage)
@@ -29,6 +30,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send(newEmbed);
+    channel.send({ embeds: [newEmbed] });
   },
 };

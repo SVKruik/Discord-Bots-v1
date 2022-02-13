@@ -9,12 +9,15 @@
   "author": "PuffinKwadraat",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/voice": "github:discordjs/voice",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "images-scraper": "^6.4.0",
     "mathjs": "^10.1.1",
     "minecraft-server-util": "^5.2.9",
     "mongoose": "^6.2.1",
-    "puppeteer": "^13.3.1"
+    "puppeteer": "^13.3.1",
+    "yt-search": "^2.10.3",
+    "ytdl-core": "^4.10.1"
   }
 }

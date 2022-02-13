@@ -38,7 +38,7 @@ module.exports = {
       (reaction, user) =>
         message.guild.members.cache
           .find((member) => member.id === user.id)
-          .hasPermission("ADMINISTRATOR"),
+          .member.permissions.has("SEND_MESSAGES"),
       { dispose: true }
     );
 

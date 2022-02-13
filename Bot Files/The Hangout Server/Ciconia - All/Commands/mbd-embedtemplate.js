@@ -1,4 +1,5 @@
 const config = require("./../Other/config.js");
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   name: "embedtemplate",
@@ -7,7 +8,7 @@ module.exports = {
   permissions: config.permissions.permissionembedtemplate,
   description: "Embed template for devs.",
   execute(message, args, cmd, client, Discord) {
-    const newEmbed = new Discord.MessageEmbed()
+    const newEmbed = new MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titleembedtemplate)
       .setImage(config.embed.embedimage)
@@ -25,6 +26,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send(newEmbed);
+    channel.send({ embeds: [newEmbed] });
   },
 };

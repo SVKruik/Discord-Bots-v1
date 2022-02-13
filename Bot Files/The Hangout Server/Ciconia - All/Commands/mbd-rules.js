@@ -1,4 +1,5 @@
 const config = require("./../Other/config.js");
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   name: "rules",
@@ -7,7 +8,7 @@ module.exports = {
   permissions: config.permissions.permissionrules,
   description: "Displays an embed with our active server rules.",
   execute(message, args, cmd, client, Discord) {
-    const newEmbed = new Discord.MessageEmbed()
+    const newEmbed = new MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlerules)
       .setURL(config.embed.embedlink)
@@ -37,6 +38,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send(newEmbed);
+    channel.send({ embeds: [newEmbed] });
   },
 };
