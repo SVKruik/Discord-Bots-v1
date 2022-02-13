@@ -8,9 +8,9 @@ const mongoose = require("mongoose");
 const { version } = require("os");
 const memberCounter = require("./Counters/member-counter");
 require("dotenv").config();
-const client = new Discord.Client({
-  partials: ["MESSAGE", "CHANNEL", "REACTION"],
-});
+const { Client, Intents } = require('discord.js');
+
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 //Counter
 client.on("ready", () => {
@@ -29,7 +29,6 @@ client.events = new Discord.Collection();
 mongoose
   .connect(process.env.MONGODB_SRV, {
     useNewUrlParser: true,
-    useCreateIndex: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
   })
