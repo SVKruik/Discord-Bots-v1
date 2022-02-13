@@ -12,6 +12,10 @@ module.exports = {
     const username = message.client.user.username;
 
     const reason1 = args[1];
+    if(!args[1]){
+      message.delete();
+      return message.channel.send("Please also specify for what reason you would like to ban this member.")
+    }
     const reason2 = reason1.charAt(0).toUpperCase() + reason1.slice(1);
 
     if (target) {
