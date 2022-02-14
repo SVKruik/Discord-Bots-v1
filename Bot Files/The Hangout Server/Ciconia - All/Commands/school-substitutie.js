@@ -110,7 +110,7 @@ module.exports = {
           value: `\`\`\`X² + (${aformuleom}X + ${bformuleom}${cformuleom})² ${cirkela2}X ${cirkelb2}(${aformuleom} ${bformuleom}${cformuleom}) + ${cirkeloverigen} = 0\`\`\``,
         },
         {
-          name: `---`,
+          name: `--X-`,
           value: `\`\`\`X² + ${aformuleomkwa}X² - ${aformuleom2}${formulenaam}X + ${formulenaam}² ${cirkela2}X ${cirkelb2keeraformuleom}X + ${cirkelb2wis}${formulenaam} + ${cirkeloverigen} = 0 \`\`\``,
         },
         {
