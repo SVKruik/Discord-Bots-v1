@@ -622,7 +622,7 @@ module.exports = {
 
     const colorlist = require("../Other/colorlist.js");
     const coloridlist = require("../Other/coloridlist.js");
-    const channel = config.base.baserolecolorchannelid;
+    const channel = config.base.basecolorchannelid;
     const user = message.author;
 
     const randomcolor = colorlist[Math.floor(Math.random() * colorlist.length)];

@@ -13,21 +13,27 @@ const version = require("../package.json").version;
 exports.base = {
   baseprefix: "$",
   basecolor: "#76b3e1",
+  baseguildid: "820580469757313025",
+
   basewalletdefault: "0",
   basebankdefault: "0",
   baseleveldefault: "0",
   baseexperiencedefault: "0",
+
   basewelcomechannelid: "850753468927049798",
-  basemusicchannelid: "940618126960230450",
+  basemusicchannelid: "942848045421318185",
   basemusicroleid: "940616347900076073",
+
   baseimagechannelid: "942380437148409916",
-  basemembercounterhz: '1500000',
-  baseguildid: "820580469757313025",
-  basemembercounterchannelid: "873925840096886784",
   baseeventchannelid: "942438431282323487",
-  baserolecolorchannelid: "910547872439734292",
+  basecolorchannelid: "942842691828457512",
+
+  basemembercounterhz: '1500000',
+  basemembercounterchannelid: "873925840096886784",
+
   baseticketgroupid: "852178171305525258",
-  baseticketdeletetime: "5000",
+  baseticketdeletetime: "5000", //ms -> sec * 1000
+
   basemuterole: "851141747424886794",
   baseblindrole: "852934692696358952",
 };
