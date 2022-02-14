@@ -1,5 +1,4 @@
 const config = require("./../Other/config.js");
-const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   name: "event",

@@ -65,7 +65,7 @@ module.exports = {
     // var coordpuntenvolafgerond =
     //   Math.round((coordpuntenvol + Number.EPSILON) * 10) / 10;
 
-    const newEmbed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlesubstitutie)
       .setImage(config.embed.embedimage)
@@ -126,6 +126,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    channel.send({ embeds: [newEmbed] });
+    message.channel.send(newEmbed);
   },
 };

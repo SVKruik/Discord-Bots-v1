@@ -36,7 +36,7 @@ module.exports = {
       Math.round((molariteitonbekende + Number.EPSILON) * 1000) / 1000;
     var molariteitonbekendeafgerondex = molariteitonbekendeafgerond / 10;
 
-    const newEmbed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titletitreernormaal)
       .setImage(config.embed.embedimage)
@@ -61,6 +61,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    channel.send({ embeds: [newEmbed] });
+    message.channel.send(newEmbed);
   },
 };

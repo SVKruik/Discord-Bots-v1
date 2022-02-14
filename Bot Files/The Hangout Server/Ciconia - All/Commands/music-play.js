@@ -63,12 +63,7 @@ module.exports = {
         queue_constructor.songs.push(song);
 
         try {
-          const { joinVoiceChannel } = require("@discordjs/voice") //requires installation
-          joinVoiceChannel({
-            channelId: channel.id,
-            guildId: guild.id,
-            adapterCreator: guild.voiceAdapterCreator
-          })
+          const connection = await voice_channel.join();
           queue_constructor.connection = connection;
           video_player(message.guild, queue_constructor.songs[0]);
           message.channel.send(

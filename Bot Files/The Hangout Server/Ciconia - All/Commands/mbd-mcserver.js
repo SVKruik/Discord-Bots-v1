@@ -1,6 +1,5 @@
 const util = require("minecraft-server-util");
 const config = require("./../Other/config.js");
-const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   name: "minecraftserver",

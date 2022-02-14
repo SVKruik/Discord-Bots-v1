@@ -34,7 +34,7 @@ module.exports = {
 
     const diameter = wabcafgerond * 2;
 
-    const newEmbed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlecircle)
       .setImage(config.embed.embedimage)
@@ -71,6 +71,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    channel.send({ embeds: [newEmbed] });
+    message.channel.send(newEmbed);
   },
 };

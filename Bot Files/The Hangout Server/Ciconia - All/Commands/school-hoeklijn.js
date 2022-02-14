@@ -29,7 +29,7 @@ module.exports = {
 
     var hoekafgerond = Math.round((hoek + Number.EPSILON) * 1000) / 1000;
 
-    const newEmbed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlehoeklijn)
       .setImage(config.embed.embedimage)
@@ -66,6 +66,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    channel.send({ embeds: [newEmbed] });
+    message.channel.send(newEmbed);
   },
 };

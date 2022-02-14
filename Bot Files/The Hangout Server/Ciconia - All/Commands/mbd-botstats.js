@@ -1,5 +1,4 @@
 const config = require("../Other/config.js");
-const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   name: "botstatistics",
@@ -18,7 +17,7 @@ module.exports = {
     const fs = require("fs");
     const commands = fs.readdirSync("./Commands").length;
 
-    const newEmbed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlebotstats)
       .setImage(config.embed.embedimage)
@@ -40,6 +39,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    channel.send({ embeds: [newEmbed] });
+    message.channel.send(newEmbed);
   },
 };

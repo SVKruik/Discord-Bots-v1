@@ -12,7 +12,7 @@ module.exports = {
     const minutes = Math.floor(client.uptime / 60000) % 60;
     const seconds = Math.floor(client.uptime / 1000) % 60;
 
-    const newEmbed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle("Bot Uptime")
       .setImage(config.embed.embedimage)
@@ -23,6 +23,6 @@ module.exports = {
       })
       .setFooter(config.embed.embedfooter);
 
-    channel.send({ embeds: [newEmbed] });
+    message.channel.send(newEmbed);
   },
 };
