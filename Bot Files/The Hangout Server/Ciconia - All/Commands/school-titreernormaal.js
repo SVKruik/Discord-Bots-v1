@@ -17,6 +17,14 @@ module.exports = {
     const mmolonbekendenapipet = mmolonbekende / pipet;
     const molariteitonbekende = mmolonbekendenapipet * pipet;
 
+    if (args[0] === "delete") {
+      message.delete();
+    } else if (args[0] === "del") {
+      message.delete();
+    } else if (args[0] === "d") {
+      message.delete();
+    }
+
     //Input
     var titreermlafgerond =
       Math.round((titreerml + Number.EPSILON) * 1000) / 1000;

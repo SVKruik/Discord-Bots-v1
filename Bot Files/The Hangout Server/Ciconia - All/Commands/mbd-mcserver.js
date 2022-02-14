@@ -15,6 +15,14 @@ module.exports = {
         config.commandmcserver.commandmcserverport
       );
 
+    if (args[0] === "delete") {
+      message.delete();
+    } else if (args[0] === "del") {
+      message.delete();
+    } else if (args[0] === "d") {
+      message.delete();
+    }
+
     util
       .status(args[0], { port: parseInt(args[1]) })
       .then((response) => {

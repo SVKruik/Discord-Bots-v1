@@ -7,12 +7,26 @@ module.exports = {
   permissions: config.permissions.permissionsubstitutie,
   description: "Substitute",
   execute(message, args, cmd, client, Discord) {
+    const username = message.client.user.id;
+
     const cirkelnaam = "C";
     const formulenaam = "Q";
 
-    const afcirkela = -5;
-    const afcirkelb = -1;
-    const afcirkelc = 17;
+    const afcirkela = args[1];
+    const afcirkelb = args[2];
+    const afcirkelc = args[3];
+
+    if (!args[0]) {
+      return message.channel.send("You are missing the value \`A\` of the circle formula.")
+    } else if (!args[1]) {
+      return message.channel.send("You are missing the value \`B\` of the circle formula.")
+    } else if (!args[2]) {
+      return message.channel.send("You are missing the value \`C\` of the circle formula.")
+    } else if (!args[3]) {
+      return message.channel.send("You are missing the value \`A\` of the line formula.")
+    } else if (!args[4]) {
+      return message.channel.send("You are missing the value \`B\` of the line formula.")
+    }
 
     const afcirkelakwa = afcirkela * afcirkela;
     const afcirkelbkwa = afcirkelb * afcirkelb;
@@ -22,12 +36,12 @@ module.exports = {
     const cirkeloverigen = afcirkelakwa + afcirkelbkwa - afcirkelc;
     const cirkelbegin = "X² + Y²";
     //AX - BY = C
-    const aformule = 4;
-    const bformule = -1;
+    const aformule = args[4];
+    const bformule = args[5];
     const cformule = formulenaam;
     //AX + B
-    const aformuleom = 4;
-    const bformuleom = -1;
+    const aformuleom = aformule * -1;
+    const bformuleom = bformule * -1;
     const cformuleom = cformule;
 
     const aformuleomkwa = aformuleom * aformuleom;
@@ -61,6 +75,14 @@ module.exports = {
     const babcformuleafdeelaabc = babcformuleaf / aabcformuleaf;
     const cabcformuleafdeelaabc = cabcformuleaf / aabcformuleaf;
 
+    if (args[5] === "delete") {
+      message.delete();
+    } else if (args[5] === "del") {
+      message.delete();
+    } else if (args[5] === "d") {
+      message.delete();
+    }
+
     //Input
     // var coordpuntenvolafgerond =
     //   Math.round((coordpuntenvol + Number.EPSILON) * 10) / 10;
@@ -81,11 +103,11 @@ module.exports = {
         },
         {
           name: `3. Gegeven lijn ombouwen naar de vorm Y = AX + B:`,
-          value: `Uit ${aformule}X ${bformule} = ${formulenaam} volgt Y = ${aformuleom} ${bformuleom}${cformuleom}.`,
+          value: `Uit ${aformule}X ${bformule} = ${formulenaam} volgt ${formulenaam} = ${aformuleom}X + ${bformuleom}.`,
         },
         {
           name: `4. Substitutie van Y = ${aformuleom} ${bformuleom}${cformuleom} in ${cirkelbegin} ${cirkela2}X ${cirkelb2}Y + ${cirkeloverigen} = 0:`,
-          value: `\`\`\`X² + (${aformuleom} ${bformuleom}${cformuleom})² ${cirkela2}X ${cirkelb2}(${aformuleom} ${bformuleom}${cformuleom}) + ${cirkeloverigen} = 0\`\`\``,
+          value: `\`\`\`X² + (${aformuleom}X + ${bformuleom}${cformuleom})² ${cirkela2}X ${cirkelb2}(${aformuleom} ${bformuleom}${cformuleom}) + ${cirkeloverigen} = 0\`\`\``,
         },
         {
           name: `---`,
@@ -122,6 +144,10 @@ module.exports = {
         {
           name: `Geschikt paar vinden (product som-methode):`,
           value: `In het geval van D = ${formulenaam}² - 38${formulenaam} + 72 --> Q = 2 V Q = 36.`,
+        },
+        {
+          name: `**--------**`,
+          value: `> De bovenstaande product-som methode is een voorbeeld uit het boek. Het is niet mogelijk dat ik, als in <@${username}>, dit voor je doe.`,
         }
       )
       .setFooter(config.embed.embedfooter);

@@ -7,6 +7,14 @@ module.exports = {
   permissions: config.permissions.permissiondonate,
   description: "Support our project by donating to us.",
   execute(message, args, cmd, client, Discord) {
+    if (args[0] === "delete") {
+      message.delete();
+    } else if (args[0] === "del") {
+      message.delete();
+    } else if (args[0] === "d") {
+      message.delete();
+    }
+    
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titledonate)

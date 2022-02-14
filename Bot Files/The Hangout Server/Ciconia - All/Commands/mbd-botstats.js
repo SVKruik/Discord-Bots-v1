@@ -17,6 +17,14 @@ module.exports = {
     const fs = require("fs");
     const commands = fs.readdirSync("./Commands").length;
 
+    if (args[0] === "delete") {
+      message.delete();
+    } else if (args[0] === "del") {
+      message.delete();
+    } else if (args[0] === "d") {
+      message.delete();
+    }
+
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlebotstats)

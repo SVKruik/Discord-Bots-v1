@@ -7,6 +7,14 @@ module.exports = {
   permissions: config.permissions.permissionevent,
   description: "Set up a event with teams.",
   async execute(message, args, cmd, client, Discord) {
+    if (args[0] === "delete") {
+      message.delete();
+    } else if (args[0] === "del") {
+      message.delete();
+    } else if (args[0] === "d") {
+      message.delete();
+    }
+    
     const channel = config.base.baseeventchannelid;
     if (message.channel.id == channel) {
     } else {
