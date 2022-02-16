@@ -7,6 +7,12 @@ module.exports = {
   permissions: config.permissions.permissionuptime,
   description: "Check the uptime of the bot.",
   execute(message, args, cmd, client, Discord) {
+    if (args[2] === "delete") {
+      message.delete();
+    } else if (args[2] === "del" || args[2] === "d") {
+      message.delete();
+    }
+    
     const days = Math.floor(client.uptime / 86400000);
     const hours = Math.floor(client.uptime / 3600000) % 24;
     const minutes = Math.floor(client.uptime / 60000) % 60;

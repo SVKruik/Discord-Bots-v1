@@ -7,6 +7,12 @@ module.exports = {
   permissions: config.permissions.permissionunmute,
   description: "This command unmutes members.",
   execute(message, args, cmd, client, Discord) {
+    if (args[2] === "delete") {
+      message.delete();
+    } else if (args[2] === "del" || args[2] === "d") {
+      message.delete();
+    }
+    
     const target = message.mentions.users.first();
     if (target) {
       const muteRole = message.guild.roles.cache.find(

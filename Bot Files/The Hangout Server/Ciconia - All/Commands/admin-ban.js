@@ -17,6 +17,12 @@ module.exports = {
     }
     const reason2 = reason1.charAt(0).toUpperCase() + reason1.slice(1);
 
+    if (args[2] === "delete") {
+      message.delete();
+    } else if (args[2] === "del" || args[2] === "d") {
+      message.delete();
+    }
+
     if (target) {
       const memberTarget = message.guild.members.cache.get(target.id);
       memberTarget.ban();

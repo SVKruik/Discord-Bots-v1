@@ -20,6 +20,7 @@ module.exports = {
       );
     if (args[0] < min) return message.channel.send(config.basemessages.messagesgreaterone);
 
+    message.delete();
     await message.channel.messages
       .fetch({ limit: args[0] })
       .then((messages) => {

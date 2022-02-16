@@ -15,11 +15,9 @@ module.exports = {
         config.commandmcserver.commandmcserverport
       );
 
-    if (args[0] === "delete") {
+    if (args[2] === "delete") {
       message.delete();
-    } else if (args[0] === "del") {
-      message.delete();
-    } else if (args[0] === "d") {
+    } else if (args[2] === "del" || args[2] === "d") {
       message.delete();
     }
 
