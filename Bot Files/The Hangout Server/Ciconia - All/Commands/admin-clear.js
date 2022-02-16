@@ -19,8 +19,7 @@ module.exports = {
         `You cannot clear more than \`${max}\` messages in one command.`
       );
     if (args[0] < min) return message.channel.send(config.basemessages.messagesgreaterone);
-
-    message.delete();
+    
     await message.channel.messages
       .fetch({ limit: args[0] })
       .then((messages) => {

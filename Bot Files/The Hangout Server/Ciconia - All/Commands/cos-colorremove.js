@@ -91,7 +91,7 @@ module.exports = {
     const lightblueTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910556305431855126"
     );
-    const trfluereddishorangeTeamRole = message.guild.roles.cache.find(
+    const trflureddishorangeTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910556375665504336"
     );
     const trgreenTeamRole = message.guild.roles.cache.find(
@@ -238,7 +238,7 @@ module.exports = {
     const trfluyellowTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910560591280758855"
     );
-    const trflueredTeamRole = message.guild.roles.cache.find(
+    const trfluredTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910560696301912134"
     );
     const gunmetallicTeamRole = message.guild.roles.cache.find(
@@ -416,7 +416,7 @@ module.exports = {
       (role) => role.id === "910565680091390042"
     );
     const crimsonTeamRole = message.guild.roles.cache.find(
-      (role) => role.id === "910565680091390042"
+      (role) => role.id === "910565726757220412"
     );
     const mintTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910565774853288001"
@@ -620,1667 +620,1250 @@ module.exports = {
       (role) => role.id === "910569825812758569"
     );
 
-    const colorlist = require("../Other/colorlist.js");
-    const coloridlist = require("../Other/coloridlist.js");
-    const channel = config.base.basecolorchannelid;
-    const user = message.author;
-
-    const randomcolor = colorlist[Math.floor(Math.random() * colorlist.length)];
-
-    const colorname = args[0];
-    if (!args.length)
-      return message.channel.send("What color would you like to remove?");
-
-    if (message.channel.id == channel) {
-    } else {
-      return message.channel.send(
-        `You are not in the right channel to use this command! Please use <#${channel}> instead!`
-      );
+    if (!args[0]) {
+      return message.channel.send("What color(s) would you like to remove?");
     }
 
-    const consolelogmsg = `${message.author.username} has removed their rolecolor: ${args[0]}.`;
-    const rmvdcolormsg = "You have removed your rolecolor: "
+    const logmsg = `${message.author.username} has removed their rolecolor: || ${args[0]} ||`;
+    const errmsg = `I cannot find that color.`;
+    const colormsg = `You have removed the following role color: ${args[0]}`;
+    const user = message.author;
 
-    if (args[0] == "1") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${whiteTeamRole}`
-      );
+    const member = message.guild.members.resolve(user.id);
+    const roles = member.roles.cache.filter(role => role.name.startsWith(`SRC -`));
+
+    if (args[0] === "1") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(whiteTeamRole);
-    } else if (args[0] == "2") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${greyTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "2") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(greyTeamRole);
-    } else if (args[0] == "3") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightyellowTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "3") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(lightyellowTeamRole);
-    } else if (args[0] == "4") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brickyellowTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "4") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(brickyellowTeamRole);
-    } else if (args[0] == "5") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightgreenTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "5") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(lightgreenTeamRole);
-    } else if (args[0] == "6") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightreddishvioletTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "6") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(lightreddishvioletTeamRole);
-    } else if (args[0] == "7") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pastelblueTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "7") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(pastelblueTeamRole);
-    } else if (args[0] == "8") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightorangebrownTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "8") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(lightorangebrownTeamRole);
-    } else if (args[0] == "9") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${nougat}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "9") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(nougatTeamRole);
-    } else if (args[0] == "10") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightredTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "10") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(brightredTeamRole);
-    } else if (args[0] == "11") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${medreddishvioletTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "11") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(medreddishvioletTeamRole);
-    } else if (args[0] == "12") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightblueTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "12") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(brightblueTeamRole);
-    } else if (args[0] == "13") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightyellowTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "13") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(brightyellowTeamRole);
-    } else if (args[0] == "14") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${earthorangeTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "14") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(earthorangeTeamRole);
-    } else if (args[0] == "15") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${blackTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "15") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(blackTeamRole);
-    } else if (args[0] == "16") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkgreyTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "16") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(darkgreyTeamRole);
-    } else if (args[0] == "17") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkgreenTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "17") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(darkgreenTeamRole);
-    } else if (args[0] == "18") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mediumgreenTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "18") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(mediumgreenTeamRole);
-    } else if (args[0] == "19") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${ligyellowishorangeTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "19") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(ligyellowishorangeTeamRole);
-    } else if (args[0] == "20") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightgreenTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "20") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(brightgreenTeamRole);
-    } else if (args[0] == "21") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkorangeTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "21") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(darkorangeTeamRole);
-    } else if (args[0] == "22") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightbluishvioletTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "22") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(lightbluishvioletTeamRole);
-    } else if (args[0] == "23") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${transparentTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "23") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(transparentTeamRole);
-    } else if (args[0] == "24") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trredTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "24") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(trredTeamRole);
-    } else if (args[0] == "25") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trlgblueTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "25") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(trlgblueTeamRole);
-    } else if (args[0] == "26") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trblueTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "26") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(trblueTeamRole);
-    } else if (args[0] == "27") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${tryellowTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "27") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(tryellowTeamRole);
-    } else if (args[0] == "28") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightblueTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "28") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(lightblueTeamRole);
-    } else if (args[0] == "29") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trfluereddishorangeTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "29") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(trflureddishorangeTeamRole);
-    } else if (args[0] == "30") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trgreenTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "30") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(trgreenTeamRole);
-    } else if (args[0] == "31") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trflugreenTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "31") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(trflugreenTeamRole);
-    } else if (args[0] == "32") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${phosphwhiteTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "32") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(phosphwhiteTeamRole);
-    } else if (args[0] == "33") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightredTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "33") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(lightredTeamRole);
-    } else if (args[0] == "34") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mediumredTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "34") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(mediumredTeamRole);
-    } else if (args[0] == "35") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mediumblueTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "35") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(mediumblueTeamRole);
-    } else if (args[0] == "36") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightgreyTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "36") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(lightgreyTeamRole);
-    } else if (args[0] == "37") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightvioletTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "37") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(brightvioletTeamRole);
-    } else if (args[0] == "38") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${bryellowishorangeTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "38") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(bryellowishorangeTeamRole);
-    } else if (args[0] == "39") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightorangeTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "39") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(brightorangeTeamRole);
-    } else if (args[0] == "40") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightbluishgreenTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "40") {
       await message.guild.members.cache
         .get(user.id)
         .roles.remove(brightbluishgreenTeamRole);
-    } else if (args[0] == "41") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${earthyellowTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(earthyellowTeamRole);
-    } else if (args[0] == "42") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightbluishvioletTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(brightbluishvioletTeamRole);
-    } else if (args[0] == "43") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trbrownTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(trbrownTeamRole);
-    } else if (args[0] == "44") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mediumbluishvioletTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(mediumbluishvioletTeamRole);
-    } else if (args[0] == "45") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trmedireddishvioletTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(trmedireddishvioletTeamRole);
-    } else if (args[0] == "46") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${medyellowishgreenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(medyellowishgreenTeamRole);
-    } else if (args[0] == "47") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${medbluishgreenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(medbluishgreenTeamRole);
-    } else if (args[0] == "48") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightbluishgreenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(lightbluishgreenTeamRole);
-    } else if (args[0] == "49") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${bryellowishgreenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(bryellowishgreenTeamRole);
-    } else if (args[0] == "50") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${ligyellowishgreenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(ligyellowishgreenTeamRole);
-    } else if (args[0] == "51") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${medyellowishorangeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(medyellowishorangeTeamRole);
-    } else if (args[0] == "52") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brreddishorangeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(brreddishorangeTeamRole);
-    } else if (args[0] == "53") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightreddishvioletTeamRole}`
-      );
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "41") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(brightreddishvioletTeamRole);
-    } else if (args[0] == "54") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightorangeTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "42") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lightorangeTeamRole);
-    } else if (args[0] == "55") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trbrightbluishvioletTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "43") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(trbrightbluishvioletTeamRole);
-    } else if (args[0] == "56") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${goldTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "44") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(goldTeamRole);
-    } else if (args[0] == "57") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darknougatTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "45") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(darknougatTeamRole);
-    } else if (args[0] == "58") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${silverTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "46") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(silverTeamRole);
-    } else if (args[0] == "59") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${neonorangeTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "47") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(neonorangeTeamRole);
-    } else if (args[0] == "60") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${neongreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "48") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(neongreenTeamRole);
-    } else if (args[0] == "61") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sandblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "49") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sandblueTeamRole);
-    } else if (args[0] == "62") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sandvioletTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "50") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sandvioletTeamRole);
-    } else if (args[0] == "63") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mediumorangeTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "51") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(mediumorangeTeamRole);
-    } else if (args[0] == "64") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sandyellowTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "52") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sandyellowTeamRole);
-    } else if (args[0] == "65") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${earthblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "53") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(earthblueTeamRole);
-    } else if (args[0] == "66") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${earthgreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "54") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(earthgreenTeamRole);
-    } else if (args[0] == "67") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trflublueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "55") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(trflublueTeamRole);
-    } else if (args[0] == "68") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sandbluemetallicTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "56") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sandbluemetallicTeamRole);
-    } else if (args[0] == "69") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sandvioletmetallicTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "57") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sandvioletmetallicTeamRole);
-    } else if (args[0] == "70") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sandyellowmetallicTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "58") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sandyellowmetallicTeamRole);
-    } else if (args[0] == "71") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkgreymetallicTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "59") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(darkgreymetallicTeamRole);
-    } else if (args[0] == "72") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${blackmetallicTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "60") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(blackmetallicTeamRole);
-    } else if (args[0] == "73") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightgreymetallicTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "61") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lightgreymetallicTeamRole);
-    } else if (args[0] == "74") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sandgreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "62") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sandgreenTeamRole);
-    } else if (args[0] == "75") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sandredTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "63") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sandredTeamRole);
-    } else if (args[0] == "76") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkredTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "64") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(darkredTeamRole);
-    } else if (args[0] == "77") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trfluyellowTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "65") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(trfluyellowTeamRole);
-    } else if (args[0] == "78") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${trflueredTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "66") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(trfluredTeamRole);
-    } else if (args[0] == "79") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${gunmetallicTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "67") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(gunmetallicTeamRole);
-    } else if (args[0] == "80") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${redflipflopTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "68") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(redflipflopTeamRole);
-    } else if (args[0] == "81") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${yellowflipflopTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "69") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(yellowflipflopTeamRole);
-    } else if (args[0] == "82") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${silverflipflopTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "70") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(silverflipflopTeamRole);
-    } else if (args[0] == "83") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${curryTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "71") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(curryTeamRole);
-    } else if (args[0] == "84") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${fireyellowTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "72") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(fireyellowTeamRole);
-    } else if (args[0] == "85") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${flameyellowishorangeTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "73") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(flameyellowishorangeTeamRole);
-    } else if (args[0] == "86") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${reddishbrownTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "74") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(reddishbrownTeamRole);
-    } else if (args[0] == "87") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${flamereddishorangeTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "75") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(flamereddishorangeTeamRole);
-    } else if (args[0] == "88") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mediumstonegreyTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "76") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(mediumstonegreyTeamRole);
-    } else if (args[0] == "89") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${royalblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "77") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(royalblueTeamRole);
-    } else if (args[0] == "90") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkroyalblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "78") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(darkroyalblueTeamRole);
-    } else if (args[0] == "91") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightreddishlilacTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "79") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(brightreddishlilacTeamRole);
-    } else if (args[0] == "92") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkstonegreyTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "80") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(darkstonegreyTeamRole);
-    } else if (args[0] == "93") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lemonmetallicTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "81") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lemonmetallicTeamRole);
-    } else if (args[0] == "94") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightstonegreyTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "82") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lightstonegreyTeamRole);
-    } else if (args[0] == "95") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkcurryTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "83") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(darkcurryTeamRole);
-    } else if (args[0] == "96") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${fadedgreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "84") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(fadedgreenTeamRole);
-    } else if (args[0] == "97") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${turquoiseTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "85") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(turquoiseTeamRole);
-    } else if (args[0] == "98") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightroyalblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "86") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lightroyalblueTeamRole);
-    } else if (args[0] == "99") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mediumroyalblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "87") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(mediumroyalblueTeamRole);
-    } else if (args[0] == "100") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${rustTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "88") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(rustTeamRole);
-    } else if (args[0] == "101") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brownTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "89") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(brownTeamRole);
-    } else if (args[0] == "102") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${reddishlilacTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "90") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(reddishlilacTeamRole);
-    } else if (args[0] == "103") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lilacTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "91") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lilacTeamRole);
-    } else if (args[0] == "104") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightlilacTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "92") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lightlilacTeamRole);
-    } else if (args[0] == "105") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${brightpurpleTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "93") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(brightpurpleTeamRole);
-    } else if (args[0] == "106") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightpurpleTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "94") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lightpurpleTeamRole);
-    } else if (args[0] == "107") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightpinkTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "95") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lightpinkTeamRole);
-    } else if (args[0] == "108") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lightbrickyellowTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "96") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lightbrickyellowTeamRole);
-    } else if (args[0] == "109") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${warmyellowishorangeTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "97") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(warmyellowishorangeTeamRole);
-    } else if (args[0] == "110") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${coolyellowTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "98") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(coolyellowTeamRole);
-    } else if (args[0] == "111") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${doveblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "99") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(doveblueTeamRole);
-    } else if (args[0] == "112") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mediumlilacTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "100") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(mediumlilacTeamRole);
-    } else if (args[0] == "113") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${slimegreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "101") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(slimegreenTeamRole);
-    } else if (args[0] == "114") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${smokygreyTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "102") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(smokygreyTeamRole);
-    } else if (args[0] == "115") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "103") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(darkblueTeamRole);
-    } else if (args[0] == "116") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${parsleygreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "104") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(parsleygreenTeamRole);
-    } else if (args[0] == "117") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${steelblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "105") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(steelblueTeamRole);
-    } else if (args[0] == "118") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${stormblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "106") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(stormblueTeamRole);
-    } else if (args[0] == "119") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lapisTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "107") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(lapisTeamRole);
-    } else if (args[0] == "120") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darkindigoTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "108") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(darkindigoTeamRole);
-    } else if (args[0] == "121") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${seagreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "109") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(seagreenTeamRole);
-    } else if (args[0] == "122") {
-      console.log(consolelogmsg);
-      message.channel.send(`
-      ${rmvdcolormsg}${shamrockTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "110") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(shamrockTeamRole);
-    } else if (args[0] == "123") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${fossilTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "111") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(fossilTeamRole);
-    } else if (args[0] == "124") {
-      console.log(consolelogmsg);
-      message.channel.send(`
-      ${rmvdcolormsg}${mulberryTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "112") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(mulberryTeamRole);
-    } else if (args[0] == "125") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${forestgreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "113") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(forestgreenTeamRole);
-    } else if (args[0] == "126") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${cadetblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "114") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(cadetblueTeamRole);
-    } else if (args[0] == "127") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${electricblueTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "115") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(electricblueTeamRole);
-    } else if (args[0] == "128") {
-      console.log(consolelogmsg);
-      message.channel.send(`
-      ${rmvdcolormsg}${eggplantTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "116") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(eggplantTeamRole);
-    } else if (args[0] == "129") {
-      console.log(consolelogmsg);
-      message.channel.send(`
-      ${rmvdcolormsg}${mossTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "117") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(mosssTeamRole);
-    } else if (args[0] == "130") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${artichokeTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "118") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(artichokeTeamRole);
-    } else if (args[0] == "131") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sagegreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "119") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(sagegreenTeamRole);
-    } else if (args[0] == "132") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${ghostgreyTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "120") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(ghostgreyTeamRole);
-    } else if (args[0] == "133") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${plumTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "121") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(plumTeamRole);
-    } else if (args[0] == "134") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${olivineTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "122") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(olivineTeamRole);
-    } else if (args[0] == "135") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${laurelgreenTeamRole}`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "123") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(laurelgreenTeamRole);
-    } else if (args[0] == "136") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${quillgreyTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(quillgreyTeamRole);
-    } else if (args[0] == "137") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${crimsonTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(crimsonTeamRole);
-    } else if (args[0] == "138") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mintTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(mintTeamRole);
-    } else if (args[0] == "139") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${babyblueTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(babyblueTeamRole);
-    } else if (args[0] == "140") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${carnationpinkTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(carnationpinkeamRole);
-    } else if (args[0] == "141") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${persimmonTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(persimmonTeamRole);
-    } else if (args[0] == "142") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${maroonTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(maroonTeamRole);
-    } else if (args[0] == "143") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${daisyorangeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(daisyorangeTeamRole);
-    } else if (args[0] == "144") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pearlTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pearlTeamRole);
-    } else if (args[0] == "145") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${fogTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(fogTeamRole);
-    } else if (args[0] == "146") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${salmonTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(salmonTeamRole);
-    } else if (args[0] == "147") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${terracottaTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(terracottaTeamRole);
-    } else if (args[0] == "148") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${cocoaTeamRole}`
-      );
-      await message.guild.members.cache.
-        get(user.id)
-        .roles.remove(cocoaTeamRole);
-    } else if (args[0] == "149") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${wheatTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(wheatTeamRole);
-    } else if (args[0] == "150") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${buttermilkTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(buttermilkTeamRole);
-    } else if (args[0] == "151") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${mauveTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(mauveTeamRole);
-    } else if (args[0] == "152") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${sunriseTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(sunriseTeamRole);
-    } else if (args[0] == "153") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${tawnyTeamRole}`
-      );
-      await message.guild.members.cache.
-        get(user.id).
-        roles.remove(tawnyTeamRole);
-    } else if (args[0] == "154") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${cashmereTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(cashmereTeamRole);
-    } else if (args[0] == "155") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${khakiTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(khakiTeamRole);
-    } else if (args[0] == "156") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lilywhiteTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(lilywhiteTeamRole);
-    } else if (args[0] == "157") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${seashellTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(seashellTeamRole);
-    } else if (args[0] == "158") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${burgundyTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(burgundyTeamRole);
-    } else if (args[0] == "159") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${corkTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(corkTeamRole);
-    } else if (args[0] == "160") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${burlapTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(burlapTeamRole);
-    } else if (args[0] == "161") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${beigeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(beigeTeamRole);
-    } else if (args[0] == "162") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${oysterTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(oysterTeamRole);
-    } else if (args[0] == "163") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pineconeTeamRole}`);
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pineconeTeamRole);
-    } else if (args[0] == "164") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${fawnbrownTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(fawnbrownTeamRole);
-    } else if (args[0] == "165") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${hurricanegreyTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(hurricanegreyTeamRole);
-    } else if (args[0] == "166") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${cloudygreyTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(cloudygreyTeamRole);
-    } else if (args[0] == "167") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${linenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(linenTeamRole);
-    } else if (args[0] == "168") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${copperTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(copperTeamRole);
-    } else if (args[0] == "169") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${dirtbrownTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(dirtbrownTeamRole);
-    } else if (args[0] == "170") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${bronzeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(bronzeTeamRole);
-    } else if (args[0] == "171") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${flintTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(flintTeamRole);
-    } else if (args[0] == "172") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${darktaupeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(darktaupeTeamRole);
-    } else if (args[0] == "173") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${burntsiennaTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(burntsiennaTeamRole);
-    } else if (args[0] == "174") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${institutionalwhiteTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(institutionalwhiteTeamRole);
-    } else if (args[0] == "175") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${midgrayTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(midgrayTeamRole);
-    } else if (args[0] == "176") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${reallyblackTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(reallyblackTeamRole);
-    } else if (args[0] == "177") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${reallyredTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(reallyredTeamRole);
-    } else if (args[0] == "178") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${deeporangeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(deeporangeTeamRole);
-    } else if (args[0] == "179") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${alderTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(alderTeamRole);
-    } else if (args[0] == "180") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${dustyroseTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(dustyroseTeamRole);
-    } else if (args[0] == "181") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${oliveTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(oliveTeamRole);
-    } else if (args[0] == "182") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${newyellerTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(newyellerTeamRole);
-    } else if (args[0] == "183") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${reallyblueTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(reallyblueTeamRole);
-    } else if (args[0] == "184") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${navyblueTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(navyblueTeamRole);
-    } else if (args[0] == "185") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${deepblueTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(deepblueTeamRole);
-    } else if (args[0] == "186") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${cyanTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(cyanTeamRole);
-    } else if (args[0] == "187") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${cgabrownTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(cgabrownTeamRole);
-    } else if (args[0] == "188") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${magentaTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(magentaTeamRole);
-    } else if (args[0] == "189") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pinkTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pinkTeamRole);
-    } else if (args[0] == "190") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${deeporangeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(deeporangeTeamRole);
-    } else if (args[0] == "191") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${tealTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(tealTeamRole);
-    } else if (args[0] == "192") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${toothpasteTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(toothpasteTeamRole);
-    } else if (args[0] == "193") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${limegreenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(limegreenTeamRole);
-    } else if (args[0] == "194") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${camoTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(camoTeamRole);
-    } else if (args[0] == "195") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${grimeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(grimeTeamRole);
-    } else if (args[0] == "196") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${lavenderTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(lavenderTeamRole);
-    } else if (args[0] == "197") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pastellightblueTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pastellightblueTeamRole);
-    } else if (args[0] == "198") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pastelorangeTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pastelorangeTeamRole);
-    } else if (args[0] == "199") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pastelvioletTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pastelvioletTeamRole);
-    } else if (args[0] == "200") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pastelbluegreenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pastelbluegreenTeamRole);
-    } else if (args[0] == "201") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pastelgreenTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pastelgreenTeamRole);
-    } else if (args[0] == "202") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pastelyellowTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pastelyellowTeamRole);
-    } else if (args[0] == "203") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${pastelbrownTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(pastelbrownTeamRole);
-    } else if (args[0] == "204") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${royalpurpleTeamRole}`
-      );
-      await message.guild.members.cache
-        .get(user.id)
-        .roles.remove(royalpurpleTeamRole);
-    } else if (args[0] == "205") {
-      console.log(consolelogmsg);
-      message.channel.send(
-        `${rmvdcolormsg}${hotpinkTeamRole}`
-      );
-      await message.guild.members.cache.get(user.id).roles.remove(hotpinkTeamRole);
-    } else
-      return message.channel.send(
-        `That's not a valid color! Maybe try ${randomcolor}?`
-      );
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "124") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "125") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "126") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "127") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "128") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "129") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "130") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "131") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "132") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "133") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "134") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "135") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "136") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "137") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "138") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "139") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "140") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "141") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "142") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "143") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "144") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "145") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "146") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "147") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "148") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "149") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "150") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "151") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "152") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "153") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "154") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "155") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "156") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "157") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "158") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "159") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "160") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "161") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "162") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "163") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "164") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "165") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "166") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "167") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "168") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "169") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "170") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "171") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "172") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "173") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "174") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "175") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "176") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "177") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "178") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "179") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "180") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "181") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "182") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "183") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "184") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "185") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "186") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "187") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "188") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "189") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "190") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "191") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "192") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "193") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "194") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "195") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "196") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "197") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "198") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "199") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "200") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "201") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "202") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "203") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "204") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "205") {
+      await message.guild.members.cache
+        .get(user.id)
+        .roles.remove(xTeamRole);
+      message.channel.send(colormsg);
+      console.log(logmsg);
+    } else if (args[0] === "all" || args[0] === "clear" || args[0] === "full") {
+      member.roles.remove(roles);
+    } else message.channel.send(errmsg);
   },
 };
