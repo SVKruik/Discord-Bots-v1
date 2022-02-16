@@ -626,7 +626,7 @@ module.exports = {
 
     const logmsg = `${message.author.username} has removed their rolecolor: || ${args[0]} ||`;
     const errmsg = `I cannot find that color.`;
-    const colormsg = `You have removed the following role color: ${args[0]}`;
+    const colormsg = `You have removed the following role color: \`${args[0]}\``;
     const user = message.author;
 
     const member = message.guild.members.resolve(user.id);
@@ -899,7 +899,7 @@ module.exports = {
     } else if (args[0] === "45") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(medyellowishgreenTeamRole);
+        .roles.remove(trmedireddishvioletTeamRole);
       message.channel.send(colormsg);
       console.log(logmsg);
     } else if (args[0] === "46") {
@@ -1854,7 +1854,7 @@ module.exports = {
     } else if (args[0] === "204") {
       await message.guild.members.cache
         .get(user.id)
-        .roles.remove(pastelroyalprupleTeamRole);
+        .roles.remove(royalpurpleTeamRole);
       message.channel.send(colormsg);
       console.log(logmsg);
     } else if (args[0] === "205") {
@@ -1864,7 +1864,9 @@ module.exports = {
       message.channel.send(colormsg);
       console.log(logmsg);
     } else if (args[0] === "all" || args[0] === "clear" || args[0] === "full") {
-      member.roles.remove(roles);
+      await member.roles.remove(roles);
+      message.channel.send(colormsg);
+      console.log(logmsg);
     } else message.channel.send(errmsg);
   },
 };

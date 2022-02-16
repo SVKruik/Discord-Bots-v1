@@ -630,12 +630,12 @@ module.exports = {
 
         const logmsg = `${message.author.username} now has a new rolecolor: || ${args[0]} ||`;
         const errmsg = `I cannot find that color. Maybe try ${randomcolor}?`;
-        const colormsg = `Yay`;
+        const colormsg = `You now have a new rolecolor: \`${args[0]}\``;
         const user = message.author;
 
         const member = message.guild.members.resolve(user.id);
         const roles = member.roles.cache.filter(role => role.name.startsWith(`SRC -`));
-        member.roles.add(roles);
+        await member.roles.remove(roles);
 
         if (args[0] === "1") {
             await message.guild.members.cache
@@ -904,7 +904,7 @@ module.exports = {
         } else if (args[0] === "45") {
             await message.guild.members.cache
                 .get(user.id)
-                .roles.add(medyellowishgreenTeamRole);
+                .roles.add(trmedireddishvioletTeamRole);
             message.channel.send(colormsg);
             console.log(logmsg);
         } else if (args[0] === "46") {
@@ -1859,7 +1859,7 @@ module.exports = {
         } else if (args[0] === "204") {
             await message.guild.members.cache
                 .get(user.id)
-                .roles.add(pastelroyalprupleTeamRole);
+                .roles.add(royalpurpleTeamRole);
             message.channel.send(colormsg);
             console.log(logmsg);
         } else if (args[0] === "205") {
