@@ -58,11 +58,6 @@ exports.commandclear = {
   commandclearmin: 1,
 }
 
-exports.commandcolor = {
-  commandcolormsg: "Yay",
-  commandcolorerrmsg: "Not Yay",
-}
-
 exports.commandsearch = {
   commandsearchtimestop: "You have ran out of time!",
 }

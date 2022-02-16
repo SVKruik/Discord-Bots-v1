@@ -1,14 +1,14 @@
+const config = require("../Other/config.js");
 const mongoose = require("mongoose");
-const config = require("../Other/config.js")
 
 const profileSchema = new mongoose.Schema({
   userID: { type: String, require: true, unique: true },
   serverID: { type: String, require: true },
   name: { type: String},
-  coins: { type: Number, default: config.base.basewalletdefault},
-  bank: { type: Number, default: config.base.basebankdefault},
-  level: { type: Number, default: config.base.baseleveldefault},
-  experience: { type: Number, default: config.base.baseexperiencedefault},
+  coins: { type: Number, default: 0},
+  bank: { type: Number, default: 0},
+  level: { type: Number, default: 0},
+  experience: { type: Number, default: 0},
 });
 
 const model = mongoose.model("ProfileModels", profileSchema);
