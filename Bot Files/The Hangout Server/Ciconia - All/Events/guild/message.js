@@ -5,7 +5,7 @@ const cooldowns = new Map();
 
 module.exports = async (Discord, client, message) => {
   //Core
-  const prefix = config.base.baseprefix;
+  const prefix = process.env.PREFIX;
   const target = message.author.id;
 
   const profileModel = require("../../models/profileSchema");

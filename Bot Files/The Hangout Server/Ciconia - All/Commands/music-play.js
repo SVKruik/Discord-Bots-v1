@@ -28,7 +28,7 @@ module.exports = {
 
     if (cmd === "play") {
       if (!args.length)
-        return message.channel.send(process.env.MSGPLAYURLMISSING);
+        return message.channel.send(config.commandplay.commandplayurl);
       let song = {};
 
       if (ytdl.validateURL(args[0])) {
@@ -71,7 +71,7 @@ module.exports = {
           );
         } catch (err) {
           queue.delete(message.guild.id);
-          message.channel.send(process.env.MSGPLAYCONNECTERR);
+          message.channel.send(config.commandplay.commandplayconnecterr);
           throw err;
         }
       } else {
@@ -80,10 +80,10 @@ module.exports = {
       }
     } else if (cmd === "skip") {
       skip_song(message, server_queue);
-      message.channel.send("Hopped over to the next song.")
+      message.channel.send(config.commandplay.commandplayskip)
     } else if (cmd === "stop") {
       stop_song(message, server_queue);
-      message.channel.send("Stopped the music.")
+      message.channel.send(config.commandplay.commandplaystop)
     }
   },
 };
@@ -109,7 +109,7 @@ const skip_song = (message, server_queue) => {
   if (!message.member.voice.channel)
     return message.channel.send(config.basemessages.messagesvcrequired);
   if (!server_queue) {
-    return message.channel.send(process.env.MSGPLAYQUEUEEMPTY);
+    return message.channel.send(config.commandplay.commandplayqueueempty);
   }
   server_queue.connection.dispatcher.end();
 };

@@ -8,6 +8,6 @@ module.exports = {
   description:
     "Sends you the link where you can apply to one of our roles/ranks.",
   async execute(message, args, cmd, client, Discord, profileData) {
-    message.channel.send(process.env.MSGAPPLY);
+    message.channel.send(config.commandapply);
   },
 };

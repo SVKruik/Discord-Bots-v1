@@ -11,7 +11,7 @@ module.exports = {
     const min = config.commandclear.commandclearmin;
 
     if (!args[0])
-      return message.channel.send(process.env.MSGCLEARAMOUNTMISSING);
+      return message.channel.send(config.commandclear.commandclearmissing);
     if (isNaN(args[0])) return message.channel.send(config.basemessages.messagesrealnumber);
 
     if (args[0] > max)

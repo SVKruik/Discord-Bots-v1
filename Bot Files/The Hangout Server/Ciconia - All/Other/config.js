@@ -11,7 +11,6 @@ const fs = require("fs");
 const version = require("../package.json").version;
 
 exports.base = {
-  baseprefix: "$",
   basecolor: "#76b3e1",
   baseguildid: "820580469757313025",
 
@@ -54,8 +53,18 @@ exports.basemessages = {
 }
 
 exports.commandclear = {
+  commandclearmissing: "You are missing the amount that you want to clear!",
   commandclearmax: 50,
   commandclearmin: 1,
+}
+
+exports.commandcolor = {
+  commandcolormsg: "Yay",
+  commandcolorerrmsg: "Not Yay",
+}
+
+exports.commandsearch = {
+  commandsearchtimestop: "You have ran out of time!",
 }
 
 exports.commandevent = {
@@ -72,6 +81,26 @@ exports.commandmcserver = {
 
 exports.commandleave = {
   commandleavemsg: "Leaving the voice channel."
+}
+
+exports.commandplay = {
+  commandplayurl: "You are missing the link to the music video!",
+  commandplayconnecterr: "There was an error while connecting to your voice channel!",
+  commandplayskip: "Skipped the current song!",
+  commandplaystop: "Stopped the current song!",
+  commandplayqueueempty: "The music queue is empty!",
+}
+
+exports.commandapply = {
+  commandapply: "If you would like to apply to one or our roles, please fill in this form: https://forms.gle/pabpqPiWeBp9aZ2a8",
+}
+
+exports.commandcommandtemplate = {
+  commandcommandtemplate: "Template Message",
+}
+
+exports.commandimage = {
+  commandimagemissing: "What image would you like to look up?",
 }
 
 exports.commandticket = {

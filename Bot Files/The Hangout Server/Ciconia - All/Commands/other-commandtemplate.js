@@ -7,6 +7,6 @@ module.exports = {
   permissions: config.permissions.permissioncommandtemplate,
   description: "Command template for devs.",
   execute(message, args, cmd, client, Discord) {
-    message.channel.send(process.env.MSGCMDTEMP);
+    message.channel.send(config.commandcommandtemplate.commandcommandtemplate);
   },
 };

@@ -96,7 +96,7 @@ module.exports = {
 
     collector.on("end", (collected, reason) => {
       if (reason == "time") {
-        message.channel.send(process.env.MSGSEARCHTIMESTOP);
+        message.channel.send(config.commandsearch.commandsearchtimestop);
       }
     });
 

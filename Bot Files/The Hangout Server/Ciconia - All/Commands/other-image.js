@@ -15,7 +15,7 @@ module.exports = {
   async execute(message, args, cmd, client, Discord) {
     const channel = config.base.baseimagechannelid;
     const image_query = args.join(" ");
-    if (!image_query) return message.channel.send(process.env.MSGIMGMISSING);
+    if (!image_query) return message.channel.send(config.commandimage.commandimagemissing);
     if (message.channel.id == channel) {
     } else {
       return message.channel.send(
