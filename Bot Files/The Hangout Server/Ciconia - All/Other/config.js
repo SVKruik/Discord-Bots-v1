@@ -114,6 +114,7 @@ exports.embeds = {
   titleprofile: "Server Profile",
   titlerules: "House Rules",
   titleserverip: "MultiCube Community",
+  titlehaversine: "GPS Coordinate Calculation",
   titlecircle: "Cirkel Vergelijking",
   titlehoeklijn: "Hoek Tussen 2 Lijnen",
   titlepuntlijn: "Afstand Tussen Punt En Lijn",
@@ -132,6 +133,7 @@ exports.embeds = {
   descriptionprofile: "Here is the data we have stored about you.",
   descriptionrules: "These are our house rules.",
   descriptionserverip: "Here is the Server IP for our Minecraft server, MultiCube.",
+  descriptionhaversine: "Calculate the distance between two GPS coordinates using the Haversine Formula.",
   descriptioncircle: "Een cirkelvergelijking oplossen.",
   descriptionhoeklijn: "De hoek tussen 2 lijnen berekenen.",
   descriptionpuntlijn: "De afstand tussen een punt en een lijn berekenen.",
@@ -184,6 +186,14 @@ exports.embeds = {
   nameserverip1: "Server IP:",
   nameserverip2: "Game Version:",
   nameserverip3: "Mods:",
+  namehaversine1: "Your A:",
+  namehaversine2: "Your B:",
+  namehaversine3: "> **------**",
+  namehaversine4: "> **------**",
+  namehaversine5: "> **------**",
+  namehaversine6: "> **------**",
+  namehaversine7: "> **------**",
+  namehaversine8: "> **------**",
 
   //Values
   // valuebotstats1: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`, // Botstats
@@ -224,6 +234,14 @@ exports.embeds = {
   valueserverip1: "multicube.aternos.me",
   valueserverip2: "1.16.5",
   valueserverip3: "None",
+  // valuehaversine1: `Latitude: ${args[0]}, Latitude ${args[1]}.`,
+  // valuehaversine2: `Latitude: ${args[2]}, Longitude ${args[3]}.`,
+  // valuehaversine3: `\`${haverroundkmr}\` kilometers.`,
+  // valuehaversine4: `\`${haverroundmir}\` miles.`,
+  // valuehaversine5: `\`${haverroundnmr}\` nautical miles.`,
+  // valuehaversine6: `\`${haverroundydr}\` yards.`,
+  // valuehaversine7: `\`${haverroundftr}\` feet.`,
+  // valuehaversine8: `\`${haverroundmr}\` meters.`,
 }
 
 exports.embed = {
@@ -316,6 +334,7 @@ exports.aliases = {
   aliasesplay: ["music", "song"], // Play
   aliasesapply: ["form"], // Apply
   aliasescommandtemplate: ["cmdtemp"], // Commandtemplate
+  aliaseshaversine: ["haver", "gps", "coordinates", "coords", "coord"], // Coordinates
   aliasesflipacoinen: ["fac", "facen"], // Flipacoin
   aliasesflipacoinnl: ["facnl", "kopmunt", "kom"], // Kopofmunt
   aliasesimage: ["img"], // Image
@@ -397,6 +416,7 @@ exports.cooldown = {
   cooldownplay: C,
   cooldownapply: E,
   cooldowncommandtemplate: B,
+  cooldownhaversine: G,
   cooldownflipacoinen: H,
   cooldownflipacoinnl: H,
   cooldownimage: G,
@@ -482,6 +502,7 @@ exports.descriptions = {
     "Sends you the link where you can apply to one of our roles/ranks.",
   descriptioncommandtemplate:
     "Command template for bot developers. Isn't meant to be used.",
+  descriptionhaversine: "Calculate the distance between two GPS coordinates.",
   descriptionflipacoinen: "Flip a coin!",
   descriptionflipacoinnl: "Kop of munt!", // Dutch version of Flip a Coin. Same command, different language.
   descriptionimage: "This sends the best google result for an image.",
@@ -558,6 +579,7 @@ exports.permissions = {
   permissionplay: J,
   permissionapply: J,
   permissioncommandtemplate: I,
+  permissionhaversine: J,
   permissionflipacoinen: J,
   permissionflipacoinnl: J,
   permissionimage: J,
