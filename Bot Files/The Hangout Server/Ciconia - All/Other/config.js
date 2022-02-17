@@ -188,7 +188,7 @@ exports.embeds = {
   nameserverip3: "Mods:",
   namehaversine1: "Your A:",
   namehaversine2: "Your B:",
-  namehaversine3: "> **------**",
+  namehaversine3: "Distances:",
   namehaversine4: "> **------**",
   namehaversine5: "> **------**",
   namehaversine6: "> **------**",

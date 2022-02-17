@@ -71,27 +71,27 @@ module.exports = {
                 },
                 {
                     name: config.embeds.namehaversine3,
-                    value: `\`${haverroundkmr}\` kilometers.`
+                    value: `\`${haverroundkmr}\` Kilometers.`
                 },
                 {
                     name: config.embeds.namehaversine4,
-                    value: `\`${haverroundmir}\` miles.`
+                    value: `\`${haverroundmir}\` Miles.`
                 },
                 {
                     name: config.embeds.namehaversine5,
-                    value: `\`${haverroundnmr}\` nautical miles.`
+                    value: `\`${haverroundnmr}\` Nautical Miles.`
                 },
                 {
                     name: config.embeds.namehaversine6,
-                    value: `\`${haverroundydr}\` yards.`
+                    value: `\`${haverroundydr}\` Yards.`
                 },
                 {
                     name: config.embeds.namehaversine7,
-                    value: `\`${haverroundftr}\` feet.`
+                    value: `\`${haverroundftr}\` Feet.`
                 },
                 {
                     name: config.embeds.namehaversine8,
-                    value: `\`${haverroundmr}\` meters.`
+                    value: `\`${haverroundmr}\` Meters.`
                 }
             )
             .setFooter(config.embed.embedfooter);
