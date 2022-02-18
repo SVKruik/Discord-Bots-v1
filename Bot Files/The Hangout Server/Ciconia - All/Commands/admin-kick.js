@@ -14,7 +14,7 @@ module.exports = {
     if (!args[1]) {
       return message.channel.send("Please also specify for what reason you would like to kick this member.")
     }
-    const reason2 = reason1.charAt(0).toUpperCase() + reason1.slice(1);
+    const reason = reason1.charAt(0).toUpperCase() + reason1.slice(1);
 
     if (args[2] === "delete") {
       message.delete();
@@ -26,10 +26,10 @@ module.exports = {
       const memberTarget = message.guild.members.cache.get(target.id);
       memberTarget.kick();
       console.log(
-        `${memberTarget.user.username} got kicked because of: ${reason2}. This was done by ${message.author.username} using ${username}.`
+        `${memberTarget.user.username} got kicked because of: ${reason}. This was done by ${message.author.username} using ${username}.`
       );
       message.channel.send(
-        `<@${memberTarget.user.id}> got kicked by ${username}. Reason: ${reason2}.`
+        `<@${memberTarget.user.id}> got kicked by ${username}. Reason: ${reason}.`
       );
     } else {
       message.channel.send(config.basemessages.messageserror);
