@@ -335,6 +335,7 @@ exports.aliases = {
   aliasesapply: ["form"], // Apply
   aliasescommandtemplate: ["cmdtemp"], // Commandtemplate
   aliaseshaversine: ["haver", "gps", "coordinates", "coords", "coord"], // Coordinates
+  aliasesdice: ["roll"], // Dice
   aliasesflipacoinen: ["fac", "facen"], // Flipacoin
   aliasesflipacoinnl: ["facnl", "kopmunt", "kom"], // Kopofmunt
   aliasesimage: ["img"], // Image
@@ -417,6 +418,7 @@ exports.cooldown = {
   cooldownapply: E,
   cooldowncommandtemplate: B,
   cooldownhaversine: G,
+  cooldowndice: G,
   cooldownflipacoinen: H,
   cooldownflipacoinnl: H,
   cooldownimage: G,
@@ -503,6 +505,7 @@ exports.descriptions = {
   descriptioncommandtemplate:
     "Command template for bot developers. Isn't meant to be used.",
   descriptionhaversine: "Calculate the distance between two GPS coordinates.",
+  descriptiondice: "Roll the dice!",
   descriptionflipacoinen: "Flip a coin!",
   descriptionflipacoinnl: "Kop of munt!", // Dutch version of Flip a Coin. Same command, different language.
   descriptionimage: "This sends the best google result for an image.",
@@ -580,6 +583,7 @@ exports.permissions = {
   permissionapply: J,
   permissioncommandtemplate: I,
   permissionhaversine: J,
+  permissiondice: J,
   permissionflipacoinen: J,
   permissionflipacoinnl: J,
   permissionimage: J,
