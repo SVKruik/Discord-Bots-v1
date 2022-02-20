@@ -624,9 +624,9 @@ module.exports = {
             return message.channel.send("What color would you like to have?");
         }
 
-        const colorroleidlist = require("../Other/colorroleidlist.js");
-        const randomcolorid = colorroleidlist[Math.floor(Math.random() * colorroleidlist.length)];
-        const randomcolor = `<@&${randomcolorid}>`;
+        const colorlist = require("../Other/colorlistname.js");
+        const randomcoloridname = colorlist[Math.floor(Math.random() * colorlist.length)];
+        const randomcolor = `<@&${randomcoloridname}>`;
 
         const logmsg = `${message.author.username} now has a new rolecolor: || ${args[0]} ||`;
         const errmsg = `I cannot find that color. Maybe try ${randomcolor}?`;
