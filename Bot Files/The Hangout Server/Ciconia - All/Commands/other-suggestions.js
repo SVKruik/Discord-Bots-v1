@@ -15,7 +15,7 @@ module.exports = {
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
             .addFields(
                 {
-                    name: `**New Suggestion**`,
+                    name: config.embeds.namesuggestions1,
                     value: `${messageArgs}`,
                 })
             .setFooter(config.embed.embedfooter);

@@ -1,10 +1,10 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
   name: "commandtemplate",
-  aliases: config.aliases.aliasescommandtemplate,
-  cooldown: config.cooldown.cooldowncommandtemplate,
-  permissions: config.permissions.permissioncommandtemplate,
+  aliases: config.aliases.aliasestemplatecommand,
+  cooldown: config.cooldown.cooldowntemplatecommand,
+  permissions: config.permissions.permissiontemplatecommand,
   description: "Command template for devs.",
   async execute(message, args, cmd, client, Discord) {
     const commandmessage1 = config.commandcommandtemplate.commandcommandtemplate

@@ -30,6 +30,8 @@ exports.base = {
   basesuggechannelid: "944949197612924928",
   baseeventchannelid: "942438431282323487",
 
+  basebottestingthreechannelid: "944963774157299814",
+
   basemembercounterhz: '1500000',
   basemembercounterchannelid: "873925840096886784",
 
@@ -203,6 +205,7 @@ exports.embeds = {
   namehaversine6: "> **------**",
   namehaversine7: "> **------**",
   namehaversine8: "> **------**",
+  namesuggestions1: "**New Suggestion:**",
 
   //Values
   // valuebotstats1: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`, // Botstats
@@ -251,6 +254,7 @@ exports.embeds = {
   // valuehaversine6: `\`${haverroundydr}\` yards.`,
   // valuehaversine7: `\`${haverroundftr}\` feet.`,
   // valuehaversine8: `\`${haverroundmr}\` meters.`,
+  // valuesuggestions1: `${messageArgs}`
 }
 
 exports.aliases = {
@@ -271,6 +275,11 @@ exports.aliases = {
   aliasesrolecolor1: ["rlclr1"], // Rolecolor1
   aliasesrolecolor2: ["rlclr2"], // Rolecolor2
   aliasesrolecolor3: ["rlclr3"], // Rolecolor3
+  aliasestemplatecommand: ["cmdtemp"], // Template Command
+  aliasestemplateembed: ["mbdtemp"], // Template Embed
+  aliasestestabannouncements: ["testbigannouncement", "testbigannounce", "testbigann", "testbannouncement", "testbannounce", "testbanno"], // Test Big Announcement
+  aliasestestasannouncements: ["testsmallannouncement", "testsmallannounce", "testsmallann", "testsannouncement", "testsannounce", "testsanno"], // Test Small Announcement
+  aliasestestsuggest: ["testsuggest", "testsuggestion", "tsuggest", "tsuggestion"], // Test Suggestions
   aliasesbalance: ["bal", "baltot", "baltotal", "showbal"], // Balance
   aliasesbalancebank: ["balbank"], // Balancebank
   aliasesbalancewallet: ["balwallet", "balwal"], // Balancewallet
@@ -326,7 +335,6 @@ exports.aliases = {
   aliasessetfulllevel: ["setlvlexp", "setlvlxp", "setfullevel"], // Setlevelandexperience
   aliasessetlevel: ["setlvl"], // Setlevel
   aliasesdonate: ["dnte"], // Donate
-  aliasesembedtemplate: ["mbdtemp"], // Embedtemplate
   aliasesevent: [], // Event
   aliasesgithub: ["gh"], // Github
   aliaseshelpst1: ["support"], // Help
@@ -338,11 +346,10 @@ exports.aliases = {
   aliasesleave: ["musicstop", "stop"], // Leave
   aliasesplay: ["music", "song"], // Play
   aliasesapply: ["form"], // Apply
-  aliasescommandtemplate: ["cmdtemp"], // Commandtemplate
-  aliaseshaversine: ["haver", "gps", "coordinates", "coords", "coord"], // Coordinates
   aliasesdice: ["roll"], // Dice
   aliasesflipacoinen: ["fac", "facen"], // Flipacoin
   aliasesflipacoinnl: ["facnl", "kopmunt", "kom"], // Kopofmunt
+  aliaseshaversine: ["haver", "gps", "coordinates", "coords", "coord"], // Haversine
   aliasesimage: ["img"], // Image
   aliasesmath: ["math", "calc", "calculate"], // Math
   aliasesrpsen: ["rps"], //Rock Paper Scissor
@@ -382,6 +389,10 @@ exports.cooldown = {
   cooldownrolecolor1: B,
   cooldownrolecolor2: B,
   cooldownrolecolor3: B,
+  cooldowntemplatecommand: B,
+  cooldowntemplateembed: B,
+  cooldowntestannouncements: B,
+  cooldowntestsuggest: B,
   cooldownbalance: G,
   cooldownbalancebank: G,
   cooldownbalancewallet: G,
@@ -412,7 +423,6 @@ exports.cooldown = {
   cooldownsetlevel: B,
   cooldownbotstats: B,
   cooldowndonate: B,
-  cooldownembedtemplate: B,
   cooldownevent: B,
   cooldowngithub: B,
   cooldownhelpst1: E,
@@ -423,11 +433,10 @@ exports.cooldown = {
   cooldownleave: C,
   cooldownplay: C,
   cooldownapply: E,
-  cooldowncommandtemplate: B,
-  cooldownhaversine: G,
   cooldowndice: G,
   cooldownflipacoinen: H,
   cooldownflipacoinnl: H,
+  cooldownhaversine: G,
   cooldownimage: G,
   cooldownmath: G,
   cooldownrpsen: H,
@@ -441,94 +450,6 @@ exports.cooldown = {
   cooldownsubstitutie: G,
   cooldowntitreernormaal: G,
   cooldowntitreerverdunning: G,
-};
-
-exports.descriptions = {
-  // Not implemented.
-  // Command Descriptions
-  descriptionban: "Ban a naughty Member",
-  descriptionblind: "Completly blind a member. Target cannot do anything.",
-  descriptionclear: "Bulk delete messages.",
-  descriptionkick:
-    "Kick a irritating person, that you don't hate enough to ban.",
-  descriptionmute:
-    "This silences spamming or naughty people. Can only read stuff.",
-  descriptionping:
-    "This silences spamming or naughty people. Can only read stuff.",
-  descriptionunblind: "This command unblinds members.",
-  descriptionunmute: "This command unmutes members.",
-  descriptionuptime: "Check the uptime of the bot.",
-  descriptioncolor: "Choose a color by ID or name.",
-  descriptioncolorremove: "Remove a color role by ID or name.",
-  descriptionrolecolor1: "Role color choose page 1.",
-  descriptionrolecolor2: "Role color choose page 2.",
-  descriptionrolecolor3: "Role color choose page 3.",
-  descriptionbalance: "Display both your wallet and bank balance.",
-  descriptionbalancebank: "Display your bank account balance.",
-  descriptionbalancewallet: "Display your wallet balance.",
-  descriptiondailyreward: "Random amount of coins, as a daily reward.",
-  descriptiondeposit: "Deposit coins from your wallet to your bank.",
-  descriptiongivebank: "Increase the bank account balance of a member.",
-  descriptiongivefulleco:
-    "Increase the balance of both the bank and wallet account.",
-  descriptiongivewallet: "Increase the balance of a member.",
-  descriptionminusbank: "Decreases the balance of the bank account.",
-  descriptionminusfulleco:
-    "Decreases the balance of both the wallet and the bank account.",
-  descriptionminuswallet: "Decreases the balance of the wallet.",
-  descriptionsearch: "Search for some coins. Kinda a second daily reward.",
-  descriptionsetbank: "Reset the balance of a member.",
-  descriptionsetwallet: "Reset the balance of both accounts of a member.",
-  descriptionsetfulleco: "Reset the balance of a member.",
-  descriptionwithdraw: "Transfer coins from your bank account to your wallet.",
-  descriptionexperience: "Displays your current server experience.",
-  descriptiongiveexperience: "Give a player extra levels.",
-  descriptiongivefulllevel: "Give a player extra levels and experience.",
-  descriptiongivelevel: "Give a player extra levels.",
-  descriptionlevel: "Displays your current server level.",
-  descriptionlevelstats: "Displays your current server level and experience.",
-  descriptionminusexperience: "Decreases the amount of experience.",
-  descriptionminusfulllevel:
-    "Decreases the amount of both your experience and levels.",
-  descriptionminuslevel: "Decreases the amount of levels.",
-  descriptionsetexperience: "Reset the amount of experience of a member.",
-  descriptionsetfulllevel: "Reset the level and experience of a member.",
-  descriptionsetlevel: "Reset the level of a member.",
-  descriptiondonate: "Support our project by donating to us.",
-  descriptionembedtemplate:
-    "Embed template for bot developers. Isn't meant to be used.",
-  descriptionevent: "Set up a event with teams.",
-  descriptiongithub: "Displays all import links to our GitHub repository.",
-  descriptionhelpst1: "Advanced Help - Stage 1",
-  descriptionmcserver: "Displays some Minecraft server statistics.",
-  descriptionprofile: "Displays all information we have about you.",
-  descriptionrules: "Displays an embed with our active server rules.",
-  descriptionserverip: "Display the server IP and information for MultiCube.",
-  descriptionbotstats: "Displays all stats of the bot.",
-  descriptionleave: "Stop the music, and let the bot leave the call.",
-  descriptionplay:
-    "Music Bot via YouTube links. You must be in a call for it to work.",
-  descriptionapply:
-    "Sends you the link where you can apply to one of our roles/ranks.",
-  descriptioncommandtemplate:
-    "Command template for bot developers. Isn't meant to be used.",
-  descriptionhaversine: "Calculate the distance between two GPS coordinates.",
-  descriptiondice: "Roll the dice!",
-  descriptionflipacoinen: "Flip a coin!",
-  descriptionflipacoinnl: "Kop of munt!", // Dutch version of Flip a Coin. Same command, different language.
-  descriptionimage: "This sends the best google result for an image.",
-  descriptionmath: "Basic calculation.",
-  descriptionrpsnl: "Speel steen, papier, schaar met de bot!",
-  descriptionrpsnl: "Play some rock, paper, scissor with the bot!",
-  descriptionsuggestions: "Suggest something new in the dedicated channel.",
-  descriptionticket: "Open a support ticket!",
-  descriptioncirkelvergelijking: "Calculate a circle equation.",
-  descriptionhoeklijn:
-    "calculate the angle between 2 lines crossing each other.",
-  descriptionpunttotlijn: "Calculate distance between a point and a line.",
-  descriptionsubstitutie: "Tutorial thing on how to substitute.",
-  descriptiontitreernormaal: "Calculate some science math.",
-  descriptiontitreerverdunning: "Calculate some advanced science math.",
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -550,6 +471,10 @@ exports.permissions = {
   permissionrolecolor1: I,
   permissionrolecolor2: I,
   permissionrolecolor3: I,
+  permissiontemplatecommand: I,
+  permissiontemplateembed: I,
+  permissiontestannouncements: I,
+  permissiontestsuggest: I,
   permissionbalance: J,
   permissionbalancebank: J,
   permissionbalancewallet: J,
@@ -580,7 +505,6 @@ exports.permissions = {
   permissionsetlevel: I,
   permissionbotstats: I,
   permissiondonate: I,
-  permissionembedtemplate: I,
   permissionevent: I,
   permissiongithub: I,
   permissionhelpst1: J,
@@ -591,11 +515,10 @@ exports.permissions = {
   permissionleave: J,
   permissionplay: J,
   permissionapply: J,
-  permissioncommandtemplate: I,
-  permissionhaversine: J,
   permissiondice: J,
   permissionflipacoinen: J,
   permissionflipacoinnl: J,
+  permissionhaversine: J,
   permissionimage: J,
   permissionmath: J,
   permissionrpsen: J,

@@ -1,10 +1,10 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
   name: "embedtemplate",
-  aliases: config.aliases.aliasesembedtemplate,
-  cooldown: config.cooldown.cooldownembedtemplate,
-  permissions: config.permissions.permissionembedtemplate,
+  aliases: config.aliases.aliasestemplateembed,
+  cooldown: config.cooldown.cooldowntemplateembed,
+  permissions: config.permissions.permissiontemplatecommand,
   description: "Embed template for devs.",
   execute(message, args, cmd, client, Discord) {
     if (args[2] === "delete") {

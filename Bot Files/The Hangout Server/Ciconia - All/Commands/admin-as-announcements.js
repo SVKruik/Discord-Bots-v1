@@ -5,7 +5,7 @@ module.exports = {
     aliases: config.aliases.aliasesasannouncements,
     cooldown: config.cooldown.cooldownannouncements,
     permissions: config.permissions.permissionannouncements,
-    description: "Announce something using the bot.",
+    description: "Announce something direct using the bot.",
     async execute(message, args, cmd, client, Discord) {
         const messageArgs = args.join(' ');
 
