@@ -12,62 +12,25 @@ module.exports = {
     const username = message.client.user.username;
 
     const reason1 = args[1];
-    const reason = reason1.charAt(0).toUpperCase() + reason1.slice(1);
+    if (!args[1]) {
+      return message.channel.send("Please also specify for what reason you would like to ban this member.")
+    }
+    const reason2 = reason1.charAt(0).toUpperCase() + reason1.slice(1);
 
-    const flags = ["everyone", "here", "delete"];
+    if (args[2] === "delete") {
+      message.delete();
+    } else if (args[2] === "del" || args[2] === "d") {
+      message.delete();
+    }
 
     if (target) {
       const memberTarget = message.guild.members.cache.get(target.id);
-
-        // Flag 1: Everyone
-        if (args[2] === "everyone") {
-          if (args[3] === "here") {
-            return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
-          } else {
-            message.channel.send(`@everyone, <@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`)
-          }
-        } else if (args[3] === "everyone") {
-          if (args[2] === "here") {
-            return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
-          } else {
-            message.channel.send(`@everyone, <@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`)
-          }
-        } else if (args[4] === "everyone") {
-          return message.channel.send(`You cannot use group tags as your third argument. Please use argument 1 or 2.`)
-        }
-
-        // Flag 2: Here
-        else if (args[2] === "here") {
-          if (args[3] === "everyone") {
-            return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
-          } else {
-            message.channel.send(`@here, <@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`)
-          }
-        } else if (args[3] === "here") {
-          if (args[2] === "everyone") {
-            return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
-          } else {
-            message.channel.send(`@here, <@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`)
-          }
-        } else if (args[4] === "here") {
-          return message.channel.send(`You cannot use group tags as your third argument. Please use argument 1 or 2.`)
-        }
-
-        // Flag 3: Delete
-        else if (args[2] === "delete" || args[0] === "del") {
-          message.delete();
-          message.channel.send(`<@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`)
-        } else if (args[3] === "delete" || args[0] === "del") {
-          message.delete();
-          message.channel.send(`<@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`)
-        } else if (args[4] === "delete" || args[0] === "del") {
-          message.delete();
-          message.channel.send(`<@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`)
-        } else message.channel.send(`<@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`)
-
-      //memberTarget.ban();
+      memberTarget.ban();
       console.log(
-        `${memberTarget.user.username} got banned because of: ${reason}. This was done by ${message.author.username} using ${username}.`
+        `${memberTarget.user.username} got banned because of: ${reason2}. This was done by ${message.author.username} using ${username}.`
+      );
+      message.channel.send(
+        `<@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason2}.`
       );
     } else {
       message.channel.send(config.basemessages.messageserror);
