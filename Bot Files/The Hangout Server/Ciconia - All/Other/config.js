@@ -20,6 +20,8 @@ exports.base = {
   baseexperiencedefault: "0",
 
   basewelcomechannelid: "850753468927049798",
+  baseannouncementschannelid: "944956465733586974",
+
   basemusicroleid: "940616347900076073",
 
   basemusicchannelid: "942848045421318185",
@@ -253,6 +255,8 @@ exports.embeds = {
 
 exports.aliases = {
   // Command Aliases
+  aliasesabannouncements: ["bigannouncement", "bigannounce", "bigann", "bannouncement", "bannounce", "banno"], // Big Announcement (dedicated channel)
+  aliasesasannouncements: ["smallannouncement", "smallannounce", "smallann", "sannouncement", "sannounce", "sanno"], // Small Announcement (direct channel)
   aliasesban: [], // Ban
   aliasesblind: [], // Blind
   aliasesclear: ["bulkdelete", "bulkdel"], // Clear
@@ -363,6 +367,7 @@ const F = 30; // Medium
 const G = 10; // Soft
 const H = 0; // No cooldown
 exports.cooldown = {
+  cooldownannouncements: B,
   cooldownban: B,
   cooldownblind: B,
   cooldownclear: B,
@@ -515,6 +520,7 @@ exports.descriptions = {
   descriptionmath: "Basic calculation.",
   descriptionrpsnl: "Speel steen, papier, schaar met de bot!",
   descriptionrpsnl: "Play some rock, paper, scissor with the bot!",
+  descriptionsuggestions: "Suggest something new in the dedicated channel.",
   descriptionticket: "Open a support ticket!",
   descriptioncirkelvergelijking: "Calculate a circle equation.",
   descriptionhoeklijn:
@@ -529,6 +535,7 @@ const I = ["ADMINISTRATOR"]; // Permission for admin commands.
 const J = ["SEND_MESSAGES"]; // Permission for general commands.
 exports.permissions = {
   // Command Permissions
+  permissionannouncements: I,
   permissionban: I,
   permissionblind: I,
   permissionclear: I,
