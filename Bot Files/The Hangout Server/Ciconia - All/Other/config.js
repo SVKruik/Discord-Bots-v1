@@ -20,12 +20,13 @@ exports.base = {
   baseexperiencedefault: "0",
 
   basewelcomechannelid: "850753468927049798",
-  basemusicchannelid: "942848045421318185",
   basemusicroleid: "940616347900076073",
 
-  baseimagechannelid: "942380437148409916",
-  baseeventchannelid: "942438431282323487",
+  basemusicchannelid: "942848045421318185",
   basecolorchannelid: "942842691828457512",
+  baseimagechannelid: "942380437148409916",
+  basesuggechannelid: "944949197612924928",
+  baseeventchannelid: "942438431282323487",
 
   basemembercounterhz: '1500000',
   basemembercounterchannelid: "873925840096886784",
@@ -35,6 +36,12 @@ exports.base = {
 
   basemuterole: "851141747424886794",
   baseblindrole: "852934692696358952",
+};
+
+exports.embed = {
+  embedfooter: "Statistics and Bot provided by Complex.",
+  embedimage: "https://i.imgur.com/neCyTDH.png",
+  embedlink: "https://github.com/PuffinKwadraat/MultiCube-Public",
 };
 
 exports.basemessages = {
@@ -244,12 +251,6 @@ exports.embeds = {
   // valuehaversine8: `\`${haverroundmr}\` meters.`,
 }
 
-exports.embed = {
-  embedfooter: "Stats and Bot provided by Complex.",
-  embedimage: "https://i.imgur.com/neCyTDH.png",
-  embedlink: "https://github.com/PuffinKwadraat/MultiCube-Public",
-};
-
 exports.aliases = {
   // Command Aliases
   aliasesban: [], // Ban
@@ -343,6 +344,7 @@ exports.aliases = {
   aliasesrpsen: ["rps"], //Rock Paper Scissor
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
+  aliasessuggestions: ["suggest", "suggestion"], // Suggestions
   aliasesticket: ["tkt"], // Ticket
   aliasescirkelvergelijking: ["circle"], // Cirkel
   aliaseshoeklijn: ["hkli"], // Hoeklijn
@@ -426,6 +428,7 @@ exports.cooldown = {
   cooldownrpsen: H,
   cooldownrpsnl: H,
   cooldownsrpsen: H,
+  cooldownsuggestions: F,
   cooldownticket: D,
   cooldowncirkelvergelijking: G,
   cooldownhoeklijn: G,
@@ -591,6 +594,7 @@ exports.permissions = {
   permissionrpsen: J,
   permissionrpsnl: J,
   permissionsrpsen: J,
+  permissionsuggestions: J,
   permissionticket: J,
   permissioncirkelvergelijking: J,
   permissionhoeklijn: J,
