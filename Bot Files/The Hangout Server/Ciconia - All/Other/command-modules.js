@@ -81,6 +81,28 @@ channel.send("Message")
 
 //// Module 5: Command usage cost
 
+try {
+  const X = 200
+  const newbal = profileData.coins - 200
+  if (X > profileData.coins)
+      return message.channel.send(config.basemessages.messagescoinsmissing);
+
+  await profileModel.findOneAndUpdate(
+      {
+          userID: message.author.id,
+      },
+      {
+          $inc: {
+              coins: -X,
+          },
+      }
+  );
+
+  message.channel.send(`Your new balance is now \`${newbal}\`.`)
+} catch (err) {
+  console.log(err);
+}
+
 //// Module 6: Choose random
 
 const list = ["1", "2", "3", "4"];

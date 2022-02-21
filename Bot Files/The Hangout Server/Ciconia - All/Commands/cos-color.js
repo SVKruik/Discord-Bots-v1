@@ -624,12 +624,12 @@ module.exports = {
         if (!args[0]) {
             return message.channel.send("What color would you like to have?");
         } else if (args[0] >= 206) {
-            return message.channel.send("Our colors go from \`1\` \`205\`. Choose a color with an ID higher than \`205\`.");
+            return message.channel.send("Our colors range from \`1\` to \`205\`. Please choose a color with an ID **lower** than \`206\`.");
         } else if (args[0] <= 0) {
-            return message.channel.send("Our colors go from \`1\` \`205\`. You cannot choose a color with an ID lower than \`1\`.")
+            return message.channel.send("Our colors range from \`1\` to \`205\`. Please choose a color with an ID **higher** than \`0\`.")
         }
 
-        const colorlist = require("../Other/colorlistname.js");
+        const colorlist = require("../Other/colorlistdid.js");
         const randomcoloridname = colorlist[Math.floor(Math.random() * colorlist.length)];
         const randomcolor = `<@&${randomcoloridname}>`;
 
@@ -640,28 +640,450 @@ module.exports = {
 
         const member = message.guild.members.resolve(user.id);
         const roles = member.roles.cache.filter(role => role.name.startsWith(`SRC -`));
-        const amountroles = roles.length
+        const amountroles = roles.size
         await member.roles.remove(roles);
-        try {
-            const coinsback = amountroles * 50
-            const newbal = profileData.coins - 200
-            if (200 > profileData.coins)
-                return message.channel.send(config.basemessages.messagescoinsmissing);
 
-            await profileModel.findOneAndUpdate(
-                {
-                    userID: message.author.id,
-                },
-                {
-                    $inc: {
-                        coins: -200,
+        // Color cost
+        const metallic = config.colorcost.metallic
+        const exotic = config.colorcost.exotic
+        const plusexotic = config.colorcost.plusexotic
+
+        const base = config.colorcost.base
+        const light = config.colorcost.light
+        const medium = config.colorcost.medium
+        const dark = config.colorcost.dark
+
+        const really = config.colorcost.really
+        const bright = config.colorcost.bright
+        const deep = config.colorcost.deep
+
+        const tr = config.colorcost.tr
+        const pastel = config.colorcost.pastel
+        const earth = config.colorcost.earth
+        const sand = config.colorcost.sand
+        const reddish = config.colorcost.reddish
+        const extra = config.colorcost.extra
+
+        const metalliccolors = "68" || "69" || "70" || "71" || "72" || "73" || "79" || "93"
+        const exoticcolors = "9" || "23" || "56" || "83" || "97" || "100" || "103" || "119" || "122" || "123" || "124" || "128" || "129" || "130" || "133" || "134" || "137" || "138" || "141" || "142" || "144" || "145" || "146" || "147" || "148" || "149" || "150" || "151" || "152" || "153" || "154" || "155" || "157" || "158" || "159" || "160" || "161" || "162" || "163" || "167" || "168" || "169" || "170" || "171" || "173" || "179" || "181" || "182" || "186" || "188" || "191" || "192" || "194" || "195" || "196" || "204"
+        const plusexoticcolors = "59" || "60" || "180"
+
+        const basecolors = "1" || "2" || "15" || "101" || "189"
+        const lightcolors = "3" || "5" || "6" || "8"
+        const mediumcolors = "11" || "18" || "34" || "35" || "44" || "46" || "47" || "51" || "63" || "88" || "99" || "112"
+        const darkcolors = "16" || "17" || "21" || "57" || "76" || "90" || "92" || "95" || "115" || "120" || "172"
+
+        const reallycolors = "176" || "177" || "183"
+        const brightcolors = "10" || "12" || "13" || "52"
+        const deepcolors = "57" || "178" || "185" || "190"
+
+        const trcolors = "24" || "25" || "26" || "27" || "29" || "30" || "31" || "43" || "45" || "55" || "67" || "77" || "78"
+        const pastelcolors = "7" || "197" || "198" || "199" || "200" || "201" || "202" || "203"
+        const earthcolors = "14" || "41" || "65" || "66"
+        const sandcolors = "61" || "62" || "64" || "74" || "75"
+        const reddishcolors = "86" || "87" || "102"
+        const extracolors = "4" || "32" || "58" || "80" || "81" || "82" || "84" || "85" || "89" || "96" || "109" || "110" || "111" || "113" || "114" || "116" || "117" || "118" || "121" || "125" || "126" || "127" || "131" || "132" || "135" || "136" || "139" || "140" || "143" || "156" || "164" || "165" || "166" || "174" || "184" || "187" || "193" || "205"
+
+        if (args[0] === "68" || "69" || "70" || "71" || "72" || "73" || "79" || "93") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - metallic
+                if (metallic > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
                     },
+                    {
+                        $inc: {
+                            coins: -metallic,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${metallic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${metallic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
                 }
-            );
-
-            message.channel.send(`Your new balance is now \`${newbal}\`. You received \`${coinsback}\` coins back for your old role(s).`)
-        } catch (err) {
-            console.log(err);
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "9" || "23" || "56" || "83" || "97" || "100" || "103" || "119" || "122" || "123" || "124" || "128" || "129" || "130" || "133" || "134" || "137" || "138" || "141" || "142" || "144" || "145" || "146" || "147" || "148" || "149" || "150" || "151" || "152" || "153" || "154" || "155" || "157" || "158" || "159" || "160" || "161" || "162" || "163" || "167" || "168" || "169" || "170" || "171" || "173" || "179" || "181" || "182" || "186" || "188" || "191" || "192" || "194" || "195" || "196" || "204") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - exotic
+                if (exotic > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -exotic,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${exotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${exotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "59" || "60" || "180") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - plusexotic
+                if (plusexotic > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -plusexotic,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${plusexotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${plusexotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "1" || "2" || "15" || "101" || "189") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - base
+                if (base > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -base,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${base}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${base}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "3" || "5" || "6" || "8") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - light
+                if (light > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -light,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${light}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${light}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "11" || "18" || "34" || "35" || "44" || "46" || "47" || "51" || "63" || "88" || "99" || "112") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - medium
+                if (medium > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -medium,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${medium}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${medium}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "16" || "17" || "21" || "57" || "76" || "90" || "92" || "95" || "115" || "120" || "172") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - dark
+                if (dark > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -dark,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${dark}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${dark}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "176" || "177" || "183") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - really
+                if (really > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -really,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${really}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${really}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "10" || "12" || "13" || "52") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - bright
+                if (bright > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -bright,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${bright}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${bright}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "57" || "178" || "185" || "190") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - deep
+                if (deep > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -deep,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${deep}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${deep}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "24" || "25" || "26" || "27" || "29" || "30" || "31" || "43" || "45" || "55" || "67" || "77" || "78") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - tr
+                if (tr > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -tr,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${tr}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${tr}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "7" || "197" || "198" || "199" || "200" || "201" || "202" || "203") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - pastel
+                if (pastel > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -pastel,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${pastel}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${pastel}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "14" || "41" || "65" || "66") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - earth
+                if (earth > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -earth,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${earth}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${earth}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "61" || "62" || "64" || "74" || "75") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - sand
+                if (sand > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -sand,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${sand}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${sand}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "86" || "87" || "102") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - reddish
+                if (reddish > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -reddish,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${reddish}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${reddish}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (args[0] === "4" || "32" || "58" || "80" || "81" || "82" || "84" || "85" || "89" || "96" || "109" || "110" || "111" || "113" || "114" || "116" || "117" || "118" || "121" || "125" || "126" || "127" || "131" || "132" || "135" || "136" || "139" || "140" || "143" || "156" || "164" || "165" || "166" || "174" || "184" || "187" || "193" || "205") {
+            try {
+                const coinsback = amountroles * 50
+                const newbal = profileData.coins - extra
+                if (extra > profileData.coins)
+                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: message.author.id,
+                    },
+                    {
+                        $inc: {
+                            coins: -extra,
+                            bank: coinsback,
+                        },
+                    }
+                );
+                if (amountroles === 1) {
+                    message.channel.send(`This role costs \`${extra}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                } else if (amountroles >= 2) {
+                    message.channel.send(`This role costs \`${extra}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                }
+            } catch (err) {
+                console.log(err);
+            }
         }
 
         if (args[0] === "1") {

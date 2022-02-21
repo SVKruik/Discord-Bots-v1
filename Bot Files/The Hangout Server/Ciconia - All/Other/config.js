@@ -42,6 +42,28 @@ exports.base = {
   baseblindrole: "852934692696358952",
 };
 
+exports.colorcost = { // 16 types
+  metallic: 500,
+  exotic: 500,
+  plusexotic: 650,
+
+  base: 150,
+  light: 300,
+  medium: 300,
+  dark: 250,
+
+  really: 350,
+  bright: 300,
+  deep: 350,
+
+  tr: 200,
+  pastel: 250,
+  earth: 450,
+  sand: 350,
+  reddish: 350,
+  extra: 400,
+}
+
 exports.embed = {
   embedfooter: "Statistics and Bot provided by Complex.",
   embedimage: "https://i.imgur.com/neCyTDH.png",
