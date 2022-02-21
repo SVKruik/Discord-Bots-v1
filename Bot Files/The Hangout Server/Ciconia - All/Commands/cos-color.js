@@ -1,4 +1,5 @@
-const config = require("../Other/config")
+const config = require("../Other/config");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
     name: "color",
@@ -6,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldowncolor,
     permissions: config.permissions.permissioncolor,
     description: "Color command",
-    async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord, profileData) {
         const whiteTeamRole = message.guild.roles.cache.find(
             (role) => role.id === "910544967582253086"
         );
@@ -622,6 +623,10 @@ module.exports = {
 
         if (!args[0]) {
             return message.channel.send("What color would you like to have?");
+        } else if (args[0] >= 206) {
+            return message.channel.send("Our colors go from \`1\` \`205\`. Choose a color with an ID higher than \`205\`.");
+        } else if (args[0] <= 0) {
+            return message.channel.send("Our colors go from \`1\` \`205\`. You cannot choose a color with an ID lower than \`1\`.")
         }
 
         const colorlist = require("../Other/colorlistname.js");
@@ -635,7 +640,29 @@ module.exports = {
 
         const member = message.guild.members.resolve(user.id);
         const roles = member.roles.cache.filter(role => role.name.startsWith(`SRC -`));
+        const amountroles = roles.length
         await member.roles.remove(roles);
+        try {
+            const coinsback = amountroles * 50
+            const newbal = profileData.coins - 200
+            if (200 > profileData.coins)
+                return message.channel.send(config.basemessages.messagescoinsmissing);
+
+            await profileModel.findOneAndUpdate(
+                {
+                    userID: message.author.id,
+                },
+                {
+                    $inc: {
+                        coins: -200,
+                    },
+                }
+            );
+
+            message.channel.send(`Your new balance is now \`${newbal}\`. You received \`${coinsback}\` coins back for your old role(s).`)
+        } catch (err) {
+            console.log(err);
+        }
 
         if (args[0] === "1") {
             await message.guild.members.cache

@@ -27,7 +27,7 @@ module.exports = {
       );
 
       return message.channel.send(
-        `You deposited \`${amount}\` of coins into your bank account.`
+        `You deposited \`${amount}\` coins into your bank account.`
       );
     } catch (err) {
       console.log(err);

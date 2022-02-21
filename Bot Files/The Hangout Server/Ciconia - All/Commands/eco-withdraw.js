@@ -29,7 +29,7 @@ module.exports = {
       );
 
       return message.channel.send(
-        `You withdrew \`${amount}\` amount of coins into your wallet.`
+        `You withdrew \`${amount}\` coins into your wallet.`
       );
     } catch (err) {
       console.log(err);
