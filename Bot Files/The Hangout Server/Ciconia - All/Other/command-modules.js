@@ -81,26 +81,28 @@ channel.send("Message")
 
 //// Module 5: Command usage cost
 
-try {
-  const X = 200
-  const newbal = profileData.coins - 200
-  if (X > profileData.coins)
+if (args[0] === "test") {
+  try {
+    const newbal = profileData.coins - test
+    if (test > profileData.coins)
       return message.channel.send(config.basemessages.messagescoinsmissing);
-
-  await profileModel.findOneAndUpdate(
+    await profileModel.findOneAndUpdate(
       {
-          userID: message.author.id,
+        userID: message.author.id,
       },
       {
-          $inc: {
-              coins: -X,
-          },
+        $inc: {
+          coins: -test,
+          bank: coinsback,
+        },
       }
-  );
-
-  message.channel.send(`Your new balance is now \`${newbal}\`.`)
-} catch (err) {
-  console.log(err);
+    );
+    if (amountroles === 1) {
+      message.channel.send(`Message \`${profileData.coins}\`.`)
+    }
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 //// Module 6: Choose random

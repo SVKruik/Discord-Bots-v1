@@ -1,4 +1,5 @@
 const config = require("./../Other/config.js");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "colorremove",
@@ -6,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowncolorremove,
   permissions: config.permissions.permissioncolorremove,
   description: "Remove a color role by ID or name.",
-  async execute(message, args, cmd, client, Discord) {
+  async execute(message, args, cmd, client, Discord, profileData) {
     const whiteTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910544967582253086"
     );
@@ -631,6 +632,54 @@ module.exports = {
 
     const member = message.guild.members.resolve(user.id);
     const roles = member.roles.cache.filter(role => role.name.startsWith(`SRC -`));
+    const amountroles = roles.size
+
+    if (!member.roles.cache.filter(role => role.name === `SRC - White`)) {
+      return message.channel.send("You don't have that role.")
+    }
+
+    if (args[0] === "all" || "clear" || "full") {
+      try {
+        const coinsback = amountroles * 50
+        const newbal = profileData.coins + coinsback
+        await profileModel.findOneAndUpdate(
+          {
+            userID: message.author.id,
+          },
+          {
+            $inc: {
+              coins: coinsback,
+            },
+          }
+        );
+        if (amountroles === 1) {
+          message.channel.send(`You refunded \`${amountroles}\` role. You received \`${coinsback}\` coins. Your new balance is \`${newbal}\` a`)
+        } else if (amountroles >= 2) {
+          message.channel.send(`You refunded \`${amountroles}\` roles. You received \`${coinsback}\` coins. Your new balance is \`${newbal}\` a`)
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    } else if (args[0] >= 1 && args[0] <= 205) {
+      try {
+        const newbal = profileData.coins + coinsback
+        await profileModel.findOneAndUpdate(
+          {
+            userID: message.author.id,
+          },
+          {
+            $inc: {
+              coins: 50,
+            },
+          }
+        );
+        if (amountroles === 1) {
+          message.channel.send(`You refunded \`${amountroles}\` role. You received \`50\` coins. Your new balance is \`${newbal}\` b`)
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
 
     if (args[0] === "1") {
       await message.guild.members.cache
@@ -1863,7 +1912,7 @@ module.exports = {
         .roles.remove(hotpinkTeamRole);
       message.channel.send(colormsg);
       console.log(logmsg);
-    } else if (args[0] === "all" || args[0] === "clear" || args[0] === "full") {
+    } else if (args[0] === "all" || "clear" || "full") {
       await member.roles.remove(roles);
       message.channel.send(colormsg);
       console.log(logmsg);
