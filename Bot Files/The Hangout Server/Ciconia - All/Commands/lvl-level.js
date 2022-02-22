@@ -8,8 +8,8 @@ module.exports = {
   permissions: config.permissions.permissionlevel,
   description: "Displays your current server level.",
   async execute(message, args, cmd, client, Discord, profileData) {
-    message.channel.send(
+    message.channel.send({ content: 
       `${message.author.username}, this is your Server Level: \`${profileData.level}\`.`
-    );
+    });
   },
 };

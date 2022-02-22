@@ -10,7 +10,7 @@ module.exports = {
     const channel = client.channels.cache.find(channel => channel.id === config.base.basebottestingthreechannelid)
     const messageArgs = args.join(' ');
 
-    const newEmbed = new Discord.MessageEmbed()
+    const embed = new MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle("New Announcement")
       .setImage(config.embed.embedimage)
@@ -21,7 +21,7 @@ module.exports = {
         })
       .setFooter(config.embed.embedfooter)
     channel.send(newEmbed).then((msg) => {
-        message.channel.send(`Test Announcement sent in <#${config.base.basebottestingthreechannelid}>.`)
+        message.channel.send({ content: `Test Announcement sent in <#${config.base.basebottestingthreechannelid}>.`})
     });
   },
 };

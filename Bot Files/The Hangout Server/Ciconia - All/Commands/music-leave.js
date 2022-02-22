@@ -11,12 +11,12 @@ module.exports = {
     const channel = config.base.basemusicchannelid;
     if (message.channel.id == channel) {
     } else {
-      return message.channel.send(
+      return message.channel.send({ content: 
         `You are not in the right channel to use this command! Please use <#${channel}> instead!`
-      );
+      });
     }
-    if (!voiceChannel) return message.channel.send(config.basemessages.messagesvcrequired);
+    if (!voiceChannel) return message.channel.send({ content: config.basemessages.messagesvcrequired});
     await voiceChannel.leave();
-    await message.channel.send(config.commandleave.commandleavemsg);
+    await message.channel.send({ content: config.commandleave.commandleavemsg});
   },
 };

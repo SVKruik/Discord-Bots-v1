@@ -15,21 +15,21 @@ module.exports = {
         }
 
         if (!args[0]) {
-            return message.channel.send("You are missing your \`latitude\` of \`A\`.")
+            return message.channel.send({ content: "You are missing your \`latitude\` of \`A\`."})
         } else if (!args[1]) {
-            return message.channel.send("You are missing your \`longitude\` of \`A\`.")
+            return message.channel.send({ content: "You are missing your \`longitude\` of \`A\`."})
         } else if (!args[2]) {
-            return message.channel.send("You are missing your \`latitude\` of \`B\`.")
+            return message.channel.send({ content: "You are missing your \`latitude\` of \`B\`."})
         } else if (!args[3]) {
-            return message.channel.send("You are missing your \`longitude\` of \`B\`.")
+            return message.channel.send({ content: "You are missing your \`longitude\` of \`B\`."})
         } else if (isNaN(args[0])) {
-            return message.channel.send("Please enter a number as your \`latitude\` for \`A\`.")
+            return message.channel.send({ content: "Please enter a number as your \`latitude\` for \`A\`."})
         } else if (isNaN(args[1])) {
-            return message.channel.send("Please enter a number as your \`longitude\` for \`A\`.")
+            return message.channel.send({ content: "Please enter a number as your \`longitude\` for \`A\`."})
         } else if (isNaN(args[2])) {
-            return message.channel.send("Please enter a number as your \`latitude\` for \`B\`.")
+            return message.channel.send({ content: "Please enter a number as your \`latitude\` for \`B\`."})
         } else if (isNaN(args[3])) {
-            return message.channel.send("Please enter a number as your \`longitude\` for \`B\`.")
+            return message.channel.send({ content: "Please enter a number as your \`longitude\` for \`B\`."})
         }
 
         const a = { latitude: args[0], longitude: args[1] }
@@ -55,7 +55,7 @@ module.exports = {
         const haverroundm = haver * 1
         const haverroundmr = Math.round((haverroundm + Number.EPSILON) * 100) / 100
 
-        const newEmbed = new Discord.MessageEmbed()
+        const embed = new MessageEmbed()
             .setColor(config.base.basecolor)
             .setTitle(config.embeds.titlehaversine)
             .setImage(config.embed.embedimage)
@@ -96,6 +96,6 @@ module.exports = {
             )
             .setFooter(config.embed.embedfooter);
 
-        message.channel.send(newEmbed);
+        message.channel.send({ embeds: [ embed ]});
     },
 };

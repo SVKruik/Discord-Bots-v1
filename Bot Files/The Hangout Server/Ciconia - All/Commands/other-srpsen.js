@@ -9,11 +9,11 @@ module.exports = {
   description: "Rock, Paper Scissor!",
   async execute(message, args, cmd, client, Discord, profileData) {
     if (!args[0].length)
-      return message.channel.send("To keep it fair, also send your pick!");
+      return message.channel.send({ content: "To keep it fair, also send your pick!"});
 
     const stake = args[1];
     if (!args[1].length)
-      return message.channel.send("Please also send your stake!");
+      return message.channel.send({ content: "Please also send your stake!"});
 
     const target = message.author;
 
@@ -22,22 +22,22 @@ module.exports = {
     const random = rps[Math.floor(Math.random() * rps.length)];
 
     if (!list.includes(args[0].toLowerCase())) {
-      return message.channel.send(`\`${args[0]}\` is not a valid option.`);
+      return message.channel.send({ content: `\`${args[0]}\` is not a valid option.`});
     }
-    message.channel.send(random);
+    message.channel.send({ content: random});
     console.log(random);
 
     var lowerrandom = random.toLowerCase();
 
     if (lowerrandom.substring(0, 4) == args[0])
-      return message.channel.send("It's a tie! You did not loose any coins.");
+      return message.channel.send({ content: "It's a tie! You did not loose any coins."});
     else if (random.slice(0, 4) != args[0]) {
       try {
         const targetData = await profileModel.findOne({ userID: target.id });
         if (!targetData)
-          return message.channel.send(
+          return message.channel.send({ content: 
             config.basemessages.messagesaccountmissing
-          );
+          });
         await profileModel.findOneAndUpdate(
           {
             userID: target.id,
@@ -51,9 +51,9 @@ module.exports = {
 
         const profit = stake * 2;
         const newbal = profileData.coins + profit;
-        return message.channel.send(
+        return message.channel.send({ content: 
           `You win! You received a small increase on your stake. Your stake was \`${args[1]}\`, your new balance is \`${newbal}\`.`
-        );
+        });
       } catch (err) {
         console.log(err);
       }

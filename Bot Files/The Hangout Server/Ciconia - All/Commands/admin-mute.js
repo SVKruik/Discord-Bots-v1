@@ -17,17 +17,17 @@ module.exports = {
 
       if (!args[1]) {
         memberTarget.roles.add(muteRole);
-        message.channel.send(
+        message.channel.send({ content: 
           `<@${memberTarget.user.id}> has been succesfully muted.`
-        );
+        });
         return;
       }
       memberTarget.roles.add(muteRole);
-      message.channel.send(
+      message.channel.send({ content: 
         `<@${memberTarget.user.id}> has been succesfully muted for ${ms(
           ms(args[1])
         )}.`
-      );
+        });
 
       if (args[2] === "delete") {
         message.delete();
@@ -37,10 +37,10 @@ module.exports = {
 
       setTimeout(function () {
         memberTarget.roles.remove(muteRole);
-        message.channel.send(`<@${memberTarget.user.id}> has been automatically unmuted. You can speak again!`);
+        message.channel.send({ content: `<@${memberTarget.user.id}> has been automatically unmuted. You can speak again!`});
       }, ms(args[1]));
     } else {
-      message.channel.send(config.basemessages.messagesfinderror);
+      message.channel.send({ content: config.basemessages.messagesfinderror});
     }
   },
 };

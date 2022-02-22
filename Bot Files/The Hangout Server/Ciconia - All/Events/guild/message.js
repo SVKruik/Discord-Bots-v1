@@ -115,9 +115,9 @@ module.exports = async (Discord, client, message) => {
       }
     }
     if (invalidPerms.length) {
-      return message.channel.send(
+      return message.channel.send({ content: 
         `You are missing the following permissions to use this command: \`${invalidPerms}\`.`
-      );
+      });
     }
   }
 
@@ -153,7 +153,7 @@ module.exports = async (Discord, client, message) => {
     command.execute(message, args, cmd, client, Discord, profileData);
   } catch (err) {
     message.reply(
-      "There was an error trying to execute the specified command! Something ain't right. Check the console."
+      "Fatal error using the command. Check the console."
     );
     console.log(err);
   }

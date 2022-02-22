@@ -10,10 +10,10 @@ module.exports = {
   async execute(message, args, cmd, client, discord, profileData) {
     const amount = args[0];
     if (amount <= 0)
-      return message.channel.send(config.basemessages.messagesgreaterone);
+      return message.channel.send({ content: config.basemessages.messagesgreaterone});
     try {
       if (amount > profileData.coins)
-        return message.channel.send(config.basemessages.messagescoinsmissing);
+        return message.channel.send({ content: config.basemessages.messagescoinsmissing});
       await profileModel.findOneAndUpdate(
         {
           userID: message.author.id,
@@ -26,9 +26,9 @@ module.exports = {
         }
       );
 
-      return message.channel.send(
+      return message.channel.send({ content: 
         `You deposited \`${amount}\` coins into your bank account.`
-      );
+      });
     } catch (err) {
       console.log(err);
     }

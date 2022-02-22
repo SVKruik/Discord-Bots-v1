@@ -78,9 +78,9 @@ module.exports = {
     const earnings = Math.floor(Math.random() * (100 - 10 + 1)) + 10;
 
     collector.on("collect", async (m) => {
-      message.channel.send(
+      message.channel.send({ content: 
         `You found \`${earnings}\` coins! Congratulations! Be sure to come back tomorrow!`
-      );
+      });
 
       await profileModel.findOneAndUpdate(
         {
@@ -96,15 +96,15 @@ module.exports = {
 
     collector.on("end", (collected, reason) => {
       if (reason == "time") {
-        message.channel.send(config.commandsearch.commandsearchtimestop);
+        message.channel.send({ content: config.commandsearch.commandsearchtimestop});
       }
     });
 
-    message.channel.send(
+    message.channel.send({ content: 
       `<@${message.author.id
       }> What number do you choose?\n Type your decision in this channel.\n Note that there is a time limit!\n \`${chosenLocations.join(
         "` `"
       )}\``
-    );
+    });
   },
 };

@@ -57,7 +57,7 @@ module.exports = {
     });
 
     message.channel
-      .send(`${config.commandticket.commandticketpending} Your channel: ${channel}`)
+      .send({ content: `${config.commandticket.commandticketpending} Your channel: ${channel}`})
       .catch((err) => {
         throw err;
       });

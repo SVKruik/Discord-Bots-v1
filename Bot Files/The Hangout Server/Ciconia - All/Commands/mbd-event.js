@@ -16,9 +16,9 @@ module.exports = {
     const channel = config.base.baseeventchannelid;
     if (message.channel.id == channel) {
     } else {
-      return message.channel.send(
+      return message.channel.send({ content: 
         `You are not in the right channel to use this command! Please use <#${channel}> instead!`
-      );
+      });
     }
     const oneTeamRole = message.guild.roles.cache.find(
       (role) => role.id === config.commandevent.teamoneid
@@ -52,7 +52,7 @@ module.exports = {
         `${fourTeamEmoji} - For Team Yellow!\n`
       );
 
-    let messageEmbed = await message.channel.send(embed);
+    let messageEmbed = await message.channel.send({ content: embed});
     messageEmbed.react(oneTeamEmoji);
     messageEmbed.react(twoTeamEmoji);
     messageEmbed.react(threeTeamEmoji);

@@ -13,7 +13,7 @@ module.exports = {
       message.delete();
     }
     
-    const newEmbed = new Discord.MessageEmbed()
+    const embed = new MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titledonate)
       .setImage(config.embed.embedimage)
@@ -31,6 +31,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send(newEmbed);
+    message.channel.send({ embeds: [ embed ]});
   },
 };

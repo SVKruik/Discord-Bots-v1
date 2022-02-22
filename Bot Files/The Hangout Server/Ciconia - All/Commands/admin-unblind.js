@@ -21,11 +21,11 @@ module.exports = {
       const memberTarget = message.guild.members.cache.get(target.id);
 
       memberTarget.roles.remove(blindRole);
-      message.channel.send(
+      message.channel.send({ content: 
         `<@${memberTarget.user.id}> has been succesfully unblinded. Welcome back!`
-      );
+      });
     } else {
-      message.channel.send(config.basemessages.messagesfinderror);
+      message.channel.send({ content: config.basemessages.messagesfinderror});
     }
   },
 };

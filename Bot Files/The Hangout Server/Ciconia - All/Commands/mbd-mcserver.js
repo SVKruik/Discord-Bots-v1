@@ -9,11 +9,11 @@ module.exports = {
   description: "Displays some Minecraft server statistics.",
   execute(message, args, cmd, client, Discord) {
     if (!args[0])
-      return message.channel.send(config.commandmcserver.commandmcserverip);
+      return message.channel.send({ content: config.commandmcserver.commandmcserverip});
     if (!args[1])
-      return message.channel.send(
+      return message.channel.send({ content: 
         config.commandmcserver.commandmcserverport
-      );
+      });
 
     if (args[2] === "delete") {
       message.delete();
@@ -40,12 +40,12 @@ module.exports = {
           )
           .setFooter(config.embed.embedfooter);
 
-        message.channel.send(embed);
+        message.channel.send({ content: embed});
       })
       .catch((error) => {
-        message.channel.send(
+        message.channel.send({ content: 
           config.basemessages.messagesfinderror
-        );
+        });
       });
   },
 };

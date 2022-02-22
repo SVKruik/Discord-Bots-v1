@@ -19,8 +19,8 @@ module.exports = {
         },
       }
     );
-    return message.channel.send(
+    return message.channel.send({ content: 
       `${message.author.username}, you have collected your daily reward and received \`${randomNumber}\` coins. Come back tomorrow for more!`
-    );
+    });
   },
 };

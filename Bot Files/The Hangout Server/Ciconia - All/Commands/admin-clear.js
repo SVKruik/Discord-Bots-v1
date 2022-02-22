@@ -11,14 +11,14 @@ module.exports = {
     const min = config.commandclear.commandclearmin;
 
     if (!args[0])
-      return message.channel.send(config.commandclear.commandclearmissing);
-    if (isNaN(args[0])) return message.channel.send(config.basemessages.messagesrealnumber);
+      return message.channel.send({ content: config.commandclear.commandclearmissing});
+    if (isNaN(args[0])) return message.channel.send({ content: config.basemessages.messagesrealnumber});
 
     if (args[0] > max)
-      return message.channel.send(
+      return message.channel.send({ content: 
         `You cannot clear more than \`${max}\` messages in one command.`
-      );
-    if (args[0] < min) return message.channel.send(config.basemessages.messagesgreaterone);
+      });
+    if (args[0] < min) return message.channel.send({ content: config.basemessages.messagesgreaterone});
     
     await message.channel.messages
       .fetch({ limit: args[0] })

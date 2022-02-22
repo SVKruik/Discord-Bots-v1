@@ -8,8 +8,8 @@ module.exports = {
   permissions: config.permissions.permissionbalancebank,
   description: "Display your bank account balance.",
   async execute(message, args, cmd, client, Discord, profileData) {
-    message.channel.send(
+    message.channel.send({ content: 
       `${message.author.username}, this is your current bank balance : \`${profileData.bank}\`.`
-    );
+    });
   },
 };

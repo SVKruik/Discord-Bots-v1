@@ -21,11 +21,11 @@ module.exports = {
       const memberTarget = message.guild.members.cache.get(target.id);
 
       memberTarget.roles.remove(muteRole);
-      message.channel.send(
+      message.channel.send({ content: 
         `<@${memberTarget.user.id}> has been succesfully unmuted. You can now speak again!`
-      );
+      });
     } else {
-      message.channel.send(config.basemessages.messagesfinderror);
+      message.channel.send({ content: config.basemessages.messagesfinderror});
     }
   },
 };
