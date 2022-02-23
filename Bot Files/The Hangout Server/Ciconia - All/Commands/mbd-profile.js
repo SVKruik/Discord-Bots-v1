@@ -10,7 +10,7 @@ module.exports = {
     const tagfull = message.author.tag;
     const tag = tagfull.slice(-4);
 
-    const embed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titleprofile)
       .setImage(config.embed.embedimage)
@@ -33,6 +33,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send({ embeds: [ embed ]});
+    message.channel.send(newEmbed);
   },
 };

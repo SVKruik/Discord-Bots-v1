@@ -8,15 +8,15 @@ module.exports = {
   description: "Rock, Paper Scissor!",
   async execute(message, args, cmd, client, Discord, profileData) {
     if (!args.length)
-      return message.channel.send({ content: "To keep it fair, also send your pick!"});
+      return message.channel.send("To keep it fair, also send your pick!");
 
     const list = ["rock", "paper", "scissors", "scissor"];
     const rps = ["Rock! - ⛰", "Paper! - 📄", "Scissors! - ✂"];
     const random = rps[Math.floor(Math.random() * rps.length)];
 
     if (!list.includes(args[0].toLowerCase())) {
-      return message.channel.send({ content: `\`${args[0]}\` is not a valid option.`});
+      return message.channel.send(`\`${args[0]}\` is not a valid option.`);
     }
-    message.channel.send({ content: random});
+    message.channel.send(random);
   },
 };

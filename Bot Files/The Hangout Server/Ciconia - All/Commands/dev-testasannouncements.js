@@ -9,13 +9,13 @@ module.exports = {
     async execute(message, args, cmd, client, Discord) {
         const messageArgs = args.join(' ');
 
-        const embed = new MessageEmbed()
+        const newEmbed = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
             .addFields(
                 {
                     name: `**Heads up:**`,
                     value: `${messageArgs}`,
                 })
-        message.channel.send({ embeds: [ embed ]})
+        message.channel.send(newEmbed)
     },
 };

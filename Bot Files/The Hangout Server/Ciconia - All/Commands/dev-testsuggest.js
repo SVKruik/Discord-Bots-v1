@@ -10,7 +10,7 @@ module.exports = {
         const channel = client.channels.cache.find(channel => channel.id === config.base.basebottestingthreechannelid)
         const messageArgs = args.join(' ');
 
-        const embed = new MessageEmbed()
+        const newEmbed = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
             .addFields(
@@ -22,7 +22,7 @@ module.exports = {
         channel.send(newEmbed).then((msg) => {
             msg.react('👍');
             msg.react('👎');
-            message.channel.send({ content: `Test Suggestion sent in <#${config.base.basetestsuggestchannelid}>.`})
+            message.channel.send(`Test Suggestion sent in <#${config.base.basetestsuggestchannelid}>.`)
         });
     },
 };

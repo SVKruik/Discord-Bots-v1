@@ -8,7 +8,7 @@ module.exports = {
   description: "Flip a coin!",
   async execute(message, args, cmd, client, Discord, profileData) {
     if (!args[0]) {
-      return message.channel.send({ content: "Please also choose your winning side."});
+      return message.channel.send("Please also choose your winning side.");
     }
 
     const list = ["heads", "head", "tails", "tail"];
@@ -16,18 +16,18 @@ module.exports = {
     const random = fac[Math.floor(Math.random() * fac.length)];
 
     if (!list.includes(args[0].toLowerCase())) {
-      return message.channel.send({ content: `\`${args[0]}\` is not a valid option.`});
+      return message.channel.send(`\`${args[0]}\` is not a valid option.`);
     }
-    message.channel.send({ content: random});
+    message.channel.send(random);
 
     var lowerrandom = random.toLowerCase();
 
     if (lowerrandom.substring(0, 4) == args[0]) {
       console.log(lowerrandom);
-      return message.channel.send({ content: "You win! - 🟢"});
+      return message.channel.send("You win! - 🟢");
     } else if (lowerrandom.substring(0, 4) != args[0]) {
       console.log(lowerrandom);
-      return message.channel.send({ content: `You lose! - 🔴`});
+      return message.channel.send(`You lose! - 🔴`);
     }
   },
 };

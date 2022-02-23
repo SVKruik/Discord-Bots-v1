@@ -20,17 +20,17 @@ module.exports = {
     const cirkelnaam = args[4]; // c: ...
 
     if (!args[0]) {
-      return message.channel.send({ content: "You are missing the value \`A\` of the circle formula."})
+      return message.channel.send("You are missing the value \`A\` of the circle formula.")
     } else if (!args[1]) {
-      return message.channel.send({ content: "You are missing the value \`B\` of the circle formula."})
+      return message.channel.send("You are missing the value \`B\` of the circle formula.")
     } else if (!args[2]) {
-      return message.channel.send({ content: "You are missing the value \`C\` of the circle formula."})
+      return message.channel.send("You are missing the value \`C\` of the circle formula.")
     } else if (!args[3]) {
-      return message.channel.send({ content: "You are missing the value \`A\` of the line formula."})
+      return message.channel.send("You are missing the value \`A\` of the line formula.")
     } else if (!args[4]) {
-      return message.channel.send({ content: "You are missing the name of your circle formula."})
+      return message.channel.send("You are missing the name of your circle formula.")
     } else if (!args[5]) {
-      return message.channel.send({ content: "You are missing the name of your variable in the line formula."})
+      return message.channel.send("You are missing the name of your variable in the line formula.")
     }
 
     const cirkela2 = cirkela * 2
@@ -58,7 +58,7 @@ module.exports = {
       message.delete();
     }
 
-    const embed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlesubstitutie)
       .setImage(config.embed.embedimage)
@@ -131,6 +131,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send({ embeds: [ embed ]});
+    message.channel.send(newEmbed);
   },
 };

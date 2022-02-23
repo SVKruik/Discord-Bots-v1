@@ -119,7 +119,7 @@ module.exports = {
           `${neongreenTeamEmoji} = Neon Green, 134`
       );
 
-    let messageEmbed = await message.channel.send({ content: embed});
+    let messageEmbed = await message.channel.send(embed);
     messageEmbed.react(earthyellowTeamEmoji);
     messageEmbed.react(brightbluishvioletTeamEmoji);
     messageEmbed.react(trbrownTeamEmoji);

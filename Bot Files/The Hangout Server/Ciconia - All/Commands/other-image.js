@@ -15,22 +15,22 @@ module.exports = {
   async execute(message, args, cmd, client, Discord) {
     const channel = config.base.baseimagechannelid;
     const image_query = args.join(" ");
-    if (!image_query) return message.channel.send({ content: config.commandimage.commandimagemissing});
+    if (!image_query) return message.channel.send(config.commandimage.commandimagemissing);
     if (message.channel.id == channel) {
     } else {
-      return message.channel.send({ content: 
+      return message.channel.send(
         `You are not in the right channel to use this command! Please use <#${channel}> instead!`
-      });
+      );
     }
     const blacklist = require("./../Other/profanity.js");
 
     if (blacklist.includes(args[0].toLowerCase())) {
       message.delete();
       console.log(`${message.author.username} used the following forbidden word in an image search: || ${args[0]} ||`);
-      return message.channel.send({ content: "Lets keep this family friendly!"});
+      return message.channel.send("Lets keep this family friendly!");
     } else {
       const image_results = await google.scrape(image_query, 1);
-      await message.channel.send({ content: image_results[0].url});
+      await message.channel.send(image_results[0].url);
     }
   },
 };

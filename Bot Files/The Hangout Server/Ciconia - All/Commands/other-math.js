@@ -9,7 +9,7 @@ module.exports = {
   description: "Basic calculation.",
   execute(message, args, cmd, client, Discord) {
     try {
-      const embed = new MessageEmbed()
+      const newEmbed = new Discord.MessageEmbed()
         .setColor(config.base.basecolor)
         .setTitle(`Calculator`)
         .setImage(config.embed.embedimage)
@@ -26,9 +26,9 @@ module.exports = {
         )
         .setFooter(config.embed.embedfooter);
 
-      message.channel.send({ embeds: [ embed ]});
+      message.channel.send(newEmbed);
     } catch (err) {
-      message.channel.send({ content: "I don't understand your question."});
+      message.channel.send("I don't understand your question.");
     }
   },
 };

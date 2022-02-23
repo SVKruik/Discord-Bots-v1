@@ -15,18 +15,18 @@ module.exports = {
     }
 
     if (!args[0]) {
-      return message.channel.send({ content: config.basemessages.messagesmembermention})
+      return message.channel.send(config.basemessages.messagesmembermention)
     };
     const amount = args[1];
     const target = message.mentions.users.first();
-    if (!target) return message.channel.send({ content: config.basemessages});
+    if (!target) return message.channel.send(config.basemessages);
 
     if (amount <= 0)
-      return message.channel.send({ content: config.basemessages.messagesgreaterone});
+      return message.channel.send(config.basemessages.messagesgreaterone);
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
-      if (!targetData) return message.channel.send({ content: config.basemessages.messagesaccountmissing});
+      if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
       await profileModel.findOneAndUpdate(
         {
           userID: target.id,
@@ -39,9 +39,9 @@ module.exports = {
         }
       );
 
-      return message.channel.send({ content: 
+      return message.channel.send(
         `${message.author.username}, the targeted member has been given \`${amount}\` amount of coins in both of their accounts.`
-      });
+      );
     } catch (err) {
       console.log(err);
     }

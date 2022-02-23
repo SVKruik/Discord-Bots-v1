@@ -12,11 +12,11 @@ module.exports = {
     const c = args[2];
 
     if (!args[0]) {
-      return message.channel.send({ content: "You are missing the value \`A\`"})
+      return message.channel.send("You are missing the value \`A\`")
     } else if (!args[1]) {
-      return message.channel.send({ content: "You are missing the value \`B\`"})
+      return message.channel.send("You are missing the value \`B\`")
     } else if (!args[2]) {
-      return message.channel.send({ content: "You are missing the value \`C\`"})
+      return message.channel.send("You are missing the value \`C\`")
     }
 
     const ahelft = a / 2;
@@ -34,7 +34,7 @@ module.exports = {
 
     const diameter = wabcafgerond * 2;
 
-    const embed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlecircle)
       .setImage(config.embed.embedimage)
@@ -71,6 +71,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send({ embeds: [ embed ]});
+    message.channel.send(newEmbed);
   },
 };

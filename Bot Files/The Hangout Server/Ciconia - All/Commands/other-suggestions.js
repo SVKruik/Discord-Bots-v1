@@ -10,7 +10,7 @@ module.exports = {
         const channel = client.channels.cache.find(channel => channel.id === config.base.basesuggechannelid)
         const messageArgs = args.join(' ');
 
-        const embed = new MessageEmbed()
+        const newEmbed = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
             .addFields(

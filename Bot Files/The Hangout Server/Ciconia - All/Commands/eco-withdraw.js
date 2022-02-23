@@ -10,11 +10,11 @@ module.exports = {
   async execute(message, args, cmd, client, discord, profileData) {
     const amount = args[0];
     if (amount <= 0)
-      return message.channel.send({ content: config.basemessages.messagesgreaterone});
+      return message.channel.send(config.basemessages.messagesgreaterone);
 
     try {
       if (amount > profileData.bank)
-        return message.channel.send({ content: config.basemessages.messagescoinsmissing});
+        return message.channel.send(config.basemessages.messagescoinsmissing);
 
       await profileModel.findOneAndUpdate(
         {
@@ -28,9 +28,9 @@ module.exports = {
         }
       );
 
-      return message.channel.send({ content: 
+      return message.channel.send(
         `You withdrew \`${amount}\` coins into your wallet.`
-      });
+      );
     } catch (err) {
       console.log(err);
     }

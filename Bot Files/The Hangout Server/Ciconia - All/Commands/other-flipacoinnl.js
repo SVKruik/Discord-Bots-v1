@@ -8,7 +8,7 @@ module.exports = {
   description: "Kop of munt!",
   async execute(message, args, cmd, client, Discord, profileData) {
     if (!args[0]) {
-      return message.channel.send({ content: "Please also choose your winning side."});
+      return message.channel.send("Please also choose your winning side.");
     }
 
     const list = ["kop", "munt"];
@@ -16,18 +16,18 @@ module.exports = {
     const random = fac[Math.floor(Math.random() * fac.length)];
 
     if (!list.includes(args[0].toLowerCase())) {
-      return message.channel.send({ content: `\`${args[0]}\` is geen geldige parameter.`});
+      return message.channel.send(`\`${args[0]}\` is geen geldige parameter.`);
     }
-    message.channel.send({ content: random});
+    message.channel.send(random);
 
     var lowerrandom = random.toLowerCase();
 
     if (lowerrandom.substring(0, 4) == args[0]) {
       console.log(lowerrandom);
-      return message.channel.send({ content: "Je hebt gewonnen! - 🟢"});
+      return message.channel.send("Je hebt gewonnen! - 🟢");
     } else if (lowerrandom.substring(0, 4) != args[0]) {
       console.log(lowerrandom);
-      return message.channel.send({ content: `Je hebt verloren! - 🔴`});
+      return message.channel.send(`Je hebt verloren! - 🔴`);
     }
   },
 };

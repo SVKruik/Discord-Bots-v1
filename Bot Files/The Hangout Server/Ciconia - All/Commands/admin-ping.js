@@ -15,7 +15,7 @@ module.exports = {
 
     const botping = Date.now() - message.createdTimestamp
     const apiping = client.ws.ping
-    const embed = new MessageEmbed()
+    const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle("Bot Latency")
       .setImage(config.embed.embedimage)
@@ -32,6 +32,6 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send({ embeds: [ embed ]});
+    message.channel.send(newEmbed);
   },
 };

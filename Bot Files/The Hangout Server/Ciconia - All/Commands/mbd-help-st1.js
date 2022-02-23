@@ -43,7 +43,7 @@ module.exports = {
         `${EventsEmoji} - For information about Events, and about how to join them.`
       );
 
-    let messageEmbed = await message.channel.send({ content: embed});
+    let messageEmbed = await message.channel.send(embed);
     messageEmbed.react(ApplyEmoji);
     messageEmbed.react(RanksRolesEmoji);
     messageEmbed.react(GitHubEmoji);
@@ -62,7 +62,7 @@ module.exports = {
 
       if (reaction.message.channel.id == channel) {
         if (reaction.emoji.name === ApplyTeamEmoji) {
-          message.channel.send({ content: "Test"})
+          message.channel.send("Test")
         }
       } else {
         return;
