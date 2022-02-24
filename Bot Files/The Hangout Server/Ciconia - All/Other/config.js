@@ -367,6 +367,8 @@ exports.aliases = {
   aliasesbotstats: ["botstat", "botstats"], // Botstatistics
   aliasesleave: ["musicstop", "stop"], // Leave
   aliasesplay: ["music", "song"], // Play
+  aliasesskip: ["jump"], // Skip
+  aliasesstop: ["terminate"], // Stop
   aliasesapply: ["form"], // Apply
   aliasesdice: ["roll"], // Dice
   aliasesflipacoinen: ["fac", "facen"], // Flipacoin
@@ -453,7 +455,7 @@ exports.cooldown = {
   cooldownrules: B,
   cooldownserverip: B,
   cooldownleave: C,
-  cooldownplay: C,
+  cooldownmusic: C, // All music cmds
   cooldownapply: E,
   cooldowndice: G,
   cooldownflipacoinen: H,
@@ -535,7 +537,7 @@ exports.permissions = {
   permissionrules: I,
   permissionserverip: I,
   permissionleave: J,
-  permissionplay: J,
+  permissionmusic: J, // All music cmds
   permissionapply: J,
   permissiondice: J,
   permissionflipacoinen: J,
