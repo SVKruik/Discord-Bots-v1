@@ -7,60 +7,80 @@ module.exports = {
   permissions: config.permissions.permissiontemplatecommand,
   description: "Command template for devs.",
   async execute(message, args, cmd, client, Discord, profileData) {
-    const commandmessage1 = config.commandcommandtemplate.commandcommandtemplate
-
-    // Flag Checking
+    const flagmessage = config.commandcommandtemplate.commandcommandtemplate
     const flags = ["everyone", "here", "delete"];
-
+    
     if (!args[0]) {
-      message.channel.send(commandmessage1)
+      message.channel.send(flagmessage)
     }
-
-    if (args[2] === "everyone" || "here") {
-      return message.channel.send(`You cannot use group tags as your third argument. Please use argument 1 or 2.`)
-    } else {
-
-      // Flag 1: Everyone
-      if (args[0] === "everyone") {
-        if (args[1] === "here") {
-          return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
-        } else if (args[0] || args[2] === "delete") {
+    
+    if (args[0] === "delete") {
+      if (!args[1]) {
+        if (!args[2]) {
           message.delete();
-          message.channel.send(`@everyone ${commandmessage1}`)
-        } else {
-          message.channel.send(`@everyone ${commandmessage1}`)
-        }
-      } else if (args[1] === "everyone") {
-        if (args[0] === "here") {
-          return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
-        } else if (args[0] || args[2] === "delete") {
-          message.delete();
-          message.channel.send(`@everyone ${commandmessage1}`)
-        } else {
-          message.channel.send(`@everyone ${commandmessage1}`)
+          message.channel.send(flagmessage)
         }
       }
-
-      // Flag 2: Here
+    } else if (args[1] === "delete") {
+      if (!args[0]) {
+        if (!args[2]) {
+          message.delete();
+          message.channel.send(flagmessage)
+        }
+      }
+    } else if (args[2] === "delete") {
+      if (!args[0]) {
+        if (!args[1]) {
+          message.delete();
+          message.channel.send(flagmessage)
+        }
+      }
+    }
+    
+    // Flag 1: Everyone
+    if (args[0] === "everyone") {
+      if (args[1] === "here") {
+        return message.channel.send(`You cannot use both group tags at the same time.`)
+      } else if (args[1] || args[2] === "delete") {
+        message.delete();
+        message.channel.send(`@everyone ${flagmessage}`)
+      } else {
+        message.channel.send(`@everyone ${flagmessage}`)
+      }
+    } else if (args[1] === "everyone") {
       if (args[0] === "here") {
-        if (args[1] === "everyone") {
-          return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
-        } else if (args[1] || args[2] === "delete") {
-          message.delete();
-          message.channel.send(`@here ${commandmessage1}`)
-        } else {
-          message.channel.send(`@here ${commandmessage1}`)
-        }
-      } else if (args[1] === "here") {
-        if (args[0] === "everyone") {
-          return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
-        } else if (args[0] || args[2] === "delete") {
-          message.delete();
-          message.channel.send(`@here ${commandmessage1}`)
-        } else {
-          message.channel.send(`@here ${commandmessage1}`)
-        }
+        return message.channel.send(`You cannot use both group tags at the same time.`)
+      } else if (args[0] || args[2] === "delete") {
+        message.delete();
+        message.channel.send(`@everyone ${flagmessage}`)
+      } else {
+        message.channel.send(`@everyone ${flagmessage}`)
       }
+    } else if (args[2] === "everyone") {
+      return message.channel.send(`You cannot use group tags as your third argument. Please use flag \`1\` or \`2\`.`)
+    }
+    
+    // Flag 2: Here
+    if (args[0] === "here") {
+      if (args[1] === "everyone") {
+        return message.channel.send(`You cannot use both group tags at the same time.`)
+      } else if (args[1] || args[2] === "delete") {
+        message.delete();
+        message.channel.send(`@here ${flagmessage}`)
+      } else {
+        message.channel.send(`@here ${flagmessage}`)
+      }
+    } else if (args[1] === "here") {
+      if (args[0] === "everyone") {
+        return message.channel.send(`You cannot use both group tags at the same time.`)
+      } else if (args[0] || args[2] === "delete") {
+        message.delete();
+        message.channel.send(`@here ${flagmessage}`)
+      } else {
+        message.channel.send(`@here ${flagmessage}`)
+      }
+    } else if (args[2] === "here") {
+      return message.channel.send(`You cannot use group tags as your third argument. Please use flag \`1\` or \`2\`.`)
     }
   },
 };

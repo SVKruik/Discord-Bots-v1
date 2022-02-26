@@ -8,7 +8,6 @@ module.exports = {
   description: "Display the server IP and information for MultiCube.",
   execute(message, args, cmd, client, Discord, profileData) {
 
-    
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titleserverip)

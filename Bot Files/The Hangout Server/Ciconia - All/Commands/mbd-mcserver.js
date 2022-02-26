@@ -15,8 +15,6 @@ module.exports = {
         config.commandmcserver.commandmcserverport
       );
 
-
-
     util
       .status(args[0], { port: parseInt(args[1]) })
       .then((response) => {

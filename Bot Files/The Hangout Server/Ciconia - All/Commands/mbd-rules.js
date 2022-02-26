@@ -8,7 +8,6 @@ module.exports = {
   description: "Displays an embed with our active server rules.",
   execute(message, args, cmd, client, Discord, profileData) {
 
-    
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlerules)
