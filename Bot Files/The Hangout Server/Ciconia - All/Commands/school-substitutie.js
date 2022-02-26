@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownsubstitutie,
   permissions: config.permissions.permissionsubstitutie,
   description: "Substitute",
-  execute(message, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord, profileData) {
     const username = message.client.user.id;
 
     const cirkela = args[0]; // A

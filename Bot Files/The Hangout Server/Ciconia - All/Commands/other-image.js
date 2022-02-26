@@ -12,7 +12,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownimage,
   permissions: config.permissions.permissionimage,
   description: "This sends the best google result for an image.",
-  async execute(message, args, cmd, client, Discord) {
+  async execute(message, args, cmd, client, Discord, profileData) {
     const channel = config.base.baseimagechannelid;
     const image_query = args.join(" ");
     if (!image_query) return message.channel.send(config.commandimage.commandimagemissing);

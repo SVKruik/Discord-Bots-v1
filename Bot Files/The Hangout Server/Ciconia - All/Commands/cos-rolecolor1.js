@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownrolecolor1,
   permissions: config.permissions.permissionrolecolor1,
   description: "Role color choose page 1.",
-  async execute(message, args, cmd, client, Discord) {
+  async execute(message, args, cmd, client, Discord, profileData) {
     const channel = config.base.basecolorchannelid;
     const whiteTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910544967582253086"

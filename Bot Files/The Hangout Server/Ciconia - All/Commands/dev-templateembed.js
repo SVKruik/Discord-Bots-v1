@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowntemplateembed,
   permissions: config.permissions.permissiontemplatecommand,
   description: "Embed template for devs.",
-  execute(message, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord, profileData) {
     
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)

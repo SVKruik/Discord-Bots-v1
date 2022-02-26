@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowngithub,
   permissions: config.permissions.permissiongithub,
   description: "Displays all import links to our GitHub repository.",
-  execute(message, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord, profileData) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlegithub)

@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownping,
   permissions: config.permissions.permissionping,
   description: "This silences spamming or naughty people. Can only read stuff.",
-  execute(message, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord, profileData) {
     if (args[1] === "delete") {
       message.delete();
     } else if (args[1] === "del" || args[2] === "d") {

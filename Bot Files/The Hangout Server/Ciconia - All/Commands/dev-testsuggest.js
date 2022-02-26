@@ -6,7 +6,7 @@ module.exports = {
     cooldown: config.cooldown.cooldowntestsuggest,
     permissions: config.permissions.permissiontestsuggest,
     description: "Test suggest something new in the dedicated channel.",
-    async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord, profileData) {
         const channel = client.channels.cache.find(channel => channel.id === config.base.basebottestingthreechannelid)
         const messageArgs = args.join(' ');
 

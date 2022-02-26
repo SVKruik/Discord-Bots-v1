@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowntitreerverdunning,
   permissions: config.permissions.permissiontitreerverdunning,
   description: "Calculate some science math.",
-  execute(message, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord, profileData) {
     const pipet = 10;
     const verdunningsfactor = 10;
     const titreerml = 11.11;

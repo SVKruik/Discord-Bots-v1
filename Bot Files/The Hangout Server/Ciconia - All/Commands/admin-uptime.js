@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownuptime,
   permissions: config.permissions.permissionuptime,
   description: "Check the uptime of the bot.",
-  execute(message, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord, profileData) {
     if (args[1] === "delete") {
       message.delete();
     } else if (args[1] === "del" || args[2] === "d") {

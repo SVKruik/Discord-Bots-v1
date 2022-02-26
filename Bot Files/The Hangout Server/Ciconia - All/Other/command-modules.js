@@ -194,3 +194,14 @@ if (!args[0]) {
 } else if (!args[1]) {
   return message.channel.send("Args missing")
 }
+
+//// Module 9: Catch Error
+
+const errorcode = config.errorcodes.one
+
+try {
+  message.channel.send("Test")
+} catch (err) {
+  message.channel.send(`Error. Code: ${errorcode}`)
+  console.log(err)
+}

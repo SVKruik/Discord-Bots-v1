@@ -70,6 +70,24 @@ exports.embed = {
   embedlink: "https://github.com/PuffinKwadraat/MultiCube-Public",
 };
 
+exports.errorcodes = {
+  one: "3951",
+  two: "4182",
+  three: "5382",
+  four: "1432",
+  five: "8931",
+  six: "5671",
+  seven: "3120",
+  eight: "7329",
+  nine: "2371",
+  ten: "0",
+  eleven: "0",
+  twelve: "0",
+  thirteen: "0",
+  fourteen: "0",
+  fifteen: "0",
+}
+
 exports.basemessages = {
   // General Messages
   messagesfinderror: "Could not find the specified variable.",
@@ -290,10 +308,10 @@ exports.aliases = {
   aliasesmute: [], // Mute
   aliasesping: ["pong"], // Ping
   aliasesunblind: [], // Unblind
-  aliasesunmute: [], //Unmute
+  aliasesunmute: [], // Unmute
   aliasesuptime: [], // Uptime
   aliasescolor: ["clr", "colour"], // Color
-  aliasescolorremove: ["clrremove", "colourremove", "clrrmv"], // Colorremove
+  aliasescolorremove: ["clrremove", "colourremove", "clrrmv"], // Color Remove
   aliasesrolecolor1: ["rlclr1"], // Rolecolor1
   aliasesrolecolor2: ["rlclr2"], // Rolecolor2
   aliasesrolecolor3: ["rlclr3"], // Rolecolor3
@@ -303,14 +321,14 @@ exports.aliases = {
   aliasestestasannouncements: ["testsmallannouncement", "testsmallannounce", "testsmallann", "testsannouncement", "testsannounce", "testsanno"], // Test Small Announcement
   aliasestestsuggest: ["testsuggest", "testsuggestion", "tsuggest", "tsuggestion"], // Test Suggestions
   aliasesbalance: ["bal", "baltot", "baltotal", "showbal"], // Balance
-  aliasesbalancebank: ["balbank"], // Balancebank
-  aliasesbalancewallet: ["balwallet", "balwal"], // Balancewallet
-  aliasesdailyreward: ["dlyrwd", "dr"], // Dailyreward
+  aliasesbalancebank: ["balbank"], // Balance Bank
+  aliasesbalancewallet: ["balwallet", "balwal"], // Balance Wallet
+  aliasesdailyreward: ["dlyrwd", "dr"], // Daily Reward
   aliasesdeposit: ["dep", "depo"], // Deposit
   aliasesgivebank: [], // Givebank
-  aliasesgivefulleco: ["givebankwal", "givewalbank"], // Givebankandwallet
-  aliasesgivewallet: ["givewal"], // Givewallet
-  aliasesminusbank: ["minbank"], // Minusbank
+  aliasesgivefulleco: ["givebankwal", "givewalbank"], // Give Full Economy
+  aliasesgivewallet: ["givewal"], // Give Wallet
+  aliasesminusbank: ["minbank"], // Minus Bank
   aliasesminusfulleco: [
     "minusbankwal",
     "minuswalbank",

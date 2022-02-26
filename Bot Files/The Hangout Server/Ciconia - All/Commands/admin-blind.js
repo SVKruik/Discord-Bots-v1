@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownblind,
   permissions: config.permissions.permissionblind,
   description: "Completly blind a member. Target cannot do anything.",
-  execute(message, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord, profileData) {
     const target = message.mentions.users.first();
     if (target) {
       const blindRole = message.guild.roles.cache.find(

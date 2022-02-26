@@ -6,7 +6,7 @@ module.exports = {
     cooldown: config.cooldown.cooldownannouncements,
     permissions: config.permissions.permissionannouncements,
     description: "Announce something direct using the bot.",
-    async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord, profileData) {
         const messageArgs = args.join(' ');
 
         const newEmbed = new Discord.MessageEmbed()

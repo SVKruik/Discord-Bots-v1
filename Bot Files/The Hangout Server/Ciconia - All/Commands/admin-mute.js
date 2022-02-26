@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownmute,
   permissions: config.permissions.permissionmute,
   description: "This silences spamming or naughty people. Can only read stuff.",
-  execute(message, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord, profileData) {
     const target = message.mentions.users.first();
     if (target) {
       const muteRole = message.guild.roles.cache.find(

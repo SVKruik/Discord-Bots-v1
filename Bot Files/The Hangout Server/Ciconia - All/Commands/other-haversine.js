@@ -7,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldownhaversine,
     permissions: config.permissions.permissionhaversine,
     description: "Calculate the distance between two GPS coordinates.",
-    execute(message, args, cmd, client, Discord) {
+    execute(message, args, cmd, client, Discord, profileData) {
         if (args[4] === "delete") {
             message.delete();
         } else if (args[4] === "del" || args[2] === "d") {
