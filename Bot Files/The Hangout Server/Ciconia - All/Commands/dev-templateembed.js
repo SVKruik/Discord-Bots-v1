@@ -7,11 +7,6 @@ module.exports = {
   permissions: config.permissions.permissiontemplatecommand,
   description: "Embed template for devs.",
   execute(message, args, cmd, client, Discord) {
-    if (args[2] === "delete") {
-      message.delete();
-    } else if (args[2] === "del" || args[2] === "d") {
-      message.delete();
-    }
     
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)

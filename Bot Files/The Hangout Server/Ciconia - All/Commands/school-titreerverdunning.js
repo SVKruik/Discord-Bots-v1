@@ -18,11 +18,7 @@ module.exports = {
     const mmolonbekendenapipet = mmolonbekende / pipet;
     const molariteitonbekende = mmolonbekendenapipet * verdunningsfactor;
 
-    if (args[2] === "delete") {
-      message.delete();
-    } else if (args[2] === "del" || args[2] === "d") {
-      message.delete();
-    }
+
 
     //Input
     var titreermlafgerond =

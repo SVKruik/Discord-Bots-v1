@@ -8,12 +8,6 @@ module.exports = {
   permissions: config.permissions.permissionsetfulllevel,
   description: "Reset the level and experience of a member.",
   async execute(message, args, cmd, client, discord, profileData) {
-    if (args[2] === "delete") {
-      message.delete();
-    } else if (args[2] === "del" || args[2] === "d") {
-      message.delete();
-    }
-
    if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };

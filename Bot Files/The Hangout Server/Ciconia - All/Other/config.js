@@ -316,31 +316,31 @@ exports.aliases = {
     "minuswalbank",
     "minbankwal",
     "minwalbank",
-  ], // Minusbankandwallet
-  aliasesminuswallet: ["minwal"], // Minuswallet
+  ], // Minus Full Eco
+  aliasesminuswallet: ["minwal"], // Minus Wallet
   aliasessearch: ["srch"], // Search
-  aliasessetbank: [], // Setbank
+  aliasessetbank: [], // Set Bank
   aliasessetfulleco: [
     "setwalbank",
     "setwalletbank",
     "setbankwallet",
     "setbankwal",
-  ], // Setbankandwallet
-  aliasessetwallet: ["setwal"], // Setwallet
+  ], // Set Full Eco
+  aliasessetwallet: ["setwal"], // Set Wallet
   aliaseswithdraw: ["with", "wit"], // Withdraw
   aliasesexperience: ["exp", "xp"], // Experience
-  aliasesgiveexperience: ["givexp", "giveexp"], // Giveexperience
+  aliasesgiveexperience: ["givexp", "giveexp"], // Give Experience
   aliasesgivefulllevel: [
     "givelvlxp",
     "givexplvl",
     "givelvlexp",
     "giveexplvl",
     "givefullevel",
-  ], // Givelevelandexperience
-  aliasesgivelevel: ["givelvl"], // Givelevel
+  ], // Give Full Level
+  aliasesgivelevel: ["givelvl"], // Give Level
   aliaseslevel: ["lvl"], // Level
-  aliaseslevelstats: ["levelstats", "levelstat", "lvlstat", "lvlstats"], // levelstatistics
-  aliasesminusexperience: ["minusexp", "minusxp", "minxp", "minexp"], // Minusexperience
+  aliaseslevelstats: ["levelstats", "levelstat", "lvlstat", "lvlstats"], // Level Statistics
+  aliasesminusexperience: ["minusexp", "minusxp", "minxp", "minexp"], // Minus Experience
   aliasesminusfulllevel: [
     "minuslvlxp",
     "minusxplvl",
@@ -351,42 +351,43 @@ exports.aliases = {
     "minexplvl",
     "minlvlexp",
     "minusfullevel",
-  ], // Minuslevelandexperience
-  aliasesminuslevel: ["minuslvl", "minlvl"], // Minuslevel
-  aliasessetexperience: ["setxp", "setexp"], // Setexperience
-  aliasessetfulllevel: ["setlvlexp", "setlvlxp", "setfullevel"], // Setlevelandexperience
-  aliasessetlevel: ["setlvl"], // Setlevel
+  ], // Minus Full Level
+  aliasesminuslevel: ["minuslvl", "minlvl"], // Minus Level
+  aliasessetexperience: ["setxp", "setexp"], // Set Experience
+  aliasessetfulllevel: ["setlvlexp", "setlvlxp", "setfullevel"], // Set Full Level
+  aliasessetlevel: ["setlvl"], // Set Level
   aliasesdonate: ["dnte"], // Donate
   aliasesevent: [], // Event
   aliasesgithub: ["gh"], // Github
   aliaseshelpst1: ["support"], // Help
-  aliasesmcserver: ["mc", "mccheck", "mcserver"], // Minecraftserver
+  aliasesmcserver: ["mc", "mccheck", "mcserver"], // Minecraft Server Stats
   aliasesprofile: ["prof"], // Profile
   aliasesrules: ["rule", "rl"], // Rules
-  aliasesserverip: ["server"], // Serverip
-  aliasesbotstats: ["botstat", "botstats"], // Botstatistics
+  aliasesserverip: ["server"], // Server IP
+  aliasesbotstats: ["botstat", "botstats"], // Bot Statistics
   aliasesleave: ["musicstop", "stop"], // Leave
   aliasesplay: ["music", "song"], // Play
   aliasesskip: ["jump"], // Skip
   aliasesstop: ["terminate"], // Stop
   aliasesapply: ["form"], // Apply
   aliasesdice: ["roll"], // Dice
-  aliasesflipacoinen: ["fac", "facen"], // Flipacoin
-  aliasesflipacoinnl: ["facnl", "kopmunt", "kom"], // Kopofmunt
+  aliaseserrorcode: ["error", "errorcode", "errcode"], // Error Code
+  aliasesflipacoinen: ["fac", "facen"], // Flip A Coin
+  aliasesflipacoinnl: ["facnl", "kopmunt", "kom"], // Kop Of Munt
   aliaseshaversine: ["haver", "gps", "coordinates", "coords", "coord"], // Haversine
   aliasesimage: ["img"], // Image
   aliasesmath: ["math", "calc", "calculate"], // Math
-  aliasesrpsen: ["rps"], //Rock Paper Scissor
+  aliasesrpsen: ["rps"], // Rock Paper Scissor
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
   aliasessuggestions: ["suggest", "suggestion"], // Suggestions
   aliasesticket: ["tkt"], // Ticket
   aliasescirkelvergelijking: ["circle"], // Cirkel
-  aliaseshoeklijn: ["hkli"], // Hoeklijn
-  aliasespunttotlijn: ["lijntotpunt", "puntlijn", "lijnpunt"], // Punttotlijn
+  aliaseshoeklijn: ["hkli"], // Hoek Lijn
+  aliasespunttotlijn: ["lijntotpunt", "puntlijn", "lijnpunt"], // Punt Tot Lijn
   aliasessubstitutie: ["substitueren", "subst"], // Substitutie
-  aliasestitreernormaal: ["titnorm", "titnormaal"], // Titratienormaal
-  aliasestitreerverdunning: ["titverdun", "titverdunning"], // Titratieverdunning
+  aliasestitreernormaal: ["titnorm", "titnormaal"], // Titratie Normaal
+  aliasestitreerverdunning: ["titverdun", "titverdunning"], // Titratie Verdunning
 };
 
 const A = 84000; // Daily
@@ -458,6 +459,7 @@ exports.cooldown = {
   cooldownmusic: C, // All music cmds
   cooldownapply: E,
   cooldowndice: G,
+  cooldownerrorcode: G,
   cooldownflipacoinen: H,
   cooldownflipacoinnl: H,
   cooldownhaversine: G,
@@ -540,6 +542,7 @@ exports.permissions = {
   permissionmusic: J, // All music cmds
   permissionapply: J,
   permissiondice: J,
+  permissionerrorcode: J,
   permissionflipacoinen: J,
   permissionflipacoinnl: J,
   permissionhaversine: J,

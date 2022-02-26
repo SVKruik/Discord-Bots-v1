@@ -7,13 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowngivebank,
   permissions: config.permissions.permissiongivebank,
   description: "Increase the balance of a member.",
-  async execute(message, args, cmd, client, discord, profileData) {
-    if (args[2] === "delete") {
-      message.delete();
-    } else if (args[2] === "del" || args[2] === "d") {
-      message.delete();
-    }
-
+  async execute(message, args, cmd, client, discord, profileData) {    
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };

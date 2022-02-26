@@ -7,12 +7,6 @@ module.exports = {
   permissions: config.permissions.permissiondonate,
   description: "Support our project by donating to us.",
   execute(message, args, cmd, client, Discord) {
-    if (args[2] === "delete") {
-      message.delete();
-    } else if (args[2] === "del" || args[2] === "d") {
-      message.delete();
-    }
-    
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titledonate)
@@ -31,6 +25,56 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
-    message.channel.send(newEmbed);
+    const flagmessage = newEmbed
+    const flags = ["everyone", "here", "delete"];
+
+    if (!args[0]) {
+      message.channel.send(flagmessage) // Send base message
+    }
+
+    if (args[2] === "everyone" || "here") {
+      return message.channel.send(`You cannot use group tags as your third argument. Please use argument 1 or 2.`)
+    } else {
+
+      if (args[0] === "everyone") {
+        if (args[1] === "here") {
+          return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
+        } else if (args[0] || args[2] === "delete") {
+          message.delete();
+          message.channel.send(`@everyone ${flagmessage}`)
+        } else {
+          message.channel.send(`@everyone ${flagmessage}`)
+        }
+      } else if (args[1] === "everyone") {
+        if (args[0] === "here") {
+          return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
+        } else if (args[0] || args[2] === "delete") {
+          message.delete();
+          message.channel.send(`@everyone ${flagmessage}`)
+        } else {
+          message.channel.send(`@everyone ${flagmessage}`)
+        }
+      }
+
+      if (args[0] === "here") {
+        if (args[1] === "everyone") {
+          return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
+        } else if (args[1] || args[2] === "delete") {
+          message.delete();
+          message.channel.send(`@here ${flagmessage}`)
+        } else {
+          message.channel.send(`@here ${flagmessage}`)
+        }
+      } else if (args[1] === "here") {
+        if (args[0] === "everyone") {
+          return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
+        } else if (args[0] || args[2] === "delete") {
+          message.delete();
+          message.channel.send(`@here ${flagmessage}`)
+        } else {
+          message.channel.send(`@here ${flagmessage}`)
+        }
+      }
+    }
   },
 };

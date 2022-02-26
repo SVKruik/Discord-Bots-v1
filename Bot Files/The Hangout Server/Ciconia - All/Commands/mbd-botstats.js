@@ -7,21 +7,13 @@ module.exports = {
   permissions: config.permissions.permissionbotstats,
   description: "Displays all stats of the bot.",
   async execute(message, args, cmd, client, Discord, profileData) {
-    const version = require("../package.json").version;
+    const fs = require("fs");
+    const commands = fs.readdirSync("./Commands").length;
 
     const days = Math.floor(client.uptime / 86400000);
     const hours = Math.floor(client.uptime / 3600000) % 24;
     const minutes = Math.floor(client.uptime / 60000) % 60;
     const seconds = Math.floor(client.uptime / 1000) % 60;
-
-    const fs = require("fs");
-    const commands = fs.readdirSync("./Commands").length;
-
-    if (args[2] === "delete") {
-      message.delete();
-    } else if (args[2] === "del" || args[2] === "d") {
-      message.delete();
-    }
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)

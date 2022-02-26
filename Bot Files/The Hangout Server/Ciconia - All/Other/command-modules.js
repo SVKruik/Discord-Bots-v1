@@ -1,10 +1,10 @@
-//// Module 1: Flag System
+//// Module 1.1: Flag System - Normal
 
-const test = "Flag Module Template"
+const flagmessage = "Flag Module Template"
 const flags = ["everyone", "here", "delete"];
 
 if (!args[0]) {
-  message.channel.send(test) // Send base message
+  message.channel.send(flagmessage) // Send base message
 }
 
 if (args[2] === "everyone" || "here") {
@@ -16,18 +16,18 @@ if (args[2] === "everyone" || "here") {
       return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
     } else if (args[0] || args[2] === "delete") {
       message.delete();
-      message.channel.send(`@everyone ${test}`)
+      message.channel.send(`@everyone ${flagmessage}`)
     } else {
-      message.channel.send(`@everyone ${test}`)
+      message.channel.send(`@everyone ${flagmessage}`)
     }
   } else if (args[1] === "everyone") {
     if (args[0] === "here") {
       return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
     } else if (args[0] || args[2] === "delete") {
       message.delete();
-      message.channel.send(`@everyone ${test}`)
+      message.channel.send(`@everyone ${flagmessage}`)
     } else {
-      message.channel.send(`@everyone ${test}`)
+      message.channel.send(`@everyone ${flagmessage}`)
     }
   }
 
@@ -36,18 +36,80 @@ if (args[2] === "everyone" || "here") {
       return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
     } else if (args[1] || args[2] === "delete") {
       message.delete();
-      message.channel.send(`@here ${test}`)
+      message.channel.send(`@here ${flagmessage}`)
     } else {
-      message.channel.send(`@here ${test}`)
+      message.channel.send(`@here ${flagmessage}`)
     }
   } else if (args[1] === "here") {
     if (args[0] === "everyone") {
       return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
     } else if (args[0] || args[2] === "delete") {
       message.delete();
-      message.channel.send(`@here ${test}`)
+      message.channel.send(`@here ${flagmessage}`)
     } else {
-      message.channel.send(`@here ${test}`)
+      message.channel.send(`@here ${flagmessage}`)
+    }
+  }
+}
+
+//// Module 1.2: Flag System - Embeds
+
+const flagmessage = "Flag Module Template"
+const flags = ["everyone", "here", "delete"];
+
+if (!args[0]) {
+  message.channel.send(flagmessage) // Send base message
+}
+
+if (args[2] === "everyone" || "here") {
+  return message.channel.send(`You cannot use group tags as your third argument. Please use argument 1 or 2.`)
+} else {
+
+  if (args[0] === "everyone") {
+    if (args[1] === "here") {
+      return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
+    } else if (args[0] || args[2] === "delete") {
+      message.delete();
+      message.channel.send(`@everyone`)
+      message.channel.send(`${flagmessage}`)
+    } else {
+      message.channel.send(`@everyone`)
+      message.channel.send(`${flagmessage}`)
+    }
+  } else if (args[1] === "everyone") {
+    if (args[0] === "here") {
+      return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
+    } else if (args[0] || args[2] === "delete") {
+      message.delete();
+      message.channel.send(`@everyone`)
+      message.channel.send(`${flagmessage}`)
+    } else {
+      message.channel.send(`@everyone`)
+      message.channel.send(`${flagmessage}`)
+    }
+  }
+
+  if (args[0] === "here") {
+    if (args[1] === "everyone") {
+      return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
+    } else if (args[1] || args[2] === "delete") {
+      message.delete();
+      message.channel.send(`@here`)
+      message.channel.send(`${flagmessage}`)
+    } else {
+      message.channel.send(`@here`)
+      message.channel.send(`${flagmessage}`)
+    }
+  } else if (args[1] === "here") {
+    if (args[0] === "everyone") {
+      return message.channel.send(`You cannot tag both \`everyone\` and \`here\`.`)
+    } else if (args[0] || args[2] === "delete") {
+      message.delete();
+      message.channel.send(`@here`)
+      message.channel.send(`${flagmessage}`)
+    } else {
+      message.channel.send(`@here`)
+      message.channel.send(`${flagmessage}`)
     }
   }
 }

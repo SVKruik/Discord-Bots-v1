@@ -7,9 +7,9 @@ module.exports = {
   permissions: config.permissions.permissionping,
   description: "This silences spamming or naughty people. Can only read stuff.",
   execute(message, args, cmd, client, Discord) {
-    if (args[2] === "delete") {
+    if (args[1] === "delete") {
       message.delete();
-    } else if (args[2] === "del" || args[2] === "d") {
+    } else if (args[1] === "del" || args[2] === "d") {
       message.delete();
     }
 

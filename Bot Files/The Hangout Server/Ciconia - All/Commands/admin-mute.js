@@ -29,12 +29,6 @@ module.exports = {
         )}.`
       );
 
-      if (args[2] === "delete") {
-        message.delete();
-      } else if (args[2] === "del" || args[2] === "d") {
-        message.delete();
-      }
-
       setTimeout(function () {
         memberTarget.roles.remove(muteRole);
         message.channel.send(`<@${memberTarget.user.id}> has been automatically unmuted. You can speak again!`);
