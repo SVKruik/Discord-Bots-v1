@@ -26,7 +26,7 @@ module.exports = {
         },
         {
           $set: {
-            coins: amount,
+            wallet: amount,
           },
         }
       );

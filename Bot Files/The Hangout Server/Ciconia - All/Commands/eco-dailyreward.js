@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         $inc: {
-          coins: randomNumber,
+          wallet: randomNumber,
         },
       }
     );

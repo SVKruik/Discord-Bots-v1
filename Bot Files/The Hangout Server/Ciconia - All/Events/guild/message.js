@@ -20,16 +20,26 @@ module.exports = async (Discord, client, message) => {
   try {
     profileData = await profileModel.findOne({ userID: message.author.id });
     if (!profileData) {
+      const tagfull = message.author.tag
+      const tag = tagfull.substr(-4);
       let profile = await profileModel.create({
         userID: message.author.id,
         serverID: message.guild.id,
         name: message.author.username,
+        tag: tag,
 
-        coins: 0,
+        wallet: 0,
         bank: 0,
 
         level: 0,
         experience: 0,
+
+        music1: "https://www.youtube.com/",
+        music2: "https://www.youtube.com/",
+        music3: "https://www.youtube.com/",
+        music4: "https://www.youtube.com/",
+        music5: "https://www.youtube.com/",
+        music6: "https://www.youtube.com/",
       });
       profile.save();
     }

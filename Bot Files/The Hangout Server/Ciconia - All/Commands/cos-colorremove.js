@@ -641,14 +641,14 @@ module.exports = {
     if (args[0] === "all" || "clear" || "full") {
       try {
         const coinsback = amountroles * 50
-        const newbal = profileData.coins + coinsback
+        const newbal = profileData.wallet + coinsback
         await profileModel.findOneAndUpdate(
           {
             userID: message.author.id,
           },
           {
             $inc: {
-              coins: coinsback,
+              wallet: coinsback,
             },
           }
         );
@@ -663,14 +663,14 @@ module.exports = {
       }
     } else if (args[0] >= 1 && args[0] <= 205) {
       try {
-        const newbal = profileData.coins + coinsback
+        const newbal = profileData.wallet + coinsback
         await profileModel.findOneAndUpdate(
           {
             userID: message.author.id,
           },
           {
             $inc: {
-              coins: 50,
+              wallet: 50,
             },
           }
         );

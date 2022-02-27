@@ -88,7 +88,7 @@ module.exports = {
         },
         {
           $inc: {
-            coins: earnings,
+            wallet: earnings,
           },
         }
       );

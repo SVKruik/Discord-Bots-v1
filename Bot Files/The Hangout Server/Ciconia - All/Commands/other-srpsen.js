@@ -44,13 +44,13 @@ module.exports = {
           },
           {
             $inc: {
-              coins: stake * 1.1,
+              wallet: stake * 1.1,
             },
           }
         );
 
         const profit = stake * 2;
-        const newbal = profileData.coins + profit;
+        const newbal = profileData.wallet + profit;
         return message.channel.send(
           `You win! You received a small increase on your stake. Your stake was \`${args[1]}\`, your new balance is \`${newbal}\`.`
         );

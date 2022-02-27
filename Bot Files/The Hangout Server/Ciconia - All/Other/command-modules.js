@@ -340,8 +340,8 @@ channel.send("Message")
 
 if (args[0] === "test") {
   try {
-    const newbal = profileData.coins - test
-    if (test > profileData.coins)
+    const newbal = profileData.wallet - test
+    if (test > profileData.wallet)
       return message.channel.send(config.basemessages.messagescoinsmissing);
     await profileModel.findOneAndUpdate(
       {
@@ -349,13 +349,13 @@ if (args[0] === "test") {
       },
       {
         $inc: {
-          coins: -test,
+          wallet: -test,
           bank: coinsback,
         },
       }
     );
     if (amountroles === 1) {
-      message.channel.send(`Message \`${profileData.coins}\`.`)
+      message.channel.send(`Message \`${profileData.wallet}\`.`)
     }
   } catch (err) {
     console.log(err);

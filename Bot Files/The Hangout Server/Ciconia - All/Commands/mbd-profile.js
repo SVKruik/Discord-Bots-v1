@@ -22,7 +22,7 @@ module.exports = {
         { name: config.embeds.nameprofile4, value: `${profileData.userID}` },
         { name: config.embeds.nameprofile5, value: `${profileData.serverID}` },
         { name: config.embeds.nameprofile6, value: "> **Economy:**" },
-        { name: config.embeds.nameprofile7, value: `${profileData.coins}` },
+        { name: config.embeds.nameprofile7, value: `${profileData.wallet}` },
         { name: config.embeds.nameprofile8, value: `${profileData.bank}` },
         { name: config.embeds.nameprofile9, value: "> **Level:**" },
         { name: config.embeds.nameprofile10, value: `${profileData.level}` },

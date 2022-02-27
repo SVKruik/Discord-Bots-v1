@@ -687,8 +687,8 @@ module.exports = {
         if (args[0] === "68" || "69" || "70" || "71" || "72" || "73" || "79" || "93") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - metallic
-                if (metallic > profileData.coins)
+                const newbal = profileData.wallet - metallic
+                if (metallic > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -696,7 +696,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -metallic,
+                            wallet: -metallic,
                             bank: coinsback,
                         },
                     }
@@ -713,8 +713,8 @@ module.exports = {
         } else if (args[0] === "9" || "23" || "56" || "83" || "97" || "100" || "103" || "119" || "122" || "123" || "124" || "128" || "129" || "130" || "133" || "134" || "137" || "138" || "141" || "142" || "144" || "145" || "146" || "147" || "148" || "149" || "150" || "151" || "152" || "153" || "154" || "155" || "157" || "158" || "159" || "160" || "161" || "162" || "163" || "167" || "168" || "169" || "170" || "171" || "173" || "179" || "181" || "182" || "186" || "188" || "191" || "192" || "194" || "195" || "196" || "204") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - exotic
-                if (exotic > profileData.coins)
+                const newbal = profileData.wallet - exotic
+                if (exotic > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -722,7 +722,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -exotic,
+                            wallet: -exotic,
                             bank: coinsback,
                         },
                     }
@@ -739,8 +739,8 @@ module.exports = {
         } else if (args[0] === "59" || "60" || "180") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - plusexotic
-                if (plusexotic > profileData.coins)
+                const newbal = profileData.wallet - plusexotic
+                if (plusexotic > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -748,7 +748,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -plusexotic,
+                            wallet: -plusexotic,
                             bank: coinsback,
                         },
                     }
@@ -765,8 +765,8 @@ module.exports = {
         } else if (args[0] === "1" || "2" || "15" || "101" || "189") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - base
-                if (base > profileData.coins)
+                const newbal = profileData.wallet - base
+                if (base > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -774,7 +774,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -base,
+                            wallet: -base,
                             bank: coinsback,
                         },
                     }
@@ -791,8 +791,8 @@ module.exports = {
         } else if (args[0] === "3" || "5" || "6" || "8") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - light
-                if (light > profileData.coins)
+                const newbal = profileData.wallet - light
+                if (light > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -800,7 +800,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -light,
+                            wallet: -light,
                             bank: coinsback,
                         },
                     }
@@ -817,8 +817,8 @@ module.exports = {
         } else if (args[0] === "11" || "18" || "34" || "35" || "44" || "46" || "47" || "51" || "63" || "88" || "99" || "112") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - medium
-                if (medium > profileData.coins)
+                const newbal = profileData.wallet - medium
+                if (medium > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -826,7 +826,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -medium,
+                            wallet: -medium,
                             bank: coinsback,
                         },
                     }
@@ -843,8 +843,8 @@ module.exports = {
         } else if (args[0] === "16" || "17" || "21" || "57" || "76" || "90" || "92" || "95" || "115" || "120" || "172") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - dark
-                if (dark > profileData.coins)
+                const newbal = profileData.wallet - dark
+                if (dark > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -852,7 +852,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -dark,
+                            wallet: -dark,
                             bank: coinsback,
                         },
                     }
@@ -869,8 +869,8 @@ module.exports = {
         } else if (args[0] === "176" || "177" || "183") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - really
-                if (really > profileData.coins)
+                const newbal = profileData.wallet - really
+                if (really > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -878,7 +878,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -really,
+                            wallet: -really,
                             bank: coinsback,
                         },
                     }
@@ -895,8 +895,8 @@ module.exports = {
         } else if (args[0] === "10" || "12" || "13" || "52") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - bright
-                if (bright > profileData.coins)
+                const newbal = profileData.wallet - bright
+                if (bright > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -904,7 +904,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -bright,
+                            wallet: -bright,
                             bank: coinsback,
                         },
                     }
@@ -921,8 +921,8 @@ module.exports = {
         } else if (args[0] === "57" || "178" || "185" || "190") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - deep
-                if (deep > profileData.coins)
+                const newbal = profileData.wallet - deep
+                if (deep > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -930,7 +930,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -deep,
+                            wallet: -deep,
                             bank: coinsback,
                         },
                     }
@@ -947,8 +947,8 @@ module.exports = {
         } else if (args[0] === "24" || "25" || "26" || "27" || "29" || "30" || "31" || "43" || "45" || "55" || "67" || "77" || "78") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - tr
-                if (tr > profileData.coins)
+                const newbal = profileData.wallet - tr
+                if (tr > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -956,7 +956,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -tr,
+                            wallet: -tr,
                             bank: coinsback,
                         },
                     }
@@ -973,8 +973,8 @@ module.exports = {
         } else if (args[0] === "7" || "197" || "198" || "199" || "200" || "201" || "202" || "203") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - pastel
-                if (pastel > profileData.coins)
+                const newbal = profileData.wallet - pastel
+                if (pastel > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -982,7 +982,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -pastel,
+                            wallet: -pastel,
                             bank: coinsback,
                         },
                     }
@@ -999,8 +999,8 @@ module.exports = {
         } else if (args[0] === "14" || "41" || "65" || "66") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - earth
-                if (earth > profileData.coins)
+                const newbal = profileData.wallet - earth
+                if (earth > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -1008,7 +1008,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -earth,
+                            wallet: -earth,
                             bank: coinsback,
                         },
                     }
@@ -1025,8 +1025,8 @@ module.exports = {
         } else if (args[0] === "61" || "62" || "64" || "74" || "75") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - sand
-                if (sand > profileData.coins)
+                const newbal = profileData.wallet - sand
+                if (sand > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -1034,7 +1034,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -sand,
+                            wallet: -sand,
                             bank: coinsback,
                         },
                     }
@@ -1051,8 +1051,8 @@ module.exports = {
         } else if (args[0] === "86" || "87" || "102") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - reddish
-                if (reddish > profileData.coins)
+                const newbal = profileData.wallet - reddish
+                if (reddish > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -1060,7 +1060,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -reddish,
+                            wallet: -reddish,
                             bank: coinsback,
                         },
                     }
@@ -1077,8 +1077,8 @@ module.exports = {
         } else if (args[0] === "4" || "32" || "58" || "80" || "81" || "82" || "84" || "85" || "89" || "96" || "109" || "110" || "111" || "113" || "114" || "116" || "117" || "118" || "121" || "125" || "126" || "127" || "131" || "132" || "135" || "136" || "139" || "140" || "143" || "156" || "164" || "165" || "166" || "174" || "184" || "187" || "193" || "205") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = profileData.coins - extra
-                if (extra > profileData.coins)
+                const newbal = profileData.wallet - extra
+                if (extra > profileData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
                 await profileModel.findOneAndUpdate(
                     {
@@ -1086,7 +1086,7 @@ module.exports = {
                     },
                     {
                         $inc: {
-                            coins: -extra,
+                            wallet: -extra,
                             bank: coinsback,
                         },
                     }

@@ -8,7 +8,7 @@ module.exports = {
   permissions: config.permissions.permissionbalancewallet,
   description: "Display your wallet balance.",
   async execute(message, args, cmd, client, Discord, profileData) {
-    const flagmessage = `${message.author.username}, this is your current wallet balance : \`${profileData.coins}\`.`
+    const flagmessage = `${message.author.username}, this is your current wallet balance : \`${profileData.wallet}\`.`
     const flags = ["everyone", "here", "delete"];
     
     if (!args[0]) {

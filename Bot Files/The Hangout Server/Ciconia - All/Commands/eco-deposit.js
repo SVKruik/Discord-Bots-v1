@@ -12,7 +12,7 @@ module.exports = {
     if (amount <= 0)
       return message.channel.send(config.basemessages.messagesgreaterone);
     try {
-      if (amount > profileData.coins)
+      if (amount > profileData.wallet)
         return message.channel.send(config.basemessages.messagescoinsmissing);
       await profileModel.findOneAndUpdate(
         {
@@ -20,7 +20,7 @@ module.exports = {
         },
         {
           $inc: {
-            coins: -amount,
+            wallet: -amount,
             bank: amount,
           },
         }
