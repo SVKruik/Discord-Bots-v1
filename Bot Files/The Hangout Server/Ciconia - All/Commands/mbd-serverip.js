@@ -11,7 +11,7 @@ module.exports = {
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titleserverip)
       .setImage(config.embed.embedimage)
-      .setURL(config.embed.embedlink)
+      (config.embed.embedlink)
       .setDescription(config.embeds.descriptionserverip)
       .addFields(
         {

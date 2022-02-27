@@ -7,12 +7,11 @@ module.exports = {
   permissions: config.permissions.permissiontemplatecommand,
   description: "Embed template for devs.",
   execute(message, args, cmd, client, Discord, profileData) {
-
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titleembedtemplate)
       .setImage(config.embed.embedimage)
-      .setURL(config.embed.embedlink)
+      (config.embed.embedlink)
       .setDescription(config.embeds.descriptionembedtemplate)
       .addFields(
         {

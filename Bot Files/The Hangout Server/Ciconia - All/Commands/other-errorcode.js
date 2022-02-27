@@ -43,7 +43,7 @@ module.exports = {
       .setColor(config.base.basecolor)
       .setTitle("Error Code Check")
       .setImage(config.embed.embedimage)
-      .setURL(config.embed.embedlink)
+      (config.embed.embedlink)
       .setDescription("See what error code means what.")
       .addFields(
         {
