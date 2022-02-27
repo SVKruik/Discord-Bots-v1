@@ -708,6 +708,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "9" || "23" || "56" || "83" || "97" || "100" || "103" || "119" || "122" || "123" || "124" || "128" || "129" || "130" || "133" || "134" || "137" || "138" || "141" || "142" || "144" || "145" || "146" || "147" || "148" || "149" || "150" || "151" || "152" || "153" || "154" || "155" || "157" || "158" || "159" || "160" || "161" || "162" || "163" || "167" || "168" || "169" || "170" || "171" || "173" || "179" || "181" || "182" || "186" || "188" || "191" || "192" || "194" || "195" || "196" || "204") {
             try {
@@ -733,6 +734,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "59" || "60" || "180") {
             try {
@@ -758,6 +760,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "1" || "2" || "15" || "101" || "189") {
             try {
@@ -783,6 +786,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "3" || "5" || "6" || "8") {
             try {
@@ -808,6 +812,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "11" || "18" || "34" || "35" || "44" || "46" || "47" || "51" || "63" || "88" || "99" || "112") {
             try {
@@ -833,6 +838,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "16" || "17" || "21" || "57" || "76" || "90" || "92" || "95" || "115" || "120" || "172") {
             try {
@@ -858,6 +864,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "176" || "177" || "183") {
             try {
@@ -883,6 +890,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "10" || "12" || "13" || "52") {
             try {
@@ -908,6 +916,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "57" || "178" || "185" || "190") {
             try {
@@ -933,6 +942,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "24" || "25" || "26" || "27" || "29" || "30" || "31" || "43" || "45" || "55" || "67" || "77" || "78") {
             try {
@@ -958,6 +968,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "7" || "197" || "198" || "199" || "200" || "201" || "202" || "203") {
             try {
@@ -983,6 +994,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "14" || "41" || "65" || "66") {
             try {
@@ -1008,6 +1020,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "61" || "62" || "64" || "74" || "75") {
             try {
@@ -1033,6 +1046,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "86" || "87" || "102") {
             try {
@@ -1058,6 +1072,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         } else if (args[0] === "4" || "32" || "58" || "80" || "81" || "82" || "84" || "85" || "89" || "96" || "109" || "110" || "111" || "113" || "114" || "116" || "117" || "118" || "121" || "125" || "126" || "127" || "131" || "132" || "135" || "136" || "139" || "140" || "143" || "156" || "164" || "165" || "166" || "174" || "184" || "187" || "193" || "205") {
             try {
@@ -1083,6 +1098,7 @@ module.exports = {
                 }
             } catch (err) {
                 console.log(err);
+                message.channel.send(`Error executing command. EC: ${config.errorcodes.two}`)
             }
         }
 

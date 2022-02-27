@@ -28,7 +28,6 @@ module.exports = {
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlehelp)
       .setImage(config.embed.embedimage)
-      (config.embed.embedlink)
       .setFooter(config.embed.embedfooter)
       .setDescription(
         `${config.embeds.descriptionhelp}\n\n` +

@@ -10,7 +10,6 @@ module.exports = {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlerules)
-      (config.embed.embedlink)
       .setImage(config.embed.embedimage)
       .setDescription(config.embeds.descriptionrules)
       .addFields(

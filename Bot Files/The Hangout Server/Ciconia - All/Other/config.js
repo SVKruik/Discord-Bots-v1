@@ -71,21 +71,37 @@ exports.embed = {
 };
 
 exports.errorcodes = {
-  one: "3951",
-  two: "4182",
-  three: "5382",
-  four: "1432",
-  five: "8931",
-  six: "5671",
-  seven: "3120",
-  eight: "7329",
-  nine: "2371",
-  ten: "0",
-  eleven: "0",
-  twelve: "0",
-  thirteen: "0",
-  fourteen: "0",
-  fifteen: "0",
+  err1: "3951",
+  err2: "4182",
+  err3: "5382",
+  err4: "1432",
+  err5: "8931",
+  err6: "5671",
+  err7: "3120",
+  err8: "7329",
+  err9: "2371",
+  err10: "",
+  err11: "",
+  err12: "",
+  err13: "",
+  err14: "",
+  err15: "",
+
+  info1: `A fatal bug in the code. Contact any bot developers if you see this.`,
+  info2: `A problem with the database. This probably affects all level and economy commands.`,
+  info3: `An error with generating the reaction emoji's.`,
+  info4: `A problem with generating a channel. This can happen with the command \`ticket\`.`,
+  info5: `An error with generating an user account in our database. This error can only occur when someone joins the Discord server, since it will auto-generate an account.`,
+  info6: `A problem with adding XP to your account when sending a messsage.`,
+  info7: `A problem whilst connecting to your voice channel. This error can only occur with the music bot, since only with that command the bot will join the voice channel.`,
+  info8: `An error with collecting information about a minecraft server. This error can only occur with the command \`$mcserver\`.`,
+  info9: `An error with refunding your coins.`,
+  info10: ``,
+  info11: ``,
+  info12: ``,
+  info13: ``,
+  info14: ``,
+  info15: ``,
 }
 
 exports.basemessages = {
@@ -389,7 +405,7 @@ exports.aliases = {
   aliasesstop: ["terminate"], // Stop
   aliasesapply: ["form"], // Apply
   aliasesdice: ["roll"], // Dice
-  aliaseserrorcode: ["error", "errorcode", "errcode"], // Error Code
+  aliaseserrorcode: ["error", "errorcode", "errcode", "err", "errorcodes", "errcheck", "errorcheck", "errorcodecheck", "errorcodescheck"], // Error Code
   aliasesflipacoinen: ["fac", "facen"], // Flip A Coin
   aliasesflipacoinnl: ["facnl", "kopmunt", "kom"], // Kop Of Munt
   aliaseshaversine: ["haver", "gps", "coordinates", "coords", "coord"], // Haversine

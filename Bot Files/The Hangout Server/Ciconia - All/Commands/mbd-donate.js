@@ -11,7 +11,6 @@ module.exports = {
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titledonate)
       .setImage(config.embed.embedimage)
-      (config.embed.embedlink)
       .setDescription(config.embeds.descriptiondonate)
       .addFields(
         {

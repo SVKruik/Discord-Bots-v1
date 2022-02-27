@@ -21,7 +21,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
           .setColor(config.base.basecolor)
           .setTitle(config.embeds.titlemcserver)
-          (config.embed.embedlink)
+          
           .setImage(config.embed.embedimage)
           .setDescription(config.embeds.descriptionmcserver)
           .addFields(

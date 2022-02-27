@@ -7,43 +7,42 @@ module.exports = {
   permissions: config.permissions.permissionerrorcode,
   description: "See what error code means what.",
   execute(message, args, cmd, client, Discord, profileData) {
-    const err1 = config.errorcodes.one
-    const err2 = config.errorcodes.two
-    const err3 = config.errorcodes.three
-    const err4 = config.errorcodes.four
-    const err5 = config.errorcodes.five
-    const err6 = config.errorcodes.six
-    const err7 = config.errorcodes.seven
-    const err8 = config.errorcodes.eight
-    const err9 = config.errorcodes.nine
-    const err10 = config.errorcodes.ten
-    const err11 = config.errorcodes.eleven
-    const err12 = config.errorcodes.twelve
-    const err13 = config.errorcodes.thirteen
-    const err14 = config.errorcodes.fourteen
-    const err15 = config.errorcodes.fifteen
+    const err1 = config.errorcodes.err1
+    const err2 = config.errorcodes.err2
+    const err3 = config.errorcodes.err3
+    const err4 = config.errorcodes.err4
+    const err5 = config.errorcodes.err5
+    const err6 = config.errorcodes.err6
+    const err7 = config.errorcodes.err7
+    const err8 = config.errorcodes.err8
+    const err9 = config.errorcodes.err9
+    const err10 = config.errorcodes.err10
+    const err11 = config.errorcodes.err11
+    const err12 = config.errorcodes.err12
+    const err13 = config.errorcodes.err13
+    const err14 = config.errorcodes.err14
+    const err15 = config.errorcodes.err15
 
-    const info1 = `A fatal bug in the code. Contact any bot developers if you see this.`
-    const info2 = `A problem with the database. This probably affects all level and economy commands.`
-    const info3 = `An error with generating the reaction emoji's.`
-    const info4 = `A problem with generating a channel. This can happen with the command \`ticket\`.`
-    const info5 = `An error with generating an user account in our database. This error can only occur when someone joins the Discord server, since it will auto-generate an account.`
-    const info6 = `A problem with adding XP to your account when sending a messsage.`
-    const info7 = `A problem whilst connecting to your voice channel. This error can only occur with the music bot, since only with that command the bot will join the voice channel.`
-    const info8 = `An error with collecting information about a minecraft server. This error can only occur with the command \`${process.env.PREFIX}mcserver\`.`
-    const info9 = `An error with refunding your coins.`
-    const info10 = ``
-    const info11 = ``
-    const info12 = ``
-    const info13 = ``
-    const info14 = ``
-    const info15 = ``
+    const info1 = config.errorcodes.info1
+    const info2 = config.errorcodes.info2
+    const info3 = config.errorcodes.info3
+    const info4 = config.errorcodes.info4
+    const info5 = config.errorcodes.info5
+    const info6 = config.errorcodes.info6
+    const info7 = config.errorcodes.info7
+    const info8 = config.errorcodes.info8
+    const info9 = config.errorcodes.info9
+    const info10 = config.errorcodes.info10
+    const info11 = config.errorcodes.info11
+    const info12 = config.errorcodes.info12
+    const info13 = config.errorcodes.info13
+    const info14 = config.errorcodes.info14
+    const info15 = config.errorcodes.info15
 
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle("Error Code Check")
       .setImage(config.embed.embedimage)
-      (config.embed.embedlink)
       .setDescription("See what error code means what.")
       .addFields(
         {

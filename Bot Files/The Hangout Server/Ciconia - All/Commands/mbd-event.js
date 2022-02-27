@@ -38,7 +38,6 @@ module.exports = {
       .setColor(config.base.basecolor)
       .setFooter(config.embed.embedfooter)
       .setImage(config.embed.embedimage)
-      (config.embed.embedlink)
       .setTitle(config.embeds.titleevent)
       .setDescription(
         `${config.embeds.descriptionevent}\n\n` +
