@@ -26,9 +26,79 @@ module.exports = {
         }
       );
 
-      return message.channel.send(
-        `You deposited \`${amount}\` coins into your bank account.`
-      );
+      const flagmessage = `You deposited \`${amount}\` coins into your bank account.`
+      const flags = ["everyone", "here", "delete"];
+
+      if (!args[1]) {
+        message.channel.send(flagmessage)
+      }
+
+      if (args[1] === "delete") {
+        if (!args[2]) {
+          if (!args[3]) {
+            message.delete();
+            message.channel.send(flagmessage)
+          }
+        }
+      } else if (args[2] === "delete") {
+        if (!args[1]) {
+          if (!args[3]) {
+            message.delete();
+            message.channel.send(flagmessage)
+          }
+        }
+      } else if (args[3] === "delete") {
+        if (!args[1]) {
+          if (!args[2]) {
+            message.delete();
+            message.channel.send(flagmessage)
+          }
+        }
+      }
+
+      if (args[1] === "everyone") {
+        if (args[2] === "here") {
+          return message.channel.send(`You cannot use both group tags at the same time.`)
+        } else if (args[2] || args[3] === "delete") {
+          message.delete();
+          message.channel.send(`@everyone ${flagmessage}`)
+        } else {
+          message.channel.send(`@everyone ${flagmessage}`)
+        }
+      } else if (args[2] === "everyone") {
+        if (args[1] === "here") {
+          return message.channel.send(`You cannot use both group tags at the same time.`)
+        } else if (args[1] || args[3] === "delete") {
+          message.delete();
+          message.channel.send(`@everyone ${flagmessage}`)
+        } else {
+          message.channel.send(`@everyone ${flagmessage}`)
+        }
+      } else if (args[3] === "everyone") {
+        return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
+      }
+
+      if (args[1] === "here") {
+        if (args[2] === "everyone") {
+          return message.channel.send(`You cannot use both group tags at the same time.`)
+        } else if (args[2] || args[3] === "delete") {
+          message.delete();
+          message.channel.send(`@here ${flagmessage}`)
+        } else {
+          message.channel.send(`@here ${flagmessage}`)
+        }
+      } else if (args[2] === "here") {
+        if (args[1] === "everyone") {
+          return message.channel.send(`You cannot use both group tags at the same time.`)
+        } else if (args[1] || args[3] === "delete") {
+          message.delete();
+          message.channel.send(`@here ${flagmessage}`)
+        } else {
+          message.channel.send(`@here ${flagmessage}`)
+        }
+      } else if (args[3] === "here") {
+        return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
+      }
     } catch (err) {
       console.log(err);
     }

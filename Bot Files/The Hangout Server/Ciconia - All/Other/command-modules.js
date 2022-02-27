@@ -29,7 +29,6 @@ if (args[0] === "delete") {
   }
 }
 
-// Flag 1: Everyone
 if (args[0] === "everyone") {
   if (args[1] === "here") {
     return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -49,10 +48,9 @@ if (args[0] === "everyone") {
     message.channel.send(`@everyone ${flagmessage}`)
   }
 } else if (args[2] === "everyone") {
-  return message.channel.send(`You cannot use group tags as your third argument. Please use flag \`1\` or \`2\`.`)
+  return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
 }
 
-// Flag 2: Here
 if (args[0] === "here") {
   if (args[1] === "everyone") {
     return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -72,7 +70,7 @@ if (args[0] === "here") {
     message.channel.send(`@here ${flagmessage}`)
   }
 } else if (args[2] === "here") {
-  return message.channel.send(`You cannot use group tags as your third argument. Please use flag \`1\` or \`2\`.`)
+  return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
 }
 
 //// Module 1.2: Flag System - Embeds
@@ -107,7 +105,6 @@ if (args[0] === "delete") {
   }
 }
 
-// Flag 1: Everyone
 if (args[0] === "everyone") {
   if (args[1] === "here") {
     return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -131,10 +128,9 @@ if (args[0] === "everyone") {
     message.channel.send(newEmbed)
   }
 } else if (args[2] === "everyone") {
-  return message.channel.send(`You cannot use group tags as your third argument. Please use flag \`1\` or \`2\`.`)
+  return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
 }
 
-// Flag 2: Here
 if (args[0] === "here") {
   if (args[1] === "everyone") {
     return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -158,7 +154,159 @@ if (args[0] === "here") {
     message.channel.send(newEmbed)
   }
 } else if (args[2] === "here") {
-  return message.channel.send(`You cannot use group tags as your third argument. Please use flag \`1\` or \`2\`.`)
+  return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
+}
+
+//// Module 1.3: Flag System - Admin DB Edit (args[0/1])
+
+const flagmessage = `The targeted member has`
+const flags = ["everyone", "here", "delete"];
+
+if (!args[2]) {
+  message.channel.send(flagmessage)
+}
+
+if (args[2] === "delete") {
+  if (!args[3]) {
+    if (!args[4]) {
+      message.delete();
+      message.channel.send(flagmessage)
+    }
+  }
+} else if (args[3] === "delete") {
+  if (!args[2]) {
+    if (!args[4]) {
+      message.delete();
+      message.channel.send(flagmessage)
+    }
+  }
+} else if (args[4] === "delete") {
+  if (!args[2]) {
+    if (!args[3]) {
+      message.delete();
+      message.channel.send(flagmessage)
+    }
+  }
+}
+
+if (args[2] === "everyone") {
+  if (args[3] === "here") {
+    return message.channel.send(`You cannot use both group tags at the same time.`)
+  } else if (args[3] || args[4] === "delete") {
+    message.delete();
+    message.channel.send(`@everyone ${flagmessage}`)
+  } else {
+    message.channel.send(`@everyone ${flagmessage}`)
+  }
+} else if (args[3] === "everyone") {
+  if (args[2] === "here") {
+    return message.channel.send(`You cannot use both group tags at the same time.`)
+  } else if (args[2] || args[4] === "delete") {
+    message.delete();
+    message.channel.send(`@everyone ${flagmessage}`)
+  } else {
+    message.channel.send(`@everyone ${flagmessage}`)
+  }
+} else if (args[4] === "everyone") {
+  return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
+}
+
+if (args[2] === "here") {
+  if (args[3] === "everyone") {
+    return message.channel.send(`You cannot use both group tags at the same time.`)
+  } else if (args[3] || args[4] === "delete") {
+    message.delete();
+    message.channel.send(`@here ${flagmessage}`)
+  } else {
+    message.channel.send(`@here ${flagmessage}`)
+  }
+} else if (args[3] === "here") {
+  if (args[2] === "everyone") {
+    return message.channel.send(`You cannot use both group tags at the same time.`)
+  } else if (args[2] || args[4] === "delete") {
+    message.delete();
+    message.channel.send(`@here ${flagmessage}`)
+  } else {
+    message.channel.send(`@here ${flagmessage}`)
+  }
+} else if (args[4] === "here") {
+  return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
+}
+
+//// Module 1.4: Flag System - Member DB Edit (args[0])
+
+const flagmessage = `The targeted member has been given \`${amount}\` amount of coins.`
+const flags = ["everyone", "here", "delete"];
+
+if (!args[1]) {
+  message.channel.send(flagmessage)
+}
+
+if (args[1] === "delete") {
+  if (!args[2]) {
+    if (!args[3]) {
+      message.delete();
+      message.channel.send(flagmessage)
+    }
+  }
+} else if (args[2] === "delete") {
+  if (!args[1]) {
+    if (!args[3]) {
+      message.delete();
+      message.channel.send(flagmessage)
+    }
+  }
+} else if (args[3] === "delete") {
+  if (!args[1]) {
+    if (!args[2]) {
+      message.delete();
+      message.channel.send(flagmessage)
+    }
+  }
+}
+
+if (args[1] === "everyone") {
+  if (args[2] === "here") {
+    return message.channel.send(`You cannot use both group tags at the same time.`)
+  } else if (args[2] || args[3] === "delete") {
+    message.delete();
+    message.channel.send(`@everyone ${flagmessage}`)
+  } else {
+    message.channel.send(`@everyone ${flagmessage}`)
+  }
+} else if (args[2] === "everyone") {
+  if (args[1] === "here") {
+    return message.channel.send(`You cannot use both group tags at the same time.`)
+  } else if (args[1] || args[3] === "delete") {
+    message.delete();
+    message.channel.send(`@everyone ${flagmessage}`)
+  } else {
+    message.channel.send(`@everyone ${flagmessage}`)
+  }
+} else if (args[3] === "everyone") {
+  return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
+}
+
+if (args[1] === "here") {
+  if (args[2] === "everyone") {
+    return message.channel.send(`You cannot use both group tags at the same time.`)
+  } else if (args[2] || args[3] === "delete") {
+    message.delete();
+    message.channel.send(`@here ${flagmessage}`)
+  } else {
+    message.channel.send(`@here ${flagmessage}`)
+  }
+} else if (args[2] === "here") {
+  if (args[1] === "everyone") {
+    return message.channel.send(`You cannot use both group tags at the same time.`)
+  } else if (args[1] || args[3] === "delete") {
+    message.delete();
+    message.channel.send(`@here ${flagmessage}`)
+  } else {
+    message.channel.send(`@here ${flagmessage}`)
+  }
+} else if (args[3] === "here") {
+  return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
 }
 
 //// Module 2: Channel Specific Commands

@@ -66,7 +66,6 @@ module.exports = {
       }
     }
 
-    // Flag 1: Everyone
     if (args[0] === "everyone") {
       if (args[1] === "here") {
         return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -90,10 +89,9 @@ module.exports = {
         message.channel.send(newEmbed)
       }
     } else if (args[2] === "everyone") {
-      return message.channel.send(`You cannot use group tags as your third argument. Please use flag \`1\` or \`2\`.`)
+      return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
     }
 
-    // Flag 2: Here
     if (args[0] === "here") {
       if (args[1] === "everyone") {
         return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -117,7 +115,7 @@ module.exports = {
         message.channel.send(newEmbed)
       }
     } else if (args[2] === "here") {
-      return message.channel.send(`You cannot use group tags as your third argument. Please use flag \`1\` or \`2\`.`)
+      return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
     }
   },
 };
