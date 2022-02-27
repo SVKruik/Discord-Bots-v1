@@ -86,6 +86,30 @@ module.exports = {
           value: `${info9}`,
         },
         {
+          name: `> ${err10}`,
+          value: `${info10}`,
+        },
+        {
+          name: `> ${err11}`,
+          value: `${info11}`,
+        },
+        {
+          name: `> ${err12}`,
+          value: `${info12}`,
+        },
+        {
+          name: `> ${err13}`,
+          value: `${info13}`,
+        },
+        {
+          name: `> ${err14}`,
+          value: `${info14}`,
+        },
+        {
+          name: `> ${err15}`,
+          value: `${info15}`,
+        },
+        {
           name: `**-------**`,
           value: `We would really appreciate it, if you contact any of the bot developers if you encounter any of these errors. We can then get to work to fix it ASAP.`,
         }

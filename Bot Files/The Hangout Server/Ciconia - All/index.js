@@ -7,6 +7,7 @@ const config = require('./Other/config.js');
 const mongoose = require("mongoose");
 const { version } = require("os");
 const memberCounter = require("./Counters/member-counter");
+const { channel } = require("diagnostics_channel");
 require("dotenv").config();
 const client = new Discord.Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],

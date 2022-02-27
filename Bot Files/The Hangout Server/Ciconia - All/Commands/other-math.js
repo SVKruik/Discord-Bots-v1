@@ -28,6 +28,7 @@ module.exports = {
 
       message.channel.send(newEmbed);
     } catch (err) {
+      console.log(err)
       message.channel.send("I don't understand your question.");
     }
   },

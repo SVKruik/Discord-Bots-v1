@@ -30,8 +30,8 @@ module.exports = {
       await reactionMessage.react("🔒");
       await reactionMessage.react("⛔");
     } catch (err) {
-      channel.send(config.basemessages.messageemojierr);
-      throw err;
+      console.log(err)
+      channel.send(`Error executing command. EC: \`${config.errorcodes.err3}\`.`)
     }
 
     const collector = reactionMessage.createReactionCollector(
@@ -59,7 +59,8 @@ module.exports = {
     message.channel
       .send(`${config.commandticket.commandticketpending} Your channel: ${channel}`)
       .catch((err) => {
-        throw err;
+        console.log(err)
+        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err4}\`.`)
       });
   },
 };

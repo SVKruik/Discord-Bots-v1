@@ -35,6 +35,7 @@ module.exports = async (Discord, client, message) => {
     }
   } catch (err) {
     console.log(err);
+    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
   }
 
   //Inc on message send
@@ -52,6 +53,7 @@ module.exports = async (Discord, client, message) => {
     );
   } catch (err) {
     console.log(err);
+    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err6}\`.`)
   }
 
   //Aliases
@@ -152,9 +154,7 @@ module.exports = async (Discord, client, message) => {
   try {
     command.execute(message, args, cmd, client, Discord, profileData);
   } catch (err) {
-    message.reply(
-      "There was an error trying to execute the specified command! Something ain't right. Check the console."
-    );
+    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err1}\`.`)
     console.log(err);
   }
 };

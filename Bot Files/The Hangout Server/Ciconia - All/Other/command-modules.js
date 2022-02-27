@@ -359,6 +359,7 @@ if (args[0] === "test") {
     }
   } catch (err) {
     console.log(err);
+    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
   }
 }
 
@@ -397,6 +398,6 @@ const errorcode = config.errorcodes.one
 try {
   message.channel.send("Test")
 } catch (err) {
-  message.channel.send(`Error. Code: ${errorcode}`)
   console.log(err)
+  message.channel.send(`Error executing command. EC: \`${config.errorcodes.err1}\`.`)
 }

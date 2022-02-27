@@ -21,7 +21,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
           .setColor(config.base.basecolor)
           .setTitle(config.embeds.titlemcserver)
-          
+
           .setImage(config.embed.embedimage)
           .setDescription(config.embeds.descriptionmcserver)
           .addFields(
@@ -117,9 +117,8 @@ module.exports = {
         }
       })
       .catch((error) => {
-        message.channel.send(
-          config.basemessages.messagesfinderror
-        );
+        console.log(error)
+        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err8}\`.`)
       });
   },
 };

@@ -71,6 +71,9 @@ exports.embed = {
 };
 
 exports.errorcodes = {
+  // Error message: 
+  // `Error executing command. EC: \`${config.errorcodes.err1}\`.`
+
   err1: "3951",
   err2: "4182",
   err3: "5382",
@@ -80,15 +83,15 @@ exports.errorcodes = {
   err7: "3120",
   err8: "7329",
   err9: "2371",
-  err10: "",
-  err11: "",
-  err12: "",
-  err13: "",
-  err14: "",
-  err15: "",
+  err10: "4329",
+  err11: "0",
+  err12: "0",
+  err13: "0",
+  err14: "0",
+  err15: "0",
 
   info1: `A fatal bug in the code. Contact any bot developers if you see this.`,
-  info2: `A problem with the database. This probably affects all level and economy commands.`,
+  info2: `A problem with the database. This affects all level and economy commands.`,
   info3: `An error with generating the reaction emoji's.`,
   info4: `A problem with generating a channel. This can happen with the command \`ticket\`.`,
   info5: `An error with generating an user account in our database. This error can only occur when someone joins the Discord server, since it will auto-generate an account.`,
@@ -96,12 +99,12 @@ exports.errorcodes = {
   info7: `A problem whilst connecting to your voice channel. This error can only occur with the music bot, since only with that command the bot will join the voice channel.`,
   info8: `An error with collecting information about a minecraft server. This error can only occur with the command \`$mcserver\`.`,
   info9: `An error with refunding your coins.`,
-  info10: ``,
-  info11: ``,
-  info12: ``,
-  info13: ``,
-  info14: ``,
-  info15: ``,
+  info10: `A problem with connecting to the database. This affects all level and economy commands.`,
+  info11: `Null`,
+  info12: `Null`,
+  info13: `Null`,
+  info14: `Null`,
+  info15: `Null`,
 }
 
 exports.basemessages = {

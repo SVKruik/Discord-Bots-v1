@@ -659,6 +659,7 @@ module.exports = {
         }
       } catch (err) {
         console.log(err);
+        message.channel.send(`Error message: Error executing command. EC: \`${config.errorcodes.err9}\`.`)
       }
     } else if (args[0] >= 1 && args[0] <= 205) {
       try {
@@ -678,6 +679,7 @@ module.exports = {
         }
       } catch (err) {
         console.log(err);
+        message.channel.send(`Error message: Error executing command. EC: \`${config.errorcodes.err9}\`.`)
       }
     }
 

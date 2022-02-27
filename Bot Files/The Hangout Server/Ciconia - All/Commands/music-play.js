@@ -68,8 +68,8 @@ module.exports = {
         video_player(message.guild, queue_constructor.songs[0]);
       } catch (err) {
         queue.delete(message.guild.id);
-        message.channel.send(config.commandplay.commandplayconnecterr);
-        throw err;
+        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err7}\`.`)
+        console.log(err)
       }
     } else {
       server_queue.songs.push(song);
