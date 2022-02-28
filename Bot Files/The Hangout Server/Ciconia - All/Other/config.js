@@ -403,6 +403,7 @@ exports.aliases = {
   aliasesserverip: ["server"], // Server IP
   aliasesbotstats: ["botstat", "botstats"], // Bot Statistics
   aliasesleave: ["musicstop", "stop"], // Leave
+  aliasesmusiclibrary: ["library", "msclibrary", "msclib", "musiclib"], // Music Library
   aliasesplay: ["music", "song"], // Play
   aliasesskip: ["jump"], // Skip
   aliasesstop: ["terminate"], // Stop
@@ -575,7 +576,6 @@ exports.permissions = {
   permissionprofile: J,
   permissionrules: I,
   permissionserverip: I,
-  permissionleave: J,
   permissionmusic: J, // All music cmds
   permissionapply: J,
   permissiondice: J,
