@@ -403,8 +403,10 @@ exports.aliases = {
   aliasesserverip: ["server"], // Server IP
   aliasesbotstats: ["botstat", "botstats"], // Bot Statistics
   aliasesleave: ["musicstop", "stop"], // Leave
-  aliasesmusiclibrary: ["library", "msclibrary", "msclib", "musiclib"], // Music Library
-  aliasesplay: ["music", "song"], // Play
+  aliasesmusiclibrary: ["library", "msclibrary", "msclib", "musiclib", "musiclist", "msclist", "listmusic", "listmsc"], // Music Library
+  aliasesplay: [], // Play
+  aliasessreset: ["musicreset", "libraryreset", "mscres", "libres", "musicres", "libraryres"], // Reset
+  aliasesupdate: ["musicupdate", "libraryupate", "mscup", "libup", "musicup", "libraryup"], // Update
   aliasesskip: ["jump"], // Skip
   aliasesstop: ["terminate"], // Stop
   aliasesapply: ["form"], // Apply

@@ -6,7 +6,7 @@ module.exports = {
     aliases: config.aliases.aliasesmusiclibrary,
     cooldown: config.cooldown.cooldownmusic,
     permissions: config.permissions.permissionmusic,
-    description: "Embed template for devs.",
+    description: "Show your music library for quick access of your favorite songs.",
     execute(message, args, cmd, client, Discord, profileData) {
         const newEmbed = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
@@ -45,22 +45,22 @@ module.exports = {
             )
             .setFooter(config.embed.embedfooter);
 
-            if(!args[0]) {
-                message.channel.send(newEmbed)
-            } else if (args[0] === "1") {
-                message.channel.send(`Song 1: ${profileData.music1}`)
-            } else if (args[0] === "2") {
-                message.channel.send(`Song 2: ${profileData.music2}`)
-            } else if (args[0] === "3") {
-                message.channel.send(`Song 3: ${profileData.music3}`)
-            } else if (args[0] === "4") {
-                message.channel.send(`Song 4: ${profileData.music4}`)
-            } else if (args[0] === "5") {
-                message.channel.send(`Song 5: ${profileData.music5}`)
-            } else if (args[0] === "6") {
-                message.channel.send(`Song 6: ${profileData.music6}`)
-            } else {
-                return message.channel.send(`Your music library contains 6 songs, so \`${args[0]}\` is not a valid option.`)
-            }
+        if (!args[0]) {
+            message.channel.send(newEmbed)
+        } else if (args[0] === "1" || "song1") {
+            message.channel.send(`Song 1: ${profileData.music1}`)
+        } else if (args[0] === "2" || "song2") {
+            message.channel.send(`Song 2: ${profileData.music2}`)
+        } else if (args[0] === "3" || "song3") {
+            message.channel.send(`Song 3: ${profileData.music3}`)
+        } else if (args[0] === "4" || "song4") {
+            message.channel.send(`Song 4: ${profileData.music4}`)
+        } else if (args[0] === "5" || "song5") {
+            message.channel.send(`Song 5: ${profileData.music5}`)
+        } else if (args[0] === "6" || "song6") {
+            message.channel.send(`Song 6: ${profileData.music6}`)
+        } else if (args[0] !== "1" || "2" || "3" || "4" || "5" || "6" || "song1" || "song2" || "song3" || "song4" || "song5" || "song6") {
+            return message.channel.send(`Your music library contains 6 songs, so \`${args[0]}\` is not a valid option.`)
+        }
     }
 }
