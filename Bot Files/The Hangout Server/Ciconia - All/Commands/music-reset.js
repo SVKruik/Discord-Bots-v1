@@ -10,7 +10,10 @@ module.exports = {
     async execute(message, args, cmd, client, Discord, profileData) {
         const max = 6
         const songid = Math.round(args[0])
-        if (!args[0] || args[0] === "all" || "full" || "clear") {
+        if (!args[0]) {
+            return message.channel.send(`You are missing the song that you want to clear.`)
+        }
+        if (args[0] === "all" || "full" || "clear") {
             try {
                 await profileModel.findOneAndUpdate(
                     {
