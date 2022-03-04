@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownping,
   permissions: config.permissions.permissionping,
   description: "This silences spamming or naughty people. Can only read stuff.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     const botping = Date.now() - message.createdTimestamp
     const apiping = client.ws.ping
     const newEmbed = new Discord.MessageEmbed()

@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowndonate,
   permissions: config.permissions.permissiondonate,
   description: "Support our project by donating to us.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titledonate)

@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownban,
   permissions: config.permissions.permissionban,
   description: "config.descriptionban",
-  execute(message, args) {
+  execute(message, args, cmd, client, Discord) {
     const target = message.mentions.users.first();
     const username = message.client.user.username;
 

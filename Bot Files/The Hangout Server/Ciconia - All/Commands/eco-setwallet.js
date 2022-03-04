@@ -1,5 +1,5 @@
-const profileModel = require("../models/profileSchema");
 const config = require("./../Other/config.js");
+const ecoModel = require("../models/economySchema");
 
 module.exports = {
   name: "setwallet",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownsetwallet,
   permissions: config.permissions.permissionsetwallet,
   description: "Reset the balance of a member.",
-  async execute(message, args, cmd, client, discord, profileData) {
+  async execute(message, args, cmd, client, discord, ecoData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -18,9 +18,9 @@ module.exports = {
     if (amount < 0) return message.channel.send(config.basemessages.messagesgreaternegaone);
 
     try {
-      const targetData = await profileModel.findOne({ userID: target.id });
+      const targetData = await ecoModel.findOne({ userID: target.id });
       if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
-      await profileModel.findOneAndUpdate(
+      await ecoModel.findOneAndUpdate(
         {
           userID: target.id,
         },

@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownticket,
   permissions: config.permissions.permissionticket,
   description: "open a support ticket!",
-  async execute(message, args, cmd, client, Discord, profileData) {
+  async execute(message, args, cmd, client, Discord) {
     const channel = await message.guild.channels.create(
       `Ticket: ${message.author.tag}`
     );

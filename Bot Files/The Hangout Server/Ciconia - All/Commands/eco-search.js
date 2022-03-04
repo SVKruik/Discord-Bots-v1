@@ -1,5 +1,5 @@
-const profileModel = require("../models/profileSchema");
 const config = require("./../Other/config.js");
+const ecoModel = require("../models/economySchema");
 
 module.exports = {
   name: "search",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownsearch,
   permissions: config.permissions.permissionsearch,
   description: "Search for some coins. Kinda a second daily reward.",
-  async execute(message, args, cmd, client, discord, profileData) {
+  async execute(message, args, cmd, client, discord, ecoData) {
     const locations = [
       "1",
       "2",
@@ -82,7 +82,7 @@ module.exports = {
         `You found \`${earnings}\` coins! Congratulations! Be sure to come back tomorrow!`
       );
 
-      await profileModel.findOneAndUpdate(
+      await ecoModel.findOneAndUpdate(
         {
           userID: message.author.id,
         },

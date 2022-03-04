@@ -1,5 +1,5 @@
 const config = require("../Other/config.js");
-const profileModel = require("../models/profileSchema");
+const musicModel = require("../models/musicSchema");
 
 module.exports = {
     name: "update",
@@ -7,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldownmusic,
     permissions: config.permissions.permissionmusic,
     description: "Update your music library.",
-    async execute(message, args, cmd, client, Discord, profileData) {
+    async execute(message, args, cmd, client, Discord, ecoData) {
         const max = 6
         const link = args[1]
         const songid = Math.round(args[0])
@@ -28,22 +28,22 @@ module.exports = {
                 if (!link.startsWith(`https://www.youtube.com/watch?v=`)) {
                     return message.channel.send(`Wrong link format used. Use: \`https://www.youtube.com/watch?v=\`.`)
                 } else {
-                    if (args[1] === profileData.music1) {
+                    if (args[1] === musicData.music1) {
                         return message.channel.send(`You already have stored this song: \`Song 1\`.`)
-                    } else if (args[1] === profileData.music2) {
+                    } else if (args[1] === musicData.music2) {
                         return message.channel.send(`You already have stored this song: \`Song 2\`.`)
-                    } else if (args[1] === profileData.music3) {
+                    } else if (args[1] === musicData.music3) {
                         return message.channel.send(`You already have stored this song: \`Song 3\`.`)
-                    } else if (args[1] === profileData.music4) {
+                    } else if (args[1] === musicData.music4) {
                         return message.channel.send(`You already have stored this song: \`Song 4\`.`)
-                    } else if (args[1] === profileData.music5) {
+                    } else if (args[1] === musicData.music5) {
                         return message.channel.send(`You already have stored this song: \`Song 5\`.`)
-                    } else if (args[1] === profileData.music6) {
+                    } else if (args[1] === musicData.music6) {
                         return message.channel.send(`You already have stored this song: \`Song 6\`.`)
                     } else {
                         if (args[0] === "1") {
                             try {
-                                await profileModel.findOneAndUpdate(
+                                await musicModel.findOneAndUpdate(
                                     {
                                         userID: message.author.id,
                                     },
@@ -60,7 +60,7 @@ module.exports = {
                             }
                         } else if (args[0] === "2") {
                             try {
-                                await profileModel.findOneAndUpdate(
+                                await musicModel.findOneAndUpdate(
                                     {
                                         userID: message.author.id,
                                     },
@@ -77,7 +77,7 @@ module.exports = {
                             }
                         } else if (args[0] === "3") {
                             try {
-                                await profileModel.findOneAndUpdate(
+                                await musicModel.findOneAndUpdate(
                                     {
                                         userID: message.author.id,
                                     },
@@ -94,7 +94,7 @@ module.exports = {
                             }
                         } else if (args[0] === "4") {
                             try {
-                                await profileModel.findOneAndUpdate(
+                                await musicModel.findOneAndUpdate(
                                     {
                                         userID: message.author.id,
                                     },
@@ -111,7 +111,7 @@ module.exports = {
                             }
                         } else if (args[0] === "5") {
                             try {
-                                await profileModel.findOneAndUpdate(
+                                await musicModel.findOneAndUpdate(
                                     {
                                         userID: message.author.id,
                                     },
@@ -128,7 +128,7 @@ module.exports = {
                             }
                         } else if (args[0] === "6") {
                             try {
-                                await profileModel.findOneAndUpdate(
+                                await musicModel.findOneAndUpdate(
                                     {
                                         userID: message.author.id,
                                     },

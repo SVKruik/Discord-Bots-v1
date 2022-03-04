@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownleave,
   permissions: config.permissions.permissionmusic,
   description: "Stop the music, and leave the call.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+  async execute(message, args, cmd, client, Discord) {
     const voiceChannel = message.member.voice.channel;
     const channel = config.base.basemusicchannelid;
     if (message.channel.id == channel) {

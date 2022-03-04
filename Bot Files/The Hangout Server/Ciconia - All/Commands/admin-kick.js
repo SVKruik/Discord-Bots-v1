@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownkick,
   permissions: config.permissions.permissionkick,
   description: "Kick a irritating person, that you don't hate enough to ban.",
-  execute(message, args) {
+  execute(message, args, cmd, client, Discord) {
     const target = message.mentions.users.first();
     const username = message.client.user.username;
 

@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownrules,
   permissions: config.permissions.permissionrules,
   description: "Displays an embed with our active server rules.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titlerules)

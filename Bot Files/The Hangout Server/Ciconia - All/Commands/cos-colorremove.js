@@ -1,5 +1,5 @@
 const config = require("./../Other/config.js");
-const profileModel = require("../models/profileSchema");
+const ecoModel = require("../models/economySchema");
 
 module.exports = {
   name: "colorremove",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowncolorremove,
   permissions: config.permissions.permissioncolorremove,
   description: "Remove a color role by ID or name.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+  async execute(message, args, cmd, client, Discord, ecoData) {
     const whiteTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910544967582253086"
     );
@@ -641,8 +641,8 @@ module.exports = {
     if (args[0] === "all" || "clear" || "full") {
       try {
         const coinsback = amountroles * 50
-        const newbal = profileData.wallet + coinsback
-        await profileModel.findOneAndUpdate(
+        const newbal = ecoData.wallet + coinsback
+        await ecoModel.findOneAndUpdate(
           {
             userID: message.author.id,
           },
@@ -663,8 +663,8 @@ module.exports = {
       }
     } else if (args[0] >= 1 && args[0] <= 205) {
       try {
-        const newbal = profileData.wallet + coinsback
-        await profileModel.findOneAndUpdate(
+        const newbal = ecoData.wallet + coinsback
+        await ecoModel.findOneAndUpdate(
           {
             userID: message.author.id,
           },

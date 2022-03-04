@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownannouncements,
   permissions: config.permissions.permissionannouncements,
   description: "Announce something using the bot.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+  async execute(message, args, cmd, client, Discord) {
     const channel = client.channels.cache.find(channel => channel.id === config.base.baseannouncementschannelid)
     const messageArgs = args.join(' ');
 

@@ -1,5 +1,5 @@
-const profileModel = require("../models/profileSchema");
 const config = require("./../Other/config.js");
+const ecoModel = require("../models/economySchema");
 
 module.exports = {
   name: "dailyreward",
@@ -7,9 +7,9 @@ module.exports = {
   cooldown: config.cooldown.cooldowndailyreward,
   permissions: config.permissions.permissiondailyreward,
   description: "Random amount of coins, as a daily reward.",
-  async execute(message, args, cmd, client, discord, profileData) {
+  async execute(message, args, cmd, client, discord, ecoData) {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
-    const response = await profileModel.findOneAndUpdate(
+    const response = await ecoModel.findOneAndUpdate(
       {
         userID: message.author.id,
       },

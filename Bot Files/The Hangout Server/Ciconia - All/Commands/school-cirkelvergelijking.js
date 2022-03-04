@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowncirkelvergelijking,
   permissions: config.permissions.permissioncirkelvergelijking,
   description: "Calculate a circle equation.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     const a = args[0];
     const b = args[1];
     const c = args[2];

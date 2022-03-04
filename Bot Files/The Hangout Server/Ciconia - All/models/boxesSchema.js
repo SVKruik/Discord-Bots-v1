@@ -1,16 +1,17 @@
 const config = require("../Other/config.js");
 const mongoose = require("mongoose");
 
-const profileSchema = new mongoose.Schema({
+const boxesSchema = new mongoose.Schema({
   userID: { type: String, require: true, unique: false },
   name: { type: String },
-  avatar: { type: String },
-  banner: { type: String },
-  bot: { type: Boolean },
   tag: { type: Number },
+
+  boxesultra: { type: Number, default: 0 },
+  boxessuper: { type: Number, default: 0 },
+  boxesnormal: { type: Number, default: 0 },
 });
 mongoose.pluralize(null);
 
-const model = mongoose.model("Profile", profileSchema);
+const model = mongoose.model("Boxes", boxesSchema);
 
 module.exports = model;

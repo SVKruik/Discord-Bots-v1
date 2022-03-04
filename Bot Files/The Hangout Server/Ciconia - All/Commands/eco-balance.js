@@ -1,5 +1,5 @@
-const profileModel = require("../models/profileSchema");
 const config = require("./../Other/config.js");
+const ecoModel = require("../models/economySchema");
 
 module.exports = {
   name: "balance",
@@ -7,8 +7,8 @@ module.exports = {
   cooldown: config.cooldown.cooldownbalance,
   permissions: config.permissions.permissionbalance,
   description: "Display both your wallet and bank balance.",
-  async execute(message, args, cmd, client, Discord, profileData) {
-    const flagmessage = `${message.author.username}, your current wallet balance is \`${profileData.wallet}\` and your bank account balance is \`${profileData.bank}\`.`
+  async execute(message, args, cmd, client, Discord, ecoData) {
+    const flagmessage = `${message.author.username}, your current wallet balance is \`${ecoData.wallet}\` and your bank account balance is \`${ecoData.bank}\`.`
     const flags = ["everyone", "here", "delete"];
 
     if (!args[0]) {

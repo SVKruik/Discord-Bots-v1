@@ -1,16 +1,16 @@
 const config = require("../Other/config.js");
 const mongoose = require("mongoose");
 
-const profileSchema = new mongoose.Schema({
+const ecoSchema = new mongoose.Schema({
   userID: { type: String, require: true, unique: false },
   name: { type: String },
-  avatar: { type: String },
-  banner: { type: String },
-  bot: { type: Boolean },
   tag: { type: Number },
+
+  wallet: { type: Number, default: 0 },
+  bank: { type: Number, default: 0 },
 });
 mongoose.pluralize(null);
 
-const model = mongoose.model("Profile", profileSchema);
+const model = mongoose.model("Economy", ecoSchema);
 
 module.exports = model;

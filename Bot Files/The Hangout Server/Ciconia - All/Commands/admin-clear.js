@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownclear,
   permissions: config.permissions.permissionclear,
   description: "Bulk delete messages.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+  async execute(message, args, cmd, client, Discord) {
     const max = config.commandclear.commandclearmax;
     const min = config.commandclear.commandclearmin;
 

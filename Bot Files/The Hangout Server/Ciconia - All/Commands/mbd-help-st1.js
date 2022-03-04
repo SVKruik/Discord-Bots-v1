@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownhelpst1,
   permissions: config.permissions.permissionhelpst1,
   description: "Advanced Help - Stage 1",
-  async execute(message, args, cmd, client, Discord, profileData) {
+  async execute(message, args, cmd, client, Discord) {
     const channel = "848939517603479553";
     const ApplyEmoji = "🔴";
     const RanksRolesEmoji = "🟠";

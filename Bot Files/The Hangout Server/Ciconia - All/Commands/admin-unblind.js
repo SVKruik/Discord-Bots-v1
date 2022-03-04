@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownunblind,
   permissions: config.permissions.permissionunblind,
   description: "This command unblinds members.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
 
     
     const target = message.mentions.users.first();

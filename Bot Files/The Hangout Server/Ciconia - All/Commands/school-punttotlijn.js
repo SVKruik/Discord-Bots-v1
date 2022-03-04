@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownpunttotlijn,
   permissions: config.permissions.permissionpunttotlijn,
   description: "Calculate distance between a point and a line.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     const punt1 = "A";
     const coordpunt1x = 5;
     const coordpunt1y = 5;

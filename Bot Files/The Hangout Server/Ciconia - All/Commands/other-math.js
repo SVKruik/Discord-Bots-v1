@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownmath,
   permissions: config.permissions.permissionmath,
   description: "Basic calculation.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     try {
       const newEmbed = new Discord.MessageEmbed()
         .setColor(config.base.basecolor)

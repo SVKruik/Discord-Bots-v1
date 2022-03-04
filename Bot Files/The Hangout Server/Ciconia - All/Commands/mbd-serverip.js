@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownserverip,
   permissions: config.permissions.permissionserverip,
   description: "Display the server IP and information for MultiCube.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
       .setTitle(config.embeds.titleserverip)

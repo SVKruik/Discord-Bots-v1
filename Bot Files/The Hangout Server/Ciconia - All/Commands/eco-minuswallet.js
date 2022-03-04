@@ -1,5 +1,5 @@
-const profileModel = require("../models/profileSchema");
 const config = require("./../Other/config.js");
+const ecoModel = require("../models/economySchema");
 
 module.exports = {
   name: "minuswallet",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownminuswallet,
   permissions: config.permissions.permissionminuswallet,
   description: "Decrease the balance of a member.",
-  async execute(message, args, cmd, client, discord, profileData) {
+  async execute(message, args, cmd, client, discord, ecoData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -19,9 +19,9 @@ module.exports = {
       return message.channel.send(config.basemessages.messagesgreaterone);
 
     try {
-      const targetData = await profileModel.findOne({ userID: target.id });
+      const targetData = await ecoModel.findOne({ userID: target.id });
       if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
-      await profileModel.findOneAndUpdate(
+      await ecoModel.findOneAndUpdate(
         {
           userID: target.id,
         },

@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownmcserver,
   permissions: config.permissions.permissionmcserver,
   description: "Displays some Minecraft server statistics.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     if (!args[0])
       return message.channel.send(config.commandmcserver.commandmcserverip);
     if (!args[1])

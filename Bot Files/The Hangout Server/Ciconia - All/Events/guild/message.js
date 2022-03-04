@@ -8,10 +8,13 @@ module.exports = async (Discord, client, message) => {
   const target = message.author.id;
 
   // Database Schema's
-  const bitsModel = require("../../models/bitsSchema")
-  const musicModel = require("../../models/musicSchema")
+  const bitsModel = require("../../models/bitsSchema");
+  const boxesModel = require("../../models/boxesSchema");
+  const ecoModel = require("../../models/economySchema");
+  const levelModel = require("../../models/levelSchema");
+  const musicModel = require("../../models/musicSchema");
   const profileModel = require("../../models/profileSchema");
-  const scrapModel = require("../../models/scrapSchema")
+  const scrapModel = require("../../models/scrapSchema");
 
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -28,7 +31,7 @@ module.exports = async (Discord, client, message) => {
     bitsData = await bitsModel.findOne({ userID: message.author.id });
     if (!bitsData) {
       let bits = await bitsModel.create({
-        userID: message.author.id,
+        userID: `A ${message.author.id}`,
         name: message.author.username,
         tag: tag,
 
@@ -45,13 +48,71 @@ module.exports = async (Discord, client, message) => {
     console.log(err);
     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
   }
+  // Boxes
+  let boxesData;
+  try {
+    boxesData = await boxesModel.findOne({ userID: message.author.id });
+    if (!boxesData) {
+      let boxes = await boxesModel.create({
+        userID: `B ${message.author.id}`,
+        name: message.author.username,
+        tag: tag,
+
+        boxesultra: 0,
+        boxessuper: 0,
+        boxesnormal: 0,
+      });
+      boxes.save();
+    }
+  } catch (err) {
+    console.log(err);
+    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
+  }
+  // Economy
+  let ecoData;
+  try {
+    ecoData = await ecoModel.findOne({ userID: message.author.id });
+    if (!ecoData) {
+      let eco = await ecoModel.create({
+        userID: `C ${message.author.id}`,
+        name: message.author.username,
+        tag: tag,
+
+        wallet: 0,
+        bank: 0,
+      });
+      eco.save();
+    }
+  } catch (err) {
+    console.log(err);
+    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
+  }
+  // Level
+  let levelData;
+  try {
+    levelData = await levelModel.findOne({ userID: message.author.id });
+    if (!levelData) {
+      let level = await levelModel.create({
+        userID: `D ${message.author.id}`,
+        name: message.author.username,
+        tag: tag,
+
+        level: 0,
+        experience: 0,
+      });
+      level.save();
+    }
+  } catch (err) {
+    console.log(err);
+    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
+  }
   // Music
   let musicData;
   try {
     musicData = await musicModel.findOne({ userID: message.author.id });
     if (!musicData) {
-      let music = await bitsModel.create({
-        userID: message.author.id,
+      let music = await musicModel.create({
+        userID: `E ${message.author.id}`,
         name: message.author.username,
         tag: tag,
 
@@ -74,15 +135,12 @@ module.exports = async (Discord, client, message) => {
     profileData = await profileModel.findOne({ userID: message.author.id });
     if (!profileData) {
       let profile = await profileModel.create({
-        userID: message.author.id,
-        serverID: message.guild.id,
+        userID: `F ${message.author.id}`,
         name: message.author.username,
+        avatar: message.author.avatar,
+        banner: message.author.banner,
+        bot: message.author.bot,
         tag: tag,
-
-        wallet: 0,
-        bank: 0,
-        level: 0,
-        experience: 0,
       });
       profile.save();
     }
@@ -95,11 +153,8 @@ module.exports = async (Discord, client, message) => {
   try {
     scrapData = await scrapModel.findOne({ userID: message.author.id });
     if (!scrapData) {
-      const tagfull = message.author.tag
-      const tag = tagfull.substr(-4);
       let scrap = await scrapModel.create({
-        userID: message.author.id,
-        serverID: message.guild.id,
+        userID: `G ${message.author.id}`,
         name: message.author.username,
         tag: tag,
 
@@ -119,22 +174,22 @@ module.exports = async (Discord, client, message) => {
 
 
   //Inc on message send
-  try {
-    const targetData = await profileModel.findOne({ userID: target.id });
-    await profileModel.findOneAndUpdate(
-      {
-        userID: target.id,
-      },
-      {
-        $inc: {
-          experience: 3,
-        },
-      }
-    );
-  } catch (err) {
-    console.log(err);
-    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err6}\`.`)
-  }
+  // try {
+  //   const targetData = await profileModel.findOne({ userID: target.id });
+  //   await profileModel.findOneAndUpdate(
+  //     {
+  //       userID: target.id,
+  //     },
+  //     {
+  //       $inc: {
+  //         experience: 3,
+  //       },
+  //     }
+  //   );
+  // } catch (err) {
+  //   console.log(err);
+  //   message.channel.send(`Error executing command. EC: \`${config.errorcodes.err6}\`.`)
+  // }
 
   //Aliases
   const command =

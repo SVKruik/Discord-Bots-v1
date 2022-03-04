@@ -1,5 +1,5 @@
-const profileModel = require("../models/profileSchema");
 const config = require("./../Other/config.js");
+const ecoModel = require("../models/economySchema");
 
 module.exports = {
   name: "withdraw",
@@ -7,16 +7,16 @@ module.exports = {
   cooldown: config.cooldown.cooldownwithdraw,
   permissions: config.permissions.permissionwithdraw,
   description: "Bank to Wallet",
-  async execute(message, args, cmd, client, discord, profileData) {
+  async execute(message, args, cmd, client, discord, ecoData) {
     const amount = args[0];
     if (amount <= 0)
       return message.channel.send(config.basemessages.messagesgreaterone);
 
     try {
-      if (amount > profileData.bank)
+      if (amount > ecoData.bank)
         return message.channel.send(config.basemessages.messagescoinsmissing);
 
-      await profileModel.findOneAndUpdate(
+      await ecoModel.findOneAndUpdate(
         {
           userID: message.author.id,
         },

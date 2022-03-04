@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownevent,
   permissions: config.permissions.permissionevent,
   description: "Set up a event with teams.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+  async execute(message, args, cmd, client, Discord) {
 
     
     const channel = config.base.baseeventchannelid;

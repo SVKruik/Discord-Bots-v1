@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownerrorcode,
   permissions: config.permissions.permissionerrorcode,
   description: "See what error code means what.",
-  execute(message, args, cmd, client, Discord, profileData) {
+  execute(message, args, cmd, client, Discord) {
     const err1 = config.errorcodes.err1
     const err2 = config.errorcodes.err2
     const err3 = config.errorcodes.err3

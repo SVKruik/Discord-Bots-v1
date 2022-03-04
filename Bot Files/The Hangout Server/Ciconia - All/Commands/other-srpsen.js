@@ -1,5 +1,5 @@
-const profileModel = require("../models/profileSchema");
 const config = require("../Other/config.js");
+const ecoModel = require("../models/economySchema");
 
 module.exports = {
   name: "stakerockpaperscissor",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownsrpsen,
   permissions: config.permissions.permissionsrpsen,
   description: "Rock, Paper Scissor!",
-  async execute(message, args, cmd, client, Discord, profileData) {
+  async execute(message, args, cmd, client, Discord, ecoData) {
     if (!args[0].length)
       return message.channel.send("To keep it fair, also send your pick!");
 
@@ -33,12 +33,12 @@ module.exports = {
       return message.channel.send("It's a tie! You did not loose any coins.");
     else if (random.slice(0, 4) != args[0]) {
       try {
-        const targetData = await profileModel.findOne({ userID: target.id });
+        const targetData = await ecoModel.findOne({ userID: target.id });
         if (!targetData)
           return message.channel.send(
             config.basemessages.messagesaccountmissing
           );
-        await profileModel.findOneAndUpdate(
+        await ecoModel.findOneAndUpdate(
           {
             userID: target.id,
           },
@@ -50,7 +50,7 @@ module.exports = {
         );
 
         const profit = stake * 2;
-        const newbal = profileData.wallet + profit;
+        const newbal = ecoData.wallet + profit;
         return message.channel.send(
           `You win! You received a small increase on your stake. Your stake was \`${args[1]}\`, your new balance is \`${newbal}\`.`
         );

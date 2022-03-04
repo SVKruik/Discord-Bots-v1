@@ -7,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldownhaversine,
     permissions: config.permissions.permissionhaversine,
     description: "Calculate the distance between two GPS coordinates.",
-    execute(message, args, cmd, client, Discord, profileData) {
+    execute(message, args, cmd, client, Discord) {
 
         if (!args[0]) {
             return message.channel.send("You are missing your \`latitude\` of \`A\`.")

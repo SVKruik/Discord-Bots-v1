@@ -1,4 +1,4 @@
-const profileModel = require("../models/profileSchema");
+const levelModel = require("../models/levelSchema");
 const config = require("./../Other/config.js");
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowngiveexperience,
   permissions: config.permissions.permissiongiveexperience,
   description: "Give a player extra levels.",
-  async execute(message, args, cmd, client, discord, profileData) {
+  async execute(message, args, cmd, client, discord, levelData) {
    if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -19,9 +19,9 @@ module.exports = {
       return message.channel.send(config.basemessages.messagesgreaterone);
 
     try {
-      const targetData = await profileModel.findOne({ userID: target.id });
+      const targetData = await levelModel.findOne({ userID: target.id });
       if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
-      await profileModel.findOneAndUpdate(
+      await levelModel.findOneAndUpdate(
         {
           userID: target.id,
         },
