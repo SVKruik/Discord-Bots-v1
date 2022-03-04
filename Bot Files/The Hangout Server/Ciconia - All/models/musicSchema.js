@@ -2,9 +2,10 @@ const config = require("../Other/config.js");
 const mongoose = require("mongoose");
 
 const musicSchema = new mongoose.Schema({
-  userID: { type: String, require: true, unique: false },
+  userID: { type: String },
   name: { type: String },
   tag: { type: Number },
+  uni: { type: Number, unique: true },
 
   music1: { type: String, default: "https://www.youtube.com/" },
   music2: { type: String, default: "https://www.youtube.com/" },

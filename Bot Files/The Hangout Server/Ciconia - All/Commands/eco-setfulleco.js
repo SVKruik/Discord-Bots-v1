@@ -1,5 +1,5 @@
 const config = require("./../Other/config.js");
-const ecoModel = require("../models/economySchema");
+const economyModel = require("../models/economySchema");
 
 module.exports = {
   name: "setwalletandbank",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownsetfulleco,
   permissions: config.permissions.permissionsetfulleco,
   description: "Reset the balance of both accounts of a member.",
-  async execute(message, args, cmd, client, discord, ecoData) {
+  async execute(message, args, cmd, client, discord, economyData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -18,9 +18,9 @@ module.exports = {
     if (amount < 0) return message.channel.send(config.basemessages.messagesgreaternegaone);
 
     try {
-      const targetData = await ecoModel.findOne({ userID: target.id });
+      const targetData = await economyModel.findOne({ userID: target.id });
       if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
-      await ecoModel.findOneAndUpdate(
+      await economyModel.findOneAndUpdate(
         {
           userID: target.id,
         },

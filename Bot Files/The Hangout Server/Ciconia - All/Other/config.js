@@ -1,6 +1,6 @@
 require("console-stamp")(console, "[HH:MM]");
 const ms = require("ms");
-const ecoModel = require("../models/economySchema");
+const economyModel = require("../models/economySchema");
 const util = require("minecraft-server-util");
 var Scraper = require("images-scraper");
 const math = require("mathjs");
@@ -286,17 +286,17 @@ exports.embeds = {
   valueprofile1: "> **General:**", // Profile
   // valueprofile2: `${message.author.username}`,
   // valueprofile3: `#${tag}`,
-  // valueprofile4: `${ecoData.userID}`,
-  // valueprofile5: `${ecoData.serverID}`,
+  // valueprofile4: `${economyData.userID}`,
+  // valueprofile5: `${economyData.serverID}`,
   valueprofile6: "> **Economy:**",
-  // valueprofile7: `${ecoData.wallet}`,
-  // valueprofile8: `${ecoData.bank}`,
+  // valueprofile7: `${economyData.wallet}`,
+  // valueprofile8: `${economyData.bank}`,
   valueprofile9: "> **Level:**",
-  // valueprofile10: `${ecoData.level}`,
-  // valueprofile11: `${ecoData.experience}`,
+  // valueprofile10: `${economyData.level}`,
+  // valueprofile11: `${economyData.experience}`,
   valueprofile12: "> **Technical:**",
-  // valueprofile13: `${ecoData._id}`,
-  // valueprofile14: `${ecoData.__v}`,
+  // valueprofile13: `${economyData._id}`,
+  // valueprofile14: `${economyData.__v}`,
   valuerules1: "Treat everyone with respect.",
   valuerules2: "Do not spam.",
   valuerules3: "Do not advertise yourself.",

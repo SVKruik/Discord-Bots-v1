@@ -10,7 +10,7 @@ module.exports = async (Discord, client, message) => {
   // Database Schema's
   const bitsModel = require("../../models/bitsSchema");
   const boxesModel = require("../../models/boxesSchema");
-  const ecoModel = require("../../models/economySchema");
+  const economyModel = require("../../models/economySchema");
   const levelModel = require("../../models/levelSchema");
   const musicModel = require("../../models/musicSchema");
   const profileModel = require("../../models/profileSchema");
@@ -24,6 +24,10 @@ module.exports = async (Discord, client, message) => {
   const tagfull = message.author.tag
   const tag = tagfull.substr(-4);
 
+  const rndIntmax = 10000000000000
+  const rndIntmin = 1
+  const rndInt = Math.round(Math.floor(Math.random() * rndIntmax) + rndIntmin)
+
   //Database profile
   // Bits
   let bitsData;
@@ -34,6 +38,7 @@ module.exports = async (Discord, client, message) => {
         userID: `A ${message.author.id}`,
         name: message.author.username,
         tag: tag,
+        uni: rndInt,
 
         bitsdiamond: 0,
         bitsplatinum: 0,
@@ -57,6 +62,7 @@ module.exports = async (Discord, client, message) => {
         userID: `B ${message.author.id}`,
         name: message.author.username,
         tag: tag,
+        uni: rndInt,
 
         boxesultra: 0,
         boxessuper: 0,
@@ -69,19 +75,20 @@ module.exports = async (Discord, client, message) => {
     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
   }
   // Economy
-  let ecoData;
+  let economyData;
   try {
-    ecoData = await ecoModel.findOne({ userID: message.author.id });
-    if (!ecoData) {
-      let eco = await ecoModel.create({
+    economyData = await economyModel.findOne({ userID: message.author.id });
+    if (!economyData) {
+      let economy = await economyModel.create({
         userID: `C ${message.author.id}`,
         name: message.author.username,
         tag: tag,
+        uni: rndInt,
 
         wallet: 0,
         bank: 0,
       });
-      eco.save();
+      economy.save();
     }
   } catch (err) {
     console.log(err);
@@ -96,6 +103,7 @@ module.exports = async (Discord, client, message) => {
         userID: `D ${message.author.id}`,
         name: message.author.username,
         tag: tag,
+        uni: rndInt,
 
         level: 0,
         experience: 0,
@@ -115,6 +123,7 @@ module.exports = async (Discord, client, message) => {
         userID: `E ${message.author.id}`,
         name: message.author.username,
         tag: tag,
+        uni: rndInt,
 
         music1: "https://www.youtube.com/",
         music2: "https://www.youtube.com/",
@@ -141,6 +150,7 @@ module.exports = async (Discord, client, message) => {
         banner: message.author.banner,
         bot: message.author.bot,
         tag: tag,
+        uni: rndInt,
       });
       profile.save();
     }
@@ -157,6 +167,7 @@ module.exports = async (Discord, client, message) => {
         userID: `G ${message.author.id}`,
         name: message.author.username,
         tag: tag,
+        uni: rndInt,
 
         scrapexotic: 0,
         scraplegendary: 0,

@@ -340,10 +340,10 @@
 
 // if (args[0] === "test") {
 //   try {
-//     const newbal = ecoData.wallet - test
-//     if (test > ecoData.wallet)
+//     const newbal = economyData.wallet - test
+//     if (test > economyData.wallet)
 //       return message.channel.send(config.basemessages.messagescoinsmissing);
-//     await ecoModel.findOneAndUpdate(
+//     await economyModel.findOneAndUpdate(
 //       {
 //         userID: message.author.id,
 //       },
@@ -355,7 +355,7 @@
 //       }
 //     );
 //     if (amountroles === 1) {
-//       message.channel.send(`Message \`${ecoData.wallet}\`.`)
+//       message.channel.send(`Message \`${economyData.wallet}\`.`)
 //     }
 //   } catch (err) {
 //     console.log(err);
@@ -372,7 +372,7 @@
 // //// Module 7: Display something from the database
 
 // message.channel.send(
-//   `${message.author.username}, your X is \`${ecoData.X}\`.`
+//   `${message.author.username}, your X is \`${economyData.X}\`.`
 // );
 
 // //// Module 8: Only numbers allowed

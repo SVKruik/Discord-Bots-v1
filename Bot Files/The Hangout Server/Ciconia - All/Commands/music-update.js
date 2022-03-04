@@ -7,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldownmusic,
     permissions: config.permissions.permissionmusic,
     description: "Update your music library.",
-    async execute(message, args, cmd, client, Discord, ecoData) {
+    async execute(message, args, cmd, client, Discord, economyData) {
         const max = 6
         const link = args[1]
         const songid = Math.round(args[0])

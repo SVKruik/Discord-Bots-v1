@@ -1,5 +1,5 @@
 const config = require("../Other/config");
-const ecoModel = require("../models/economySchema");
+const economyModel = require("../models/economySchema");
 
 module.exports = {
     name: "color",
@@ -7,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldowncolor,
     permissions: config.permissions.permissioncolor,
     description: "Color command",
-    async execute(message, args, cmd, client, Discord, ecoData) {
+    async execute(message, args, cmd, client, Discord, economyData) {
         const whiteTeamRole = message.guild.roles.cache.find(
             (role) => role.id === "910544967582253086"
         );
@@ -687,10 +687,10 @@ module.exports = {
         if (args[0] === "68" || "69" || "70" || "71" || "72" || "73" || "79" || "93") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - metallic
-                if (metallic > ecoData.wallet)
+                const newbal = economyData.wallet - metallic
+                if (metallic > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -713,10 +713,10 @@ module.exports = {
         } else if (args[0] === "9" || "23" || "56" || "83" || "97" || "100" || "103" || "119" || "122" || "123" || "124" || "128" || "129" || "130" || "133" || "134" || "137" || "138" || "141" || "142" || "144" || "145" || "146" || "147" || "148" || "149" || "150" || "151" || "152" || "153" || "154" || "155" || "157" || "158" || "159" || "160" || "161" || "162" || "163" || "167" || "168" || "169" || "170" || "171" || "173" || "179" || "181" || "182" || "186" || "188" || "191" || "192" || "194" || "195" || "196" || "204") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - exotic
-                if (exotic > ecoData.wallet)
+                const newbal = economyData.wallet - exotic
+                if (exotic > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -739,10 +739,10 @@ module.exports = {
         } else if (args[0] === "59" || "60" || "180") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - plusexotic
-                if (plusexotic > ecoData.wallet)
+                const newbal = economyData.wallet - plusexotic
+                if (plusexotic > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -765,10 +765,10 @@ module.exports = {
         } else if (args[0] === "1" || "2" || "15" || "101" || "189") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - base
-                if (base > ecoData.wallet)
+                const newbal = economyData.wallet - base
+                if (base > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -791,10 +791,10 @@ module.exports = {
         } else if (args[0] === "3" || "5" || "6" || "8") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - light
-                if (light > ecoData.wallet)
+                const newbal = economyData.wallet - light
+                if (light > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -817,10 +817,10 @@ module.exports = {
         } else if (args[0] === "11" || "18" || "34" || "35" || "44" || "46" || "47" || "51" || "63" || "88" || "99" || "112") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - medium
-                if (medium > ecoData.wallet)
+                const newbal = economyData.wallet - medium
+                if (medium > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -843,10 +843,10 @@ module.exports = {
         } else if (args[0] === "16" || "17" || "21" || "57" || "76" || "90" || "92" || "95" || "115" || "120" || "172") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - dark
-                if (dark > ecoData.wallet)
+                const newbal = economyData.wallet - dark
+                if (dark > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -869,10 +869,10 @@ module.exports = {
         } else if (args[0] === "176" || "177" || "183") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - really
-                if (really > ecoData.wallet)
+                const newbal = economyData.wallet - really
+                if (really > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -895,10 +895,10 @@ module.exports = {
         } else if (args[0] === "10" || "12" || "13" || "52") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - bright
-                if (bright > ecoData.wallet)
+                const newbal = economyData.wallet - bright
+                if (bright > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -921,10 +921,10 @@ module.exports = {
         } else if (args[0] === "57" || "178" || "185" || "190") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - deep
-                if (deep > ecoData.wallet)
+                const newbal = economyData.wallet - deep
+                if (deep > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -947,10 +947,10 @@ module.exports = {
         } else if (args[0] === "24" || "25" || "26" || "27" || "29" || "30" || "31" || "43" || "45" || "55" || "67" || "77" || "78") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - tr
-                if (tr > ecoData.wallet)
+                const newbal = economyData.wallet - tr
+                if (tr > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -973,10 +973,10 @@ module.exports = {
         } else if (args[0] === "7" || "197" || "198" || "199" || "200" || "201" || "202" || "203") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - pastel
-                if (pastel > ecoData.wallet)
+                const newbal = economyData.wallet - pastel
+                if (pastel > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -999,10 +999,10 @@ module.exports = {
         } else if (args[0] === "14" || "41" || "65" || "66") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - earth
-                if (earth > ecoData.wallet)
+                const newbal = economyData.wallet - earth
+                if (earth > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -1025,10 +1025,10 @@ module.exports = {
         } else if (args[0] === "61" || "62" || "64" || "74" || "75") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - sand
-                if (sand > ecoData.wallet)
+                const newbal = economyData.wallet - sand
+                if (sand > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -1051,10 +1051,10 @@ module.exports = {
         } else if (args[0] === "86" || "87" || "102") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - reddish
-                if (reddish > ecoData.wallet)
+                const newbal = economyData.wallet - reddish
+                if (reddish > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -1077,10 +1077,10 @@ module.exports = {
         } else if (args[0] === "4" || "32" || "58" || "80" || "81" || "82" || "84" || "85" || "89" || "96" || "109" || "110" || "111" || "113" || "114" || "116" || "117" || "118" || "121" || "125" || "126" || "127" || "131" || "132" || "135" || "136" || "139" || "140" || "143" || "156" || "164" || "165" || "166" || "174" || "184" || "187" || "193" || "205") {
             try {
                 const coinsback = amountroles * 50
-                const newbal = ecoData.wallet - extra
-                if (extra > ecoData.wallet)
+                const newbal = economyData.wallet - extra
+                if (extra > economyData.wallet)
                     return message.channel.send(config.basemessages.messagescoinsmissing);
-                await ecoModel.findOneAndUpdate(
+                await economyModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },

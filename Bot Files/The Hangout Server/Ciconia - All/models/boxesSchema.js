@@ -2,9 +2,10 @@ const config = require("../Other/config.js");
 const mongoose = require("mongoose");
 
 const boxesSchema = new mongoose.Schema({
-  userID: { type: String, require: true, unique: false },
+  userID: { type: String },
   name: { type: String },
   tag: { type: Number },
+  uni: { type: Number, unique: true },
 
   boxesultra: { type: Number, default: 0 },
   boxessuper: { type: Number, default: 0 },
