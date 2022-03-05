@@ -7,14 +7,16 @@ module.exports = {
   cooldown: config.cooldown.cooldownbalancewallet,
   permissions: config.permissions.permissionbalancewallet,
   description: "Display your wallet balance.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
+
+
     const flagmessage = `${message.author.username}, this is your current wallet balance : \`${profileData.wallet}\`.`
     const flags = ["everyone", "here", "delete"];
-    
+
     if (!args[0]) {
       message.channel.send(flagmessage)
     }
-    
+
     if (args[0] === "delete") {
       if (!args[1]) {
         if (!args[2]) {
@@ -37,8 +39,8 @@ module.exports = {
         }
       }
     }
-    
-    
+
+
     if (args[0] === "everyone") {
       if (args[1] === "here") {
         return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -60,8 +62,8 @@ module.exports = {
     } else if (args[2] === "everyone") {
       return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
     }
-    
-    
+
+
     if (args[0] === "here") {
       if (args[1] === "everyone") {
         return message.channel.send(`You cannot use both group tags at the same time.`)

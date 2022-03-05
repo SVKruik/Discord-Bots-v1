@@ -7,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldownmusic,
     permissions: config.permissions.permissionmusic,
     description: "Reset and clear all your songs stored in your library.",
-    async execute(message, args, cmd, client, Discord, profileData) {
+      async execute(message, args, cmd, client, Discord, profileData) {
         const max = 6
         const songid = Math.round(args[0])
         if (!args[0]) {

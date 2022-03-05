@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowncolorremove,
   permissions: config.permissions.permissioncolorremove,
   description: "Remove a color role by ID or name.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
     const whiteTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910544967582253086"
     );

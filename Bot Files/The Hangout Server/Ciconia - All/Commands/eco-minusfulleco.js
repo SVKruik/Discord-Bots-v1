@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownminusfulleco,
   permissions: config.permissions.permissionminusfulleco,
   description: "Decrease the balance of both accounts.",
-  async execute(message, args, cmd, client, discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -32,6 +32,11 @@ module.exports = {
           },
         }
       );
+
+      const command =
+        client.commands.get(cmd) ||
+        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+      console.log(`${message.author.username} used this command: ${command.name}`)
 
       const flagmessage = `The targeted member has lost \`${amount}\` amount of coins in both of their accounts.`
       const flags = ["everyone", "here", "delete"];

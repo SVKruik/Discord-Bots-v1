@@ -7,7 +7,9 @@ module.exports = {
   cooldown: config.cooldown.cooldowndailyreward,
   permissions: config.permissions.permissiondailyreward,
   description: "Random amount of coins, as a daily reward.",
-  async execute(message, args, cmd, client, discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
+
+
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     const response = await profileModel.findOneAndUpdate(
       {

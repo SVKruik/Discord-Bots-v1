@@ -7,7 +7,9 @@ module.exports = {
   cooldown: config.cooldown.cooldowndeposit,
   permissions: config.permissions.permissiondeposit,
   description: "Deposit coins from your wallet to your bank.",
-  async execute(message, args, cmd, client, discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
+
+
     const amount = args[0];
     if (amount <= 0)
       return message.channel.send(config.basemessages.messagesgreaterone);

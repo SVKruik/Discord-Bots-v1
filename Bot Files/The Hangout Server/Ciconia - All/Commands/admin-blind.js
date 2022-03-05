@@ -22,7 +22,7 @@ module.exports = {
         );
         return;
       }
-      
+
       memberTarget.roles.add(blindRole);
       message.channel.send(
         `<@${memberTarget.user.id}> has been succesfully blinded for ${ms(

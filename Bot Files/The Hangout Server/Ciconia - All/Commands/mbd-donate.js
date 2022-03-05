@@ -24,6 +24,8 @@ module.exports = {
       )
       .setFooter(config.embed.embedfooter);
 
+
+
     const flagmessage = newEmbed
     const flags = ["everyone", "here", "delete"];
 

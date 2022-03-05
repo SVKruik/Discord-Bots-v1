@@ -7,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldowncolor,
     permissions: config.permissions.permissioncolor,
     description: "Color command",
-    async execute(message, args, cmd, client, Discord, profileData) {
+      async execute(message, args, cmd, client, Discord, profileData) {
         const whiteTeamRole = message.guild.roles.cache.find(
             (role) => role.id === "910544967582253086"
         );

@@ -8,7 +8,7 @@ module.exports = {
   description: "This command unmutes members.",
   execute(message, args, cmd, client, Discord) {
 
-    
+
     const target = message.mentions.users.first();
     if (target) {
       const muteRole = message.guild.roles.cache.find(
@@ -23,5 +23,7 @@ module.exports = {
     } else {
       message.channel.send(config.basemessages.messagesfinderror);
     }
+
+
   },
 };

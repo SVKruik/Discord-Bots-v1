@@ -6,7 +6,9 @@ module.exports = {
   cooldown: config.cooldown.cooldowntemplatecommand,
   permissions: config.permissions.permissiontemplatecommand,
   description: "Command template for devs.",
-  async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord) {
+
+    
     const flagmessage = config.commandcommandtemplate.commandcommandtemplate
     const flags = ["everyone", "here", "delete"];
     

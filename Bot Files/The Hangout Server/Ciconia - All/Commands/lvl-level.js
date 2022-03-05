@@ -7,7 +7,9 @@ module.exports = {
   cooldown: config.cooldown.cooldownlevel,
   permissions: config.permissions.permissionlevel,
   description: "Displays your current server level.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
+
+
     const flagmessage = `${message.author.username}, this is your Server Level: \`${profileData.level}\`.`
     const flags = ["everyone", "here", "delete"];
 

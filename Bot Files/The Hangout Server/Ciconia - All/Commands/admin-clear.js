@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownclear,
   permissions: config.permissions.permissionclear,
   description: "Bulk delete messages.",
-  async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord) {
     const max = config.commandclear.commandclearmax;
     const min = config.commandclear.commandclearmin;
 
@@ -19,11 +19,13 @@ module.exports = {
         `You cannot clear more than \`${max}\` messages in one command.`
       );
     if (args[0] < min) return message.channel.send(config.basemessages.messagesgreaterone);
-    
+
     await message.channel.messages
       .fetch({ limit: args[0] })
       .then((messages) => {
         message.channel.bulkDelete(messages);
       });
+
+
   },
 };

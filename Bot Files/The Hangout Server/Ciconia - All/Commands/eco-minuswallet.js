@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownminuswallet,
   permissions: config.permissions.permissionminuswallet,
   description: "Decrease the balance of a member.",
-  async execute(message, args, cmd, client, discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -31,6 +31,11 @@ module.exports = {
           },
         }
       );
+
+      const command =
+        client.commands.get(cmd) ||
+        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+      console.log(`${message.author.username} used this command: ${command.name}`)
 
       const flagmessage = `The targeted member has lost \`${amount}\` amount of coins in their wallet account.`
       const flags = ["everyone", "here", "delete"];

@@ -7,8 +7,6 @@ module.exports = {
   permissions: config.permissions.permissionunblind,
   description: "This command unblinds members.",
   execute(message, args, cmd, client, Discord) {
-
-    
     const target = message.mentions.users.first();
     if (target) {
       const blindRole = message.guild.roles.cache.find(
@@ -23,5 +21,7 @@ module.exports = {
     } else {
       message.channel.send(config.basemessages.messagesfinderror);
     }
+
+
   },
 };

@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownminusfulllevel,
   permissions: config.permissions.permissionminusfulllevel,
   description: "Decrease the experience and level.",
-  async execute(message, args, cmd, client, discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };

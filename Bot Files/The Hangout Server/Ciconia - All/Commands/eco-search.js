@@ -7,7 +7,9 @@ module.exports = {
   cooldown: config.cooldown.cooldownsearch,
   permissions: config.permissions.permissionsearch,
   description: "Search for some coins. Kinda a second daily reward.",
-  async execute(message, args, cmd, client, discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
+
+
     const locations = [
       "1",
       "2",

@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownflipacoinnl,
   permissions: config.permissions.permissionflipacoinnl,
   description: "Kop of munt!",
-  async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord) {
     if (!args[0]) {
       return message.channel.send("Please also choose your winning side.");
     }

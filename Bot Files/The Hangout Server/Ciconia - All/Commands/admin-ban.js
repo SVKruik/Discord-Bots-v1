@@ -21,7 +21,7 @@ module.exports = {
       const memberTarget = message.guild.members.cache.get(target.id);
       memberTarget.ban();
       console.log(
-        `${memberTarget.user.username} got banned because of: ${reason2}. This was done by ${message.author.username} using ${username}.`
+        `${memberTarget.user.username} got banned because of: ${reason}. This was done by ${message.author.username} using ${username}.`
       );
       message.channel.send(
         `<@${memberTarget.user.id}> got 360 no-scoped by ${username}. Reason: ${reason}.`

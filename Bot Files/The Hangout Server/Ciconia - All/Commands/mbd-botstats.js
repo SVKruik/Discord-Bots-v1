@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownbotstats,
   permissions: config.permissions.permissionbotstats,
   description: "Displays all stats of the bot.",
-  async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord) {
     const fs = require("fs");
     const commands = fs.readdirSync("./Commands").length;
 

@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownsrpsen,
   permissions: config.permissions.permissionsrpsen,
   description: "Rock, Paper Scissor!",
-  async execute(message, args, cmd, client, Discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
     if (!args[0].length)
       return message.channel.send("To keep it fair, also send your pick!");
 

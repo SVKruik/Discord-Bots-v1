@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownrpsnl,
   permissions: config.permissions.permissionrpsnl,
   description: "Steen, Papier, Schaar!",
-  async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord) {
     if (!args.length)
       return message.channel.send("Om het eerlijk te houden, moet je ook jouw keuze invoeren!");
 

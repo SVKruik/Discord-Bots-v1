@@ -9,7 +9,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownmusic,
   permissions: config.permissions.permissionmusic,
   description: "Music Bot via YouTube links.",
-  async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord) {
     const voice_channel = message.member.voice.channel;
     if (!voice_channel) return message.channel.send(config.basemessages.messagesvcrequired);
 

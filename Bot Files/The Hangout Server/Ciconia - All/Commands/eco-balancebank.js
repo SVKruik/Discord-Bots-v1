@@ -7,7 +7,9 @@ module.exports = {
   cooldown: config.cooldown.cooldownbalancebank,
   permissions: config.permissions.permissionbalancebank,
   description: "Display your bank account balance.",
-  async execute(message, args, cmd, client, Discord, profileData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
+
+
     const flagmessage = `${message.author.username}, this is your current bank balance : \`${profileData.bank}\`.`
     const flags = ["everyone", "here", "delete"];
 
@@ -38,7 +40,7 @@ module.exports = {
       }
     }
 
-    
+
     if (args[0] === "everyone") {
       if (args[1] === "here") {
         return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -61,7 +63,7 @@ module.exports = {
       return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
     }
 
-    
+
     if (args[0] === "here") {
       if (args[1] === "everyone") {
         return message.channel.send(`You cannot use both group tags at the same time.`)

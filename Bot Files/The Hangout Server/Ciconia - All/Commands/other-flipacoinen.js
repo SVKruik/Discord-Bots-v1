@@ -6,7 +6,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownflipacoinen,
   permissions: config.permissions.permissionflipacoinen,
   description: "Flip a coin!",
-  async execute(message, args, cmd, client, Discord) {
+    async execute(message, args, cmd, client, Discord) {
     if (!args[0]) {
       return message.channel.send("Please also choose your winning side.");
     }
