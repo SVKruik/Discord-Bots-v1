@@ -4,11 +4,9 @@ const mongoose = require("mongoose");
 const profileSchema = new mongoose.Schema({
   userID: { type: String },
   name: { type: String },
-  avatar: { type: String },
-  banner: { type: String },
-  bot: { type: Boolean },
   tag: { type: Number },
   uni: { type: Number, unique: true },
+  bot: { type: Boolean },
 
   scrapexotic: { type: Number, default: 0 },
   scraplegendary: { type: Number, default: 0 },

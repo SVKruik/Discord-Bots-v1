@@ -31,7 +31,6 @@ module.exports = async (Discord, client, message) => {
         userID: message.author.id,
         name: message.author.username,
         avatar: message.author.avatar,
-        banner: message.author.banner,
         bot: message.author.bot,
         tag: tag,
         uni: rndInt,
