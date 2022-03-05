@@ -1,5 +1,5 @@
-const levelModel = require("../models/levelSchema");
 const config = require("./../Other/config.js");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "experience",
@@ -7,8 +7,8 @@ module.exports = {
   cooldown: config.cooldown.cooldownexperience,
   permissions: config.permissions.permissionexperience,
   description: "Displays your current server experience.",
-  async execute(message, args, cmd, client, Discord, levelData) {
-    const flagmessage = `${message.author.username}, this is the amount of Experience you have: \`${levelData.experience}\`.`
+  async execute(message, args, cmd, client, Discord, profileData) {
+    const flagmessage = `${message.author.username}, this is the amount of Experience you have: \`${profileData.experience}\`.`
     const flags = ["everyone", "here", "delete"];
 
     if (!args[0]) {

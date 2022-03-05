@@ -1,5 +1,5 @@
 const config = require("./../Other/config.js");
-const economyModel = require("../models/economySchema");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "deposit",
@@ -7,14 +7,14 @@ module.exports = {
   cooldown: config.cooldown.cooldowndeposit,
   permissions: config.permissions.permissiondeposit,
   description: "Deposit coins from your wallet to your bank.",
-  async execute(message, args, cmd, client, discord, economyData) {
+  async execute(message, args, cmd, client, discord, profileData) {
     const amount = args[0];
     if (amount <= 0)
       return message.channel.send(config.basemessages.messagesgreaterone);
     try {
-      if (amount > economyData.wallet)
+      if (amount > profileData.wallet)
         return message.channel.send(config.basemessages.messagescoinsmissing);
-      await economyModel.findOneAndUpdate(
+      await profileModel.findOneAndUpdate(
         {
           userID: message.author.id,
         },

@@ -1,5 +1,5 @@
 const config = require("./../Other/config.js");
-const economyModel = require("../models/economySchema");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "givebank",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowngivebank,
   permissions: config.permissions.permissiongivebank,
   description: "Increase the balance of a member.",
-  async execute(message, args, cmd, client, discord, economyData) {
+  async execute(message, args, cmd, client, discord, profileData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -19,9 +19,9 @@ module.exports = {
       return message.channel.send(config.basemessages.messagesgreaterone);
 
     try {
-      const targetData = await economyModel.findOne({ userID: target.id });
+      const targetData = await profileModel.findOne({ userID: target.id });
       if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
-      await economyModel.findOneAndUpdate(
+      await profileModel.findOneAndUpdate(
         {
           userID: target.id,
         },

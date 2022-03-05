@@ -1,5 +1,5 @@
 const config = require("../Other/config.js");
-const musicModel = require("../models/musicSchema");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
     name: "reset",
@@ -7,7 +7,7 @@ module.exports = {
     cooldown: config.cooldown.cooldownmusic,
     permissions: config.permissions.permissionmusic,
     description: "Reset and clear all your songs stored in your library.",
-    async execute(message, args, cmd, client, Discord, musicData) {
+    async execute(message, args, cmd, client, Discord, profileData) {
         const max = 6
         const songid = Math.round(args[0])
         if (!args[0]) {
@@ -15,7 +15,7 @@ module.exports = {
         }
         if (args[0] === "all" || "full" || "clear") {
             try {
-                await musicModel.findOneAndUpdate(
+                await profileModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
@@ -42,7 +42,7 @@ module.exports = {
         } else {
             if (args[0] === "1") {
                 try {
-                    await musicModel.findOneAndUpdate(
+                    await profileModel.findOneAndUpdate(
                         {
                             userID: message.author.id,
                         },
@@ -59,7 +59,7 @@ module.exports = {
                 }
             } else if (args[0] === "2") {
                 try {
-                    await musicModel.findOneAndUpdate(
+                    await profileModel.findOneAndUpdate(
                         {
                             userID: message.author.id,
                         },
@@ -76,7 +76,7 @@ module.exports = {
                 }
             } else if (args[0] === "3") {
                 try {
-                    await musicModel.findOneAndUpdate(
+                    await profileModel.findOneAndUpdate(
                         {
                             userID: message.author.id,
                         },
@@ -93,7 +93,7 @@ module.exports = {
                 }
             } else if (args[0] === "4") {
                 try {
-                    await musicModel.findOneAndUpdate(
+                    await profileModel.findOneAndUpdate(
                         {
                             userID: message.author.id,
                         },
@@ -110,7 +110,7 @@ module.exports = {
                 }
             } else if (args[0] === "5") {
                 try {
-                    await musicModel.findOneAndUpdate(
+                    await profileModel.findOneAndUpdate(
                         {
                             userID: message.author.id,
                         },
@@ -127,7 +127,7 @@ module.exports = {
                 }
             } else if (args[0] === "6") {
                 try {
-                    await musicModel.findOneAndUpdate(
+                    await profileModel.findOneAndUpdate(
                         {
                             userID: message.author.id,
                         },

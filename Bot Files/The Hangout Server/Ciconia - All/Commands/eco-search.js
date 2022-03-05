@@ -1,5 +1,5 @@
 const config = require("./../Other/config.js");
-const economyModel = require("../models/economySchema");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "search",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownsearch,
   permissions: config.permissions.permissionsearch,
   description: "Search for some coins. Kinda a second daily reward.",
-  async execute(message, args, cmd, client, discord, economyData) {
+  async execute(message, args, cmd, client, discord, profileData) {
     const locations = [
       "1",
       "2",
@@ -82,7 +82,7 @@ module.exports = {
         `You found \`${earnings}\` coins! Congratulations! Be sure to come back tomorrow!`
       );
 
-      await economyModel.findOneAndUpdate(
+      await profileModel.findOneAndUpdate(
         {
           userID: message.author.id,
         },

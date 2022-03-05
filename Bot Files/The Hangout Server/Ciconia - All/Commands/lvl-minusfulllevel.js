@@ -1,5 +1,5 @@
-const levelModel = require("../models/levelSchema");
 const config = require("./../Other/config.js");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "minuslevelandexperience",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownminusfulllevel,
   permissions: config.permissions.permissionminusfulllevel,
   description: "Decrease the experience and level.",
-  async execute(message, args, cmd, client, discord, levelData) {
+  async execute(message, args, cmd, client, discord, profileData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };

@@ -8,13 +8,7 @@ module.exports = async (Discord, client, message) => {
   const target = message.author.id;
 
   // Database Schema's
-  const bitsModel = require("../../models/bitsSchema");
-  const boxesModel = require("../../models/boxesSchema");
-  const economyModel = require("../../models/economySchema");
-  const levelModel = require("../../models/levelSchema");
-  const musicModel = require("../../models/musicSchema");
   const profileModel = require("../../models/profileSchema");
-  const scrapModel = require("../../models/scrapSchema");
 
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -29,143 +23,16 @@ module.exports = async (Discord, client, message) => {
   const rndInt = Math.round(Math.floor(Math.random() * rndIntmax) + rndIntmin)
 
   //Database profile
-  // Bits
-  let bitsData;
-  try {
-    bitsData = await bitsModel.findOne({ userID: message.author.id });
-    if (!bitsData) {
-      let bits = await bitsModel.create({
-        userID: `A ${message.author.id}`,
-        name: message.author.username,
-        tag: tag,
-        uni: rndInt,
-
-        bitsdiamond: 0,
-        bitsplatinum: 0,
-        bitsgold: 0,
-        bitssilver: 0,
-        bitsbronze: 0,
-        bitsiron: 0,
-      });
-      bits.save();
-    }
-  } catch (err) {
-    console.log(err);
-    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
-  }
-  // Boxes
-  let boxesData;
-  try {
-    boxesData = await boxesModel.findOne({ userID: message.author.id });
-    if (!boxesData) {
-      let boxes = await boxesModel.create({
-        userID: `B ${message.author.id}`,
-        name: message.author.username,
-        tag: tag,
-        uni: rndInt,
-
-        boxesultra: 0,
-        boxessuper: 0,
-        boxesnormal: 0,
-      });
-      boxes.save();
-    }
-  } catch (err) {
-    console.log(err);
-    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
-  }
-  // Economy
-  let economyData;
-  try {
-    economyData = await economyModel.findOne({ userID: message.author.id });
-    if (!economyData) {
-      let economy = await economyModel.create({
-        userID: `C ${message.author.id}`,
-        name: message.author.username,
-        tag: tag,
-        uni: rndInt,
-
-        wallet: 0,
-        bank: 0,
-      });
-      economy.save();
-    }
-  } catch (err) {
-    console.log(err);
-    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
-  }
-  // Level
-  let levelData;
-  try {
-    levelData = await levelModel.findOne({ userID: message.author.id });
-    if (!levelData) {
-      let level = await levelModel.create({
-        userID: `D ${message.author.id}`,
-        name: message.author.username,
-        tag: tag,
-        uni: rndInt,
-
-        level: 0,
-        experience: 0,
-      });
-      level.save();
-    }
-  } catch (err) {
-    console.log(err);
-    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
-  }
-  // Music
-  let musicData;
-  try {
-    musicData = await musicModel.findOne({ userID: message.author.id });
-    if (!musicData) {
-      let music = await musicModel.create({
-        userID: `E ${message.author.id}`,
-        name: message.author.username,
-        tag: tag,
-        uni: rndInt,
-
-        music1: "https://www.youtube.com/",
-        music2: "https://www.youtube.com/",
-        music3: "https://www.youtube.com/",
-        music4: "https://www.youtube.com/",
-        music5: "https://www.youtube.com/",
-        music6: "https://www.youtube.com/",
-      });
-      music.save();
-    }
-  } catch (err) {
-    console.log(err);
-    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
-  }
-  // Profile
   let profileData;
   try {
     profileData = await profileModel.findOne({ userID: message.author.id });
     if (!profileData) {
       let profile = await profileModel.create({
-        userID: `F ${message.author.id}`,
+        userID: message.author.id,
         name: message.author.username,
         avatar: message.author.avatar,
         banner: message.author.banner,
         bot: message.author.bot,
-        tag: tag,
-        uni: rndInt,
-      });
-      profile.save();
-    }
-  } catch (err) {
-    console.log(err);
-    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
-  }
-  // Scrap
-  let scrapData;
-  try {
-    scrapData = await scrapModel.findOne({ userID: message.author.id });
-    if (!scrapData) {
-      let scrap = await scrapModel.create({
-        userID: `G ${message.author.id}`,
-        name: message.author.username,
         tag: tag,
         uni: rndInt,
 
@@ -175,14 +42,37 @@ module.exports = async (Discord, client, message) => {
         scraprare: 0,
         scrapuncommon: 0,
         scrapcommon: 0,
+
+        music1: "https://www.youtube.com/",
+        music2: "https://www.youtube.com/",
+        music3: "https://www.youtube.com/",
+        music4: "https://www.youtube.com/",
+        music5: "https://www.youtube.com/",
+        music6: "https://www.youtube.com/",
+
+        level: 0,
+        experience: 0,
+        
+        wallet: 0,
+        bank: 0,
+
+        boxesultra: 0,
+        boxessuper: 0,
+        boxesnormal: 0,
+
+        shardsdiamond: 0,
+        shardsplatinum: 0,
+        shardsgold: 0,
+        shardssilver: 0,
+        shardsbronze: 0,
+        shardsiron: 0,
       });
-      scrap.save();
+      profile.save();
     }
   } catch (err) {
     console.log(err);
     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
   }
-
 
   //Inc on message send
   // try {

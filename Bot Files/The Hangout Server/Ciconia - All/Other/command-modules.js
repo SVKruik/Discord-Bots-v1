@@ -340,10 +340,10 @@
 
 // if (args[0] === "test") {
 //   try {
-//     const newbal = economyData.wallet - test
-//     if (test > economyData.wallet)
+//     const newbal = profileData.wallet - test
+//     if (test > profileData.wallet)
 //       return message.channel.send(config.basemessages.messagescoinsmissing);
-//     await economyModel.findOneAndUpdate(
+//     await profileModel.findOneAndUpdate(
 //       {
 //         userID: message.author.id,
 //       },
@@ -355,7 +355,7 @@
 //       }
 //     );
 //     if (amountroles === 1) {
-//       message.channel.send(`Message \`${economyData.wallet}\`.`)
+//       message.channel.send(`Message \`${profileData.wallet}\`.`)
 //     }
 //   } catch (err) {
 //     console.log(err);
@@ -372,7 +372,7 @@
 // //// Module 7: Display something from the database
 
 // message.channel.send(
-//   `${message.author.username}, your X is \`${economyData.X}\`.`
+//   `${message.author.username}, your X is \`${profileData.X}\`.`
 // );
 
 // //// Module 8: Only numbers allowed

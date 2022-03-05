@@ -1,5 +1,5 @@
-const levelModel = require("../models/levelSchema");
 const config = require("./../Other/config.js");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "setlevelandexperience",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldownsetfulllevel,
   permissions: config.permissions.permissionsetfulllevel,
   description: "Reset the level and experience of a member.",
-  async execute(message, args, cmd, client, discord, levelData) {
+  async execute(message, args, cmd, client, discord, profileData) {
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };

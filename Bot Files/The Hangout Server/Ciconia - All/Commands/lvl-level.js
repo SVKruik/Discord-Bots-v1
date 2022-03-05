@@ -1,5 +1,5 @@
-const levelModel = require("../models/levelSchema");
 const config = require("./../Other/config.js");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "level",
@@ -7,8 +7,8 @@ module.exports = {
   cooldown: config.cooldown.cooldownlevel,
   permissions: config.permissions.permissionlevel,
   description: "Displays your current server level.",
-  async execute(message, args, cmd, client, Discord, levelData) {
-    const flagmessage = `${message.author.username}, this is your Server Level: \`${levelData.level}\`.`
+  async execute(message, args, cmd, client, Discord, profileData) {
+    const flagmessage = `${message.author.username}, this is your Server Level: \`${profileData.level}\`.`
     const flags = ["everyone", "here", "delete"];
 
     if (!args[0]) {

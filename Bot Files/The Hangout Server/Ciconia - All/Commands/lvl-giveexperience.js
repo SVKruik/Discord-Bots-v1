@@ -1,5 +1,5 @@
-const levelModel = require("../models/levelSchema");
 const config = require("./../Other/config.js");
+const profileModel = require("../models/profileSchema");
 
 module.exports = {
   name: "giveexperience",
@@ -7,7 +7,7 @@ module.exports = {
   cooldown: config.cooldown.cooldowngiveexperience,
   permissions: config.permissions.permissiongiveexperience,
   description: "Give a player extra levels.",
-  async execute(message, args, cmd, client, discord, levelData) {
+  async execute(message, args, cmd, client, discord, profileData) {
    if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
