@@ -120,6 +120,7 @@ exports.basemessages = {
   messagesrealnumber: "Please enter a real number.",
   messagesamountmissing: "You are missing the amount to clear.",
   messageemojierr: "There was an error with the emoji.",
+  messagesboxesmissing: "You don't have any boxes of this type."
 }
 
 exports.commandclear = {
@@ -314,7 +315,8 @@ exports.aliases = {
   aliasesunblind: [], // Unblind
   aliasesunmute: [], // Unmute
   aliasesuptime: [], // Uptime
-  aliasesboxes: ["boxescheck", "boxesbal", "balboxes", "boxesbalance", "boxe", "balanceboxes"],
+  aliasesboxes: ["boxescheck", "boxesbal", "balboxes", "boxesbalance", "box", "balanceboxes"], // Boxes
+  aliasesboxesopen: ["openboxes", "openbox", "boxesopen", "boxopen", "boxesop", "boxop"], // Boxes Open
   aliasescolor: ["clr", "colour"], // Color
   aliasescolorremove: ["clrremove", "colourremove", "clrrmv"], // Color Remove
   aliasesrolecolor1: ["rlclr1"], // Rolecolor1
@@ -438,6 +440,7 @@ exports.cooldown = {
   cooldownunmute: B,
   cooldownuptime: B,
   cooldownboxes: G,
+  cooldownboxesopen: 1,
   cooldowncolor: B,
   cooldowncolorremove: B,
   cooldownrolecolor1: B,
@@ -524,6 +527,7 @@ exports.permissions = {
   permissionunmute: I,
   permissionuptime: I,
   permissionboxes: J,
+  permissionboxesopen: J,
   permissioncolor: J,
   permissioncolorremove: J,
   permissionrolecolor1: I,
