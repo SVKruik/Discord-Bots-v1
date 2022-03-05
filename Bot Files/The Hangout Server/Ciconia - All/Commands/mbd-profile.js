@@ -16,20 +16,17 @@ module.exports = {
       .setImage(config.embed.embedimage)
       .setDescription(config.embeds.descriptionprofile)
       .addFields(
-        { name: config.embeds.nameprofile1, value: "> **General:**" },
-        { name: config.embeds.nameprofile2, value: `${message.author.username}` },
-        { name: config.embeds.nameprofile3, value: `#${tag}` },
-        { name: config.embeds.nameprofile4, value: `${profileData.userID}` },
-        { name: config.embeds.nameprofile5, value: `${profileData.serverID}` },
-        { name: config.embeds.nameprofile6, value: "> **Economy:**" },
-        { name: config.embeds.nameprofile7, value: `${profileData.wallet}` },
-        { name: config.embeds.nameprofile8, value: `${profileData.bank}` },
-        { name: config.embeds.nameprofile9, value: "> **Level:**" },
-        { name: config.embeds.nameprofile10, value: `${profileData.level}` },
-        { name: config.embeds.nameprofile11, value: `${profileData.experience}` },
-        { name: config.embeds.nameprofile12, value: "> **Technical:**" },
-        { name: config.embeds.nameprofile13, value: `${profileData._id}` },
-        { name: config.embeds.nameprofile14, value: `${profileData.__v}` },
+        { name: config.embeds.nameprofile1, value: "> **Data:**" },
+        { name: config.embeds.nameprofile2, value: profileData.userID },
+        { name: config.embeds.nameprofile3, value: profileData.name },
+        { name: config.embeds.nameprofile4, value: profileData.avatar },
+        { name: config.embeds.nameprofile5, value: profileData.banner },
+        { name: config.embeds.nameprofile6, value: profileData.bot },
+        { name: config.embeds.nameprofile7, value: profileData.tag },
+        { name: config.embeds.nameprofile8, value: profileData.uni },
+        { name: config.embeds.nameprofile9, value: "> **Technical:**" },
+        { name: config.embeds.nameprofile10, value: `${profileData._id}` },
+        { name: config.embeds.nameprofile11, value: `${profileData.__v}` },
       )
       .setFooter(config.embed.embedfooter);
 
