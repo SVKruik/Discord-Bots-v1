@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissionkick,
   description: "Kick a irritating person, that you don't hate enough to ban.",
   execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const target = message.mentions.users.first();
     const username = message.client.user.username;
 

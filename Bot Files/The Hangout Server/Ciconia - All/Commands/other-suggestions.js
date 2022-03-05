@@ -7,6 +7,10 @@ module.exports = {
     permissions: config.permissions.permissionsuggestions,
     description: "Suggest something new in the dedicated channel.",
       async execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
         const channel = client.channels.cache.find(channel => channel.id === config.base.basesuggechannelid)
         const messageArgs = args.join(' ');
 

@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissionclear,
   description: "Bulk delete messages.",
     async execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const max = config.commandclear.commandclearmax;
     const min = config.commandclear.commandclearmin;
 

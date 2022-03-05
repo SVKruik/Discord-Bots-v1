@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissionerrorcode,
   description: "See what error code means what.",
   execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const err1 = config.errorcodes.err1
     const err2 = config.errorcodes.err2
     const err3 = config.errorcodes.err3

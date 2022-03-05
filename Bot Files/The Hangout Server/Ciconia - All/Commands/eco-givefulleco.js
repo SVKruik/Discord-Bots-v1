@@ -8,6 +8,10 @@ module.exports = {
   permissions: config.permissions.permissiongivefulleco,
   description: "Increase the balance of both the bank and wallet account.",
     async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -32,11 +36,6 @@ module.exports = {
           },
         }
       );
-
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: ${command.name}`)
 
       const flagmessage = `The targeted member has been given \`${amount}\` amount of coins in both of their accounts.`
       const flags = ["everyone", "here", "delete"];

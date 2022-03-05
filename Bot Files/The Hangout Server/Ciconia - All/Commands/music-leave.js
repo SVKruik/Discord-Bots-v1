@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissionmusic,
   description: "Stop the music, and leave the call.",
     async execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const voiceChannel = message.member.voice.channel;
     const channel = config.base.basemusicchannelid;
     if (message.channel.id == channel) {

@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissiontitreerverdunning,
   description: "Calculate some science math.",
   execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const pipet = 10;
     const verdunningsfactor = 10;
     const titreerml = 11.11;

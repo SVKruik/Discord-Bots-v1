@@ -8,6 +8,10 @@ module.exports = {
   permissions: config.permissions.permissionwithdraw,
   description: "Bank to Wallet",
     async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const amount = args[0];
     if (amount <= 0)
       return message.channel.send(config.basemessages.messagesgreaterone);
@@ -27,11 +31,6 @@ module.exports = {
           },
         }
       );
-
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: ${command.name}`)
 
       const flagmessage = `You withdrew \`${amount}\` coins into your wallet.`
       const flags = ["everyone", "here", "delete"];

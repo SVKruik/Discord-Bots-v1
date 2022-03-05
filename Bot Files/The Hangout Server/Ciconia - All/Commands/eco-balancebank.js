@@ -8,6 +8,10 @@ module.exports = {
   permissions: config.permissions.permissionbalancebank,
   description: "Display your bank account balance.",
     async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
 
 
     const flagmessage = `${message.author.username}, this is your current bank balance : \`${profileData.bank}\`.`

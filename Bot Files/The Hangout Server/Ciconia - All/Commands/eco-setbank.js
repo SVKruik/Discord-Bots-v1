@@ -8,6 +8,10 @@ module.exports = {
   permissions: config.permissions.permissionsetbank,
   description: "Reset the balance of a member.",
     async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -30,11 +34,6 @@ module.exports = {
           },
         }
       );
-
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: ${command.name}`)
 
       const flagmessage = `The targeted member's bank worth is now \`${amount}\`.`
       const flags = ["everyone", "here", "delete"];

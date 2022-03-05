@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissionuptime,
   description: "Check the uptime of the bot.",
   execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const days = Math.floor(client.uptime / 86400000);
     const hours = Math.floor(client.uptime / 3600000) % 24;
     const minutes = Math.floor(client.uptime / 60000) % 60;

@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissiontestannouncements,
   description: "Test announce something using the bot.",
     async execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const channel = client.channels.cache.find(channel => channel.id === config.base.basebottestingthreechannelid)
     const messageArgs = args.join(' ');
 

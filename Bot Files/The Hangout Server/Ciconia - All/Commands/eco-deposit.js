@@ -8,6 +8,10 @@ module.exports = {
   permissions: config.permissions.permissiondeposit,
   description: "Deposit coins from your wallet to your bank.",
     async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
 
 
     const amount = args[0];

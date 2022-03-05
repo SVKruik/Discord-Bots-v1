@@ -8,6 +8,10 @@ module.exports = {
   permissions: config.permissions.permissionsetfulleco,
   description: "Reset the balance of both accounts of a member.",
     async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
     if (!args[0]) {
       return message.channel.send(config.basemessages.messagesmembermention)
     };
@@ -31,11 +35,6 @@ module.exports = {
           },
         }
       );
-
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: ${command.name}`)
 
       const flagmessage = `The targeted member's balance is now \`${amount}\`. This applies to both accounts.`
       const flags = ["everyone", "here", "delete"];

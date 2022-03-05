@@ -8,6 +8,10 @@ module.exports = {
   permissions: config.permissions.permissionlevelstats,
   description: "Displays your current server level and experience.",
   async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
 
     const flagmessage = `${message.author.username}, your current Server Level is \`${profileData.level}\` and your amount of Server Experience is \`${profileData.experience}\`.`
     const flags = ["everyone", "here", "delete"];

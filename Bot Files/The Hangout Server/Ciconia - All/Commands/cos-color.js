@@ -8,6 +8,10 @@ module.exports = {
     permissions: config.permissions.permissioncolor,
     description: "Color command",
       async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
         const whiteTeamRole = message.guild.roles.cache.find(
             (role) => role.id === "910544967582253086"
         );

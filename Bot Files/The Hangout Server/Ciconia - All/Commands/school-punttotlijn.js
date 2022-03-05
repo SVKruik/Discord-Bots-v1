@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissionpunttotlijn,
   description: "Calculate distance between a point and a line.",
   execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const punt1 = "A";
     const coordpunt1x = 5;
     const coordpunt1y = 5;

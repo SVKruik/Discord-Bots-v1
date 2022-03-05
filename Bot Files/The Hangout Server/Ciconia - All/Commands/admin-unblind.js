@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissionunblind,
   description: "This command unblinds members.",
   execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const target = message.mentions.users.first();
     if (target) {
       const blindRole = message.guild.roles.cache.find(

@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissioncirkelvergelijking,
   description: "Calculate a circle equation.",
   execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const a = args[0];
     const b = args[1];
     const c = args[2];

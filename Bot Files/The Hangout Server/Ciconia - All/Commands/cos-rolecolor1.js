@@ -7,6 +7,10 @@ module.exports = {
   permissions: config.permissions.permissionrolecolor1,
   description: "Role color choose page 1.",
     async execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const channel = config.base.basecolorchannelid;
     const whiteTeamRole = message.guild.roles.cache.find(
       (role) => role.id === "910544967582253086"

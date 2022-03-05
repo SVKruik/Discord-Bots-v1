@@ -8,6 +8,10 @@ module.exports = {
   permissions: config.permissions.permissionbalancewallet,
   description: "Display your wallet balance.",
     async execute(message, args, cmd, client, Discord, profileData) {
+      const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(`${message.author.username} used this command: || ${command.name} ||`)
 
 
     const flagmessage = `${message.author.username}, this is your current wallet balance : \`${profileData.wallet}\`.`

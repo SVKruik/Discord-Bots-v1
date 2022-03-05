@@ -8,6 +8,10 @@ module.exports = {
     permissions: config.permissions.permissionhaversine,
     description: "Calculate the distance between two GPS coordinates.",
     execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
 
         if (!args[0]) {
             return message.channel.send("You are missing your \`latitude\` of \`A\`.")

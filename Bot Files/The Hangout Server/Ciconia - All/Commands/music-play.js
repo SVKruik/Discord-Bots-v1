@@ -10,6 +10,10 @@ module.exports = {
   permissions: config.permissions.permissionmusic,
   description: "Music Bot via YouTube links.",
     async execute(message, args, cmd, client, Discord) {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const voice_channel = message.member.voice.channel;
     if (!voice_channel) return message.channel.send(config.basemessages.messagesvcrequired);
 
