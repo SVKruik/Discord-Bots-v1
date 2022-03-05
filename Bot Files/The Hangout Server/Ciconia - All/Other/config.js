@@ -64,6 +64,23 @@ exports.colorcost = { // 16 types
   extra: 400,
 }
 
+exports.boxchance = {
+  ultraexotic: 99,
+  ultralegendary: 95,
+  ultraepic: 80,
+  ultrarare: 55,
+  
+  superlegendary: 99,
+  superepic: 95,
+  superrare: 80,
+  superuncommon: 60,
+  supercommon: 35,
+
+  normalrare: 99,
+  normaluncommon: 80,
+  normalcommon: 50,
+}
+
 exports.embed = {
   embedfooter: "Statistics and Bot provided by Complex.",
   embedimage: "https://i.imgur.com/neCyTDH.png",
@@ -176,6 +193,10 @@ exports.commandticket = {
 exports.embeds = {
   //Titles
   titleboxes: "Boxes Balance",
+  titleboxeschance1: "Box Probabilities",
+  titleboxeschance2: "Box Probabilities: Ultra",
+  titleboxeschance3: "Box Probabilities: Super",
+  titleboxeschance4: "Box Probabilities: Normal",
   titlebotstats: "Bot Statistics",
   titledonate: "Donate",
   titleembedtemplate: "Bot Template",
@@ -219,6 +240,21 @@ exports.embeds = {
   nameboxes1: "Ultra Boxes", // Boxes
   nameboxes2: "Super Boxes",
   nameboxes3: "Normal Boxes",
+  nameboxeschances1: "**--------**", // Box Chances
+  nameboxeschances2: "Exotic:",
+  nameboxeschances3: "Legendary:",
+  nameboxeschances4: "Epic:",
+  nameboxeschances5: "Rare:",
+  nameboxeschances6: "**--------**",
+  nameboxeschances7: "Legendary:",
+  nameboxeschances8: "Epic:",
+  nameboxeschances9: "Rare:",
+  nameboxeschances10: "Uncommon:",
+  nameboxeschances11: "Common:",
+  nameboxeschances12: "**--------**",
+  nameboxeschances13: "Rare:",
+  nameboxeschances14: "Uncommon:",
+  nameboxeschances15: "Common:",
   namebotstats1: "Uptime:", // Botstats
   namebotstats2: "API Ping:",
   namebotstats3: "Bot Ping:",
@@ -231,7 +267,7 @@ exports.embeds = {
   nameembedtemplate1: "Name: A", // Embed Template
   nameembedtemplate2: "Name: B",
   namegithub1: "Main link:", // GitHub
-  namegithub2: "---",
+  namegithub2: "**--------**",
   namegithub3: "Child Servers:",
   namegithub4: "Issues:",
   namegithub5: "Update Log:",
@@ -241,13 +277,13 @@ exports.embeds = {
   namemcserver4: "Game Version:",
   namemcserver5: "Port:",
   namemcserver6: "Mods:",
-  nameprofile1: "---", // Profile
+  nameprofile1: "**--------**", // Profile
   nameprofile2: "UserID:",
   nameprofile3: "Name:",
   nameprofile4: "Tag:",
   nameprofile5: "Uni:",
   nameprofile6: "Bot:",
-  nameprofile7: "---",
+  nameprofile7: "**--------**",
   nameprofile8: "Document ID",
   nameprofile9: "Document Version:",
   namerules1: "Rule 1:", // Rules
@@ -261,11 +297,11 @@ exports.embeds = {
   namehaversine1: "Your A:", // Haversine
   namehaversine2: "Your B:",
   namehaversine3: "Distances:",
-  namehaversine4: "> **------**",
-  namehaversine5: "> **------**",
-  namehaversine6: "> **------**",
-  namehaversine7: "> **------**",
-  namehaversine8: "> **------**",
+  namehaversine4: "> **--------**",
+  namehaversine5: "> **--------**",
+  namehaversine6: "> **--------**",
+  namehaversine7: "> **--------**",
+  namehaversine8: "> **--------**",
   namesuggestions1: "**New Suggestion:**", // Suggestions
   namescraps1: "Exotic Scraps", // Scraps
   namescraps2: "Legendary Scraps",
@@ -317,6 +353,7 @@ exports.aliases = {
   aliasesuptime: [], // Uptime
   aliasesboxes: ["boxescheck", "boxesbal", "balboxes", "boxesbalance", "box", "balanceboxes"], // Boxes
   aliasesboxesopen: ["openboxes", "openbox", "boxesopen", "boxopen", "boxesop", "boxop"], // Boxes Open
+  aliasesboxeschance: ["boxchances", "boxchance", "chancebox", "chancesbox", "bxch"], // Box Chance
   aliasescolor: ["clr", "colour"], // Color
   aliasescolorremove: ["clrremove", "colourremove", "clrrmv"], // Color Remove
   aliasesrolecolor1: ["rlclr1"], // Rolecolor1
@@ -440,6 +477,7 @@ exports.cooldown = {
   cooldownunmute: B,
   cooldownuptime: B,
   cooldownboxes: G,
+  cooldownboxeschance: F,
   cooldownboxesopen: 1,
   cooldowncolor: B,
   cooldowncolorremove: B,
@@ -527,6 +565,7 @@ exports.permissions = {
   permissionunmute: I,
   permissionuptime: I,
   permissionboxes: J,
+  permissionboxeschance: J,
   permissionboxesopen: J,
   permissioncolor: J,
   permissioncolorremove: J,

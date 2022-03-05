@@ -36,10 +36,10 @@ module.exports = {
         maxultraexotic = Math.floor(2);
         const randomultraexotic = Math.floor(Math.random() * (maxultraexotic - minultraexotic + 1) + minultraexotic);
 
-        const chanceultrarare = 55
-        const chanceultraepic = 80
-        const chanceultralegendary = 95
-        const chanceultraexotic = 99
+        const chanceultrarare = config.boxchance.ultrarare
+        const chanceultraepic = config.boxchance.ultraepic
+        const chanceultralegendary = config.boxchance.ultralegendary
+        const chanceultraexotic = config.boxchance.ultraexotic
 
         // Super Box
         minsupercommon = Math.ceil(1);
@@ -62,11 +62,11 @@ module.exports = {
         maxsuperlegendary = Math.floor(1);
         const randomsuperlegendary = Math.floor(Math.random() * (maxsuperlegendary - minsuperlegendary + 1) + minsuperlegendary);
 
-        const chancesupercommon = 35
-        const chancesuperuncommon = 60
-        const chancesuperrare = 75
-        const chancesuperepic = 90
-        const chancesuperlegendary = 99
+        const chancesupercommon = config.boxchance.supercommon
+        const chancesuperuncommon = config.boxchance.superuncommon
+        const chancesuperrare = config.boxchance.superrare
+        const chancesuperepic = config.boxchance.superepic
+        const chancesuperlegendary = config.boxchance.superlegendary
 
         // Normal Box
         minnormalcommon = Math.ceil(1);
@@ -81,9 +81,9 @@ module.exports = {
         maxnormalrare = Math.floor(15);
         const randomnormalrare = Math.floor(Math.random() * (maxnormalrare - minnormalrare + 1) + minnormalrare);
 
-        const chancenormalcommon = 50
-        const chancenormaluncommon = 80
-        const chancenormalrare = 99
+        const chancenormalcommon = config.boxchance.normalcommon
+        const chancenormaluncommon = config.boxchance.normaluncommon
+        const chancenormalrare = config.boxchance.normalrare
 
         if (args[0] === "ultra") {
             try {
