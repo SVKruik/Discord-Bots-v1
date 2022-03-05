@@ -174,6 +174,7 @@ exports.commandticket = {
 
 exports.embeds = {
   //Titles
+  titleboxes: "Boxes Balance",
   titlebotstats: "Bot Statistics",
   titledonate: "Donate",
   titleembedtemplate: "Bot Template",
@@ -191,6 +192,8 @@ exports.embeds = {
   titlesubstitutie: "Substitutie Vergelijking",
   titletitreernormaal: "Titreer Berekening",
   titletitreerverdunning: "Titreer Verdunning Berekening",
+  titlescraps: "Scraps Balance",
+  titleshards: "Shards Balance",
 
   //Descriptions
   descriptionbotstats: "These are my current stats.",
@@ -212,6 +215,9 @@ exports.embeds = {
   descriptiontitreerverdunning: "Een titreer berekening met verdunning maken.",
 
   //Names
+  nameboxes1: "Ultra Boxes", // Boxes
+  nameboxes2: "Super Boxes",
+  nameboxes3: "Normal Boxes",
   namebotstats1: "Uptime:", // Botstats
   namebotstats2: "API Ping:",
   namebotstats3: "Bot Ping:",
@@ -228,7 +234,7 @@ exports.embeds = {
   namegithub3: "Child Servers:",
   namegithub4: "Issues:",
   namegithub5: "Update Log:",
-  namemcserver1: "server IP:",
+  namemcserver1: "server IP:", // MC Server
   namemcserver2: "Online Players:",
   namemcserver3: "Max Players:",
   namemcserver4: "Game Version:",
@@ -243,15 +249,15 @@ exports.embeds = {
   nameprofile7: "---",
   nameprofile8: "Document ID",
   nameprofile9: "Document Version:",
-  namerules1: "Rule 1:",
+  namerules1: "Rule 1:", // Rules
   namerules2: "Rule 2:",
   namerules3: "Rule 3:",
   namerules4: "Rule 4:",
   namerules5: "Rule 5:",
-  nameserverip1: "Server IP:",
+  nameserverip1: "Server IP:", // ServerIP
   nameserverip2: "Game Version:",
   nameserverip3: "Mods:",
-  namehaversine1: "Your A:",
+  namehaversine1: "Your A:", // Haversine
   namehaversine2: "Your B:",
   namehaversine3: "Distances:",
   namehaversine4: "> **------**",
@@ -259,14 +265,21 @@ exports.embeds = {
   namehaversine6: "> **------**",
   namehaversine7: "> **------**",
   namehaversine8: "> **------**",
-  namesuggestions1: "**New Suggestion:**",
+  namesuggestions1: "**New Suggestion:**", // Suggestions
+  namescraps1: "Exotic Scraps", // Scraps
+  namescraps2: "Legendary Scraps",
+  namescraps3: "Epic Scraps",
+  namescraps4: "Rare Scraps",
+  namescraps5: "Uncommon Scraps",
+  namescraps6: "Common Scraps",
+  nameshards1: "Diamond Shards:", // Shards
+  nameshards2: "Platinum Shards:",
+  nameshards3: "Gold Shards:",
+  nameshards4: "Silver Shards:",
+  nameshards5: "Bronze Shards:",
+  nameshards6: "Iron Shards:",
 
-  //Values
-  // valuebotstats1: `My current uptime is ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`, // Botstats
-  // valuebotstats2: `${Math.round(client.ws.ping)} ms`,
-  // valuebotstats3: `${Date.now() - message.createdTimestamp} ms`,
-  // valuebotstats4: `${message.guild.id}`,
-  // valuebotstats5: `${commands}`,
+  //Values,
   valuebotstats6: `${version}`,
   valuebotstats7: `<@422704748488163332>`,
   valuedonate1: "https://ko-fi.com/multicubecommunity", // Donate
@@ -278,20 +291,6 @@ exports.embeds = {
   valuegithub3: "https://github.com/PuffinKwadraat/MultiCube-Public/tree/main/Minecraft%20Servers/Child%20Servers",
   valuegithub4: "https://github.com/PuffinKwadraat/MultiCube-Public/issues",
   valuegithub5: "https://github.com/PuffinKwadraat/MultiCube-Public/blob/main/Update%20Log.md",
-  valueprofile1: "> **General:**", // Profile
-  // valueprofile2: `${message.author.username}`,
-  // valueprofile3: `#${tag}`,
-  // valueprofile4: `${profileData.userID}`,
-  // valueprofile5: `${profileData.serverID}`,
-  valueprofile6: "> **Economy:**",
-  // valueprofile7: `${profileData.wallet}`,
-  // valueprofile8: `${profileData.bank}`,
-  valueprofile9: "> **Level:**",
-  // valueprofile10: `${profileData.level}`,
-  // valueprofile11: `${profileData.experience}`,
-  valueprofile12: "> **Technical:**",
-  // valueprofile13: `${profileData._id}`,
-  // valueprofile14: `${profileData.__v}`,
   valuerules1: "Treat everyone with respect.",
   valuerules2: "Do not spam.",
   valuerules3: "Do not advertise yourself.",
@@ -300,15 +299,6 @@ exports.embeds = {
   valueserverip1: "multicube.aternos.me",
   valueserverip2: "1.16.5",
   valueserverip3: "None",
-  // valuehaversine1: `Latitude: ${args[0]}, Latitude ${args[1]}.`,
-  // valuehaversine2: `Latitude: ${args[2]}, Longitude ${args[3]}.`,
-  // valuehaversine3: `\`${haverroundkmr}\` kilometers.`,
-  // valuehaversine4: `\`${haverroundmir}\` miles.`,
-  // valuehaversine5: `\`${haverroundnmr}\` nautical miles.`,
-  // valuehaversine6: `\`${haverroundydr}\` yards.`,
-  // valuehaversine7: `\`${haverroundftr}\` feet.`,
-  // valuehaversine8: `\`${haverroundmr}\` meters.`,
-  // valuesuggestions1: `${messageArgs}`
 }
 
 exports.aliases = {
@@ -324,6 +314,7 @@ exports.aliases = {
   aliasesunblind: [], // Unblind
   aliasesunmute: [], // Unmute
   aliasesuptime: [], // Uptime
+  aliasesboxes: ["boxescheck", "boxesbal", "balboxes", "boxesbalance", "boxe", "balanceboxes"],
   aliasescolor: ["clr", "colour"], // Color
   aliasescolorremove: ["clrremove", "colourremove", "clrrmv"], // Color Remove
   aliasesrolecolor1: ["rlclr1"], // Rolecolor1
@@ -423,6 +414,8 @@ exports.aliases = {
   aliasessubstitutie: ["substitueren", "subst"], // Substitutie
   aliasestitreernormaal: ["titnorm", "titnormaal"], // Titratie Normaal
   aliasestitreerverdunning: ["titverdun", "titverdunning"], // Titratie Verdunning
+  aliasesscraps: ["scrapscheck", "scrapsbal", "balscraps", "scrapsbalance", "scrap", "balancescraps"], // Scraps
+  aliasesshards: ["shardscheck", "shardsbal", "balshards", "shardsbalance", "shard", "balanceshards"], // Shards
 };
 
 const A = 84000; // Daily
@@ -444,6 +437,7 @@ exports.cooldown = {
   cooldownunblind: B,
   cooldownunmute: B,
   cooldownuptime: B,
+  cooldownboxes: G,
   cooldowncolor: B,
   cooldowncolorremove: B,
   cooldownrolecolor1: B,
@@ -511,6 +505,8 @@ exports.cooldown = {
   cooldownsubstitutie: G,
   cooldowntitreernormaal: G,
   cooldowntitreerverdunning: G,
+  cooldownscraps: G,
+  cooldownshards: G,
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -527,6 +523,7 @@ exports.permissions = {
   permissionunblind: I,
   permissionunmute: I,
   permissionuptime: I,
+  permissionboxes: J,
   permissioncolor: J,
   permissioncolorremove: J,
   permissionrolecolor1: I,
@@ -593,4 +590,6 @@ exports.permissions = {
   permissionsubstitutie: J,
   permissiontitreernormaal: J,
   permissiontitreerverdunning: J,
+  permissionscraps: J,
+  permissionshards: J,
 };
