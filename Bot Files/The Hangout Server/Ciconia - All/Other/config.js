@@ -69,7 +69,7 @@ exports.boxchance = {
   ultralegendary: 95,
   ultraepic: 80,
   ultrarare: 55,
-  
+
   superlegendary: 99,
   superepic: 95,
   superrare: 80,
@@ -78,6 +78,23 @@ exports.boxchance = {
 
   normalrare: 99,
   normaluncommon: 80,
+  normalcommon: 50,
+}
+
+exports.scrapamount = {
+  ultraexotic: 2,
+  ultralegendary: 10,
+  ultraepic: 40,
+  ultrarare: 60,
+
+  superlegendary: 1,
+  superepic: 5,
+  superrare: 20,
+  superuncommon: 40,
+  supercommon: 60,
+
+  normalrare: 15,
+  normaluncommon: 30,
   normalcommon: 50,
 }
 

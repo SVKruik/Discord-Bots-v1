@@ -21,19 +21,19 @@ module.exports = {
 
         // Ultra Box
         minultrarare = Math.ceil(1);
-        maxultrarare = Math.floor(40);
+        maxultrarare = Math.floor(config.scrapamount.ultrarare);
         const randomultrarare = Math.floor(Math.random() * (maxultrarare - minultrarare + 1) + minultrarare);
 
         minultraepic = Math.ceil(1);
-        maxultraepic = Math.floor(20);
+        maxultraepic = Math.floor(config.scrapamount.ultraepic);
         const randomultraepic = Math.floor(Math.random() * (maxultraepic - minultraepic + 1) + minultraepic);
 
         minultralegendary = Math.ceil(1);
-        maxultralegendary = Math.floor(5);
+        maxultralegendary = Math.floor(config.scrapamount.ultralegendary);
         const randomultralegendary = Math.floor(Math.random() * (maxultralegendary - minultralegendary + 1) + minultralegendary);
 
         minultraexotic = Math.ceil(1);
-        maxultraexotic = Math.floor(2);
+        maxultraexotic = Math.floor(config.scrapamount.ultraexotic);
         const randomultraexotic = Math.floor(Math.random() * (maxultraexotic - minultraexotic + 1) + minultraexotic);
 
         const chanceultrarare = config.boxchance.ultrarare
@@ -43,23 +43,23 @@ module.exports = {
 
         // Super Box
         minsupercommon = Math.ceil(1);
-        maxsupercommon = Math.floor(40);
+        maxsupercommon = Math.floor(config.scrapamount.supercommon);
         const randomsupercommon = Math.floor(Math.random() * (maxsupercommon - minsupercommon + 1) + minsupercommon);
 
         minsuperuncommon = Math.ceil(1);
-        maxsuperuncommon = Math.floor(25);
+        maxsuperuncommon = Math.floor(config.scrapamount.superuncommon);
         const randomsuperuncommon = Math.floor(Math.random() * (maxsuperuncommon - minsuperuncommon + 1) + minsuperuncommon);
 
         minsuperrare = Math.ceil(1);
-        maxsuperrare = Math.floor(10);
+        maxsuperrare = Math.floor(config.scrapamount.superrare);
         const randomsuperrare = Math.floor(Math.random() * (maxsuperrare - minsuperrare + 1) + minsuperrare);
 
         minsuperepic = Math.ceil(1);
-        maxsuperepic = Math.floor(3);
+        maxsuperepic = Math.floor(config.scrapamount.superepic);
         const randomsuperepic = Math.floor(Math.random() * (maxsuperepic - minsuperepic + 1) + minsuperepic);
 
         minsuperlegendary = Math.ceil(1);
-        maxsuperlegendary = Math.floor(1);
+        maxsuperlegendary = Math.floor(config.scrapamount.superlegendary);
         const randomsuperlegendary = Math.floor(Math.random() * (maxsuperlegendary - minsuperlegendary + 1) + minsuperlegendary);
 
         const chancesupercommon = config.boxchance.supercommon
@@ -70,15 +70,15 @@ module.exports = {
 
         // Normal Box
         minnormalcommon = Math.ceil(1);
-        maxnormalcommon = Math.floor(50);
+        maxnormalcommon = Math.floor(config.scrapamount.normalcommon);
         const randomnormalcommon = Math.floor(Math.random() * (maxnormalcommon - minnormalcommon + 1) + minnormalcommon);
 
         minnormaluncommon = Math.ceil(1);
-        maxnormaluncommon = Math.floor(30);
+        maxnormaluncommon = Math.floor(config.scrapamount.normaluncommon);
         const randomnormaluncommon = Math.floor(Math.random() * (maxnormaluncommon - minnormaluncommon + 1) + minnormaluncommon);
 
         minnormalrare = Math.ceil(1);
-        maxnormalrare = Math.floor(15);
+        maxnormalrare = Math.floor(config.scrapamount.normalrare);
         const randomnormalrare = Math.floor(Math.random() * (maxnormalrare - minnormalrare + 1) + minnormalrare);
 
         const chancenormalcommon = config.boxchance.normalcommon

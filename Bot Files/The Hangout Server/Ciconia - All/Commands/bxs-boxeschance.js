@@ -27,70 +27,85 @@ module.exports = {
         const chancenormalcommon = config.boxchance.normalcommon
         const chancenormaluncommon = config.boxchance.normaluncommon - config.boxchance.normalcommon
         const chancenormalrare = config.boxchance.normalrare - config.boxchance.normaluncommon + 1
+        //
+        const amountultrarare = config.scrapamount.ultrarare
+        const amountultraepic = config.scrapamount.ultraepic
+        const amountultralegendary = config.scrapamount.ultralegendary
+        const amountultraexotic = config.scrapamount.ultraexotic
+
+        const amountsupercommon = config.scrapamount.supercommon
+        const amountsuperuncommon = config.scrapamount.superuncommon
+        const amountsuperrare = config.scrapamount.superrare
+        const amountsuperepic = config.scrapamount.superepic
+        const amountsuperlegendary = config.scrapamount.superlegendary
+
+        const amountnormalcommon = config.scrapamount.normalcommon
+        const amountnormaluncommon = config.scrapamount.normaluncommon
+        const amountnormalrare = config.scrapamount.normalrare
 
         const newEmbed1 = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
             .setTitle(config.embeds.titleboxeschance1)
             .setImage(config.embed.embedimage)
-            .setDescription(`Here are all the probabilities of the different boxes you can buy and open.`)
+            .setDescription(`Here are all the probabilities of the different boxes you can buy and open. It also shows you the \`maximum\` amount of scraps you can get for each box and rarity. The minimum is \`1\` everywhere.`)
             .addFields(
                 { name: config.embeds.nameboxeschances1, value: `> **Ultra Box**` },
-                { name: config.embeds.nameboxeschances2, value: `\`${chanceultraexotic}%\`` },
-                { name: config.embeds.nameboxeschances3, value: `\`${chanceultralegendary}%\`` },
-                { name: config.embeds.nameboxeschances4, value: `\`${chanceultraepic}%\`` },
-                { name: config.embeds.nameboxeschances5, value: `\`${chanceultrarare}%\`` },
+                { name: config.embeds.nameboxeschances2, value: `\`${chanceultraexotic}%\` **---** \`${amountultraexotic}\`` },
+                { name: config.embeds.nameboxeschances3, value: `\`${chanceultralegendary}%\` **---** \`${amountultralegendary}\`` },
+                { name: config.embeds.nameboxeschances4, value: `\`${chanceultraepic}%\` **---** \`${amountultraepic}\`` },
+                { name: config.embeds.nameboxeschances5, value: `\`${chanceultrarare}%\` **---** \`${amountultrarare}\`` },
                 { name: config.embeds.nameboxeschances6, value: `> **Super Box**` },
-                { name: config.embeds.nameboxeschances7, value: `\`${chancesuperlegendary}%\`` },
-                { name: config.embeds.nameboxeschances8, value: `\`${chancesuperepic}%\`` },
-                { name: config.embeds.nameboxeschances9, value: `\`${chancesuperrare}%\`` },
-                { name: config.embeds.nameboxeschances10, value: `\`${chancesuperuncommon}%\`` },
-                { name: config.embeds.nameboxeschances11, value: `\`${chancesupercommon}%\`` },
+                { name: config.embeds.nameboxeschances7, value: `\`${chancesuperlegendary}%\` **---** \`${amountsuperlegendary}\`` },
+                { name: config.embeds.nameboxeschances8, value: `\`${chancesuperepic}%\` **---** \`${amountsuperepic}\`` },
+                { name: config.embeds.nameboxeschances9, value: `\`${chancesuperrare}%\` **---** \`${amountsuperrare}\`` },
+                { name: config.embeds.nameboxeschances10, value: `\`${chancesuperuncommon}%\` **---** \`${amountsuperuncommon}\`` },
+                { name: config.embeds.nameboxeschances11, value: `\`${chancesupercommon}%\` **---** \`${amountsupercommon}\`` },
                 { name: config.embeds.nameboxeschances12, value: `> **Normal Box**` },
-                { name: config.embeds.nameboxeschances13, value: `\`${chancenormalrare}%\`` },
-                { name: config.embeds.nameboxeschances14, value: `\`${chancenormaluncommon}%\`` },
-                { name: config.embeds.nameboxeschances15, value: `\`${chancenormalcommon}%\`` },
+                { name: config.embeds.nameboxeschances13, value: `\`${chancenormalrare}%\` **---** \`${amountnormalrare}\`` },
+                { name: config.embeds.nameboxeschances14, value: `\`${chancenormaluncommon}%\` **---** \`${amountnormaluncommon}\`` },
+                { name: config.embeds.nameboxeschances15, value: `\`${chancenormalcommon}%\` **---** \`${amountnormalcommon}\`` },
             )
             .setFooter(config.embed.embedfooter);
 
-            const newEmbed2 = new Discord.MessageEmbed()
+        const newEmbed2 = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
             .setTitle(config.embeds.titleboxeschance2)
             .setImage(config.embed.embedimage)
-            .setDescription(`Here are all the probabilities of the box \`Ultra\` that you can buy and open.`)
+            .setDescription(`Here are all the probabilities of the box \`Ultra\` that you can buy and open. It also shows you the \`maximum\` amount of scraps you can get for each box and rarity. The minimum is \`1\` everywhere.`)
             .addFields(
                 { name: config.embeds.nameboxeschances1, value: `> **Ultra Box**` },
-                { name: config.embeds.nameboxeschances2, value: `\`${chanceultraexotic}%\`` },
-                { name: config.embeds.nameboxeschances3, value: `\`${chanceultralegendary}%\`` },
-                { name: config.embeds.nameboxeschances4, value: `\`${chanceultraepic}%\`` },
-                { name: config.embeds.nameboxeschances5, value: `\`${chanceultrarare}%\`` },
+                { name: config.embeds.nameboxeschances2, value: `\`${chanceultraexotic}%\` **---** \`${amountultraexotic}\`` },
+                { name: config.embeds.nameboxeschances3, value: `\`${chanceultralegendary}%\` **---** \`${amountultralegendary}\`` },
+                { name: config.embeds.nameboxeschances4, value: `\`${chanceultraepic}%\` **---** \`${amountultraepic}\`` },
+                { name: config.embeds.nameboxeschances5, value: `\`${chanceultrarare}%\` **---** \`${amountultrarare}\`` },
             )
             .setFooter(config.embed.embedfooter);
 
-            const newEmbed3 = new Discord.MessageEmbed()
+        const newEmbed3 = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
             .setTitle(config.embeds.titleboxeschance3)
             .setImage(config.embed.embedimage)
-            .setDescription(`Here are all the probabilities of the box \`Super\` that you can buy and open.`)
+            .setDescription(`Here are all the probabilities of the box \`Super\` that you can buy and open. It also shows you the \`maximum\` amount of scraps you can get for each box and rarity. The minimum is \`1\` everywhere.`)
             .addFields(
                 { name: config.embeds.nameboxeschances6, value: `> **Super Box**` },
-                { name: config.embeds.nameboxeschances7, value: `\`${chancesuperlegendary}%\`` },
-                { name: config.embeds.nameboxeschances8, value: `\`${chancesuperepic}%\`` },
-                { name: config.embeds.nameboxeschances9, value: `\`${chancesuperrare}%\`` },
-                { name: config.embeds.nameboxeschances10, value: `\`${chancesuperuncommon}%\`` },
-                { name: config.embeds.nameboxeschances11, value: `\`${chancesupercommon}%\`` },
+                { name: config.embeds.nameboxeschances7, value: `\`${chancesuperlegendary}%\` **---** \`${amountsuperlegendary}\`` },
+                { name: config.embeds.nameboxeschances8, value: `\`${chancesuperepic}%\` **---** \`${amountsuperepic}\`` },
+                { name: config.embeds.nameboxeschances9, value: `\`${chancesuperrare}%\` **---** \`${amountsuperrare}\`` },
+                { name: config.embeds.nameboxeschances10, value: `\`${chancesuperuncommon}%\` **---** \`${amountsuperuncommon}\`` },
+                { name: config.embeds.nameboxeschances11, value: `\`${chancesupercommon}%\` **---** \`${amountsupercommon}\`` },
             )
             .setFooter(config.embed.embedfooter);
 
-            const newEmbed4 = new Discord.MessageEmbed()
+        const newEmbed4 = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
             .setTitle(config.embeds.titleboxeschance4)
             .setImage(config.embed.embedimage)
-            .setDescription(`Here are all the probabilities of the box \`Normal\` that you can buy and open.`)
+            .setDescription(`Here are all the probabilities of the box \`Normal\` that you can buy and open. It also shows you the \`maximum\` amount of scraps you can get for each box and rarity. The minimum is \`1\` everywhere.`)
             .addFields(
                 { name: config.embeds.nameboxeschances12, value: `> **Normal Box**` },
-                { name: config.embeds.nameboxeschances13, value: `\`${chancenormalrare}%\`` },
-                { name: config.embeds.nameboxeschances14, value: `\`${chancenormaluncommon}%\`` },
-                { name: config.embeds.nameboxeschances15, value: `\`${chancenormalcommon}%\`` },
+                { name: config.embeds.nameboxeschances13, value: `\`${chancenormalrare}%\` **---** \`${amountnormalrare}\`` },
+                { name: config.embeds.nameboxeschances14, value: `\`${chancenormaluncommon}%\` **---** \`${amountnormaluncommon}\`` },
+                { name: config.embeds.nameboxeschances15, value: `\`${chancenormalcommon}%\` **---** \`${amountnormalcommon}\`` },
             )
             .setFooter(config.embed.embedfooter);
 
