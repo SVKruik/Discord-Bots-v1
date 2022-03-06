@@ -1,11 +1,11 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
-  name: "flipacoin",
-  aliases: config.aliases.aliasesflipacoinen,
-  cooldown: config.cooldown.cooldownflipacoinen,
-  permissions: config.permissions.permissionflipacoinen,
-  description: "Flip a coin!",
+  name: "kopofmunt",
+  aliases: config.aliases.aliasesflipacoinnl,
+  cooldown: config.cooldown.cooldownflipacoinnl,
+  permissions: config.permissions.permissionflipacoinnl,
+  description: "Kop of munt!",
     async execute(message, args, cmd, client, Discord) {
     const command =
       client.commands.get(cmd) ||
@@ -15,12 +15,12 @@ module.exports = {
       return message.channel.send("Please also choose your winning side.");
     }
 
-    const list = ["heads", "head", "tails", "tail"];
-    const fac = [`Heads!`, `Tails!`];
+    const list = ["kop", "munt"];
+    const fac = [`Kop!`, `Munt!`];
     const random = fac[Math.floor(Math.random() * fac.length)];
 
     if (!list.includes(args[0].toLowerCase())) {
-      return message.channel.send(`\`${args[0]}\` is not a valid option.`);
+      return message.channel.send(`\`${args[0]}\` is geen geldige parameter.`);
     }
     message.channel.send(random);
 
@@ -28,10 +28,10 @@ module.exports = {
 
     if (lowerrandom.substring(0, 4) == args[0]) {
       console.log(lowerrandom);
-      return message.channel.send("You win! - 🟢");
+      return message.channel.send("Je hebt gewonnen! - 🟢");
     } else if (lowerrandom.substring(0, 4) != args[0]) {
       console.log(lowerrandom);
-      return message.channel.send(`You lose! - 🔴`);
+      return message.channel.send(`Je hebt verloren! - 🔴`);
     }
   },
 };

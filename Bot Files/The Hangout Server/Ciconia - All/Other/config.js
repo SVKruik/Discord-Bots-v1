@@ -217,6 +217,7 @@ exports.embeds = {
   titleboxeschance2: "Box Probabilities: Ultra",
   titleboxeschance3: "Box Probabilities: Super",
   titleboxeschance4: "Box Probabilities: Normal",
+  titleshop: "Item Shop",
   titlebotstats: "Bot Statistics",
   titledonate: "Donate",
   titleembedtemplate: "Bot Template",
@@ -238,6 +239,7 @@ exports.embeds = {
   titleshards: "Shards Balance",
 
   //Descriptions
+  descriptionshop: "Here are all the items you can buy with coins or other special tokens. You can buy stuff with the command \`buy\`.",
   descriptionbotstats: "These are my current stats.",
   descriptiondonate: "Support our project by donating to us! Your funds will be used to improve our project. You can also help fund new hardware/software we need.",
   descriptionembedtemplate: "Template",
@@ -412,6 +414,7 @@ exports.aliases = {
     "setbankwal",
   ], // Set Full Eco
   aliasessetwallet: ["setwal"], // Set Wallet
+  aliasesshop: [], // Shop
   aliaseswithdraw: ["with", "wit"], // Withdraw
   aliasesexperience: ["exp", "xp"], // Experience
   aliasesgiveexperience: ["givexp", "giveexp"], // Give Experience
@@ -535,6 +538,7 @@ exports.cooldown = {
   cooldownsetbank: B,
   cooldownsetfulleco: B,
   cooldownsetwallet: B,
+  cooldownshop: F,
   cooldownwithdraw: E,
   cooldownexperience: G,
   cooldowngiveexperience: B,
@@ -632,6 +636,7 @@ exports.permissions = {
   permissionsetbank: I,
   permissionsetfulleco: I,
   permissionsetwallet: I,
+  permissionshop: J,
   permissionwithdraw: J,
   permissionexperience: J,
   permissiongiveexperience: I,

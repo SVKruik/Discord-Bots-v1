@@ -1,5 +1,5 @@
 const math = require("mathjs");
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
   name: "mathematics",

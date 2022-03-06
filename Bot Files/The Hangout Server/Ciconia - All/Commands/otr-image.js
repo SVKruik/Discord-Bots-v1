@@ -1,5 +1,5 @@
 var Scraper = require("images-scraper");
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 const google = new Scraper({
   puppeteer: {
     headless: true,
@@ -26,7 +26,7 @@ module.exports = {
         `You are not in the right channel to use this command! Please use <#${channel}> instead!`
       );
     }
-    const blacklist = require("./../Other/profanity.js");
+    const blacklist = require("../Other/profanity.js");
 
     if (blacklist.includes(args[0].toLowerCase())) {
       message.delete();

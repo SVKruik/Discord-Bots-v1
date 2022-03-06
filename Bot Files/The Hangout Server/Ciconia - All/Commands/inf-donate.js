@@ -1,11 +1,11 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
-  name: "github",
-  aliases: config.aliases.aliasesgithub,
-  cooldown: config.cooldown.cooldowngithub,
-  permissions: config.permissions.permissiongithub,
-  description: "Displays all import links to our GitHub repository.",
+  name: "donate",
+  aliases: config.aliases.aliasesdonate,
+  cooldown: config.cooldown.cooldowndonate,
+  permissions: config.permissions.permissiondonate,
+  description: "Support our project by donating to us.",
   execute(message, args, cmd, client, Discord) {
     const command =
       client.commands.get(cmd) ||
@@ -13,32 +13,22 @@ module.exports = {
     console.log(`${message.author.username} used this command: || ${command.name} ||`)
     const newEmbed = new Discord.MessageEmbed()
       .setColor(config.base.basecolor)
-      .setTitle(config.embeds.titlegithub)
+      .setTitle(config.embeds.titledonate)
       .setImage(config.embed.embedimage)
-      .setDescription(config.embeds.descriptiongithub)
+      .setDescription(config.embeds.descriptiondonate)
       .addFields(
         {
-          name: config.embeds.namegithub1,
-          value: config.embeds.valuegithub1,
+          name: config.embeds.namedonate1,
+          value: config.embeds.valuedonate1,
         },
         {
-          name: config.embeds.namegithub2,
-          value: config.embeds.valuegithub2,
-        },
-        {
-          name: config.embeds.namegithub3,
-          value: config.embeds.valuegithub3,
-        },
-        {
-          name: config.embeds.namegithub4,
-          value: config.embeds.valuegithub4,
-        },
-        {
-          name: config.embeds.namegithub5,
-          value: config.embeds.valuegithub5,
+          name: config.embeds.namedonate2,
+          value: config.embeds.valuedonate2,
         }
       )
       .setFooter(config.embed.embedfooter);
+
+
 
     const flagmessage = newEmbed
     const flags = ["everyone", "here", "delete"];
