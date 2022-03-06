@@ -64,19 +64,34 @@ exports.colorcost = { // 16 types
   extra: 400,
 }
 
-exports.boxprice = {
+exports.boxbuyprice = {
   ultra: 5000,
   super: 3000,
   normal: 1500,
 }
 
-exports.shardprice = {
+exports.shardbuyprice = {
   diamond: 20000,
   platinum: 15000,
   gold: 12000,
   silver: 8000,
   bronze: 6000,
   iron: 4000,
+}
+
+exports.boxsellprice = {
+  ultra: 3000,
+  super: 1500,
+  normal: 800,
+}
+
+exports.shardsellprice = {
+  diamond: 18000,
+  platinum: 1200,
+  gold: 9000,
+  silver: 6000,
+  bronze: 3000,
+  iron: 1500,
 }
 
 exports.boxchance = {
@@ -405,9 +420,9 @@ exports.aliases = {
   aliasestestasannouncements: ["testsmallannouncement", "testsmallannounce", "testsmallann", "testsannouncement", "testsannounce", "testsanno"], // Test Small Announcement
   aliasestestsuggest: ["testsuggest", "testsuggestion", "tsuggest", "tsuggestion"], // Test Suggestions
   aliasesbalance: ["bal", "baltot", "baltotal", "showbal"], // Balance
-  aliasesbalancebank: ["balbank"], // Balance Bank
-  aliasesbalancewallet: ["balwallet", "balwal"], // Balance Wallet
-  aliasesbuy: [], // Buy
+  aliasesbalancebank: ["balbank", "bank"], // Balance Bank
+  aliasesbalancewallet: ["balwallet", "balwal", "wallet"], // Balance Wallet
+  aliasesbuy: ["bought"], // Buy
   aliasesdailyreward: ["dlyrwd", "dr"], // Daily Reward
   aliasesdeposit: ["dep", "depo"], // Deposit
   aliasesgivebank: [], // Givebank
@@ -422,6 +437,7 @@ exports.aliases = {
   ], // Minus Full Eco
   aliasesminuswallet: ["minwal"], // Minus Wallet
   aliasessearch: ["srch"], // Search
+  aliasessell: ["sold"], // Sell
   aliasessetbank: [], // Set Bank
   aliasessetfulleco: [
     "setwalbank",
@@ -552,6 +568,7 @@ exports.cooldown = {
   cooldownminusfulleco: B,
   cooldownminuswallet: B,
   cooldownsearch: A,
+  cooldownsell: H,
   cooldownsetbank: B,
   cooldownsetfulleco: B,
   cooldownsetwallet: B,
@@ -651,6 +668,7 @@ exports.permissions = {
   permissionminusfulleco: I,
   permissionminuswallet: I,
   permissionsearch: J,
+  permissionsell: J,
   permissionsetbank: I,
   permissionsetfulleco: I,
   permissionsetwallet: I,
