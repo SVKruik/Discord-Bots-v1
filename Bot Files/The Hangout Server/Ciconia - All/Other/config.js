@@ -255,6 +255,8 @@ exports.embeds = {
   titlegithub: "GitHub Repository",
   titlehelp: "Support",
   titlemcserver: "Minecraft Server Statistics",
+  titleprice1: "Item Shop Prices - Buy",
+  titleprice2: "Item Shop Prices - Sell",
   titleprofile: "Server Profile",
   titlerules: "House Rules",
   titleserverip: "MultiCube Community",
@@ -276,6 +278,8 @@ exports.embeds = {
   descriptionevent: "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.",
   descriptiongithub: "This is our GitHub repository. You can find a lot of information about anything there, so check it out!",
   descriptionhelp: "What topic can I help you with?",
+  descriptionprice1: "Here are all the buy prices of the stuff you can buy.",
+  descriptionprice2: "Here are all the sell prices of the stuff you can buy.",
   descriptionmcserver: "Here is some data about the server you asked for.",
   descriptionprofile: "Here is the data we have stored about you.",
   descriptionrules: "These are our house rules.",
@@ -481,6 +485,7 @@ exports.aliases = {
   aliasesgithub: ["gh"], // Github
   aliaseshelpst1: ["support"], // Help
   aliasesmcserver: ["mc", "mccheck", "mcserver"], // Minecraft Server Stats
+  aliasesprice: ["pricecheck", "sellprice", "buyprice", "checkprice", "pricebuy", "pricesell"], // Prce
   aliasesprofile: ["prof"], // Profile
   aliasesrules: ["rule", "rl"], // Rules
   aliasesserverip: ["server"], // Server IP
@@ -591,10 +596,11 @@ exports.cooldown = {
   cooldownevent: B,
   cooldowngithub: B,
   cooldownhelpst1: E,
-  cooldownmcserver: B,
+  cooldownmcserver: E,
+  cooldownprice: G,
   cooldownprofile: E,
-  cooldownrules: B,
-  cooldownserverip: B,
+  cooldownrules: E,
+  cooldownserverip: E,
   cooldownleave: C,
   cooldownmusic: C, // All music cmds
   cooldownapply: E,
@@ -692,6 +698,7 @@ exports.permissions = {
   permissiongithub: I,
   permissionhelpst1: J,
   permissionmcserver: I,
+  permissionprice: I,
   permissionprofile: J,
   permissionrules: I,
   permissionserverip: I,
