@@ -476,7 +476,13 @@ exports.aliases = {
   aliasessubstitutie: ["substitueren", "subst"], // Substitutie
   aliasestitreernormaal: ["titnorm", "titnormaal"], // Titratie Normaal
   aliasestitreerverdunning: ["titverdun", "titverdunning"], // Titratie Verdunning
+  aliasesgivescraps: ["givescrap", "scrapsgive", "scrapgive", "scrgive"], // Give Scraps
+  aliasesminusscraps: ["minusscrap", "scrapsminus", "scrapminus", "scrminus"], // Minus Scraps
   aliasesscraps: ["scrapscheck", "scrapsbal", "balscraps", "scrapsbalance", "scrap", "balancescraps"], // Scraps
+  aliasessetscraps: ["setscrap", "scrapsset", "scrapset", "scrset"], // Set Scraps
+  aliasesgiveshards: ["giveshard", "shardsgive", "shardgive"], // Give Shards
+  aliasesminusshards: ["minusshard", "shardsminus", "shardminus"], // Minus Shards
+  aliasessetshards: ["setshard", "shardsset", "shardset"], // Set Shards
   aliasesshards: ["shardscheck", "shardsbal", "balshards", "shardsbalance", "shard", "balanceshards"], // Shards
 };
 
@@ -572,7 +578,13 @@ exports.cooldown = {
   cooldownsubstitutie: G,
   cooldowntitreernormaal: G,
   cooldowntitreerverdunning: G,
+  cooldowngivescraps: B,
+  cooldownminusscraps: B,
   cooldownscraps: G,
+  cooldownsetscraps: B,
+  cooldowngiveshards: B,
+  cooldownminusshards: B,
+  cooldownsetshards: B,
   cooldownshards: G,
 };
 
@@ -662,6 +674,12 @@ exports.permissions = {
   permissionsubstitutie: J,
   permissiontitreernormaal: J,
   permissiontitreerverdunning: J,
+  permissiongivescraps: I,
+  permissionminusscraps: I,
   permissionscraps: J,
+  permissionsetscraps: J,
+  permissiongiveshards: I,
+  permissionminusshards: I,
+  permissionsetshards: I,
   permissionshards: J,
 };
