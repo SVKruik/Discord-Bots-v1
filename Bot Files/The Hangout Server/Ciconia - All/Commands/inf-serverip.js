@@ -7,38 +7,39 @@ module.exports = {
   permissions: config.permissions.permissionserverip,
   description: "Display the server IP and information for MultiCube.",
   execute(message, args, cmd, client, Discord) {
-    const command =
-      client.commands.get(cmd) ||
-      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-    console.log(`${message.author.username} used this command: || ${command.name} ||`)
-    const newEmbed = new Discord.MessageEmbed()
-      .setColor(config.base.basecolor)
-      .setTitle(config.embeds.titleserverip)
-      .setImage(config.embed.embedimage)
-      .setDescription(config.embeds.descriptionserverip)
-      .addFields(
-        {
-          name: config.embeds.nameserverip1,
-          value: config.embeds.valueserverip1,
-        },
-        {
-          name: config.embeds.nameserverip2,
-          value: config.embeds.valueserverip2,
-        },
-        {
-          name: config.embeds.nameserverip3,
-          value: config.embeds.valueserverip3,
-        }
-      )
-      .setFooter(config.embed.embedfooter);
+    try {
+      const command =
+        client.commands.get(cmd) ||
+        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      const newEmbed = new Discord.MessageEmbed()
+        .setColor(config.base.basecolor)
+        .setTitle(config.embeds.titleserverip)
+        .setImage(config.embed.embedimage)
+        .setDescription(config.embeds.descriptionserverip)
+        .addFields(
+          {
+            name: config.embeds.nameserverip1,
+            value: config.embeds.valueserverip1,
+          },
+          {
+            name: config.embeds.nameserverip2,
+            value: config.embeds.valueserverip2,
+          },
+          {
+            name: config.embeds.nameserverip3,
+            value: config.embeds.valueserverip3,
+          }
+        )
+        .setFooter(config.embed.embedfooter);
 
       const flagmessage = newEmbed
       const flags = ["everyone", "here", "delete"];
-      
+
       if (!args[0]) {
         message.channel.send(flagmessage)
       }
-      
+
       if (args[0] === "delete") {
         if (!args[1]) {
           if (!args[2]) {
@@ -61,7 +62,7 @@ module.exports = {
           }
         }
       }
-      
+
       if (args[0] === "everyone") {
         if (args[1] === "here") {
           return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -87,7 +88,7 @@ module.exports = {
       } else if (args[2] === "everyone") {
         return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
       }
-      
+
       if (args[0] === "here") {
         if (args[1] === "everyone") {
           return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -113,5 +114,9 @@ module.exports = {
       } else if (args[2] === "here") {
         return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
       }
+    } catch (err) {
+      console.log(err)
+      message.channel.send(`Error executing command. EC:`)
+    }
   },
 };

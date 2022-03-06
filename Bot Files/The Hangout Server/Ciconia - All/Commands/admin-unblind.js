@@ -7,25 +7,28 @@ module.exports = {
   permissions: config.permissions.permissionunblind,
   description: "This command unblinds members.",
   execute(message, args, cmd, client, Discord) {
-    const command =
-      client.commands.get(cmd) ||
-      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-    console.log(`${message.author.username} used this command: || ${command.name} ||`)
-    const target = message.mentions.users.first();
-    if (target) {
-      const blindRole = message.guild.roles.cache.find(
-        (role) => role.id === config.base.baseblindrole
-      );
-      const memberTarget = message.guild.members.cache.get(target.id);
+    try {
+      const command =
+        client.commands.get(cmd) ||
+        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      const target = message.mentions.users.first();
+      if (target) {
+        const blindRole = message.guild.roles.cache.find(
+          (role) => role.id === config.base.baseblindrole
+        );
+        const memberTarget = message.guild.members.cache.get(target.id);
 
-      memberTarget.roles.remove(blindRole);
-      message.channel.send(
-        `<@${memberTarget.user.id}> has been succesfully unblinded. Welcome back!`
-      );
-    } else {
-      message.channel.send(config.basemessages.messagesfinderror);
+        memberTarget.roles.remove(blindRole);
+        message.channel.send(
+          `<@${memberTarget.user.id}> has been succesfully unblinded. Welcome back!`
+        );
+      } else {
+        message.channel.send(config.basemessages.messagesfinderror);
+      }
+    } catch (err) {
+      console.log(err)
+      message.channel.send(`Error executing command. EC:`)
     }
-
-
   },
 };
