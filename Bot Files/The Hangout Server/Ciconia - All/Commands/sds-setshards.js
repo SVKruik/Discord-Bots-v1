@@ -25,8 +25,8 @@ module.exports = {
         const target = message.mentions.users.first();
         if (!target) return message.channel.send(config.basemessages.messagesfinderror);
 
-        if (amount <= 0)
-            return message.channel.send(config.basemessages.messagesgreaterone);
+        if (amount < 0)
+            return message.channel.send(config.basemessages.messagesgreaternegaone);
 
         if (args[1] === "diamond") {
             try {
@@ -140,6 +140,30 @@ module.exports = {
                     }
                 );
                 message.channel.send(`The targeted member's amount of \`Iron Shards\` is now \`${amount}\`.`)
+            } catch (err) {
+                console.log(err);
+                message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+            }
+        } else if (args[1] === "all") {
+            try {
+                const targetData = await profileModel.findOne({ userID: target.id });
+                if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
+                await profileModel.findOneAndUpdate(
+                    {
+                        userID: target.id,
+                    },
+                    {
+                        $set: {
+                            shardsdiamond: amount,
+                            shardsplatinum: amount,
+                            shardsgold: amount,
+                            shardssilver: amount,
+                            shardsbronze: amount,
+                            shardsiron: amount,
+                        },
+                    }
+                );
+                message.channel.send(`The targeted member's amount of \`Total Shards\` is now \`${amount}\`.`)
             } catch (err) {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)

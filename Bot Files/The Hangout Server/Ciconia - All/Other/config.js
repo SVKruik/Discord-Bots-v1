@@ -64,6 +64,21 @@ exports.colorcost = { // 16 types
   extra: 400,
 }
 
+exports.boxprice = {
+  ultra: 5000,
+  super: 3000,
+  normal: 1500,
+}
+
+exports.shardprice = {
+  diamond: 20000,
+  platinum: 15000,
+  gold: 12000,
+  silver: 8000,
+  bronze: 6000,
+  iron: 4000,
+}
+
 exports.boxchance = {
   ultraexotic: 99,
   ultralegendary: 95,
@@ -392,6 +407,7 @@ exports.aliases = {
   aliasesbalance: ["bal", "baltot", "baltotal", "showbal"], // Balance
   aliasesbalancebank: ["balbank"], // Balance Bank
   aliasesbalancewallet: ["balwallet", "balwal"], // Balance Wallet
+  aliasesbuy: [], // Buy
   aliasesdailyreward: ["dlyrwd", "dr"], // Daily Reward
   aliasesdeposit: ["dep", "depo"], // Deposit
   aliasesgivebank: [], // Givebank
@@ -526,6 +542,7 @@ exports.cooldown = {
   cooldownbalance: G,
   cooldownbalancebank: G,
   cooldownbalancewallet: G,
+  cooldownbuy: H,
   cooldowndailyreward: A,
   cooldowndeposit: G,
   cooldowngivebank: G,
@@ -624,6 +641,7 @@ exports.permissions = {
   permissionbalance: J,
   permissionbalancebank: J,
   permissionbalancewallet: J,
+  permissionbuy: J,
   permissiondailyreward: J,
   permissiondeposit: J,
   permissiongivebank: I,

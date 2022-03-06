@@ -7,8 +7,8 @@ module.exports = {
     cooldown: config.cooldown.cooldownmusic,
     permissions: config.permissions.permissionmusic,
     description: "Update your music library.",
-      async execute(message, args, cmd, client, Discord, profileData) {
-      const command =
+    async execute(message, args, cmd, client, Discord, profileData) {
+        const command =
             client.commands.get(cmd) ||
             client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
         console.log(`${message.author.username} used this command: || ${command.name} ||`)
