@@ -15,6 +15,12 @@ module.exports = {
         if (!args[0]) {
             return message.channel.send(config.basemessages.messagesmembermention)
         };
+        if (!args[1]) {
+            return message.channel.send(`What type of Scraps would you like to modify?`)
+        }
+        if (!args[2]) {
+            return message.channel.send(`What should the new amount be?`)
+        }
         const amount = args[2];
         const target = message.mentions.users.first();
         if (!target) return message.channel.send(config.basemessages.messagesfinderror);

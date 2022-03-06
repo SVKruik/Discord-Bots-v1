@@ -15,6 +15,12 @@ module.exports = {
         if (!args[0]) {
             return message.channel.send(config.basemessages.messagesmembermention)
         };
+        if (!args[1]) {
+            return message.channel.send(`What type of boxes would you like to modify?`)
+        }
+        if (!args[2]) {
+            return message.channel.send(`How many boxes would you like to delete?`)
+        }
         const amount = args[2];
         const target = message.mentions.users.first();
         if (!target) return message.channel.send(config.basemessages.messagesfinderror);
