@@ -70,6 +70,12 @@ exports.boxbuyprice = {
   normal: 1500,
 }
 
+exports.boxsellprice = {
+  ultra: 3000,
+  super: 1500,
+  normal: 800,
+}
+
 exports.shardbuyprice = {
   diamond: 20000,
   platinum: 15000,
@@ -79,12 +85,6 @@ exports.shardbuyprice = {
   iron: 4000,
 }
 
-exports.boxsellprice = {
-  ultra: 3000,
-  super: 1500,
-  normal: 800,
-}
-
 exports.shardsellprice = {
   diamond: 18000,
   platinum: 1200,
@@ -92,6 +92,15 @@ exports.shardsellprice = {
   silver: 6000,
   bronze: 3000,
   iron: 1500,
+}
+
+exports.scrapsellprice = {
+  exotic: 2000,
+  legendary: 1600,
+  epic: 1200,
+  rare: 400,
+  uncommon: 200,
+  common: 75,
 }
 
 exports.boxchance = {
@@ -255,8 +264,11 @@ exports.embeds = {
   titlegithub: "GitHub Repository",
   titlehelp: "Support",
   titlemcserver: "Minecraft Server Statistics",
-  titleprice1: "Item Shop Prices - Buy",
-  titleprice2: "Item Shop Prices - Sell",
+  titleprice1: "Item Shop Prices - Buy - Boxes",
+  titleprice2: "Item Shop Prices - Buy - Shards",
+  titleprice3: "Item Shop Prices - Sell - Scraps",
+  titleprice4: "Item Shop Prices - Sell - Boxes",
+  titleprice5: "Item Shop Prices - Sell - Shards",
   titleprofile: "Server Profile",
   titlerules: "House Rules",
   titleserverip: "MultiCube Community",
@@ -278,8 +290,11 @@ exports.embeds = {
   descriptionevent: "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.",
   descriptiongithub: "This is our GitHub repository. You can find a lot of information about anything there, so check it out!",
   descriptionhelp: "What topic can I help you with?",
-  descriptionprice1: "Here are all the buy prices of the stuff you can buy.",
-  descriptionprice2: "Here are all the sell prices of the stuff you can buy.",
+  descriptionprice1: "Here are all the prices of the different boxes you can buy.",
+  descriptionprice2: "Here are all the prices of the different shards you can buy.",
+  descriptionprice3: "Here are all the prices of the different scraps you can sell.",
+  descriptionprice4: "Here are all the prices of the different boxes you can sell.",
+  descriptionprice5: "Here are all the prices of the different shards you can sell.",
   descriptionmcserver: "Here is some data about the server you asked for.",
   descriptionprofile: "Here is the data we have stored about you.",
   descriptionrules: "These are our house rules.",

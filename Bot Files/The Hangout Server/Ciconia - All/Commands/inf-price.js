@@ -35,6 +35,19 @@ module.exports = {
                     {
                         name: `Normal Boxes`,
                         value: `\`${config.boxbuyprice.normal}\``,
+                    }
+                )
+                .setFooter(config.embed.embedfooter);
+
+            const newEmbed2 = new Discord.MessageEmbed()
+                .setColor(config.base.basecolor)
+                .setTitle(config.embeds.titleprice2)
+                .setImage(config.embed.embedimage)
+                .setDescription(config.embeds.descriptionprice2)
+                .addFields(
+                    {
+                        name: `> **Buy Prices**`,
+                        value: `**Shards**`,
                     },
                     {
                         name: `**--------**`,
@@ -67,11 +80,48 @@ module.exports = {
                 )
                 .setFooter(config.embed.embedfooter);
 
-            const newEmbed2 = new Discord.MessageEmbed()
+            const newEmbed3 = new Discord.MessageEmbed()
                 .setColor(config.base.basecolor)
-                .setTitle(config.embeds.titleprice2)
+                .setTitle(config.embeds.titleprice3)
                 .setImage(config.embed.embedimage)
-                .setDescription(config.embeds.descriptionprice2)
+                .setDescription(config.embeds.descriptionprice3)
+                .addFields(
+                    {
+                        name: `> **Sell Prices**`,
+                        value: `**Scraps**`,
+                    },
+                    {
+                        name: `Exotic Scraps`,
+                        value: `\`${config.scrapsellprice.exotic}\``,
+                    },
+                    {
+                        name: `Legendary Scraps`,
+                        value: `\`${config.scrapsellprice.legendary}\``,
+                    },
+                    {
+                        name: `Epic Scraps`,
+                        value: `\`${config.scrapsellprice.epic}\``,
+                    },
+                    {
+                        name: `Rare Scraps`,
+                        value: `\`${config.scrapsellprice.rare}\``,
+                    },
+                    {
+                        name: `Uncommon Scraps`,
+                        value: `\`${config.scrapsellprice.uncommon}\``,
+                    },
+                    {
+                        name: `Common Scraps`,
+                        value: `\`${config.scrapsellprice.common}\``,
+                    },
+                )
+                .setFooter(config.embed.embedfooter);
+
+            const newEmbed4 = new Discord.MessageEmbed()
+                .setColor(config.base.basecolor)
+                .setTitle(config.embeds.titleprice4)
+                .setImage(config.embed.embedimage)
+                .setDescription(config.embeds.descriptionprice4)
                 .addFields(
                     {
                         name: `> **Sell Prices**`,
@@ -88,10 +138,18 @@ module.exports = {
                     {
                         name: `Normal Boxes`,
                         value: `\`${config.boxsellprice.normal}\``,
-                    },
+                    }
+                )
+                .setFooter(config.embed.embedfooter);
 
+            const newEmbed5 = new Discord.MessageEmbed()
+                .setColor(config.base.basecolor)
+                .setTitle(config.embeds.titleprice5)
+                .setImage(config.embed.embedimage)
+                .setDescription(config.embeds.descriptionprice5)
+                .addFields(
                     {
-                        name: `**--------**`,
+                        name: `> **Sell Prices**`,
                         value: `**Shards**`,
                     },
                     {
@@ -122,12 +180,27 @@ module.exports = {
                 .setFooter(config.embed.embedfooter);
 
             if (!args[0]) {
-                return message.channel.send(`What prices would you like to take a look at?`)
+                return message.channel.send(`Would you like to take a look at the \`buy\` or \`sell\` prices?`)
+            }
+            if (!args[1]) {
+                return message.channel.send(`What type of item would you like to take a look at?`)
             }
             if (args[0] === "buy") {
-                message.channel.send(newEmbed1)
+                if (args[1] === "scraps" || "scrap") {
+                    return message.channel.send(`Scraps can only be obtained through loot boxes! Scraps can only be sold, not bought.`)
+                } else if (args[1] === "boxes" || args[1] === "box") {
+                    message.channel.send(newEmbed1)
+                } else if (args[1] === "shards" || args[1] === "shard") {
+                    message.channel.send(newEmbed2)
+                }
             } else if (args[0] === "sell") {
-                message.channel.send(newEmbed2)
+                if (args[1] === "scraps" || args[1] === "scrap") {
+                    message.channel.send(newEmbed3)
+                } else if (args[1] === "boxes" || args[1] === "box") {
+                    message.channel.send(newEmbed4)
+                } else if (args[1] === "shards" || args[1] === "shard") {
+                    message.channel.send(newEmbed5)
+                }
             }
         } catch (err) {
             console.log(err)

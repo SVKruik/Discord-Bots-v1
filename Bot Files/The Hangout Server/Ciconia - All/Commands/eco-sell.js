@@ -203,6 +203,126 @@ module.exports = {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
                 }
+            } else if (args[0] === "exotic") {
+                try {
+                    const sellpriceexotic = config.scrapsellprice.exotic * amount
+                    const newbal = profileData.wallet + sellpriceexotic
+                    await profileModel.findOneAndUpdate(
+                        {
+                            userID: message.author.id,
+                        },
+                        {
+                            $inc: {
+                                wallet: sellpriceexotic,
+                                shardsexotic: -amount,
+                            },
+                        }
+                    );
+                    message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Exotic Scraps\`, for a sellprice of \`${sellpriceexotic}\`. You new balance is \`${newbal}\`.`)
+                } catch (err) {
+                    console.log(err);
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                }
+            } else if (args[0] === "legendary") {
+                try {
+                    const sellpricelegendary = config.scrapsellprice.legendary * amount
+                    const newbal = profileData.wallet + sellpricelegendary
+                    await profileModel.findOneAndUpdate(
+                        {
+                            userID: message.author.id,
+                        },
+                        {
+                            $inc: {
+                                wallet: sellpricelegendary,
+                                shardslegendary: -amount,
+                            },
+                        }
+                    );
+                    message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Legendary Scraps\`, for a sellprice of \`${sellpricelegendary}\`. You new balance is \`${newbal}\`.`)
+                } catch (err) {
+                    console.log(err);
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                }
+            } else if (args[0] === "epic") {
+                try {
+                    const sellpriceepic = config.scrapsellprice.epic * amount
+                    const newbal = profileData.wallet + sellpriceepic
+                    await profileModel.findOneAndUpdate(
+                        {
+                            userID: message.author.id,
+                        },
+                        {
+                            $inc: {
+                                wallet: sellpriceepic,
+                                shardsepic: -amount,
+                            },
+                        }
+                    );
+                    message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Epic Scraps\`, for a sellprice of \`${sellpriceepic}\`. You new balance is \`${newbal}\`.`)
+                } catch (err) {
+                    console.log(err);
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                }
+            } else if (args[0] === "rare") {
+                try {
+                    const sellpricerare = config.scrapsellprice.rare * amount
+                    const newbal = profileData.wallet + sellpricerare
+                    await profileModel.findOneAndUpdate(
+                        {
+                            userID: message.author.id,
+                        },
+                        {
+                            $inc: {
+                                wallet: sellpricerare,
+                                shardsrare: -amount,
+                            },
+                        }
+                    );
+                    message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Rare Scraps\`, for a sellprice of \`${sellpricerare}\`. You new balance is \`${newbal}\`.`)
+                } catch (err) {
+                    console.log(err);
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                }
+            } else if (args[0] === "uncommon") {
+                try {
+                    const sellpriceuncommon = config.scrapsellprice.uncommon * amount
+                    const newbal = profileData.wallet + sellpriceuncommon
+                    await profileModel.findOneAndUpdate(
+                        {
+                            userID: message.author.id,
+                        },
+                        {
+                            $inc: {
+                                wallet: sellpriceuncommon,
+                                shardsuncommon: -amount,
+                            },
+                        }
+                    );
+                    message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Uncommon Scraps\`, for a sellprice of \`${sellpriceuncommon}\`. You new balance is \`${newbal}\`.`)
+                } catch (err) {
+                    console.log(err);
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                }
+            } else if (args[0] === "common") {
+                try {
+                    const sellpricecommon = config.scrapsellprice.common * amount
+                    const newbal = profileData.wallet + sellpricecommon
+                    await profileModel.findOneAndUpdate(
+                        {
+                            userID: message.author.id,
+                        },
+                        {
+                            $inc: {
+                                wallet: sellpricecommon,
+                                shardscommon: -amount,
+                            },
+                        }
+                    );
+                    message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Common Scraps\`, for a sellprice of \`${sellpricecommon}\`. You new balance is \`${newbal}\`.`)
+                } catch (err) {
+                    console.log(err);
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                }
             }
         } catch (err) {
             console.log(err)
