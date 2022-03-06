@@ -27,6 +27,7 @@ module.exports = async (Discord, client, message) => {
   try {
     profileData = await profileModel.findOne({ userID: message.author.id });
     if (!profileData) {
+      message.channel.send("It looks like you didn't have an account with us. I have created one for you. This was an one time thing. You can now use all Economy and Level commands.")
       let profile = await profileModel.create({
         userID: message.author.id,
         name: message.author.username,

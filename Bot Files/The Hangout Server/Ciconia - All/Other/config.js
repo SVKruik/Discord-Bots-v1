@@ -209,7 +209,10 @@ exports.commandticket = {
 
 exports.embeds = {
   //Titles
-  titleboxes: "Boxes Balance",
+  titleboxes1: "Boxes Balance",
+  titleboxes2: "Boxes Balance: Ultra",
+  titleboxes3: "Boxes Balance: Super",
+  titleboxes4: "Boxes Balance: Normal",
   titleboxeschance1: "Box Probabilities",
   titleboxeschance2: "Box Probabilities: Ultra",
   titleboxeschance3: "Box Probabilities: Super",
@@ -369,8 +372,11 @@ exports.aliases = {
   aliasesunmute: [], // Unmute
   aliasesuptime: [], // Uptime
   aliasesboxes: ["boxescheck", "boxesbal", "balboxes", "boxesbalance", "box", "balanceboxes"], // Boxes
-  aliasesboxesopen: ["openboxes", "openbox", "boxesopen", "boxopen", "boxesop", "boxop"], // Boxes Open
+  aliasesboxesopen: ["openboxes", "openbox", "boxesopen", "boxopen", "boxesop", "boxop", "bxop"], // Boxes Open
   aliasesboxeschance: ["boxchances", "boxchance", "chancebox", "chancesbox", "bxch"], // Box Chance
+  aliasesgiveboxes: ["givebox", "boxesgive", "boxgive", "bxgive", "givebx"], // Give Boxes
+  aliasesminusboxes: ["minusbox", "boxesminus", "boxminus", "bxminus", "setbx"], // Minus Boxes
+  aliasessetboxes: ["setbox", "boxesset", "boxset", "bxset", "setbx"],
   aliasescolor: ["clr", "colour"], // Color
   aliasescolorremove: ["clrremove", "colourremove", "clrrmv"], // Color Remove
   aliasesrolecolor1: ["rlclr1"], // Rolecolor1
@@ -496,6 +502,9 @@ exports.cooldown = {
   cooldownboxes: G,
   cooldownboxeschance: F,
   cooldownboxesopen: 1,
+  cooldowngiveboxes: B,
+  cooldownminusboxes: B,
+  cooldownsetboxes: B,
   cooldowncolor: B,
   cooldowncolorremove: B,
   cooldownrolecolor1: B,
@@ -584,6 +593,9 @@ exports.permissions = {
   permissionboxes: J,
   permissionboxeschance: J,
   permissionboxesopen: J,
+  permissiongiveboxes: I,
+  permissionminusboxes: I,
+  permissionsetboxes: I,
   permissioncolor: J,
   permissioncolorremove: J,
   permissionrolecolor1: I,

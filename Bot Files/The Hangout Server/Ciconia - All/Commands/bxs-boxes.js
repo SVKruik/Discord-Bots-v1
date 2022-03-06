@@ -8,13 +8,13 @@ module.exports = {
     permissions: config.permissions.permissionboxes,
     description: "Displays your current boxes.",
     execute(message, args, cmd, client, Discord, profileData) {
-      const command =
+        const command =
             client.commands.get(cmd) ||
             client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
         console.log(`${message.author.username} used this command: || ${command.name} ||`)
-        const newEmbed = new Discord.MessageEmbed()
+        const newEmbed1 = new Discord.MessageEmbed()
             .setColor(config.base.basecolor)
-            .setTitle(config.embeds.titleboxes)
+            .setTitle(config.embeds.titleboxes1)
             .setImage(config.embed.embedimage)
             .setDescription(`Here are all your boxes you have collected so far.`)
             .addFields(
@@ -24,90 +24,44 @@ module.exports = {
             )
             .setFooter(config.embed.embedfooter);
 
-        
+        const newEmbed2 = new Discord.MessageEmbed()
+            .setColor(config.base.basecolor)
+            .setTitle(config.embeds.titleboxes2)
+            .setImage(config.embed.embedimage)
+            .setDescription(`Here are all your \`Ultra Boxes\` you have collected so far.`)
+            .addFields(
+                { name: config.embeds.nameboxes1, value: `\`${profileData.boxesultra}\`` },
+            )
+            .setFooter(config.embed.embedfooter);
 
-        const flagmessage = newEmbed
-        const flags = ["everyone", "here", "delete"];
+        const newEmbed3 = new Discord.MessageEmbed()
+            .setColor(config.base.basecolor)
+            .setTitle(config.embeds.titleboxes3)
+            .setImage(config.embed.embedimage)
+            .setDescription(`Here are all your \`Super Boxes\` you have collected so far.`)
+            .addFields(
+                { name: config.embeds.nameboxes2, value: `\`${profileData.boxessuper}\`` },
+            )
+            .setFooter(config.embed.embedfooter);
+
+        const newEmbed4 = new Discord.MessageEmbed()
+            .setColor(config.base.basecolor)
+            .setTitle(config.embeds.titleboxes4)
+            .setImage(config.embed.embedimage)
+            .setDescription(`Here are all your \`Normal Boxes\` you have collected so far.`)
+            .addFields(
+                { name: config.embeds.nameboxes3, value: `\`${profileData.boxesnormal}\`` },
+            )
+            .setFooter(config.embed.embedfooter);
 
         if (!args[0]) {
-            message.channel.send(flagmessage)
-        }
-
-        if (args[0] === "delete") {
-            if (!args[1]) {
-                if (!args[2]) {
-                    message.delete();
-                    message.channel.send(flagmessage)
-                }
-            }
-        } else if (args[1] === "delete") {
-            if (!args[0]) {
-                if (!args[2]) {
-                    message.delete();
-                    message.channel.send(flagmessage)
-                }
-            }
-        } else if (args[2] === "delete") {
-            if (!args[0]) {
-                if (!args[1]) {
-                    message.delete();
-                    message.channel.send(flagmessage)
-                }
-            }
-        }
-
-
-        if (args[0] === "everyone") {
-            if (args[1] === "here") {
-                return message.channel.send(`You cannot use both group tags at the same time.`)
-            } else if (args[1] || args[2] === "delete") {
-                message.delete();
-                message.channel.send(`@everyone`)
-                message.channel.send(newEmbed)
-            } else {
-                message.channel.send(`@everyone`)
-                message.channel.send(newEmbed)
-            }
-        } else if (args[1] === "everyone") {
-            if (args[0] === "here") {
-                return message.channel.send(`You cannot use both group tags at the same time.`)
-            } else if (args[0] || args[2] === "delete") {
-                message.delete();
-                message.channel.send(`@everyone`)
-                message.channel.send(newEmbed)
-            } else {
-                message.channel.send(`@everyone`)
-                message.channel.send(newEmbed)
-            }
-        } else if (args[2] === "everyone") {
-            return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
-        }
-
-
-        if (args[0] === "here") {
-            if (args[1] === "everyone") {
-                return message.channel.send(`You cannot use both group tags at the same time.`)
-            } else if (args[1] || args[2] === "delete") {
-                message.delete();
-                message.channel.send(`@here`)
-                message.channel.send(newEmbed)
-            } else {
-                message.channel.send(`@here`)
-                message.channel.send(newEmbed)
-            }
-        } else if (args[1] === "here") {
-            if (args[0] === "everyone") {
-                return message.channel.send(`You cannot use both group tags at the same time.`)
-            } else if (args[0] || args[2] === "delete") {
-                message.delete();
-                message.channel.send(`@here`)
-                message.channel.send(newEmbed)
-            } else {
-                message.channel.send(`@here`)
-                message.channel.send(newEmbed)
-            }
-        } else if (args[2] === "here") {
-            return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
+            message.channel.send(newEmbed1)
+        } else if (args[0] === "ultra") {
+            message.channel.send(newEmbed2)
+        } else if (args[0] === "super") {
+            message.channel.send(newEmbed3)
+        } else if (args[0] === "normal") {
+            message.channel.send(newEmbed4)
         }
     },
 };
