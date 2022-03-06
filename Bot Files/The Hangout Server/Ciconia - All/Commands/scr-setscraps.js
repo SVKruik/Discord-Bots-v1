@@ -164,7 +164,7 @@ module.exports = {
                             },
                         }
                     );
-                    message.channel.send(`The targeted member's amount of \`Common Scrap\` is now \`${amount}\`.`)
+                    message.channel.send(`The targeted member's amount of \`Total Scrap\` is now \`${amount}\`.`)
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
