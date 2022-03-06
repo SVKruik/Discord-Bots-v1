@@ -34,9 +34,9 @@ module.exports = {
 
       const consolemsg = `${message.author.username} announced something (channel): || ${messageArgs} ||`
       console.log(consolemsg);
-    } catch(err) {
+    } catch (err) {
       console.log(err)
-      message.channel.send(`Error executing command. EC:`)
+      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err0}\`.`)
     }
-  },
-};
+  }
+}

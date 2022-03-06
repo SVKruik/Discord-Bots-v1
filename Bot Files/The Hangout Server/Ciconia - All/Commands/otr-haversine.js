@@ -99,7 +99,7 @@ module.exports = {
             message.channel.send(newEmbed);
         } catch (err) {
             console.log(err)
-            message.channel.send(`Error executing command. EC:`)
+            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err0}\`.`)
         }
     },
 };
