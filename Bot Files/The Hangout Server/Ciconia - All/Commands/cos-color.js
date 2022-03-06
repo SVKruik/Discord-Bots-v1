@@ -2341,7 +2341,7 @@ module.exports = {
             } else message.channel.send(errmsg);
         } catch (err) {
             console.log(err)
-            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err0}\`.`)
+            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err14}\`.`)
         }
     },
 };

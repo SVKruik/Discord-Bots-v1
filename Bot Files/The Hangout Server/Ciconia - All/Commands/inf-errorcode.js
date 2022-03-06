@@ -94,26 +94,26 @@ module.exports = {
             name: `> ${err10}`,
             value: `**10.** ${info10}`,
           },
-          // {
-          //   name: `> ${err11}`,
-          //   value: `**11** ${info11}`,
-          // },
-          // {
-          //   name: `> ${err12}`,
-          //   value: `**12.** ${info12}`,
-          // },
-          // {
-          //   name: `> ${err13}`,
-          //   value: `**13.** ${info13}`,
-          // },
-          // {
-          //   name: `> ${err14}`,
-          //   value: `**14.** ${info14}`,
-          // },
-          // {
-          //   name: `> ${err15}`,
-          //   value: `**15.** ${info15}`,
-          // },
+          {
+            name: `> ${err11}`,
+            value: `**11** ${info11}`,
+          },
+          {
+            name: `> ${err12}`,
+            value: `**12.** ${info12}`,
+          },
+          {
+            name: `> ${err13}`,
+            value: `**13.** ${info13}`,
+          },
+          {
+            name: `> ${err14}`,
+            value: `**14.** ${info14}`,
+          },
+          {
+            name: `> ${err15}`,
+            value: `**15.** ${info15}`,
+          },
           {
             name: `**-------**`,
             value: `We would really appreciate it, if you contact any of the bot developers if you encounter any of these errors. We can then get to work to fix it ASAP.`,
@@ -161,7 +161,7 @@ module.exports = {
       }
     } catch (err) {
       console.log(err)
-      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err0}\`.`)
+      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err15}\`.`)
     }
   },
 };

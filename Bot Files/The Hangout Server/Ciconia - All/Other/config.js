@@ -155,7 +155,7 @@ exports.errorcodes = {
   err15: "1455",
 
   info1: `A fatal bug in the code. Contact any bot developers if you see this.`,
-  info2: `A problem with the database. This affects all level and economy commands.`,
+  info2: `A problem with the database. This can happen during collecting data from the DB, or generally something wrong.`,
   info3: `An error with generating the reaction emoji's.`,
   info4: `A problem with generating a channel. This can happen with the command \`ticket\`.`,
   info5: `An error with generating an user account in our database. This error can only occur when someone joins the Discord server, since it will auto-generate an account.`,
@@ -163,12 +163,12 @@ exports.errorcodes = {
   info7: `A problem with the music bot.`,
   info8: `An error with collecting information about a minecraft server. This error can only occur with the command \`$mcserver\`.`,
   info9: `An error with refunding your coins.`,
-  info10: `A problem with connecting to the database. This affects all level and economy commands.`,
-  info11: `Empty`,
-  info12: `Empty`,
-  info13: `Empty`,
-  info14: `Empty`,
-  info15: `Empty`,
+  info10: `A problem with connecting to the database. All DB related commands are probably out of service.`,
+  info11: `A problem with sending a message to another channel, than the init channel.`,
+  info12: `An error with managing a member.`,
+  info13: `An error with bulk deleting messages.`,
+  info14: `A problem with managing member roles.`,
+  info15: `Unspecific error.`,
 }
 
 exports.basemessages = {

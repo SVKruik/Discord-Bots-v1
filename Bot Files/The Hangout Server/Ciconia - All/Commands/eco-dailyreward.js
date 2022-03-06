@@ -15,7 +15,7 @@ module.exports = {
       console.log(`${message.author.username} used this command: || ${command.name} ||`)
 
 
-      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      const randomNumber = Math.floor(Math.random() * 1000) + 1;
       const response = await profileModel.findOneAndUpdate(
         {
           userID: message.author.id,
@@ -31,7 +31,7 @@ module.exports = {
       );
     } catch (err) {
       console.log(err)
-      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err0}\`.`)
+      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
     }
   },
 };
