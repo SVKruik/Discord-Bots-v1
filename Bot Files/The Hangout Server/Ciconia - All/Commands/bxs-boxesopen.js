@@ -113,9 +113,9 @@ module.exports = {
                         }
                     );
                     if (randomultrarare === 1) {
-                        message.channel.send(`You received \`${randomultrarare}\` Rare Scrap 🔵! Congratulations!`)
+                        message.channel.send(`${message.author.username}, <@${message.author.id}>, you received \`${randomultrarare}\` Rare Scrap 🔵! Congratulations!`)
                     } else if (randomultrarare >= 2) {
-                        message.channel.send(`You received \`${randomultrarare}\` Rare Scraps 🔵! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomultrarare}\` Rare Scraps 🔵! Congratulations!`)
                     }
                 } else if (chance < chanceultraepic) {
                     await profileModel.findOneAndUpdate(
@@ -129,9 +129,9 @@ module.exports = {
                         }
                     );
                     if (randomultraepic === 1) {
-                        message.channel.send(`You received \`${randomultraepic}\` Epic Scrap 🟣! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomultraepic}\` Epic Scrap 🟣! Congratulations!`)
                     } else if (randomultraepic >= 2) {
-                        message.channel.send(`You received \`${randomultraepic}\` Epic Scraps 🟣! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomultraepic}\` Epic Scraps 🟣! Congratulations!`)
                     }
                 } else if (chance < chanceultralegendary) {
                     await profileModel.findOneAndUpdate(
@@ -145,9 +145,9 @@ module.exports = {
                         }
                     );
                     if (randomultralegendary === 1) {
-                        message.channel.send(`You received \`${randomultralegendary}\` Legendary Scrap 🟠! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomultralegendary}\` Legendary Scrap 🟠! Congratulations!`)
                     } else if (randomultralegendary >= 2) {
-                        message.channel.send(`You received \`${randomultralegendary}\` Legendary Scraps 🟠! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomultralegendary}\` Legendary Scraps 🟠! Congratulations!`)
                     }
                 } else if (chance < chanceultraexotic) {
                     await profileModel.findOneAndUpdate(
@@ -161,9 +161,9 @@ module.exports = {
                         }
                     );
                     if (randomultraexotic === 1) {
-                        message.channel.send(`You received \`${randomultraexotic}\` Exotic Scrap 🔴! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomultraexotic}\` Exotic Scrap 🔴! Congratulations!`)
                     } else if (randomultraexotic >= 2) {
-                        message.channel.send(`You received \`${randomultraexotic}\` Exotic Scraps 🔴! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomultraexotic}\` Exotic Scraps 🔴! Congratulations!`)
                     }
                 }
             } catch (err) {
@@ -198,9 +198,9 @@ module.exports = {
                         }
                     );
                     if (randomsupercommon === 1) {
-                        message.channel.send(`You received \`${randomsupercommon}\` Common Scrap ⚪! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsupercommon}\` Common Scrap ⚪! Congratulations!`)
                     } else if (randomsupercommon >= 2) {
-                        message.channel.send(`You received \`${randomsupercommon}\` Common Scraps ⚪! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsupercommon}\` Common Scraps ⚪! Congratulations!`)
                     }
                 } else if (chance < chancesuperuncommon) {
                     await profileModel.findOneAndUpdate(
@@ -214,9 +214,9 @@ module.exports = {
                         }
                     );
                     if (randomsuperuncommon === 1) {
-                        message.channel.send(`You received \`${randomsuperuncommon}\` Uncommon Scrap 🟢! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsuperuncommon}\` Uncommon Scrap 🟢! Congratulations!`)
                     } else if (randomsuperuncommon >= 2) {
-                        message.channel.send(`You received \`${randomsuperuncommon}\` Uncommon Scraps 🟢! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsuperuncommon}\` Uncommon Scraps 🟢! Congratulations!`)
                     }
                 } else if (chance < chancesuperrare) {
                     await profileModel.findOneAndUpdate(
@@ -230,9 +230,9 @@ module.exports = {
                         }
                     );
                     if (randomsuperrare === 1) {
-                        message.channel.send(`You received \`${randomsuperrare}\` Rare Scrap 🔵! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsuperrare}\` Rare Scrap 🔵! Congratulations!`)
                     } else if (randomsuperrare >= 2) {
-                        message.channel.send(`You received \`${randomsuperrare}\` Rare Scraps 🔵! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsuperrare}\` Rare Scraps 🔵! Congratulations!`)
                     }
                 } else if (chance < chancesuperepic) {
                     await profileModel.findOneAndUpdate(
@@ -246,9 +246,9 @@ module.exports = {
                         }
                     );
                     if (randomsuperepic === 1) {
-                        message.channel.send(`You received \`${randomsuperepic}\` Epic Scrap 🟣! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsuperepic}\` Epic Scrap 🟣! Congratulations!`)
                     } else if (randomsuperepic >= 2) {
-                        message.channel.send(`You received \`${randomsuperepic}\` Epic Scraps 🟣! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsuperepic}\` Epic Scraps 🟣! Congratulations!`)
                     }
                 } else if (chance < chancesuperlegendary) {
                     await profileModel.findOneAndUpdate(
@@ -262,9 +262,9 @@ module.exports = {
                         }
                     );
                     if (randomsuperlegendary === 1) {
-                        message.channel.send(`You received \`${randomsuperlegendary}\` Legendary Scrap 🟠! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsuperlegendary}\` Legendary Scrap 🟠! Congratulations!`)
                     } else if (randomsuperlegendary >= 2) {
-                        message.channel.send(`You received \`${randomsuperlegendary}\` Legendary Scraps 🟠! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomsuperlegendary}\` Legendary Scraps 🟠! Congratulations!`)
                     }
                 }
             } catch (err) {
@@ -299,9 +299,9 @@ module.exports = {
                         }
                     );
                     if (randomnormalcommon === 1) {
-                        message.channel.send(`You received \`${randomnormalcommon}\` Common Scrap ⚪! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomnormalcommon}\` Common Scrap ⚪! Congratulations!`)
                     } else if (randomnormalcommon >= 2) {
-                        message.channel.send(`You received \`${randomnormalcommon}\` Common Scraps ⚪! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomnormalcommon}\` Common Scraps ⚪! Congratulations!`)
                     }
                 } else if (chance < chancenormaluncommon) {
                     await profileModel.findOneAndUpdate(
@@ -315,9 +315,9 @@ module.exports = {
                         }
                     );
                     if (randomnormaluncommon === 1) {
-                        message.channel.send(`You received \`${randomnormaluncommon}\` Uncommon Scraps 🟢! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomnormaluncommon}\` Uncommon Scraps 🟢! Congratulations!`)
                     } else if (randomnormaluncommon >= 2) {
-                        message.channel.send(`You received \`${randomnormaluncommon}\` Uncommon Scraps 🟢! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomnormaluncommon}\` Uncommon Scraps 🟢! Congratulations!`)
                     }
                 } else if (chance < chancenormalrare) {
                     await profileModel.findOneAndUpdate(
@@ -331,9 +331,9 @@ module.exports = {
                         }
                     );
                     if (randomnormalrare === 1) {
-                        message.channel.send(`You received \`${randomnormalrare}\` Rare Scrap 🔵! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomnormalrare}\` Rare Scrap 🔵! Congratulations!`)
                     } else if (randomnormalrare >= 2) {
-                        message.channel.send(`You received \`${randomnormalrare}\` Rare Scraps 🔵! Congratulations!`)
+                        message.channel.send(`<@${message.author.id}>, you received \`${randomnormalrare}\` Rare Scraps 🔵! Congratulations!`)
                     }
                 }
             } catch (err) {

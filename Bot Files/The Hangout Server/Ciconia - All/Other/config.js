@@ -146,7 +146,7 @@ exports.basemessages = {
   messagesfinderror: "Could not find the specified variable.",
   messagesvcrequired: "You need to be in a voice channel in order to use this command.",
   messagesmembermention: "You need to mention someone to execute this command.",
-  messagesaccountmissing: "This user does not have an account in our database.",
+  messagesaccountmissing: "This user does not have an account in our database. Let them create one by doing any DB related command.",
   messageserror: "There was an error sending the command.",
   messagesgreaternegaone: "Amount must be larger than \`-1\`.",
   messagesgreaterone: "Amount must be greater than \`0\`.",
