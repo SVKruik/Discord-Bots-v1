@@ -29,7 +29,7 @@ module.exports = {
         // if (args[0] !== "ultra" || "ultraboxes" || "ultrabox" || "super" || "superboxes" || "superbox" || "normal" || "normalboxes" || "normalbox" || "diamond" || "shardsdiamond" || "sharddiamond" || "platinum" || "shardsplatinum" || "shardplatinum" || "gold" || "shardsgold" || "shardgold" || "silver" || "shardssilver" || "shardsilver" || "bronze" || "shardsbronze" || "shardsbronze" || "iron" || "shardsiron" || "shardsiron") {
         //     return message.channel.send(`I don't know that item, or is currently not for sale. Maybe try \`${randomitem}\`?`)
         // }
-        if (args[0] === "ultra" || "ultraboxes" || "ultrabox") {
+        if (args[0] === "ultra") {
             try {
                 const priceultra = config.boxprice.ultra * amount
                 const newbal = profileData.wallet - priceultra
@@ -51,7 +51,7 @@ module.exports = {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
             }
-        } else if (args[0] === "super" || "superboxes" || "superbox") {
+        } else if (args[0] === "super") {
             try {
                 const pricesuper = config.boxprice.super * amount
                 const newbal = profileData.wallet - pricesuper
@@ -73,7 +73,7 @@ module.exports = {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
             }
-        } else if (args[0] === "normal" || "normalboxes" || "normalbox") {
+        } else if (args[0] === "normal") {
             try {
                 const pricenormal = config.boxprice.normal * amount
                 const newbal = profileData.wallet - pricenormal
@@ -95,7 +95,7 @@ module.exports = {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
             }
-        } else if (args[0] === "diamond" || "shardsdiamond" || "sharddiamond") {
+        } else if (args[0] === "diamond") {
             try {
                 const pricediamond = config.shardprice.diamond * amount
                 const newbal = profileData.wallet - pricediamond
@@ -117,7 +117,7 @@ module.exports = {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
             }
-        } else if (args[0] === "platinum" || "shardsplatinum" || "shardplatinum") {
+        } else if (args[0] === "platinum") {
             try {
                 const priceplatinum = config.shardprice.platinum * amount
                 const newbal = profileData.wallet - priceplatinum
@@ -139,7 +139,7 @@ module.exports = {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
             }
-        } else if (args[0] === "gold" || "shardsgold" || "shardgold") {
+        } else if (args[0] === "gold") {
             try {
                 const pricegold = config.shardprice.gold * amount
                 const newbal = profileData.wallet - pricegold
@@ -161,7 +161,7 @@ module.exports = {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
             }
-        } else if (args[0] === "silver" || "shardssilver" || "shardsilver") {
+        } else if (args[0] === "silver") {
             try {
                 const pricesilver = config.shardprice.silver * amount
                 const newbal = profileData.wallet - pricesilver
@@ -183,7 +183,7 @@ module.exports = {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
             }
-        } else if (args[0] === "bronze" || "shardsbronze" || "shardsbronze") {
+        } else if (args[0] === "bronze") {
             try {
                 const pricebronze = config.shardprice.bronze * amount
                 const newbal = profileData.wallet - pricebronze
@@ -205,7 +205,7 @@ module.exports = {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
             }
-        } else if (args[0] === "iron" || "shardsiron" || "shardsiron") {
+        } else if (args[0] === "iron") {
             try {
                 const priceiron = config.shardprice.iron * amount
                 const newbal = profileData.wallet - priceiron

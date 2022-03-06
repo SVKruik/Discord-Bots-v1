@@ -8,5 +8,4 @@ module.exports = [
     "Silver Shards",
     "Bronze Shards",
     "Iron Shards"
-
 ]
