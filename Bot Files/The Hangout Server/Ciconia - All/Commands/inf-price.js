@@ -186,7 +186,7 @@ module.exports = {
                 return message.channel.send(`What type of item would you like to take a look at?`)
             }
             if (args[0] === "buy") {
-                if (args[1] === "scraps" || "scrap") {
+                if (args[1] === "scraps" || args[1] === "scrap") {
                     return message.channel.send(`Scraps can only be obtained through loot boxes! Scraps can only be sold, not bought.`)
                 } else if (args[1] === "boxes" || args[1] === "box") {
                     message.channel.send(newEmbed1)

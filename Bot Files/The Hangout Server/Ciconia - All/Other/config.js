@@ -500,7 +500,7 @@ exports.aliases = {
   aliasesgithub: ["gh"], // Github
   aliaseshelpst1: ["support"], // Help
   aliasesmcserver: ["mc", "mccheck", "mcserver"], // Minecraft Server Stats
-  aliasesprice: ["pricecheck", "sellprice", "buyprice", "checkprice", "pricebuy", "pricesell"], // Prce
+  aliasesprice: ["pricecheck", "sellprice", "buyprice", "checkprice", "pricebuy", "pricesell", "prices"], // Prce
   aliasesprofile: ["prof"], // Profile
   aliasesrules: ["rule", "rl"], // Rules
   aliasesserverip: ["server"], // Server IP
