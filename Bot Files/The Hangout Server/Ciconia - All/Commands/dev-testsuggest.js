@@ -28,7 +28,7 @@ module.exports = {
             channel.send(newEmbed).then((msg) => {
                 msg.react('👍');
                 msg.react('👎');
-                message.channel.send(`Test Suggestion sent in <#${config.base.basetestsuggestchannelid}>.`)
+                message.channel.send(`Test Suggestion sent in <#${config.base.basebottestingthreechannelid}>.`)
             });
         } catch (err) {
             console.log(err)
