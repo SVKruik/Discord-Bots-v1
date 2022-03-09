@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "substitutie",
@@ -11,7 +11,7 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const username = message.client.user.id;
 
       const cirkela = args[0]; // A
@@ -63,7 +63,7 @@ module.exports = {
         message.delete();
       }
 
-      const newEmbed = new Discord.MessageEmbed()
+      const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle(config.embeds.titlesubstitutie)
         .setImage(config.embed.embedimage)

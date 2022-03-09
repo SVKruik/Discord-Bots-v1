@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "dice",
@@ -11,7 +11,7 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const fac = ["1! 🎲", "2! 🎲", "3! 🎲", "4! 🎲", "5! 🎲", "6! 🎲"];
       const random = fac[Math.floor(Math.random() * fac.length)];
       message.channel.send(random);

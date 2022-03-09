@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
@@ -12,8 +12,8 @@ module.exports = {
             const command =
                 client.commands.get(cmd) ||
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`)
-            const newEmbed1 = new Discord.MessageEmbed()
+            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
+            const newEmbed1 = new Discord.MessageEmbed() // allemaal
                 .setColor(config.base.basecolor)
                 .setTitle(config.embeds.titleboxes1)
                 .setImage(config.embed.embedimage)
@@ -25,7 +25,7 @@ module.exports = {
                 )
                 .setFooter(config.embed.embedfooter);
 
-            const newEmbed2 = new Discord.MessageEmbed()
+            const newEmbed2 = new Discord.MessageEmbed() // alleen ultra
                 .setColor(config.base.basecolor)
                 .setTitle(config.embeds.titleboxes2)
                 .setImage(config.embed.embedimage)
@@ -35,7 +35,7 @@ module.exports = {
                 )
                 .setFooter(config.embed.embedfooter);
 
-            const newEmbed3 = new Discord.MessageEmbed()
+            const newEmbed3 = new Discord.MessageEmbed() // alleen super
                 .setColor(config.base.basecolor)
                 .setTitle(config.embeds.titleboxes3)
                 .setImage(config.embed.embedimage)
@@ -45,7 +45,7 @@ module.exports = {
                 )
                 .setFooter(config.embed.embedfooter);
 
-            const newEmbed4 = new Discord.MessageEmbed()
+            const newEmbed4 = new Discord.MessageEmbed() // alleen normaal
                 .setColor(config.base.basecolor)
                 .setTitle(config.embeds.titleboxes4)
                 .setImage(config.embed.embedimage)
@@ -56,7 +56,7 @@ module.exports = {
                 .setFooter(config.embed.embedfooter);
 
             if (!args[0]) {
-                message.channel.send(newEmbed1)
+                message.channel.send(newEmbed1) // verzend systeem
             } else if (args[0] === "ultra") {
                 message.channel.send(newEmbed2)
             } else if (args[0] === "super") {

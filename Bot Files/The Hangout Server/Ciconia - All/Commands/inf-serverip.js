@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "serverip",
@@ -11,8 +11,8 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
-      const newEmbed = new Discord.MessageEmbed()
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
+      const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle(config.embeds.titleserverip)
         .setImage(config.embed.embedimage)
@@ -33,7 +33,7 @@ module.exports = {
         )
         .setFooter(config.embed.embedfooter);
 
-      const flagmessage = newEmbed
+      const flagmessage = newEmbed // Flag Systeem
       const flags = ["everyone", "here", "delete"];
 
       if (!args[0]) {

@@ -1,4 +1,4 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
   name: "kick",
@@ -11,19 +11,19 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const target = message.mentions.users.first();
       const username = message.client.user.username;
 
       const reason1 = args[1];
       if (!args[1]) {
-        return message.channel.send("Please also specify for what reason you would like to kick this member.")
+        return message.channel.send("Please also specify for what reason you would like to kick this member.") // Rede geven
       }
-      const reason = reason1.charAt(0).toUpperCase() + reason1.slice(1);
+      const reason = reason1.charAt(0).toUpperCase() + reason1.slice(1); // Hoofdletter
 
       if (target) {
         const memberTarget = message.guild.members.cache.get(target.id);
-        memberTarget.kick();
+        memberTarget.kick(); // Het kicken zelf
         console.log(
           `${memberTarget.user.username} got kicked because of: ${reason}. This was done by ${message.author.username} using ${username}.`
         );
@@ -35,7 +35,7 @@ module.exports = {
       }
     } catch (err) {
       console.log(err)
-      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err12}\`.`)
+      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err12}\`.`) // Error Systeem
     }
   },
 };

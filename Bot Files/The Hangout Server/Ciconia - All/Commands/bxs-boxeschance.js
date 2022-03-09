@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
@@ -12,9 +12,9 @@ module.exports = {
             const command =
                 client.commands.get(cmd) ||
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`)
+            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
 
-            const chanceultrarare = config.boxchance.ultrarare
+            const chanceultrarare = config.boxchance.ultrarare // kansen uit de config halen
             const chanceultraepic = config.boxchance.ultraepic - config.boxchance.ultrarare
             const chanceultralegendary = config.boxchance.ultralegendary - config.boxchance.ultraepic
             const chanceultraexotic = config.boxchance.ultraexotic - config.boxchance.ultralegendary + 1
@@ -29,7 +29,7 @@ module.exports = {
             const chancenormaluncommon = config.boxchance.normaluncommon - config.boxchance.normalcommon
             const chancenormalrare = config.boxchance.normalrare - config.boxchance.normaluncommon + 1
             //
-            const amountultrarare = config.scrapamount.ultrarare
+            const amountultrarare = config.scrapamount.ultrarare // hoeveelheden die je kan krijgen
             const amountultraepic = config.scrapamount.ultraepic
             const amountultralegendary = config.scrapamount.ultralegendary
             const amountultraexotic = config.scrapamount.ultraexotic

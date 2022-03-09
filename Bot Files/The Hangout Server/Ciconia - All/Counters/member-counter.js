@@ -1,4 +1,4 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = async (client) => {
     const guild = client.guilds.cache.get(config.base.baseguildid);

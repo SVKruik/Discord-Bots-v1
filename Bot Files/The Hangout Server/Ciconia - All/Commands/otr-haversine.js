@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const haversine = require("haversine-distance");
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
             const command =
                 client.commands.get(cmd) ||
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`)
+            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
 
             if (!args[0]) {
                 return message.channel.send("You are missing your \`latitude\` of \`A\`.")
@@ -55,7 +55,7 @@ module.exports = {
             const haverroundm = haver * 1
             const haverroundmr = Math.round((haverroundm + Number.EPSILON) * 100) / 100
 
-            const newEmbed = new Discord.MessageEmbed()
+            const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
                 .setColor(config.base.basecolor)
                 .setTitle(config.embeds.titlehaversine)
                 .setImage(config.embed.embedimage)

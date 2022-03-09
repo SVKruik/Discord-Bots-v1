@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "steenpapierschaar",
@@ -11,7 +11,7 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       if (!args.length)
         return message.channel.send("Om het eerlijk te houden, moet je ook jouw keuze invoeren!");
 

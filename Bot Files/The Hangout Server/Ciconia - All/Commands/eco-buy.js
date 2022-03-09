@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
             const command =
                 client.commands.get(cmd) ||
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`)
+            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
 
             const item = args[0]
             const amount = args[1]
@@ -43,7 +43,7 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Ultra Boxes\`, for a buyprice of \`${buypriceultra}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "super") {
                 try {
@@ -65,7 +65,7 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Super Boxes\`, for a buyprice of \`${buypricesuper}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "normal") {
                 try {
@@ -87,7 +87,7 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Normal Boxes\`, for a buyprice of \`${buypricenormal}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "diamond") {
                 try {
@@ -109,7 +109,7 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Diamond Shards\`, for a buyprice of \`${buypricediamond}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "platinum") {
                 try {
@@ -131,7 +131,7 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Platinum Shards\`, for a buyprice of \`${buypriceplatinum}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "gold") {
                 try {
@@ -153,7 +153,7 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Gold Shards\`, for a buyprice of \`${buypricegold}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "silver") {
                 try {
@@ -175,7 +175,7 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Silver Shards\`, for a buyprice of \`${buypricesilver}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "bronze") {
                 try {
@@ -197,7 +197,7 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Bronze Shards\`, for a buyprice of \`${buypricebronze}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "iron") {
                 try {
@@ -219,12 +219,12 @@ module.exports = {
                     message.channel.send(`You have succesfully bought \`${amount}\` amount of \`Iron Shards\`, for a buyprice of \`${buypriceiron}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             }
         } catch (err) {
             console.log(err)
-            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
         }
     }
 }

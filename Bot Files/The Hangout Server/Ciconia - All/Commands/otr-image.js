@@ -1,5 +1,5 @@
 var Scraper = require("images-scraper");
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const google = new Scraper({
   puppeteer: {
     headless: true,
@@ -17,7 +17,7 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const channel = config.base.baseimagechannelid;
       const image_query = args.join(" ");
       if (!image_query) return message.channel.send(config.commandimage.commandimagemissing);

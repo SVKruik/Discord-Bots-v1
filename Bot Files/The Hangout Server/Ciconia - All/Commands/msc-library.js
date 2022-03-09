@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
@@ -12,8 +12,8 @@ module.exports = {
             const command =
                 client.commands.get(cmd) ||
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`)
-            const newEmbed = new Discord.MessageEmbed()
+            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
+            const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
                 .setColor(config.base.basecolor)
                 .setTitle(config.embeds.titleembedtemplate)
                 .setImage(config.embed.embedimage)
@@ -69,7 +69,7 @@ module.exports = {
             }
         } catch (err) {
             console.log(err)
-            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
         }
     }
 }

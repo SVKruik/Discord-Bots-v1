@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "cirkel",
@@ -11,7 +11,7 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const a = args[0];
       const b = args[1];
       const c = args[2];
@@ -39,7 +39,7 @@ module.exports = {
 
       const diameter = wabcafgerond * 2;
 
-      const newEmbed = new Discord.MessageEmbed()
+      const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle(config.embeds.titlecircle)
         .setImage(config.embed.embedimage)

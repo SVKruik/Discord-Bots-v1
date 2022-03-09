@@ -1,5 +1,5 @@
 // Source: https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = [
 "addicts",

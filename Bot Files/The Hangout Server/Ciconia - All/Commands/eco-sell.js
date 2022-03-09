@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
             const command =
                 client.commands.get(cmd) ||
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`)
+            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
 
             const item = args[0]
             const amount = args[1]
@@ -44,7 +44,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Ultra Boxes\`, for a market value of \`${sellpriceultra}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "super") {
                 try {
@@ -67,7 +67,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Super Boxes\`, for a market value of \`${sellpricesuper}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "normal") {
                 try {
@@ -90,7 +90,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Normal Boxes\`, for a market value of \`${sellpricenormal}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "diamond") {
                 try {
@@ -113,7 +113,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Diamond Shards\`, for a market value of \`${sellpricediamond}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "platinum") {
                 try {
@@ -136,7 +136,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Platinum Shards\`, for a market value of \`${sellpriceplatinum}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "gold") {
                 try {
@@ -159,7 +159,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Gold Shards\`, for a market value of \`${sellpricegold}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "silver") {
                 try {
@@ -182,7 +182,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Silver Shards\`, for a market value of \`${sellpricesilver}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "bronze") {
                 try {
@@ -205,7 +205,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Bronze Shards\`, for a market value of \`${sellpricebronze}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "iron") {
                 try {
@@ -228,7 +228,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Iron Shards\`, for a market value of \`${sellpriceiron}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "exotic") {
                 try {
@@ -251,7 +251,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Exotic Scraps\`, for a market value of \`${sellpriceexotic}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "legendary") {
                 try {
@@ -274,7 +274,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Legendary Scraps\`, for a market value of \`${sellpricelegendary}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "epic") {
                 try {
@@ -297,7 +297,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Epic Scraps\`, for a market value of \`${sellpriceepic}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "rare") {
                 try {
@@ -320,7 +320,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Rare Scraps\`, for a market value of \`${sellpricerare}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "uncommon") {
                 try {
@@ -343,7 +343,7 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Uncommon Scraps\`, for a market value of \`${sellpriceuncommon}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] === "common") {
                 try {
@@ -366,12 +366,12 @@ module.exports = {
                     message.channel.send(`You have succesfully sold \`${amount}\` amount of \`Common Scraps\`, for a market value of \`${sellpricecommon}\`. You new balance is \`${newbal}\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             }
         } catch (err) {
             console.log(err)
-            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
         }
     }
 }

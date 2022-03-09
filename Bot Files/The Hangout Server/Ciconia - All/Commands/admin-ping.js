@@ -1,4 +1,4 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
   name: "ping",
@@ -11,10 +11,10 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
-      const botping = Date.now() - message.createdTimestamp
-      const apiping = client.ws.ping
-      const newEmbed = new Discord.MessageEmbed()
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
+      const botping = Date.now() - message.createdTimestamp // Bot ping
+      const apiping = client.ws.ping // Api ping
+      const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle("Bot Latency")
         .setImage(config.embed.embedimage)
@@ -33,7 +33,7 @@ module.exports = {
 
 
 
-      const flagmessage = newEmbed
+      const flagmessage = newEmbed // Flag Systeem
       const flags = ["everyone", "here", "delete"];
 
       if (!args[0]) {

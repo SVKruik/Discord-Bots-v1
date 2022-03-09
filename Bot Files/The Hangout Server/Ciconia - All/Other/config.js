@@ -26,7 +26,7 @@ exports.base = {
 
   basemusicchannelid: "942842677932720148",
   basecolorchannelid: "942842691828457512",
-  baseimagechannelid: "942380437148409916",
+  baseimagechannelid: "942842717858320385",
   basesuggechannelid: "944949197612924928",
   baseeventchannelid: "942438431282323487",
 

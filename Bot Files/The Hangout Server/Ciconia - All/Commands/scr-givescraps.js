@@ -1,4 +1,4 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
             const command =
                 client.commands.get(cmd) ||
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`)
+            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
             if (!args[0]) {
                 return message.channel.send(config.basemessages.messagesmembermention)
             };
@@ -46,7 +46,7 @@ module.exports = {
                     message.channel.send(`The targeted member has been given \`${amount}\` amount of \`Exotic Scrap\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
 
                 }
             } else if (args[1] === "legendary") {
@@ -66,7 +66,7 @@ module.exports = {
                     message.channel.send(`The targeted member has been given \`${amount}\` amount of \`Legendary Scrap\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
 
                 }
             } else if (args[1] === "epic") {
@@ -86,7 +86,7 @@ module.exports = {
                     message.channel.send(`The targeted member has been given \`${amount}\` amount of \`Epic Scrap\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[1] === "rare") {
                 try {
@@ -105,7 +105,7 @@ module.exports = {
                     message.channel.send(`The targeted member has been given \`${amount}\` amount of \`Rare Scrap\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[1] === "uncommon") {
                 try {
@@ -124,7 +124,7 @@ module.exports = {
                     message.channel.send(`The targeted member has been given \`${amount}\` amount of \`Uncommon Scrap\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[1] === "common") {
                 try {
@@ -143,12 +143,12 @@ module.exports = {
                     message.channel.send(`The targeted member has been given \`${amount}\` amount of \`Common Scrap\`.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             }
         } catch (err) {
             console.log(err)
-            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
         }
     },
 };

@@ -1,5 +1,5 @@
 const util = require("minecraft-server-util");
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "minecraftserver",
@@ -12,7 +12,7 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       if (!args[0])
         return message.channel.send(config.commandmcserver.commandmcserverip);
       if (!args[1])
@@ -39,7 +39,7 @@ module.exports = {
             )
             .setFooter(config.embed.embedfooter);
 
-          const flagmessage = newEmbed
+          const flagmessage = newEmbed // Flag Systeem
           const flags = ["everyone", "here", "delete"];
 
           if (!args[2]) {

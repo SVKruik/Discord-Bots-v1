@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
             const command =
                 client.commands.get(cmd) ||
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`)
+            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
             const max = 6
             const songid = Math.round(args[0])
             if (!args[0]) {
@@ -38,7 +38,7 @@ module.exports = {
                     message.channel.send(`Your music library is succesfully updated.`)
                 } catch (err) {
                     console.log(err);
-                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                    message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
             } else if (args[0] > max) {
                 return message.channel.send(`You can only store up to \`${max}\` songs. Please choose a song you would like to reset between \`1\` and \`6\`.`)
@@ -60,7 +60,7 @@ module.exports = {
                         message.channel.send(`Your music library is succesfully updated.`)
                     } catch (err) {
                         console.log(err);
-                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                     }
                 } else if (args[0] === "2") {
                     try {
@@ -77,7 +77,7 @@ module.exports = {
                         message.channel.send(`Your music library is succesfully updated.`)
                     } catch (err) {
                         console.log(err);
-                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                     }
                 } else if (args[0] === "3") {
                     try {
@@ -94,7 +94,7 @@ module.exports = {
                         message.channel.send(`Your music library is succesfully updated.`)
                     } catch (err) {
                         console.log(err);
-                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                     }
                 } else if (args[0] === "4") {
                     try {
@@ -111,7 +111,7 @@ module.exports = {
                         message.channel.send(`Your music library is succesfully updated.`)
                     } catch (err) {
                         console.log(err);
-                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                     }
                 } else if (args[0] === "5") {
                     try {
@@ -128,7 +128,7 @@ module.exports = {
                         message.channel.send(`Your music library is succesfully updated.`)
                     } catch (err) {
                         console.log(err);
-                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                     }
                 } else if (args[0] === "6") {
                     try {
@@ -145,13 +145,13 @@ module.exports = {
                         message.channel.send(`Your music library is succesfully updated.`)
                     } catch (err) {
                         console.log(err);
-                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+                        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                     }
                 }
             }
         } catch (err) {
             console.log(err)
-            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
+            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
         }
     }
 }

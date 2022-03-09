@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "bigannouncements",
@@ -11,12 +11,12 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
 
       const channel = client.channels.cache.find(channel => channel.id === config.base.baseannouncementschannelid)
-      const messageArgs = args.join(' ');
+      const messageArgs = args.join(' '); // Alle args naar text
 
-      const newEmbed = new Discord.MessageEmbed()
+      const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle("New Announcement")
         .setImage(config.embed.embedimage)
@@ -30,13 +30,11 @@ module.exports = {
         message.delete();
       });
 
-
-
       const consolemsg = `${message.author.username} announced something (channel): || ${messageArgs} ||`
       console.log(consolemsg);
     } catch (err) {
       console.log(err)
-      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err11}\`.`)
+      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err11}\`.`) // Error systeem
     }
   }
 }

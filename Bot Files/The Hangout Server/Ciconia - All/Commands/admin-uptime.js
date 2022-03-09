@@ -1,4 +1,4 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
   name: "uptime",
@@ -11,13 +11,13 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const days = Math.floor(client.uptime / 86400000);
       const hours = Math.floor(client.uptime / 3600000) % 24;
       const minutes = Math.floor(client.uptime / 60000) % 60;
-      const seconds = Math.floor(client.uptime / 1000) % 60;
+      const seconds = Math.floor(client.uptime / 1000) % 60; // Tijden converteren naar ..
 
-      const newEmbed = new Discord.MessageEmbed()
+      const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle("Bot Uptime")
         .setImage(config.embed.embedimage)
@@ -30,7 +30,7 @@ module.exports = {
 
 
 
-      const flagmessage = newEmbed
+      const flagmessage = newEmbed // Flag Systeem
       const flags = ["everyone", "here", "delete"];
 
       if (!args[0]) {

@@ -1,4 +1,4 @@
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = {
   name: "clear",
@@ -11,28 +11,28 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const max = config.commandclear.commandclearmax;
       const min = config.commandclear.commandclearmin;
 
       if (!args[0])
-        return message.channel.send(config.commandclear.commandclearmissing);
-      if (isNaN(args[0])) return message.channel.send(config.basemessages.messagesrealnumber);
+        return message.channel.send(config.commandclear.commandclearmissing); // Hoeveelheid missing
+      if (isNaN(args[0])) return message.channel.send(config.basemessages.messagesrealnumber); // Mogen alleen nummers zijn
 
       if (args[0] > max)
         return message.channel.send(
-          `You cannot clear more than \`${max}\` messages in one command.`
+          `You cannot clear more than \`${max}\` messages in one command.` // Over limiet
         );
-      if (args[0] < min) return message.channel.send(config.basemessages.messagesgreaterone);
+      if (args[0] < min) return message.channel.send(config.basemessages.messagesgreaterone); // Te klein
 
       await message.channel.messages
         .fetch({ limit: args[0] })
         .then((messages) => {
-          message.channel.bulkDelete(messages);
+          message.channel.bulkDelete(messages); // Verwijderen van berichten
         });
     } catch (err) {
       console.log(err)
-      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err13}\`.`)
+      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err13}\`.`) // Error Systeem
     }
   },
 };

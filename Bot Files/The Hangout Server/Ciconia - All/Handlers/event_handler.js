@@ -1,5 +1,5 @@
 const fs = require('fs');
-const config = require("./../Other/config.js");
+const config = require("../Other/config.js");
 
 module.exports = (client, Discord) =>{
     const load_dir = (dirs) =>{

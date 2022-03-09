@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "punttotlijn",
@@ -11,7 +11,7 @@ module.exports = {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`)
+      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const punt1 = "A";
       const coordpunt1x = 5;
       const coordpunt1y = 5;
@@ -62,7 +62,7 @@ module.exports = {
       var coordpuntenvolafgerond =
         Math.round((coordpuntenvol + Number.EPSILON) * 10) / 10;
 
-      const newEmbed = new Discord.MessageEmbed()
+      const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle(config.embeds.titlepuntlijn)
         .setImage(config.embed.embedimage)

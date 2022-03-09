@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const mongoose = require("mongoose");
 
 const profileSchema = new mongoose.Schema({
