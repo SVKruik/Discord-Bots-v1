@@ -1,3 +1,5 @@
+// Reset de hoeveelheid dozen iemand heeft.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

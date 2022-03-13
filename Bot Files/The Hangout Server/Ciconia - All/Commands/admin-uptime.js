@@ -1,3 +1,5 @@
+// Check hoe lang de bot al wakker is.
+
 const config = require("../Other/config.js");
 
 module.exports = {

@@ -1,3 +1,5 @@
+// Verkoop munten
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 

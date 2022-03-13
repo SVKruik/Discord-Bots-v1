@@ -1,3 +1,6 @@
+// Grote announcements. Hiermee stuur je in hetzelfde kanaal een bericht. De bot spreekt voor jouw. Dit kan alles zijn. 
+// De 'A' staat er zodat hij samen met Big Announcements staat. 'S' staat voor big.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

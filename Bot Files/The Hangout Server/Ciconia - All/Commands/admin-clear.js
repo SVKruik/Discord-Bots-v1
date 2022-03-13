@@ -1,3 +1,5 @@
+// Bulk delete een bepaalde hoeveelheid berichten, zodat je het niet handmatig hoeft te doen.
+
 const config = require("../Other/config.js");
 
 module.exports = {

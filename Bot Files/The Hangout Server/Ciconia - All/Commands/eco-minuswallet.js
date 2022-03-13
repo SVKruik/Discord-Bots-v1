@@ -1,3 +1,5 @@
+// Haal munten weg bij portemenee
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

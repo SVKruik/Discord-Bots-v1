@@ -1,3 +1,5 @@
+// Unblind iemand. Persoon is weer terug.
+
 const config = require("../Other/config.js");
 
 module.exports = {

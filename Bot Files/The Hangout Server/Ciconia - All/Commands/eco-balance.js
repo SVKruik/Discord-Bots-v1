@@ -1,3 +1,5 @@
+// Laat je hoeveelheid munten zien.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

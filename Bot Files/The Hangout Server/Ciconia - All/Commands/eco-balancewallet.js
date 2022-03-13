@@ -1,3 +1,5 @@
+// Laat de hoeveelheid munten in je portemenee zien.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

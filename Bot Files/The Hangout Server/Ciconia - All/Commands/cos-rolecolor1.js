@@ -1,3 +1,5 @@
+// Oude systeem van kleuren. Wordt niet meer gebruikt. Gaat de geschiedenis in.
+
 const config = require("../Other/config.js");
 
 module.exports = {

@@ -1,3 +1,5 @@
+// Mute iemand. Dit persoon kan niet praten of berichten sturen.
+
 const ms = require("ms");
 const config = require("../Other/config.js");
 

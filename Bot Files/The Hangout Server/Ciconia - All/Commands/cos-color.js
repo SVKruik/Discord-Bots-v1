@@ -1,3 +1,5 @@
+// Role kleur door middel van ID's. Kies 1/205.
+
 const config = require("../Other/config");
 const profileModel = require("../models/profileSchema");
 

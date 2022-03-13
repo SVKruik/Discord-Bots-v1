@@ -1,3 +1,5 @@
+// Haal kleuren weg voor refund.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

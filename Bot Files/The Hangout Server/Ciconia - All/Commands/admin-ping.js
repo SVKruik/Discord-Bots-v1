@@ -1,3 +1,5 @@
+// Check de ping van de bot. Slecht internet = hoge ping.
+
 const config = require("../Other/config.js");
 
 module.exports = {

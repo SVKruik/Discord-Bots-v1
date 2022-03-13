@@ -1,3 +1,5 @@
+// Geef iemand een hoeveelheid dozen.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

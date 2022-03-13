@@ -1,3 +1,5 @@
+// Verblind iemand. Dit persoon kan niks meer zien, typen of bellen.
+
 const ms = require("ms");
 const config = require("../Other/config.js");
 

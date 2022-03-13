@@ -1,3 +1,5 @@
+// Check hoeveel dozen je hebt.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 

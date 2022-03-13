@@ -1,3 +1,5 @@
+// Verban iemand uit de Discord server.
+
 const config = require("../Other/config.js");
 
 module.exports = {

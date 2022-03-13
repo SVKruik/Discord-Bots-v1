@@ -1,3 +1,5 @@
+// Geef iemand munten voor zijn portemenee én bank.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

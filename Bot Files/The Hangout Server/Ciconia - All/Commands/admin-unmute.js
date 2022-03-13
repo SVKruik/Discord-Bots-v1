@@ -1,3 +1,5 @@
+// Unmute iemand. Persoon kan weer praten.
+
 const config = require("../Other/config.js");
 
 module.exports = {
