@@ -1,3 +1,7 @@
+// Alle variabelen etc. De constructors hieronder worden niet gebruikt, staan er gewoon
+// zodat ik weet welke NPM packages worden gebruikt.
+// Prijzen, intervallen, channel ID's staan allemaal hier.
+
 require("console-stamp")(console, "[HH:MM]");
 const ms = require("ms");
 const profileModel = require("../models/profileSchema");

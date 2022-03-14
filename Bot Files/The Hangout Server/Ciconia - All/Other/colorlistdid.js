@@ -1,3 +1,5 @@
+// Lijst van alle id's van de role kleuren.
+
 module.exports = [
     "910544967582253086", //   white    
     "910545117650235552", //   grey    

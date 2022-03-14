@@ -1,4 +1,10 @@
-// Source: https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
+// Alle woorden die niet mogen worden gebruikt bij de command image. 
+// Is voorlopig nog alleen Engelstalig, maar het gaat om het idee.
+// Als je toch een woord hier gebruikt, wordt de cmd niet uitgevoerd
+// en word je bericht verwijderd. Verder zegt hij dat we dit 'family
+// friendly' moeten houden.
+
+// Bron: https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
 const config = require("../Other/config.js");
 
 module.exports = [

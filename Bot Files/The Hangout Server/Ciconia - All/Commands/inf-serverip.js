@@ -1,3 +1,5 @@
+// Laat het IP zien van MultiCube en hoe je moet joinen.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

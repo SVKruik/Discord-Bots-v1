@@ -1,3 +1,6 @@
+// Stuur een afbeelding. De bot zoekt je zoekterm op, en verstuurd het eerste resultaat.
+// Werkt met blacklist ivm 'pikante' zoektermen. Zie ../Other/profanity.js voor de lijst.
+
 var Scraper = require("images-scraper");
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const google = new Scraper({

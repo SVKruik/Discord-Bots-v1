@@ -1,3 +1,7 @@
+// Haal informatie op van een gegeven server. Laat wat statistieken zien.
+// Niet echt nuttig, wel leuk.
+// Gebruikt een NPM package.
+
 const util = require("minecraft-server-util");
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 

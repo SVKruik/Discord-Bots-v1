@@ -1,3 +1,6 @@
+// Laat je opgeslagen muziek bibliotheek zien.
+// Quick access naar je favoriete links voor de muziek bot.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 

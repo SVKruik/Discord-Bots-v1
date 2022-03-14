@@ -1,3 +1,8 @@
+// Kern van de bot. Dit is de listener naar berichten die beginnen met de prefix. 
+// Verder zitten hier ook de cooldown, permission en aliases module in.
+// Vele variabelen zitten in de config.
+// Veel kern spulletjes die eenmaal geschreven niet meer aangeraakt hoeven te worden. 
+
 require("dotenv").config();
 const config = require("./../../Other/config.js");
 const cooldowns = new Map();

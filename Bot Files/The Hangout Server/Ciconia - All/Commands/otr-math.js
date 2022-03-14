@@ -1,3 +1,7 @@
+// Bereken iets simpels als 1 + 1. 
+// Werkt met args
+// Werkt met een NPM package
+
 const math = require("mathjs");
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 

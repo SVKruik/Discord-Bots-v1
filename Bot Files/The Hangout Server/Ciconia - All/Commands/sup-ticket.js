@@ -1,3 +1,5 @@
+// Maak een ticket aan. Een tijdelijk prive kanaal, waar je kan praten met een mod.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

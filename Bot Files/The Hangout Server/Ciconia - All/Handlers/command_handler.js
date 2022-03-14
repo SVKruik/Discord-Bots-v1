@@ -1,3 +1,5 @@
+// De handler die de commands uit de commands folder haalt, en execute. 
+
 const { DiscordAPIError } = require('Discord.js');
 const fs = require('fs');
 const config = require("../Other/config.js");

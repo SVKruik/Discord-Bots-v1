@@ -1,3 +1,5 @@
+// Reset de hoeveelheid munten in bank account.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

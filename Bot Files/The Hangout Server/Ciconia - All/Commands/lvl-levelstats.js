@@ -1,3 +1,5 @@
+// Laat XP en levels zien
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

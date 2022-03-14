@@ -1,3 +1,5 @@
+// Maak een profiel aan als iemand de server joined.
+
 const profileModel = require("../../models/profileSchema");
 const config = require("./../../Other/config.js");
 

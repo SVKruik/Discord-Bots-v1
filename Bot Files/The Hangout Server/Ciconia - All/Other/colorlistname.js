@@ -1,3 +1,5 @@
+// Alle kleuren op een rij.
+
 module.exports = [
     "white",
     "grey",

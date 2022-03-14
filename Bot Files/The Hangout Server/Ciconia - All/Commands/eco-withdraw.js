@@ -1,3 +1,5 @@
+// Neem munten op (bank --> wallet)
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

@@ -1,3 +1,7 @@
+// Stuurt een link naar een google form. Soliciteer bij MultiCube.
+// Dit was in de tijd dat MultiCube nog een ding was, en we het groot probeerden te maken.
+// Simpele vragenlijst op Google Forms.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

@@ -1,3 +1,8 @@
+// Alle vaste modules die in veel bestanden voorkomen. Makkelijk control c en control v. 
+// Dit bestand wordt niet gelezen. 
+// Geeft veel errors als hij dat zou doen, wegens gedupliceerde constructors.
+// Puur voor mezelf.
+
 //// Module 1.1: Flag System - Normal
 const flagmessage = "flagmessage"
 const flags = ["everyone", "here", "delete"];

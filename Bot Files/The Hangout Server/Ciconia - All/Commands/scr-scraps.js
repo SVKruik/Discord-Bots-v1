@@ -1,3 +1,5 @@
+// Laat de hoeveelheid scraps zien die je hebt
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 

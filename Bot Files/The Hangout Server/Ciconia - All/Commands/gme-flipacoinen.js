@@ -1,3 +1,5 @@
+// Flip a coin. Kop of munt Engelstalig
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

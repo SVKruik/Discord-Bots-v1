@@ -1,3 +1,5 @@
+// Simpele dobbelsteen. Kiest random iets uit de 'dv' array.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
@@ -12,8 +14,8 @@ module.exports = {
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
       console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-      const fac = ["1! 🎲", "2! 🎲", "3! 🎲", "4! 🎲", "5! 🎲", "6! 🎲"];
-      const random = fac[Math.floor(Math.random() * fac.length)];
+      const dv = ["1! 🎲", "2! 🎲", "3! 🎲", "4! 🎲", "5! 🎲", "6! 🎲"];
+      const random = dv[Math.floor(Math.random() * dv.length)];
       message.channel.send(random);
     } catch (err) {
       console.log(err)

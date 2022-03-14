@@ -1,3 +1,8 @@
+// Los een cirkel vergelijking op. Dit is een complexe berekening binnen wiskunde B.
+// Net als de andere misc cmds, gewoon voor de lol gemaakt. 
+// Vul je gegevens in, en hij berekent het. 
+// Hij laat ook stap voor stap zien hoe je het moet berekenen.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

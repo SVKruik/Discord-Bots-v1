@@ -1,3 +1,5 @@
+// Ons eigen ID systeem. 
+
 exports.colorlistid = {
     1: "white",
     2: "grey",

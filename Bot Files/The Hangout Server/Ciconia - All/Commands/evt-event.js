@@ -1,3 +1,5 @@
+// Maak een nieuw event aan. Mensen kunnen reageren voor een team role. 
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

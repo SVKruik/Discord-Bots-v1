@@ -1,3 +1,6 @@
+// Lijst met alle errorcodes die je kan krijgen. Gewoon informatief.
+// Specifieke error code, of allemaal.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

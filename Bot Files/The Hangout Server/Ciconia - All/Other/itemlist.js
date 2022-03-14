@@ -1,3 +1,5 @@
+// Alle items die te koop zijn.
+
 module.exports = [
     "Ultra Box",
     "Super Box",

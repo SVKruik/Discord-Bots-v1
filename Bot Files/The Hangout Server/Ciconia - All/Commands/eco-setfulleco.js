@@ -1,3 +1,5 @@
+// Reset de hoeveelheid voor beide accounts.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 

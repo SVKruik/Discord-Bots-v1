@@ -1,3 +1,7 @@
+// Stuur een suggestie in een dedicated kanaal. Mensen kunnen dan stemmen of dit een 
+// goed idee is. Zo ja, dan implementeer ik het. Kan iets voor de bot of andere
+// dingen zijn.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

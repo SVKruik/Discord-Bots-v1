@@ -1,3 +1,7 @@
+// Laat allerlei thema's zien waar je op kan stemmen zodat hij je informatie geeft.
+// Moet herschreven worden ivm inefficientie.
+// Ik vind dit stem systeem minder 'goed'. Args is beter.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

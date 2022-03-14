@@ -1,3 +1,5 @@
+// Reset de hoeveelheid scraps van iemand
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 

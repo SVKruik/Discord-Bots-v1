@@ -1,3 +1,5 @@
+// Laat een embed zien met alle items die je kan kopen, en wat het is.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 

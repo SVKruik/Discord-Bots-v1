@@ -1,3 +1,5 @@
+// Speel een lied af. Werkt met music links in het normale (niet 'be') link format.
+
 const ytdl = require("ytdl-core");
 const ytSearch = require("yt-search");
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen

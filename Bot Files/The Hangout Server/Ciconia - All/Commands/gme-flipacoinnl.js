@@ -1,3 +1,5 @@
+// Kop of munt
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

@@ -1,3 +1,5 @@
+// Laat wat statistieken van de bot zien, als hoeveelheid commands, ping etc.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

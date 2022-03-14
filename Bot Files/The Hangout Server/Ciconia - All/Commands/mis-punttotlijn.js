@@ -1,3 +1,7 @@
+// Bereken de afstand van een punt tot een lijn.
+// Net als de andere misc cmds, gewoon voor de lol gemaakt. 
+// Hij laat ook stap voor stap zien hoe je het moet berekenen.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

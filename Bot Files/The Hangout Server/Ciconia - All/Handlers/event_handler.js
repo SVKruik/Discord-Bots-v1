@@ -1,3 +1,6 @@
+// Laad alle events die in de events folder zitten. Zorgt ervoor dat bijvoorbeeld ready.js 
+// ge execute wordt.
+
 const fs = require('fs');
 const config = require("../Other/config.js");
 

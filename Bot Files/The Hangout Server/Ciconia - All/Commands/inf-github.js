@@ -1,3 +1,5 @@
+// Link naar onze GitHub pagina voor informatie.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {

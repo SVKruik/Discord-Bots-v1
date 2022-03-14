@@ -1,3 +1,5 @@
+// Link naar onze Ko-Fi pagina. Je kan hier doneren of abbonnee worden.
+
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
