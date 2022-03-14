@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "cuculus",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "cosmetic",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",

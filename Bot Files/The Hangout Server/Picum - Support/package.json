@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "picum",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "support",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",

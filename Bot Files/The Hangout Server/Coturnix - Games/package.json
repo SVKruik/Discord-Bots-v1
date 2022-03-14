@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "coturnix",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "games",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",

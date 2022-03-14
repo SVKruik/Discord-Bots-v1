@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "larum",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "events",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",

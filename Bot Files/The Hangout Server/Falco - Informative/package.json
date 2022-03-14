@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "falco",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "informative",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",

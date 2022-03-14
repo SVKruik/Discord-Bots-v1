@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "anser",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "economy",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",

@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "avocet",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "miscellaneous",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",

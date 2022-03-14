@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "noctua",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "level",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",

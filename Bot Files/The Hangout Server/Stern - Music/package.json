@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "stern",
   "version": "1.0.0",
-  "description": "Everything",
+  "description": "music",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "github:discordjs/opus",
