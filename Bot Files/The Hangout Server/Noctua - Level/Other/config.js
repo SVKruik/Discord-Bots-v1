@@ -417,6 +417,7 @@ exports.aliases = {
   // Command Aliases
   aliasesabannouncements: ["bigannouncement", "bigannounce", "bigann", "bannouncement", "bannounce", "banno"], // Big Announcement (dedicated channel)
   aliasesasannouncements: ["smallannouncement", "smallannounce", "smallann", "sannouncement", "sannounce", "sanno"], // Small Announcement (direct channel)
+  aliasesawake: [], // Awake
   aliasesban: [], // Ban
   aliasesblind: [], // Blind
   aliasesclear: ["bulkdelete", "bulkdel"], // Clear
@@ -555,6 +556,7 @@ const G = 10; // Soft
 const H = 0; // No cooldown
 exports.cooldown = {
   cooldownannouncements: B,
+  cooldownawake: B,
   cooldownban: B,
   cooldownblind: B,
   cooldownclear: B,
@@ -656,6 +658,7 @@ const J = ["SEND_MESSAGES"]; // Permission for general commands.
 exports.permissions = {
   // Command Permissions
   permissionannouncements: I,
+  permissionawake: I,
   permissionban: I,
   permissionblind: I,
   permissionclear: I,
