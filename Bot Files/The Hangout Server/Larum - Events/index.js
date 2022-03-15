@@ -9,7 +9,7 @@ const fs = require("fs");
 const config = require('./Other/config.js');
 const mongoose = require("mongoose");
 const { version } = require("os");
-const memberCounter = require("./Counters/member-counter");
+const memberCounter = require("./Counters/counters.js");
 const { channel } = require("diagnostics_channel");
 require("dotenv").config();
 const client = new Discord.Client({
