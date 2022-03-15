@@ -36,7 +36,7 @@ exports.base = {
 
   basebottestingthreechannelid: "944963774157299814",
 
-  basemembercounterhz: '1500000',
+  basecounterinterval: '1500000',
   basemembercounterchannelid: "873925840096886784",
 
   baseticketgroupid: "852178171305525258",

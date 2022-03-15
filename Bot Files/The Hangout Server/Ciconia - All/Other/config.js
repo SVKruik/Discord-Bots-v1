@@ -18,11 +18,6 @@ exports.base = {
   basecolor: "#76b3e1",
   baseguildid: "820580469757313025",
 
-  basewalletdefault: "0",
-  basebankdefault: "0",
-  baseleveldefault: "0",
-  baseexperiencedefault: "0",
-
   basewelcomechannelid: "850753468927049798",
   baseannouncementschannelid: "944956465733586974",
 
@@ -32,12 +27,13 @@ exports.base = {
   basecolorchannelid: "942842691828457512",
   baseimagechannelid: "942842717858320385",
   basesuggechannelid: "944949197612924928",
-  baseeventchannelid: "942438431282323487",
+  baseeventchannelid: "942846790451998751",
 
   basebottestingthreechannelid: "944963774157299814",
 
-  basemembercounterhz: '1500000',
+  basecounterinterval: '1500000',
   basemembercounterchannelid: "873925840096886784",
+  basepeoplecounterchannelid: "953292837422788628",
 
   baseticketgroupid: "852178171305525258",
   baseticketdeletetime: "5000", //ms -> sec * 1000
