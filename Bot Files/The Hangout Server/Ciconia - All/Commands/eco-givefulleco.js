@@ -1,4 +1,4 @@
-// Geef iemand munten voor zijn portemenee én bank.
+// Geef iemand munten voor zijn portemonnee én bank.
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");

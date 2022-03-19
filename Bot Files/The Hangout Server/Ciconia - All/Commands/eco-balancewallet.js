@@ -1,4 +1,4 @@
-// Laat de hoeveelheid munten in je portemenee zien.
+// Laat de hoeveelheid munten in je portemonnee zien.
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");

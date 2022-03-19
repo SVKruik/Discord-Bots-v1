@@ -1,4 +1,4 @@
-// Reset de hoeveelheid munten in portemenee.
+// Reset de hoeveelheid munten in portemonnee.
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");

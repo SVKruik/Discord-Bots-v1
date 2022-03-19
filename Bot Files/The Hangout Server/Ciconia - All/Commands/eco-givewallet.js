@@ -1,4 +1,4 @@
-// Geef munten voor de portemenee.
+// Geef munten voor de portemonnee.
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
