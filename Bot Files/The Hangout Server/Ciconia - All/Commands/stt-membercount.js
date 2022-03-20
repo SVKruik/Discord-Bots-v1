@@ -15,13 +15,14 @@ module.exports = {
                 client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
             console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
 
+            const botcount = config.base.botcount
             const guild = client.guilds.cache.get(config.base.baseguildid);
             const memberCount = guild.memberCount;
             const channel1 = guild.channels.cache.get(config.base.basemembercounterchannelid);
             channel1.setName(`Total Members: ${memberCount.toLocaleString()}`);
             console.log(`Updated current Member Count in ${guild.name}.`);
 
-            const peopleCount = memberCount - 13;
+            const peopleCount = memberCount - botcount;
             const channel2 = guild.channels.cache.get(config.base.basepeoplecounterchannelid);
             channel2.setName(`Total People: ${peopleCount.toLocaleString()}`);
             console.log(`Updated current People Count in ${guild.name}.`);
@@ -45,7 +46,7 @@ module.exports = {
                     },
                     {
                         name: config.embeds.namemembercount3,
-                        value: `\`13\``,
+                        value: `\`botcount\``,
                     }
                 )
                 .setFooter(config.embed.embedfooter);

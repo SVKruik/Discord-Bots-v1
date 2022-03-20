@@ -17,6 +17,7 @@ const version = require("../package.json").version;
 exports.base = {
   basecolor: "#d954f5",
   baseguildid: "820580469757313025",
+  botcount: 13,
 
   basewelcomechannelid: "850753468927049798",
   baseannouncementschannelid: "944956465733586974",
