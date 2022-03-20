@@ -15,7 +15,7 @@ const fs = require("fs");
 const version = require("../package.json").version;
 
 exports.base = {
-  basecolor: "#E6CCC4",
+  basecolor: "#e6ccc4",
   baseguildid: "820580469757313025",
 
   basewelcomechannelid: "850753468927049798",
@@ -281,6 +281,7 @@ exports.embeds = {
   titletitreerverdunning: "Titreer Verdunning Berekening",
   titlescraps: "Scraps Balance",
   titleshards: "Shards Balance",
+  titlemembercount: "Member Count",
 
   //Descriptions
   descriptionshop: "Here are all the items you can buy with coins or other special tokens. You can buy stuff with the command \`buy\`.",
@@ -306,6 +307,7 @@ exports.embeds = {
   descriptionsubstitutie: "Een substitutie vergelijking oplossen.",
   descriptiontitreernormaal: "Een normale titreer berekening maken.",
   descriptiontitreerverdunning: "Een titreer berekening met verdunning maken.",
+  descriptionmembercount: "Here is the amount of people in this Discord server.",
 
   //Names
   nameboxes1: "Ultra Boxes", // Boxes
@@ -386,6 +388,9 @@ exports.embeds = {
   nameshards4: "Silver Shards:",
   nameshards5: "Bronze Shards:",
   nameshards6: "Iron Shards:",
+  namemembercount1: "> **Total Members:**",
+  namemembercount2: "> **Total People:**",
+  namemembercount3: "> **Total Bots:**",
 
   //Values,
   valuebotstats6: `${version}`,
@@ -499,7 +504,6 @@ exports.aliases = {
   aliasesdonate: ["dnte"], // Donate
   aliasesevent: [], // Event
   aliasesgithub: ["gh"], // Github
-  aliaseshelpst1: ["support"], // Help
   aliasesmcserver: ["mc", "mccheck", "mcserver"], // Minecraft Server Stats
   aliasesprice: ["pricecheck", "sellprice", "buyprice", "checkprice", "pricebuy", "pricesell", "prices"], // Prce
   aliasesprofile: ["prof"], // Profile
@@ -525,7 +529,6 @@ exports.aliases = {
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
   aliasessuggestions: ["suggest", "suggestion"], // Suggestions
-  aliasesticket: ["tkt"], // Ticket
   aliasescirkelvergelijking: ["circle"], // Cirkel
   aliaseshoeklijn: ["hkli"], // Hoek Lijn
   aliasespunttotlijn: ["lijntotpunt", "puntlijn", "lijnpunt"], // Punt Tot Lijn
@@ -540,6 +543,9 @@ exports.aliases = {
   aliasesminusshards: ["minusshard", "shardsminus", "shardminus"], // Minus Shards
   aliasessetshards: ["setshard", "shardsset", "shardset"], // Set Shards
   aliasesshards: ["shardscheck", "shardsbal", "balshards", "shardsbalance", "shard", "balanceshards"], // Shards
+  aliasesmembercount: ["memberscount", "memberamount", "countmember", "countmembers", "membersamount", "amountmember", "amountmembers"], // Member Count
+  aliaseshelp: ["support"], // Help
+  aliasesticket: ["tkt"], // Ticket
 };
 
 const A = 84000; // Daily
@@ -612,7 +618,6 @@ exports.cooldown = {
   cooldowndonate: B,
   cooldownevent: B,
   cooldowngithub: B,
-  cooldownhelpst1: E,
   cooldownmcserver: E,
   cooldownprice: G,
   cooldownprofile: E,
@@ -632,7 +637,6 @@ exports.cooldown = {
   cooldownrpsnl: H,
   cooldownsrpsen: H,
   cooldownsuggestions: F,
-  cooldownticket: D,
   cooldowncirkelvergelijking: G,
   cooldownhoeklijn: G,
   cooldownpunttotlijn: G,
@@ -647,6 +651,9 @@ exports.cooldown = {
   cooldownminusshards: B,
   cooldownsetshards: B,
   cooldownshards: G,
+  cooldownmembercount: E,
+  cooldownhelp: E,
+  cooldownticket: D,
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -714,7 +721,6 @@ exports.permissions = {
   permissiondonate: I,
   permissionevent: I,
   permissiongithub: I,
-  permissionhelpst1: J,
   permissionmcserver: I,
   permissionprice: I,
   permissionprofile: J,
@@ -733,7 +739,6 @@ exports.permissions = {
   permissionrpsnl: J,
   permissionsrpsen: J,
   permissionsuggestions: J,
-  permissionticket: J,
   permissioncirkelvergelijking: J,
   permissionhoeklijn: J,
   permissionpunttotlijn: J,
@@ -748,4 +753,7 @@ exports.permissions = {
   permissionminusshards: I,
   permissionsetshards: I,
   permissionshards: J,
+  permissionmembercount: J,
+  permissionhelp: J,
+  permissionticket: J,
 };
