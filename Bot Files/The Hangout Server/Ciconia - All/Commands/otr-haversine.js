@@ -68,7 +68,7 @@ module.exports = {
                 .addFields(
                     {
                         name: config.embeds.namehaversine1,
-                        value: `Latitude: ${args[0]}, Latitude ${args[1]}.`,
+                        value: `Latitude: ${args[0]}, Longitude ${args[1]}.`,
                     },
                     {
                         name: config.embeds.namehaversine2,

@@ -28,12 +28,13 @@ module.exports = {
       message.channel.send(random);
 
       var lowerrandom = random.toLowerCase();
+      var higherrandom = random.toUpperCase();
 
       if (lowerrandom.substring(0, 4) == args[0]) {
-        console.log(lowerrandom);
+        console.log(`I chose ${higherrandom}.`);
         return message.channel.send("You win! - 🟢");
       } else if (lowerrandom.substring(0, 4) != args[0]) {
-        console.log(lowerrandom);
+        console.log(`I chose ${higherrandom}.`);
         return message.channel.send(`You lose! - 🔴`);
       }
     } catch (err) {

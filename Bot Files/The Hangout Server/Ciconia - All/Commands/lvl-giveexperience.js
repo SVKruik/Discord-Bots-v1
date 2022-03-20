@@ -26,9 +26,9 @@ module.exports = {
         return message.channel.send(config.basemessages.messagesgreaterone);
 
       try {
-        const targetData = await levelModel.findOne({ userID: target.id });
+        const targetData = await profileModel.findOne({ userID: target.id });
         if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
-        await levelModel.findOneAndUpdate(
+        await profileModel.findOneAndUpdate(
           {
             userID: target.id,
           },
@@ -39,7 +39,7 @@ module.exports = {
           }
         );
 
-        const flagmessage = `The targeted member's wallet is now \`${amount}\`.`
+        const flagmessage = `The targeted member's experience amount is now \`${amount}\`.`
         const flags = ["everyone", "here", "delete"];
 
         if (!args[2]) {

@@ -32,7 +32,7 @@ module.exports = {
                 msg.react('👍');
                 msg.react('👎');
                 message.delete();
-                message.channel.send(`Thank you for your suggestion! Everyone can vote on your suggestion. If it's a good idea, we will take it to the drawing board! Your suggestion was sent in <#${config.base.basesuggechannelid}>.`)
+                message.channel.send(`Thank you for your suggestion! Everyone can vote!. If it's a good idea, we will take it to the drawing board! Your new suggestion was sent in <#${config.base.basesuggechannelid}>.`)
             });
 
             const consolemsg = `${message.author.username} suggested something new: || ${messageArgs} ||`

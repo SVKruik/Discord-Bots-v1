@@ -25,9 +25,9 @@ module.exports = {
       if (amount < 0) return message.channel.send(config.basemessages.messagesgreaternegaone);
 
       try {
-        const targetData = await levelModel.findOne({ userID: target.id });
+        const targetData = await profileModel.findOne({ userID: target.id });
         if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
-        await levelModel.findOneAndUpdate(
+        await profileModel.findOneAndUpdate(
           {
             userID: target.id,
           },

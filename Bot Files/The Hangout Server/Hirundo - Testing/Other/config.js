@@ -680,9 +680,7 @@ exports.permissions = {
   permissionsetboxes: I,
   permissioncolor: J,
   permissioncolorremove: J,
-  permissionrolecolor1: I,
-  permissionrolecolor2: I,
-  permissionrolecolor3: I,
+
   permissiontemplatecommand: I,
   permissiontemplateembed: I,
   permissiontestannouncements: I,

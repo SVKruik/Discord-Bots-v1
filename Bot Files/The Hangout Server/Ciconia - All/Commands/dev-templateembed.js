@@ -3,7 +3,7 @@
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
-  name: "embedtemplate",
+  name: "templatecommand",
   aliases: config.aliases.aliasestemplateembed,
   cooldown: config.cooldown.cooldowntemplateembed,
   permissions: config.permissions.permissiontemplatecommand,

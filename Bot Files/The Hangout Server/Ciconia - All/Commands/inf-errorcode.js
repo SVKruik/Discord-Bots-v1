@@ -49,9 +49,9 @@ module.exports = {
 
       const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
-        .setTitle("Error Code Check")
+        .setTitle(config.embeds.titleerrorcode)
         .setImage(config.embed.embedimage)
-        .setDescription("See what error code means what.")
+        .setDescription(config.embeds.descriptionerrorcode)
         .addFields(
           {
             name: `Error Codes`,

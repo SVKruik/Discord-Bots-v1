@@ -30,10 +30,10 @@ module.exports = {
       var lowerrandom = random.toLowerCase();
 
       if (lowerrandom.substring(0, 4) == args[0]) {
-        console.log(lowerrandom);
+        console.log(`I chose ${higherrandom}.`);
         return message.channel.send("Je hebt gewonnen! - 🟢");
       } else if (lowerrandom.substring(0, 4) != args[0]) {
-        console.log(lowerrandom);
+        console.log(`I chose ${higherrandom}.`);
         return message.channel.send(`Je hebt verloren! - 🔴`);
       }
     } catch (err) {

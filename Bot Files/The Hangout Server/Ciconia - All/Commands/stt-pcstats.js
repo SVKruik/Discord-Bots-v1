@@ -1,37 +1,43 @@
-// Standaard code voor een command met embed.
+// Laat wat statistieken van de host pc zien, als RAM gebruik en platform.
 
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const os = require('os');
 
 module.exports = {
-  name: "embedtemplate",
-  aliases: config.aliases.aliasestemplateembed,
-  cooldown: config.cooldown.cooldowntemplateembed,
-  permissions: config.permissions.permissiontemplatecommand,
-  description: "Embed template for devs.",
-  execute(message, args, cmd, client, Discord) {
+  name: "pcstatistics",
+  aliases: config.aliases.aliasespcstats,
+  cooldown: config.cooldown.cooldownpcstats,
+  permissions: config.permissions.permissionpcstats,
+  description: "Displays all stats of the host pc.",
+  async execute(message, args, cmd, client, Discord) {
     try {
       const command =
         client.commands.get(cmd) ||
         client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
       console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
+      const fs = require("fs");
+
+      const totalram = ((os.totalmem() / 10 ** 6 + " ").split('.')[0]);
+      const freeram = ((os.freemem() / 10 ** 6 + " ").split('.')[0]);
+      const usedram = (((os.totalmem() - os.freemem()) / 10 ** 6 + " ").split('.')[0]);
+      const platform = os.platform
+      const uptime = os.uptime
+      const version = os.version
+
       const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
-        .setTitle(config.embeds.titleembedtemplate)
+        .setTitle(config.embeds.titlepcstats)
         .setImage(config.embed.embedimage)
-        .setDescription(config.embeds.descriptionembedtemplate)
+        .setDescription(config.embeds.descriptionpcstats)
         .addFields(
-          {
-            name: config.embeds.nameembedtemplate1,
-            value: config.embeds.valueembedtemplate1,
-          },
-          {
-            name: config.embeds.nameembedtemplate2,
-            value: config.embeds.valueembedtemplate2,
-          }
+          { name: config.embeds.namepcstats1, value: totalram },
+          { name: config.embeds.namepcstats2, value: freeram },
+          { name: config.embeds.namepcstats3, value: usedram },
+          { name: config.embeds.namepcstats4, value: platform },
+          { name: config.embeds.namepcstats5, value: uptime },
+          { name: config.embeds.namepcstats6, value: version }
         )
         .setFooter(config.embed.embedfooter);
-
-
 
       const flagmessage = newEmbed // Flag Systeem
       const flags = ["everyone", "here", "delete"];
@@ -63,7 +69,6 @@ module.exports = {
         }
       }
 
-
       if (args[0] === "everyone") {
         if (args[1] === "here") {
           return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -89,7 +94,6 @@ module.exports = {
       } else if (args[2] === "everyone") {
         return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
       }
-
 
       if (args[0] === "here") {
         if (args[1] === "everyone") {

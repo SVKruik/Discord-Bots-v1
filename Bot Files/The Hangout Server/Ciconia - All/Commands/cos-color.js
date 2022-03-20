@@ -691,7 +691,7 @@ module.exports = {
             const reddishcolors = "86" || "87" || "102"
             const extracolors = "4" || "32" || "58" || "80" || "81" || "82" || "84" || "85" || "89" || "96" || "109" || "110" || "111" || "113" || "114" || "116" || "117" || "118" || "121" || "125" || "126" || "127" || "131" || "132" || "135" || "136" || "139" || "140" || "143" || "156" || "164" || "165" || "166" || "174" || "184" || "187" || "193" || "205"
 
-            if (args[0] === "68" || "69" || "70" || "71" || "72" || "73" || "79" || "93") {
+            if (args[0] === "68" || args[0] === "69" || args[0] === args[0] === "70" || args[0] === "71" || args[0] === "72" || args[0] === args[0] === "73" || args[0] === "79" || args[0] === "93") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - metallic
@@ -704,20 +704,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -metallic,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${metallic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${metallic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${metallic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${metallic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "9" || "23" || "56" || "83" || "97" || "100" || "103" || "119" || "122" || "123" || "124" || "128" || "129" || "130" || "133" || "134" || "137" || "138" || "141" || "142" || "144" || "145" || "146" || "147" || "148" || "149" || "150" || "151" || "152" || "153" || "154" || "155" || "157" || "158" || "159" || "160" || "161" || "162" || "163" || "167" || "168" || "169" || "170" || "171" || "173" || "179" || "181" || "182" || "186" || "188" || "191" || "192" || "194" || "195" || "196" || "204") {
+            } else if (args[0] === "9" || args[0] === "23" || args[0] === "56" || args[0] === "83" || args[0] === "97" || args[0] === "100" || args[0] === "103" || args[0] === "119" || args[0] === "122" || args[0] === "123" || args[0] === "124" || args[0] === "128" || args[0] === "129" || args[0] === "130" || args[0] === "133" || args[0] === args[0] === "134" || args[0] === "137" || args[0] === "138" || args[0] === "141" || args[0] === "142" || args[0] === "144" || args[0] === "145" || args[0] === "146" || args[0] === "147" || args[0] === "148" || args[0] === "149" || args[0] === "150" || args[0] === "151" || args[0] === "152" || args[0] === "153" || args[0] === "154" || args[0] === "155" || args[0] === "157" || args[0] === "158" || args[0] === "159" || args[0] === "160" || args[0] === "161" || args[0] === "162" || args[0] === "163" || args[0] === "167" || args[0] === "168" || args[0] === "169" || args[0] === "170" || args[0] === "171" || args[0] === "173" || args[0] === "179" || args[0] === "181" || args[0] === "182" || args[0] === "186" || args[0] === "188" || args[0] === "191" || args[0] === "192" || args[0] === "194" || args[0] === "195" || args[0] === "196" || args[0] === "204") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - exotic
@@ -730,20 +730,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -exotic,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${exotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${exotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${exotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${exotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "59" || "60" || "180") {
+            } else if (args[0] === "59" || args[0] === "60" || args[0] === "180") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - plusexotic
@@ -756,20 +756,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -plusexotic,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${plusexotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${plusexotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${plusexotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${plusexotic}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "1" || "2" || "15" || "101" || "189") {
+            } else if (args[0] === "1" || args[0] === "2" || args[0] === "15" || args[0] === "101" || args[0] === "189") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - base
@@ -782,20 +782,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -base,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${base}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${base}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${base}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${base}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "3" || "5" || "6" || "8") {
+            } else if (args[0] === "3" || args[0] === "5" || args[0] === "6" || args[0] === "8") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - light
@@ -808,20 +808,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -light,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${light}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${light}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${light}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${light}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "11" || "18" || "34" || "35" || "44" || "46" || "47" || "51" || "63" || "88" || "99" || "112") {
+            } else if (args[0] === "11" || args[0] === "18" || args[0] === "34" || args[0] === "35" || args[0] === "44" || args[0] === "46" || args[0] === "47" || args[0] === "51" || args[0] === "63" || args[0] === "88" || args[0] === "99" || args[0] === "112") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - medium
@@ -834,20 +834,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -medium,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${medium}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${medium}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${medium}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${medium}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "16" || "17" || "21" || "57" || "76" || "90" || "92" || "95" || "115" || "120" || "172") {
+            } else if (args[0] === "16" || args[0] === "17" || args[0] === "21" || args[0] === "57" || args[0] === "76" || args[0] === "90" || args[0] === "92" || args[0] === "95" || args[0] === "115" || args[0] === "120" || args[0] === "172") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - dark
@@ -860,20 +860,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -dark,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${dark}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${dark}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${dark}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${dark}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "176" || "177" || "183") {
+            } else if (args[0] === "176" || args[0] === "177" || args[0] === "183") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - really
@@ -886,20 +886,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -really,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${really}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${really}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${really}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${really}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "10" || "12" || "13" || "52") {
+            } else if (args[0] === "10" || args[0] === "12" || args[0] === "13" || args[0] === "52") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - bright
@@ -912,20 +912,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -bright,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${bright}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${bright}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${bright}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${bright}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "57" || "178" || "185" || "190") {
+            } else if (args[0] === "57" || args[0] === "178" || "185" || args[0] === args[0] === "190") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - deep
@@ -938,20 +938,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -deep,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${deep}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${deep}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${deep}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${deep}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "24" || "25" || "26" || "27" || "29" || "30" || "31" || "43" || "45" || "55" || "67" || "77" || "78") {
+            } else if (args[0] === "24" || args[0] === "25" || args[0] === "26" || args[0] === "27" || args[0] === "29" || args[0] === "30" || args[0] === "31" || args[0] === "43" || args[0] === "45" || args[0] === "55" || args[0] === "67" || args[0] === "77" || args[0] === "78") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - tr
@@ -964,20 +964,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -tr,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${tr}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${tr}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${tr}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${tr}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "7" || "197" || "198" || "199" || "200" || "201" || "202" || "203") {
+            } else if (args[0] === "7" || args[0] === "197" || args[0] === "198" || args[0] === "199" || args[0] === "200" || args[0] === "201" || args[0] === "202" || args[0] === "203") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - pastel
@@ -990,20 +990,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -pastel,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${pastel}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${pastel}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${pastel}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${pastel}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "14" || "41" || "65" || "66") {
+            } else if (args[0] === "14" || args[0] === "41" || args[0] === "65" || args[0] === "66") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - earth
@@ -1016,20 +1016,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -earth,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${earth}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${earth}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${earth}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${earth}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "61" || "62" || "64" || "74" || "75") {
+            } else if (args[0] === "61" || args[0] === "62" || args[0] === "64" || args[0] === "74" || args[0] === "75") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - sand
@@ -1042,20 +1042,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -sand,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${sand}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${sand}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${sand}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${sand}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "86" || "87" || "102") {
+            } else if (args[0] === "86" || args[0] === "87" || args[0] === "102") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - reddish
@@ -1068,20 +1068,20 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -reddish,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${reddish}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${reddish}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${reddish}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${reddish}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
                     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
                 }
-            } else if (args[0] === "4" || "32" || "58" || "80" || "81" || "82" || "84" || "85" || "89" || "96" || "109" || "110" || "111" || "113" || "114" || "116" || "117" || "118" || "121" || "125" || "126" || "127" || "131" || "132" || "135" || "136" || "139" || "140" || "143" || "156" || "164" || "165" || "166" || "174" || "184" || "187" || "193" || "205") {
+            } else if (args[0] === "4" || args[0] === "32" || args[0] === "58" || args[0] === "80" || args[0] === "81" || args[0] === "82" || args[0] === "84" || args[0] === "85" || args[0] === "89" || args[0] === "96" || args[0] === "109" || args[0] === "110" || args[0] === "111" || args[0] === "113" || args[0] === "114" || args[0] === "116" || args[0] === "117" || args[0] === "118" || args[0] === "121" || args[0] === "125" || args[0] === "126" || args[0] === "127" || args[0] === "131" || args[0] === "132" || args[0] === "135" || args[0] === "136" || args[0] === "139" || args[0] === "140" || args[0] === "143" || args[0] === "156" || args[0] === "164" || args[0] === "165" || args[0] === "166" || args[0] === "174" || args[0] === "184" || args[0] === "187" || args[0] === "193" || args[0] === "205") {
                 try {
                     const coinsback = amountroles * 50
                     const newbal = profileData.wallet - extra
@@ -1094,14 +1094,14 @@ module.exports = {
                         {
                             $inc: {
                                 wallet: -extra,
-                                bank: coinsback,
+                                wallet: 50,
                             },
                         }
                     );
                     if (amountroles === 1) {
-                        message.channel.send(`This role costs \`${extra}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${extra}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old role, so you reveived \`${coinsback}\` coins back as a refund.`)
                     } else if (amountroles >= 2) {
-                        message.channel.send(`This role costs \`${extra}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back to your bank balance as a refund.`)
+                        message.channel.send(`This role costs \`${extra}\`. Your new balance is now \`${newbal}\`. You had \`${amountroles}\` old roles, so you reveived \`${coinsback}\` coins back as a refund.`)
                     }
                 } catch (err) {
                     console.log(err);
