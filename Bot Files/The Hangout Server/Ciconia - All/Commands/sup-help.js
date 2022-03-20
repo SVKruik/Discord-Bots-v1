@@ -6,9 +6,9 @@ const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "help",
-  aliases: config.aliases.aliaseshelpst1,
-  cooldown: config.cooldown.cooldownhelpst1,
-  permissions: config.permissions.permissionhelpst1,
+  aliases: config.aliases.aliaseshelp,
+  cooldown: config.cooldown.cooldownhelp,
+  permissions: config.permissions.permissionhelp,
   description: "Advanced Help - Stage 1",
   async execute(message, args, cmd, client, Discord) {
     try {

@@ -31,8 +31,6 @@ module.exports = {
         )
         .setFooter(config.embed.embedfooter);
 
-
-
       const flagmessage = newEmbed // Flag Systeem
       const flags = ["everyone", "here", "delete"];
 
