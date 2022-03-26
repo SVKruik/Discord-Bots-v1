@@ -1,7 +1,7 @@
 // De index van de bot. Vanuit hier start de bot op.
 // Ook wordt hiermee met de DB verbonden.
 
-// Perdix for stats
+// Ciconia has it all
 
 //Index
 const Discord = require("Discord.js");
@@ -13,6 +13,7 @@ const memberCounter = require("./Counters/counters.js");
 const { channel } = require("diagnostics_channel");
 require("dotenv").config();
 const client = new Discord.Client({
+  intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MEMBERS, Discord.Intents.FLAGS.GUILD_BANS, Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.DIRECT_MESSAGES],
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
 
@@ -30,11 +31,9 @@ client.events = new Discord.Collection();
 });
 
 //Database - Economy, MongoDB and Robo3T
-mongoose
-  .connect(process.env.MONGODB_SRV, {
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGODB, {
     useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
     useUnifiedTopology: true,
   })
   .then(() => {
@@ -45,4 +44,4 @@ mongoose
   });
 
 //Token login
-client.login(process.env.Discord_TOKEN);
+client.login(process.env.TOKEN);
