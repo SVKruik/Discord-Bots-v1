@@ -139,9 +139,9 @@ module.exports = {
             value: `> De bovenstaande product-som methode is een voorbeeld uit het boek. Het is niet mogelijk dat ik, als in <@${username}>, dit voor je doe.`,
           }
         )
-        .setFooter(config.embed.embedfooter);
+        .setFooter({ text: config.embed.embedfooter });
 
-      message.channel.send(newEmbed);
+      message.channel.send({ embeds: [newEmbed] });
     } catch (err) {
       console.log(err)
       message.channel.send(`Error executing command. EC: \`${config.errorcodes.err15}\`.`)
