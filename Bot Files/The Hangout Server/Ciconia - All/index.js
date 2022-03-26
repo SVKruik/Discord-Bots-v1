@@ -32,7 +32,7 @@ client.events = new Discord.Collection();
 
 //Database - Economy, MongoDB and Robo3T
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://root:root@discordbot.pezba.mongodb.net/DiscordBotPuffinKwadraat?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -44,4 +44,4 @@ mongoose.connect('mongodb+srv://root:root@discordbot.pezba.mongodb.net/DiscordBo
   });
 
 //Token login
-client.login(process.env.Discord_TOKEN);
+client.login(process.env.TOKEN);
