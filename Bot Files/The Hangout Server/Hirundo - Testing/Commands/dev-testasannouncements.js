@@ -23,7 +23,7 @@ module.exports = {
             name: `**Heads up:**`,
             value: `${messageArgs}`,
           })
-      message.channel.send(newEmbed)
+      message.channel.send({ embeds: [newEmbed] })
     } catch (err) {
       console.log(err)
       message.channel.send(`Error executing command. EC: \`${config.errorcodes.err11}\`.`) // Error systeem
