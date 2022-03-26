@@ -39,7 +39,7 @@ module.exports = {
                         value: `\`${config.boxbuyprice.normal}\``,
                     }
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed2 = new Discord.MessageEmbed()
                 .setColor(config.base.basecolor)
@@ -80,7 +80,7 @@ module.exports = {
                         value: `\`${config.shardbuyprice.iron}\``,
                     }
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed3 = new Discord.MessageEmbed()
                 .setColor(config.base.basecolor)
@@ -117,7 +117,7 @@ module.exports = {
                         value: `\`${config.scrapsellprice.common}\``,
                     },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed4 = new Discord.MessageEmbed()
                 .setColor(config.base.basecolor)
@@ -142,7 +142,7 @@ module.exports = {
                         value: `\`${config.boxsellprice.normal}\``,
                     }
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed5 = new Discord.MessageEmbed()
                 .setColor(config.base.basecolor)
@@ -179,7 +179,7 @@ module.exports = {
                         value: `\`${config.shardsellprice.iron}\``,
                     }
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             if (!args[0]) {
                 return message.channel.send(`Would you like to take a look at the \`buy\` or \`sell\` prices?`)
@@ -191,17 +191,17 @@ module.exports = {
                 if (args[1] === "scraps" || args[1] === "scrap") {
                     return message.channel.send(`Scraps can only be obtained through loot boxes! Scraps can only be sold, not bought.`)
                 } else if (args[1] === "boxes" || args[1] === "box") {
-                    message.channel.send(newEmbed1)
+                    message.channel.send({ embeds: [newEmbed1] })
                 } else if (args[1] === "shards" || args[1] === "shard") {
-                    message.channel.send(newEmbed2)
+                    message.channel.send({ embeds: [newEmbed2] })
                 }
             } else if (args[0] === "sell") {
                 if (args[1] === "scraps" || args[1] === "scrap") {
-                    message.channel.send(newEmbed3)
+                    message.channel.send({ embeds: [newEmbed3] })
                 } else if (args[1] === "boxes" || args[1] === "box") {
-                    message.channel.send(newEmbed4)
+                    message.channel.send({ embeds: [newEmbed4] })
                 } else if (args[1] === "shards" || args[1] === "shard") {
-                    message.channel.send(newEmbed5)
+                    message.channel.send({ embeds: [newEmbed5] })
                 }
             }
         } catch (err) {

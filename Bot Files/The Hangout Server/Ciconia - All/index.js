@@ -13,6 +13,7 @@ const memberCounter = require("./Counters/counters.js");
 const { channel } = require("diagnostics_channel");
 require("dotenv").config();
 const client = new Discord.Client({
+  intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MEMBERS, Discord.Intents.FLAGS.GUILD_BANS, Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.DIRECT_MESSAGES],
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
 
@@ -30,11 +31,9 @@ client.events = new Discord.Collection();
 });
 
 //Database - Economy, MongoDB and Robo3T
-mongoose
-  .connect(process.env.MONGODB_SRV, {
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb+srv://root:root@discordbot.pezba.mongodb.net/DiscordBotPuffinKwadraat?retryWrites=true&w=majority', {
     useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
     useUnifiedTopology: true,
   })
   .then(() => {

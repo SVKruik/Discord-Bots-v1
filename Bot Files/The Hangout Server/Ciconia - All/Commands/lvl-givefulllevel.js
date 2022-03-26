@@ -44,28 +44,28 @@ module.exports = {
         const flags = ["everyone", "here", "delete"];
 
         if (!args[2]) {
-          message.channel.send(flagmessage)
+          message.channel.send({ content: flagmessage })
         }
 
         if (args[2] === "delete") {
           if (!args[3]) {
             if (!args[4]) {
               message.delete();
-              message.channel.send(flagmessage)
+              message.channel.send({ content: flagmessage })
             }
           }
         } else if (args[3] === "delete") {
           if (!args[2]) {
             if (!args[4]) {
               message.delete();
-              message.channel.send(flagmessage)
+              message.channel.send({ content: flagmessage })
             }
           }
         } else if (args[4] === "delete") {
           if (!args[2]) {
             if (!args[3]) {
               message.delete();
-              message.channel.send(flagmessage)
+              message.channel.send({ content: flagmessage })
             }
           }
         }

@@ -68,7 +68,7 @@ module.exports = {
                     { name: config.embeds.nameboxeschances14, value: `\`${chancenormaluncommon}%\` **---** \`${amountnormaluncommon}\`` },
                     { name: config.embeds.nameboxeschances15, value: `\`${chancenormalcommon}%\` **---** \`${amountnormalcommon}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed2 = new Discord.MessageEmbed()
                 .setColor(config.base.basecolor)
@@ -82,7 +82,7 @@ module.exports = {
                     { name: config.embeds.nameboxeschances4, value: `\`${chanceultraepic}%\` **---** \`${amountultraepic}\`` },
                     { name: config.embeds.nameboxeschances5, value: `\`${chanceultrarare}%\` **---** \`${amountultrarare}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed3 = new Discord.MessageEmbed()
                 .setColor(config.base.basecolor)
@@ -97,7 +97,7 @@ module.exports = {
                     { name: config.embeds.nameboxeschances10, value: `\`${chancesuperuncommon}%\` **---** \`${amountsuperuncommon}\`` },
                     { name: config.embeds.nameboxeschances11, value: `\`${chancesupercommon}%\` **---** \`${amountsupercommon}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed4 = new Discord.MessageEmbed()
                 .setColor(config.base.basecolor)
@@ -110,16 +110,16 @@ module.exports = {
                     { name: config.embeds.nameboxeschances14, value: `\`${chancenormaluncommon}%\` **---** \`${amountnormaluncommon}\`` },
                     { name: config.embeds.nameboxeschances15, value: `\`${chancenormalcommon}%\` **---** \`${amountnormalcommon}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             if (!args[0]) {
-                message.channel.send(newEmbed1)
+                message.channel.send({ embeds: [newEmbed1] })
             } else if (args[0] === "ultra") {
-                message.channel.send(newEmbed2)
+                message.channel.send({ embeds: [newEmbed2] })
             } else if (args[0] === "super") {
-                message.channel.send(newEmbed3)
+                message.channel.send({ embeds: [newEmbed3] })
             } else if (args[0] === "normal") {
-                message.channel.send(newEmbed4)
+                message.channel.send({ embeds: [newEmbed4] })
             }
         } catch (err) {
             console.log(err)

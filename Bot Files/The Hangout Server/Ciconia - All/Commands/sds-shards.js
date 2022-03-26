@@ -28,34 +28,34 @@ module.exports = {
                     { name: config.embeds.nameshards5, value: `\`${profileData.shardsbronze}\`` },
                     { name: config.embeds.nameshards6, value: `\`${profileData.shardsiron}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const flagmessage = newEmbed // Flag Systeem
             const flags = ["everyone", "here", "delete"];
 
             if (!args[0]) {
-                message.channel.send(flagmessage)
+                message.channel.send({ content: flagmessage })
             }
 
             if (args[0] === "delete") {
                 if (!args[1]) {
                     if (!args[2]) {
                         message.delete();
-                        message.channel.send(flagmessage)
+                        message.channel.send({ content: flagmessage })
                     }
                 }
             } else if (args[1] === "delete") {
                 if (!args[0]) {
                     if (!args[2]) {
                         message.delete();
-                        message.channel.send(flagmessage)
+                        message.channel.send({ content: flagmessage })
                     }
                 }
             } else if (args[2] === "delete") {
                 if (!args[0]) {
                     if (!args[1]) {
                         message.delete();
-                        message.channel.send(flagmessage)
+                        message.channel.send({ content: flagmessage })
                     }
                 }
             }
@@ -67,10 +67,10 @@ module.exports = {
                 } else if (args[1] || args[2] === "delete") {
                     message.delete();
                     message.channel.send(`@everyone`)
-                    message.channel.send(newEmbed)
+                    message.channel.send({ embeds: [newEmbed] })
                 } else {
                     message.channel.send(`@everyone`)
-                    message.channel.send(newEmbed)
+                    message.channel.send({ embeds: [newEmbed] })
                 }
             } else if (args[1] === "everyone") {
                 if (args[0] === "here") {
@@ -78,10 +78,10 @@ module.exports = {
                 } else if (args[0] || args[2] === "delete") {
                     message.delete();
                     message.channel.send(`@everyone`)
-                    message.channel.send(newEmbed)
+                    message.channel.send({ embeds: [newEmbed] })
                 } else {
                     message.channel.send(`@everyone`)
-                    message.channel.send(newEmbed)
+                    message.channel.send({ embeds: [newEmbed] })
                 }
             } else if (args[2] === "everyone") {
                 return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
@@ -94,10 +94,10 @@ module.exports = {
                 } else if (args[1] || args[2] === "delete") {
                     message.delete();
                     message.channel.send(`@here`)
-                    message.channel.send(newEmbed)
+                    message.channel.send({ embeds: [newEmbed] })
                 } else {
                     message.channel.send(`@here`)
-                    message.channel.send(newEmbed)
+                    message.channel.send({ embeds: [newEmbed] })
                 }
             } else if (args[1] === "here") {
                 if (args[0] === "everyone") {
@@ -105,10 +105,10 @@ module.exports = {
                 } else if (args[0] || args[2] === "delete") {
                     message.delete();
                     message.channel.send(`@here`)
-                    message.channel.send(newEmbed)
+                    message.channel.send({ embeds: [newEmbed] })
                 } else {
                     message.channel.send(`@here`)
-                    message.channel.send(newEmbed)
+                    message.channel.send({ embeds: [newEmbed] })
                 }
             } else if (args[2] === "here") {
                 return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)

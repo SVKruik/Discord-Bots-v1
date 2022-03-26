@@ -72,9 +72,9 @@ module.exports = {
             value: `Als je eind-antwoord groter is dan 90°, moet je eerst 180 - *hoek* doen. Dan pas heb je je antwoord.`,
           }
         )
-        .setFooter(config.embed.embedfooter);
+        .setFooter({ text: config.embed.embedfooter });
 
-      message.channel.send(newEmbed);
+      message.channel.send({ embeds: [newEmbed] });
     } catch (err) {
       console.log(err)
       message.channel.send(`Error executing command. EC: \`${config.errorcodes.err15}\`.`)

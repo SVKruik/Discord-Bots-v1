@@ -97,9 +97,9 @@ module.exports = {
             value: `d(${punt1}, ${lijn1}) = d(${punt1}, ${punt2}) = √(${coordpunt2x} - ${coordpunt1x})² + (${coordpunt2y} - ${coordpunt1y})² = √(${coordpuntenx})² + (${coordpunteny})² = √${coordpuntenxkwa} + ${coordpuntenykwa} = √${coordpuntenkwa} = ${coordpuntenvolafgerond}.`,
           }
         )
-        .setFooter(config.embed.embedfooter);
+        .setFooter({ text: config.embed.embedfooter });
 
-      message.channel.send(newEmbed);
+      message.channel.send({ embeds: [newEmbed] });
     } catch (err) {
       console.log(err)
       message.channel.send(`Error executing command. EC: \`${config.errorcodes.err15}\`.`)

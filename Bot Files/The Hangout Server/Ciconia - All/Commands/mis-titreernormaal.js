@@ -71,9 +71,9 @@ module.exports = {
             value: `${mmolonbekendeafgerond} ML / ${pipet} = ${molariteitonbekendeafgerondex} ML.`,
           }
         )
-        .setFooter(config.embed.embedfooter);
+        .setFooter({ text: config.embed.embedfooter });
 
-      message.channel.send(newEmbed);
+      message.channel.send({ embeds: [newEmbed] });
     } catch (err) {
       console.log(err)
       message.channel.send(`Error executing command. EC: \`${config.errorcodes.err15}\`.`)

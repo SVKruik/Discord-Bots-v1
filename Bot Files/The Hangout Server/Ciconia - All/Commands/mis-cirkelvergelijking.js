@@ -79,9 +79,9 @@ module.exports = {
             value: `√${abc} geeft een straal van ${wabcafgerond}. De diameter is dus ${diameter}.`,
           }
         )
-        .setFooter(config.embed.embedfooter);
+        .setFooter({ text: config.embed.embedfooter });
 
-      message.channel.send(newEmbed);
+      message.channel.send({ embeds: [newEmbed] });
     } catch (err) {
       console.log(err)
       message.channel.send(`Error executing command. EC: \`${config.errorcodes.err15}\`.`)

@@ -33,9 +33,9 @@ module.exports = {
               value: Math.round(math.evaluate(args.join(" ")) * 100) / 100,
             }
           )
-          .setFooter(config.embed.embedfooter);
+          .setFooter({ text: config.embed.embedfooter });
 
-        message.channel.send(newEmbed);
+        message.channel.send({ embeds: [newEmbed] });
       } catch (err) {
         console.log(err)
         message.channel.send("I don't understand your question.");

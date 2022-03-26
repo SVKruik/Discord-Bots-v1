@@ -17,17 +17,20 @@ module.exports = {
 
             const channel = client.channels.cache.find(channel => channel.id === config.base.basebottestingthreechannelid)
             const messageArgs = args.join(' '); // Alle args naar text
-
+            let author = {
+                name: message.author.tag,
+                url: message.author.displayAvatarURL({ dynamic: true })
+            }
             const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
                 .setColor(config.base.basecolor)
-                .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(author)
                 .addFields(
                     {
-                        name: `**New Suggestion**`,
+                        name: config.embeds.namesuggestions1,
                         value: `${messageArgs}`,
                     })
-                .setFooter(config.embed.embedfooter);
-            channel.send(newEmbed).then((msg) => {
+                .setFooter({ text: config.embed.embedfooter });
+            channel.send({ embeds: [newEmbed] }).then((msg) => {
                 msg.react('👍');
                 msg.react('👎');
                 message.channel.send(`Test Suggestion sent in <#${config.base.basebottestingthreechannelid}>.`)

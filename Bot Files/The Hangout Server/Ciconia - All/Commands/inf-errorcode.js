@@ -122,43 +122,43 @@ module.exports = {
             value: `We would really appreciate it, if you contact any of the bot developers if you encounter any of these errors. We can then get to work to fix it ASAP.`,
           }
         )
-        .setFooter(config.embed.embedfooter);
+        .setFooter({ text: config.embed.embedfooter });
 
       let flagmessage = newEmbed
       const flags = ["everyone", "here", "delete"];
 
       if (!args[0]) {
-        message.channel.send(flagmessage);
+        message.channel.send({ content: flagmessage });
       } else if (args[0] === err1) {
         let flagmessage = `Error Code \`${err1}\`: ${info1}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err2) {
         let flagmessage = `Error Code \`${err2}\`: ${info2}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err3) {
         let flagmessage = `Error Code \`${err3}\`: ${info3}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err4) {
         let flagmessage = `Error Code \`${err4}\`: ${info4}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err5) {
         let flagmessage = `Error Code \`${err5}\`: ${info5}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err6) {
         let flagmessage = `Error Code \`${err6}\`: ${info6}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err7) {
         let flagmessage = `Error Code \`${err7}\`: ${info7}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err8) {
         let flagmessage = `Error Code \`${err8}\`: ${info8}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err9) {
         let flagmessage = `Error Code \`${err9}\`: ${info9}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] === err10) {
         let flagmessage = `Error Code \`${err10}\`: ${info10}`
-        message.channel.send(flagmessage)
+        message.channel.send({ content: flagmessage })
       } else if (args[0] !== err1 || err2 || err3 || err4 || err5 || err6 || err7 || err8 || err9 || err10 || err11 || err12 || err13 || err14 || err15) {
         message.channel.send(`I haven't heard of the Error Code: \`${args[0]}\`.`)
       }

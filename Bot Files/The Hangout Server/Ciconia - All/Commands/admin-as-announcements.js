@@ -24,7 +24,7 @@ module.exports = {
                         name: `**Heads up:**`,
                         value: `${messageArgs}`,
                     })
-            message.channel.send(newEmbed).then((msg) => {
+            message.channel.send({ embeds: [newEmbed] }).then((msg) => {
                 message.delete();
             });
 

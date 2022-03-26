@@ -25,7 +25,7 @@ module.exports = {
                     { name: config.embeds.nameboxes2, value: `\`${profileData.boxessuper}\`` },
                     { name: config.embeds.nameboxes3, value: `\`${profileData.boxesnormal}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed2 = new Discord.MessageEmbed() // alleen ultra
                 .setColor(config.base.basecolor)
@@ -35,7 +35,7 @@ module.exports = {
                 .addFields(
                     { name: config.embeds.nameboxes1, value: `\`${profileData.boxesultra}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed3 = new Discord.MessageEmbed() // alleen super
                 .setColor(config.base.basecolor)
@@ -45,7 +45,7 @@ module.exports = {
                 .addFields(
                     { name: config.embeds.nameboxes2, value: `\`${profileData.boxessuper}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             const newEmbed4 = new Discord.MessageEmbed() // alleen normaal
                 .setColor(config.base.basecolor)
@@ -55,16 +55,16 @@ module.exports = {
                 .addFields(
                     { name: config.embeds.nameboxes3, value: `\`${profileData.boxesnormal}\`` },
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             if (!args[0]) {
-                message.channel.send(newEmbed1) // verzend systeem
+                message.channel.send({ embeds: [newEmbed1] }) // verzend systeem
             } else if (args[0] === "ultra") {
-                message.channel.send(newEmbed2)
+                message.channel.send({ embeds: [newEmbed2] })
             } else if (args[0] === "super") {
-                message.channel.send(newEmbed3)
+                message.channel.send({ embeds: [newEmbed3] })
             } else if (args[0] === "normal") {
-                message.channel.send(newEmbed4)
+                message.channel.send({ embeds: [newEmbed4] })
             }
         } catch (err) {
             console.log(err)
