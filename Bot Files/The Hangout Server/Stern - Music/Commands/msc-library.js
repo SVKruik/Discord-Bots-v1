@@ -51,10 +51,10 @@ module.exports = {
                         value: `${profileData.music6}`,
                     }
                 )
-                .setFooter(config.embed.embedfooter);
+                .setFooter({ text: config.embed.embedfooter });
 
             if (!args[0]) {
-                message.channel.send(newEmbed)
+                message.channel.send({ embeds: [newEmbed] })
             } else if (args[0] === "1" || "song1") {
                 message.channel.send(`Song 1: ${profileData.music1}`)
             } else if (args[0] === "2" || "song2") {
