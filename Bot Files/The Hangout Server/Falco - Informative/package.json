@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "falco",
   "version": "1.0.0",
-  "description": "All Commands",
+  "description": "Informative Commands",
   "main": "index.js",
   "scripts": {
     "test": "node ."

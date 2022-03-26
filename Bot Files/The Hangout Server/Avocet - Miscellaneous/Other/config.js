@@ -15,7 +15,7 @@ const fs = require("fs");
 const version = require("../package.json").version;
 
 exports.base = {
-  basecolor: "#76b3e1",
+  basecolor: "#0d27aa",
   baseguildid: "820580469757313025",
   botcount: 14,
 

@@ -1,7 +1,7 @@
 // De index van de bot. Vanuit hier start de bot op.
 // Ook wordt hiermee met de DB verbonden.
 
-// Ciconia has it all
+// Heron for administrator stuff
 
 //Index
 const Discord = require("Discord.js");

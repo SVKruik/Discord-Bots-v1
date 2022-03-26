@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "coturnix",
   "version": "1.0.0",
-  "description": "All Commands",
+  "description": "Games Commands",
   "main": "index.js",
   "scripts": {
     "test": "node ."

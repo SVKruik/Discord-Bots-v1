@@ -1,7 +1,7 @@
 {
-  "name": "ciconia",
+  "name": "avocet",
   "version": "1.0.0",
-  "description": "All Commands",
+  "description": "Miscellaneous Commands",
   "main": "index.js",
   "scripts": {
     "test": "node ."
