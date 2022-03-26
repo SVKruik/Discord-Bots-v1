@@ -29,7 +29,7 @@ module.exports = {
             value: `${messageArgs}`,
           })
         .setFooter(config.embed.embedfooter)
-      channel.send(newEmbed).then((msg) => {
+      channel.send({ embeds: [newEmbed] }).then((msg) => {
         message.delete();
         message.channel.send(`Announcement sent in <#${config.base.baseannouncementschannelid}>.`)
       });
