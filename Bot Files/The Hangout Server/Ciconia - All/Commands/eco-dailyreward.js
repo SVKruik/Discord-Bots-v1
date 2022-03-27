@@ -11,12 +11,6 @@ module.exports = {
   description: "Random amount of coins, as a daily reward.",
   async execute(message, args, cmd, client, Discord, profileData) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
-
       const randomNumber = Math.floor(Math.random() * 1000) + 1;
       const response = await profileModel.findOneAndUpdate(
         {

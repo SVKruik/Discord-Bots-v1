@@ -13,17 +13,12 @@ module.exports = {
   description: "Displays some Minecraft server statistics.",
   execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       if (!args[0])
         return message.channel.send(config.commandmcserver.commandmcserverip);
       if (!args[1])
         return message.channel.send(
           config.commandmcserver.commandmcserverport
         );
-
       util
         .status(args[0], { port: parseInt(args[1]) })
         .then((response) => {

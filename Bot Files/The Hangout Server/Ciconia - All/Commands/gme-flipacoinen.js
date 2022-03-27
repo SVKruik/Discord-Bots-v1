@@ -10,14 +10,9 @@ module.exports = {
   description: "Flip a coin!",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       if (!args[0]) {
         return message.channel.send("Please also choose your winning side.");
       }
-
       const list = ["heads", "head", "tails", "tail"];
       const fac = [`Heads!`, `Tails!`];
       const random = fac[Math.floor(Math.random() * fac.length)];

@@ -11,10 +11,6 @@ module.exports = {
   description: "This silences spamming or naughty people. Can only read stuff.",
   execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const target = message.mentions.users.first();
       if (target) {
         const muteRole = message.guild.roles.cache.find(

@@ -11,10 +11,6 @@ module.exports = {
     description: "Update your music library.",
     async execute(message, args, cmd, client, Discord, profileData) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
             const max = 6
             const link = args[1]
             const songid = Math.round(args[0])

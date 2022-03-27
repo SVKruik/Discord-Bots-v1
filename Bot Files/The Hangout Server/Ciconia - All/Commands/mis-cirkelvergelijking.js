@@ -13,10 +13,6 @@ module.exports = {
   description: "Calculate a circle equation.",
   execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const a = args[0];
       const b = args[1];
       const c = args[2];

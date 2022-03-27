@@ -12,11 +12,7 @@ module.exports = {
   permissions: config.permissions.permissionsubstitutie,
   description: "Substitute",
   execute(message, args, cmd, client, Discord) {
-    try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
+    try { 
       const username = message.client.user.id;
 
       const cirkela = args[0]; // A

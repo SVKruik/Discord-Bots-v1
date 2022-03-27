@@ -12,17 +12,12 @@ module.exports = {
     description: "Suggest something new in the dedicated channel.",
     async execute(message, args, cmd, client, Discord) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
             const channel = client.channels.cache.find(channel => channel.id === config.base.basesuggechannelid)
             const messageArgs = args.join(' '); // Alle args naar text
             let author = {
                 name: message.author.tag,
                 url: message.author.avatarURL
             }
-//{ name: message.author.tag, kaas: message.author.displayAvatarURL({ dynamic: true }
             const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
                 .setColor(config.base.basecolor)
                 .setAuthor(author)

@@ -9,14 +9,9 @@ module.exports = {
   permissions: config.permissions.permissionrpsnl,
   description: "Steen, Papier, Schaar!",
   async execute(message, args, cmd, client, Discord) {
-    try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
+    try { 
       if (!args.length)
         return message.channel.send("Om het eerlijk te houden, moet je ook jouw keuze invoeren!");
-
       const list = ["steen", "papier", "schaar"];
       const rps = ["Steen! - ⛰", "Papier! - 📄", "Schaar! - ✂"];
       const random = rps[Math.floor(Math.random() * rps.length)];

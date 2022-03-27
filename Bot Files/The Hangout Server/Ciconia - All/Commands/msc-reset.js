@@ -11,10 +11,6 @@ module.exports = {
     description: "Reset and clear all your songs stored in your library.",
     async execute(message, args, cmd, client, Discord, profileData) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
             const max = 6
             const songid = Math.round(args[0])
             if (!args[0]) {

@@ -11,10 +11,6 @@ module.exports = {
   description: "Displays all stats of the bot.",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const fs = require("fs");
       const commands = fs.readdirSync("./Commands").length;
 

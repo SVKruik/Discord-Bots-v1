@@ -12,9 +12,6 @@ module.exports = {
   description: "Calculate difference in degrees between 2 lines.",
   execute(message, args, cmd, client, Discord) {
     try {
-      client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const lijn1 = "k";
       const lijn2 = "m";
 

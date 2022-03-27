@@ -13,11 +13,6 @@ module.exports = {
     description: "Checks if the bot can respond to something basic.",
     async execute(message, args, cmd, client, Discord) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
             const list = ["Yep!", "Here!", "Ready!", "Awake!", "I'm here!", "Yes!", "Yeah!"];
             const random = list[Math.floor(Math.random() * list.length)];
             message.channel.send(random);

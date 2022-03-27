@@ -11,17 +11,12 @@ module.exports = {
   description: "Completly blind a member. Target cannot do anything.",
   execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const target = message.mentions.users.first();
       if (target) {
         const blindRole = message.guild.roles.cache.find(
           (role) => role.id === config.base.baseblindrole
         );
         const memberTarget = message.guild.members.cache.get(target.id);
-
         if (!args[1]) {
           memberTarget.roles.add(blindRole);
           message.channel.send(
@@ -29,7 +24,6 @@ module.exports = {
           );
           return;
         }
-
         memberTarget.roles.add(blindRole);
         message.channel.send(
           `<@${memberTarget.user.id}> has been succesfully blinded for ${ms(

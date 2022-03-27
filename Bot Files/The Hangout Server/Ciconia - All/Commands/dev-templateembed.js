@@ -10,10 +10,6 @@ module.exports = {
   description: "Embed template for devs.",
   execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle(config.embeds.titleembedtemplate)
@@ -37,7 +33,6 @@ module.exports = {
       if (!args[0]) {
         message.channel.send({ embeds: [flagmessage] })
       }
-
       if (args[0] === "delete") {
         if (!args[1]) {
           if (!args[2]) {
@@ -60,7 +55,6 @@ module.exports = {
           }
         }
       }
-
 
       if (args[0] === "everyone") {
         if (args[1] === "here") {
@@ -87,7 +81,6 @@ module.exports = {
       } else if (args[2] === "everyone") {
         return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
       }
-
 
       if (args[0] === "here") {
         if (args[1] === "everyone") {

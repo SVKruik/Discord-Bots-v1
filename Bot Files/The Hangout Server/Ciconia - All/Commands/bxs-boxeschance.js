@@ -11,11 +11,6 @@ module.exports = {
     description: "Displays your current boxes.",
     execute(message, args, cmd, client, Discord, profileData) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
             const chanceultrarare = config.boxchance.ultrarare // kansen uit de config halen
             const chanceultraepic = config.boxchance.ultraepic - config.boxchance.ultrarare
             const chanceultralegendary = config.boxchance.ultralegendary - config.boxchance.ultraepic

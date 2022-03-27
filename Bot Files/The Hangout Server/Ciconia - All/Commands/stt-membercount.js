@@ -10,11 +10,6 @@ module.exports = {
     description: "Embed template for devs.",
     execute(message, args, cmd, client, Discord) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
             const botcount = config.base.botcount
             const guild = client.guilds.cache.get(config.base.baseguildid);
             const memberCount = guild.memberCount;

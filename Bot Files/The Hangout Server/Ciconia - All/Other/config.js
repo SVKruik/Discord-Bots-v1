@@ -192,7 +192,7 @@ exports.basemessages = {
   messagesgreaterone: "Amount must be greater than \`0\`.",
   messagescoinsmissing: "You do not have that amount of coins to perform this command.",
   messagesrealnumber: "Please enter a real number.",
-  messagesamountmissing: "You are missing the amount to clear.",
+  messagesamountmissing: "You are missing the amount parameter.",
   messageemojierr: "There was an error with the emoji.",
   messagesboxesmissing: "You don't have any boxes of this type."
 }
@@ -289,6 +289,7 @@ exports.embeds = {
   //Descriptions
   descriptionshop: "Here are all the items you can buy with coins or other special tokens. You can buy stuff with the command \`buy\`.",
   descriptiondonate: "Support our project by donating to us! Your funds will be used to improve our project. You can also help fund new hardware/software we need.",
+  descriptionerrorcode: "Here is a list of all error codes you can get when using me. You can also look up individual error codes, with \`$err 1234\`.",
   descriptionembedtemplate: "Template",
   descriptionevent: "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.",
   descriptiongithub: "This is our GitHub repository. You can find a lot of information about anything there, so check it out!",
@@ -353,9 +354,10 @@ exports.embeds = {
   nameprofile4: "Tag:",
   nameprofile5: "Uni:",
   nameprofile6: "Bot:",
-  nameprofile7: "**--------**",
-  nameprofile8: "Document ID",
-  nameprofile9: "Document Version:",
+  nameprofile7: "Warnings",
+  nameprofile8: "**--------**",
+  nameprofile9: "Document ID",
+  nameprofile10: "Document Version:",
   namerules1: "Rule 1:", // Rules
   namerules2: "Rule 2:",
   namerules3: "Rule 3:",
@@ -528,6 +530,10 @@ exports.aliases = {
   aliasesuptime: [], // Uptime
   aliaseshelp: ["support"], // Help
   aliasesticket: ["tkt"], // Ticket
+  aliasesgivewarnings: ["givewarning", "givewarn"], // Give Warnings
+  aliasesminuswarnings: ["minuswarning", "minuswarn", "minwarning", "minwarn"], // Minus Warnings
+  aliasessetwarnings: ["setwarning", "setwarn"], // Set Warnings
+  aliaseswarnings: ["warning", "warns", "warn"] // Warnings
 };
 
 const A = 84000; // Daily
@@ -635,6 +641,10 @@ exports.cooldown = {
   cooldownuptime: G,
   cooldownhelp: E,
   cooldownticket: D,
+  cooldowngivewarnings: B,
+  cooldownminuswarnings: B,
+  cooldownsetwarnings: B,
+  cooldownwarnings: G,
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -735,4 +745,8 @@ exports.permissions = {
   permissionuptime: J,
   permissionhelp: J,
   permissionticket: J,
+  permissiongivewarnings: I,
+  permissionminuswarnings: I,
+  permissionsetwarnings: I,
+  permissionwarnings: J,
 };

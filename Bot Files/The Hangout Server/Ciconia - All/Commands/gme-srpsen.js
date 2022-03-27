@@ -12,19 +12,12 @@ module.exports = {
   description: "Rock, Paper Scissor!",
   async execute(message, args, cmd, client, Discord, profileData) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       if (!args[0].length)
         return message.channel.send("To keep it fair, also send your pick!");
-
       const stake = args[1];
       if (!args[1].length)
         return message.channel.send("Please also send your stake!");
-
       const target = message.author;
-
       const list = ["rock", "paper", "scissors", "scissor"];
       const rps = ["Rock! - ⛰", "Paper! - 📄", "Scissors! - ✂"];
       const random = rps[Math.floor(Math.random() * rps.length)];

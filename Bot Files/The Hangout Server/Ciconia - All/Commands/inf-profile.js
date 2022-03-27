@@ -13,10 +13,6 @@ module.exports = {
   description: "Displays all information we have about you.",
   execute(message, args, cmd, client, Discord, profileData) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
         .setTitle(config.embeds.titleprofile)
@@ -29,9 +25,10 @@ module.exports = {
           { name: config.embeds.nameprofile4, value: `\`${profileData.tag}\`` },
           { name: config.embeds.nameprofile5, value: `\`${profileData.uni}\`` },
           { name: config.embeds.nameprofile6, value: `\`${profileData.bot}\`` },
-          { name: config.embeds.nameprofile7, value: "> **Technical:**" },
-          { name: config.embeds.nameprofile8, value: `\`${profileData._id}\`` },
-          { name: config.embeds.nameprofile9, value: `\`${profileData.__v}\`` },
+          { name: config.embeds.nameprofile7, value: `\`${profileData.warnings}\``},
+          { name: config.embeds.nameprofile8, value: "> **Technical:**" },
+          { name: config.embeds.nameprofile9, value: `\`${profileData._id}\`` },
+          { name: config.embeds.nameprofile10, value: `\`${profileData.__v}\`` },
         )
         .setFooter({ text: config.embed.embedfooter });
 

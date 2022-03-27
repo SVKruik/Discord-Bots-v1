@@ -4,14 +4,14 @@ const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
-  name: "balancebank",
-  aliases: config.aliases.aliasesbalancebank,
-  cooldown: config.cooldown.cooldownbalancebank,
-  permissions: config.permissions.permissionbalancebank,
-  description: "Display your bank account balance.",
+  name: "warnings",
+  aliases: config.aliases.aliaseswarnings,
+  cooldown: config.cooldown.cooldownwarnings,
+  permissions: config.permissions.permissionwarnings,
+  description: "Display your warning count.",
   async execute(message, args, cmd, client, Discord, profileData) {
     try {
-      const flagmessage = `${message.author.username}, this is your current bank balance : \`${profileData.bank}\`.`
+      const flagmessage = `${message.author.username}, this is your current warning count : \`${profileData.warnings}\`.`
       const flags = ["everyone", "here", "delete"];
 
       if (!args[0]) {

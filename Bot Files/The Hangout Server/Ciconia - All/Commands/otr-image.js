@@ -17,10 +17,6 @@ module.exports = {
   description: "This sends the best google result for an image.",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const channel = config.base.baseimagechannelid;
       const image_query = args.join(" ");
       if (!image_query) return message.channel.send(config.commandimage.commandimagemissing);

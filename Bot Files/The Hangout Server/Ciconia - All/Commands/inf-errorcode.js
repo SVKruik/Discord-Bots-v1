@@ -11,10 +11,6 @@ module.exports = {
   description: "See what error code means what.",
   execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const err1 = config.errorcodes.err1
       const err2 = config.errorcodes.err2
       const err3 = config.errorcodes.err3
@@ -128,7 +124,7 @@ module.exports = {
       const flags = ["everyone", "here", "delete"];
 
       if (!args[0]) {
-        message.channel.send({ content: flagmessage });
+        message.channel.send({ embeds: [flagmessage] });
       } else if (args[0] === err1) {
         let flagmessage = `Error Code \`${err1}\`: ${info1}`
         message.channel.send({ content: flagmessage })
@@ -159,8 +155,23 @@ module.exports = {
       } else if (args[0] === err10) {
         let flagmessage = `Error Code \`${err10}\`: ${info10}`
         message.channel.send({ content: flagmessage })
-      } else if (args[0] !== err1 || err2 || err3 || err4 || err5 || err6 || err7 || err8 || err9 || err10 || err11 || err12 || err13 || err14 || err15) {
-        message.channel.send(`I haven't heard of the Error Code: \`${args[0]}\`.`)
+      } else if (args[0] === err11) {
+        let flagmessage = `Error Code \`${err11}\`: ${info11}`
+        message.channel.send({ content: flagmessage })
+      } else if (args[0] === err12) {
+        let flagmessage = `Error Code \`${err12}\`: ${info12}`
+        message.channel.send({ content: flagmessage })
+      } else if (args[0] === err13) {
+        let flagmessage = `Error Code \`${err13}\`: ${info13}`
+        message.channel.send({ content: flagmessage })
+      } else if (args[0] === err14) {
+        let flagmessage = `Error Code \`${err14}\`: ${info14}`
+        message.channel.send({ content: flagmessage })
+      } else if (args[0] === err15) {
+        let flagmessage = `Error Code \`${err15}\`: ${info15}`
+        message.channel.send({ content: flagmessage })
+      } else if (args[0] !== err1 || args[0] !== err2 || args[0] !== err3 || args[0] !== err4 || args[0] !== err5 || args[0] !== err6 || args[0] !== err7 || args[0] !== err8 || args[0] !== err9 || args[0] !== err10 || args[0] !== err11 || args[0] !== err12 || args[0] !== err13 || args[0] !== err14 || args[0] !== err15) {
+        message.channel.send(`I haven't heard of the Error Code: \`${args[0]}\`. Check the list to see the valid Error Codes.`)
       }
     } catch (err) {
       console.log(err)

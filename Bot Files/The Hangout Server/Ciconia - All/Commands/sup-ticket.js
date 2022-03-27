@@ -10,16 +10,11 @@ module.exports = {
   description: "open a support ticket!",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const channel = await message.guild.channels.create(
         `Ticket: ${message.author.tag}`
       );
 
       channel.setParent(config.base.baseticketgroupid);
-
       channel.updateOverwrite(message.guild.id, {
         SEND_MESSAGE: false,
         VIEW_CHANNEL: false,

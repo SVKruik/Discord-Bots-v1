@@ -10,10 +10,6 @@ module.exports = {
   description: "Rock, Paper Scissor!",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       if (!args.length)
         return message.channel.send("To keep it fair, also send your pick!");
 

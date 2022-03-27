@@ -10,13 +10,8 @@ module.exports = {
   description: "Kick a irritating person, that you don't hate enough to ban.",
   execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const target = message.mentions.users.first();
       const username = message.client.user.username;
-
       const reason1 = args[1];
       if (!args[1]) {
         return message.channel.send("Please also specify for what reason you would like to kick this member.") // Rede geven

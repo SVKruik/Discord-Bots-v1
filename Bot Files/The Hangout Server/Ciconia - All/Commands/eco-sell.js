@@ -11,11 +11,6 @@ module.exports = {
     description: "Sell stuff for coins.",
     async execute(message, args, cmd, client, Discord, profileData) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
             const item = args[0]
             const amount = args[1]
 

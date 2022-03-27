@@ -1,14 +1,14 @@
-// Reset de hoeveelheid voor beide accounts.
+// Reset de hoeveelheid warnings.
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
-  name: "setwalletandbank",
-  aliases: config.aliases.aliasessetfulleco,
-  cooldown: config.cooldown.cooldownsetfulleco,
-  permissions: config.permissions.permissionsetfulleco,
-  description: "Reset the balance of both accounts of a member.",
+  name: "setwarnings",
+  aliases: config.aliases.aliasessetwarnings,
+  cooldown: config.cooldown.cooldownsetwarnings,
+  permissions: config.permissions.permissionsetwarnings,
+  description: "Reset the balance of a member.",
   async execute(message, args, cmd, client, Discord, profileData) {
     try {
       if (!args[0]) {
@@ -22,7 +22,6 @@ module.exports = {
       if (!target) {
         return message.channel.send(config.basemessages.messagesfinderror);
       }
-
       if (amount < 0) {
         return message.channel.send(config.basemessages.messagesgreaternegaone);
       }
@@ -38,13 +37,12 @@ module.exports = {
           },
           {
             $set: {
-              wallet: amount,
-              bank: amount,
+              warnings: amount,
             },
           }
         );
 
-        const flagmessage = `The targeted member's balance is now \`${amount}\`. This applies to both accounts.`
+        const flagmessage = `The targeted member's warning count is now \`${amount}\`.`
         const flags = ["everyone", "here", "delete"];
 
         if (!args[2]) {

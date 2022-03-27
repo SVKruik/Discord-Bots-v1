@@ -10,10 +10,6 @@ module.exports = {
   description: "Bulk delete messages.",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const max = config.commandclear.commandclearmax;
       const min = config.commandclear.commandclearmin;
 

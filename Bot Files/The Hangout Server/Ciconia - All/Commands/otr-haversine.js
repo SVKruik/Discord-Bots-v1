@@ -14,11 +14,6 @@ module.exports = {
     description: "Calculate the distance between two GPS coordinates.",
     execute(message, args, cmd, client, Discord) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
             if (!args[0]) {
                 return message.channel.send("You are missing your \`latitude\` of \`A\`.")
             } else if (!args[1]) {

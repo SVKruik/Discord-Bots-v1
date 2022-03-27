@@ -10,12 +10,6 @@ module.exports = {
   description: "Set up a event with teams.",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
-
       const channel = config.base.baseeventchannelid;
       if (message.channel.id == channel) {
       } else {

@@ -12,10 +12,6 @@ module.exports = {
   description: "Advanced Help - Stage 1",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       const channel = "848939517603479553";
       const ApplyEmoji = "🔴";
       const RanksRolesEmoji = "🟠";

@@ -9,13 +9,11 @@ const cooldowns = new Map();
 
 module.exports = async (Discord, client, message) => {
   //Core
+
   const prefix = process.env.PREFIX;
-  const target = message.author.id;
-
-  // Database Schema's
-  const profileModel = require("../../models/profileSchema");
-
   if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+  const profileModel = require("../../models/profileSchema");
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const cmd = args.shift().toLowerCase();
@@ -40,6 +38,7 @@ module.exports = async (Discord, client, message) => {
         bot: message.author.bot,
         tag: tag,
         uni: rndInt,
+        warnings: 0,
 
         scrapexotic: 0,
         scraplegendary: 0,
@@ -57,7 +56,7 @@ module.exports = async (Discord, client, message) => {
 
         level: 0,
         experience: 0,
-        
+
         wallet: 0,
         bank: 0,
 
@@ -79,28 +78,11 @@ module.exports = async (Discord, client, message) => {
     message.channel.send(`Error executing command. EC: \`${config.errorcodes.err5}\`.`)
   }
 
-  //Inc on message send
-  // try {
-  //   const targetData = await profileModel.findOne({ userID: target.id });
-  //   await profileModel.findOneAndUpdate(
-  //     {
-  //       userID: target.id,
-  //     },
-  //     {
-  //       $inc: {
-  //         experience: 3,
-  //       },
-  //     }
-  //   );
-  // } catch (err) {
-  //   console.log(err);
-  //   message.channel.send(`Error executing command. EC: \`${config.errorcodes.err6}\`.`)
-  // }
-
   //Aliases
   const command =
     client.commands.get(cmd) ||
     client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+  console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
 
   //Message Permissions
   // https://discord.com/developers/docs/topics/permissions
@@ -139,24 +121,18 @@ module.exports = async (Discord, client, message) => {
     "MANAGE_EMOJIS_AND_STICKERS",
     "USE_APPLICATION_COMMANDS",
     "REQUEST_TO_SPEAK",
+    "MANAGE_EVENTS",
     "MANAGE_THREADS",
     "CREATE_PUBLIC_THREADS",
     "CREATE_PRIVATE_THREADS",
     "USE_EXTERNAL_STICKERS",
     "SEND_MESSAGES_IN_THREADS",
-    "START_EMBEDDED_ACTIVITIES",
+    "USE_EMBEDDED_ACTIVITIES",
+    "MODERATE_MEMBERS"
   ];
-
+  const permissions = validPermissions
   if (command.permissions.length) {
     let invalidPerms = [];
-    for (const perm of command.permissions) {
-      if (!validPermissions.includes(perm)) {
-        return console.log(`Invalid Permissions ${perm}`);
-      }
-      if (!message.member.permissions.has(perm)) {
-        invalidPerms.push(perm);
-      }
-    }
     if (invalidPerms.length) {
       return message.channel.send(
         `You are missing the following permissions to use this command: \`${invalidPerms}\`.`

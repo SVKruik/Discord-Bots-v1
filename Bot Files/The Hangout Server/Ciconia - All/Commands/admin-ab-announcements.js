@@ -11,11 +11,6 @@ module.exports = {
   description: "Announce something using the bot.",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
       const channel = client.channels.cache.find(channel => channel.id === config.base.baseannouncementschannelid)
       const messageArgs = args.join(' '); // Alle args naar text
 

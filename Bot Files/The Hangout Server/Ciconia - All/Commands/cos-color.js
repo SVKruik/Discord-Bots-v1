@@ -11,10 +11,6 @@ module.exports = {
     description: "Color command",
     async execute(message, args, cmd, client, Discord, profileData) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
             const whiteTeamRole = message.guild.roles.cache.find(
                 (role) => role.id === "910544967582253086"
             );

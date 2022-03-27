@@ -13,10 +13,6 @@ module.exports = {
     "Sends you the link where you can apply to one of our roles/ranks.",
   async execute(message, args, cmd, client, Discord) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       message.channel.send(config.commandapply.commandapply);
     } catch (err) {
       console.log(err)

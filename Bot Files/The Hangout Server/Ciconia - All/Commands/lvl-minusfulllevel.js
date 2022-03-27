@@ -11,23 +11,27 @@ module.exports = {
   description: "Decrease the experience and level.",
   async execute(message, args, cmd, client, Discord, profileData) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
       if (!args[0]) {
         return message.channel.send(config.basemessages.messagesmembermention)
       };
       const amount = args[1];
+      if (!args[1]) {
+        return message.channel.send(config.basemessages.messagesamountmissing)
+      }
       const target = message.mentions.users.first();
-      if (!target) return message.channel.send(config.basemessages.messagesfinderror);
+      if (!target) {
+        return message.channel.send(config.basemessages.messagesfinderror);
+      }
 
-      if (amount <= 0)
+      if (amount <= 0) {
         return message.channel.send(config.basemessages.messagesgreaterone);
+      }
 
       try {
         const targetData = await profileModel.findOne({ userID: target.id });
-        if (!targetData) return message.channel.send(config.basemessages.messagesaccountmissing);
+      if (!targetData) {
+        return message.channel.send(config.basemessages.messagesaccountmissing);
+      }
         await profileModel.findOneAndUpdate(
           {
             userID: target.id,

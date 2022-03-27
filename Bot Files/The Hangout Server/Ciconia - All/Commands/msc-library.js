@@ -12,10 +12,6 @@ module.exports = {
     description: "Show your music library for quick access of your favorite songs.",
     execute(message, args, cmd, client, Discord, profileData) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
             const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
                 .setColor(config.base.basecolor)
                 .setTitle(config.embeds.titleembedtemplate)

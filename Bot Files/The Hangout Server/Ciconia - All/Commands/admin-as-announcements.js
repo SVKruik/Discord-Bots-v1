@@ -11,12 +11,7 @@ module.exports = {
     description: "Announce something direct using the bot.",
     async execute(message, args, cmd, client, Discord) {
         try {
-            const command =
-                client.commands.get(cmd) ||
-                client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-            console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
             const messageArgs = args.join(' '); // Alle args naar text
-
             const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
                 .setColor(config.base.basecolor)
                 .addFields(
@@ -27,7 +22,6 @@ module.exports = {
             message.channel.send({ embeds: [newEmbed] }).then((msg) => {
                 message.delete();
             });
-
             const consolemsg = `${message.author.username} announced something (direct): || ${messageArgs} ||`
             console.log(consolemsg);
         } catch (err) {

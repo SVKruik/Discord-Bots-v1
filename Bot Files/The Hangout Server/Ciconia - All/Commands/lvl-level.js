@@ -11,19 +11,12 @@ module.exports = {
   description: "Displays your current server level.",
   async execute(message, args, cmd, client, Discord, profileData) {
     try {
-      const command =
-        client.commands.get(cmd) ||
-        client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-      console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
-
-
       const flagmessage = `${message.author.username}, this is your Server Level: \`${profileData.level}\`.`
       const flags = ["everyone", "here", "delete"];
 
       if (!args[0]) {
         message.channel.send({ content: flagmessage })
       }
-
       if (args[0] === "delete") {
         if (!args[1]) {
           if (!args[2]) {
@@ -47,7 +40,6 @@ module.exports = {
         }
       }
 
-
       if (args[0] === "everyone") {
         if (args[1] === "here") {
           return message.channel.send(`You cannot use both group tags at the same time.`)
@@ -69,7 +61,6 @@ module.exports = {
       } else if (args[2] === "everyone") {
         return message.channel.send(`You cannot use group tags as your third flag argument. Please use flag \`1\` or \`2\`.`)
       }
-
 
       if (args[0] === "here") {
         if (args[1] === "everyone") {
