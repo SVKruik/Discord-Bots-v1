@@ -511,6 +511,7 @@ exports.aliases = {
   aliasesrpsen: ["rps"], // Rock Paper Scissor
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
+  aliasessrpsnl: ["ssps"], // Inleg Steen Papier Schaar
   aliasessuggestions: ["suggest", "suggestion"], // Suggestions
   aliasesurban: ["definition", "urbandictionary", "dictionary", "defin", "def"], // Urban
   aliasescirkelvergelijking: ["circle"], // Cirkel
@@ -623,6 +624,7 @@ exports.cooldown = {
   cooldownrpsen: H,
   cooldownrpsnl: H,
   cooldownsrpsen: H,
+  cooldownsrpsnl: H,
   cooldownsuggestions: F,
   cooldownurban: G,
   cooldowncirkelvergelijking: G,
@@ -728,6 +730,7 @@ exports.permissions = {
   permissionrpsen: J,
   permissionrpsnl: J,
   permissionsrpsen: J,
+  permissionsrpsnl: J,
   permissionsuggestions: J,
   permissionurban: J,
   permissioncirkelvergelijking: J,
