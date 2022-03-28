@@ -34,7 +34,7 @@ module.exports = {
       }
     } catch (err) {
       console.log(err)
-      message.channel.send(`Error executing command. EC: \`${ config.errorcodes.err16}\`.`)
+      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err16}\`.`)
     }
   },
 };
