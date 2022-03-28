@@ -10,7 +10,6 @@ module.exports = {
   description: "Command template for devs.",
   async execute(message, args, cmd, client, Discord) {
     try {
-
       const flagmessage = config.commandcommandtemplate.commandcommandtemplate
       const flags = ["everyone", "here", "delete"];
 
