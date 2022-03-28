@@ -35,21 +35,21 @@ module.exports = {
         .setImage(config.embed.embedimage)
         .setDescription(config.embeds.descriptionpcstats)
         .addFields(
-          { name: config.embeds.namepcstats1, value: totalram },
-          { name: config.embeds.namepcstats2, value: freeram },
-          { name: config.embeds.namepcstats3, value: usedram },
-          { name: config.embeds.namepcstats4, value: platform },
-          { name: config.embeds.namepcstats5, value: `${uptimehr} Hours and ${uptimemin} Minutes.` },
-          { name: config.embeds.namepcstats6, value: version }
+          { name: config.embeds.namepcstats1, value: `${totalram}` },
+          { name: config.embeds.namepcstats2, value:  `${freeram}` },
+          { name: config.embeds.namepcstats3, value:  `${usedram}` },
+          { name: config.embeds.namepcstats4, value: `${platform}` },
+          { name: config.embeds.namepcstats5, value: `${uptimehr} Hours and ${uptimemin} Minute(s).` },
+          { name: config.embeds.namepcstats6, value:  `${version}` }
         )
         .setFooter({ text: config.embed.embedfooter });
 
       const flagmessage = newEmbed // Flag Systeem
       const flags = ["everyone", "here", "delete"];
 
-      // if (!args[0]) {
-      //   message.channel.send({ embeds: [flagmessage] })
-      // }
+      if (!args[0]) {
+        message.channel.send({ embeds: [flagmessage] })
+      }
 
       if (args[0] === "delete") {
         if (!args[1]) {
