@@ -14,5 +14,5 @@ module.exports = (client, Discord) =>{
         } else {
             continue;
         }
-    }
-}
+    },
+};

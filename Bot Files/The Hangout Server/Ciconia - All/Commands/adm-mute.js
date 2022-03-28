@@ -16,7 +16,7 @@ module.exports = {
         const muteRole = message.guild.roles.cache.find(
           (role) => role.id === config.base.basemuterole // Rol die je krijgt
         );
-        const memberTarget = message.guild.members.cache.get(target.id); 
+        const memberTarget = message.guild.members.cache.get(target.id);
 
         if (!args[1]) {
           memberTarget.roles.add(muteRole);

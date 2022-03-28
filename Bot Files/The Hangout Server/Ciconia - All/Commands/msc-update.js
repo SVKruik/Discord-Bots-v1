@@ -155,5 +155,5 @@ module.exports = {
             console.log(err)
             message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
         }
-    }
-}
+    },
+};
