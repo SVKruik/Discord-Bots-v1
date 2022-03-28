@@ -279,6 +279,7 @@ exports.embeds = {
   titletitreernormaal: "Titreer Berekening",
   titletitreerverdunning: "Titreer Verdunning Berekening",
   titlehaversine: "GPS Coordinate Calculation",
+  titleurban: "Urban Dictionary",
   titlescraps: "Scraps Balance",
   titleshards: "Shards Balance",
   titlebotstats: "Bot Statistics",
@@ -509,6 +510,7 @@ exports.aliases = {
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
   aliasessuggestions: ["suggest", "suggestion"], // Suggestions
+  aliasesurban: ["definition", "urbandictionary", "dictionary", "defin", "def"], // Urban
   aliasescirkelvergelijking: ["circle"], // Cirkel
   aliaseshoeklijn: ["hkli"], // Hoek Lijn
   aliasespunttotlijn: ["lijntotpunt", "puntlijn", "lijnpunt"], // Punt Tot Lijn
@@ -620,6 +622,7 @@ exports.cooldown = {
   cooldownrpsnl: H,
   cooldownsrpsen: H,
   cooldownsuggestions: F,
+  cooldownurban: G,
   cooldowncirkelvergelijking: G,
   cooldownhoeklijn: G,
   cooldownpunttotlijn: G,
@@ -724,6 +727,7 @@ exports.permissions = {
   permissionrpsnl: J,
   permissionsrpsen: J,
   permissionsuggestions: J,
+  permissionurban: J,
   permissioncirkelvergelijking: J,
   permissionhoeklijn: J,
   permissionpunttotlijn: J,
