@@ -26,6 +26,7 @@ module.exports = {
       const err13 = config.errorcodes.err13
       const err14 = config.errorcodes.err14
       const err15 = config.errorcodes.err15
+      const err16 = config.errorcodes.err16
 
       const info1 = config.errorcodes.info1
       const info2 = config.errorcodes.info2
@@ -42,6 +43,7 @@ module.exports = {
       const info13 = config.errorcodes.info13
       const info14 = config.errorcodes.info14
       const info15 = config.errorcodes.info15
+      const info16 = config.errorcodes.info16
 
       const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
         .setColor(config.base.basecolor)
@@ -114,6 +116,10 @@ module.exports = {
             value: `**15.** ${info15}`,
           },
           {
+            name: `> ${err16}`,
+            value: `**16.** ${info16}`,
+          },
+          {
             name: `**-------**`,
             value: `We would really appreciate it, if you contact any of the bot developers if you encounter any of these errors. We can then get to work to fix it ASAP.`,
           }
@@ -170,7 +176,10 @@ module.exports = {
       } else if (args[0] === err15) {
         let flagmessage = `Error Code \`${err15}\`: ${info15}`
         message.channel.send({ content: flagmessage })
-      } else if (args[0] !== err1 || args[0] !== err2 || args[0] !== err3 || args[0] !== err4 || args[0] !== err5 || args[0] !== err6 || args[0] !== err7 || args[0] !== err8 || args[0] !== err9 || args[0] !== err10 || args[0] !== err11 || args[0] !== err12 || args[0] !== err13 || args[0] !== err14 || args[0] !== err15) {
+      } else if (args[0] === err16) {
+        let flagmessage = `Error Code \`${err16}\`: ${info16}`
+        message.channel.send({ content: flagmessage })
+      } else if (args[0] !== err1 || args[0] !== err2 || args[0] !== err3 || args[0] !== err4 || args[0] !== err5 || args[0] !== err6 || args[0] !== err7 || args[0] !== err8 || args[0] !== err9 || args[0] !== err10 || args[0] !== err11 || args[0] !== err12 || args[0] !== err13 || args[0] !== err14 || args[0] !== err15 || args[0] !== err16) {
         message.channel.send(`I haven't heard of the Error Code: \`${args[0]}\`. Check the list to see the valid Error Codes.`)
       }
     } catch (err) {

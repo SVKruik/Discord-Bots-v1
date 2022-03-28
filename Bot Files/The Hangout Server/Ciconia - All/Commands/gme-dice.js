@@ -15,7 +15,7 @@ module.exports = {
       message.channel.send(random);
     } catch (err) {
       console.log(err)
-      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err15}\`.`)
+      message.channel.send(`Error executing command. EC: \`${ config.errorcodes.err16}\`.`)
     }
   },
 };

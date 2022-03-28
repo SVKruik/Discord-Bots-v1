@@ -79,10 +79,18 @@ module.exports = async (Discord, client, message) => {
   }
 
   //Aliases
+  try {
+    const command =
+      client.commands.get(cmd) ||
+      client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+    console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
+  } catch (err) {
+    console.log(`${message.author.username} used an invalid command.`)
+    return message.channel.send(`Error executing command. EC: \`${config.errorcodes.err15}\`.`)
+  }
   const command =
     client.commands.get(cmd) ||
     client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
-  console.log(`${message.author.username} used this command: || ${command.name} ||`) // Log wanneer iemand deze cmd gebruikt.
 
   //Message Permissions
   // https://discord.com/developers/docs/topics/permissions
