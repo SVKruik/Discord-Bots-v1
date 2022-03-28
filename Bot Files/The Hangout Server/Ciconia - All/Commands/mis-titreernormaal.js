@@ -23,8 +23,6 @@ module.exports = {
       const mmolonbekendenapipet = mmolonbekende / pipet;
       const molariteitonbekende = mmolonbekendenapipet * pipet;
 
-
-
       //Input
       var titreermlafgerond =
         Math.round((titreerml + Number.EPSILON) * 1000) / 1000;
