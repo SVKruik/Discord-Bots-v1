@@ -138,9 +138,16 @@ module.exports = async (Discord, client, message) => {
     "USE_EMBEDDED_ACTIVITIES",
     "MODERATE_MEMBERS"
   ];
-  const permissions = validPermissions
   if (command.permissions.length) {
     let invalidPerms = [];
+    for (const perm of command.permissions) {
+      if (!validPermissions.includes(perm)) {
+        return console.log(`Invalid Permissions ${perm}`);
+      }
+      if (!message.member.permissions.has(perm)) {
+        invalidPerms.push(perm);
+      }
+    }
     if (invalidPerms.length) {
       return message.channel.send(
         `You are missing the following permissions to use this command: \`${invalidPerms}\`.`
