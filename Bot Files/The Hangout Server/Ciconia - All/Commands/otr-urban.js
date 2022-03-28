@@ -1,4 +1,4 @@
-// Standaard code voor een nieuwe basic cmd.
+// Zoek de betekenis van een woord op.
 
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const axios = require('axios');
