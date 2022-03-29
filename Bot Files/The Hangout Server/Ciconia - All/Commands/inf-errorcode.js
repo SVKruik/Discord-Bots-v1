@@ -126,9 +126,6 @@ module.exports = {
         )
         .setFooter({ text: config.embed.embedfooter });
 
-      let flagmessage = newEmbed
-      const flags = ["everyone", "here", "delete"];
-
       if (!args[0]) {
         message.channel.send({ embeds: [flagmessage] });
       } else if (args[0] === err1) {

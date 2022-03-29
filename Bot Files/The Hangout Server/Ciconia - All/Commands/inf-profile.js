@@ -43,21 +43,21 @@ module.exports = {
         if (!args[1]) {
           if (!args[2]) {
             message.delete();
-            message.channel.send({ content: flagmessage })
+            message.channel.send({ embeds: [flagmessage] })
           }
         }
       } else if (args[1] === "delete") {
         if (!args[0]) {
           if (!args[2]) {
             message.delete();
-            message.channel.send({ content: flagmessage })
+            message.channel.send({ embeds: [flagmessage] })
           }
         }
       } else if (args[2] === "delete") {
         if (!args[0]) {
           if (!args[1]) {
             message.delete();
-            message.channel.send({ content: flagmessage })
+            message.channel.send({ embeds: [flagmessage] })
           }
         }
       }

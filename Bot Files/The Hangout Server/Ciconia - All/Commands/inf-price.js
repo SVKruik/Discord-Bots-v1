@@ -47,10 +47,6 @@ module.exports = {
                         value: `**Shards**`,
                     },
                     {
-                        name: `**--------**`,
-                        value: `**Shards**`,
-                    },
-                    {
                         name: `Diamond Shards`,
                         value: `\`${config.shardbuyprice.diamond}\``,
                     },
@@ -73,6 +69,83 @@ module.exports = {
                     {
                         name: `Iron Shards`,
                         value: `\`${config.shardbuyprice.iron}\``,
+                    }
+                )
+                .setFooter({ text: config.embed.embedfooter });
+
+            const newEmbed6 = new Discord.MessageEmbed()
+                .setColor(config.base.basecolor)
+                .setTitle(config.embeds.titleprice6)
+                .setImage(config.embed.embedimage)
+                .setDescription(config.embeds.descriptionprice6)
+                .addFields(
+                    {
+                        name: `> **Buy Prices**`,
+                        value: `**Role Colors**`,
+                    },
+                    {
+                        name: `Metallic`,
+                        value: `\`${config.colorcost.metallic}\``,
+                    },
+                    {
+                        name: `Exotic`,
+                        value: `\`${config.colorcost.exotic}\``,
+                    },
+                    {
+                        name: `Plus Exotic`,
+                        value: `\`${config.colorcost.plusexotic}\``,
+                    },
+                    {
+                        name: `Base`,
+                        value: `\`${config.colorcost.base}\``,
+                    },
+                    {
+                        name: `Light`,
+                        value: `\`${config.colorcost.light}\``,
+                    },
+                    {
+                        name: `Medium`,
+                        value: `\`${config.colorcost.medium}\``,
+                    },
+                    {
+                        name: `Dark`,
+                        value: `\`${config.colorcost.dark}\``,
+                    },
+                    {
+                        name: `Really`,
+                        value: `\`${config.colorcost.really}\``,
+                    },
+                    {
+                        name: `Bright`,
+                        value: `\`${config.colorcost.bright}\``,
+                    },
+                    {
+                        name: `Deep`,
+                        value: `\`${config.colorcost.deep}\``,
+                    },
+                    {
+                        name: `Tr`,
+                        value: `\`${config.colorcost.tr}\``,
+                    },
+                    {
+                        name: `Pastel`,
+                        value: `\`${config.colorcost.pastel}\``,
+                    },
+                    {
+                        name: `Earth`,
+                        value: `\`${config.colorcost.earth}\``,
+                    },
+                    {
+                        name: `Sand`,
+                        value: `\`${config.colorcost.sand}\``,
+                    },
+                    {
+                        name: `Reddish`,
+                        value: `\`${config.colorcost.reddish}\``,
+                    },
+                    {
+                        name: `Extra`,
+                        value: `\`${config.colorcost.extra}\``,
                     }
                 )
                 .setFooter({ text: config.embed.embedfooter });
@@ -189,6 +262,8 @@ module.exports = {
                     message.channel.send({ embeds: [newEmbed1] })
                 } else if (args[1] === "shards" || args[1] === "shard") {
                     message.channel.send({ embeds: [newEmbed2] })
+                } else if (args[1] === "rolecolor" || args[1] === "rolecolors" || args[1] === "color" || args[1] === "colors") {
+                    message.channel.send({ embeds: [newEmbed6] })
                 }
             } else if (args[0] === "sell") {
                 if (args[1] === "scraps" || args[1] === "scrap") {

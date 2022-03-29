@@ -23,7 +23,7 @@ module.exports = {
                     },
                     {
                         name: `Description`,
-                        value: `Open these boxes to receive \`Scraps\`. \`Scraps\` come in 6 rarities: Exotic, Legendary, Epic, Rare, Uncommon and Common. You can check the probabilities of these boxes with the command \`boxchances\`. You can sell or trade \`Scraps\` for coins. You can open boxes with \`boxopen ultra/super/normal\`.`,
+                        value: `Open these boxes to receive Scraps. Scraps come in 6 rarities: Exotic, Legendary, Epic, Rare, Uncommon and Common. You can check the probabilities of these boxes with the command \`boxchances\`. You can sell or trade Scraps for coins. You can open boxes with the box opening command.`,
                     },
                     {
                         name: `> **Shards**`,
@@ -33,6 +33,14 @@ module.exports = {
                         name: `Description:`,
                         value: `Shards are rare tokens. You can buy special items with these. They come in the above 6 rarities. You can sell or trade them for coins or high rarity items.`,
                     },
+                    {
+                        name: `> **Role Colors**`,
+                        value: `Lot of different types.`,
+                    },
+                    {
+                        name: `Description:`,
+                        value: `Role colors are colors that make your name a diffent color. This is pure cosmetic. There are different types of colors, each having a different price. Check the \`price\` command to see what the colors cost.`,
+                    }
                 )
                 .setFooter({ text: config.embed.embedfooter });
 
@@ -40,28 +48,28 @@ module.exports = {
             const flags = ["everyone", "here", "delete"];
 
             if (!args[0]) {
-                message.channel.send({ content: flagmessage })
+                message.channel.send({ embeds: [flagmessage] })
             }
 
             if (args[0] === "delete") {
                 if (!args[1]) {
                     if (!args[2]) {
                         message.delete();
-                        message.channel.send({ content: flagmessage })
+                        message.channel.send({ embeds: flagmessage })
                     }
                 }
             } else if (args[1] === "delete") {
                 if (!args[0]) {
                     if (!args[2]) {
                         message.delete();
-                        message.channel.send({ content: flagmessage })
+                        message.channel.send({ embeds: flagmessage })
                     }
                 }
             } else if (args[2] === "delete") {
                 if (!args[0]) {
                     if (!args[1]) {
                         message.delete();
-                        message.channel.send({ content: flagmessage })
+                        message.channel.send({ embeds: flagmessage })
                     }
                 }
             }
