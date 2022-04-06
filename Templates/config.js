@@ -11,35 +11,32 @@ const fs = require("fs");
 const version = require("../package.json").version;
 
 exports.base = {
-  basecolor: "#ffffff",
-  baseguildid: "820580469757313025",
+  basecolor: "#",
+  baseguildid: "",
+  botcount: "",
 
-  basewalletdefault: "0",
-  basebankdefault: "0",
-  baseleveldefault: "0",
-  baseexperiencedefault: "0",
+  basewelcomechannelid: "",
+  baseannouncementschannelid: "",
 
-  basewelcomechannelid: "850753468927049798",
-  baseannouncementschannelid: "944956465733586974",
+  basemusicroleid: "",
 
-  basemusicroleid: "940616347900076073",
+  basemusicchannelid: "",
+  basecolorchannelid: "",
+  baseimagechannelid: "",
+  basesuggechannelid: "",
+  baseeventchannelid: "",
 
-  basemusicchannelid: "942842677932720148",
-  basecolorchannelid: "942842691828457512",
-  baseimagechannelid: "942842717858320385",
-  basesuggechannelid: "944949197612924928",
-  baseeventchannelid: "942438431282323487",
+  basebottestingthreechannelid: "",
 
-  basebottestingthreechannelid: "944963774157299814",
+  basecounterinterval: '',
+  basemembercounterchannelid: "",
+  basepeoplecounterchannelid: "",
 
-  basemembercounterhz: '1500000',
-  basemembercounterchannelid: "873925840096886784",
+  baseticketgroupid: "",
+  baseticketdeletetime: "",
 
-  baseticketgroupid: "852178171305525258",
-  baseticketdeletetime: "5000", //ms -> sec * 1000
-
-  basemuterole: "851141747424886794",
-  baseblindrole: "852934692696358952",
+  basemuterole: "",
+  baseblindrole: "",
 };
 
 exports.colorcost = { // 16 types
@@ -139,8 +136,8 @@ exports.scrapamount = {
 
 exports.embed = {
   embedfooter: "Statistics and Bot provided by Complex.",
-  embedimage: "https://i.imgur.com/neCyTDH.png",
-  embedlink: "https://github.com/PuffinKwadraat/MultiCube-Public",
+  embedimage: "",
+  embedlink: "",
 };
 
 exports.errorcodes = {
@@ -157,11 +154,12 @@ exports.errorcodes = {
   err8: "7329",
   err9: "2371",
   err10: "4329",
-  err11: "3120",
+  err11: "5981",
   err12: "6912",
   err13: "3821",
   err14: "9392",
-  err15: "1455",
+  err15: "1391",
+  err16: "1455",
 
   info1: `A fatal bug in the code. Contact any bot developers if you see this.`,
   info2: `A problem with the database. This can happen during collecting data from the DB, or generally something wrong.`,
@@ -170,14 +168,15 @@ exports.errorcodes = {
   info5: `An error with generating an user account in our database. This error can only occur when someone joins the Discord server, since it will auto-generate an account.`,
   info6: `A problem with adding XP to your account when sending a messsage.`,
   info7: `A problem with the music bot.`,
-  info8: `An error with collecting information about a minecraft server. This error can only occur with the command \`$mcserver\`.`,
+  info8: `An error with collecting information about a minecraft server. This error can only occur with the command \`mcserver\`.`,
   info9: `An error with refunding your coins.`,
   info10: `A problem with connecting to the database. All DB related commands are probably out of service.`,
   info11: `A problem with sending a message to another channel, than the init channel.`,
   info12: `An error with managing a member.`,
   info13: `An error with bulk deleting messages.`,
   info14: `A problem with managing member roles.`,
-  info15: `Unspecific error.`,
+  info15: `This command does not exist (yet), or you have a typo.`,
+  info16: `Unspecific error.`,
 }
 
 exports.basemessages = {
@@ -191,7 +190,7 @@ exports.basemessages = {
   messagesgreaterone: "Amount must be greater than \`0\`.",
   messagescoinsmissing: "You do not have that amount of coins to perform this command.",
   messagesrealnumber: "Please enter a real number.",
-  messagesamountmissing: "You are missing the amount to clear.",
+  messagesamountmissing: "You are missing the amount parameter.",
   messageemojierr: "There was an error with the emoji.",
   messagesboxesmissing: "You don't have any boxes of this type."
 }
@@ -256,36 +255,42 @@ exports.embeds = {
   titleboxeschance2: "Box Probabilities: Ultra",
   titleboxeschance3: "Box Probabilities: Super",
   titleboxeschance4: "Box Probabilities: Normal",
-  titleshop: "Item Shop",
-  titlebotstats: "Bot Statistics",
-  titledonate: "Donate",
   titleembedtemplate: "Bot Template",
   titleevent: "Choose a team to play on!",
+  titledonate: "Donate",
+  titleerrorcode: "Error Codes",
   titlegithub: "GitHub Repository",
-  titlehelp: "Support",
   titlemcserver: "Minecraft Server Statistics",
   titleprice1: "Item Shop Prices - Buy - Boxes",
   titleprice2: "Item Shop Prices - Buy - Shards",
   titleprice3: "Item Shop Prices - Sell - Scraps",
   titleprice4: "Item Shop Prices - Sell - Boxes",
   titleprice5: "Item Shop Prices - Sell - Shards",
+  titleprice6: "Item Shop Prices - Buy - Role Colors",
   titleprofile: "Server Profile",
   titlerules: "House Rules",
   titleserverip: "MultiCube Community",
-  titlehaversine: "GPS Coordinate Calculation",
+  titleshop: "Item Shop",
+  titlecijfer: "Cijfer Berekenen",
   titlecircle: "Cirkel Vergelijking",
   titlehoeklijn: "Hoek Tussen 2 Lijnen",
   titlepuntlijn: "Afstand Tussen Punt En Lijn",
   titlesubstitutie: "Substitutie Vergelijking",
   titletitreernormaal: "Titreer Berekening",
   titletitreerverdunning: "Titreer Verdunning Berekening",
+  titlehaversine: "GPS Coordinate Calculation",
+  titleurban: "Urban Dictionary",
   titlescraps: "Scraps Balance",
   titleshards: "Shards Balance",
+  titlebotstats: "Bot Statistics",
+  titlemembercount: "Member Count",
+  titlepcstats: "Host PC Statistics",
+  titlehelp: "Support Menu",
 
   //Descriptions
   descriptionshop: "Here are all the items you can buy with coins or other special tokens. You can buy stuff with the command \`buy\`.",
-  descriptionbotstats: "These are my current stats.",
   descriptiondonate: "Support our project by donating to us! Your funds will be used to improve our project. You can also help fund new hardware/software we need.",
+  descriptionerrorcode: "Here is a list of all error codes you can get when using me. You can also look up individual error codes, with \`$err 1234\`.",
   descriptionembedtemplate: "Template",
   descriptionevent: "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.",
   descriptiongithub: "This is our GitHub repository. You can find a lot of information about anything there, so check it out!",
@@ -295,6 +300,7 @@ exports.embeds = {
   descriptionprice3: "Here are all the prices of the different scraps you can sell.",
   descriptionprice4: "Here are all the prices of the different boxes you can sell.",
   descriptionprice5: "Here are all the prices of the different shards you can sell.",
+  descriptionprice6: "Here are all the prices of the different role colors you can buy.",
   descriptionmcserver: "Here is some data about the server you asked for.",
   descriptionprofile: "Here is the data we have stored about you.",
   descriptionrules: "These are our house rules.",
@@ -306,6 +312,9 @@ exports.embeds = {
   descriptionsubstitutie: "Een substitutie vergelijking oplossen.",
   descriptiontitreernormaal: "Een normale titreer berekening maken.",
   descriptiontitreerverdunning: "Een titreer berekening met verdunning maken.",
+  descriptionbotstats: "These are the statistics of me.",
+  descriptionmembercount: "Here is the amount of people in this Discord server.",
+  descriptionpcstats: "These are the statistics of my Host PC.",
 
   //Names
   nameboxes1: "Ultra Boxes", // Boxes
@@ -326,13 +335,6 @@ exports.embeds = {
   nameboxeschances13: "Rare:",
   nameboxeschances14: "Uncommon:",
   nameboxeschances15: "Common:",
-  namebotstats1: "Uptime:", // Botstats
-  namebotstats2: "API Ping:",
-  namebotstats3: "Bot Ping:",
-  namebotstats4: "Server ID:",
-  namebotstats5: "Commands:",
-  namebotstats6: "Bot Version:",
-  namebotstats7: "Bot Owner",
   namedonate1: "Donate Link:", // Donate
   namedonate2: "Memberships:",
   nameembedtemplate1: "Name: A", // Embed Template
@@ -354,9 +356,10 @@ exports.embeds = {
   nameprofile4: "Tag:",
   nameprofile5: "Uni:",
   nameprofile6: "Bot:",
-  nameprofile7: "**--------**",
-  nameprofile8: "Document ID",
-  nameprofile9: "Document Version:",
+  nameprofile7: "Warnings",
+  nameprofile8: "**--------**",
+  nameprofile9: "Document ID",
+  nameprofile10: "Document Version:",
   namerules1: "Rule 1:", // Rules
   namerules2: "Rule 2:",
   namerules3: "Rule 3:",
@@ -386,6 +389,22 @@ exports.embeds = {
   nameshards4: "Silver Shards:",
   nameshards5: "Bronze Shards:",
   nameshards6: "Iron Shards:",
+  namebotstats1: "Uptime:", // Botstats
+  namebotstats2: "API Ping:",
+  namebotstats3: "Bot Ping:",
+  namebotstats4: "Server ID:",
+  namebotstats5: "Commands:",
+  namebotstats6: "Bot Version:",
+  namebotstats7: "Bot Owner:",
+  namemembercount1: "> **Total Members:**", // Member Count
+  namemembercount2: "> **Total People:**",
+  namemembercount3: "> **Total Bots:**",
+  namepcstats1: "Total RAM:", // PC Stats
+  namepcstats2: "Free RAM:",
+  namepcstats3: "Used RAM:",
+  namepcstats4: "System Platform:",
+  namepcstats5: "System Uptime:",
+  namepcstats6: "System Version:",
 
   //Values,
   valuebotstats6: `${version}`,
@@ -413,15 +432,14 @@ exports.aliases = {
   // Command Aliases
   aliasesabannouncements: ["bigannouncement", "bigannounce", "bigann", "bannouncement", "bannounce", "banno"], // Big Announcement (dedicated channel)
   aliasesasannouncements: ["smallannouncement", "smallannounce", "smallann", "sannouncement", "sannounce", "sanno"], // Small Announcement (direct channel)
+  aliasesawake: [], // Awake
   aliasesban: [], // Ban
   aliasesblind: [], // Blind
   aliasesclear: ["bulkdelete", "bulkdel"], // Clear
   aliaseskick: [], // Kick
   aliasesmute: [], // Mute
-  aliasesping: ["pong"], // Ping
   aliasesunblind: [], // Unblind
   aliasesunmute: [], // Unmute
-  aliasesuptime: [], // Uptime
   aliasesboxes: ["boxescheck", "boxesbal", "balboxes", "boxesbalance", "box", "balanceboxes"], // Boxes
   aliasesboxesopen: ["openboxes", "openbox", "boxesopen", "boxopen", "boxesop", "boxop", "bxop"], // Boxes Open
   aliasesboxeschance: ["boxchances", "boxchance", "chancebox", "chancesbox", "bxch"], // Box Chance
@@ -430,11 +448,8 @@ exports.aliases = {
   aliasessetboxes: ["setbox", "boxesset", "boxset", "bxset", "setbx"],
   aliasescolor: ["clr", "colour"], // Color
   aliasescolorremove: ["clrremove", "colourremove", "clrrmv"], // Color Remove
-  aliasesrolecolor1: ["rlclr1"], // Rolecolor1
-  aliasesrolecolor2: ["rlclr2"], // Rolecolor2
-  aliasesrolecolor3: ["rlclr3"], // Rolecolor3
-  aliasestemplatecommand: ["cmdtemp"], // Template Command
-  aliasestemplateembed: ["mbdtemp"], // Template Embed
+  aliasestemplatecommand: ["templatecmd", "tempcommand", "tempcmd"], // Template Command
+  aliasestemplateembed: ["templatembd", "tempembed", "tempmbd"], // Template Embed
   aliasestestabannouncements: ["testbigannouncement", "testbigannounce", "testbigann", "testbannouncement", "testbannounce", "testbanno"], // Test Big Announcement
   aliasestestasannouncements: ["testsmallannouncement", "testsmallannounce", "testsmallann", "testsannouncement", "testsannounce", "testsanno"], // Test Small Announcement
   aliasestestsuggest: ["testsuggest", "testsuggestion", "tsuggest", "tsuggestion"], // Test Suggestions
@@ -445,68 +460,40 @@ exports.aliases = {
   aliasesdailyreward: ["dlyrwd", "dr"], // Daily Reward
   aliasesdeposit: ["dep", "depo"], // Deposit
   aliasesgivebank: [], // Givebank
-  aliasesgivefulleco: ["givebankwal", "givewalbank"], // Give Full Economy
+  aliasesgivefulleco: ["givebankwal", "givewalbank", "givefulleco"], // Give Full Economy
   aliasesgivewallet: ["givewal"], // Give Wallet
   aliasesminusbank: ["minbank"], // Minus Bank
-  aliasesminusfulleco: [
-    "minusbankwal",
-    "minuswalbank",
-    "minbankwal",
-    "minwalbank",
-  ], // Minus Full Eco
+  aliasesminusfulleco: ["minusbankwal", "minuswalbank", "minbankwal", "minwalbank", "minfulleco"], // Minus Full Eco
   aliasesminuswallet: ["minwal"], // Minus Wallet
   aliasessearch: ["srch"], // Search
   aliasessell: ["sold"], // Sell
   aliasessetbank: [], // Set Bank
-  aliasessetfulleco: [
-    "setwalbank",
-    "setwalletbank",
-    "setbankwallet",
-    "setbankwal",
-  ], // Set Full Eco
+  aliasessetfulleco: ["setwalbank", "setwalletbank", "setbankwallet", "setbankwal", "fulleco"], // Set Full Eco
   aliasessetwallet: ["setwal"], // Set Wallet
-  aliasesshop: [], // Shop
   aliaseswithdraw: ["with", "wit"], // Withdraw
   aliasesexperience: ["exp", "xp"], // Experience
   aliasesgiveexperience: ["givexp", "giveexp"], // Give Experience
-  aliasesgivefulllevel: [
-    "givelvlxp",
-    "givexplvl",
-    "givelvlexp",
-    "giveexplvl",
-    "givefullevel",
-  ], // Give Full Level
+  aliasesgivefulllevel: ["givelvlxp", "givexplvl", "givelvlexp", "giveexplvl", "givefullevel", "givefulllevel"], // Give Full Level
   aliasesgivelevel: ["givelvl"], // Give Level
   aliaseslevel: ["lvl"], // Level
   aliaseslevelstats: ["levelstats", "levelstat", "lvlstat", "lvlstats"], // Level Statistics
   aliasesminusexperience: ["minusexp", "minusxp", "minxp", "minexp"], // Minus Experience
-  aliasesminusfulllevel: [
-    "minuslvlxp",
-    "minusxplvl",
-    "minusexplvl",
-    "minuslvlexp",
-    "minlvlxp",
-    "minxplvl",
-    "minexplvl",
-    "minlvlexp",
-    "minusfullevel",
-  ], // Minus Full Level
+  aliasesminusfulllevel: ["minuslvlxp", "minusxplvl", "minusexplvl", "minuslvlexp", "minlvlxp", "minxplvl", "minexplvl", "minlvlexp", "minusfulllevel"], // Minus Full Level
   aliasesminuslevel: ["minuslvl", "minlvl"], // Minus Level
   aliasessetexperience: ["setxp", "setexp"], // Set Experience
-  aliasessetfulllevel: ["setlvlexp", "setlvlxp", "setfullevel"], // Set Full Level
+  aliasessetfulllevel: ["setlvlexp", "setlvlxp", "setfulllevel"], // Set Full Level
   aliasessetlevel: ["setlvl"], // Set Level
   aliasesdonate: ["dnte"], // Donate
   aliasesevent: [], // Event
   aliasesgithub: ["gh"], // Github
-  aliaseshelpst1: ["support"], // Help
   aliasesmcserver: ["mc", "mccheck", "mcserver"], // Minecraft Server Stats
   aliasesprice: ["pricecheck", "sellprice", "buyprice", "checkprice", "pricebuy", "pricesell", "prices"], // Prce
   aliasesprofile: ["prof"], // Profile
   aliasesrules: ["rule", "rl"], // Rules
   aliasesserverip: ["server"], // Server IP
-  aliasesbotstats: ["botstat", "botstats"], // Bot Statistics
+  aliasesshop: [], // Shop
   aliasesleave: ["musicstop", "stop"], // Leave
-  aliasesmusiclibrary: ["library", "msclibrary", "msclib", "musiclib", "musiclist", "msclist", "listmusic", "listmsc"], // Music Library
+  aliasesmusiclibrary: ["library", "msclibrary", "msclib", "musiclib", "musiclist", "msclist", "listmusic", "listmsc", "lib"], // Music Library
   aliasesplay: [], // Play
   aliasessreset: ["musicreset", "libraryreset", "mscres", "libres", "musicres", "libraryres"], // Reset
   aliasesupdate: ["musicupdate", "libraryupate", "mscup", "libup", "musicup", "libraryup"], // Update
@@ -523,8 +510,11 @@ exports.aliases = {
   aliasesrpsen: ["rps"], // Rock Paper Scissor
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
+  aliasessrpsnl: ["ssps"], // Inleg Steen Papier Schaar
   aliasessuggestions: ["suggest", "suggestion"], // Suggestions
-  aliasesticket: ["tkt"], // Ticket
+  aliasesurban: ["definition", "urbandictionary", "dictionary", "defin", "def"], // Urban
+  aliasesbinas: ["binastabel", "bin", "sciencedata"], // Binas
+  aliasescijfer: ["cijferbereken", "berekencijfer", "cijfercalc", "cijcalc"], // Cijfer
   aliasescirkelvergelijking: ["circle"], // Cirkel
   aliaseshoeklijn: ["hkli"], // Hoek Lijn
   aliasespunttotlijn: ["lijntotpunt", "puntlijn", "lijnpunt"], // Punt Tot Lijn
@@ -539,6 +529,17 @@ exports.aliases = {
   aliasesminusshards: ["minusshard", "shardsminus", "shardminus"], // Minus Shards
   aliasessetshards: ["setshard", "shardsset", "shardset"], // Set Shards
   aliasesshards: ["shardscheck", "shardsbal", "balshards", "shardsbalance", "shard", "balanceshards"], // Shards
+  aliasesbotstats: ["botstat", "botstats", "statsbot", "statbot"], // Bot Statistics
+  aliasesmembercount: ["memberscount", "memberamount", "countmember", "countmembers", "membersamount", "amountmember", "amountmembers"], // Member Count
+  aliasespcstats: ["pcstat", "pcstats", "statspc", "statpc"], // PC Statistics
+  aliasesping: ["pong"], // Ping
+  aliasesuptime: [], // Uptime
+  aliaseshelp: ["support"], // Help
+  aliasesticket: ["tkt"], // Ticket
+  aliasesgivewarnings: ["givewarning", "givewarn"], // Give Warnings
+  aliasesminuswarnings: ["minuswarning", "minuswarn", "minwarning", "minwarn"], // Minus Warnings
+  aliasessetwarnings: ["setwarning", "setwarn"], // Set Warnings
+  aliaseswarnings: ["warning", "warns", "warn"] // Warnings
 };
 
 const A = 84000; // Daily
@@ -551,15 +552,14 @@ const G = 10; // Soft
 const H = 0; // No cooldown
 exports.cooldown = {
   cooldownannouncements: B,
+  cooldownawake: B,
   cooldownban: B,
   cooldownblind: B,
   cooldownclear: B,
   cooldownkick: B,
   cooldownmute: B,
-  cooldownping: B,
   cooldownunblind: B,
   cooldownunmute: B,
-  cooldownuptime: B,
   cooldownboxes: G,
   cooldownboxeschance: F,
   cooldownboxesopen: 1,
@@ -568,9 +568,6 @@ exports.cooldown = {
   cooldownsetboxes: B,
   cooldowncolor: B,
   cooldowncolorremove: B,
-  cooldownrolecolor1: B,
-  cooldownrolecolor2: B,
-  cooldownrolecolor3: B,
   cooldowntemplatecommand: B,
   cooldowntemplateembed: B,
   cooldowntestannouncements: B,
@@ -592,7 +589,6 @@ exports.cooldown = {
   cooldownsetbank: B,
   cooldownsetfulleco: B,
   cooldownsetwallet: B,
-  cooldownshop: F,
   cooldownwithdraw: E,
   cooldownexperience: G,
   cooldowngiveexperience: B,
@@ -610,14 +606,14 @@ exports.cooldown = {
   cooldowndonate: B,
   cooldownevent: B,
   cooldowngithub: B,
-  cooldownhelpst1: E,
   cooldownmcserver: E,
   cooldownprice: G,
   cooldownprofile: E,
   cooldownrules: E,
   cooldownserverip: E,
+  cooldownshop: F,
   cooldownleave: C,
-  cooldownmusic: C, // All music cmds
+  cooldownmusic: C,
   cooldownapply: E,
   cooldowndice: G,
   cooldownerrorcode: G,
@@ -629,8 +625,11 @@ exports.cooldown = {
   cooldownrpsen: H,
   cooldownrpsnl: H,
   cooldownsrpsen: H,
+  cooldownsrpsnl: H,
   cooldownsuggestions: F,
-  cooldownticket: D,
+  cooldownurban: G,
+  cooldownbinas: G,
+  cooldowncijfer: G,
   cooldowncirkelvergelijking: G,
   cooldownhoeklijn: G,
   cooldownpunttotlijn: G,
@@ -645,6 +644,17 @@ exports.cooldown = {
   cooldownminusshards: B,
   cooldownsetshards: B,
   cooldownshards: G,
+  cooldownbotstats: G,
+  cooldownmembercount: G,
+  cooldownpcstats: G,
+  cooldownping: G,
+  cooldownuptime: G,
+  cooldownhelp: E,
+  cooldownticket: D,
+  cooldowngivewarnings: B,
+  cooldownminuswarnings: B,
+  cooldownsetwarnings: B,
+  cooldownwarnings: G,
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -652,15 +662,14 @@ const J = ["SEND_MESSAGES"]; // Permission for general commands.
 exports.permissions = {
   // Command Permissions
   permissionannouncements: I,
+  permissionawake: I,
   permissionban: I,
   permissionblind: I,
   permissionclear: I,
   permissionkick: I,
   permissionmute: I,
-  permissionping: I,
   permissionunblind: I,
   permissionunmute: I,
-  permissionuptime: I,
   permissionboxes: J,
   permissionboxeschance: J,
   permissionboxesopen: J,
@@ -669,9 +678,6 @@ exports.permissions = {
   permissionsetboxes: I,
   permissioncolor: J,
   permissioncolorremove: J,
-  permissionrolecolor1: I,
-  permissionrolecolor2: I,
-  permissionrolecolor3: I,
   permissiontemplatecommand: I,
   permissiontemplateembed: I,
   permissiontestannouncements: I,
@@ -693,7 +699,6 @@ exports.permissions = {
   permissionsetbank: I,
   permissionsetfulleco: I,
   permissionsetwallet: I,
-  permissionshop: J,
   permissionwithdraw: J,
   permissionexperience: J,
   permissiongiveexperience: I,
@@ -707,17 +712,16 @@ exports.permissions = {
   permissionsetexperience: I,
   permissionsetfulllevel: I,
   permissionsetlevel: I,
-  permissionbotstats: I,
-  permissiondonate: I,
+  permissiondonate: J,
   permissionevent: I,
-  permissiongithub: I,
-  permissionhelpst1: J,
-  permissionmcserver: I,
-  permissionprice: I,
+  permissiongithub: J,
+  permissionmcserver: J,
+  permissionprice: J,
   permissionprofile: J,
-  permissionrules: I,
-  permissionserverip: I,
-  permissionmusic: J, // All music cmds
+  permissionrules: J,
+  permissionserverip: J,
+  permissionshop: J,
+  permissionmusic: J,
   permissionapply: J,
   permissiondice: J,
   permissionerrorcode: J,
@@ -729,8 +733,11 @@ exports.permissions = {
   permissionrpsen: J,
   permissionrpsnl: J,
   permissionsrpsen: J,
+  permissionsrpsnl: J,
   permissionsuggestions: J,
-  permissionticket: J,
+  permissionurban: J,
+  permissionbinas: J,
+  permissioncijfer: J,
   permissioncirkelvergelijking: J,
   permissionhoeklijn: J,
   permissionpunttotlijn: J,
@@ -740,9 +747,20 @@ exports.permissions = {
   permissiongivescraps: I,
   permissionminusscraps: I,
   permissionscraps: J,
-  permissionsetscraps: J,
+  permissionsetscraps: I,
   permissiongiveshards: I,
   permissionminusshards: I,
   permissionsetshards: I,
   permissionshards: J,
+  permissionbotstats: J,
+  permissionmembercount: J,
+  permissionpcstats: J,
+  permissionping: J,
+  permissionuptime: J,
+  permissionhelp: J,
+  permissionticket: J,
+  permissiongivewarnings: I,
+  permissionminuswarnings: I,
+  permissionsetwarnings: I,
+  permissionwarnings: J,
 };
