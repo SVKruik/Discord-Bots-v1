@@ -15,7 +15,7 @@ const fs = require("fs");
 const version = require("../package.json").version;
 
 exports.base = {
-  basecolor: "#568051",
+  basecolor: "#76b3e1",
   baseguildid: "820580469757313025",
   botcount: 15,
 
@@ -158,11 +158,12 @@ exports.errorcodes = {
   err8: "7329",
   err9: "2371",
   err10: "4329",
-  err11: "3120",
+  err11: "5981",
   err12: "6912",
   err13: "3821",
   err14: "9392",
-  err15: "1455",
+  err15: "1391",
+  err16: "1455",
 
   info1: `A fatal bug in the code. Contact any bot developers if you see this.`,
   info2: `A problem with the database. This can happen during collecting data from the DB, or generally something wrong.`,
@@ -171,14 +172,15 @@ exports.errorcodes = {
   info5: `An error with generating an user account in our database. This error can only occur when someone joins the Discord server, since it will auto-generate an account.`,
   info6: `A problem with adding XP to your account when sending a messsage.`,
   info7: `A problem with the music bot.`,
-  info8: `An error with collecting information about a minecraft server. This error can only occur with the command \`$mcserver\`.`,
+  info8: `An error with collecting information about a minecraft server. This error can only occur with the command \`mcserver\`.`,
   info9: `An error with refunding your coins.`,
   info10: `A problem with connecting to the database. All DB related commands are probably out of service.`,
   info11: `A problem with sending a message to another channel, than the init channel.`,
   info12: `An error with managing a member.`,
   info13: `An error with bulk deleting messages.`,
   info14: `A problem with managing member roles.`,
-  info15: `Unspecific error.`,
+  info15: `This command does not exist (yet), or you have a typo.`,
+  info16: `Unspecific error.`,
 }
 
 exports.basemessages = {
@@ -192,7 +194,7 @@ exports.basemessages = {
   messagesgreaterone: "Amount must be greater than \`0\`.",
   messagescoinsmissing: "You do not have that amount of coins to perform this command.",
   messagesrealnumber: "Please enter a real number.",
-  messagesamountmissing: "You are missing the amount to clear.",
+  messagesamountmissing: "You are missing the amount parameter.",
   messageemojierr: "There was an error with the emoji.",
   messagesboxesmissing: "You don't have any boxes of this type."
 }
@@ -268,10 +270,12 @@ exports.embeds = {
   titleprice3: "Item Shop Prices - Sell - Scraps",
   titleprice4: "Item Shop Prices - Sell - Boxes",
   titleprice5: "Item Shop Prices - Sell - Shards",
+  titleprice6: "Item Shop Prices - Buy - Role Colors",
   titleprofile: "Server Profile",
   titlerules: "House Rules",
   titleserverip: "MultiCube Community",
   titleshop: "Item Shop",
+  titlecijfer: "Cijfer Berekenen",
   titlecircle: "Cirkel Vergelijking",
   titlehoeklijn: "Hoek Tussen 2 Lijnen",
   titlepuntlijn: "Afstand Tussen Punt En Lijn",
@@ -279,6 +283,7 @@ exports.embeds = {
   titletitreernormaal: "Titreer Berekening",
   titletitreerverdunning: "Titreer Verdunning Berekening",
   titlehaversine: "GPS Coordinate Calculation",
+  titleurban: "Urban Dictionary",
   titlescraps: "Scraps Balance",
   titleshards: "Shards Balance",
   titlebotstats: "Bot Statistics",
@@ -289,6 +294,7 @@ exports.embeds = {
   //Descriptions
   descriptionshop: "Here are all the items you can buy with coins or other special tokens. You can buy stuff with the command \`buy\`.",
   descriptiondonate: "Support our project by donating to us! Your funds will be used to improve our project. You can also help fund new hardware/software we need.",
+  descriptionerrorcode: "Here is a list of all error codes you can get when using me. You can also look up individual error codes, with \`$err 1234\`.",
   descriptionembedtemplate: "Template",
   descriptionevent: "Choosing a team will allow you to interact with your teammates while in a event! When a event starts with for example Bed Wars, you can choose your team here. Be aware though that teams will be balanced, and your pick is not always available.",
   descriptiongithub: "This is our GitHub repository. You can find a lot of information about anything there, so check it out!",
@@ -298,6 +304,7 @@ exports.embeds = {
   descriptionprice3: "Here are all the prices of the different scraps you can sell.",
   descriptionprice4: "Here are all the prices of the different boxes you can sell.",
   descriptionprice5: "Here are all the prices of the different shards you can sell.",
+  descriptionprice6: "Here are all the prices of the different role colors you can buy.",
   descriptionmcserver: "Here is some data about the server you asked for.",
   descriptionprofile: "Here is the data we have stored about you.",
   descriptionrules: "These are our house rules.",
@@ -353,9 +360,10 @@ exports.embeds = {
   nameprofile4: "Tag:",
   nameprofile5: "Uni:",
   nameprofile6: "Bot:",
-  nameprofile7: "**--------**",
-  nameprofile8: "Document ID",
-  nameprofile9: "Document Version:",
+  nameprofile7: "Warnings",
+  nameprofile8: "**--------**",
+  nameprofile9: "Document ID",
+  nameprofile10: "Document Version:",
   namerules1: "Rule 1:", // Rules
   namerules2: "Rule 2:",
   namerules3: "Rule 3:",
@@ -506,7 +514,11 @@ exports.aliases = {
   aliasesrpsen: ["rps"], // Rock Paper Scissor
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
+  aliasessrpsnl: ["ssps"], // Inleg Steen Papier Schaar
   aliasessuggestions: ["suggest", "suggestion"], // Suggestions
+  aliasesurban: ["definition", "urbandictionary", "dictionary", "defin", "def"], // Urban
+  aliasesbinas: ["binastabel", "bin", "sciencedata"], // Binas
+  aliasescijfer: ["cijferbereken", "berekencijfer", "cijfercalc", "cijcalc"], // Cijfer
   aliasescirkelvergelijking: ["circle"], // Cirkel
   aliaseshoeklijn: ["hkli"], // Hoek Lijn
   aliasespunttotlijn: ["lijntotpunt", "puntlijn", "lijnpunt"], // Punt Tot Lijn
@@ -528,6 +540,10 @@ exports.aliases = {
   aliasesuptime: [], // Uptime
   aliaseshelp: ["support"], // Help
   aliasesticket: ["tkt"], // Ticket
+  aliasesgivewarnings: ["givewarning", "givewarn"], // Give Warnings
+  aliasesminuswarnings: ["minuswarning", "minuswarn", "minwarning", "minwarn"], // Minus Warnings
+  aliasessetwarnings: ["setwarning", "setwarn"], // Set Warnings
+  aliaseswarnings: ["warning", "warns", "warn"] // Warnings
 };
 
 const A = 84000; // Daily
@@ -613,7 +629,11 @@ exports.cooldown = {
   cooldownrpsen: H,
   cooldownrpsnl: H,
   cooldownsrpsen: H,
+  cooldownsrpsnl: H,
   cooldownsuggestions: F,
+  cooldownurban: G,
+  cooldownbinas: G,
+  cooldowncijfer: G,
   cooldowncirkelvergelijking: G,
   cooldownhoeklijn: G,
   cooldownpunttotlijn: G,
@@ -635,6 +655,10 @@ exports.cooldown = {
   cooldownuptime: G,
   cooldownhelp: E,
   cooldownticket: D,
+  cooldowngivewarnings: B,
+  cooldownminuswarnings: B,
+  cooldownsetwarnings: B,
+  cooldownwarnings: G,
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -713,7 +737,11 @@ exports.permissions = {
   permissionrpsen: J,
   permissionrpsnl: J,
   permissionsrpsen: J,
+  permissionsrpsnl: J,
   permissionsuggestions: J,
+  permissionurban: J,
+  permissionbinas: J,
+  permissioncijfer: J,
   permissioncirkelvergelijking: J,
   permissionhoeklijn: J,
   permissionpunttotlijn: J,
@@ -735,4 +763,8 @@ exports.permissions = {
   permissionuptime: J,
   permissionhelp: J,
   permissionticket: J,
+  permissiongivewarnings: I,
+  permissionminuswarnings: I,
+  permissionsetwarnings: I,
+  permissionwarnings: J,
 };

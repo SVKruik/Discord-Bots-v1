@@ -6,11 +6,17 @@ const config = require("./../../Other/config.js");
 module.exports = async (message, args, cmd, client, Discord, member, profileData) => {
   const tagfull = message.author.tag
   const tag = tagfull.substr(-4);
+  const rndIntmax = 10000000000000
+  const rndIntmin = 1
+  const rndInt = Math.round(Math.floor(Math.random() * rndIntmax) + rndIntmin)
   let profile = await profileModel.create({
+    userID: message.author.id,
+    name: message.author.username,
     avatar: message.author.avatar,
     bot: message.author.bot,
     tag: tag,
     uni: rndInt,
+    warnings: 0,
 
     scrapexotic: 0,
     scraplegendary: 0,

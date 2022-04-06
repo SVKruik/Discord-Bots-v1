@@ -15,4 +15,4 @@ module.exports = (client, Discord) =>{
             continue;
         }
     }
-}
+};

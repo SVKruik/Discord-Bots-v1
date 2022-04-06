@@ -7,8 +7,9 @@ const profileSchema = new mongoose.Schema({
   userID: { type: String },
   name: { type: String },
   tag: { type: Number },
-  uni: { type: Number, unique: true },
   bot: { type: Boolean },
+  uni: { type: Number, unique: true },
+  warnings: { type: Number},
 
   scrapexotic: { type: Number, default: 0 },
   scraplegendary: { type: Number, default: 0 },
