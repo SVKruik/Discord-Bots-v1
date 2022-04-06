@@ -1,4 +1,4 @@
-// Standaard code voor een command met embed.
+// Zoek dingen op in de Binas.
 
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
