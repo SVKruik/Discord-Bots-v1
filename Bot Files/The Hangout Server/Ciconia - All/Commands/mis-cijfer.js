@@ -13,23 +13,28 @@ module.exports = {
             const punten = args[0]
             const totpunten = args[1]
             const nterm = args[2]
-            if (!args[0]) {
+            if (!punten) {
                 return message.channel.send({ content: `Wat zijn jouw behaalde punten?` })
             }
-            if (!args[1]) {
+            if (!totpunten) {
                 return message.channel.send({ content: `Wat is het totaal aantal punten?` })
             }
-            if (!args[2]) {
+            if (!nterm) {
                 return message.channel.send({ content: `Wat is de N-term? Normaal gesproken is dit \`1\`.` })
             }
+            if (punten > totpunten) {
+                return message.channel.send({ content: `Je behaalde punten kunnen niet groter zijn dan het totaal aantal punten.` })
+            }
+            if (nterm > 2) {
+                return message.channel.send({ content: `De N-term kan niet groter zijn dan \`2\`.` })
+            }
 
-            const cijfer = punten / totpunten * 9 + nterm
+            const cijfer = Math.round((((punten / totpunten) * 9) + nterm) * 10) / 10
 
             const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
                 .setColor(config.base.basecolor)
-                .setTitle(config.embeds.titleembedtemplate)
+                .setTitle(config.embeds.titlecijfer)
                 .setImage(config.embed.embedimage)
-                .setDescription(config.embeds.descriptionembedtemplate)
                 .addFields(
                     {
                         name: `> **Jouw Punten:**`,

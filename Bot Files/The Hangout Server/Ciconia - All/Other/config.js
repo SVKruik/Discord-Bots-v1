@@ -275,6 +275,7 @@ exports.embeds = {
   titlerules: "House Rules",
   titleserverip: "MultiCube Community",
   titleshop: "Item Shop",
+  titlecijfer: "Cijfer Berekenen",
   titlecircle: "Cirkel Vergelijking",
   titlehoeklijn: "Hoek Tussen 2 Lijnen",
   titlepuntlijn: "Afstand Tussen Punt En Lijn",
@@ -516,6 +517,8 @@ exports.aliases = {
   aliasessrpsnl: ["ssps"], // Inleg Steen Papier Schaar
   aliasessuggestions: ["suggest", "suggestion"], // Suggestions
   aliasesurban: ["definition", "urbandictionary", "dictionary", "defin", "def"], // Urban
+  aliasesbinas: ["binastabel", "bin", "sciencedata"], // Binas
+  aliasescijfer: ["cijferbereken", "berekencijfer", "cijfercalc", "cijcalc"], // Cijfer
   aliasescirkelvergelijking: ["circle"], // Cirkel
   aliaseshoeklijn: ["hkli"], // Hoek Lijn
   aliasespunttotlijn: ["lijntotpunt", "puntlijn", "lijnpunt"], // Punt Tot Lijn
@@ -629,6 +632,8 @@ exports.cooldown = {
   cooldownsrpsnl: H,
   cooldownsuggestions: F,
   cooldownurban: G,
+  cooldownbinas: G,
+  cooldowncijfer: G,
   cooldowncirkelvergelijking: G,
   cooldownhoeklijn: G,
   cooldownpunttotlijn: G,
@@ -735,6 +740,8 @@ exports.permissions = {
   permissionsrpsnl: J,
   permissionsuggestions: J,
   permissionurban: J,
+  permissionbinas: J,
+  permissioncijfer: J,
   permissioncirkelvergelijking: J,
   permissionhoeklijn: J,
   permissionpunttotlijn: J,
