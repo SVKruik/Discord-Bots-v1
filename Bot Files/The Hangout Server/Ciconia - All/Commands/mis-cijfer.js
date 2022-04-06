@@ -12,7 +12,8 @@ module.exports = {
         try {
             const punten = args[0]
             const totpunten = args[1]
-            const nterm = args[2]
+            const nterm1 = args[2]
+            const nterm = nterm1 * 1
             if (!punten) {
                 return message.channel.send({ content: `Wat zijn jouw behaalde punten?` })
             }
@@ -29,7 +30,8 @@ module.exports = {
                 return message.channel.send({ content: `De N-term kan niet groter zijn dan \`2\`.` })
             }
 
-            const cijfer = Math.round((((punten / totpunten) * 9) + nterm) * 10) / 10
+            const cijfer1 = Math.round(((punten / totpunten) * 9) * 10) / 10
+            const cijfer = cijfer1 + nterm
 
             const newEmbed = new Discord.MessageEmbed() // Nieuwe embed maken
                 .setColor(config.base.basecolor)
