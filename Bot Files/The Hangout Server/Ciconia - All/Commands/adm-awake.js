@@ -15,7 +15,7 @@ module.exports = {
         try {
             const list = ["Yep!", "Here!", "Ready!", "Awake!", "I'm here!", "Yes!", "Yeah!"];
             const random = list[Math.floor(Math.random() * list.length)];
-            message.channel.send(random);
+            message.channel.send({ content: random });
         } catch (err) {
             console.log(err)
             message.channel.send(`Error executing command. EC: \`${config.errorcodes.err16}\`.`)
