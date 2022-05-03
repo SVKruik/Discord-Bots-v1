@@ -511,6 +511,7 @@ exports.aliases = {
   aliaseshaversine: ["haver", "gps", "coordinates", "coords", "coord"], // Haversine
   aliasesimage: ["img"], // Image
   aliasesmath: ["math", "calc", "calculate"], // Math
+  aliasesrandomnumber: ["randomnum", "random"], // Random Number
   aliasesrpsen: ["rps"], // Rock Paper Scissor
   aliasesrpsnl: ["rpsnl", "spsnl", "sps"], //Steen Papier Schaar
   aliasessrpsen: ["srps"], // Stake Rock Paper Scissor
@@ -543,7 +544,7 @@ exports.aliases = {
   aliasesgivewarnings: ["givewarning", "givewarn"], // Give Warnings
   aliasesminuswarnings: ["minuswarning", "minuswarn", "minwarning", "minwarn"], // Minus Warnings
   aliasessetwarnings: ["setwarning", "setwarn"], // Set Warnings
-  aliaseswarnings: ["warning", "warns", "warn"] // Warnings
+  aliaseswarnings: ["warning", "warns", "warn", "showwarnings", "showwarn", "showwarns"] // Warnings
 };
 
 const A = 84000; // Daily
@@ -626,6 +627,7 @@ exports.cooldown = {
   cooldownhaversine: G,
   cooldownimage: G,
   cooldownmath: G,
+  cooldownrandomnumber: G,
   cooldownrpsen: H,
   cooldownrpsnl: H,
   cooldownsrpsen: H,
@@ -734,6 +736,7 @@ exports.permissions = {
   permissionhaversine: J,
   permissionimage: J,
   permissionmath: J,
+  permissionrandomnumber: J,
   permissionrpsen: J,
   permissionrpsnl: J,
   permissionsrpsen: J,
