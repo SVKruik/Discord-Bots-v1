@@ -44,8 +44,15 @@ const profileSchema = new mongoose.Schema({
 
   //// Trading Game
 
+  // Valuta
   xi: { type: Number, default: 0 }, // Euro
   pi: { type: Number, default: 0 }, // Cent
+
+  tradesaccepted: { type: Number, default: 0 },
+  tradescancelled: { type: Number, default: 0 },
+  actions: { type: Number, default: 0 },
+  amountbought: { type: Number, default: 0 },
+  amountsold: { type: Number, default: 0 },
 
   // Metal
   steel: { type: Number, default: 0 },
@@ -74,13 +81,28 @@ const profileSchema = new mongoose.Schema({
   limestone: { type: Number, default: 0 },
   sand: { type: Number, default: 0 },
 
-  // Mine
+  // Materials
   granite: { type: Number, default: 0 },
   marble: { type: Number, default: 0 },
   quartz: { type: Number, default: 0 },
   chalk: { type: Number, default: 0 },
   slate: { type: Number, default: 0 },
   basalt: { type: Number, default: 0 },
+  oil: { type: Number, default: 0 },
+  gas: { type: Number, default: 0 },
+  rice: { type: Number, default: 0 },
+  rye: { type: Number, default: 0 },
+  oats: { type: Number, default: 0 },
+  corn: { type: Number, default: 0 },
+  barley: { type: Number, default: 0 },
+  cassava: { type: Number, default: 0 },
+  soybean: { type: Number, default: 0 },
+  potato: { type: Number, default: 0 },
+  sorghum: { type: Number, default: 0 },
+  yam: { type: Number, default: 0 },
+  bamboo: { type: Number, default: 0 },
+  cocoa: { type: Number, default: 0 },
+  coffeebeans: { type: Number, default: 0 },
 
   // Insulation
   phenolicfoam: { type: Number, default: 0 }, // resin
@@ -127,6 +149,11 @@ const profileSchema = new mongoose.Schema({
   copper: { type: Number, default: 0 },
   lithium: { type: Number, default: 0 },
   cobalt: { type: Number, default: 0 },
+  titanium: { type: Number, default: 0 },
+  tungsten: { type: Number, default: 0 },
+  nickel: { type: Number, default: 0 },
+  magnesium: { type: Number, default: 0 },
+  lead: { type: Number, default: 0 },
 
   // Components
   componentelectric: { type: Number, default: 0 },

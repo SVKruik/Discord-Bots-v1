@@ -71,6 +71,15 @@ module.exports = async (Discord, client, message) => {
         shardsbronze: 0,
         shardsiron: 0,
 
+        xi: 0,
+        pi: 0,
+        
+        tradesaccepted: 0,
+        tradescancelled: 0,
+        actions: 0,
+        amountbought: 0,
+        amountsold: 0,
+
         steel: 0,
         steelpart: 0,
         iron: 0,

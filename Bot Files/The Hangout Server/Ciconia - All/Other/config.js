@@ -63,14 +63,37 @@ exports.trading = {
   waterhousetier4: 30000,
   waterhousetier5: 45000,
 
-  // Tax Return
   taxhousetier1: 6000,
   taxhousetier2: 6500,
   taxhousetier3: 7500,
   taxhousetier4: 9000,
   taxhousetier5: 11000,
 
+  happinesshousetier1: 1,
+  happinesshousetier2: 3,
+  happinesshousetier3: 6,
+  happinesshousetier4: 8,
+  happinesshousetier5: 10,
+
+  crimeratehousetier1: -1,
+  crimeratehousetier2: -4,
+  crimeratehousetier3: -8,
+  crimeratehousetier4: -10,
+  crimeratehousetier5: -15,
+
+  garbagehousetier1: 20,
+  garbagehousetier2: 30,
+  garbagehousetier3: 45,
+  garbagehousetier4: 70,
+  garbagehousetier5: 85,
+
   // Buillding Prices
+  housetier1: 5000,
+  housetier2: 20000,
+  housetier3: 40000,
+  housetier4: 65000,
+  housetier5: 70000,
+
   warehousetier2: 50000,
   warehousetier3: 100000,
   warehousetier4: 175000,
@@ -121,9 +144,13 @@ exports.trading = {
 
   reactortier1: 100000,
   reactortier2: 150000,
+  reactorslotstier1: 5,
+  reactorslotstier2: 15,
 
   factorytier1: 50000,
   factorytier2: 75000,
+  factoryslotstier1: 10,
+  factoryslotstier2: 30,
 
   energyplanttier1: 20000,
   energyplanttier2: 60000,
