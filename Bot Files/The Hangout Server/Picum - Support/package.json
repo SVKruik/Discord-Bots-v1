@@ -1,14 +1,14 @@
 {
-  "name": "ciconia",
+  "name": "picum",
   "version": "1.0.0",
-  "description": "All Commands",
+  "description": "support",
   "main": "index.js",
   "scripts": {
     "test": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "\u0016"
+    "url": "https://github.com/PuffinKwadraat/MultiCube-Private"
   },
   "author": "PuffinKwadraat",
   "license": "ISC",

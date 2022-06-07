@@ -1,5 +1,5 @@
 {
-  "name": "ciconia",
+  "name": "avocet",
   "version": "1.0.0",
   "description": "All Commands",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "\u0016"
+    "url": "https://github.com/PuffinKwadraat/MultiCube-Private"
   },
   "author": "PuffinKwadraat",
   "license": "ISC",
