@@ -9,7 +9,7 @@ const profileSchema = new mongoose.Schema({
   tag: { type: Number },
   bot: { type: Boolean },
   uni: { type: Number, unique: true },
-  warnings: { type: Number},
+  warnings: { type: Number, default: 0 },
 
   scrapexotic: { type: Number, default: 0 },
   scraplegendary: { type: Number, default: 0 },
@@ -43,6 +43,8 @@ const profileSchema = new mongoose.Schema({
   shardsiron: { type: Number, default: 0 },
 
   //// Trading Game
+
+  coins: { type: Number, default: 0 },
 
   // Metal
   steel: { type: Number, default: 0 },
@@ -125,12 +127,18 @@ const profileSchema = new mongoose.Schema({
   lithium: { type: Number, default: 0 },
   cobalt: { type: Number, default: 0 },
 
+  // Components
+  componentelectric: { type: Number, default: 0 },
+  componentinterior: { type: Number, default: 0 },
+  componentclothing: { type: Number, default: 0 },
+  componentstarting: { type: Number, default: 0 },
+
   // House
   housetier1: { type: Number, default: 0 },
   housetier2: { type: Number, default: 0 },
   housetier3: { type: Number, default: 0 },
-  housetier4: { type: Number, default: 0 },
-  housetier5: { type: Number, default: 0 }, // more people +  happiness
+  housetier4: { type: Number, default: 0 }, // Requires interiorshop tier 3
+  housetier5: { type: Number, default: 0 }, // more people +  happiness + energy consumption + water consumption + gas consumption
 
   // Buildings Tier
   warehousetier: { type: Number, default: 1 }, // More storage
@@ -141,10 +149,15 @@ const profileSchema = new mongoose.Schema({
   cityhalltier: { type: Number, default: 1 }, // More happiness
   infrastructuretier: { type: Number, default: 0 }, // More happiness + lower cost import/export
   landfilltier: { type: Number, default: 1 }, // More happiness
+
   interiorshoptier: { type: Number, default: 0 }, // Housetier unlock 2+
+  clothingshoptier: { type: Number, default: 0 }, // Housetier unlock 2+
+  drugstoretier: { type: Number, default: 0 }, // Housetier unlock 3+
+  conveniencestore: { type: Number, default: 0 }, // Housetier unlock 2+
+  devicestore: { type: Number, default: 0 }, // Housetier unlock 4+
 
   // Statistics
-  happinesslevel: { type: Number, default: 0 },
+  happinesspercentage: { type: Number, default: 0 },
   crimerate: { type: Number, default: 0 },
   population: { type: Number, default: 0 },
 
@@ -152,8 +165,8 @@ const profileSchema = new mongoose.Schema({
   reactortier: { type: Number, default: 0 }, // Advanced Products
   factorytier: { type: Number, default: 0 }, // Normal Products
   energyplanttier: { type: Number, default: 0 }, // More energy capacity
-  waterpurificationtier: { type: Number, default: 0 }, // More clean water capacity
-  gasplant: { type: Number, default: 0 }, // More gas for cooking + warmth capacity
+  waterplanttier: { type: Number, default: 0 }, // More clean water capacity
+  gasplanttier: { type: Number, default: 0 }, // More gas for cooking + warmth capacity
 });
 mongoose.pluralize(null);
 
