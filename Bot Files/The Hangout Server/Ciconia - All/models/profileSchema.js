@@ -59,7 +59,6 @@ const profileSchema = new mongoose.Schema({
   steelpart: { type: Number, default: 0 },
   iron: { type: Number, default: 0 },
   carbon: { type: Number, default: 0 },
-  rawiron: { type: Number, default: 0 },
 
   // Brick
   brick: { type: Number, default: 0 },
@@ -70,6 +69,7 @@ const profileSchema = new mongoose.Schema({
   woodpart: { type: Number, default: 0 },
   wood: { type: Number, default: 0 },
   logs: { type: Number, default: 0 },
+  bamboo: { type: Number, default: 0 },
 
   // Plastic
   pipe: { type: Number, default: 0 },
@@ -80,16 +80,30 @@ const profileSchema = new mongoose.Schema({
   glass: { type: Number, default: 0 },
   limestone: { type: Number, default: 0 },
   sand: { type: Number, default: 0 },
+  plexiglass: { type: Number, default: 0 },
 
-  // Materials
+  // Stone
   granite: { type: Number, default: 0 },
   marble: { type: Number, default: 0 },
   quartz: { type: Number, default: 0 },
   chalk: { type: Number, default: 0 },
   slate: { type: Number, default: 0 },
   basalt: { type: Number, default: 0 },
+
+  // Raw Materials
   oil: { type: Number, default: 0 },
+  coal: { type: Number, default: 0 },
+  ironore: { type: Number, default: 0 },
+  copperore: { type: Number, default: 0 },
+  goldore: { type: Number, default: 0 },
   gas: { type: Number, default: 0 },
+  ceramic: { type: Number, default: 0 },
+  cork: { type: Number, default: 0 },
+  mesh: { type: Number, default: 0 },
+  rubber: { type: Number, default: 0 },
+  uranium: { type: Number, default: 0 },
+
+  // Crops
   rice: { type: Number, default: 0 },
   rye: { type: Number, default: 0 },
   oats: { type: Number, default: 0 },
@@ -97,12 +111,115 @@ const profileSchema = new mongoose.Schema({
   barley: { type: Number, default: 0 },
   cassava: { type: Number, default: 0 },
   soybean: { type: Number, default: 0 },
-  potato: { type: Number, default: 0 },
   sorghum: { type: Number, default: 0 },
-  yam: { type: Number, default: 0 },
-  bamboo: { type: Number, default: 0 },
+  wheat: { type: Number, default: 0 },
+
+  // Semi Products
+  resin: { type: Number, default: 0 },
+  tape: { type: Number, default: 0 },
+  metalsheet: { type: Number, default: 0 },
   cocoa: { type: Number, default: 0 },
-  coffeebeans: { type: Number, default: 0 },
+  coffeebean: { type: Number, default: 0 },
+  sugar: { type: Number, default: 0 },
+  salt: { type: Number, default: 0 },
+  flower: { type: Number, default: 0 },
+  bakingpowder: { type: Number, default: 0 },
+  egg: { type: Number, default: 0 },
+  fish: { type: Number, default: 0 },
+  meat: { type: Number, default: 0 },
+  bread: { type: Number, default: 0 },
+
+  // Vegetables
+  asparagus: { type: Number, default: 0 },
+  eggplant: { type: Number, default: 0 },
+  broccoli: { type: Number, default: 0 },
+  cabbage: { type: Number, default: 0 },
+  avocado: { type: Number, default: 0 },
+  brusselssprout: { type: Number, default: 0 },
+  carrot: { type: Number, default: 0 },
+  beetroot: { type: Number, default: 0 },
+  garlic: { type: Number, default: 0 },
+  celery: { type: Number, default: 0 },
+  cucumber: { type: Number, default: 0 },
+  greenbean: { type: Number, default: 0 },
+  leek: { type: Number, default: 0 },
+  lettuce: { type: Number, default: 0 },
+  mushroom: { type: Number, default: 0 },
+  onion: { type: Number, default: 0 },
+  pea: { type: Number, default: 0 },
+  pumpkin: { type: Number, default: 0 },
+  radish: { type: Number, default: 0 },
+  rhubarb: { type: Number, default: 0 },
+  sweetpepper: { type: Number, default: 0 },
+  spinach: { type: Number, default: 0 },
+  tomato: { type: Number, default: 0 },
+  sweetpotato: { type: Number, default: 0 },
+  yam: { type: Number, default: 0 },
+  potato: { type: Number, default: 0 },
+
+  // Fruit
+  acerola: { type: Number, default: 0 },
+  apple: { type: Number, default: 0 },
+  apricot: { type: Number, default: 0 },
+  banana: { type: Number, default: 0 },
+  blackberry: { type: Number, default: 0 },
+  blackcurrant: { type: Number, default: 0 },
+  blueberry: { type: Number, default: 0 },
+  breadfruit: { type: Number, default: 0 },
+  cantaloupe: { type: Number, default: 0 },
+  cherry: { type: Number, default: 0 },
+  clementine: { type: Number, default: 0 },
+  coconut: { type: Number, default: 0 },
+  cranberry: { type: Number, default: 0 },
+  datefruit: { type: Number, default: 0 },
+  fig: { type: Number, default: 0 },
+  gooseberry: { type: Number, default: 0 },
+  grapefruit: { type: Number, default: 0 },
+  grape: { type: Number, default: 0 },
+  guava: { type: Number, default: 0 },
+  honeydewmelon: { type: Number, default: 0 },
+  jackfruit: { type: Number, default: 0 },
+  jujubefruit: { type: Number, default: 0 },
+  kiwifruit: { type: Number, default: 0 },
+  kumquat: { type: Number, default: 0 },
+  lemon: { type: Number, default: 0 },
+  lime: { type: Number, default: 0 },
+  lychee: { type: Number, default: 0 },
+  mandarin: { type: Number, default: 0 },
+  mango: { type: Number, default: 0 },
+  mulberry: { type: Number, default: 0 },
+  olive: { type: Number, default: 0 },
+  orange: { type: Number, default: 0 },
+  papaya: { type: Number, default: 0 },
+  passionfruit: { type: Number, default: 0 },
+  peach: { type: Number, default: 0 },
+  pear: { type: Number, default: 0 },
+  dragonfruit: { type: Number, default: 0 },
+  pineapple: { type: Number, default: 0 },
+  plum: { type: Number, default: 0 },
+  pomegranate: { type: Number, default: 0 },
+  prune: { type: Number, default: 0 },
+  raspberry: { type: Number, default: 0 },
+  strawberry: { type: Number, default: 0 },
+  tangerine: { type: Number, default: 0 },
+  watermelon: { type: Number, default: 0 },
+
+  // Animals
+  cow: { type: Number, default: 0 },
+  pig: { type: Number, default: 0 },
+  horse: { type: Number, default: 0 },
+  chicken: { type: Number, default: 0 },
+  sheep: { type: Number, default: 0 },
+  goat: { type: Number, default: 0 },
+  llama: { type: Number, default: 0 },
+  rabbit: { type: Number, default: 0 },
+
+  // Building Materials
+  steel: { type: Number, default: 0 },
+  bricks: { type: Number, default: 0 },
+  cement: { type: Number, default: 0 },
+  concrete: { type: Number, default: 0 }, // cement + water + pebbles
+  pebbles: { type: Number, default: 0 },
 
   // Insulation
   phenolicfoam: { type: Number, default: 0 }, // resin
@@ -118,19 +235,10 @@ const profileSchema = new mongoose.Schema({
   fabric: { type: Number, default: 0 },
   cotton: { type: Number, default: 0 },
   fibre: { type: Number, default: 0 },
-
-  // Food
-  bread: { type: Number, default: 0 },
-  wheat: { type: Number, default: 0 }, // Farm
-  flower: { type: Number, default: 0 }, // Farm
-
-  meat: { type: Number, default: 0 },
-  animal: { type: Number, default: 0 }, // Farm
-
-  vegetable: { type: Number, default: 0 },
-  plant: { type: Number, default: 0 }, // Greenhouse
+  carbonfibre: { type: Number, default: 0 },
 
   // Reactor material
+  chemical: { type: Number, default: 0 },
   polymaterial: { type: Number, default: 0 },
   acid: { type: Number, default: 0 },
   catalyst: { type: Number, default: 0 }, // Faster production time + lower production cost
@@ -154,6 +262,14 @@ const profileSchema = new mongoose.Schema({
   nickel: { type: Number, default: 0 },
   magnesium: { type: Number, default: 0 },
   lead: { type: Number, default: 0 },
+  tin: { type: Number, default: 0 },
+  mercury: { type: Number, default: 0 },
+  bismuth: { type: Number, default: 0 },
+  rodium: { type: Number, default: 0 },
+  osmium: { type: Number, default: 0 },
+  palladium: { type: Number, default: 0 },
+  iridium: { type: Number, default: 0 },
+  ruthenium: { type: Number, default: 0 },
 
   // Components
   componentelectric: { type: Number, default: 0 },
@@ -177,6 +293,17 @@ const profileSchema = new mongoose.Schema({
   cityhalltier: { type: Number, default: 1 }, // More happiness
   infrastructuretier: { type: Number, default: 1 }, // More happiness + lower cost import/export
   landfilltier: { type: Number, default: 0 }, // More happiness
+  nuclearreactortier: { type: Number, default: 0 }, // More energy capacity
+
+  windmill: { type: Number, default: 0 },
+  sonarpanel: { type: Number, default: 0 },
+
+  park: { type: Number, default: 0 },
+  school: { type: Number, default: 0 },
+  cinema: { type: Number, default: 0 },
+  restaurant: { type: Number, default: 0 },
+  hotel: { type: Number, default: 0 },
+  sawmill: { type: Number, default: 0 },
 
   interiorshoptier: { type: Number, default: 0 }, // Housetier unlock 2+
   clothingshoptier: { type: Number, default: 0 }, // Housetier unlock 3+
@@ -194,7 +321,7 @@ const profileSchema = new mongoose.Schema({
   factorytier: { type: Number, default: 0 }, // Normal Products
   energyplanttier: { type: Number, default: 0 }, // More energy capacity
   waterplanttier: { type: Number, default: 0 }, // More clean water capacity
-  gasplanttier: { type: Number, default: 0 }, // More gas for cooking + warmth capacity
+  gasplanttier: { type: Number, default: 0 }, // More warmth capacity
 
   // Board
   a1: { type: String, default: "Empty" },

@@ -49,8 +49,8 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     shardsbronze: 0,
     shardsiron: 0,
 
-    xi: 0,
-    pi: 0,
+    xi: 0, // Euro
+    pi: 0, // Cent
 
     tradesaccepted: 0,
     tradescancelled: 0,
@@ -58,28 +58,35 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     amountbought: 0,
     amountsold: 0,
 
+    // Metal
     steel: 0,
     steelpart: 0,
     iron: 0,
     carbon: 0,
-    rawiron: 0,
 
+    // Brick
     brick: 0,
     clay: 0,
 
+    // Wood
     woodplank: 0,
     woodpart: 0,
     wood: 0,
     logs: 0,
+    bamboo: 0,
 
+    // Plastic
     pipe: 0,
     plasticpart: 0,
     plastic: 0,
 
+    // Glass
     glass: 0,
     limestone: 0,
     sand: 0,
+    plexiglass: 0,
 
+    // Stone
     granite: 0,
     marble: 0,
     quartz: 0,
@@ -87,38 +94,166 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     slate: 0,
     basalt: 0,
 
-    phenolicfoam: 0,
-    polyurethane: 0,
-    xps: 0,
-    rockwool: 0,
-    foamglass: 0,
-    glasswool: 0,
+    // Raw Materials
+    oil: 0,
+    coal: 0,
+    ironore: 0,
+    copperore: 0,
+    goldore: 0,
+    gas: 0,
+    ceramic: 0,
+    cork: 0,
+    mesh: 0,
+    rubber: 0,
+    uranium: 0,
+
+    // Crops
+    rice: 0,
+    rye: 0,
+    oats: 0,
+    corn: 0,
+    barley: 0,
+    cassava: 0,
+    soybean: 0,
+    sorghum: 0,
+    wheat: 0,
+
+    // Semi Products
+    resin: 0,
+    tape: 0,
+    metalsheet: 0,
+    cocoa: 0,
+    coffeebean: 0,
+    sugar: 0,
+    salt: 0,
+    flower: 0,
+    bakingpowder: 0,
+    egg: 0,
+    fish: 0,
+    meat: 0,
+    bread: 0,
+
+    // Vegetables
+    asparagus: 0,
+    eggplant: 0,
+    broccoli: 0,
+    cabbage: 0,
+    avocado: 0,
+    brusselssprout: 0,
+    carrot: 0,
+    beetroot: 0,
+    garlic: 0,
+    celery: 0,
+    cucumber: 0,
+    greenbean: 0,
+    leek: 0,
+    lettuce: 0,
+    mushroom: 0,
+    onion: 0,
+    pea: 0,
+    pumpkin: 0,
+    radish: 0,
+    rhubarb: 0,
+    sweetpepper: 0,
+    spinach: 0,
+    tomato: 0,
+    sweetpotato: 0,
+    yam: 0,
+    potato: 0,
+
+    // Fruit
+    acerola: 0,
+    apple: 0,
+    apricot: 0,
+    banana: 0,
+    blackberry: 0,
+    blackcurrant: 0,
+    blueberry: 0,
+    breadfruit: 0,
+    cantaloupe: 0,
+    cherry: 0,
+    clementine: 0,
+    coconut: 0,
+    cranberry: 0,
+    datefruit: 0,
+    fig: 0,
+    gooseberry: 0,
+    grapefruit: 0,
+    grape: 0,
+    guava: 0,
+    honeydewmelon: 0,
+    jackfruit: 0,
+    jujubefruit: 0,
+    kiwifruit: 0,
+    kumquat: 0,
+    lemon: 0,
+    lime: 0,
+    lychee: 0,
+    mandarin: 0,
+    mango: 0,
+    mulberry: 0,
+    olive: 0,
+    orange: 0,
+    papaya: 0,
+    passionfruit: 0,
+    peach: 0,
+    pear: 0,
+    dragonfruit: 0,
+    pineapple: 0,
+    plum: 0,
+    pomegranate: 0,
+    prune: 0,
+    raspberry: 0,
+    strawberry: 0,
+    tangerine: 0,
+    watermelon: 0,
+
+    // Animals
+    cow: 0,
+    pig: 0,
+    horse: 0,
+    chicken: 0,
+    sheep: 0,
+    goat: 0,
+    llama: 0,
+    rabbit: 0,
+
+    // Building Materials
+    steel: 0,
+    bricks: 0,
+    cement: 0,
+    concrete: 0, // cement + water + pebbles
+    pebbles: 0,
+
+    // Insulation
+    phenolicfoam: 0, // resin
+    polyurethane: 0, // reactor
+    xps: 0, // oil
+    rockwool: 0, // basalt
+    foamglass: 0, // sand + limestone
+    glasswool: 0, // reactor
     doubleglass: 0,
     tripleglass: 0,
 
+    // Fabric
     fabric: 0,
     cotton: 0,
     fibre: 0,
+    carbonfibre: 0,
 
-    bread: 0,
-    wheat: 0,
-    flower: 0,
-
-    meat: 0,
-    animal: 0,
-
-    vegetable: 0,
-    plant: 0,
-
+    // Reactor material
+    chemical: 0,
     polymaterial: 0,
     acid: 0,
-    catalyst: 0,
+    catalyst: 0, // Faster production time + lower production cost
 
-    chromepart: 0,
+    // Chrome
+    chromepart: 0, // Brass + Chrome
     chrome: 0,
     brasspart: 0,
-    brass: 0,
+    brass: 0, // Zinc + Copper
 
+    // Rare Materials
     diamond: 0,
     gold: 0,
     platinum: 0,
@@ -126,43 +261,73 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     copper: 0,
     lithium: 0,
     cobalt: 0,
+    titanium: 0,
+    tungsten: 0,
+    nickel: 0,
+    magnesium: 0,
+    lead: 0,
+    tin: 0,
+    mercury: 0,
+    bismuth: 0,
+    rodium: 0,
+    osmium: 0,
+    palladium: 0,
+    iridium: 0,
+    ruthenium: 0,
 
+    // Components
     componentelectric: 0,
     componentinterior: 0,
     componentclothing: 0,
     componentstarting: 0,
 
+    // House
     housetier1: 0,
     housetier2: 0,
     housetier3: 0,
-    housetier4: 0,
-    housetier5: 0,
+    housetier4: 0, // Requires interiorshop tier 3
+    housetier5: 0, // more people +  happiness + energy consumption + water consumption + gas consumption
 
-    warehousetier: 0,
-    policetier: 0,
-    firedepartmenttier: 0,
-    hospitaltier: 0,
-    malltier: 0,
-    cityhalltier: 0,
-    infrastructuretier: 0,
-    landfilltier: 0,
+    // Buildings Tier
+    warehousetier: 1, // More storage
+    policetier: 0, // Less crime rate
+    firedepartmenttier: 0, // Less fire
+    hospitaltier: 0, // More happiness
+    malltier: 0, // More happiness + tax
+    cityhalltier: 1, // More happiness
+    infrastructuretier: 1, // More happiness + lower cost import/export
+    landfilltier: 0, // More happiness
+    nuclearreactortier: 0, // More energy capacity
 
-    interiorshoptier: 0,
-    clothingshoptier: 0,
-    drugstoretier: 0,
-    conveniencestoretier: 0,
-    devicestoretier: 0,
+    windmill: 0,
+    sonarpanel: 0,
 
+    park: 0,
+    school: 0,
+    cinema: 0,
+    restaurant: 0,
+    hotel: 0,
+    sawmill: 0,
+
+    interiorshoptier: 0, // Housetier unlock 2+
+    clothingshoptier: 0, // Housetier unlock 3+
+    drugstoretier: 0, // Housetier unlock 3+
+    conveniencestore: 0, // Housetier unlock 2+
+    devicestore: 0, // Housetier unlock 4+
+
+    // Statistics
     happinesspercentage: 0,
     crimerate: 0,
     population: 0,
 
-    reactortier: 0,
-    factorytier: 0,
-    energyplanttier: 0,
-    waterplanttier: 0,
-    gasplanttier: 0,
+    // Factory
+    reactortier: 0, // Advanced Products
+    factorytier: 0, // Normal Products
+    energyplanttier: 0, // More energy capacity
+    waterplanttier: 0, // More clean water capacity
+    gasplanttier: 0, // More warmth capacity
 
+    // Board
     a1: "Empty",
     a2: "Empty",
     a3: "Empty",
