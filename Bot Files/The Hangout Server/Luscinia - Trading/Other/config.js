@@ -43,6 +43,34 @@ exports.base = {
   baseblindrole: "852934692696358952",
 };
 
+exports.trading = {
+  // Consumption
+  powerhousetier1: 1800,
+  powerhousetier2: 2400,
+  powerhousetier3: 2900,
+  powerhousetier4: 4200,
+  powerhousetier5: 7100,
+
+  gashousetier1: 8000,
+  gashousetier2: 12000,
+  gashousetier3: 17000,
+  gashousetier4: 20000,
+  gashousetier5: 27000,
+
+  waterhousetier1: 5000,
+  waterhousetier2: 11000,
+  waterhousetier3: 20000,
+  waterhousetier4: 30000,
+  waterhousetier5: 45000,
+
+  // Tax Return
+  taxhousetier1: 6000,
+  taxhousetier2: 6500,
+  taxhousetier3: 7500,
+  taxhousetier4: 9000,
+  taxhousetier5: 11000,
+}
+
 exports.colorcost = { // 16 types
   metallic: 500,
   exotic: 500,
