@@ -44,7 +44,8 @@ const profileSchema = new mongoose.Schema({
 
   //// Trading Game
 
-  coins: { type: Number, default: 0 },
+  xi: { type: Number, default: 0 }, // Euro
+  pi: { type: Number, default: 0 }, // Cent
 
   // Metal
   steel: { type: Number, default: 0 },
@@ -147,11 +148,11 @@ const profileSchema = new mongoose.Schema({
   hospitaltier: { type: Number, default: 0 }, // More happiness
   malltier: { type: Number, default: 0 }, // More happiness + tax
   cityhalltier: { type: Number, default: 1 }, // More happiness
-  infrastructuretier: { type: Number, default: 0 }, // More happiness + lower cost import/export
-  landfilltier: { type: Number, default: 1 }, // More happiness
+  infrastructuretier: { type: Number, default: 1 }, // More happiness + lower cost import/export
+  landfilltier: { type: Number, default: 0 }, // More happiness
 
   interiorshoptier: { type: Number, default: 0 }, // Housetier unlock 2+
-  clothingshoptier: { type: Number, default: 0 }, // Housetier unlock 2+
+  clothingshoptier: { type: Number, default: 0 }, // Housetier unlock 3+
   drugstoretier: { type: Number, default: 0 }, // Housetier unlock 3+
   conveniencestore: { type: Number, default: 0 }, // Housetier unlock 2+
   devicestore: { type: Number, default: 0 }, // Housetier unlock 4+

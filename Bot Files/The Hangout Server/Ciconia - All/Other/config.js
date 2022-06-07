@@ -69,35 +69,73 @@ exports.trading = {
   taxhousetier3: 7500,
   taxhousetier4: 9000,
   taxhousetier5: 11000,
-}
 
+  // Buillding Prices
+  warehousetier2: 50000,
+  warehousetier3: 100000,
+  warehousetier4: 175000,
+  warehousetier5: 250000,
 
-exports.trading = {
-  // Consumption
-  powerhousetier1: 1800,
-  powerhousetier2: 2400,
-  powerhousetier3: 2900,
-  powerhousetier4: 4200,
-  powerhousetier5: 7100,
+  policetier1: 10000,
+  policetier2: 70000,
+  policetier3: 200000,
 
-  gashousetier1: 8000,
-  gashousetier2: 12000,
-  gashousetier3: 17000,
-  gashousetier4: 20000,
-  gashousetier5: 27000,
+  firedepartmenttier1: 12000,
+  firedepartmenttier2: 65000,
+  firedepartmenttier3: 180000,
 
-  waterhousetier1: 5000,
-  waterhousetier2: 11000,
-  waterhousetier3: 20000,
-  waterhousetier4: 30000,
-  waterhousetier5: 45000,
+  hospitaltier1: 20000,
+  hospitaltier2: 100000,
+  hospitaltier3: 250000,
 
-  // Tax Return
-  taxhousetier1: 6000,
-  taxhousetier2: 6500,
-  taxhousetier3: 7500,
-  taxhousetier4: 9000,
-  taxhousetier5: 11000,
+  malltier1: 150000,
+  malltier2: 400000,
+
+  cityhalltier2: 200000,
+
+  infrastructuretier2: 100000,
+  infrastructuretier3: 150000,
+  infrastructuretier4: 250000,
+  infrastructuretier5: 500000,
+
+  landfilltier1: 50000,
+  landfilltier2: 60000,
+  landfilltier3: 90000,
+
+  interiorshoptier1: 20000,
+  interiorshoptier2: 60000,
+
+  clothingshoptier1: 15000,
+  clothingshoptier1: 20000,
+
+  drugstoretier1: 40000,
+  drugstoretier2: 50000,
+
+  conveniencestoretier1: 10000,
+  conveniencestoretier2: 40000,
+  conveniencestoretier3: 50000,
+
+  devicestoretier1: 30000,
+  devicestoretier2: 60000,
+  devicestoretier3: 90000,
+
+  reactortier1: 100000,
+  reactortier2: 150000,
+
+  factorytier1: 50000,
+  factorytier2: 75000,
+
+  energyplanttier1: 20000,
+  energyplanttier2: 60000,
+  energyplanttier3: 100000,
+
+  waterplanttier1: 25000,
+  waterplanttier2: 60000,
+  waterplanttier3: 90000,
+
+  gasplanttier1: 20000,
+  gasplanttier2: 55000,
+  gasplanttier3: 110000,
 }
 
 exports.colorcost = { // 16 types
