@@ -45,10 +45,10 @@ const profileSchema = new mongoose.Schema({
   //// Trading Game
 
   // Valuta
-  xi: { type: Number, default: 0 }, // Euro
+  xi: { type: Number, default: 30000 }, // Euro
   pi: { type: Number, default: 0 }, // Cent
 
-  prestige: { type: Number, default: 0 },
+  prestige: { type: Number, default: 1 },
   tradesaccepted: { type: Number, default: 0 },
   tradescancelled: { type: Number, default: 0 },
   actions: { type: Number, default: 0 },
