@@ -48,6 +48,7 @@ const profileSchema = new mongoose.Schema({
   xi: { type: Number, default: 0 }, // Euro
   pi: { type: Number, default: 0 }, // Cent
 
+  prestige: { type: Number, default: 0 },
   tradesaccepted: { type: Number, default: 0 },
   tradescancelled: { type: Number, default: 0 },
   actions: { type: Number, default: 0 },
@@ -204,6 +205,28 @@ const profileSchema = new mongoose.Schema({
   tangerine: { type: Number, default: 0 },
   watermelon: { type: Number, default: 0 },
 
+  // Spices and Herbs
+  thyme: { type: Number, default: 0 },
+  basil: { type: Number, default: 0 },
+  oregano: { type: Number, default: 0 },
+  rosemary: { type: Number, default: 0 },
+  fennelseed: { type: Number, default: 0 },
+  bayleaf: { type: Number, default: 0 },
+  chilipowder: { type: Number, default: 0 },
+  smokedpaprika: { type: Number, default: 0 },
+  cayenne: { type: Number, default: 0 },
+  cumin: { type: Number, default: 0 },
+  groundcardamom: { type: Number, default: 0 },
+  currypowder: { type: Number, default: 0 },
+  onionpowder: { type: Number, default: 0 },
+  garlicpowder: { type: Number, default: 0 },
+  groundmustard: { type: Number, default: 0 },
+  clove: { type: Number, default: 0 },
+  nutmeg: { type: Number, default: 0 },
+  cinnamon: { type: Number, default: 0 },
+  groundginger: { type: Number, default: 0 },
+  mace: { type: Number, default: 0 },
+
   // Animals
   cow: { type: Number, default: 0 },
   pig: { type: Number, default: 0 },
@@ -270,6 +293,7 @@ const profileSchema = new mongoose.Schema({
   palladium: { type: Number, default: 0 },
   iridium: { type: Number, default: 0 },
   ruthenium: { type: Number, default: 0 },
+  plutonium: { type: Number, default: 0 },
 
   // Components
   componentelectric: { type: Number, default: 0 },
@@ -293,17 +317,29 @@ const profileSchema = new mongoose.Schema({
   cityhalltier: { type: Number, default: 1 }, // More happiness
   infrastructuretier: { type: Number, default: 1 }, // More happiness + lower cost import/export
   landfilltier: { type: Number, default: 0 }, // More happiness
-  nuclearreactortier: { type: Number, default: 0 }, // More energy capacity
 
+  // Energy
+  nuclearreactortier: { type: Number, default: 0 },
   windmill: { type: Number, default: 0 },
   sonarpanel: { type: Number, default: 0 },
 
+  // Amusement
   park: { type: Number, default: 0 },
   school: { type: Number, default: 0 },
   cinema: { type: Number, default: 0 },
   restaurant: { type: Number, default: 0 },
   hotel: { type: Number, default: 0 },
-  sawmill: { type: Number, default: 0 },
+
+  // Natural
+  oilwell: { type: Number, default: 0 }, // Oil
+  sawmilltier: { type: Number, default: 0 }, // Wood
+  refinerytier: { type: Number, default: 0 }, // Ores To Metals
+  airfiltertier: { type: Number, default: 0 }, // Carbon
+  river: { type: Number, default: 0 }, // Clay, Water, Pebbles
+  forest: { type: Number, default: 0 }, // Bamboo, Logs
+  beach: { type: Number, default: 0 }, // Sand
+  mine: { type: Number, default: 0 }, // Ores, Metals, Coal
+  field: { type: Number, default: 0 }, // Fruit, Vegetables, Crops
 
   interiorshoptier: { type: Number, default: 0 }, // Housetier unlock 2+
   clothingshoptier: { type: Number, default: 0 }, // Housetier unlock 3+

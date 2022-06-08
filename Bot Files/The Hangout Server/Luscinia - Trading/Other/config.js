@@ -71,6 +71,12 @@ exports.trading = {
   taxhousetier5: 11000,
 
   // Buillding Prices
+  housetier1: 2000,
+  housetier2: 15000,
+  housetier3: 30000,
+  housetier4: 45000,
+  housetier5: 70000,
+
   warehousetier2: 50000,
   warehousetier3: 100000,
   warehousetier4: 175000,
@@ -101,6 +107,22 @@ exports.trading = {
   landfilltier1: 50000,
   landfilltier2: 60000,
   landfilltier3: 90000,
+
+  nuclearreactortier1: 50000,
+  nuclearreactortier2: 75000,
+  windmill: 10000,
+  sonarpanel: 8000,
+
+  park: 5000,
+  school: 100000,
+  cinema: 80000,
+  restaurant: 75000,
+  hotel: 80000,
+
+  sawmilltier1: 20000,
+  sawmilltier2: 25000,
+  refinerytier1: 30000,
+  refinerytier2: 35000,
 
   interiorshoptier1: 20000,
   interiorshoptier2: 60000,

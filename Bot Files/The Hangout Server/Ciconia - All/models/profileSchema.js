@@ -303,7 +303,7 @@ const profileSchema = new mongoose.Schema({
   cinema: { type: Number, default: 0 },
   restaurant: { type: Number, default: 0 },
   hotel: { type: Number, default: 0 },
-  sawmill: { type: Number, default: 0 },
+  sawmilltier: { type: Number, default: 0 },
 
   interiorshoptier: { type: Number, default: 0 }, // Housetier unlock 2+
   clothingshoptier: { type: Number, default: 0 }, // Housetier unlock 3+
