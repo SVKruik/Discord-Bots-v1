@@ -73,44 +73,44 @@ module.exports = async (Discord, client, message) => {
 
         xi: 30000, // Euro
         pi: 0, // Cent
-      
+
         prestige: 1,
         tradesaccepted: 0,
         tradescancelled: 0,
         actions: 0,
         amountbought: 0,
         amountsold: 0,
-      
+
         // Metal
         steel: 0,
         steelpart: 0,
         iron: 0,
         carbon: 0,
-      
+
         // Brick
         brick: 0,
         clay: 0,
         soil: 0,
         water: 0,
-      
+
         // Wood
         woodplank: 0,
         woodpart: 0,
         wood: 0,
         logs: 0,
         bamboo: 0,
-      
+
         // Plastic
         pipe: 0,
         plasticpart: 0,
         plastic: 0,
-      
+
         // Glass
         glass: 0,
         limestone: 0,
         sand: 0,
         plexiglass: 0,
-      
+
         // Stone
         granite: 0,
         marble: 0,
@@ -118,7 +118,7 @@ module.exports = async (Discord, client, message) => {
         chalk: 0,
         slate: 0,
         basalt: 0,
-      
+
         // Raw Materials
         oil: 0,
         coal: 0,
@@ -131,7 +131,7 @@ module.exports = async (Discord, client, message) => {
         mesh: 0,
         rubber: 0,
         uranium: 0,
-      
+
         // Crops
         rice: 0,
         rye: 0,
@@ -142,7 +142,7 @@ module.exports = async (Discord, client, message) => {
         soybean: 0,
         sorghum: 0,
         wheat: 0,
-      
+
         // Semi Products
         resin: 0,
         tape: 0,
@@ -157,7 +157,7 @@ module.exports = async (Discord, client, message) => {
         fish: 0,
         meat: 0,
         bread: 0,
-      
+
         // Vegetables
         asparagus: 0,
         eggplant: 0,
@@ -185,7 +185,7 @@ module.exports = async (Discord, client, message) => {
         sweetpotato: 0,
         yam: 0,
         potato: 0,
-      
+
         // Fruit
         acerola: 0,
         apple: 0,
@@ -232,7 +232,23 @@ module.exports = async (Discord, client, message) => {
         strawberry: 0,
         tangerine: 0,
         watermelon: 0,
-      
+
+        // Beans
+        blackbean: 0,
+        blackeyedpea: 0,
+        cannellinibean: 0,
+        chickpea: 0,
+        greatnorthernbean: 0,
+        kidneybean: 0,
+        limabean: 0,
+        pintobean: 0,
+        favabean: 0,
+        navybean: 0,
+        adzukibean: 0,
+        edamame: 0,
+        mungbean: 0,
+        cranberrybean: 0,
+
         // Spices and Herbs
         thyme: 0,
         basil: 0,
@@ -254,7 +270,7 @@ module.exports = async (Discord, client, message) => {
         cinnamon: 0,
         groundginger: 0,
         mace: 0,
-      
+
         // Animals
         cow: 0,
         pig: 0,
@@ -264,14 +280,14 @@ module.exports = async (Discord, client, message) => {
         goat: 0,
         llama: 0,
         rabbit: 0,
-      
+
         // Building Materials
         steel: 0,
         bricks: 0,
         cement: 0,
         concrete: 0, // cement + water + pebbles
         pebbles: 0,
-      
+
         // Insulation
         phenolicfoam: 0, // resin
         polyurethane: 0, // reactor
@@ -281,25 +297,25 @@ module.exports = async (Discord, client, message) => {
         glasswool: 0, // reactor
         doubleglass: 0,
         tripleglass: 0,
-      
+
         // Fabric
         fabric: 0,
         cotton: 0,
         fibre: 0,
         carbonfibre: 0,
-      
+
         // Reactor material
         chemical: 0,
         polymaterial: 0,
         acid: 0,
         catalyst: 0, // Faster production time + lower production cost
-      
+
         // Chrome
         chromepart: 0, // Brass + Chrome
         chrome: 0,
         brasspart: 0,
         brass: 0, // Zinc + Copper
-      
+
         // Rare Materials
         diamond: 0,
         gold: 0,
@@ -322,20 +338,20 @@ module.exports = async (Discord, client, message) => {
         iridium: 0,
         ruthenium: 0,
         plutonium: 0,
-      
+
         // Components
         componentelectric: 0,
         componentinterior: 0,
         componentclothing: 0,
         componentstarting: 0,
-      
+
         // House
         housetier1: 0,
         housetier2: 0,
         housetier3: 0,
         housetier4: 0, // Requires interiorshop tier 3
         housetier5: 0, // more people +  happiness + energy consumption + water consumption + gas consumption
-      
+
         // Buildings Tier
         warehousetier: 1, // More storage
         policetier: 0, // Less crime rate
@@ -345,19 +361,19 @@ module.exports = async (Discord, client, message) => {
         cityhalltier: 1, // More happiness
         infrastructuretier: 1, // More happiness + lower cost import/export
         landfilltier: 0, // More happiness
-      
+
         // Energy
         nuclearreactortier: 0,
         windmill: 0,
         sonarpanel: 0,
-      
+
         // Amusement
         park: 0,
         school: 0,
         cinema: 0,
         restaurant: 0,
         hotel: 0,
-      
+
         // Natural
         oilwell: 0, // Oil
         sawmilltier: 0, // Wood
@@ -368,25 +384,25 @@ module.exports = async (Discord, client, message) => {
         beach: 0, // Sand
         mine: 0, // Ores, Metals, Coal
         field: 0, // Fruit, Vegetables, Crops
-      
+
         interiorshoptier: 0, // Housetier unlock 2+
         clothingshoptier: 0, // Housetier unlock 3+
         drugstoretier: 0, // Housetier unlock 3+
         conveniencestore: 0, // Housetier unlock 2+
         devicestore: 0, // Housetier unlock 4+
-      
+
         // Statistics
         happinesspercentage: 0,
         crimerate: 0,
         population: 0,
-      
+
         // Factory
         reactortier: 0, // Advanced Products
         factorytier: 0, // Normal Products
         energyplanttier: 0, // More energy capacity
         waterplanttier: 0, // More clean water capacity
         gasplanttier: 0, // More warmth capacity
-      
+
         // Board
         a1: "Empty",
         a2: "Empty",

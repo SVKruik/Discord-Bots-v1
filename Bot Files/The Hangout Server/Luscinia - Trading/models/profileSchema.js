@@ -207,6 +207,22 @@ const profileSchema = new mongoose.Schema({
   tangerine: { type: Number, default: 0 },
   watermelon: { type: Number, default: 0 },
 
+  // Beans
+  blackbean: { type: Number, default: 0 },
+  blackeyedpea: { type: Number, default: 0 },
+  cannellinibean: { type: Number, default: 0 },
+  chickpea: { type: Number, default: 0 },
+  greatnorthernbean: { type: Number, default: 0 },
+  kidneybean: { type: Number, default: 0 },
+  limabean: { type: Number, default: 0 },
+  pintobean: { type: Number, default: 0 },
+  favabean: { type: Number, default: 0 },
+  navybean: { type: Number, default: 0 },
+  adzukibean: { type: Number, default: 0 },
+  edamame: { type: Number, default: 0 },
+  mungbean: { type: Number, default: 0 },
+  cranberrybean: { type: Number, default: 0 },
+
   // Spices and Herbs
   thyme: { type: Number, default: 0 },
   basil: { type: Number, default: 0 },

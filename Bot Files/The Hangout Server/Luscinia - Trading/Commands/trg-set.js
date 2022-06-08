@@ -1,4 +1,4 @@
-// Geef iemand materialen.
+// Reset hoeveelheid materialen.
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");

@@ -210,6 +210,22 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     strawberry: 0,
     tangerine: 0,
     watermelon: 0,
+
+    // Beans
+    blackbean: 0,
+    blackeyedpea: 0,
+    cannellinibean: 0,
+    chickpea: 0,
+    greatnorthernbean: 0,
+    kidneybean: 0,
+    limabean: 0,
+    pintobean: 0,
+    favabean: 0,
+    navybean: 0,
+    adzukibean: 0,
+    edamame: 0,
+    mungbean: 0,
+    cranberrybean: 0,
   
     // Spices and Herbs
     thyme: 0,
