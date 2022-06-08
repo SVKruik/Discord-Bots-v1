@@ -1,10 +1,5 @@
 xi
 pi
-tradesaccepted
-tradescancelled
-actions
-amountbought
-amountsold
 steel
 steelpart
 iron
@@ -186,6 +181,7 @@ osmium
 palladium
 iridium
 ruthenium
+plutonium
 componentelectric
 componentinterior
 componentclothing
@@ -201,7 +197,7 @@ firedepartmenttier
 hospitaltier
 malltier
 cityhalltier
-infrastructuretiert
+infrastructuretier
 landfilltier
 nuclearreactortier
 windmill
@@ -211,7 +207,15 @@ school
 cinema
 restaurant
 hotel
-sawmill
+sawmilltier
+refinerytier
+oilwell
+airfiltertier
+river
+forest
+beach
+mine
+field
 interiorshoptier
 clothingshoptier
 drugstoretier
