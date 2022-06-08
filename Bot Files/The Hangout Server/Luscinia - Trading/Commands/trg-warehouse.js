@@ -2,7 +2,7 @@ const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
-    name: "balance",
+    name: "warehouse",
     aliases: config.aliases.aliaseswarehouse,
     cooldown: config.cooldown.cooldownwarehouse,
     permissions: config.permissions.permissionwarehouse,
