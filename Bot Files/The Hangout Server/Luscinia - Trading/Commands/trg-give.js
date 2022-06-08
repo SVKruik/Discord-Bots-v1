@@ -17,6 +17,9 @@ module.exports = {
       const material = args[1];
       const amount = args[2];
       if (!args[1]) {
+        return message.channel.send(`You are missing the type of material/item.`)
+      }
+      if (!args[2]) {
         return message.channel.send(config.basemessages.messagesamountmissing)
       }
       const target = message.mentions.users.first();
@@ -37,7 +40,7 @@ module.exports = {
           },
           {
             $inc: {
-              material: amount,
+              [material]: amount,
             },
           }
         );
