@@ -505,7 +505,7 @@ exports.embeds = {
   namepcstats5: "System Uptime:",
   namepcstats6: "System Version:",
 
-  //Values,
+  //Values
   valuebotstats6: `${version}`,
   valuebotstats7: `<@422704748488163332>`,
   valuedonate1: "https://ko-fi.com/multicubecommunity", // Donate
@@ -638,7 +638,9 @@ exports.aliases = {
   aliasesgivewarnings: ["givewarning", "givewarn"], // Give Warnings
   aliasesminuswarnings: ["minuswarning", "minuswarn", "minwarning", "minwarn"], // Minus Warnings
   aliasessetwarnings: ["setwarning", "setwarn"], // Set Warnings
-  aliaseswarnings: ["warning", "warns", "warn"] // Warnings
+  aliaseswarnings: ["warning", "warns", "warn"], // Warnings
+  aliasestradinggive: ["trggive"], // Trading Give
+  aliaseswarehouse: ["ware"], // Warehouse
 };
 
 const A = 84000; // Daily
@@ -754,6 +756,8 @@ exports.cooldown = {
   cooldownminuswarnings: B,
   cooldownsetwarnings: B,
   cooldownwarnings: G,
+  cooldowntradinggive: B,
+  cooldownwarehouse: G,
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -862,4 +866,6 @@ exports.permissions = {
   permissionminuswarnings: I,
   permissionsetwarnings: I,
   permissionwarnings: J,
+  permissiontradinggive: I,
+  permissionwarehouse: J,
 };

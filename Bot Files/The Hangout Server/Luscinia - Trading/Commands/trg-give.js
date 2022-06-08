@@ -14,8 +14,8 @@ module.exports = {
       if (!args[0]) {
         return message.channel.send(config.basemessages.messagesmembermention)
       };
-      const amount = args[1];
-      const material = args[2];
+      const material = args[1];
+      const amount = args[2];
       if (!args[1]) {
         return message.channel.send(config.basemessages.messagesamountmissing)
       }
@@ -37,13 +37,17 @@ module.exports = {
           },
           {
             $inc: {
-              bank: amount,
+              material: amount,
             },
           }
         );
 
         message.channel.send(`The targeted member has been given \`${amount}\` amount of \`${material}\`.`)
-    }} catch (err) {
+      } catch (err) {
+        console.log(err);
+        message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
+      }
+    } catch (err) {
       console.log(err)
       message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
     }
