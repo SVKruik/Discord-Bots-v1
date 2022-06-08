@@ -24,12 +24,14 @@ client.events = new Discord.Collection();
   require(`./Handlers/${handler}`)(client, Discord);
 });
 
+// Marketprice JSON
+
 //Database - Economy, MongoDB and Robo3T
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => {
     console.log(process.env.DBLOG);
   })

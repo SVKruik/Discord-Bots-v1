@@ -1,5 +1,8 @@
+// Laat alle materialen zien die je hebt.
+
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
+const editJsonFile = require("edit-json-file");
 
 module.exports = {
     name: "warehouse",

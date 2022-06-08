@@ -2,6 +2,7 @@
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
+const editJsonFile = require("edit-json-file");
 
 module.exports = {
   name: "tradingminus",
