@@ -6,6 +6,8 @@ iron
 carbon
 brick
 clay
+soil
+water
 woodplank
 woodpart
 wood

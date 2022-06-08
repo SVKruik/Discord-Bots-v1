@@ -68,6 +68,8 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     // Brick
     brick: 0,
     clay: 0,
+    soil: 0,
+    water: 0,
   
     // Wood
     woodplank: 0,

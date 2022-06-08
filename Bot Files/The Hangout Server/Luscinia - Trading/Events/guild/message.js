@@ -90,6 +90,8 @@ module.exports = async (Discord, client, message) => {
         // Brick
         brick: 0,
         clay: 0,
+        soil: 0,
+        water: 0,
       
         // Wood
         woodplank: 0,

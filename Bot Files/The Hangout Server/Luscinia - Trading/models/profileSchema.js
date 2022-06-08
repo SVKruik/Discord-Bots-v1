@@ -64,6 +64,8 @@ const profileSchema = new mongoose.Schema({
   // Brick
   brick: { type: Number, default: 0 },
   clay: { type: Number, default: 0 },
+  soil: { type: Number, default: 0 },
+  water: { type: Number, default: 0 },
 
   // Wood
   woodplank: { type: Number, default: 0 },
