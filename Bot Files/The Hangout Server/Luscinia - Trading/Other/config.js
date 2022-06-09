@@ -665,6 +665,7 @@ exports.aliases = {
   aliasestradingminus: ["trgminus", "trgmin"], // Trading Give
   aliasesprint: ["log"], // Trading Print
   aliasestradingset: ["trgset"],
+  aliasesupdate: ["bulkupdate", "upd", "bulkupd"], // Trading Update
   aliaseswarehouse: ["ware"], // Warehouse
 };
 
@@ -785,6 +786,7 @@ exports.cooldown = {
   cooldowntradingminus: B,
   cooldownprint: B,
   cooldowntradingset: B,
+  cooldownupdate: B,
   cooldownwarehouse: G,
 };
 
@@ -898,5 +900,6 @@ exports.permissions = {
   permissiontradingminus: I,
   permissionprint: I,
   permissiontradingset: I,
+  permissionupdate: I,
   permissionwarehouse: J,
 };

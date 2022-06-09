@@ -45,8 +45,7 @@ const profileSchema = new mongoose.Schema({
   //// Trading Game
 
   // Valuta
-  xi: { type: Number, default: 30000 }, // Euro
-  pi: { type: Number, default: 0 }, // Cent
+  shard: { type: Number, default: 30000 },
 
   prestige: { type: Number, default: 1 },
   tradesaccepted: { type: Number, default: 0 },

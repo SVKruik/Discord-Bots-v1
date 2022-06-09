@@ -49,8 +49,7 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     shardsbronze: 0,
     shardsiron: 0,
 
-    xi: 30000, // Euro
-    pi: 0, // Cent
+    shard: 30000,
   
     prestige: 1,
     tradesaccepted: 0,
