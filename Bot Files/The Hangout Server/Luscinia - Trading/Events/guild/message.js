@@ -282,8 +282,6 @@ module.exports = async (Discord, client, message) => {
         rabbit: 0,
 
         // Building Materials
-        steel: 0,
-        bricks: 0,
         cement: 0,
         concrete: 0, // cement + water + pebbles
         pebbles: 0,

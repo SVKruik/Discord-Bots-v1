@@ -256,8 +256,6 @@ const profileSchema = new mongoose.Schema({
   rabbit: { type: Number, default: 0 },
 
   // Building Materials
-  steel: { type: Number, default: 0 },
-  bricks: { type: Number, default: 0 },
   cement: { type: Number, default: 0 },
   concrete: { type: Number, default: 0 }, // cement + water + pebbles
   pebbles: { type: Number, default: 0 },

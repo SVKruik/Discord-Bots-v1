@@ -1,7 +1,7 @@
 // De index van de bot. Vanuit hier start de bot op.
 // Ook wordt hiermee met de DB verbonden.
 
-// Luscinia stores all the empty commands.
+// Luscinia houses the Trading Game.
 
 //Index
 const Discord = require("Discord.js");
@@ -23,8 +23,6 @@ client.events = new Discord.Collection();
 ["command_handler", "event_handler"].forEach((handler) => {
   require(`./Handlers/${handler}`)(client, Discord);
 });
-
-// Marketprice JSON
 
 //Database - Economy, MongoDB and Robo3T
 mongoose.Promise = global.Promise;
