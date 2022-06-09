@@ -97,7 +97,7 @@ module.exports = async (Discord, client, message) => {
         woodplank: 0,
         woodpart: 0,
         wood: 0,
-        logs: 0,
+        log: 0,
         bamboo: 0,
 
         // Plastic
@@ -146,7 +146,7 @@ module.exports = async (Discord, client, message) => {
         // Semi Products
         resin: 0,
         tape: 0,
-        metalsheet: 0,
+        steelsheet: 0,
         cocoa: 0,
         coffeebean: 0,
         sugar: 0,
@@ -283,8 +283,8 @@ module.exports = async (Discord, client, message) => {
 
         // Building Materials
         cement: 0,
-        concrete: 0, // cement + water + pebbles
-        pebbles: 0,
+        concrete: 0, // cement + water + pebble
+        pebble: 0,
 
         // Insulation
         phenolicfoam: 0, // resin

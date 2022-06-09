@@ -11,7 +11,7 @@ water
 woodplank
 woodpart
 wood
-logs
+log
 bamboo
 pipe
 plasticpart
@@ -48,7 +48,7 @@ sorghum
 wheat
 resin
 tape
-metalsheet
+steelsheet
 cocoa
 coffeebean
 sugar
@@ -174,7 +174,7 @@ llama
 rabbit
 cement
 concrete
-pebbles
+pebble
 phenolicfoam
 polyurethane
 xps

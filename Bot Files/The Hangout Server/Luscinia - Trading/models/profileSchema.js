@@ -71,7 +71,7 @@ const profileSchema = new mongoose.Schema({
   woodplank: { type: Number, default: 0 },
   woodpart: { type: Number, default: 0 },
   wood: { type: Number, default: 0 },
-  logs: { type: Number, default: 0 },
+  log: { type: Number, default: 0 },
   bamboo: { type: Number, default: 0 },
 
   // Plastic
@@ -120,7 +120,7 @@ const profileSchema = new mongoose.Schema({
   // Semi Products
   resin: { type: Number, default: 0 },
   tape: { type: Number, default: 0 },
-  metalsheet: { type: Number, default: 0 },
+  steelsheet: { type: Number, default: 0 },
   cocoa: { type: Number, default: 0 },
   coffeebean: { type: Number, default: 0 },
   sugar: { type: Number, default: 0 },
@@ -257,8 +257,8 @@ const profileSchema = new mongoose.Schema({
 
   // Building Materials
   cement: { type: Number, default: 0 },
-  concrete: { type: Number, default: 0 }, // cement + water + pebbles
-  pebbles: { type: Number, default: 0 },
+  concrete: { type: Number, default: 0 }, // cement + water + pebble
+  pebble: { type: Number, default: 0 },
 
   // Insulation
   phenolicfoam: { type: Number, default: 0 }, // resin
