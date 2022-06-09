@@ -124,7 +124,7 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     resin: 0,
     tape: 0,
     steelsheet: 0,
-    cocoa: 0,
+    cocoabean: 0,
     coffeebean: 0,
     sugar: 0,
     salt: 0,

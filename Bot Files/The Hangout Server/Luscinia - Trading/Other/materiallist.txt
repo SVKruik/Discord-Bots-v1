@@ -1,5 +1,4 @@
-xi
-pi
+shard
 steel
 steelpart
 iron
@@ -49,7 +48,7 @@ wheat
 resin
 tape
 steelsheet
-cocoa
+cocoabean
 coffeebean
 sugar
 salt

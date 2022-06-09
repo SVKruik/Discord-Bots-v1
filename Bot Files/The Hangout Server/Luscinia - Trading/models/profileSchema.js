@@ -120,7 +120,7 @@ const profileSchema = new mongoose.Schema({
   resin: { type: Number, default: 0 },
   tape: { type: Number, default: 0 },
   steelsheet: { type: Number, default: 0 },
-  cocoa: { type: Number, default: 0 },
+  cocoabean: { type: Number, default: 0 },
   coffeebean: { type: Number, default: 0 },
   sugar: { type: Number, default: 0 },
   salt: { type: Number, default: 0 },

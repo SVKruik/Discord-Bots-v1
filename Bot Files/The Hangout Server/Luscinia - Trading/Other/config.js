@@ -661,11 +661,14 @@ exports.aliases = {
   aliasesminuswarnings: ["minuswarning", "minuswarn", "minwarning", "minwarn"], // Minus Warnings
   aliasessetwarnings: ["setwarning", "setwarn"], // Set Warnings
   aliaseswarnings: ["warning", "warns", "warn"], // Warnings
+  aliasestradingbuy: ["trgbuy"], // Trading Buy
+  aliasescross: ["trgcross"], // Trading Cross
   aliasestradinggive: ["trggive"], // Trading Give
   aliasestradingminus: ["trgminus", "trgmin"], // Trading Give
   aliasesprint: ["log"], // Trading Print
   aliasestradingset: ["trgset"],
   aliasesupdate: ["bulkupdate", "upd", "bulkupd"], // Trading Update
+  aliasesslope: ["richtingscoefficient", "rico", "rc"], // Trading Slope
   aliaseswarehouse: ["ware"], // Warehouse
 };
 
@@ -782,10 +785,13 @@ exports.cooldown = {
   cooldownminuswarnings: B,
   cooldownsetwarnings: B,
   cooldownwarnings: G,
+  cooldowntradingbuy: H,
+  cooldowncross: B,
   cooldowntradinggive: B,
   cooldowntradingminus: B,
   cooldownprint: B,
   cooldowntradingset: B,
+  cooldownslope: B,
   cooldownupdate: B,
   cooldownwarehouse: G,
 };
@@ -896,10 +902,13 @@ exports.permissions = {
   permissionminuswarnings: I,
   permissionsetwarnings: I,
   permissionwarnings: J,
+  permissiontradingbuy: J,
+  permissioncross: I,
   permissiontradinggive: I,
   permissiontradingminus: I,
   permissionprint: I,
   permissiontradingset: I,
+  permissionslope: I,
   permissionupdate: I,
   permissionwarehouse: J,
 };

@@ -148,7 +148,7 @@ exports.colorlistid = {
     145: "fog",
     146: "salmon",
     147: "terracotta",
-    148: "cocoa",
+    148: "cocoabean",
     149: "wheat",
     150: "buttermilk",
     151: "mauve",

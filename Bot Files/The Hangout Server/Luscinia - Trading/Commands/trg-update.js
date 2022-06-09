@@ -13,8 +13,8 @@ module.exports = {
     description: "Bulk update data.",
     async execute(message, args, cmd, client, Discord, profileData) {
         message.channel.send(`Received, check console.`)
-        let file = editJsonFile(`./marketpricemax.json`); // target file
-        const filedata = require('./../marketprice.json') // current data
+        let file = editJsonFile(`./marketdynprice.json`); // target file
+        const filedata = require('./../marketdynprice.json') // current data
 
         const steel = 1 * filedata.steel;
         const steelpart = 1 * filedata.steelpart;
@@ -65,7 +65,7 @@ module.exports = {
         const resin = 1 * filedata.resin;
         const tape = 1 * filedata.tape;
         const steelsheet = 1 * filedata.steelsheet;
-        const cocoa = 1 * filedata.cocoa;
+        const cocoabean = 1 * filedata.cocoabean;
         const coffeebean = 1 * filedata.coffeebean;
         const sugar = 1 * filedata.sugar;
         const salt = 1 * filedata.salt;
@@ -286,7 +286,7 @@ module.exports = {
         file.set("resin", resin);
         file.set("tape", tape);
         file.set("steelsheet", steelsheet);
-        file.set("cocoa", cocoa);
+        file.set("cocoabean", cocoabean);
         file.set("coffeebean", coffeebean);
         file.set("sugar", sugar);
         file.set("salt", salt);

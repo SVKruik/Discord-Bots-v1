@@ -149,7 +149,7 @@ module.exports = [
     "fog",
     "salmon",
     "terracotta",
-    "cocoa",
+    "cocoabean",
     "wheat",
     "buttermilk",
     "mauve",
