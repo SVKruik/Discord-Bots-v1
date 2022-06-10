@@ -53,7 +53,7 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
   
     prestige: 1,
     tradesaccepted: 0,
-    tradescancelled: 0,
+    tradesrejected: 0,
     traderecvamount: 0,
     tradexmitamount: 0,
     actions: 0,

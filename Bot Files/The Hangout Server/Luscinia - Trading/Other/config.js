@@ -407,6 +407,7 @@ exports.embeds = {
   titlemembercount: "Member Count",
   titlepcstats: "Host PC Statistics",
   titlehelp: "Support Menu",
+  titletradingstatistics: "Trading Game Statistics",
 
   //Descriptions
   descriptionshop: "Here are all the items you can buy with coins or other special tokens. You can buy stuff with the command \`buy\`.",
@@ -436,6 +437,7 @@ exports.embeds = {
   descriptionbotstats: "These are the statistics of me.",
   descriptionmembercount: "Here is the amount of people in this Discord server.",
   descriptionpcstats: "These are the statistics of my Host PC.",
+  descriptiontradingstatistics: "These are your current Trading Game statistics:",
 
   //Names
   nameboxes1: "Ultra Boxes", // Boxes
@@ -526,6 +528,16 @@ exports.embeds = {
   namepcstats4: "System Platform:",
   namepcstats5: "System Uptime:",
   namepcstats6: "System Version:",
+  nametradingstatistics1: "Prestige Level:",
+  nametradingstatistics2: "Total Trades Accepted:",
+  nametradingstatistics3: "Total Trades Rejected:",
+  nametradingstatistics4: "Total Materials received from Trades:",
+  nametradingstatistics5: "Total Materials sent to Trades:",
+  nametradingstatistics6: "Total Actions:",
+  nametradingstatistics7: "Material Amount Bought:",
+  nametradingstatistics8: "Material Amount Sold:",
+  nametradingstatistics9: "Total Times Bought:",
+  nametradingstatistics10: "Total Times Sold:",
 
   //Values
   valuebotstats6: `${version}`,
@@ -672,6 +684,7 @@ exports.aliases = {
   aliasestradingset: ["trgset"],
   aliasessetprice: [], // Trading Set Price
   aliasesslope: ["richtingscoefficient", "rico", "rc"], // Trading Slope
+  aliasestradingstatistics: ["tradingstats", "trgstatistics", "trgstats"], // Trading Statistics
   aliasestradingstock: ["trgstock"], // Trading Stock
   aliasesupdate: ["bulkupdate", "upd", "bulkupd"], // Trading Update
   aliaseswarehouse: ["ware"], // Warehouse
@@ -801,8 +814,9 @@ exports.cooldown = {
   cooldowntradingset: B,
   cooldownsetprice: B,
   cooldownslope: B,
-  cooldownupdate: B,
+  cooldowntradingstatistics: F,
   cooldowntradingstock: H,
+  cooldownupdate: B,
   cooldownwarehouse: H,
 };
 
@@ -923,6 +937,7 @@ exports.permissions = {
   permissiontradingset: I,
   permissionsetprice: I,
   permissionslope: I,
+  permissiontradingstatistics: J,
   permissiontradingstock: J,
   permissionupdate: I,
   permissionwarehouse: J,

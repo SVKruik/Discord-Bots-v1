@@ -75,7 +75,7 @@ module.exports = async (Discord, client, message) => {
 
         prestige: 1,
         tradesaccepted: 0,
-        tradescancelled: 0,
+        tradesrejected: 0,
         traderecvamount: 0,
         tradexmitamount: 0,
         actions: 0,

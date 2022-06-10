@@ -49,7 +49,7 @@ const profileSchema = new mongoose.Schema({
 
   prestige: { type: Number, default: 1 },
   tradesaccepted: { type: Number, default: 0 },
-  tradescancelled: { type: Number, default: 0 },
+  tradesrejected: { type: Number, default: 0 },
   traderecvamount: { type: Number, default: 0 },
   tradexmitamount: { type: Number, default: 0 },
   actions: { type: Number, default: 0 },
