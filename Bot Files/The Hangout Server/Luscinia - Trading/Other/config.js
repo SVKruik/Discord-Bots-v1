@@ -661,15 +661,18 @@ exports.aliases = {
   aliasesminuswarnings: ["minuswarning", "minuswarn", "minwarning", "minwarn"], // Minus Warnings
   aliasessetwarnings: ["setwarning", "setwarn"], // Set Warnings
   aliaseswarnings: ["warning", "warns", "warn"], // Warnings
+  aliasestradingbalance: ["trgbalance", "trgbal"], // Trading Balance
   aliasestradingbuy: ["trgbuy"], // Trading Buy
   aliasescross: ["trgcross"], // Trading Cross
   aliasestradinggive: ["trggive"], // Trading Give
   aliasestradingminus: ["trgminus", "trgmin"], // Trading Give
   aliasestradingsell: ["trgsell"], // Trading Sell
+  aliasestradingprice: ["trgprice"], // Trading Price
   aliasesprint: ["log"], // Trading Print
   aliasestradingset: ["trgset"],
   aliasessetprice: [], // Trading Set Price
   aliasesslope: ["richtingscoefficient", "rico", "rc"], // Trading Slope
+  aliasestradingstock: ["trgstock"], // Trading Stock
   aliasesupdate: ["bulkupdate", "upd", "bulkupd"], // Trading Update
   aliaseswarehouse: ["ware"], // Warehouse
 };
@@ -787,17 +790,20 @@ exports.cooldown = {
   cooldownminuswarnings: B,
   cooldownsetwarnings: B,
   cooldownwarnings: G,
+  cooldowntradingbalance: H,
   cooldowntradingbuy: H,
   cooldowncross: B,
   cooldowntradinggive: B,
   cooldowntradingminus: B,
-  cooldownprint: B,
+  cooldowntradingprice: H,
+  cooldownprint: H,
   cooldowntradingsell: H,
   cooldowntradingset: B,
   cooldownsetprice: B,
   cooldownslope: B,
   cooldownupdate: B,
-  cooldownwarehouse: G,
+  cooldowntradingstock: H,
+  cooldownwarehouse: H,
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -906,15 +912,18 @@ exports.permissions = {
   permissionminuswarnings: I,
   permissionsetwarnings: I,
   permissionwarnings: J,
+  permissiontradingbalance: J,
   permissiontradingbuy: J,
   permissioncross: I,
   permissiontradinggive: I,
   permissiontradingminus: I,
+  permissiontradingprice: J,
   permissionprint: I,
   permissiontradingsell: J,
   permissiontradingset: I,
   permissionsetprice: I,
   permissionslope: I,
+  permissiontradingstock: J,
   permissionupdate: I,
   permissionwarehouse: J,
 };

@@ -2,7 +2,6 @@
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
-const fs = require("fs");
 const editJsonFile = require("edit-json-file");
 
 module.exports = {
