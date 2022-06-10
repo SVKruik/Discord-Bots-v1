@@ -54,9 +54,13 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     prestige: 1,
     tradesaccepted: 0,
     tradescancelled: 0,
+    traderecvamount: 0,
+    tradexmitamount: 0,
     actions: 0,
-    amountbought: 0,
-    amountsold: 0,
+    amountbuy: 0,
+    amountsell: 0,
+    timesbuy: 0,
+    timessell: 0,
   
     // Metal
     steel: 0,

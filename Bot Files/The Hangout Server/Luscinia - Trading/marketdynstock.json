@@ -1,5 +1,5 @@
 {
-  "steel": 10000,
+  "steel": 20000,
   "steelpart": 10000,
   "iron": 10000,
   "carbon": 10000,
@@ -26,7 +26,7 @@
   "slate": 10000,
   "basalt": 10000,
   "oil": 10000,
-  "coal": 10000,
+  "coal": 0,
   "ironore": 10000,
   "copperore": 10000,
   "goldore": 10000,

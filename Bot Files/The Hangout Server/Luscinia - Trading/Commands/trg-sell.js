@@ -6,11 +6,11 @@ const fs = require("fs");
 const editJsonFile = require("edit-json-file");
 
 module.exports = {
-    name: "tradingbuy",
-    aliases: config.aliases.aliasestradingbuy,
-    cooldown: config.cooldown.cooldowntradingbuy,
-    permissions: config.permissions.permissiontradingbuy,
-    description: "Buy something on the market.",
+    name: "tradingsell",
+    aliases: config.aliases.aliasestradingsell,
+    cooldown: config.cooldown.cooldowntradingsell,
+    permissions: config.permissions.permissiontradingsell,
+    description: "Sell something to the market.",
     async execute(message, args, cmd, client, Discord, profileData) {
         try {
             const materiallist = [
@@ -237,14 +237,14 @@ module.exports = {
             ]
             const material = args[0]
             if (materiallist.includes(args[0]) == false) {
-                return message.channel.send(`The item that you are trying to buy doesn't exist or you have a typo.`)
+                return message.channel.send(`The item that you are trying to sell doesn't exist or you have a typo.`)
             };
             const amount = args[1]
             if (!args[0]) {
-                return message.channel.send(`What would you like to buy?`)
+                return message.channel.send(`What would you like to sell?`)
             }
             if (!args[1]) {
-                return message.channel.send(`How many of this item would you like to buy?`)
+                return message.channel.send(`How many of this item would you like to sell?`)
             }
             let file1 = editJsonFile(`./marketdynprice.json`); // update price
             let file2 = editJsonFile(`./marketdynstock.json`) // update stock
@@ -254,15 +254,12 @@ module.exports = {
             const filedata4 = require('./../formula-b.json')
             try {
                 const price = filedata1[material] * amount
-                const newbal = profileData.shard - price
-                if (amount > filedata2[material]) {
-                    return message.channel.send(`You can't buy that much. The current stock is \`${filedata2[material]}\`.`)
-                }
-                const stockmaxa = filedata2[material] + 1
-                if (price > profileData.shard)
-                    return message.channel.send(config.basemessages.messagescoinsmissing);
+                const newbal = profileData.shard + price
+                const stockmaxa = profileData[material] + 1
+                if (amount > profileData[material])
+                    return message.channel.send(`You do not have that amount of materials to perform this command.`);
                 if (amount > 0 && amount < stockmaxa) {
-                    const newstock = filedata2[material] - amount
+                    const newstock = filedata2[material] + amount
                     const difference1 = (filedata3[material] * newstock) + filedata4[material] // price update
                     file1.set(material, difference1);
                     file1.save()
@@ -274,39 +271,40 @@ module.exports = {
                         },
                         {
                             $inc: {
-                                shard: -price,
-                                [material]: amount,
+                                shard: price,
+                                [material]: -amount,
                                 actions: 1,
-                                timesbuy: 1,
-                                amountbuy: amount,
+                                timessell: 1,
+                                amountsell: amount,
                             },
                         }
                     );
-                    message.channel.send(`You have succesfully bought \`${amount}\` amount of \`${material}\`, for a total price of \`${price}\`. You new balance is \`${newbal}\`.`)
+                    message.channel.send(`You have succesfully sold \`${amount}\` amount of \`${material}\`, for a total price of \`${price}\`. You new balance is \`${newbal}\`.`)
                 } else if (amount == "max" || amount == "all") {
-                    const difference1 = (filedata3[material] * 0) + filedata4[material] // price update
+                    const difference1 = (filedata3[material] * profileData[material]) + filedata4[material] // price update
+                    const newstock = filedata2[material] + profileData[material]
                     file1.set(material, difference1);
                     file1.save()
-                    file2.set(material, 0) // stock update
+                    file2.set(material, newstock) // stock update
                     file2.save()
-                    const pricemax = filedata2[material] * filedata1[material] // max stock price
-                    const stockmaxb = filedata2[material]
-                    const newbala = profileData.shard - stockmaxb
+                    const pricemax = profileData[material] * filedata1[material] // max stock price
+                    const stockmaxb = profileData[material]
+                    const newbala = profileData.shard + pricemax
                     await profileModel.findOneAndUpdate(
                         {
                             userID: message.author.id,
                         },
                         {
                             $inc: {
-                                shard: -pricemax,
-                                [material]: stockmaxb,
+                                shard: pricemax,
+                                [material]: -stockmaxb,
                                 actions: 1,
-                                timesbuy: 1,
-                                amountbuy: stockmaxb,
+                                timessell: 1,
+                                amountsell: stockmaxb,
                             },
                         }
                     );
-                    message.channel.send(`You have succesfully bought \`${stockmaxb}\` amount of \`${material}\`, for a total price of \`${pricemax}\`. You new balance is \`${newbala}\`.`)
+                    message.channel.send(`You have succesfully sold \`${stockmaxb}\` amount of \`${material}\`, for a total price of \`${pricemax}\`. You new balance is \`${newbala}\`.`)
                 }
             } catch (err) {
                 console.log(err);

@@ -665,6 +665,7 @@ exports.aliases = {
   aliasescross: ["trgcross"], // Trading Cross
   aliasestradinggive: ["trggive"], // Trading Give
   aliasestradingminus: ["trgminus", "trgmin"], // Trading Give
+  aliasestradingsell: ["trgsell"], // Trading Sell
   aliasesprint: ["log"], // Trading Print
   aliasestradingset: ["trgset"],
   aliasessetprice: [], // Trading Set Price
@@ -791,6 +792,7 @@ exports.cooldown = {
   cooldowntradinggive: B,
   cooldowntradingminus: B,
   cooldownprint: B,
+  cooldowntradingsell: H,
   cooldowntradingset: B,
   cooldownsetprice: B,
   cooldownslope: B,
@@ -909,6 +911,7 @@ exports.permissions = {
   permissiontradinggive: I,
   permissiontradingminus: I,
   permissionprint: I,
+  permissiontradingsell: J,
   permissiontradingset: I,
   permissionsetprice: I,
   permissionslope: I,

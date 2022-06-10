@@ -50,9 +50,13 @@ const profileSchema = new mongoose.Schema({
   prestige: { type: Number, default: 1 },
   tradesaccepted: { type: Number, default: 0 },
   tradescancelled: { type: Number, default: 0 },
+  traderecvamount: { type: Number, default: 0 },
+  tradexmitamount: { type: Number, default: 0 },
   actions: { type: Number, default: 0 },
-  amountbought: { type: Number, default: 0 },
-  amountsold: { type: Number, default: 0 },
+  amountbuy: { type: Number, default: 0 },
+  amountsell: { type: Number, default: 0 },
+  timesbuy: { type: Number, default: 0 },
+  timessell: { type: Number, default: 0 },
 
   // Metal
   steel: { type: Number, default: 0 },
