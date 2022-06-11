@@ -121,14 +121,22 @@ const profileSchema = new mongoose.Schema({
   soybean: { type: Number, default: 0 },
   sorghum: { type: Number, default: 0 },
   wheat: { type: Number, default: 0 },
+  cocoabean: { type: Number, default: 0 },
+  coffeebean: { type: Number, default: 0 },
+  sugar: { type: Number, default: 0 },
+
+  
+  // Building Materials
+  cement: { type: Number, default: 0 },
+  concrete: { type: Number, default: 0 }, // cement + water + pebble
+  pebble: { type: Number, default: 0 },
 
   // Semi Products
   resin: { type: Number, default: 0 },
   tape: { type: Number, default: 0 },
+  glue: { type: Number, default: 0 },
+  paper: { type: Number, default: 0 },
   steelsheet: { type: Number, default: 0 },
-  cocoabean: { type: Number, default: 0 },
-  coffeebean: { type: Number, default: 0 },
-  sugar: { type: Number, default: 0 },
   salt: { type: Number, default: 0 },
   flower: { type: Number, default: 0 },
   bakingpowder: { type: Number, default: 0 },
@@ -249,6 +257,7 @@ const profileSchema = new mongoose.Schema({
   cinnamon: { type: Number, default: 0 },
   groundginger: { type: Number, default: 0 },
   mace: { type: Number, default: 0 },
+  pepper: { type: Number, default: 0 },
 
   // Animals
   cow: { type: Number, default: 0 },
@@ -259,11 +268,6 @@ const profileSchema = new mongoose.Schema({
   goat: { type: Number, default: 0 },
   llama: { type: Number, default: 0 },
   rabbit: { type: Number, default: 0 },
-
-  // Building Materials
-  cement: { type: Number, default: 0 },
-  concrete: { type: Number, default: 0 }, // cement + water + pebble
-  pebble: { type: Number, default: 0 },
 
   // Insulation
   phenolicfoam: { type: Number, default: 0 }, // resin
@@ -281,19 +285,17 @@ const profileSchema = new mongoose.Schema({
   fibre: { type: Number, default: 0 },
   carbonfibre: { type: Number, default: 0 },
 
-  // Reactor material
+  // Reactor Material
   chemical: { type: Number, default: 0 },
   polymaterial: { type: Number, default: 0 },
   acid: { type: Number, default: 0 },
   catalyst: { type: Number, default: 0 }, // Faster production time + lower production cost
 
-  // Chrome
+  // Rare Metals
   chromepart: { type: Number, default: 0 }, // Brass + Chrome
   chrome: { type: Number, default: 0 },
   brasspart: { type: Number, default: 0 },
   brass: { type: Number, default: 0 }, // Zinc + Copper
-
-  // Rare Materials
   diamond: { type: Number, default: 0 },
   gold: { type: Number, default: 0 },
   platinum: { type: Number, default: 0 },
@@ -331,65 +333,76 @@ const profileSchema = new mongoose.Schema({
   gasusage: { type: Number, default: 0 },
   taxincome: { type: Number, default: 5000 },
 
-  // Buildings
+  // House
   housetier1: { type: Number, default: 0 },
   housetier2: { type: Number, default: 0 },
   housetier3: { type: Number, default: 0 },
   housetier4: { type: Number, default: 0 },
   housetier5: { type: Number, default: 0 },
   
+  // Nature
   river: { type: Number, default: 0 },
   forest: { type: Number, default: 0 },
   beach: { type: Number, default: 0 },
   mine: { type: Number, default: 0 },
   field: { type: Number, default: 0 },
-
   oilwell: { type: Number, default: 0 },
+
+  // Services
   park: { type: Number, default: 0 },
   school: { type: Number, default: 0 },
   cinema: { type: Number, default: 0 },
   restaurant: { type: Number, default: 0 },
   hotel: { type: Number, default: 0 },
 
+  // Warehouse
   warehousetier1: { type: Number, default: 1 },
   warehousetier2: { type: Number, default: 0 },
   warehousetier3: { type: Number, default: 0 },
   warehousetier4: { type: Number, default: 0 },
   warehousetier5: { type: Number, default: 0 },
 
+  // Police
   policetier1: { type: Number, default: 0 },
   policetier2: { type: Number, default: 0 },
   policetier3: { type: Number, default: 0 },
 
+  // Fire Department
   firedepartmenttier1: { type: Number, default: 0 },
   firedepartmenttier2: { type: Number, default: 0 },
   firedepartmenttier3: { type: Number, default: 0 },
 
+  // Hospital
   hospitaltier1: { type: Number, default: 0 },
   hosptialtier2: { type: Number, default: 0 },
   hospitaltier3: { type: Number, default: 0 },
 
+  // Mall
   malltier1: { type: Number, default: 0 },
   malltier2: { type: Number, default: 0 },
   
+  // Cityhall
   cityhalltier1: { type: Number, default: 1 },
   cityhalltier2: { type: Number, default: 0 },
 
+  // Landfill
   landfilltier1: { type: Number, default: 0 },
   landfilltier2: { type: Number, default: 0 },
   landfilltier3: { type: Number, default: 0 },
 
+  // Energy
   nuclearreactortier1: { type: Number, default: 0 },
   nuclearreactortier2: { type: Number, default: 0 },
-  
   windmill: { type: Number, default: 0 },
   sonarpanel: { type: Number, default: 0 },
   
+  // Refinement
   sawmilltier1: { type: Number, default: 0 },
   sawmilltier2: { type: Number, default: 0 },
   refinerytier1: { type: Number, default: 0 },
   refinerytier2: { type: Number, default: 0 },
 
+  // Store
   interiorshoptier1: { type: Number, default: 0 },
   interiorshoptier2: { type: Number, default: 0 },
   clothingshoptier1: { type: Number, default: 0 },
@@ -403,11 +416,13 @@ const profileSchema = new mongoose.Schema({
   devicestoretier2: { type: Number, default: 0 },
   devicestoretier3: { type: Number, default: 0 },
   
+  // Production
   reactortier1: { type: Number, default: 0 },
   reactortier2: { type: Number, default: 0 },
   factorytier1: { type: Number, default: 0 },
   factorytier2: { type: Number, default: 0 },
 
+  // Plant
   energyplanttier1: { type: Number, default: 0 },
   energyplanttier2: { type: Number, default: 0 },
   energyplanttier3: { type: Number, default: 0 },

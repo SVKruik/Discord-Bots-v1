@@ -63,6 +63,8 @@ module.exports = {
         const wheat = 1 * filedata.wheat;
         const resin = 1 * filedata.resin;
         const tape = 1 * filedata.tape;
+        const glue = 1 * filedata.glue;
+        const paper = 1 * filedata.paper;
         const steelsheet = 1 * filedata.steelsheet;
         const cocoabean = 1 * filedata.cocoabean;
         const coffeebean = 1 * filedata.coffeebean;
@@ -179,6 +181,7 @@ module.exports = {
         const cinnamon = 1 * filedata.cinnamon;
         const groundginger = 1 * filedata.groundginger;
         const mace = 1 * filedata.mace;
+        const pepper = 1 * filedata.pepper;
         const cow = 1 * filedata.cow;
         const pig = 1 * filedata.pig;
         const horse = 1 * filedata.horse;
@@ -284,6 +287,8 @@ module.exports = {
         file.set("wheat", wheat);
         file.set("resin", resin);
         file.set("tape", tape);
+        file.set("glue", glue);
+        file.set("paper", paper);
         file.set("steelsheet", steelsheet);
         file.set("cocoabean", cocoabean);
         file.set("coffeebean", coffeebean);
@@ -400,6 +405,7 @@ module.exports = {
         file.set("cinnamon", cinnamon);
         file.set("groundginger", groundginger);
         file.set("mace", mace);
+        file.set("pepper", pepper)
         file.set("cow", cow);
         file.set("pig", pig);
         file.set("horse", horse);

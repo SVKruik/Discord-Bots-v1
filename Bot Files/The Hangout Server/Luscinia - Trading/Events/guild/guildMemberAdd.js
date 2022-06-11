@@ -129,6 +129,8 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     // Semi Products
     resin: 0,
     tape: 0,
+    glue: 0,
+    paper: 0,
     steelsheet: 0,
     cocoabean: 0,
     coffeebean: 0,
@@ -253,6 +255,7 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     cinnamon: 0,
     groundginger: 0,
     mace: 0,
+    pepper: 0,
 
     // Animals
     cow: 0,
@@ -285,19 +288,17 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     fibre: 0,
     carbonfibre: 0,
 
-    // Reactor material
+    // Reactor Material
     chemical: 0,
     polymaterial: 0,
     acid: 0,
     catalyst: 0, // Faster production time + lower production cost
 
-    // Chrome
+    // Rare Metals
     chromepart: 0, // Brass + Chrome
     chrome: 0,
     brasspart: 0,
     brass: 0, // Zinc + Copper
-
-    // Rare Materials
     diamond: 0,
     gold: 0,
     platinum: 0,
@@ -333,68 +334,78 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     powerusage: 0,
     waterusage: 0,
     gasusage: 0,
-    taxincome: 0,
+    taxincome: 5000,
 
-    // Buildings
+    // House
     housetier1: 0,
     housetier2: 0,
     housetier3: 0,
     housetier4: 0,
     housetier5: 0,
 
+    // Nature
     river: 0,
     forest: 0,
     beach: 0,
     mine: 0,
     field: 0,
-
     oilwell: 0,
-    airfilter: 0,
+
+    // Services
     park: 0,
     school: 0,
     cinema: 0,
     restaurant: 0,
     hotel: 0,
 
+    // Warehouse
     warehousetier1: 1,
     warehousetier2: 0,
     warehousetier3: 0,
     warehousetier4: 0,
     warehousetier5: 0,
 
+    // Police
     policetier1: 0,
     policetier2: 0,
     policetier3: 0,
 
+    // Fire Department
     firedepartmenttier1: 0,
     firedepartmenttier2: 0,
     firedepartmenttier3: 0,
 
+    // Hospital
     hospitaltier1: 0,
     hosptialtier2: 0,
     hospitaltier3: 0,
 
+    // Mall
     malltier1: 0,
     malltier2: 0,
 
+    // Cityhall
     cityhalltier1: 1,
     cityhalltier2: 0,
 
+    // Landfill
     landfilltier1: 0,
     landfilltier2: 0,
     landfilltier3: 0,
 
+    // Energy
     nuclearreactortier1: 0,
     nuclearreactortier2: 0,
-
     windmill: 0,
     sonarpanel: 0,
 
+    // Refinement
     sawmilltier1: 0,
     sawmilltier2: 0,
     refinerytier1: 0,
     refinerytier2: 0,
 
+    // Store
     interiorshoptier1: 0,
     interiorshoptier2: 0,
     clothingshoptier1: 0,
@@ -408,11 +419,13 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     devicestoretier2: 0,
     devicestoretier3: 0,
 
+    // Production
     reactortier1: 0,
     reactortier2: 0,
     factorytier1: 0,
     factorytier2: 0,
 
+    // Plant
     energyplanttier1: 0,
     energyplanttier2: 0,
     energyplanttier3: 0,

@@ -66,6 +66,8 @@ module.exports = {
         const wheat = (filedata2.wheat - filedata1.wheat) / (filedata4.wheat - filedata3.wheat) * -1;
         const resin = (filedata2.resin - filedata1.resin) / (filedata4.resin - filedata3.resin) * -1;
         const tape = (filedata2.tape - filedata1.tape) / (filedata4.tape - filedata3.tape) * -1;
+        const glue = (filedata2.glue - filedata1.glue) / (filedata4.glue - filedata3.glue) * -1;
+        const paper = (filedata2.paper - filedata1.paper) / (filedata4.paper - filedata3.paper) * -1;
         const steelsheet = (filedata2.steelsheet - filedata1.steelsheet) / (filedata4.steelsheet - filedata3.steelsheet) * -1;
         const cocoabean = (filedata2.cocoabean - filedata1.cocoabean) / (filedata4.cocoabean - filedata3.cocoabean) * -1;
         const coffeebean = (filedata2.coffeebean - filedata1.coffeebean) / (filedata4.coffeebean - filedata3.coffeebean) * -1;
@@ -182,6 +184,7 @@ module.exports = {
         const cinnamon = (filedata2.cinnamon - filedata1.cinnamon) / (filedata4.cinnamon - filedata3.cinnamon) * -1;
         const groundginger = (filedata2.groundginger - filedata1.groundginger) / (filedata4.groundginger - filedata3.groundginger) * -1;
         const mace = (filedata2.mace - filedata1.mace) / (filedata4.mace - filedata3.mace) * -1;
+        const pepper = (filedata2.pepper - filedata1.pepper) / (filedata4.pepper - filedata3.pepper) * -1;
         const cow = (filedata2.cow - filedata1.cow) / (filedata4.cow - filedata3.cow) * -1;
         const pig = (filedata2.pig - filedata1.pig) / (filedata4.pig - filedata3.pig) * -1;
         const horse = (filedata2.horse - filedata1.horse) / (filedata4.horse - filedata3.horse) * -1;
@@ -287,6 +290,8 @@ module.exports = {
         file.set("wheat", wheat)
         file.set("resin", resin)
         file.set("tape", tape)
+        file.set("glue", glue);
+        file.set("paper", paper);
         file.set("steelsheet", steelsheet)
         file.set("cocoabean", cocoabean)
         file.set("coffeebean", coffeebean)
@@ -403,6 +408,7 @@ module.exports = {
         file.set("cinnamon", cinnamon)
         file.set("groundginger", groundginger)
         file.set("mace", mace)
+        file.set("pepper", pepper)
         file.set("cow", cow)
         file.set("pig", pig)
         file.set("horse", horse)

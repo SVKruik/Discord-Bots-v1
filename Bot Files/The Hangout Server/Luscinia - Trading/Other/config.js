@@ -1,21 +1,11 @@
-// Alle variabelen etc. De constructors hieronder worden niet gebruikt, staan er gewoon
-// zodat ik weet welke NPM packages worden gebruikt.
+// Alle variabelen etc.
 // Prijzen, intervallen, channel ID's staan allemaal hier.
 
 require("console-stamp")(console, "[HH:MM]");
-const ms = require("ms");
-const profileModel = require("../models/profileSchema");
-const util = require("minecraft-server-util");
-var Scraper = require("images-scraper");
-const math = require("mathjs");
-const ytdl = require("ytdl-core");
-const ytSearch = require("yt-search");
-const queue = new Map();
-const fs = require("fs");
 const version = require("../package.json").version;
 
 exports.base = {
-  basecolor: "#76b3e1",
+  basecolor: "#680303",
   baseguildid: "820580469757313025",
   botcount: 15,
 

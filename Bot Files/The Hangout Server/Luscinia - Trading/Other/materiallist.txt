@@ -47,6 +47,8 @@ sorghum
 wheat
 resin
 tape
+glue
+paper
 steelsheet
 cocoabean
 coffeebean
@@ -163,6 +165,7 @@ nutmeg
 cinnamon
 groundginger
 mace
+pepper
 cow
 pig
 horse

@@ -151,6 +151,8 @@ module.exports = async (Discord, client, message) => {
         // Semi Products
         resin: 0,
         tape: 0,
+        glue: 0,
+        paper: 0,
         steelsheet: 0,
         cocoabean: 0,
         coffeebean: 0,
@@ -275,6 +277,7 @@ module.exports = async (Discord, client, message) => {
         cinnamon: 0,
         groundginger: 0,
         mace: 0,
+        pepper: 0,
 
         // Animals
         cow: 0,
@@ -307,143 +310,153 @@ module.exports = async (Discord, client, message) => {
         fibre: 0,
         carbonfibre: 0,
 
-        // Reactor material
-        chemical: 0,
-        polymaterial: 0,
-        acid: 0,
-        catalyst: 0, // Faster production time + lower production cost
+  // Reactor Material
+  chemical: 0,
+  polymaterial: 0,
+  acid: 0,
+  catalyst: 0, // Faster production time + lower production cost
 
-        // Chrome
-        chromepart: 0, // Brass + Chrome
-        chrome: 0,
-        brasspart: 0,
-        brass: 0, // Zinc + Copper
+  // Rare Metals
+  chromepart: 0, // Brass + Chrome
+  chrome: 0,
+  brasspart: 0,
+  brass: 0, // Zinc + Copper
+  diamond: 0,
+  gold: 0,
+  platinum: 0,
+  silver: 0,
+  copper: 0,
+  lithium: 0,
+  cobalt: 0,
+  titanium: 0,
+  tungsten: 0,
+  nickel: 0,
+  magnesium: 0,
+  lead: 0,
+  tin: 0,
+  mercury: 0,
+  bismuth: 0,
+  rodium: 0,
+  osmium: 0,
+  palladium: 0,
+  iridium: 0,
+  ruthenium: 0,
+  plutonium: 0,
 
-        // Rare Materials
-        diamond: 0,
-        gold: 0,
-        platinum: 0,
-        silver: 0,
-        copper: 0,
-        lithium: 0,
-        cobalt: 0,
-        titanium: 0,
-        tungsten: 0,
-        nickel: 0,
-        magnesium: 0,
-        lead: 0,
-        tin: 0,
-        mercury: 0,
-        bismuth: 0,
-        rodium: 0,
-        osmium: 0,
-        palladium: 0,
-        iridium: 0,
-        ruthenium: 0,
-        plutonium: 0,
+  // Components
+  componentelectric: 0,
+  componentinterior: 0,
+  componentclothing: 0,
+  componentstarting: 0,
 
-        // Components
-        componentelectric: 0,
-        componentinterior: 0,
-        componentclothing: 0,
-        componentstarting: 0,
+  // Statistics
+  happinesspercentage: 0,
+  crimerate: 0,
+  population: 0,
+  powerusage: 0,
+  waterusage: 0,
+  gasusage: 0,
+  taxincome: 5000,
 
-        // Statistics
-        happinesspercentage: 0,
-        crimerate: 0,
-        population: 0,
-        powerusage: 0,
-        waterusage: 0,
-        gasusage: 0,
-        taxincome: 0,
+  // House
+  housetier1: 0,
+  housetier2: 0,
+  housetier3: 0,
+  housetier4: 0,
+  housetier5: 0,
+  
+  // Nature
+  river: 0,
+  forest: 0,
+  beach: 0,
+  mine: 0,
+  field: 0,
+  oilwell: 0,
 
-        // Buildings
-        housetier1: 0,
-        housetier2: 0,
-        housetier3: 0,
-        housetier4: 0,
-        housetier5: 0,
+  // Services
+  park: 0,
+  school: 0,
+  cinema: 0,
+  restaurant: 0,
+  hotel: 0,
 
-        river: 0,
-        forest: 0,
-        beach: 0,
-        mine: 0,
-        field: 0,
+  // Warehouse
+  warehousetier1: 1,
+  warehousetier2: 0,
+  warehousetier3: 0,
+  warehousetier4: 0,
+  warehousetier5: 0,
 
-        oilwell: 0,
-        airfilter: 0,
-        park: 0,
-        school: 0,
-        cinema: 0,
-        restaurant: 0,
-        hotel: 0,
+  // Police
+  policetier1: 0,
+  policetier2: 0,
+  policetier3: 0,
 
-        warehousetier1: 1,
-        warehousetier2: 0,
-        warehousetier3: 0,
-        warehousetier4: 0,
-        warehousetier5: 0,
+  // Fire Department
+  firedepartmenttier1: 0,
+  firedepartmenttier2: 0,
+  firedepartmenttier3: 0,
 
-        policetier1: 0,
-        policetier2: 0,
-        policetier3: 0,
+  // Hospital
+  hospitaltier1: 0,
+  hosptialtier2: 0,
+  hospitaltier3: 0,
 
-        firedepartmenttier1: 0,
-        firedepartmenttier2: 0,
-        firedepartmenttier3: 0,
+  // Mall
+  malltier1: 0,
+  malltier2: 0,
+  
+  // Cityhall
+  cityhalltier1: 1,
+  cityhalltier2: 0,
 
-        hospitaltier1: 0,
-        hosptialtier2: 0,
-        hospitaltier3: 0,
+  // Landfill
+  landfilltier1: 0,
+  landfilltier2: 0,
+  landfilltier3: 0,
 
-        malltier1: 0,
-        malltier2: 0,
+  // Energy
+  nuclearreactortier1: 0,
+  nuclearreactortier2: 0,
+  windmill: 0,
+  sonarpanel: 0,
+  
+  // Refinement
+  sawmilltier1: 0,
+  sawmilltier2: 0,
+  refinerytier1: 0,
+  refinerytier2: 0,
 
-        cityhalltier1: 1,
-        cityhalltier2: 0,
+  // Store
+  interiorshoptier1: 0,
+  interiorshoptier2: 0,
+  clothingshoptier1: 0,
+  clothingshoptier2: 0,
+  drugstoretier1: 0,
+  drugstoretier2: 0,
+  conveniencestoretier1: 0,
+  conveniencestoretier2: 0,
+  conveniencestoretier3: 0,
+  devicestoretier1: 0,
+  devicestoretier2: 0,
+  devicestoretier3: 0,
+  
+  // Production
+  reactortier1: 0,
+  reactortier2: 0,
+  factorytier1: 0,
+  factorytier2: 0,
 
-        landfilltier1: 0,
-        landfilltier2: 0,
-        landfilltier3: 0,
-
-        nuclearreactortier1: 0,
-        nuclearreactortier2: 0,
-
-        windmill: 0,
-        sonarpanel: 0,
-
-        sawmilltier1: 0,
-        sawmilltier2: 0,
-        refinerytier1: 0,
-        refinerytier2: 0,
-
-        interiorshoptier1: 0,
-        interiorshoptier2: 0,
-        clothingshoptier1: 0,
-        clothingshoptier2: 0,
-        drugstoretier1: 0,
-        drugstoretier2: 0,
-        conveniencestoretier1: 0,
-        conveniencestoretier2: 0,
-        conveniencestoretier3: 0,
-        devicestoretier1: 0,
-        devicestoretier2: 0,
-        devicestoretier3: 0,
-
-        reactortier1: 0,
-        reactortier2: 0,
-        factorytier1: 0,
-        factorytier2: 0,
-
-        energyplanttier1: 0,
-        energyplanttier2: 0,
-        energyplanttier3: 0,
-        waterplanttier1: 0,
-        waterplanttier2: 0,
-        waterplanttier3: 0,
-        gasplanttier1: 0,
-        gasplanttier2: 0,
-        gasplanttier3: 0,
+  // Plant
+  energyplanttier1: 0,
+  energyplanttier2: 0,
+  energyplanttier3: 0,
+  waterplanttier1: 0,
+  waterplanttier2: 0,
+  waterplanttier3: 0,
+  gasplanttier1: 0,
+  gasplanttier2: 0,
+  gasplanttier3: 0,
 
         // Board
         a1: "Empty",
