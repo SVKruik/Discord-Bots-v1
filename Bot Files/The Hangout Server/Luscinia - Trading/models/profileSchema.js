@@ -320,64 +320,98 @@ const profileSchema = new mongoose.Schema({
   componentclothing: { type: Number, default: 0 },
   componentstarting: { type: Number, default: 0 },
 
-  // House
-  housetier1: { type: Number, default: 0 },
-  housetier2: { type: Number, default: 0 },
-  housetier3: { type: Number, default: 0 },
-  housetier4: { type: Number, default: 0 }, // Requires interiorshop tier 3
-  housetier5: { type: Number, default: 0 }, // more people +  happiness + energy consumption + water consumption + gas consumption
-
-  // Buildings Tier
-  warehousetier: { type: Number, default: 1 }, // More storage
-  policetier: { type: Number, default: 0 }, // Less crime rate
-  firedepartmenttier: { type: Number, default: 0 }, // Less fire
-  hospitaltier: { type: Number, default: 0 }, // More happiness
-  malltier: { type: Number, default: 0 }, // More happiness + tax
-  cityhalltier: { type: Number, default: 1 }, // More happiness
-  infrastructuretier: { type: Number, default: 1 }, // More happiness + lower cost import/export
-  landfilltier: { type: Number, default: 0 }, // More happiness
-
-  // Energy
-  nuclearreactortier: { type: Number, default: 0 },
-  windmill: { type: Number, default: 0 },
-  sonarpanel: { type: Number, default: 0 },
-
-  // Amusement
-  park: { type: Number, default: 0 },
-  school: { type: Number, default: 0 },
-  cinema: { type: Number, default: 0 },
-  restaurant: { type: Number, default: 0 },
-  hotel: { type: Number, default: 0 },
-
-  // Natural
-  oilwell: { type: Number, default: 0 }, // Oil
-  sawmilltier: { type: Number, default: 0 }, // Wood
-  refinerytier: { type: Number, default: 0 }, // Ores To Metals
-  airfiltertier: { type: Number, default: 0 }, // Carbon
-  river: { type: Number, default: 0 }, // Clay, Water, Pebbles
-  forest: { type: Number, default: 0 }, // Bamboo, Logs
-  beach: { type: Number, default: 0 }, // Sand
-  mine: { type: Number, default: 0 }, // Ores, Metals, Coal
-  field: { type: Number, default: 0 }, // Fruit, Vegetables, Crops
-
-  interiorshoptier: { type: Number, default: 0 }, // Housetier unlock 2+
-  clothingshoptier: { type: Number, default: 0 }, // Housetier unlock 3+
-  drugstoretier: { type: Number, default: 0 }, // Housetier unlock 3+
-  conveniencestore: { type: Number, default: 0 }, // Housetier unlock 2+
-  devicestore: { type: Number, default: 0 }, // Housetier unlock 4+
-
   // Statistics
   happinesspercentage: { type: Number, default: 0 },
   crimerate: { type: Number, default: 0 },
   population: { type: Number, default: 0 },
 
-  // Factory
-  reactortier: { type: Number, default: 0 }, // Advanced Products
-  factorytier: { type: Number, default: 0 }, // Normal Products
-  energyplanttier: { type: Number, default: 0 }, // More energy capacity
-  waterplanttier: { type: Number, default: 0 }, // More clean water capacity
-  gasplanttier: { type: Number, default: 0 }, // More warmth capacity
+  // Buildings
+  amounthousetier1: { type: Number, default: 0 },
+  amounthousetier2: { type: Number, default: 0 },
+  amounthousetier3: { type: Number, default: 0 },
+  amounthousetier4: { type: Number, default: 0 },
+  amounthousetier5: { type: Number, default: 0 },
+  
+  amountriver: { type: Number, default: 0 },
+  amountforest: { type: Number, default: 0 },
+  amountbeach: { type: Number, default: 0 },
+  amountmine: { type: Number, default: 0 },
+  amountfield: { type: Number, default: 0 },
 
+  amountoilwell: { type: Number, default: 0 },
+  amountpark: { type: Number, default: 0 },
+  amountschool: { type: Number, default: 0 },
+  amountcinema: { type: Number, default: 0 },
+  amountrestaurant: { type: Number, default: 0 },
+  amounthotel: { type: Number, default: 0 },
+
+  amountwarehousetier1: { type: Number, default: 1 },
+  amountwarehousetier2: { type: Number, default: 0 },
+  amountwarehousetier3: { type: Number, default: 0 },
+  amountwarehousetier4: { type: Number, default: 0 },
+  amountwarehousetier5: { type: Number, default: 0 },
+
+  amountpolicetier1: { type: Number, default: 0 },
+  amountpolicetier2: { type: Number, default: 0 },
+  amountpolicetier3: { type: Number, default: 0 },
+
+  amountfiredepartmenttier1: { type: Number, default: 0 },
+  amountfiredepartmenttier2: { type: Number, default: 0 },
+  amountfiredepartmenttier3: { type: Number, default: 0 },
+
+  amounthospitaltier1: { type: Number, default: 0 },
+  amounthosptialtier2: { type: Number, default: 0 },
+  amounthospitaltier3: { type: Number, default: 0 },
+
+  amountmalltier1: { type: Number, default: 0 },
+  amountmalltier2: { type: Number, default: 0 },
+  
+  amountcityhalltier1: { type: Number, default: 1 },
+  amountcityhalltier2: { type: Number, default: 0 },
+
+  amountlandfilltier1: { type: Number, default: 0 },
+  amountlandfilltier2: { type: Number, default: 0 },
+  amountlandfilltier3: { type: Number, default: 0 },
+
+  amountnuclearreactor1: { type: Number, default: 0 },
+  amountnuclearreactor2: { type: Number, default: 0 },
+  
+  amountwindmill: { type: Number, default: 0 },
+  amountsonarpanel: { type: Number, default: 0 },
+  
+  amountsawmilltier1: { type: Number, default: 0 },
+  amountsawmilltier2: { type: Number, default: 0 },
+  amountrefinerytier1: { type: Number, default: 0 },
+  amountrefinerytier2: { type: Number, default: 0 },
+
+  amountinteriorshoptier1: { type: Number, default: 0 },
+  amountinteriorshoptier2: { type: Number, default: 0 },
+  amountclothingshoptier1: { type: Number, default: 0 },
+  amountclothingshoptier2: { type: Number, default: 0 },
+  amountdrugstore1: { type: Number, default: 0 },
+  amountdrugstore2: { type: Number, default: 0 },
+  amountconveniencestore1: { type: Number, default: 0 },
+  amountconveniencestore2: { type: Number, default: 0 },
+  amountconveniencestore3: { type: Number, default: 0 },
+  amountdevicestoretier1: { type: Number, default: 0 },
+  amountdevicestoretier2: { type: Number, default: 0 },
+  amountdevicestoretier3: { type: Number, default: 0 },
+  
+  amountreactortier1: { type: Number, default: 0 },
+  amountreactortier2: { type: Number, default: 0 },
+  amountfactorytier1: { type: Number, default: 0 },
+  amountfactorytier2: { type: Number, default: 0 },
+
+  amountenergyplanttier1: { type: Number, default: 0 },
+  amountenergyplanttier2: { type: Number, default: 0 },
+  amountenergyplanttier3: { type: Number, default: 0 },
+  amountwaterplanttier1: { type: Number, default: 0 },
+  amountwaterplanttier2: { type: Number, default: 0 },
+  amountwaterplanttier3: { type: Number, default: 0 },
+  amountgasplanttier1: { type: Number, default: 0 },
+  amountgasplanttier2: { type: Number, default: 0 },
+  amountgasplanttier3: { type: Number, default: 0 },
+  
   // Board
   a1: { type: String, default: "Empty" },
   a2: { type: String, default: "Empty" },

@@ -346,63 +346,98 @@ module.exports = async (Discord, client, message) => {
         componentclothing: 0,
         componentstarting: 0,
 
-        // House
-        housetier1: 0,
-        housetier2: 0,
-        housetier3: 0,
-        housetier4: 0, // Requires interiorshop tier 3
-        housetier5: 0, // more people +  happiness + energy consumption + water consumption + gas consumption
-
-        // Buildings Tier
-        warehousetier: 1, // More storage
-        policetier: 0, // Less crime rate
-        firedepartmenttier: 0, // Less fire
-        hospitaltier: 0, // More happiness
-        malltier: 0, // More happiness + tax
-        cityhalltier: 1, // More happiness
-        infrastructuretier: 1, // More happiness + lower cost import/export
-        landfilltier: 0, // More happiness
-
-        // Energy
-        nuclearreactortier: 0,
-        windmill: 0,
-        sonarpanel: 0,
-
-        // Amusement
-        park: 0,
-        school: 0,
-        cinema: 0,
-        restaurant: 0,
-        hotel: 0,
-
-        // Natural
-        oilwell: 0, // Oil
-        sawmilltier: 0, // Wood
-        refinerytier: 0, // Ores To Metals
-        airfiltertier: 0, // Carbon
-        river: 0, // Clay, Water, Pebbles
-        forest: 0, // Bamboo, Logs
-        beach: 0, // Sand
-        mine: 0, // Ores, Metals, Coal
-        field: 0, // Fruit, Vegetables, Crops
-
-        interiorshoptier: 0, // Housetier unlock 2+
-        clothingshoptier: 0, // Housetier unlock 3+
-        drugstoretier: 0, // Housetier unlock 3+
-        conveniencestore: 0, // Housetier unlock 2+
-        devicestore: 0, // Housetier unlock 4+
-
         // Statistics
         happinesspercentage: 0,
         crimerate: 0,
         population: 0,
 
-        // Factory
-        reactortier: 0, // Advanced Products
-        factorytier: 0, // Normal Products
-        energyplanttier: 0, // More energy capacity
-        waterplanttier: 0, // More clean water capacity
-        gasplanttier: 0, // More warmth capacity
+        // Buildings
+        amounthousetier1: 0,
+        amounthousetier2: 0,
+        amounthousetier3: 0,
+        amounthousetier4: 0,
+        amounthousetier5: 0,
+
+        amountriver: 0,
+        amountforest: 0,
+        amountbeach: 0,
+        amountmine: 0,
+        amountfield: 0,
+
+        amountoilwell: 0,
+        amountairfilter: 0,
+        amountpark: 0,
+        amountschool: 0,
+        amountcinema: 0,
+        amountrestaurant: 0,
+        amounthotel: 0,
+
+        amountwarehousetier1: 1,
+        amountwarehousetier2: 0,
+        amountwarehousetier3: 0,
+        amountwarehousetier4: 0,
+        amountwarehousetier5: 0,
+
+        amountpolicetier1: 0,
+        amountpolicetier2: 0,
+        amountpolicetier3: 0,
+
+        amountfiredepartmenttier1: 0,
+        amountfiredepartmenttier2: 0,
+        amountfiredepartmenttier3: 0,
+
+        amounthospitaltier1: 0,
+        amounthosptialtier2: 0,
+        amounthospitaltier3: 0,
+
+        amountmalltier1: 0,
+        amountmalltier2: 0,
+
+        amountcityhalltier1: 1,
+        amountcityhalltier2: 0,
+
+        amountlandfilltier1: 0,
+        amountlandfilltier2: 0,
+        amountlandfilltier3: 0,
+
+        amountnuclearreactor1: 0,
+        amountnuclearreactor2: 0,
+
+        amountwindmill: 0,
+        amountsonarpanel: 0,
+
+        amountsawmilltier1: 0,
+        amountsawmilltier2: 0,
+        amountrefinerytier1: 0,
+        amountrefinerytier2: 0,
+
+        amountinteriorshoptier1: 0,
+        amountinteriorshoptier2: 0,
+        amountclothingshoptier1: 0,
+        amountclothingshoptier2: 0,
+        amountdrugstore1: 0,
+        amountdrugstore2: 0,
+        amountconveniencestore1: 0,
+        amountconveniencestore2: 0,
+        amountconveniencestore3: 0,
+        amountdevicestoretier1: 0,
+        amountdevicestoretier2: 0,
+        amountdevicestoretier3: 0,
+
+        amountreactortier1: 0,
+        amountreactortier2: 0,
+        amountfactorytier1: 0,
+        amountfactorytier2: 0,
+
+        amountenergyplanttier1: 0,
+        amountenergyplanttier2: 0,
+        amountenergyplanttier3: 0,
+        amountwaterplanttier1: 0,
+        amountwaterplanttier2: 0,
+        amountwaterplanttier3: 0,
+        amountgasplanttier1: 0,
+        amountgasplanttier2: 0,
+        amountgasplanttier3: 0,
 
         // Board
         a1: "Empty",
