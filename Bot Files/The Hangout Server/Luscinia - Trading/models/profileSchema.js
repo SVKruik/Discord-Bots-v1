@@ -326,6 +326,10 @@ const profileSchema = new mongoose.Schema({
   happinesspercentage: { type: Number, default: 0 },
   crimerate: { type: Number, default: 0 },
   population: { type: Number, default: 0 },
+  powerusage: { type: Number, default: 0 },
+  waterusage: { type: Number, default: 0 },
+  gasusage: { type: Number, default: 0 },
+  taxincome: { type: Number, default: 5000 },
 
   // Buildings
   housetier1: { type: Number, default: 0 },

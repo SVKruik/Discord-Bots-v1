@@ -352,6 +352,10 @@ module.exports = async (Discord, client, message) => {
         happinesspercentage: 0,
         crimerate: 0,
         population: 0,
+        powerusage: 0,
+        waterusage: 0,
+        gasusage: 0,
+        taxincome: 0,
 
         // Buildings
         housetier1: 0,
