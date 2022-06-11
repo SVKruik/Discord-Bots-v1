@@ -676,12 +676,14 @@ exports.aliases = {
   aliasestradingbalance: ["trgbalance", "trgbal"], // Trading Balance
   aliasestradingbuy: ["trgbuy"], // Trading Buy
   aliasescross: ["trgcross"], // Trading Cross
+  aliasestradingdemolish: ["trgdemolish", "trgdemo"], // Trading Demolish
   aliasestradinggive: ["trggive"], // Trading Give
   aliasestradingminus: ["trgminus", "trgmin"], // Trading Give
   aliasestradingsell: ["trgsell"], // Trading Sell
   aliasestradingprice: ["trgprice"], // Trading Price
   aliasesprint: ["log"], // Trading Print
   aliasestradingset: ["trgset"],
+  aliasestradingplace: ["trgplace"], // Trading Place
   aliasessetprice: [], // Trading Set Price
   aliasesslope: ["richtingscoefficient", "rico", "rc"], // Trading Slope
   aliasestradingstatistics: ["tradingstats", "trgstatistics", "trgstats"], // Trading Statistics
@@ -806,8 +808,10 @@ exports.cooldown = {
   cooldowntradingbalance: H,
   cooldowntradingbuy: H,
   cooldowncross: B,
+  cooldowntradingdemolish: H,
   cooldowntradinggive: B,
   cooldowntradingminus: B,
+  cooldowntradingplace: H,
   cooldowntradingprice: H,
   cooldownprint: H,
   cooldowntradingsell: H,
@@ -929,12 +933,14 @@ exports.permissions = {
   permissiontradingbalance: J,
   permissiontradingbuy: J,
   permissioncross: I,
+  permissiontradingdemolish: J,
   permissiontradinggive: I,
   permissiontradingminus: I,
   permissiontradingprice: J,
   permissionprint: I,
   permissiontradingsell: J,
   permissiontradingset: I,
+  permissiontradingplace: J,
   permissionsetprice: I,
   permissionslope: I,
   permissiontradingstatistics: J,
