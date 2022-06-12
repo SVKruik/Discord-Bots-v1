@@ -391,7 +391,7 @@ const profileSchema = new mongoose.Schema({
   componentclothing: { type: Number, default: 0 },
   componentstarting: { type: Number, default: 0 },
 
-  // Statistics
+  // City Statistics
   happinesspercentage: { type: Number, default: 0 },
   crimerate: { type: Number, default: 0 },
   population: { type: Number, default: 0 },
