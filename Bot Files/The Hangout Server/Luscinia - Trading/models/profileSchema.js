@@ -47,6 +47,7 @@ const profileSchema = new mongoose.Schema({
   // Valuta
   shard: { type: Number, default: 30000 },
 
+  // Game Statistics
   prestige: { type: Number, default: 1 },
   tradesaccepted: { type: Number, default: 0 },
   tradesrejected: { type: Number, default: 0 },
@@ -60,24 +61,24 @@ const profileSchema = new mongoose.Schema({
   timesbuilt: { type: Number, default: 0 },
   timesdemolished: { type: Number, default: 0 },
 
-  // Metal
-  steel: { type: Number, default: 0 },
-  steelpart: { type: Number, default: 0 },
-  iron: { type: Number, default: 0 },
-  carbon: { type: Number, default: 0 },
-
-  // Brick
-  brick: { type: Number, default: 0 },
-  clay: { type: Number, default: 0 },
-  soil: { type: Number, default: 0 },
-  water: { type: Number, default: 0 },
-
   // Wood
   woodplank: { type: Number, default: 0 },
   woodpart: { type: Number, default: 0 },
-  wood: { type: Number, default: 0 },
   log: { type: Number, default: 0 },
   bamboo: { type: Number, default: 0 },
+  cedar: { type: Number, default: 0 },
+  fir: { type: Number, default: 0 },
+  pine: { type: Number, default: 0 },
+  redwood: { type: Number, default: 0 },
+  ash: { type: Number, default: 0 },
+  birch: { type: Number, default: 0 },
+  cherrywood: { type: Number, default: 0 },
+  mahogany: { type: Number, default: 0 },
+  maple: { type: Number, default: 0 },
+  oak: { type: Number, default: 0 },
+  poplar: { type: Number, default: 0 },
+  teak: { type: Number, default: 0 },
+  compositewood: { type: Number, default: 0 },
 
   // Plastic
   pipe: { type: Number, default: 0 },
@@ -86,7 +87,6 @@ const profileSchema = new mongoose.Schema({
 
   // Glass
   glass: { type: Number, default: 0 },
-  limestone: { type: Number, default: 0 },
   sand: { type: Number, default: 0 },
   plexiglass: { type: Number, default: 0 },
 
@@ -97,6 +97,11 @@ const profileSchema = new mongoose.Schema({
   chalk: { type: Number, default: 0 },
   slate: { type: Number, default: 0 },
   basalt: { type: Number, default: 0 },
+  pebble: { type: Number, default: 0 },
+  limestone: { type: Number, default: 0 },
+  flint: { type: Number, default: 0 },
+  onyx: { type: Number, default: 0 },
+  travertine: { type: Number, default: 0 },
 
   // Raw Materials
   oil: { type: Number, default: 0 },
@@ -110,6 +115,28 @@ const profileSchema = new mongoose.Schema({
   mesh: { type: Number, default: 0 },
   rubber: { type: Number, default: 0 },
   uranium: { type: Number, default: 0 },
+  resin: { type: Number, default: 0 },
+  carbon: { type: Number, default: 0 },
+  clay: { type: Number, default: 0 },
+  soil: { type: Number, default: 0 },
+  water: { type: Number, default: 0 },
+
+  // Building Materials
+  cement: { type: Number, default: 0 },
+  concrete: { type: Number, default: 0 }, // cement + water + pebble
+  steelsheet: { type: Number, default: 0 },
+  tape: { type: Number, default: 0 },
+  brick: { type: Number, default: 0 },
+  steel: { type: Number, default: 0 },
+  steelpart: { type: Number, default: 0 },
+
+  // Semi Products
+  glue: { type: Number, default: 0 },
+  paper: { type: Number, default: 0 },
+  salt: { type: Number, default: 0 },
+  flower: { type: Number, default: 0 },
+  bakingpowder: { type: Number, default: 0 },
+  bread: { type: Number, default: 0 },
 
   // Crops
   rice: { type: Number, default: 0 },
@@ -124,26 +151,6 @@ const profileSchema = new mongoose.Schema({
   cocoabean: { type: Number, default: 0 },
   coffeebean: { type: Number, default: 0 },
   sugar: { type: Number, default: 0 },
-
-  
-  // Building Materials
-  cement: { type: Number, default: 0 },
-  concrete: { type: Number, default: 0 }, // cement + water + pebble
-  pebble: { type: Number, default: 0 },
-
-  // Semi Products
-  resin: { type: Number, default: 0 },
-  tape: { type: Number, default: 0 },
-  glue: { type: Number, default: 0 },
-  paper: { type: Number, default: 0 },
-  steelsheet: { type: Number, default: 0 },
-  salt: { type: Number, default: 0 },
-  flower: { type: Number, default: 0 },
-  bakingpowder: { type: Number, default: 0 },
-  egg: { type: Number, default: 0 },
-  fish: { type: Number, default: 0 },
-  meat: { type: Number, default: 0 },
-  bread: { type: Number, default: 0 },
 
   // Vegetables
   asparagus: { type: Number, default: 0 },
@@ -236,6 +243,62 @@ const profileSchema = new mongoose.Schema({
   mungbean: { type: Number, default: 0 },
   cranberrybean: { type: Number, default: 0 },
 
+  // Nuts
+  acorn: { type: Number, default: 0 },
+  almond: { type: Number, default: 0 },
+  beech: { type: Number, default: 0 },
+  brazilnut: { type: Number, default: 0 },
+  candlenut: { type: Number, default: 0 },
+  cashew: { type: Number, default: 0 },
+  chestnut: { type: Number, default: 0 },
+  chileanhazel: { type: Number, default: 0 },
+  egusi: { type: Number, default: 0 },
+  guineapeanut: { type: Number, default: 0 },
+  hazelnut: { type: Number, default: 0 },
+  hickory: { type: Number, default: 0 },
+  kolanut: { type: Number, default: 0 },
+  macadamia: { type: Number, default: 0 },
+  malabaralmond: { type: Number, default: 0 },
+  malabarchestnut: { type: Number, default: 0 },
+  mamoncillo: { type: Number, default: 0 },
+  mongongo: { type: Number, default: 0 },
+  ogbono: { type: Number, default: 0 },
+  paradisenut: { type: Number, default: 0 },
+  pili: { type: Number, default: 0 },
+  pistachio: { type: Number, default: 0 },
+  sheanut: { type: Number, default: 0 },
+  walnut: { type: Number, default: 0 },
+  cycads: { type: Number, default: 0 },
+  ginkgo: { type: Number, default: 0 },
+  gnetum: { type: Number, default: 0 },
+  juniper: { type: Number, default: 0 },
+  pinenut: { type: Number, default: 0 },
+  podocarps: { type: Number, default: 0 },
+
+  // Seeds
+  fingermillet: { type: Number, default: 0 },
+  teff: { type: Number, default: 0 },
+  fonio: { type: Number, default: 0 },
+  prosomillet: { type: Number, default: 0 },
+  pearlmillet: { type: Number, default: 0 },
+  foxtailmillet: { type: Number, default: 0 },
+  triticale: { type: Number, default: 0 },
+  durum: { type: Number, default: 0 },
+  einkorn: { type: Number, default: 0 },
+  spelt: { type: Number, default: 0 },
+  kamut: { type: Number, default: 0 },
+  emmer: { type: Number, default: 0 },
+  kernza: { type: Number, default: 0 },
+  amaranth: { type: Number, default: 0 },
+  kaniwa: { type: Number, default: 0 },
+  quinoa: { type: Number, default: 0 },
+  hanza: { type: Number, default: 0 },
+  chia: { type: Number, default: 0 },
+  flax: { type: Number, default: 0 },
+  breadnut: { type: Number, default: 0 },
+  sesame: { type: Number, default: 0 },
+  buckwheat: { type: Number, default: 0 },
+
   // Spices and Herbs
   thyme: { type: Number, default: 0 },
   basil: { type: Number, default: 0 },
@@ -268,6 +331,9 @@ const profileSchema = new mongoose.Schema({
   goat: { type: Number, default: 0 },
   llama: { type: Number, default: 0 },
   rabbit: { type: Number, default: 0 },
+  egg: { type: Number, default: 0 },
+  fish: { type: Number, default: 0 },
+  meat: { type: Number, default: 0 },
 
   // Insulation
   phenolicfoam: { type: Number, default: 0 }, // resin
@@ -291,7 +357,7 @@ const profileSchema = new mongoose.Schema({
   acid: { type: Number, default: 0 },
   catalyst: { type: Number, default: 0 }, // Faster production time + lower production cost
 
-  // Rare Metals
+  // Metals
   chromepart: { type: Number, default: 0 }, // Brass + Chrome
   chrome: { type: Number, default: 0 },
   brasspart: { type: Number, default: 0 },
@@ -301,6 +367,7 @@ const profileSchema = new mongoose.Schema({
   platinum: { type: Number, default: 0 },
   silver: { type: Number, default: 0 },
   copper: { type: Number, default: 0 },
+  iron: { type: Number, default: 0 },
   lithium: { type: Number, default: 0 },
   cobalt: { type: Number, default: 0 },
   titanium: { type: Number, default: 0 },

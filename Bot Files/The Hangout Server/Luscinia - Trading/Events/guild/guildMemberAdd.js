@@ -49,8 +49,12 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     shardsbronze: 0,
     shardsiron: 0,
 
+    //// Trading Game
+
+    // Valuta
     shard: 30000,
 
+    // Game Statistics
     prestige: 1,
     tradesaccepted: 0,
     tradesrejected: 0,
@@ -64,24 +68,24 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     timesbuilt: 0,
     timesdemolished: 0,
 
-    // Metal
-    steel: 0,
-    steelpart: 0,
-    iron: 0,
-    carbon: 0,
-
-    // Brick
-    brick: 0,
-    clay: 0,
-    soil: 0,
-    water: 0,
-
     // Wood
     woodplank: 0,
     woodpart: 0,
-    wood: 0,
     log: 0,
     bamboo: 0,
+    cedar: 0,
+    fir: 0,
+    pine: 0,
+    redwood: 0,
+    ash: 0,
+    birch: 0,
+    cherrywood: 0,
+    mahogany: 0,
+    maple: 0,
+    oak: 0,
+    poplar: 0,
+    teak: 0,
+    compositewood: 0,
 
     // Plastic
     pipe: 0,
@@ -90,7 +94,6 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
 
     // Glass
     glass: 0,
-    limestone: 0,
     sand: 0,
     plexiglass: 0,
 
@@ -101,6 +104,8 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     chalk: 0,
     slate: 0,
     basalt: 0,
+    pebble: 0,
+    limestone: 0,
 
     // Raw Materials
     oil: 0,
@@ -114,6 +119,31 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     mesh: 0,
     rubber: 0,
     uranium: 0,
+    resin: 0,
+    carbon: 0,
+    clay: 0,
+    soil: 0,
+    water: 0,
+    flint: 0,
+    onyx: 0,
+    travertine: 0,
+
+    // Building Materials
+    cement: 0,
+    concrete: 0,
+    steelsheet: 0,
+    tape: 0,
+    brick: 0,
+    steel: 0,
+    steelpart: 0,
+
+    // Semi Products
+    glue: 0,
+    paper: 0,
+    salt: 0,
+    flower: 0,
+    bakingpowder: 0,
+    bread: 0,
 
     // Crops
     rice: 0,
@@ -125,23 +155,9 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     soybean: 0,
     sorghum: 0,
     wheat: 0,
-
-    // Semi Products
-    resin: 0,
-    tape: 0,
-    glue: 0,
-    paper: 0,
-    steelsheet: 0,
     cocoabean: 0,
     coffeebean: 0,
     sugar: 0,
-    salt: 0,
-    flower: 0,
-    bakingpowder: 0,
-    egg: 0,
-    fish: 0,
-    meat: 0,
-    bread: 0,
 
     // Vegetables
     asparagus: 0,
@@ -234,6 +250,62 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     mungbean: 0,
     cranberrybean: 0,
 
+    // Nuts
+    acorn: 0,
+    almond: 0,
+    beech: 0,
+    brazilnut: 0,
+    candlenut: 0,
+    cashew: 0,
+    chestnut: 0,
+    chileanhazel: 0,
+    egusi: 0,
+    guineapeanut: 0,
+    hazelnut: 0,
+    hickory: 0,
+    kolanut: 0,
+    macadamia: 0,
+    malabaralmond: 0,
+    malabarchestnut: 0,
+    mamoncillo: 0,
+    mongongo: 0,
+    ogbono: 0,
+    paradisenut: 0,
+    pili: 0,
+    pistachio: 0,
+    sheanut: 0,
+    walnut: 0,
+    cycads: 0,
+    ginkgo: 0,
+    gnetum: 0,
+    juniper: 0,
+    pinenut: 0,
+    podocarps: 0,
+
+    // Seeds
+    fingermillet: 0,
+    teff: 0,
+    fonio: 0,
+    prosomillet: 0,
+    pearlmillet: 0,
+    foxtailmillet: 0,
+    triticale: 0,
+    durum: 0,
+    einkorn: 0,
+    spelt: 0,
+    kamut: 0,
+    emmer: 0,
+    kernza: 0,
+    amaranth: 0,
+    kaniwa: 0,
+    quinoa: 0,
+    hanza: 0,
+    chia: 0,
+    flax: 0,
+    breadnut: 0,
+    sesame: 0,
+    buckwheat: 0,
+
     // Spices and Herbs
     thyme: 0,
     basil: 0,
@@ -266,19 +338,17 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     goat: 0,
     llama: 0,
     rabbit: 0,
-
-    // Building Materials
-    cement: 0,
-    concrete: 0, // cement + water + pebble
-    pebble: 0,
+    egg: 0,
+    fish: 0,
+    meat: 0,
 
     // Insulation
-    phenolicfoam: 0, // resin
-    polyurethane: 0, // reactor
-    xps: 0, // oil
-    rockwool: 0, // basalt
-    foamglass: 0, // sand + limestone
-    glasswool: 0, // reactor
+    phenolicfoam: 0,
+    polyurethane: 0,
+    xps: 0,
+    rockwool: 0,
+    foamglass: 0,
+    glasswool: 0,
     doubleglass: 0,
     tripleglass: 0,
 
@@ -292,18 +362,19 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     chemical: 0,
     polymaterial: 0,
     acid: 0,
-    catalyst: 0, // Faster production time + lower production cost
+    catalyst: 0,
 
-    // Rare Metals
-    chromepart: 0, // Brass + Chrome
+    // Metals
+    chromepart: 0,
     chrome: 0,
     brasspart: 0,
-    brass: 0, // Zinc + Copper
+    brass: 0,
     diamond: 0,
     gold: 0,
     platinum: 0,
     silver: 0,
     copper: 0,
+    iron: 0,
     lithium: 0,
     cobalt: 0,
     titanium: 0,

@@ -18,24 +18,27 @@ module.exports = {
         const filedata3 = require('./../marketstockmin.json') // x
         const filedata4 = require('./../marketstockmax.json') // x
 
-        const steel = (filedata2.steel - filedata1.steel) / (filedata4.steel - filedata3.steel) * -1;
-        const steelpart = (filedata2.steelpart - filedata1.steelpart) / (filedata4.steelpart - filedata3.steelpart) * -1;
-        const iron = (filedata2.iron - filedata1.iron) / (filedata4.iron - filedata3.iron) * -1;
-        const carbon = (filedata2.carbon - filedata1.carbon) / (filedata4.carbon - filedata3.carbon) * -1;
-        const brick = (filedata2.brick - filedata1.brick) / (filedata4.brick - filedata3.brick) * -1;
-        const clay = (filedata2.clay - filedata1.clay) / (filedata4.clay - filedata3.clay) * -1;
-        const soil = (filedata2.soil - filedata1.soil) / (filedata4.soil - filedata3.soil) * -1;
-        const water = (filedata2.water - filedata1.water) / (filedata4.water - filedata3.water) * -1;
         const woodplank = (filedata2.woodplank - filedata1.woodplank) / (filedata4.woodplank - filedata3.woodplank) * -1;
         const woodpart = (filedata2.woodpart - filedata1.woodpart) / (filedata4.woodpart - filedata3.woodpart) * -1;
-        const wood = (filedata2.wood - filedata1.wood) / (filedata4.wood - filedata3.wood) * -1;
         const log = (filedata2.log - filedata1.log) / (filedata4.log - filedata3.log) * -1;
         const bamboo = (filedata2.bamboo - filedata1.bamboo) / (filedata4.bamboo - filedata3.bamboo) * -1;
+        const cedar = (filedata2.cedar - filedata1.cedar) / (filedata4.cedar - filedata3.cedar) * -1;
+        const fir = (filedata2.fir - filedata1.fir) / (filedata4.fir - filedata3.fir) * -1;
+        const pine = (filedata2.pine - filedata1.pine) / (filedata4.pine - filedata3.pine) * -1;
+        const redwood = (filedata2.redwood - filedata1.redwood) / (filedata4.redwood - filedata3.redwood) * -1;
+        const ash = (filedata2.ash - filedata1.ash) / (filedata4.ash - filedata3.ash) * -1;
+        const birch = (filedata2.birch - filedata1.birch) / (filedata4.birch - filedata3.birch) * -1;
+        const cherrywood = (filedata2.cherrywood - filedata1.cherrywood) / (filedata4.cherrywood - filedata3.cherrywood) * -1;
+        const mahogany = (filedata2.mahogany - filedata1.mahogany) / (filedata4.mahogany - filedata3.mahogany) * -1;
+        const maple = (filedata2.maple - filedata1.maple) / (filedata4.maple - filedata3.maple) * -1;
+        const oak = (filedata2.oak - filedata1.oak) / (filedata4.oak - filedata3.oak) * -1;
+        const poplar = (filedata2.poplar - filedata1.poplar) / (filedata4.poplar - filedata3.poplar) * -1;
+        const teak = (filedata2.teak - filedata1.teak) / (filedata4.teak - filedata3.teak) * -1;
+        const compositewood = (filedata2.compositewood - filedata1.compositewood) / (filedata4.compositewood - filedata3.compositewood) * -1;
         const pipe = (filedata2.pipe - filedata1.pipe) / (filedata4.pipe - filedata3.pipe) * -1;
         const plasticpart = (filedata2.plasticpart - filedata1.plasticpart) / (filedata4.plasticpart - filedata3.plasticpart) * -1;
         const plastic = (filedata2.plastic - filedata1.plastic) / (filedata4.plastic - filedata3.plastic) * -1;
         const glass = (filedata2.glass - filedata1.glass) / (filedata4.glass - filedata3.glass) * -1;
-        const limestone = (filedata2.limestone - filedata1.limestone) / (filedata4.limestone - filedata3.limestone) * -1;
         const sand = (filedata2.sand - filedata1.sand) / (filedata4.sand - filedata3.sand) * -1;
         const plexiglass = (filedata2.plexiglass - filedata1.plexiglass) / (filedata4.plexiglass - filedata3.plexiglass) * -1;
         const granite = (filedata2.granite - filedata1.granite) / (filedata4.granite - filedata3.granite) * -1;
@@ -44,6 +47,11 @@ module.exports = {
         const chalk = (filedata2.chalk - filedata1.chalk) / (filedata4.chalk - filedata3.chalk) * -1;
         const slate = (filedata2.slate - filedata1.slate) / (filedata4.slate - filedata3.slate) * -1;
         const basalt = (filedata2.basalt - filedata1.basalt) / (filedata4.basalt - filedata3.basalt) * -1;
+        const pebble = (filedata2.pebble - filedata1.pebble) / (filedata4.pebble - filedata3.pebble) * -1;
+        const limestone = (filedata2.limestone - filedata1.limestone) / (filedata4.limestone - filedata3.limestone) * -1;
+        const flint = (filedata2.flint - filedata1.flint) / (filedata4.flint - filedata3.flint) * -1;
+        const onyx = (filedata2.onyx - filedata1.onyx) / (filedata4.onyx - filedata3.onyx) * -1;
+        const travertine = (filedata2.travertine - filedata1.travertine) / (filedata4.travertine - filedata3.travertine) * -1;
         const oil = (filedata2.oil - filedata1.oil) / (filedata4.oil - filedata3.oil) * -1;
         const coal = (filedata2.coal - filedata1.coal) / (filedata4.coal - filedata3.coal) * -1;
         const ironore = (filedata2.ironore - filedata1.ironore) / (filedata4.ironore - filedata3.ironore) * -1;
@@ -55,6 +63,24 @@ module.exports = {
         const mesh = (filedata2.mesh - filedata1.mesh) / (filedata4.mesh - filedata3.mesh) * -1;
         const rubber = (filedata2.rubber - filedata1.rubber) / (filedata4.rubber - filedata3.rubber) * -1;
         const uranium = (filedata2.uranium - filedata1.uranium) / (filedata4.uranium - filedata3.uranium) * -1;
+        const carbon = (filedata2.carbon - filedata1.carbon) / (filedata4.carbon - filedata3.carbon) * -1;
+        const resin = (filedata2.resin - filedata1.resin) / (filedata4.resin - filedata3.resin) * -1;
+        const clay = (filedata2.clay - filedata1.clay) / (filedata4.clay - filedata3.clay) * -1;
+        const soil = (filedata2.soil - filedata1.soil) / (filedata4.soil - filedata3.soil) * -1;
+        const water = (filedata2.water - filedata1.water) / (filedata4.water - filedata3.water) * -1;
+        const cement = (filedata2.cement - filedata1.cement) / (filedata4.cement - filedata3.cement) * -1;
+        const concrete = (filedata2.concrete - filedata1.concrete) / (filedata4.concrete - filedata3.concrete) * -1;
+        const steelsheet = (filedata2.steelsheet - filedata1.steelsheet) / (filedata4.steelsheet - filedata3.steelsheet) * -1;
+        const tape = (filedata2.tape - filedata1.tape) / (filedata4.tape - filedata3.tape) * -1;
+        const brick = (filedata2.brick - filedata1.brick) / (filedata4.brick - filedata3.brick) * -1;
+        const steel = (filedata2.steel - filedata1.steel) / (filedata4.steel - filedata3.steel) * -1;
+        const steelpart = (filedata2.steelpart - filedata1.steelpart) / (filedata4.steelpart - filedata3.steelpart) * -1;
+        const glue = (filedata2.glue - filedata1.glue) / (filedata4.glue - filedata3.glue) * -1;
+        const paper = (filedata2.paper - filedata1.paper) / (filedata4.paper - filedata3.paper) * -1;
+        const salt = (filedata2.salt - filedata1.salt) / (filedata4.salt - filedata3.salt) * -1;
+        const flower = (filedata2.flower - filedata1.flower) / (filedata4.flower - filedata3.flower) * -1;
+        const bakingpowder = (filedata2.bakingpowder - filedata1.bakingpowder) / (filedata4.bakingpowder - filedata3.bakingpowder) * -1;
+        const bread = (filedata2.bread - filedata1.bread) / (filedata4.bread - filedata3.bread) * -1;
         const rice = (filedata2.rice - filedata1.rice) / (filedata4.rice - filedata3.rice) * -1;
         const rye = (filedata2.rye - filedata1.rye) / (filedata4.rye - filedata3.rye) * -1;
         const oats = (filedata2.oats - filedata1.oats) / (filedata4.oats - filedata3.oats) * -1;
@@ -64,21 +90,9 @@ module.exports = {
         const soybean = (filedata2.soybean - filedata1.soybean) / (filedata4.soybean - filedata3.soybean) * -1;
         const sorghum = (filedata2.sorghum - filedata1.sorghum) / (filedata4.sorghum - filedata3.sorghum) * -1;
         const wheat = (filedata2.wheat - filedata1.wheat) / (filedata4.wheat - filedata3.wheat) * -1;
-        const resin = (filedata2.resin - filedata1.resin) / (filedata4.resin - filedata3.resin) * -1;
-        const tape = (filedata2.tape - filedata1.tape) / (filedata4.tape - filedata3.tape) * -1;
-        const glue = (filedata2.glue - filedata1.glue) / (filedata4.glue - filedata3.glue) * -1;
-        const paper = (filedata2.paper - filedata1.paper) / (filedata4.paper - filedata3.paper) * -1;
-        const steelsheet = (filedata2.steelsheet - filedata1.steelsheet) / (filedata4.steelsheet - filedata3.steelsheet) * -1;
         const cocoabean = (filedata2.cocoabean - filedata1.cocoabean) / (filedata4.cocoabean - filedata3.cocoabean) * -1;
         const coffeebean = (filedata2.coffeebean - filedata1.coffeebean) / (filedata4.coffeebean - filedata3.coffeebean) * -1;
         const sugar = (filedata2.sugar - filedata1.sugar) / (filedata4.sugar - filedata3.sugar) * -1;
-        const salt = (filedata2.salt - filedata1.salt) / (filedata4.salt - filedata3.salt) * -1;
-        const flower = (filedata2.flower - filedata1.flower) / (filedata4.flower - filedata3.flower) * -1;
-        const bakingpowder = (filedata2.bakingpowder - filedata1.bakingpowder) / (filedata4.bakingpowder - filedata3.bakingpowder) * -1;
-        const egg = (filedata2.egg - filedata1.egg) / (filedata4.egg - filedata3.egg) * -1;
-        const fish = (filedata2.fish - filedata1.fish) / (filedata4.fish - filedata3.fish) * -1;
-        const meat = (filedata2.meat - filedata1.meat) / (filedata4.meat - filedata3.meat) * -1;
-        const bread = (filedata2.bread - filedata1.bread) / (filedata4.bread - filedata3.bread) * -1;
         const asparagus = (filedata2.asparagus - filedata1.asparagus) / (filedata4.asparagus - filedata3.asparagus) * -1;
         const eggplant = (filedata2.eggplant - filedata1.eggplant) / (filedata4.eggplant - filedata3.eggplant) * -1;
         const broccoli = (filedata2.broccoli - filedata1.broccoli) / (filedata4.broccoli - filedata3.broccoli) * -1;
@@ -164,6 +178,58 @@ module.exports = {
         const edamame = (filedata2.edamame - filedata1.edamame) / (filedata4.edamame - filedata3.edamame) * -1;
         const mungbean = (filedata2.mungbean - filedata1.mungbean) / (filedata4.mungbean - filedata3.mungbean) * -1;
         const cranberrybean = (filedata2.cranberrybean - filedata1.cranberrybean) / (filedata4.cranberrybean - filedata3.cranberrybean) * -1;
+        const acorn = (filedata2.acorn - filedata1.acorn) / (filedata4.acorn - filedata3.acorn) * -1;
+        const almond = (filedata2.almond - filedata1.almond) / (filedata4.almond - filedata3.almond) * -1;
+        const beech = (filedata2.beech - filedata1.beech) / (filedata4.beech - filedata3.beech) * -1;
+        const brazilnut = (filedata2.brazilnut - filedata1.brazilnut) / (filedata4.brazilnut - filedata3.brazilnut) * -1;
+        const candlenut = (filedata2.candlenut - filedata1.candlenut) / (filedata4.candlenut - filedata3.candlenut) * -1;
+        const cashew = (filedata2.cashew - filedata1.cashew) / (filedata4.cashew - filedata3.cashew) * -1;
+        const chestnut = (filedata2.chestnut - filedata1.chestnut) / (filedata4.chestnut - filedata3.chestnut) * -1;
+        const chileanhazel = (filedata2.chileanhazel - filedata1.chileanhazel) / (filedata4.chileanhazel - filedata3.chileanhazel) * -1;
+        const egusi = (filedata2.egusi - filedata1.egusi) / (filedata4.egusi - filedata3.egusi) * -1;
+        const guineapeanut = (filedata2.guineapeanut - filedata1.guineapeanut) / (filedata4.guineapeanut - filedata3.guineapeanut) * -1;
+        const hazelnut = (filedata2.hazelnut - filedata1.hazelnut) / (filedata4.hazelnut - filedata3.hazelnut) * -1;
+        const hickory = (filedata2.hickory - filedata1.hickory) / (filedata4.hickory - filedata3.hickory) * -1;
+        const kolanut = (filedata2.kolanut - filedata1.kolanut) / (filedata4.kolanut - filedata3.kolanut) * -1;
+        const macadamia = (filedata2.macadamia - filedata1.macadamia) / (filedata4.macadamia - filedata3.macadamia) * -1;
+        const malabaralmond = (filedata2.malabaralmond - filedata1.malabaralmond) / (filedata4.malabaralmond - filedata3.malabaralmond) * -1;
+        const malabarchestnut = (filedata2.malabarchestnut - filedata1.malabarchestnut) / (filedata4.malabarchestnut - filedata3.malabarchestnut) * -1;
+        const mamoncillo = (filedata2.mamoncillo - filedata1.mamoncillo) / (filedata4.mamoncillo - filedata3.mamoncillo) * -1;
+        const mongongo = (filedata2.mongongo - filedata1.mongongo) / (filedata4.mongongo - filedata3.mongongo) * -1;
+        const ogbono = (filedata2.ogbono - filedata1.ogbono) / (filedata4.ogbono - filedata3.ogbono) * -1;
+        const paradisenut = (filedata2.paradisenut - filedata1.paradisenut) / (filedata4.paradisenut - filedata3.paradisenut) * -1;
+        const pili = (filedata2.pili - filedata1.pili) / (filedata4.pili - filedata3.pili) * -1;
+        const pistachio = (filedata2.pistachio - filedata1.pistachio) / (filedata4.pistachio - filedata3.pistachio) * -1;
+        const sheanut = (filedata2.sheanut - filedata1.sheanut) / (filedata4.sheanut - filedata3.sheanut) * -1;
+        const walnut = (filedata2.walnut - filedata1.walnut) / (filedata4.walnut - filedata3.walnut) * -1;
+        const cycads = (filedata2.cycads - filedata1.cycads) / (filedata4.cycads - filedata3.cycads) * -1;
+        const ginkgo = (filedata2.ginkgo - filedata1.ginkgo) / (filedata4.ginkgo - filedata3.ginkgo) * -1;
+        const gnetum = (filedata2.gnetum - filedata1.gnetum) / (filedata4.gnetum - filedata3.gnetum) * -1;
+        const juniper = (filedata2.juniper - filedata1.juniper) / (filedata4.juniper - filedata3.juniper) * -1;
+        const pinenut = (filedata2.pinenut - filedata1.pinenut) / (filedata4.pinenut - filedata3.pinenut) * -1;
+        const podocarps = (filedata2.podocarps - filedata1.podocarps) / (filedata4.podocarps - filedata3.podocarps) * -1;
+        const fingermillet = (filedata2.fingermillet - filedata1.fingermillet) / (filedata4.fingermillet - filedata3.fingermillet) * -1;
+        const teff = (filedata2.teff - filedata1.teff) / (filedata4.teff - filedata3.teff) * -1;
+        const fonio = (filedata2.fonio - filedata1.fonio) / (filedata4.fonio - filedata3.fonio) * -1;
+        const prosomillet = (filedata2.prosomillet - filedata1.prosomillet) / (filedata4.prosomillet - filedata3.prosomillet) * -1;
+        const pearlmillet = (filedata2.pearlmillet - filedata1.pearlmillet) / (filedata4.pearlmillet - filedata3.pearlmillet) * -1;
+        const foxtailmillet = (filedata2.foxtailmillet - filedata1.foxtailmillet) / (filedata4.foxtailmillet - filedata3.foxtailmillet) * -1;
+        const triticale = (filedata2.triticale - filedata1.triticale) / (filedata4.triticale - filedata3.triticale) * -1;
+        const durum = (filedata2.durum - filedata1.durum) / (filedata4.durum - filedata3.durum) * -1;
+        const einkorn = (filedata2.einkorn - filedata1.einkorn) / (filedata4.einkorn - filedata3.einkorn) * -1;
+        const spelt = (filedata2.spelt - filedata1.spelt) / (filedata4.spelt - filedata3.spelt) * -1;
+        const kamut = (filedata2.kamut - filedata1.kamut) / (filedata4.kamut - filedata3.kamut) * -1;
+        const emmer = (filedata2.emmer - filedata1.emmer) / (filedata4.emmer - filedata3.emmer) * -1;
+        const kernza = (filedata2.kernza - filedata1.kernza) / (filedata4.kernza - filedata3.kernza) * -1;
+        const amaranth = (filedata2.amaranth - filedata1.amaranth) / (filedata4.amaranth - filedata3.amaranth) * -1;
+        const kaniwa = (filedata2.kaniwa - filedata1.kaniwa) / (filedata4.kaniwa - filedata3.kaniwa) * -1;
+        const quinoa = (filedata2.quinoa - filedata1.quinoa) / (filedata4.quinoa - filedata3.quinoa) * -1;
+        const hanza = (filedata2.hanza - filedata1.hanza) / (filedata4.hanza - filedata3.hanza) * -1;
+        const chia = (filedata2.chia - filedata1.chia) / (filedata4.chia - filedata3.chia) * -1;
+        const flax = (filedata2.flax - filedata1.flax) / (filedata4.flax - filedata3.flax) * -1;
+        const breadnut = (filedata2.breadnut - filedata1.breadnut) / (filedata4.breadnut - filedata3.breadnut) * -1;
+        const sesame = (filedata2.sesame - filedata1.sesame) / (filedata4.sesame - filedata3.sesame) * -1;
+        const buckwheat = (filedata2.buckwheat - filedata1.buckwheat) / (filedata4.buckwheat - filedata3.buckwheat) * -1;
         const thyme = (filedata2.thyme - filedata1.thyme) / (filedata4.thyme - filedata3.thyme) * -1;
         const basil = (filedata2.basil - filedata1.basil) / (filedata4.basil - filedata3.basil) * -1;
         const oregano = (filedata2.oregano - filedata1.oregano) / (filedata4.oregano - filedata3.oregano) * -1;
@@ -193,9 +259,9 @@ module.exports = {
         const goat = (filedata2.goat - filedata1.goat) / (filedata4.goat - filedata3.goat) * -1;
         const llama = (filedata2.llama - filedata1.llama) / (filedata4.llama - filedata3.llama) * -1;
         const rabbit = (filedata2.rabbit - filedata1.rabbit) / (filedata4.rabbit - filedata3.rabbit) * -1;
-        const cement = (filedata2.cement - filedata1.cement) / (filedata4.cement - filedata3.cement) * -1;
-        const concrete = (filedata2.concrete - filedata1.concrete) / (filedata4.concrete - filedata3.concrete) * -1;
-        const pebble = (filedata2.pebble - filedata1.pebble) / (filedata4.pebble - filedata3.pebble) * -1;
+        const egg = (filedata2.egg - filedata1.egg) / (filedata4.egg - filedata3.egg) * -1;
+        const fish = (filedata2.fish - filedata1.fish) / (filedata4.fish - filedata3.fish) * -1;
+        const meat = (filedata2.meat - filedata1.meat) / (filedata4.meat - filedata3.meat) * -1;
         const phenolicfoam = (filedata2.phenolicfoam - filedata1.phenolicfoam) / (filedata4.phenolicfoam - filedata3.phenolicfoam) * -1;
         const polyurethane = (filedata2.polyurethane - filedata1.polyurethane) / (filedata4.polyurethane - filedata3.polyurethane) * -1;
         const xps = (filedata2.xps - filedata1.xps) / (filedata4.xps - filedata3.xps) * -1;
@@ -221,6 +287,7 @@ module.exports = {
         const platinum = (filedata2.platinum - filedata1.platinum) / (filedata4.platinum - filedata3.platinum) * -1;
         const silver = (filedata2.silver - filedata1.silver) / (filedata4.silver - filedata3.silver) * -1;
         const copper = (filedata2.copper - filedata1.copper) / (filedata4.copper - filedata3.copper) * -1;
+        const iron = (filedata2.iron - filedata1.iron) / (filedata4.iron - filedata3.iron) * -1;
         const lithium = (filedata2.lithium - filedata1.lithium) / (filedata4.lithium - filedata3.lithium) * -1;
         const cobalt = (filedata2.cobalt - filedata1.cobalt) / (filedata4.cobalt - filedata3.cobalt) * -1;
         const titanium = (filedata2.titanium - filedata1.titanium) / (filedata4.titanium - filedata3.titanium) * -1;
@@ -242,24 +309,27 @@ module.exports = {
         const componentclothing = (filedata2.componentclothing - filedata1.componentclothing) / (filedata4.componentclothing - filedata3.componentclothing) * -1;
         const componentstarting = (filedata2.componentstarting - filedata1.componentstarting) / (filedata4.componentstarting - filedata3.componentstarting) * -1;
 
-        file.set("steel", steel)
-        file.set("steelpart", steelpart)
-        file.set("iron", iron)
-        file.set("carbon", carbon)
-        file.set("brick", brick)
-        file.set("clay", clay)
-        file.set("soil", soil)
-        file.set("water", water)
         file.set("woodplank", woodplank)
         file.set("woodpart", woodpart)
-        file.set("wood", wood)
         file.set("log", log)
         file.set("bamboo", bamboo)
+        file.set("cedar", cedar)
+        file.set("fir", fir)
+        file.set("pine", pine)
+        file.set("redwood", redwood)
+        file.set("ash", ash)
+        file.set("birch", birch)
+        file.set("cherrywood", cherrywood)
+        file.set("mahogany", mahogany)
+        file.set("maple", maple)
+        file.set("oak", oak)
+        file.set("poplar", poplar)
+        file.set("teak", teak)
+        file.set("compositewood", compositewood)
         file.set("pipe", pipe)
         file.set("plasticpart", plasticpart)
         file.set("plastic", plastic)
         file.set("glass", glass)
-        file.set("limestone", limestone)
         file.set("sand", sand)
         file.set("plexiglass", plexiglass)
         file.set("granite", granite)
@@ -268,6 +338,11 @@ module.exports = {
         file.set("chalk", chalk)
         file.set("slate", slate)
         file.set("basalt", basalt)
+        file.set("pebble", pebble)
+        file.set("limestone", limestone)
+        file.set("flint", flint)
+        file.set("onyx", onyx)
+        file.set("travertine", travertine)
         file.set("oil", oil)
         file.set("coal", coal)
         file.set("ironore", ironore)
@@ -279,6 +354,24 @@ module.exports = {
         file.set("mesh", mesh)
         file.set("rubber", rubber)
         file.set("uranium", uranium)
+        file.set("resin", resin)
+        file.set("carbon", carbon)
+        file.set("clay", clay)
+        file.set("soil", soil)
+        file.set("water", water)
+        file.set("cement", cement)
+        file.set("concrete", concrete)
+        file.set("steelsheet", steelsheet)
+        file.set("tape", tape)
+        file.set("brick", brick)
+        file.set("steel", steel)
+        file.set("steelpart", steelpart)
+        file.set("glue", glue);
+        file.set("paper", paper);
+        file.set("salt", salt)
+        file.set("flower", flower)
+        file.set("bakingpowder", bakingpowder)
+        file.set("bread", bread)
         file.set("rice", rice)
         file.set("rye", rye)
         file.set("oats", oats)
@@ -288,21 +381,9 @@ module.exports = {
         file.set("soybean", soybean)
         file.set("sorghum", sorghum)
         file.set("wheat", wheat)
-        file.set("resin", resin)
-        file.set("tape", tape)
-        file.set("glue", glue);
-        file.set("paper", paper);
-        file.set("steelsheet", steelsheet)
         file.set("cocoabean", cocoabean)
         file.set("coffeebean", coffeebean)
         file.set("sugar", sugar)
-        file.set("salt", salt)
-        file.set("flower", flower)
-        file.set("bakingpowder", bakingpowder)
-        file.set("egg", egg)
-        file.set("fish", fish)
-        file.set("meat", meat)
-        file.set("bread", bread)
         file.set("asparagus", asparagus)
         file.set("eggplant", eggplant)
         file.set("broccoli", broccoli)
@@ -388,6 +469,58 @@ module.exports = {
         file.set("edamame", edamame)
         file.set("mungbean", mungbean)
         file.set("cranberrybean", cranberrybean)
+        file.set("acorn", acorn)
+        file.set("almond", almond)
+        file.set("beech", beech)
+        file.set("brazilnut", brazilnut)
+        file.set("candlenut", candlenut)
+        file.set("cashew", cashew)
+        file.set("chestnut", chestnut)
+        file.set("chileanhazel", chileanhazel)
+        file.set("egusi", egusi)
+        file.set("guineapeanut", guineapeanut)
+        file.set("hazelnut", hazelnut)
+        file.set("hickory", hickory)
+        file.set("kolanut", kolanut)
+        file.set("macadamia", macadamia)
+        file.set("malabaralmond", malabaralmond)
+        file.set("malabarchestnut", malabarchestnut)
+        file.set("mamoncillo", mamoncillo)
+        file.set("mongongo", mongongo)
+        file.set("ogbono", ogbono)
+        file.set("paradisenut", paradisenut)
+        file.set("pili", pili)
+        file.set("pistachio", pistachio)
+        file.set("sheanut", sheanut)
+        file.set("walnut", walnut)
+        file.set("cycads", cycads)
+        file.set("ginkgo", ginkgo)
+        file.set("gnetum", gnetum)
+        file.set("juniper", juniper)
+        file.set("pinenut", pinenut)
+        file.set("podocarps", podocarps)
+        file.set("fingermillet", fingermillet)
+        file.set("teff", teff)
+        file.set("fonio", fonio)
+        file.set("prosomillet", prosomillet)
+        file.set("pearlmillet", pearlmillet)
+        file.set("foxtailmillet", foxtailmillet)
+        file.set("triticale", triticale)
+        file.set("durum", durum)
+        file.set("einkorn", einkorn)
+        file.set("spelt", spelt)
+        file.set("kamut", kamut)
+        file.set("emmer", emmer)
+        file.set("kernza", kernza)
+        file.set("amaranth", amaranth)
+        file.set("kaniwa", kaniwa)
+        file.set("quinoa", quinoa)
+        file.set("hanza", hanza)
+        file.set("chia", chia)
+        file.set("flax", flax)
+        file.set("breadnut", breadnut)
+        file.set("sesame", sesame)
+        file.set("buckwheat", buckwheat)
         file.set("thyme", thyme)
         file.set("basil", basil)
         file.set("oregano", oregano)
@@ -417,9 +550,9 @@ module.exports = {
         file.set("goat", goat)
         file.set("llama", llama)
         file.set("rabbit", rabbit)
-        file.set("cement", cement)
-        file.set("concrete", concrete)
-        file.set("pebble", pebble)
+        file.set("egg", egg)
+        file.set("fish", fish)
+        file.set("meat", meat)
         file.set("phenolicfoam", phenolicfoam)
         file.set("polyurethane", polyurethane)
         file.set("xps", xps)
@@ -445,6 +578,7 @@ module.exports = {
         file.set("platinum", platinum)
         file.set("silver", silver)
         file.set("copper", copper)
+        file.set("iron", iron)
         file.set("lithium", lithium)
         file.set("cobalt", cobalt)
         file.set("titanium", titanium)

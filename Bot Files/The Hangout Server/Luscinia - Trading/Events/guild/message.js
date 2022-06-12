@@ -71,8 +71,12 @@ module.exports = async (Discord, client, message) => {
         shardsbronze: 0,
         shardsiron: 0,
 
+        //// Trading Game
+
+        // Valuta
         shard: 30000,
 
+        // Game Statistics
         prestige: 1,
         tradesaccepted: 0,
         tradesrejected: 0,
@@ -86,24 +90,24 @@ module.exports = async (Discord, client, message) => {
         timesbuilt: 0,
         timesdemolished: 0,
 
-        // Metal
-        steel: 0,
-        steelpart: 0,
-        iron: 0,
-        carbon: 0,
-
-        // Brick
-        brick: 0,
-        clay: 0,
-        soil: 0,
-        water: 0,
-
         // Wood
         woodplank: 0,
         woodpart: 0,
-        wood: 0,
         log: 0,
         bamboo: 0,
+        cedar: 0,
+        fir: 0,
+        pine: 0,
+        redwood: 0,
+        ash: 0,
+        birch: 0,
+        cherrywood: 0,
+        mahogany: 0,
+        maple: 0,
+        oak: 0,
+        poplar: 0,
+        teak: 0,
+        compositewood: 0,
 
         // Plastic
         pipe: 0,
@@ -112,7 +116,6 @@ module.exports = async (Discord, client, message) => {
 
         // Glass
         glass: 0,
-        limestone: 0,
         sand: 0,
         plexiglass: 0,
 
@@ -123,6 +126,8 @@ module.exports = async (Discord, client, message) => {
         chalk: 0,
         slate: 0,
         basalt: 0,
+        pebble: 0,
+        limestone: 0,
 
         // Raw Materials
         oil: 0,
@@ -136,6 +141,31 @@ module.exports = async (Discord, client, message) => {
         mesh: 0,
         rubber: 0,
         uranium: 0,
+        resin: 0,
+        carbon: 0,
+        clay: 0,
+        soil: 0,
+        water: 0,
+        flint: 0,
+        onyx: 0,
+        travertine: 0,
+
+        // Building Materials
+        cement: 0,
+        concrete: 0,
+        steelsheet: 0,
+        tape: 0,
+        brick: 0,
+        steel: 0,
+        steelpart: 0,
+
+        // Semi Products
+        glue: 0,
+        paper: 0,
+        salt: 0,
+        flower: 0,
+        bakingpowder: 0,
+        bread: 0,
 
         // Crops
         rice: 0,
@@ -147,23 +177,9 @@ module.exports = async (Discord, client, message) => {
         soybean: 0,
         sorghum: 0,
         wheat: 0,
-
-        // Semi Products
-        resin: 0,
-        tape: 0,
-        glue: 0,
-        paper: 0,
-        steelsheet: 0,
         cocoabean: 0,
         coffeebean: 0,
         sugar: 0,
-        salt: 0,
-        flower: 0,
-        bakingpowder: 0,
-        egg: 0,
-        fish: 0,
-        meat: 0,
-        bread: 0,
 
         // Vegetables
         asparagus: 0,
@@ -256,6 +272,62 @@ module.exports = async (Discord, client, message) => {
         mungbean: 0,
         cranberrybean: 0,
 
+        // Nuts
+        acorn: 0,
+        almond: 0,
+        beech: 0,
+        brazilnut: 0,
+        candlenut: 0,
+        cashew: 0,
+        chestnut: 0,
+        chileanhazel: 0,
+        egusi: 0,
+        guineapeanut: 0,
+        hazelnut: 0,
+        hickory: 0,
+        kolanut: 0,
+        macadamia: 0,
+        malabaralmond: 0,
+        malabarchestnut: 0,
+        mamoncillo: 0,
+        mongongo: 0,
+        ogbono: 0,
+        paradisenut: 0,
+        pili: 0,
+        pistachio: 0,
+        sheanut: 0,
+        walnut: 0,
+        cycads: 0,
+        ginkgo: 0,
+        gnetum: 0,
+        juniper: 0,
+        pinenut: 0,
+        podocarps: 0,
+
+        // Seeds
+        fingermillet: 0,
+        teff: 0,
+        fonio: 0,
+        prosomillet: 0,
+        pearlmillet: 0,
+        foxtailmillet: 0,
+        triticale: 0,
+        durum: 0,
+        einkorn: 0,
+        spelt: 0,
+        kamut: 0,
+        emmer: 0,
+        kernza: 0,
+        amaranth: 0,
+        kaniwa: 0,
+        quinoa: 0,
+        hanza: 0,
+        chia: 0,
+        flax: 0,
+        breadnut: 0,
+        sesame: 0,
+        buckwheat: 0,
+
         // Spices and Herbs
         thyme: 0,
         basil: 0,
@@ -288,19 +360,17 @@ module.exports = async (Discord, client, message) => {
         goat: 0,
         llama: 0,
         rabbit: 0,
-
-        // Building Materials
-        cement: 0,
-        concrete: 0, // cement + water + pebble
-        pebble: 0,
+        egg: 0,
+        fish: 0,
+        meat: 0,
 
         // Insulation
-        phenolicfoam: 0, // resin
-        polyurethane: 0, // reactor
-        xps: 0, // oil
-        rockwool: 0, // basalt
-        foamglass: 0, // sand + limestone
-        glasswool: 0, // reactor
+        phenolicfoam: 0,
+        polyurethane: 0,
+        xps: 0,
+        rockwool: 0,
+        foamglass: 0,
+        glasswool: 0,
         doubleglass: 0,
         tripleglass: 0,
 
@@ -310,153 +380,154 @@ module.exports = async (Discord, client, message) => {
         fibre: 0,
         carbonfibre: 0,
 
-  // Reactor Material
-  chemical: 0,
-  polymaterial: 0,
-  acid: 0,
-  catalyst: 0, // Faster production time + lower production cost
+        // Reactor Material
+        chemical: 0,
+        polymaterial: 0,
+        acid: 0,
+        catalyst: 0,
 
-  // Rare Metals
-  chromepart: 0, // Brass + Chrome
-  chrome: 0,
-  brasspart: 0,
-  brass: 0, // Zinc + Copper
-  diamond: 0,
-  gold: 0,
-  platinum: 0,
-  silver: 0,
-  copper: 0,
-  lithium: 0,
-  cobalt: 0,
-  titanium: 0,
-  tungsten: 0,
-  nickel: 0,
-  magnesium: 0,
-  lead: 0,
-  tin: 0,
-  mercury: 0,
-  bismuth: 0,
-  rodium: 0,
-  osmium: 0,
-  palladium: 0,
-  iridium: 0,
-  ruthenium: 0,
-  plutonium: 0,
+        // Metals
+        chromepart: 0,
+        chrome: 0,
+        brasspart: 0,
+        brass: 0,
+        diamond: 0,
+        gold: 0,
+        platinum: 0,
+        silver: 0,
+        copper: 0,
+        iron: 0,
+        lithium: 0,
+        cobalt: 0,
+        titanium: 0,
+        tungsten: 0,
+        nickel: 0,
+        magnesium: 0,
+        lead: 0,
+        tin: 0,
+        mercury: 0,
+        bismuth: 0,
+        rodium: 0,
+        osmium: 0,
+        palladium: 0,
+        iridium: 0,
+        ruthenium: 0,
+        plutonium: 0,
 
-  // Components
-  componentelectric: 0,
-  componentinterior: 0,
-  componentclothing: 0,
-  componentstarting: 0,
+        // Components
+        componentelectric: 0,
+        componentinterior: 0,
+        componentclothing: 0,
+        componentstarting: 0,
 
-  // Statistics
-  happinesspercentage: 0,
-  crimerate: 0,
-  population: 0,
-  powerusage: 0,
-  waterusage: 0,
-  gasusage: 0,
-  taxincome: 5000,
+        // Statistics
+        happinesspercentage: 0,
+        crimerate: 0,
+        population: 0,
+        powerusage: 0,
+        waterusage: 0,
+        gasusage: 0,
+        taxincome: 5000,
 
-  // House
-  housetier1: 0,
-  housetier2: 0,
-  housetier3: 0,
-  housetier4: 0,
-  housetier5: 0,
-  
-  // Nature
-  river: 0,
-  forest: 0,
-  beach: 0,
-  mine: 0,
-  field: 0,
-  oilwell: 0,
+        // House
+        housetier1: 0,
+        housetier2: 0,
+        housetier3: 0,
+        housetier4: 0,
+        housetier5: 0,
 
-  // Services
-  park: 0,
-  school: 0,
-  cinema: 0,
-  restaurant: 0,
-  hotel: 0,
+        // Nature
+        river: 0,
+        forest: 0,
+        beach: 0,
+        mine: 0,
+        field: 0,
+        oilwell: 0,
 
-  // Warehouse
-  warehousetier1: 1,
-  warehousetier2: 0,
-  warehousetier3: 0,
-  warehousetier4: 0,
-  warehousetier5: 0,
+        // Services
+        park: 0,
+        school: 0,
+        cinema: 0,
+        restaurant: 0,
+        hotel: 0,
 
-  // Police
-  policetier1: 0,
-  policetier2: 0,
-  policetier3: 0,
+        // Warehouse
+        warehousetier1: 1,
+        warehousetier2: 0,
+        warehousetier3: 0,
+        warehousetier4: 0,
+        warehousetier5: 0,
 
-  // Fire Department
-  firedepartmenttier1: 0,
-  firedepartmenttier2: 0,
-  firedepartmenttier3: 0,
+        // Police
+        policetier1: 0,
+        policetier2: 0,
+        policetier3: 0,
 
-  // Hospital
-  hospitaltier1: 0,
-  hosptialtier2: 0,
-  hospitaltier3: 0,
+        // Fire Department
+        firedepartmenttier1: 0,
+        firedepartmenttier2: 0,
+        firedepartmenttier3: 0,
 
-  // Mall
-  malltier1: 0,
-  malltier2: 0,
-  
-  // Cityhall
-  cityhalltier1: 1,
-  cityhalltier2: 0,
+        // Hospital
+        hospitaltier1: 0,
+        hosptialtier2: 0,
+        hospitaltier3: 0,
 
-  // Landfill
-  landfilltier1: 0,
-  landfilltier2: 0,
-  landfilltier3: 0,
+        // Mall
+        malltier1: 0,
+        malltier2: 0,
 
-  // Energy
-  nuclearreactortier1: 0,
-  nuclearreactortier2: 0,
-  windmill: 0,
-  sonarpanel: 0,
-  
-  // Refinement
-  sawmilltier1: 0,
-  sawmilltier2: 0,
-  refinerytier1: 0,
-  refinerytier2: 0,
+        // Cityhall
+        cityhalltier1: 1,
+        cityhalltier2: 0,
 
-  // Store
-  interiorshoptier1: 0,
-  interiorshoptier2: 0,
-  clothingshoptier1: 0,
-  clothingshoptier2: 0,
-  drugstoretier1: 0,
-  drugstoretier2: 0,
-  conveniencestoretier1: 0,
-  conveniencestoretier2: 0,
-  conveniencestoretier3: 0,
-  devicestoretier1: 0,
-  devicestoretier2: 0,
-  devicestoretier3: 0,
-  
-  // Production
-  reactortier1: 0,
-  reactortier2: 0,
-  factorytier1: 0,
-  factorytier2: 0,
+        // Landfill
+        landfilltier1: 0,
+        landfilltier2: 0,
+        landfilltier3: 0,
 
-  // Plant
-  energyplanttier1: 0,
-  energyplanttier2: 0,
-  energyplanttier3: 0,
-  waterplanttier1: 0,
-  waterplanttier2: 0,
-  waterplanttier3: 0,
-  gasplanttier1: 0,
-  gasplanttier2: 0,
-  gasplanttier3: 0,
+        // Energy
+        nuclearreactortier1: 0,
+        nuclearreactortier2: 0,
+        windmill: 0,
+        sonarpanel: 0,
+
+        // Refinement
+        sawmilltier1: 0,
+        sawmilltier2: 0,
+        refinerytier1: 0,
+        refinerytier2: 0,
+
+        // Store
+        interiorshoptier1: 0,
+        interiorshoptier2: 0,
+        clothingshoptier1: 0,
+        clothingshoptier2: 0,
+        drugstoretier1: 0,
+        drugstoretier2: 0,
+        conveniencestoretier1: 0,
+        conveniencestoretier2: 0,
+        conveniencestoretier3: 0,
+        devicestoretier1: 0,
+        devicestoretier2: 0,
+        devicestoretier3: 0,
+
+        // Production
+        reactortier1: 0,
+        reactortier2: 0,
+        factorytier1: 0,
+        factorytier2: 0,
+
+        // Plant
+        energyplanttier1: 0,
+        energyplanttier2: 0,
+        energyplanttier3: 0,
+        waterplanttier1: 0,
+        waterplanttier2: 0,
+        waterplanttier3: 0,
+        gasplanttier1: 0,
+        gasplanttier2: 0,
+        gasplanttier3: 0,
 
         // Board
         a1: "Empty",
