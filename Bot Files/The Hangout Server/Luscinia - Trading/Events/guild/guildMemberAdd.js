@@ -385,7 +385,7 @@ module.exports = async (message, args, cmd, client, Discord, member, profileData
     tin: 0,
     mercury: 0,
     bismuth: 0,
-    rodium: 0,
+    rhodium: 0,
     osmium: 0,
     palladium: 0,
     iridium: 0,

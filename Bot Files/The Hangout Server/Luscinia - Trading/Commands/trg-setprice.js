@@ -299,7 +299,7 @@ module.exports = {
         const tin = (filedata1.tin * 1000) + filedata2.tin;
         const mercury = (filedata1.mercury * 1000) + filedata2.mercury;
         const bismuth = (filedata1.bismuth * 1000) + filedata2.bismuth;
-        const rodium = (filedata1.rodium * 1000) + filedata2.rodium;
+        const rhodium = (filedata1.rhodium * 1000) + filedata2.rhodium;
         const osmium = (filedata1.osmium * 1000) + filedata2.osmium;
         const palladium = (filedata1.palladium * 1000) + filedata2.palladium;
         const iridium = (filedata1.iridium * 1000) + filedata2.iridium;
@@ -590,7 +590,7 @@ module.exports = {
         file.set("tin", tin)
         file.set("mercury", mercury)
         file.set("bismuth", bismuth)
-        file.set("rodium", rodium)
+        file.set("rhodium", rhodium)
         file.set("osmium", osmium)
         file.set("palladium", palladium)
         file.set("iridium", iridium)

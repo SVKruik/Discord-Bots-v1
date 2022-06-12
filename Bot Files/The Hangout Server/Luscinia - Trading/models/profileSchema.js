@@ -180,7 +180,7 @@ const profileSchema = new mongoose.Schema({
   yam: { type: Number, default: 0 },
   potato: { type: Number, default: 0 },
 
-  // Fruit - 45
+  // Fruits - 45
   acerola: { type: Number, default: 0 },
   apple: { type: Number, default: 0 },
   apricot: { type: Number, default: 0 },
@@ -378,7 +378,7 @@ const profileSchema = new mongoose.Schema({
   tin: { type: Number, default: 0 },
   mercury: { type: Number, default: 0 },
   bismuth: { type: Number, default: 0 },
-  rodium: { type: Number, default: 0 },
+  rhodium: { type: Number, default: 0 },
   osmium: { type: Number, default: 0 },
   palladium: { type: Number, default: 0 },
   iridium: { type: Number, default: 0 },
@@ -459,7 +459,7 @@ const profileSchema = new mongoose.Schema({
 
   // Energy - 4
   nuclearreactortier1: { type: Number, default: 0 },
-  nuclearreactortier2: { type: Number, default: 0 },
+  nuclearreactortier1: { type: Number, default: 0 },
   windmill: { type: Number, default: 0 },
   sonarpanel: { type: Number, default: 0 },
   

@@ -311,7 +311,7 @@ module.exports = {
         "tin",
         "mercury",
         "bismuth",
-        "rodium",
+        "rhodium",
         "osmium",
         "palladium",
         "iridium",

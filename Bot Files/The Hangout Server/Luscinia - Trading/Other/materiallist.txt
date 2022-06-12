@@ -278,7 +278,7 @@ lead
 tin
 mercury
 bismuth
-rodium
+rhodium
 osmium
 palladium
 iridium
