@@ -232,7 +232,7 @@ module.exports = async (Discord, client, message) => {
         honeydewmelon: 0,
         jackfruit: 0,
         jujubefruit: 0,
-        kiwifruit: 0,
+        kiwi: 0,
         kumquat: 0,
         lemon: 0,
         lime: 0,

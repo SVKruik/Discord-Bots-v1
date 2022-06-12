@@ -141,7 +141,7 @@ module.exports = {
         const honeydewmelon = (filedata2.honeydewmelon - filedata1.honeydewmelon) / (filedata4.honeydewmelon - filedata3.honeydewmelon) * -1;
         const jackfruit = (filedata2.jackfruit - filedata1.jackfruit) / (filedata4.jackfruit - filedata3.jackfruit) * -1;
         const jujubefruit = (filedata2.jujubefruit - filedata1.jujubefruit) / (filedata4.jujubefruit - filedata3.jujubefruit) * -1;
-        const kiwifruit = (filedata2.kiwifruit - filedata1.kiwifruit) / (filedata4.kiwifruit - filedata3.kiwifruit) * -1;
+        const kiwi = (filedata2.kiwi - filedata1.kiwi) / (filedata4.kiwi - filedata3.kiwi) * -1;
         const kumquat = (filedata2.kumquat - filedata1.kumquat) / (filedata4.kumquat - filedata3.kumquat) * -1;
         const lemon = (filedata2.lemon - filedata1.lemon) / (filedata4.lemon - filedata3.lemon) * -1;
         const lime = (filedata2.lime - filedata1.lime) / (filedata4.lime - filedata3.lime) * -1;
@@ -432,7 +432,7 @@ module.exports = {
         file.set("honeydewmelon", honeydewmelon)
         file.set("jackfruit", jackfruit)
         file.set("jujubefruit", jujubefruit)
-        file.set("kiwifruit", kiwifruit)
+        file.set("kiwi", kiwi)
         file.set("kumquat", kumquat)
         file.set("lemon", lemon)
         file.set("lime", lime)

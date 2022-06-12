@@ -121,7 +121,7 @@ guava
 honeydewmelon
 jackfruit
 jujubefruit
-kiwifruit
+kiwi
 kumquat
 lemon
 lime

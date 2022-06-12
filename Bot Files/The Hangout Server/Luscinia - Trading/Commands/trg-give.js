@@ -154,7 +154,7 @@ module.exports = {
         "honeydewmelon",
         "jackfruit",
         "jujubefruit",
-        "kiwifruit",
+        "kiwi",
         "kumquat",
         "lemon",
         "lime",
