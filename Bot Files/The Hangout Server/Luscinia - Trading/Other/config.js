@@ -679,6 +679,7 @@ exports.aliases = {
   aliasestradingslope: ["richtingscoefficient", "rico", "rc"], // Trading Slope
   aliasestradingstatistics: ["tradingstats", "trgstatistics", "trgstats"], // Trading Statistics
   aliasestradingstock: ["trgstock"], // Trading Stock
+  aliasestradingtrade:  ["trgtrade", "trade", "trg"], // Trading Trade
   aliasestradingupdate: ["bulkupdate", "upd", "bulkupd"], // Trading Update
   aliasestradingwarehouse: ["trgwarehouse", "trgware"], // Trading Warehouse
 };
@@ -812,6 +813,7 @@ exports.cooldown = {
   cooldowntradingslope: B,
   cooldowntradingstatistics: F,
   cooldowntradingstock: H,
+  cooldowntradingtrade: H,
   cooldowntradingupdate: B,
   cooldowntradingwarehouse: H,
 };
@@ -938,6 +940,7 @@ exports.permissions = {
   permissiontradingslope: I,
   permissiontradingstatistics: J,
   permissiontradingstock: J,
+  permissiontradingtrade: J,
   permissiontradingupdate: I,
   permissiontradingwarehouse: J,
 };
