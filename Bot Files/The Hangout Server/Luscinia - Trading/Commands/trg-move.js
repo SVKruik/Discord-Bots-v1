@@ -265,6 +265,9 @@ module.exports = {
                         userID: message.author.id,
                     },
                     {
+                        $inc: {
+                            shard: -500,
+                        },
                         $set: {
                             [currentplace]: "Empty",
                             [newplace]: currentbuilding,

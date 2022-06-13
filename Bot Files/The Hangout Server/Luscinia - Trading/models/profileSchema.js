@@ -351,7 +351,7 @@ const profileSchema = new mongoose.Schema({
   fibre: { type: Number, default: 0 },
   carbonfibre: { type: Number, default: 0 },
 
-  // Reactor Material - 4
+  // Reactor Materials - 4
   chemical: { type: Number, default: 0 },
   polymaterial: { type: Number, default: 0 },
   acid: { type: Number, default: 0 },
