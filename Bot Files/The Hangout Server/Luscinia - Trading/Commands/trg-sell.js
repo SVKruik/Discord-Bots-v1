@@ -304,15 +304,16 @@ module.exports = {
                 "componentclothing",
                 "componentstarting"
             ]
-            const material = args[0]
-            if (materiallist.includes(args[0]) == false) {
+            const material1 = args[0]
+            const material = material1.toLowerCase();
+            const amount = args[1]
+            if (materiallist.includes(material) == false) {
                 return message.channel.send(`The item that you are trying to sell doesn't exist or you have a typo.`)
             };
-            const amount = args[1]
-            if (!args[0]) {
+            if (!material) {
                 return message.channel.send(`What would you like to sell?`)
             }
-            if (!args[1]) {
+            if (!amount) {
                 return message.channel.send(`How many of this item would you like to sell?`)
             }
             let file1 = editJsonFile(`./marketdynprice.json`); // update price

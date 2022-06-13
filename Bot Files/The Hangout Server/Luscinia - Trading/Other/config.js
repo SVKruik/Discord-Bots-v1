@@ -665,21 +665,22 @@ exports.aliases = {
   aliaseswarnings: ["warning", "warns", "warn"], // Warnings
   aliasestradingbalance: ["trgbalance", "trgbal"], // Trading Balance
   aliasestradingbuy: ["trgbuy"], // Trading Buy
-  aliasescross: ["trgcross"], // Trading Cross
+  aliasestradingcross: ["trgcross"], // Trading Cross
   aliasestradingdemolish: ["trgdemolish", "trgdemo"], // Trading Demolish
   aliasestradinggive: ["trggive"], // Trading Give
   aliasestradingminus: ["trgminus", "trgmin"], // Trading Give
+  aliasestradingmove: ["trgmove"], // Trading Movee
   aliasestradingsell: ["trgsell"], // Trading Sell
   aliasestradingprice: ["trgprice"], // Trading Price
-  aliasesprint: ["log"], // Trading Print
-  aliasestradingset: ["trgset"],
+  aliasestradingprint: ["log"], // Trading Print
+  aliasestradingset: ["trgset"], // Trading Set
   aliasestradingplace: ["trgplace"], // Trading Place
-  aliasessetprice: [], // Trading Set Price
-  aliasesslope: ["richtingscoefficient", "rico", "rc"], // Trading Slope
+  aliasestradingsetprice: ["trgsetprice"], // Trading Set Price
+  aliasestradingslope: ["richtingscoefficient", "rico", "rc"], // Trading Slope
   aliasestradingstatistics: ["tradingstats", "trgstatistics", "trgstats"], // Trading Statistics
   aliasestradingstock: ["trgstock"], // Trading Stock
-  aliasesupdate: ["bulkupdate", "upd", "bulkupd"], // Trading Update
-  aliaseswarehouse: ["ware"], // Warehouse
+  aliasestradingupdate: ["bulkupdate", "upd", "bulkupd"], // Trading Update
+  aliasestradingwarehouse: ["trgwarehouse", "trgware"], // Trading Warehouse
 };
 
 const A = 84000; // Daily
@@ -797,21 +798,22 @@ exports.cooldown = {
   cooldownwarnings: G,
   cooldowntradingbalance: H,
   cooldowntradingbuy: H,
-  cooldowncross: B,
+  cooldowntradingcross: B,
   cooldowntradingdemolish: H,
   cooldowntradinggive: B,
   cooldowntradingminus: B,
+  cooldowntradingmove: H,
   cooldowntradingplace: H,
   cooldowntradingprice: H,
-  cooldownprint: H,
+  cooldowntradingprint: H,
   cooldowntradingsell: H,
   cooldowntradingset: B,
-  cooldownsetprice: B,
-  cooldownslope: B,
+  cooldowntradingsetprice: B,
+  cooldowntradingslope: B,
   cooldowntradingstatistics: F,
   cooldowntradingstock: H,
-  cooldownupdate: B,
-  cooldownwarehouse: H,
+  cooldowntradingupdate: B,
+  cooldowntradingwarehouse: H,
 };
 
 const I = ["ADMINISTRATOR"]; // Permission for admin commands.
@@ -922,19 +924,20 @@ exports.permissions = {
   permissionwarnings: J,
   permissiontradingbalance: J,
   permissiontradingbuy: J,
-  permissioncross: I,
+  permissiontradingcross: I,
   permissiontradingdemolish: J,
   permissiontradinggive: I,
   permissiontradingminus: I,
+  permissiontradingmove: J,
   permissiontradingprice: J,
-  permissionprint: I,
+  permissiontradingprint: I,
   permissiontradingsell: J,
   permissiontradingset: I,
   permissiontradingplace: J,
-  permissionsetprice: I,
-  permissionslope: I,
+  permissiontradingsetprice: I,
+  permissiontradingslope: I,
   permissiontradingstatistics: J,
   permissiontradingstock: J,
-  permissionupdate: I,
-  permissionwarehouse: J,
+  permissiontradingupdate: I,
+  permissiontradingwarehouse: J,
 };

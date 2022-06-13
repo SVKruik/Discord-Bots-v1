@@ -6,9 +6,9 @@ const editJsonFile = require("edit-json-file");
 
 module.exports = {
     name: "slope",
-    aliases: config.aliases.aliasesslope,
-    cooldown: config.cooldown.cooldownslope,
-    permissions: config.permissions.permissionslope,
+    aliases: config.aliases.aliasestradingslope,
+    cooldown: config.cooldown.cooldowntradingslope,
+    permissions: config.permissions.permissiontradingslope,
     description: "Calculate the slope.",
     async execute(message, args, cmd, client, Discord, profileData) {
         message.channel.send(`Received, check console.`);

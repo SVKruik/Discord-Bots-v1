@@ -6,9 +6,9 @@ const editJsonFile = require("edit-json-file");
 
 module.exports = {
     name: "cross",
-    aliases: config.aliases.aliasescross,
-    cooldown: config.cooldown.cooldowncross,
-    permissions: config.permissions.permissioncross,
+    aliases: config.aliases.aliasestradingcross,
+    cooldown: config.cooldown.cooldowntradingcross,
+    permissions: config.permissions.permissiontradingcross,
     description: "Bulk write slope data.",
     async execute(message, args, cmd, client, Discord, profileData) {
         message.channel.send(`Received, check console.`);

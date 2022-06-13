@@ -12,24 +12,6 @@ module.exports = {
   description: "Give someone materials.",
   async execute(message, args, cmd, client, Discord, profileData) {
     try {
-      if (!args[0]) {
-        return message.channel.send(config.basemessages.messagesmembermention)
-      };
-      const material = args[1];
-      const amount = args[2];
-      if (!args[1]) {
-        return message.channel.send(`You are missing the type of material/item.`)
-      }
-      if (!args[2]) {
-        return message.channel.send(config.basemessages.messagesamountmissing)
-      }
-      const target = message.mentions.users.first();
-      if (!target) {
-        return message.channel.send(config.basemessages.messagesfinderror);
-      }
-      if (amount <= 0) {
-        return message.channel.send(config.basemessages.messagesgreaterone);
-      }
       const materiallist = [
         "woodplank",
         "woodpart",
@@ -322,7 +304,26 @@ module.exports = {
         "componentclothing",
         "componentstarting"
       ]
-      if (materiallist.includes(args[0]) == false) {
+      const material1 = args[1];
+      const amount = args[2];
+      const material = material1.toLowerCase();
+      if (!args[0]) {
+        return message.channel.send(config.basemessages.messagesmembermention)
+      };
+      if (!material) {
+        return message.channel.send(`You are missing the type of material/item.`)
+      }
+      if (!amount) {
+        return message.channel.send(config.basemessages.messagesamountmissing)
+      }
+      const target = message.mentions.users.first();
+      if (!target) {
+        return message.channel.send(config.basemessages.messagesfinderror);
+      }
+      if (amount <= 0) {
+        return message.channel.send(config.basemessages.messagesgreaterone);
+      }
+      if (materiallist.includes(material) == false) {
         return message.channel.send(`The item that you are trying to give doesn't exist or you have a typo.`)
       };
       try {

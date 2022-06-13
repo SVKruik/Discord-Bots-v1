@@ -14,7 +14,6 @@ module.exports = {
     async execute(message, args, cmd, client, Discord, profileData) {
         try {
             const attachment = new MessageAttachment('marketdynprice.json')
-
             message.channel.send(`File 1: Current Price`)
             message.channel.send({ files: [attachment] });
         } catch (err) {

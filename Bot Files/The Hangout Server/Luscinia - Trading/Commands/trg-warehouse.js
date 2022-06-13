@@ -7,9 +7,9 @@ const { MessageAttachment } = require('discord.js')
 
 module.exports = {
     name: "warehouse",
-    aliases: config.aliases.aliaseswarehouse,
-    cooldown: config.cooldown.cooldownwarehouse,
-    permissions: config.permissions.permissionwarehouse,
+    aliases: config.aliases.aliasestradingwarehouse,
+    cooldown: config.cooldown.cooldowntradingwarehouse,
+    permissions: config.permissions.permissiontradingwarehouse,
     description: "Check all your inventory of materials.",
     async execute(message, args, cmd, client, Discord, profileData) {
         const attachment = new MessageAttachment('Other/Category.png')

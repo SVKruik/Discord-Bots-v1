@@ -6,9 +6,9 @@ const editJsonFile = require("edit-json-file");
 
 module.exports = {
     name: "setprice",
-    aliases: config.aliases.aliasessetprice,
-    cooldown: config.cooldown.cooldownsetprice,
-    permissions: config.permissions.permissionsetprice,
+    aliases: config.aliases.aliasestradingsetprice,
+    cooldown: config.cooldown.cooldowntradingsetprice,
+    permissions: config.permissions.permissiontradingsetprice,
     description: "Recalculate the standard price.",
     async execute(message, args, cmd, client, Discord, profileData) {
         message.channel.send(`Received, check console.`)

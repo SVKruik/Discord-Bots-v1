@@ -239,13 +239,14 @@ module.exports = {
                 "o14",
                 "o15"
             ]
-            if (!args[0]) {
+            const place1 = args[0]
+            const place = place1.toLowerCase();
+            if (!place) {
                 return message.channel.send(`What place would you like to clear?`)
             }
-            if (placelist.includes(args[0]) == false) {
+            if (placelist.includes(place) == false) {
                 return message.channel.send(`The place that you are trying to clear doesn't exist or you have a typo.`)
             };
-            const place = args[0]
             if (profileData[place] == "Empty") {
                 return message.channel.send(`You haven't built here yet.`)
             }

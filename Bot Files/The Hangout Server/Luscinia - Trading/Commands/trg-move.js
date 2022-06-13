@@ -1,89 +1,17 @@
-// Plaats een gebouw op het bord.
+// Verplaats een gebouw.
 
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 const editJsonFile = require("edit-json-file");
 
 module.exports = {
-    name: "tradingplace",
-    aliases: config.aliases.aliasestradingplace,
-    cooldown: config.cooldown.cooldowntradingplace,
-    permissions: config.permissions.permissiontradingplace,
-    description: "Place an owned building on your board.",
+    name: "tradingmove",
+    aliases: config.aliases.aliasestradingmove,
+    cooldown: config.cooldown.cooldowntradingmove,
+    permissions: config.permissions.permissiontradingmove,
+    description: "Move a building to a different place.",
     async execute(message, args, cmd, client, Discord, profileData) {
         try {
-            const buildinglist = [
-                "housetier1",
-                "housetier2",
-                "housetier3",
-                "housetier4",
-                "housetier5",
-                "river",
-                "forest",
-                "beach",
-                "mine",
-                "field",
-                "oilwell",
-                "park",
-                "school",
-                "cinema",
-                "restaurant",
-                "hotel",
-                "warehousetier1",
-                "warehousetier2",
-                "warehousetier3",
-                "warehousetier4",
-                "warehousetier5",
-                "policetier1",
-                "policetier2",
-                "policetier3",
-                "firedepartmenttier1",
-                "firedepartmenttier2",
-                "firedepartmenttier3",
-                "hospitaltier1",
-                "hospitaltier2",
-                "hospitaltier3",
-                "malltier1",
-                "malltier2",
-                "cityhalltier1",
-                "cityhalltier2",
-                "landfilltier1",
-                "landfilltier2",
-                "landfilltier3",
-                "nuclearreactortier1",
-                "nuclearreactortier2",
-                "windmill",
-                "sonarpanel",
-                "sawmilltier1",
-                "sawmilltier2",
-                "refinerytier1",
-                "refinerytier2",
-                "interiorshoptier1",
-                "interiorshoptier2",
-                "clothingshoptier1",
-                "clothingshoptier2",
-                "drugstoretier1",
-                "drugstoretier2",
-                "conveniencestoretier1",
-                "conveniencestoretier2",
-                "conveniencestoretier3",
-                "devicestoretier1",
-                "devicestoretier2",
-                "devicestoretier3",
-                "reactortier1",
-                "reactortier2",
-                "factorytier1",
-                "factorytier2",
-                "energyplanttier1",
-                "energyplanttier2",
-                "energyplanttier3",
-                "waterplanttier1",
-                "waterplanttier2",
-                "waterplanttier3",
-                "gasplanttier1",
-                "gasplanttier2",
-                "gasplanttier3",
-            ]
             const placelist = [
                 "a1",
                 "a2",
@@ -311,50 +239,47 @@ module.exports = {
                 "o14",
                 "o15"
             ]
-            const building1 = args[0]
-            const place1 = args[1]
-            const building = building1.toLowerCase();
-            const place = place1.toLowerCase();
-            if (!building) {
-                return message.channel.send(`What building type would you like to place?`)
+            const currentplace1 = args[0]
+            const newplace1 = args[1]
+            const currentplace = currentplace1.toLowerCase();
+            const newplace = newplace1.toLowerCase();
+            if (!currentplace) {
+                return message.channel.send(`What place would you like to move?`)
             }
-            if (!place) {
-                return message.channel.send(`Where would you like to place this?`)
+            if (!newplace) {
+                return message.channel.send(`Where would you like to move your to?`)
             }
-            if (buildinglist.includes(building) == false) {
-                return message.channel.send(`The building that you are trying to place doesn't exist or you have a typo.`)
+            if (placelist.includes(currentplace) == false) {
+                return message.channel.send(`The place that you are trying to move doesn't exist or you have a typo.`)
             };
-            if (placelist.includes(place) == false) {
-                return message.channel.send(`The place that you are trying to build on doesn't exist or you have a typo.`)
+            if (placelist.includes(newplace) == false) {
+                return message.channel.send(`The place that you are trying to move to doesn't exist or you have a typo.`)
             };
+            const currentbuilding = profileData[currentplace]
+            if (profileData[newplace] !== "Empty")  {
+                return message.channel.send(`The place that you are trying to move to, isn't empty. Move or demolish that building first and try again.`) 
+            }
             try {
-                if (1 > profileData[building]) {
-                    return message.channel.send(`You don't have any buildings of this type left.`)
-                }
-                const amountleft = profileData[building] - 1
                 await profileModel.findOneAndUpdate(
                     {
                         userID: message.author.id,
                     },
                     {
-                        $inc: {
-                            [building]: -1,
-                            actions: 1,
-                            timesbuilt: 1,
-                        },
                         $set: {
-                            [place]: building,
+                            [currentplace]: "Empty",
+                            [newplace]: currentbuilding,
                         },
-                    },
+                    }
                 );
-                message.channel.send(`You have succesfully placed \`${building}\` on \`${place}\`. You have \`${amountleft}\` \`${building}\` left.`)
+
+                message.channel.send(`You have succesfully moved \`${currentbuilding}\` from \`${currentplace}\` \`${newplace}\`.`)
             } catch (err) {
                 console.log(err);
                 message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
             }
         } catch (err) {
             console.log(err)
-            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`) // Error Systeem
+            message.channel.send(`Error executing command. EC: \`${config.errorcodes.err2}\`.`)
         }
     },
 };
