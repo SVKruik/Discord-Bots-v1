@@ -2,7 +2,7 @@
 
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const axios = require('axios');
-const fetch = require('node-fetch');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 module.exports = {
     name: "urban",
