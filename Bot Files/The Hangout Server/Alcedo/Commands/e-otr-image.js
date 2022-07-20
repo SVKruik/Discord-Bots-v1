@@ -6,6 +6,8 @@ const google = new Scraper({
     },
 });
 
+const { EmbedBuilder } = require('discord.js');
+
 module.exports = {
     name: "image",
     aliases: config.aliases.aliasesimage,

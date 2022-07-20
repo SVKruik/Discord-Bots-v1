@@ -1,6 +1,8 @@
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const os = require('os');
 
+const { EmbedBuilder } = require('discord.js');
+
 module.exports = {
     name: "botstatistics",
     aliases: config.aliases.aliasesbotstats,

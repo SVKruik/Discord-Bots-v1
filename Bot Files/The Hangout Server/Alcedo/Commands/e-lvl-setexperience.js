@@ -1,6 +1,8 @@
 const config = require("../Other/config.js");
 const profileModel = require("../models/profileSchema");
 
+const { EmbedBuilder } = require('discord.js');
+
 module.exports = {
     name: "setexperience",
     aliases: config.aliases.aliasessetexperience,

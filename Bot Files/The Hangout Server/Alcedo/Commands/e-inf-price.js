@@ -1,6 +1,8 @@
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
+const { EmbedBuilder } = require('discord.js');
+
 module.exports = {
     name: "price",
     aliases: config.aliases.aliasesprice,

@@ -2,6 +2,8 @@ const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 const axios = require('axios');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
+const { EmbedBuilder } = require('discord.js');
+
 module.exports = {
     name: "urban",
     aliases: config.aliases.aliasesurban,

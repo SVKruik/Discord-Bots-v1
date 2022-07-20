@@ -4,7 +4,7 @@
 // Veel kern spulletjes die eenmaal geschreven niet meer aangeraakt hoeven te worden. 
 
 require("dotenv").config();
-const config = require("./../../Other/config.js");
+const config = require("../../Other/config.js");
 const cooldowns = new Map();
 
 module.exports = async (Discord, client, message) => {

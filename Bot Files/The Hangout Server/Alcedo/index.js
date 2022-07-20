@@ -4,22 +4,30 @@
 // Alcedo is for testing the Docker container.
 
 //Index
-const Discord = require("Discord.js");
+const Discord = require("discord.js");
 const fs = require("fs");
 const config = require('./Other/config.js');
 const mongoose = require("mongoose");
 const { version } = require("os");
 const { channel } = require("diagnostics_channel");
 require("dotenv").config();
-const { Client, GatewayIntentBits, Partials } = require('discord.js');
-const client = new Client({ intents: [GatewayIntentBits.Guilds], partials: [Partials.Channel] });
+// const { Client, GatewayIntentBits, Partials } = require('discord.js');
+// const client = new Client({ intents: [GatewayIntentBits.Guilds], partials: [Partials.Channel] });
+
+const { Client, GatewayIntentBits } = require('discord.js');
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+  ],
+});
 
 //Core Code
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 
 ["command_handler", "event_handler"].forEach((handler) => {
-  require(`./Handlers/${handler}`)(client, Discord);
+  require(`./handlers/${handler}`)(client, Discord);
 });
 
 //Database - Economy, MongoDB and Robo3T

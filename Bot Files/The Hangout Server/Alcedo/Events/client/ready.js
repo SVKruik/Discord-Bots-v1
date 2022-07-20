@@ -5,7 +5,7 @@ const config = require("./../../Other/config.js");
 
 module.exports = () => {
     const fs = require("fs");
-    const commands = fs.readdirSync("./Commands").length;
+    const commands = fs.readdirSync("./commands").length;
 
     var today = new Date();
     var ss = String(today.getSeconds()).padStart(2, '0');
@@ -18,6 +18,6 @@ module.exports = () => {
     today = ss + " Seconds / " + m + " Minutes / " + hh + " Hours / " + dd + " Days / " + mm + " Months / " + yyyy;
 
     console.log(`Succesfully loaded ${commands} files.`)
-    console.log(`I started this session on ${today}.`)
+    console.log(`Session started on ${today}.`)
     console.log(process.env.ONLINE);
 }
