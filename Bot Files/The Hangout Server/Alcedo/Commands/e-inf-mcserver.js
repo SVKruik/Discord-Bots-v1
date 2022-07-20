@@ -1,8 +1,6 @@
 const util = require("minecraft-server-util");
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
-const { EmbedBuilder } = require('discord.js');
-
 module.exports = {
     name: "minecraftserver",
     aliases: config.aliases.aliasesmcserver,

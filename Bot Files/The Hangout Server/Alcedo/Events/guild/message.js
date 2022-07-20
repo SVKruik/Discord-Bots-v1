@@ -823,6 +823,7 @@ module.exports = async (Discord, client, message) => {
     "USE_EMBEDDED_ACTIVITIES",
     "MODERATE_MEMBERS"
   ];
+
   if (command.permissions.length) {
     let invalidPerms = [];
     for (const perm of command.permissions) {

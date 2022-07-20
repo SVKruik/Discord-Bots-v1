@@ -1,5 +1,4 @@
-// De index van de bot. Vanuit hier start de bot op.
-// Ook wordt hiermee met de DB verbonden.
+// Entry Point of the bot.
 
 // Alcedo is for testing the Docker container.
 
@@ -15,7 +14,6 @@ const client = new Discord.Client({
   intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MEMBERS, Discord.Intents.FLAGS.GUILD_BANS, Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.DIRECT_MESSAGES],
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
-
 
 //Core Code
 client.commands = new Discord.Collection();

@@ -1,7 +1,5 @@
 const config = require("../Other/config.js");
 
-const { EmbedBuilder } = require('discord.js');
-
 module.exports = {
     name: "clear",
     aliases: config.aliases.aliasesclear,

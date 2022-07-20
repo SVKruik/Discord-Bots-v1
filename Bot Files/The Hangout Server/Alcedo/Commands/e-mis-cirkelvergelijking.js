@@ -1,7 +1,5 @@
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
-const { EmbedBuilder } = require('discord.js');
-
 module.exports = {
     name: "cirkel",
     aliases: config.aliases.aliasescirkelvergelijking,

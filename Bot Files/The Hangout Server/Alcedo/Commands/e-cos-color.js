@@ -1,8 +1,6 @@
 const config = require("../Other/config");
 const profileModel = require("../models/profileSchema");
 
-const { EmbedBuilder } = require('discord.js');
-
 module.exports = {
     name: "color",
     aliases: config.aliases.aliasescolor,

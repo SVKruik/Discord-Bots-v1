@@ -1,8 +1,6 @@
 const ms = require("ms");
 const config = require("../Other/config.js");
 
-const { EmbedBuilder } = require('discord.js');
-
 module.exports = {
     name: "mute",
     aliases: config.aliases.aliasesmute,

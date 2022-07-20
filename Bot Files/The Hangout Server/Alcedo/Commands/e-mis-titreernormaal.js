@@ -1,7 +1,5 @@
 const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
 
-const { EmbedBuilder } = require('discord.js');
-
 module.exports = {
     name: "titratienormaal",
     aliases: config.aliases.aliasestitreernormaal,

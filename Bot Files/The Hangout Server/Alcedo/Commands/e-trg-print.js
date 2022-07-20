@@ -3,8 +3,6 @@ const profileModel = require("../models/profileSchema");
 const editJsonFile = require("edit-json-file");
 const { MessageAttachment } = require('discord.js')
 
-const { EmbedBuilder } = require('discord.js');
-
 module.exports = {
     name: "print",
     aliases: config.aliases.aliasestradingprint,
