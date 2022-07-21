@@ -2,7 +2,7 @@
 
 const ytdl = require("ytdl-core");
 const ytSearch = require("yt-search");
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 const queue = new Map();
 
 module.exports = {

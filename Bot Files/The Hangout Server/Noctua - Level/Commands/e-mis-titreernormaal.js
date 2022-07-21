@@ -1,4 +1,4 @@
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
     name: "titratienormaal",

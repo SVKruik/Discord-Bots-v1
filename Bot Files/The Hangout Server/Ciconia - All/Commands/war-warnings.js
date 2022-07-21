@@ -1,6 +1,6 @@
 // Laat de hoeveelheid munten in je bank account zien.
 
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 const profileModel = require("../models/profileSchema");
 
 module.exports = {

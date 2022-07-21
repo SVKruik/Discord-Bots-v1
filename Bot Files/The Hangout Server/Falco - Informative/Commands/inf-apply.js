@@ -2,7 +2,7 @@
 // Dit was in de tijd dat MultiCube nog een ding was, en we het groot probeerden te maken.
 // Simpele vragenlijst op Google Forms.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "apply",

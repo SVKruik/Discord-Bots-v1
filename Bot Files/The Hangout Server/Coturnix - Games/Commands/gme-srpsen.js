@@ -1,7 +1,7 @@
 // Stake Rock Paper Scissor. Zelde als normale RPS maar met een inleg.
 // Raak munten kwijt, krijg een veelvoud of gelijk spel.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
 module.exports = {

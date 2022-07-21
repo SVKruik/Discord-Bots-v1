@@ -1,6 +1,6 @@
 // Zoek voor munten. Eigenlijk tweede daily reward. 
 
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 const profileModel = require("../models/profileSchema");
 
 module.exports = {

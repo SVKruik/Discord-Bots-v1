@@ -1,5 +1,5 @@
 var Scraper = require("images-scraper");
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 const google = new Scraper({
     puppeteer: {
         headless: true,

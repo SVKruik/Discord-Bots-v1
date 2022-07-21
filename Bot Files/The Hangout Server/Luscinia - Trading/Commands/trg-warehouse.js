@@ -1,6 +1,6 @@
 // Laat alle materialen zien die je hebt.
 
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 const profileModel = require("../models/profileSchema");
 const editJsonFile = require("edit-json-file");
 const { MessageAttachment } = require('discord.js')
@@ -12,7 +12,7 @@ module.exports = {
     permissions: config.permissions.permissiontradingwarehouse,
     description: "Check all your inventory of materials.",
     async execute(message, args, cmd, client, Discord, profileData) {
-        const attachment = new MessageAttachment('Other/Category.png')
+        const attachment = new MessageAttachment('other/Category.png')
         const category1 = args[0]
         const category = category1.toLowerCase();
         if (!args[0]) {

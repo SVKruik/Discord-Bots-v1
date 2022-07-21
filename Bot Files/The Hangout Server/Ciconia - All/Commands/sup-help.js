@@ -2,7 +2,7 @@
 // Moet herschreven worden ivm inefficientie.
 // Ik vind dit stem systeem minder 'goed'. Args is beter.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "help",

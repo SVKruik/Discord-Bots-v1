@@ -1,7 +1,7 @@
 // Console log informatie als hij opstart. Zegt gewoon wanneer hij opstartte
 // en zegt dat alles geladen is.
 
-const config = require("./../../Other/config.js");
+const config = require("./../../other/config.js");
 
 module.exports = () => {
     const fs = require("fs");

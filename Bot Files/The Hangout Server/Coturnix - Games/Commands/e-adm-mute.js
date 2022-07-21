@@ -1,5 +1,5 @@
 const ms = require("ms");
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 
 module.exports = {
     name: "mute",

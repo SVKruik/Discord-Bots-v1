@@ -1,6 +1,6 @@
 // Het database profiel. Bij wijzigen de database resetten voor implementatie.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 const mongoose = require("mongoose");
 
 const profileSchema = new mongoose.Schema({

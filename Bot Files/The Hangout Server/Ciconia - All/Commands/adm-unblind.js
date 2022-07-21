@@ -1,6 +1,6 @@
 // Unblind iemand. Persoon is weer terug.
 
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 
 module.exports = {
   name: "unblind",

@@ -1,8 +1,8 @@
 // Stuur een afbeelding. De bot zoekt je zoekterm op, en verstuurd het eerste resultaat.
-// Werkt met blacklist ivm 'pikante' zoektermen. Zie ../Other/profanity.js voor de lijst.
+// Werkt met blacklist ivm 'pikante' zoektermen. Zie ../other/profanity.js voor de lijst.
 
 var Scraper = require("images-scraper");
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 const google = new Scraper({
   puppeteer: {
     headless: true,
@@ -26,7 +26,7 @@ module.exports = {
           `You are not in the right channel to use this command! Please use <#${channel}> instead!`
         );
       }
-      const blacklist = require("../Other/profanity.js");
+      const blacklist = require("../other/profanity.js");
 
       if (blacklist.includes(args[0].toLowerCase())) {
         message.delete();

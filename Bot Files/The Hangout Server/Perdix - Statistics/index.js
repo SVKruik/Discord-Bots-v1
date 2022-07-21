@@ -1,11 +1,11 @@
 // Entry Point of the bot.
 
-// Alcedo is for testing the Docker container.
+// Perdix for channel statistics.
 
 //Index
 const Discord = require("discord.js");
 const fs = require("fs");
-const config = require('./Other/config.js');
+const config = require('./other/config.js');
 const mongoose = require("mongoose");
 const { version } = require("os");
 const { channel } = require("diagnostics_channel");
@@ -35,6 +35,12 @@ mongoose.connect(process.env.MONGODB, {
   .catch((err) => {
     console.log(process.env.DBLOGERR);
   });
+
+// Counters
+const counters = require('./counters/counters.js');
+client.on('ready', () => {
+  counters(client);
+})
 
 //Token login
 client.login(process.env.TOKEN);

@@ -1,6 +1,6 @@
 // Role kleur door middel van ID's. Kies 1/205.
 
-const config = require("../Other/config");
+const config = require("../other/config");
 const profileModel = require("../models/profileSchema");
 
 module.exports = {
@@ -632,7 +632,7 @@ module.exports = {
                 return message.channel.send("Our colors range from \`1\` to \`205\`. Please choose a color with an ID **higher** than \`0\`.")
             }
 
-            const colorlist = require("../Other/colorlistdid.js");
+            const colorlist = require("../other/colorlistdid.js");
             const randomcoloridname = colorlist[Math.floor(Math.random() * colorlist.length)];
             const randomcolor = `<@&${randomcoloridname}>`;
 

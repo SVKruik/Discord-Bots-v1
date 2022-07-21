@@ -1,6 +1,6 @@
 // Zoek dingen op in de Binas.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "binas",

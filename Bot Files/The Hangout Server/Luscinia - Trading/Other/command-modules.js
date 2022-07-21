@@ -327,7 +327,7 @@ if (message.channel.id == channel) {
 
 //// Module 3: List Checking
 
-const list = require("./../Other/list.js");
+const list = require("./../other/list.js");
 
 if (list.includes(args[0].toLowerCase())) {
   message.delete();

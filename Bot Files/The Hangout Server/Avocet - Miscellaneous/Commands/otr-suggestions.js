@@ -2,7 +2,7 @@
 // goed idee is. Zo ja, dan implementeer ik het. Kan iets voor de bot of andere
 // dingen zijn.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
     name: "suggestions",

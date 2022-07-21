@@ -2,7 +2,7 @@
 
 const { DiscordAPIError } = require('discord.js');
 const fs = require('fs');
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 
 module.exports = (client, Discord) =>{
     const command_files = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));

@@ -2,7 +2,7 @@
 // ge execute wordt.
 
 const fs = require('fs');
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 
 module.exports = (client, Discord) =>{
     const load_dir = (dirs) =>{

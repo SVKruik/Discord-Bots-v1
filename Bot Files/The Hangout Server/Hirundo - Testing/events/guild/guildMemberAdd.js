@@ -1,7 +1,7 @@
 // Maak een profiel aan als iemand de server joined.
 
 const profileModel = require("../../models/profileSchema");
-const config = require("./../../Other/config.js");
+const config = require("./../../other/config.js");
 
 module.exports = async (message, args, cmd, client, Discord, member, profileData) => {
   const tagfull = message.author.tag

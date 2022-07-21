@@ -1,6 +1,6 @@
 // Stop de music bot, en laat hem de call verlaten
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "leave",

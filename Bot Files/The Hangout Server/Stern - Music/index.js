@@ -1,11 +1,11 @@
 // Entry Point of the bot.
 
-// Alcedo is for testing the Docker container.
+// Stern for vibing with your mates.
 
 //Index
 const Discord = require("discord.js");
 const fs = require("fs");
-const config = require('./Other/config.js');
+const config = require('./other/config.js');
 const mongoose = require("mongoose");
 const { version } = require("os");
 const { channel } = require("diagnostics_channel");

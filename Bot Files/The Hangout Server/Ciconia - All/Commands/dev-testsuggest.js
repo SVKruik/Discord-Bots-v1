@@ -1,6 +1,6 @@
 // Test suggestie. Kan je kijken hoe hij er uit ziet bij het sturen, of gewoon bug checken.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
     name: "testsuggestions",

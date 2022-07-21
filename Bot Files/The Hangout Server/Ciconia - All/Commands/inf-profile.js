@@ -2,7 +2,7 @@
 // Voor dozen, munten etc moet je de andere cmds gebruiken.
 // Persoonlijke data als (Discord) naam, id en andere misc.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 const profileModel = require("../models/profileSchema");
 
 module.exports = {

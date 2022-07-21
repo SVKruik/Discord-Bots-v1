@@ -1,7 +1,7 @@
 // Grote announcements. Hiermee stuur je in een ander kanaal een bericht. Dit kan alles zijn. 
 // De 'A' staat er zodat hij samen met Small Announcements staat. 'B' staat voor big.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "bigannouncements",

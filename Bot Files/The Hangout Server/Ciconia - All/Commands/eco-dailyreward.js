@@ -1,6 +1,6 @@
 // Haal je dagelijkse beloning op. Willekeurige hoeveelheid munten.
 
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 const profileModel = require("../models/profileSchema");
 
 module.exports = {

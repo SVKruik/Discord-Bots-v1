@@ -5,7 +5,7 @@
 // friendly' moeten houden.
 
 // Bron: https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 
 module.exports = [
 "addicts",

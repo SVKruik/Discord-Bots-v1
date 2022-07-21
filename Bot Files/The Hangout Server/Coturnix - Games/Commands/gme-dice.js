@@ -1,6 +1,6 @@
 // Simpele dobbelsteen. Kiest random iets uit de 'dv' array.
 
-const config = require("../Other/config.js"); // Vaste variabelen opgeslagen
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
 
 module.exports = {
   name: "dice",

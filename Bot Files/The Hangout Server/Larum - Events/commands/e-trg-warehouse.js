@@ -1,4 +1,4 @@
-const config = require("../Other/config.js");
+const config = require("../other/config.js");
 const profileModel = require("../models/profileSchema");
 const editJsonFile = require("edit-json-file");
 const { MessageAttachment } = require('discord.js')

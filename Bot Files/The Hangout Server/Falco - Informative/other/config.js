@@ -5,9 +5,9 @@ require("console-stamp")(console, "[HH:MM]");
 const version = require("../package.json").version;
 
 exports.base = {
-  basecolor: "#8CA989",
+  basecolor: "#ecc85d",
   baseguildid: "820580469757313025",
-  botcount: 15,
+  botcount: 16,
 
   basewelcomechannelid: "850753468927049798",
   baseannouncementschannelid: "944956465733586974",
