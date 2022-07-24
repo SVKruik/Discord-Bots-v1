@@ -1,0 +1,72 @@
+// Maak een ticket aan. Een tijdelijk prive kanaal, waar je kan praten met een mod.
+
+const config = require("../other/config.js"); // Vaste variabelen opgeslagen
+
+module.exports = {
+  name: "ticket",
+  aliases: config.aliases.aliasesticket,
+  cooldown: config.cooldown.cooldownticket,
+  permissions: config.permissions.permissionticket,
+  description: "open a support ticket!",
+  async execute(message, args, cmd, client, Discord) {
+    try {
+      const channel = await message.guild.channels.create(
+        `Ticket: ${message.author.tag}`
+      );
+
+      channel.setParent(config.base.baseticketgroupid);
+      channel.updateOverwrite(message.guild.id, {
+        SEND_MESSAGE: false,
+        VIEW_CHANNEL: false,
+        READ_MESSAGE_HISTORY: false,
+      });
+      channel.updateOverwrite(message.author, {
+        SEND_MESSAGE: true,
+        VIEW_CHANNEL: true,
+        READ_MESSAGE_HISTORY: true,
+      });
+
+      const reactionMessage = await channel.send(config.commandticket.commandticketpending);
+
+      try {
+        await reactionMessage.react("🔒");
+        await reactionMessage.react("⛔");
+      } catch (err) {
+        console.log(err)
+        channel.send(`Error executing command. EC: \`${config.errorcodes.err3}\`.`)
+      }
+
+      const collector = reactionMessage.createReactionCollector(
+        (reaction, user) =>
+          message.guild.members.cache
+            .find((member) => member.id === user.id)
+            .hasPermission("ADMINISTRATOR"),
+        { dispose: true }
+      );
+
+      collector.on("collect", (reaction, user) => {
+        switch (reaction.emoji.name) {
+          case "🔒":
+            channel.updateOverwrite(message.author, { SEND_MESSAGES: false });
+            break;
+          case "⛔":
+            channel.send(
+              `Deleting this channel in ${config.base.baseticketdeletetime} milliseconds!`
+            );
+            setTimeout(() => channel.delete(), config.base.baseticketdeletetime);
+            break;
+        }
+      });
+
+      message.channel
+        .send(`${config.commandticket.commandticketpending} Your channel: ${channel}`)
+        .catch((err) => {
+          console.log(err)
+          message.channel.send(`Error executing command. EC: \`${config.errorcodes.err4}\`.`)
+        });
+    } catch (err) {
+      console.log(err)
+      message.channel.send(`Error executing command. EC: \`${config.errorcodes.err4}\`.`)
+    }
+  },
+};
