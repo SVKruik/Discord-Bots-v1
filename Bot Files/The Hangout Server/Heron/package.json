@@ -28,7 +28,7 @@
     "mongoose": "^6.4.4",
     "node-fetch": "^3.2.8",
     "node.js": "^0.0.1-security",
-    "puppeteer": "^15.4.0",
+    "puppeteer": "^15.5.0",
     "yt-search": "^2.10.3",
     "ytdl-core": "^4.11.0"
   }
