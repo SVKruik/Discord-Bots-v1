@@ -3,7 +3,7 @@
 This repository contains all of the bot files. These bots can be found in action in the Discord server in the link at the bottom of this page.
 
 Here is a list of stuff you need to do, before the bots can start up:
-- Download Node.js (currently the bots are fitted for v16.15.1 LTS)
+- Download Node.js (currently the bots are fitted for v16.16.0 LTS)
 - Create a .ENV file with your data. Check the template for this.
 - Fill in the config file with your ID's etc. Check the template for this.
 - NPM I Puppeteer in your console.
