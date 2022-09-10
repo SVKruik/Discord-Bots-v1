@@ -1,4 +1,4 @@
-# MultiCube-Private
+# Discord Bots
 
 This repository contains all of the bot files. These bots can be found in action in the Discord server in the link at the bottom of this page.
 
