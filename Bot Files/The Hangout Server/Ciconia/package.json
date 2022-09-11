@@ -25,7 +25,7 @@
     "images-scraper": "^6.4.1",
     "mathjs": "^10.6.4",
     "minecraft-server-util": "^5.3.0",
-    "mongoose": "^6.4.4",
+    "mongoose": "^6.4.6",
     "node-fetch": "^3.2.8",
     "node.js": "^0.0.1-security",
     "puppeteer": "^15.5.0",
