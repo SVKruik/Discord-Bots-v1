@@ -12,7 +12,7 @@ module.exports = {
     description: "Collect the definition of a word using the Urban Dictionary.",
     async execute(message, args, cmd, client, Discord) {
         try {
-            // const Url = 'https://api.github.com/repos/PuffinKwadraat/MultiCube-Public/commits';
+            // const Url = 'https://api.github.com/repos/SVKruik/MultiCube-Public/commits';
             // axios.get(Url)
             //     .then(data => console.log(data))
             //     .catch(err => console.log(err))

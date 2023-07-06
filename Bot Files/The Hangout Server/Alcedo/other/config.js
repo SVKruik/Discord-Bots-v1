@@ -248,7 +248,7 @@ exports.scrapamount = {
 exports.embed = {
   embedfooter: "Statistics and Bot provided by Complex.",
   embedimage: "https://i.imgur.com/neCyTDH.png",
-  embedlink: "https://github.com/PuffinKwadraat/MultiCube-Public",
+  embedlink: "https://github.com/SVKruik/MultiCube-Public",
 };
 
 exports.errorcodes = {
@@ -536,11 +536,11 @@ exports.embeds = {
   valuedonate2: "https://ko-fi.com/multicubecommunity/tiers",
   valueembedtemplate1: "value: X", // Embed Template
   valueembedtemplate2: "value: Y",
-  valuegithub1: "https://github.com/PuffinKwadraat/MultiCube-Public", // GitHub
+  valuegithub1: "https://github.com/SVKruik/MultiCube-Public", // GitHub
   valuegithub2: "More links:",
-  valuegithub3: "https://github.com/PuffinKwadraat/MultiCube-Public/tree/main/Minecraft%20Servers/Child%20Servers",
-  valuegithub4: "https://github.com/PuffinKwadraat/MultiCube-Public/issues",
-  valuegithub5: "https://github.com/PuffinKwadraat/MultiCube-Public/blob/main/Update%20Log.md",
+  valuegithub3: "https://github.com/SVKruik/MultiCube-Public/tree/main/Minecraft%20Servers/Child%20Servers",
+  valuegithub4: "https://github.com/SVKruik/MultiCube-Public/issues",
+  valuegithub5: "https://github.com/SVKruik/MultiCube-Public/blob/main/Update%20Log.md",
   valuerules1: "Treat everyone with respect.",
   valuerules2: "Do not spam.",
   valuerules3: "Do not advertise yourself.",
