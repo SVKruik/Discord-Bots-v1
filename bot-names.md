@@ -2,7 +2,9 @@
 
 ---
 
-Our Discord server has a couple of bots. The THP names are named after birds, in Latin. The MCC bots are named after trees, also in Latin. Because we are a Dutch community, we also added their Dutch names. Afer their names, we also listed their purposes. So the format is `Name: English, Dutch - Purpose`.
+Our Discord server has a couple of bots. The THP names are named after birds, in Latin. The MCC bots are named after
+trees, also in Latin. Because we are a Dutch community, we also added their Dutch names. Afer their names, we also
+listed their purposes. So the format is `Name: English, Dutch - Purpose`.
 
 ## The Hangout Place
 
@@ -38,9 +40,11 @@ Our Discord server has a couple of bots. The THP names are named after birds, in
 
 ---
 
-** Docker is a different program for hosting the bot. Such different, that is needs new files that are bot specific. Therefore, a new bot was created. Docker runs programs much more efficiently.
+** Docker is a different program for hosting the bot. Such different, that is needs new files that are bot specific.
+Therefore, a new bot was created. Docker runs programs much more efficiently.
 
-*** Corvus was a Linux bot. This project succeeded, and was therefore repurposed to test newer versions of the code. Not quit like Hirundo tho.
+*** Corvus was a Linux bot. This project succeeded, and was therefore repurposed to test newer versions of the code. Not
+quit like Hirundo tho.
 
 ---
 
