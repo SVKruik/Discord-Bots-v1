@@ -1,6 +1,6 @@
 # Discord Bots
 
-> [New](https://github.com/SVKruik/Discord-Bots-v2) repository
+> [New](https://github.com/SVKruik-Organization/Discord-Bots) repository
 
 This is a legacy and deprecated repository for my first generation of Discord bots. This repository marked the very
 beginning of my programming journey, and is something that will go in the history books. I removed a lot of files since
